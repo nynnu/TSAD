@@ -41,6 +41,7 @@ def send_openai_request(
     api_key=None,
     base_url="https://api.openai.com/v1"
 ):
+    import time
     if "gemini" in model:
         return send_gemini_request(
             convert_openai_to_gemini(openai_request),
@@ -48,8 +49,19 @@ def send_openai_request(
             api_key=api_key
         )
     client = openai_client(model, api_key=api_key, base_url=base_url)
-    
-    response = client.chat.completions.create(
-        model=model, **openai_request
-    )
-    return response.choices[0].message.content
+
+    for attempt in range(3):
+        try:
+            time.sleep(3)  # TPM rate limit 대응
+            response = client.chat.completions.create(
+                model=model, **openai_request
+            )
+            return response.choices[0].message.content
+        except Exception as e:
+            if "429" in str(e) or "rate_limit" in str(e).lower():
+                wait = 30 * (attempt + 1)
+                logger.warning(f"Rate limit. {wait}초 대기 후 재시도 ({attempt+1}/3)...")
+                time.sleep(wait)
+            else:
+                raise
+    raise RuntimeError("OpenAI API 최대 재시도 초과")
