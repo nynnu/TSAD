@@ -370,5 +370,6 @@ Reply **only** with a JSON object containing these fields:
             return result
 
         except Exception as e:
+            print(f"[VLM ERROR] {e}")
             warnings.warn(f"VLM query failed: {e}")
             return None
