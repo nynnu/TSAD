@@ -341,22 +341,23 @@ Reply **only** with a JSON object containing these fields:
         vis_line = f"Vision-based model detected intervals (indices): {detected_indices}"
         prompt = base_prompt + "\n" + vis_line
 
-        # Build payload
+        # Build payload (Chat Completions format)
         payload = [{
             "role": "user",
             "content": [
-                {"type": "input_text", "text": prompt},
-                {"type": "input_image", "image_url": f"data:image/png;base64,{img_b64}"}
+                {"type": "text", "text": prompt},
+                {"type": "image_url", "image_url": {"url": f"data:image/png;base64,{img_b64}"}}
             ],
         }]
 
         try:
             # Call VLM
-            resp = self.client.responses.create(
+            resp = self.client.chat.completions.create(
                 model=self.vlm_model,
-                input=payload
+                messages=payload,
+                temperature=0.4,
             )
-            raw = resp.output_text.strip()
+            raw = resp.choices[0].message.content.strip()
 
             # Parse JSON
             try:
