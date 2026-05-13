@@ -2,12 +2,32 @@
 
 import os
 import numpy as np
+import pandas as pd
 import matplotlib.pyplot as plt
 import torchvision.transforms as transforms
 import warnings
 from io import BytesIO
 from PIL import Image
 from scipy.signal import detrend
+
+
+def apply_ewma(values: np.ndarray, smoothing_alpha: float = 1.0) -> np.ndarray:
+    """Apply EWMA smoothing to a 1-D numpy array.
+
+    Parameters
+    ----------
+    values : np.ndarray  1-D time series (already preprocessed).
+    smoothing_alpha : float
+        pandas ewm alpha ∈ (0, 1].
+        1.0 = no smoothing (identity), lower = stronger smoothing.
+
+    Returns
+    -------
+    np.ndarray  smoothed series, same length as input.
+    """
+    if smoothing_alpha >= 1.0:
+        return values  # no-op
+    return pd.Series(values).ewm(alpha=smoothing_alpha, adjust=False).mean().to_numpy()
 
 
 def preprocess_time_series(time_series):

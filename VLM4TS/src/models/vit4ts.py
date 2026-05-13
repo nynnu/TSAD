@@ -17,7 +17,7 @@ src_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 if src_path not in sys.path:
     sys.path.insert(0, src_path)
 
-from preprocessing.preprocess import preprocess_time_series, draw_windowed_images
+from preprocessing.preprocess import preprocess_time_series, draw_windowed_images, apply_ewma
 from preprocessing.vision_ts_dataset import CLIPTimeSeriesDataset
 from preprocessing.data_utils import orion_to_internal, intervals_from_indices
 from models.clip_vision import CLIP_AD
@@ -85,6 +85,7 @@ class ViT4TS:
         standardize: bool = True,
         alpha: float = 0.01,
         verbose: bool = True,
+        smoothing_alpha: float = 1.0,
     ):
         self.window_size = window_size
         self.window_step_ratio = window_step_ratio
@@ -97,6 +98,7 @@ class ViT4TS:
         self.standardize = standardize
         self.alpha = alpha
         self.verbose = verbose
+        self.smoothing_alpha = smoothing_alpha
 
         # Setup device
         if device == "auto":

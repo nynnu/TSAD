@@ -1,5 +1,5 @@
 """VLM4TS: Two-stage anomaly detection with VLM verification (Orion-compatible).
-API: Gemini 2.5 Flash (교체됨, 무료 티어 지원)
+API: OpenAI GPT-4o
 """
 
 import os
@@ -23,10 +23,9 @@ if src_path not in sys.path:
 
 from models.vit4ts import ViT4TS
 from preprocessing.data_utils import orion_to_internal
+from preprocessing.dynamic_plot_renderer import DynamicPlotRenderer
 
-# Gemini 2.5 Flash 무료 티어: 10 RPM → 호출 간 6초 대기
-_GEMINI_RPM_LIMIT = 10
-_GEMINI_SLEEP = 60.0 / _GEMINI_RPM_LIMIT  # 6초
+_VLM_SLEEP = 1.0  # OpenAI API 호출 간 최소 대기 (초)
 
 
 class VLM4TS:
@@ -46,9 +45,9 @@ class VLM4TS:
     alpha : float, optional
         Upper quantile for ViT4TS screening (default: 0.01)
     vlm_model : str, optional
-        Gemini model name (default: 'gemini-flash-latest')
+        OpenAI model name (default: 'gpt-4o')
     api_key : str, optional
-        Gemini API key. If None, reads GEMINI_API_KEY env var.
+        OpenAI API key. If None, reads OPENAI_API_KEY env var.
     verbose : bool, optional
         Print progress messages (default: True)
     """
@@ -57,9 +56,10 @@ class VLM4TS:
         self,
         vit4ts_params: Optional[Dict] = None,
         alpha: float = 0.01,
-        vlm_model: str = 'gemini-flash-latest',
+        vlm_model: str = 'gpt-4o',
         api_key: Optional[str] = None,
-        verbose: bool = True
+        verbose: bool = True,
+        use_dynamic_plot: bool = False,
     ):
         # Initialize ViT4TS
         if vit4ts_params is None:
@@ -72,16 +72,17 @@ class VLM4TS:
         self.alpha = alpha
         self.vlm_model = vlm_model
         self.verbose = verbose
+        self.use_dynamic_plot = use_dynamic_plot
+        self._dynamic_renderer = DynamicPlotRenderer()
 
-        # Initialize Gemini client
-        from google import genai
-        _key = api_key or os.environ.get("GEMINI_API_KEY") or os.environ.get("OPENAI_API_KEY")
+        # Initialize OpenAI client
+        import openai
+        _key = api_key or os.environ.get("OPENAI_API_KEY")
         if not _key:
             raise ValueError(
-                "Gemini API 키가 없습니다. "
-                "GEMINI_API_KEY 환경변수를 설정하거나 --api_key 옵션을 사용하세요."
+                "OPENAI_API_KEY 환경변수를 설정하거나 --api_key 옵션을 사용하세요."
             )
-        self.client = genai.Client(api_key=_key)
+        self.client = openai.OpenAI(api_key=_key)
 
     def detect(self, data: pd.DataFrame, alpha: float = None) -> pd.DataFrame:
         """
@@ -146,7 +147,25 @@ class VLM4TS:
             print("Stage 2: Generating visualization for VLM...")
 
         values, timestamps = orion_to_internal(data)
-        img_b64 = self._generate_full_plot(values)
+        if self.use_dynamic_plot:
+            candidates_with_scores = []
+            for _, row in vit_intervals.iterrows():
+                s_idx = int(np.searchsorted(timestamps, row['start'], side='left'))
+                e_idx = int(np.searchsorted(timestamps, row['end'], side='right') - 1)
+                s_idx = max(0, min(len(timestamps) - 1, s_idx))
+                e_idx = max(0, min(len(timestamps) - 1, e_idx))
+                candidates_with_scores.append((s_idx, e_idx, float(row.get('severity', 1.0))))
+            pil_img = self._dynamic_renderer.render(
+                series=values,
+                candidates=candidates_with_scores,
+                series_name="",
+            )
+            buf = BytesIO()
+            pil_img.save(buf, format='png')
+            buf.seek(0)
+            img_b64 = base64.b64encode(buf.read()).decode('utf-8')
+        else:
+            img_b64 = self._generate_full_plot(values)
 
         if self.verbose:
             print("Stage 3: Querying VLM for verification...")
@@ -240,9 +259,7 @@ class VLM4TS:
         vit_intervals: pd.DataFrame,
         timestamps: np.ndarray
     ) -> Optional[Dict]:
-        """Query Gemini VLM for anomaly verification."""
-        from google.genai import types
-
+        """Query OpenAI GPT-4o for anomaly verification."""
         # Convert timestamp intervals to indices
         detected_indices = []
         for _, row in vit_intervals.iterrows():
@@ -301,23 +318,27 @@ Reply **only** with a JSON object containing these fields:
         vis_line = f"Vision-based model detected intervals (indices): {detected_indices}"
         prompt = base_prompt + "\n" + vis_line
 
-        # 이미지를 PIL Image로 변환
-        from PIL import Image
-        img_bytes = base64.b64decode(img_b64)
-        pil_image = Image.open(BytesIO(img_bytes))
-
         try:
-            # Rate limit 준수: 6초 대기
-            time.sleep(_GEMINI_SLEEP)
+            time.sleep(_VLM_SLEEP)
 
-            response = self.client.models.generate_content(
+            response = self.client.chat.completions.create(
                 model=self.vlm_model,
-                contents=[prompt, pil_image],
-                config=types.GenerateContentConfig(
-                    temperature=0.4,
-                )
+                messages=[{
+                    "role": "user",
+                    "content": [
+                        {"type": "text", "text": prompt},
+                        {
+                            "type": "image_url",
+                            "image_url": {
+                                "url": f"data:image/png;base64,{img_b64}",
+                                "detail": "high",
+                            }
+                        }
+                    ]
+                }],
+                temperature=0.4,
             )
-            raw = response.text.strip()
+            raw = response.choices[0].message.content.strip()
 
             # JSON 파싱
             try:

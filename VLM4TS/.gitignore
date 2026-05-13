@@ -16,3 +16,11 @@ __pycache__/
 .DS_Store
 .DS_Store?
 results_*.csv
+
+# checkpoints (binary pickle files)
+results/*/checkpoints/
+results/checkpoints/
+
+# large temp files
+*.tar.gz
+.tmp.drivedownload/
