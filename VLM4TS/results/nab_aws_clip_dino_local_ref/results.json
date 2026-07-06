@@ -1,0 +1,91 @@
+{
+  "config": {
+    "local_k": 5,
+    "alpha": 0.01,
+    "signals": [
+      "ec2_cpu_utilization_24ae8d",
+      "ec2_cpu_utilization_53ea38",
+      "ec2_cpu_utilization_5f5533",
+      "ec2_cpu_utilization_77c1ca",
+      "ec2_cpu_utilization_825cc2",
+      "ec2_cpu_utilization_ac20cd",
+      "ec2_cpu_utilization_c6585a",
+      "ec2_cpu_utilization_fe7f93",
+      "ec2_disk_write_bytes_1ef3de",
+      "ec2_disk_write_bytes_c0d644",
+      "ec2_network_in_257a54",
+      "ec2_network_in_5abac7",
+      "elb_request_count_8c0756",
+      "grok_asg_anomaly",
+      "iio_us-east-1_i-a2eb1cd9_NetworkIn",
+      "rds_cpu_utilization_cc0c53",
+      "rds_cpu_utilization_e47b3b"
+    ]
+  },
+  "clip": {
+    "f1_per_signal": {
+      "ec2_cpu_utilization_24ae8d": 0,
+      "ec2_cpu_utilization_53ea38": 0.6667,
+      "ec2_cpu_utilization_5f5533": 1.0,
+      "ec2_cpu_utilization_77c1ca": 0.5,
+      "ec2_cpu_utilization_825cc2": 1.0,
+      "ec2_cpu_utilization_ac20cd": 0.5,
+      "ec2_cpu_utilization_c6585a": 0,
+      "ec2_cpu_utilization_fe7f93": 0.3333,
+      "ec2_disk_write_bytes_1ef3de": 0.6667,
+      "ec2_disk_write_bytes_c0d644": 0.2857,
+      "ec2_network_in_257a54": 1.0,
+      "ec2_network_in_5abac7": 0.5,
+      "elb_request_count_8c0756": 0.5714,
+      "grok_asg_anomaly": 0.5,
+      "iio_us-east-1_i-a2eb1cd9_NetworkIn": 0.5,
+      "rds_cpu_utilization_cc0c53": 0.6667,
+      "rds_cpu_utilization_e47b3b": 0.8
+    },
+    "avg_f1": 0.5583
+  },
+  "dino": {
+    "f1_per_signal": {
+      "ec2_cpu_utilization_24ae8d": 0,
+      "ec2_cpu_utilization_53ea38": 0.2222,
+      "ec2_cpu_utilization_5f5533": 1.0,
+      "ec2_cpu_utilization_77c1ca": 0,
+      "ec2_cpu_utilization_825cc2": 1.0,
+      "ec2_cpu_utilization_ac20cd": 0.5,
+      "ec2_cpu_utilization_c6585a": 0,
+      "ec2_cpu_utilization_fe7f93": 0,
+      "ec2_disk_write_bytes_1ef3de": 0.6667,
+      "ec2_disk_write_bytes_c0d644": 0.2857,
+      "ec2_network_in_257a54": 1.0,
+      "ec2_network_in_5abac7": 0.5,
+      "elb_request_count_8c0756": 0.6667,
+      "grok_asg_anomaly": 0.6667,
+      "iio_us-east-1_i-a2eb1cd9_NetworkIn": 0.5,
+      "rds_cpu_utilization_cc0c53": 0.6667,
+      "rds_cpu_utilization_e47b3b": 0.8
+    },
+    "avg_f1": 0.4985
+  },
+  "mae_k5_baseline": {
+    "f1_per_signal": {
+      "ec2_cpu_utilization_24ae8d": 0.4286,
+      "ec2_cpu_utilization_53ea38": 0.8,
+      "ec2_cpu_utilization_5f5533": 0.6667,
+      "ec2_cpu_utilization_77c1ca": 1.0,
+      "ec2_cpu_utilization_825cc2": 1.0,
+      "ec2_cpu_utilization_ac20cd": 0.5,
+      "ec2_cpu_utilization_c6585a": 0,
+      "ec2_cpu_utilization_fe7f93": 0.4,
+      "ec2_disk_write_bytes_1ef3de": 0.5,
+      "ec2_disk_write_bytes_c0d644": 0.5,
+      "ec2_network_in_257a54": 1.0,
+      "ec2_network_in_5abac7": 0.4,
+      "elb_request_count_8c0756": 0.5,
+      "grok_asg_anomaly": 0.5,
+      "iio_us-east-1_i-a2eb1cd9_NetworkIn": 0.6667,
+      "rds_cpu_utilization_cc0c53": 1.0,
+      "rds_cpu_utilization_e47b3b": 0.8
+    },
+    "avg_f1": 0.6272
+  }
+}

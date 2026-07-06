@@ -1,0 +1,28 @@
+============================================================
+Phase 0 Experiment: MSL P-11
+============================================================
+Dataset      : MSL / P-11
+Length       : 7504 points
+Anomaly ratio: 0.0304
+GT intervals : 2
+ViT4TS proposals (alpha=0.01): 2
+
+Method        Precision   Recall       F1  #Detected
+------------------------------------------------------
+Static           1.0000   0.5000   0.6667          1
+Dynamic          1.0000   0.5000   0.6667          1
+Delta           +0.0000  +0.0000  +0.0000
+
+Verdict: NO CHANGE  (ΔF1 = +0.0000)
+
+Output files:
+  C:\Users\김나영\Desktop\TSAD\VLM4TS\results\phase0\static_plot_example.png
+  C:\Users\김나영\Desktop\TSAD\VLM4TS\results\phase0\dynamic_plot_example.png
+  C:\Users\김나영\Desktop\TSAD\VLM4TS\results\phase0\results_static.json
+  C:\Users\김나영\Desktop\TSAD\VLM4TS\results\phase0\results_dynamic.json
+  C:\Users\김나영\Desktop\TSAD\VLM4TS\results\phase0\comparison_summary.txt
+
+Checkpoints (delete to force re-run of a stage):
+  C:\Users\김나영\Desktop\TSAD\VLM4TS\results\phase0\checkpoints\p11_vit_intervals.pkl
+  C:\Users\김나영\Desktop\TSAD\VLM4TS\results\phase0\checkpoints\p11_static_intervals.pkl
+  C:\Users\김나영\Desktop\TSAD\VLM4TS\results\phase0\checkpoints\p11_dynamic_intervals.pkl

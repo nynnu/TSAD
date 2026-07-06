@@ -1,0 +1,110 @@
+{
+  "config": {
+    "k_values": [
+      5,
+      10,
+      20,
+      0
+    ],
+    "backbones": [
+      "mae"
+    ],
+    "signals": [
+      "ec2_cpu_utilization_24ae8d",
+      "ec2_cpu_utilization_53ea38",
+      "ec2_cpu_utilization_5f5533",
+      "ec2_cpu_utilization_77c1ca",
+      "ec2_cpu_utilization_825cc2",
+      "ec2_cpu_utilization_ac20cd",
+      "ec2_cpu_utilization_c6585a",
+      "ec2_cpu_utilization_fe7f93",
+      "ec2_disk_write_bytes_1ef3de",
+      "ec2_disk_write_bytes_c0d644",
+      "ec2_network_in_257a54",
+      "ec2_network_in_5abac7",
+      "elb_request_count_8c0756",
+      "grok_asg_anomaly",
+      "iio_us-east-1_i-a2eb1cd9_NetworkIn",
+      "rds_cpu_utilization_cc0c53",
+      "rds_cpu_utilization_e47b3b"
+    ]
+  },
+  "mae": {
+    "k5": [
+      0.4286,
+      0.8,
+      0.6667,
+      1.0,
+      1.0,
+      0.5,
+      0,
+      0.4,
+      0.5,
+      0.5,
+      1.0,
+      0.4,
+      0.5,
+      0.5,
+      0.6667,
+      1.0,
+      0.8
+    ],
+    "k10": [
+      0.4286,
+      0.8,
+      0.6667,
+      0.6667,
+      1.0,
+      0,
+      0,
+      0.4,
+      0.5,
+      0.5,
+      1.0,
+      0.3333,
+      0.4,
+      0.5,
+      0.6667,
+      0.6667,
+      1.0
+    ],
+    "k20": [
+      0.4286,
+      0.8,
+      0.5,
+      0,
+      1.0,
+      0,
+      0,
+      0,
+      0.3333,
+      0.4,
+      1.0,
+      0.5714,
+      0.4,
+      0.4,
+      0.5,
+      0.4,
+      0
+    ],
+    "k0": [
+      0.4286,
+      0.8,
+      0.4,
+      0,
+      1.0,
+      0,
+      0,
+      0,
+      0.4,
+      0.4,
+      1.0,
+      0.5714,
+      0.2857,
+      0,
+      0.5,
+      0.5,
+      0
+    ]
+  }
+}

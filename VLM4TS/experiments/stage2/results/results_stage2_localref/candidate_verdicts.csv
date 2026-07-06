@@ -1,0 +1,50 @@
+entity,start,end,length,score,verdict,confidence,key_difference,is_tp
+machine-1-1,168,335,168,0.1900018007339289,ANOMALY,3,"In the candidate, Ch22 and Ch0 show a significant upward shift and divergence from their normal low positions, and Ch20 shows a sp",False
+machine-1-1,3808,3975,168,0.1872698599472642,ANOMALY,3,"In the candidate, Ch22 maintains a high position throughout, unlike the normal references where it decreases. Additionally, Ch20 s",False
+machine-1-1,6664,6887,224,0.1880457599181682,ANOMALY,3,"In the candidate, Ch22 shows a significant deviation by maintaining a high value close to 1 for a prolonged period, which is not o",False
+machine-1-1,12208,12655,448,0.1968320919550024,ANOMALY,3,"In the candidate, Ch22 is at a constant high value, unlike in the normal references where it decreases over time. Additionally, Ch",False
+machine-1-1,13608,14055,448,0.20750298612983897,ANOMALY,3,"In the candidate, Ch22 shows a significant deviation by maintaining a high value throughout, unlike in the normal references where",False
+machine-1-1,15008,15511,504,0.1987810129713681,ANOMALY,3,"In the candidate, Ch22 is at a constant high value, unlike in the normal references where it decreases over time. Additionally, Ch",False
+machine-1-1,16072,16519,448,0.20702707773307338,ANOMALY,3,"In the candidate, channels Ch0, Ch20, Ch19, and Ch3 show a significant upward shift and divergence from their normal low positions",True
+machine-1-1,16912,16967,56,0.18927669199183583,ANOMALY,3,"In the candidate, Ch20 shows a significant upward shift, diverging from its normal low position relative to other channels. This c",True
+machine-1-1,17192,17695,504,0.22385433435233104,ANOMALY,3,"In the candidate, channels that normally run low and track closely together (Ch0, Ch20, Ch19, Ch3) diverge significantly and rise ",True
+machine-1-1,17864,18087,224,0.18770975980442017,ANOMALY,3,"In the candidate, Ch0 shows a significant upward shift around the 200 mark, which is not present in any of the normal references. ",True
+machine-1-1,18256,18647,392,0.21223680369023765,ANOMALY,3,"In the candidate, Ch0 and Ch20 show a significant upward shift and divergence from their normal low positions, and Ch22 exhibits a",True
+machine-1-1,19656,20271,616,0.20247541478073056,ANOMALY,3,"In the candidate, Ch22 maintains a high position throughout, unlike the normal references where it decreases. Ch0 and Ch20 show si",True
+machine-1-1,20944,21391,448,0.19882525503635406,ANOMALY,3,"In the candidate, Ch0 and Ch20 show significant upward shifts and divergence from their normal low positions, which is not observe",True
+machine-1-1,22120,22511,392,0.19810168777725526,ANOMALY,3,"In the candidate, channels Ch0, Ch20, Ch19, and Ch3 show a significant upward shift and divergence from their usual low positions,",False
+machine-1-1,23632,24079,448,0.20100796251790598,ANOMALY,3,"In the candidate, Ch22 maintains a high constant value, unlike the normal references where it decreases over time. Additionally, o",False
+machine-1-1,24976,25311,336,0.19904464211625358,ANOMALY,3,"In the candidate, Ch22 maintains a high value throughout, unlike the normal references where it decreases. Ch0 and Ch20 show signi",False
+machine-1-1,26488,26823,336,0.19060888793319464,ANOMALY,3,"In the candidate, Ch22, which normally runs high, shows a significant drop and flatline, while Ch0, Ch20, Ch19, and Ch3, which usu",False
+machine-1-2,4536,4759,224,0.17483112745685503,ANOMALY,3,"In the candidate, Ch5 and Ch6 show significant divergence from their normal tracking pattern. Ch6 rises to a position it never occ",True
+machine-1-2,5432,5599,168,0.1658699334754298,ANOMALY,3,"In the candidate, Ch5 and Ch0 show a significant divergence compared to the normal references, where they typically track closely.",True
+machine-1-2,5712,6103,392,0.17202706814610533,ANOMALY,3,"In the candidate, Ch5 and Ch0, which normally track each other closely, diverge significantly. Additionally, Ch4 shifts to a highe",True
+machine-1-2,6160,6943,784,0.17148417374119163,ANOMALY,3,"In the candidate, Ch5 and Ch0, which normally track each other closely, show significant divergence. Additionally, Ch4 shifts to a",False
+machine-1-2,7280,7503,224,0.16616800712654367,NORMAL,2,The inter-channel relationships in the candidate are consistent with the normal references. Channels maintain their relative posit,False
+machine-1-2,7784,8007,224,0.16686960333026946,ANOMALY,3,"In the candidate, Ch5 and Ch0 show significant divergence from their normal tracking pattern, with Ch5 rising much higher than in ",False
+machine-1-2,8288,8511,224,0.16660270473221317,ANOMALY,3,"In the candidate, Ch5 and Ch6 show significant divergence from their normal tracking behavior. Ch5 shifts to a higher position and",False
+machine-1-2,11144,11423,280,0.16731184511445463,ANOMALY,3,"In the candidate, Ch4 shows a significant upward shift and divergence from its normal low position, which is not observed in the n",False
+machine-1-2,12432,13047,616,0.17101809913715857,ANOMALY,3,"In the candidate, Ch4 shifts to a higher position than in the normal references, where it consistently runs low. Additionally, Ch3",False
+machine-1-2,13384,13495,112,0.1665913627715785,ANOMALY,3,"In the candidate, Ch4 shows a significant upward spike not present in the normal references. Additionally, Ch6 diverges from its u",False
+machine-1-2,14616,14727,112,0.16549175354884937,ANOMALY,3,"In the candidate, Ch0 shows a significant spike that is not present in the normal references. Additionally, Ch6 diverges from its ",False
+machine-1-2,15456,15679,224,0.16820922965416685,ANOMALY,3,"In the candidate, Ch4 and Ch6 show significant divergence from their normal positions. Ch4 rises to a level not seen in the normal",True
+machine-1-2,15792,16071,280,0.17475550479721277,ANOMALY,3,"In the candidate, Ch32 and Ch6 diverge significantly from their normal tracking behavior, with Ch32 showing erratic spikes not pre",True
+machine-1-2,16912,17079,168,0.1689682232293611,ANOMALY,3,"In the candidate, Ch5 and Ch32 show significant divergence from their normal tracking behavior. Ch5 shifts to a higher position, a",False
+machine-1-2,18480,19039,560,0.16923364220419898,ANOMALY,3,"In the candidate, Ch0 and Ch32 show significant divergence from their normal tracking behavior. Ch0 rises to a higher position it ",True
+machine-1-2,19208,19431,224,0.1659341043094189,NORMAL,2,The candidate maintains similar inter-channel relationships as the normal references. Channels that track each other in the normal,False
+machine-1-2,20048,20439,392,0.1703887386496977,ANOMALY,3,"In the candidate, Ch5 and Ch0 diverge significantly from their normal tracking pattern, with Ch5 rising sharply at the end. Ch4 al",True
+machine-1-2,20608,20887,280,0.16757898810785363,ANOMALY,3,"In the candidate, Ch4 shows a significant upward shift towards the end of the interval, which is not present in any of the normal ",False
+machine-1-2,21784,22399,616,0.17483399862169594,ANOMALY,3,"In the candidate, Ch5 and Ch6 have shifted to higher positions compared to the normal references, and Ch4 shows a divergence from ",True
+machine-1-2,22680,22959,280,0.16705605705734355,ANOMALY,3,"In the candidate, Ch0 and Ch4 show significant divergence from their normal positions and relationships. Ch0 rises higher than in ",False
+machine-1-5,10416,10807,392,0.17936553633106606,NORMAL,2,The inter-channel relationships and relative positions in the candidate are consistent with the normal references. No significant ,True
+machine-1-5,11704,11927,224,0.17520335788140073,ANOMALY,3,"In the candidate, Ch5 shows a significant upward shift compared to the normal references, where it maintains a lower position. Thi",True
+machine-1-5,12600,12991,392,0.1986848475145442,ANOMALY,3,"In the candidate, Ch13 shows a significant upward shift and divergence from its normal position, where it usually tracks closely w",True
+machine-1-5,13608,13663,56,0.17035484686493874,ANOMALY,3,"In the candidate, Ch5 shows a significant shift to a higher position, maintaining a constant high value, which is not observed in ",False
+machine-1-5,13888,14279,392,0.1809547714157296,ANOMALY,3,"In the candidate, Ch13 shifts to a higher position compared to the normal references, where it consistently runs lower. This indic",True
+machine-1-5,14336,14951,616,0.18990587180649693,ANOMALY,3,"In the candidate, Ch5 shifts to a higher position than in the normal references, indicating a true value change. Additionally, Ch1",True
+machine-1-5,15344,15791,448,0.17239923815941438,ANOMALY,3,"In the candidate, Ch5 shows a gradual upward trend, diverging from its stable position in the normal references. This indicates a ",False
+machine-1-5,16352,16519,168,0.17202440005106232,NORMAL,2,The inter-channel relationships and overall pattern structure in the candidate closely resemble those in the normal references. Th,False
+machine-1-5,19376,19431,56,0.17089309450238943,ANOMALY,3,"In the candidate, Ch22 and Ch13 have shifted to higher positions compared to the normal references, where they typically run lower",False
+machine-1-5,19488,19599,112,0.16962528484873474,NORMAL,2,The inter-channel relationships and overall pattern structure in the candidate are consistent with the normal references. Channels,False
+machine-1-5,20608,21559,952,0.17908218686523683,NORMAL,2,The inter-channel relationships and overall pattern structure in the candidate are consistent with the normal references. Channels,True
+machine-1-5,21952,22231,280,0.18003786052577198,ANOMALY,3,"In the candidate, Ch5 shows a significant dip around the middle of the interval, which is not present in any of the normal referen",True

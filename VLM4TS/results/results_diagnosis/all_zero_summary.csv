@@ -1,0 +1,6 @@
+dataset,signal,known_f1,anom_pct,T,n_anom_wins,sep_ratio,discriminability,ltr_inverted,diagnosis,suggested_fix
+NAB,iio_us-east-1_i-a2eb1cd9_NetworkIn,0.0,10.14,1243,2,2.596,DISCRIMINATIVE,False,MARGINAL,Possibly fixable: check threshold or fusion strategy.
+SMAP,F-3,0.0,0.36,11256,0,0.0,N/A (no anomalous windows),False,FEATURE_BLIND,Stage-2 only (MLLM). Features cannot discriminate.
+MSL,T-13,0.0,7.05,3575,3,0.963,NOT DISCRIMINATIVE,False,FEATURE_BLIND,Stage-2 only (MLLM). Features cannot discriminate.
+SMAP,T-1,0.193,13.37,11487,26,1.2,WEAK,True,SCORER_BROKEN,"Global memory reference (T-PatchCore). Features OK, LTR inverted."
+SMAP,E-5,0.222,2.87,11174,6,0.839,NOT DISCRIMINATIVE,False,FEATURE_BLIND,Stage-2 only (MLLM). Features cannot discriminate.

@@ -60,6 +60,8 @@ class VLM4TS:
         api_key: Optional[str] = None,
         verbose: bool = True,
         use_dynamic_plot: bool = False,
+        stage2_input: str = 'full_image',  # 'full_image' | 'text_only' | 'crop_image'
+        crop_pad_ratio: float = 0.5,       # crop_image: 구간 길이의 몇 배를 양쪽 패딩으로
     ):
         # Initialize ViT4TS
         if vit4ts_params is None:
@@ -73,6 +75,8 @@ class VLM4TS:
         self.vlm_model = vlm_model
         self.verbose = verbose
         self.use_dynamic_plot = use_dynamic_plot
+        self.stage2_input = stage2_input
+        self.crop_pad_ratio = crop_pad_ratio
         self._dynamic_renderer = DynamicPlotRenderer()
 
         # Initialize OpenAI client

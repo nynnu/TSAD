@@ -1,0 +1,119 @@
+ds,sig,cs,ce,pct,z_global,z_local,z_max,ctx_label,verdict,conf,keep,is_tp,flag,reason
+MSL,C-1,1680,1959,94.66666666666667,4.52,8.55,8.55,before,ANOMALY,3,True,False,FP,Clear deviation with z_max > 5σ and visually distinct pattern.
+MSL,C-1,2968,3191,92.0,5.37,1.51,5.37,before,ANOMALY,2,True,False,FP,"Severe deviation with z_max > 5σ, not similar to background patterns."
+MSL,C-1,3416,3639,90.66666666666666,4.34,1.83,4.34,before,ANOMALY,2,True,False,FP,"Distinct deviation with z_max 4.3σ, not similar to background patterns."
+MSL,C-1,3976,4367,100.0,5.03,4.28,5.03,before,ANOMALY,2,True,True,TP,"Severe deviation with z_max > 5σ, visually distinct from background."
+MSL,D-14,5096,5879,100.0,20000.0,20000.0,20000.0,before,ANOMALY,3,True,True,TP,Extreme deviation >20σ with no similar patterns elsewhere.
+MSL,D-15,672,895,91.66666666666666,-13.26,-2.49,13.26,before,ANOMALY,3,True,False,FP,Severe deviation of -13.3σ with no similar patterns elsewhere.
+MSL,D-15,1176,1399,95.83333333333334,-13.26,-2.54,13.26,before,ANOMALY,3,True,False,FP,"Severe deviation of -13.3σ, visually distinct from background."
+MSL,D-15,2632,2855,93.05555555555556,-13.26,-2.27,13.26,before,ANOMALY,3,True,False,FP,Severe deviation with z_max > 5σ and visually distinct pattern.
+MSL,D-15,3192,3639,100.0,-13.26,-3.18,13.26,before,ANOMALY,3,True,True,TP,Severe deviation with z_max > 5σ and visually distinct pattern.
+MSL,D-16,392,615,91.93548387096774,4.69,0.67,4.69,before,ANOMALY,2,True,False,FP,"Distinct pattern with z_max 4.7σ, not similar to background."
+MSL,D-16,1904,2407,100.0,4.7,20000.0,20000.0,before,ANOMALY,3,True,True,TP,Extreme deviation with z_max > 20σ and visually distinct from background.
+MSL,F-7,0,279,95.45454545454545,7.15,3.33,7.15,after,ANOMALY,3,True,False,FP,Severe deviation with z_max > 5σ and visually distinct pattern.
+MSL,F-7,3472,3807,90.9090909090909,7.15,2.76,7.15,before,ANOMALY,2,True,True,TP,"Severe deviation with z_max > 5σ, distinct from background."
+MSL,F-7,4088,4591,99.24242424242425,7.15,1.53,7.15,before,ANOMALY,3,True,False,FP,Severe deviation with z_max > 5σ and visually distinct pattern.
+MSL,F-7,5320,5935,100.0,7.15,1.62,7.15,before,ANOMALY,3,True,True,TP,Severe deviation of +7.1σ with no similar patterns elsewhere.
+MSL,F-7,6384,6663,94.6969696969697,7.15,2.45,7.15,before,ANOMALY,2,True,False,FP,"Severe deviation with z_max > 5σ, not similar to background."
+MSL,F-8,336,951,99.00990099009901,64.75,3.27,64.75,before,ANOMALY,3,True,False,FP,"Extreme deviation with z_max > 64σ, visually distinct from background."
+MSL,F-8,1344,1959,100.0,64.75,3.86,64.75,before,ANOMALY,3,True,False,FP,Extreme deviation of +64.8σ with no similar patterns elsewhere.
+MSL,F-8,2800,3023,94.05940594059405,64.75,3.43,64.75,before,ANOMALY,3,True,False,FP,"Extreme deviation with z_max > 64σ, visually distinct from background."
+MSL,P-11,5040,5431,100.0,-6.44,-6.64,6.64,before,ANOMALY,3,True,True,TP,Severe deviation >5σ with no similar patterns elsewhere.
+MSL,P-11,5600,5991,99.23664122137404,-14.19,-15.05,15.05,before,ANOMALY,3,True,True,TP,"Severe deviation >5σ, visually distinct from background."
+MSL,P-11,6160,6439,94.65648854961832,-1.48,-1.26,1.48,before,NORMAL,1,False,False,FP,Pattern resembles normal variation; z_max < 3σ.
+MSL,P-11,7056,7447,95.41984732824427,-4.72,-8.48,8.48,before,ANOMALY,3,True,False,FP,Clear deviation with z_max > 5σ and visually distinct pattern.
+MSL,P-14,7224,8399,100.0,-474.21,-2163.96,2163.96,before,ANOMALY,3,True,True,TP,Extreme deviation >20σ with no similar patterns elsewhere.
+MSL,P-14,8736,8959,91.0828025477707,-412.05,-2.19,412.05,before,ANOMALY,3,True,False,FP,"Extreme deviation from global normal, z_max > 20σ."
+MSL,T-12,1008,1343,100.0,3.94,9.7,9.7,before,ANOMALY,3,True,False,FP,Clear deviation with z_max > 5σ and visually distinct pattern.
+MSL,T-12,1680,1903,96.66666666666667,4.0,6.53,6.53,before,ANOMALY,3,True,True,TP,Clear deviation with z_max > 5σ and visually distinct pattern.
+MSL,T-12,2968,3247,93.33333333333333,-2.82,-6.72,6.72,before,ANOMALY,3,True,False,FP,Severe deviation from context with z_max > 5σ and visually distinct.
+MSL,T-13,224,503,95.0,-2.01,1.11,2.01,before,NORMAL,1,False,False,FP,Pattern resembles normal variation; z_max < 3σ.
+MSL,T-13,952,1343,100.0,-2.85,-28.7,28.7,before,ANOMALY,3,True,False,FP,"Extreme deviation of -28.7σ from context, visually distinct from background."
+MSL,T-8,1512,2127,100.0,10.1,10.61,10.61,before,ANOMALY,3,True,True,TP,Severe deviation with z_max > 10σ and visually distinct pattern.
+NAB,ec2_cpu_utilization_24ae8d,2632,2855,91.30434782608695,898.43,14.13,898.43,before,ANOMALY,3,True,False,FP,Extreme deviation with z_max > 20σ and visually distinct pattern.
+NAB,ec2_cpu_utilization_24ae8d,3416,4031,100.0,1490.64,22.37,1490.64,before,ANOMALY,3,True,True,TP,Extreme deviation with z_max > 20σ and visually distinct from background.
+NAB,ec2_cpu_utilization_53ea38,1288,1791,100.0,12.03,8.85,12.03,before,ANOMALY,3,True,True,TP,Severe deviation with z_max > 5σ and visually distinct pattern.
+NAB,ec2_cpu_utilization_53ea38,2576,2855,92.7536231884058,11.24,7.36,11.24,before,ANOMALY,3,True,True,TP,Severe deviation with z_max > 5σ and visually distinct pattern.
+NAB,ec2_cpu_utilization_5f5533,1120,1399,92.7536231884058,4.34,4.05,4.34,before,ANOMALY,2,True,True,TP,"Distinct deviation with z_max > 3σ, not similar to background."
+NAB,ec2_cpu_utilization_5f5533,2744,3191,100.0,5.63,8.57,8.57,before,ANOMALY,3,True,True,TP,"Clear, severe deviation with z_max > 5σ and visually distinct pattern."
+NAB,ec2_cpu_utilization_77c1ca,1288,2015,100.0,33579.98,5291.71,33579.98,before,ANOMALY,3,True,True,TP,Extreme deviation with z_max > 20σ and visually distinct pattern.
+NAB,ec2_cpu_utilization_77c1ca,3136,3359,92.7536231884058,33591.45,6435.74,33591.45,before,ANOMALY,3,True,False,FP,Extreme deviation with z_max > 20σ and visually distinct pattern.
+NAB,ec2_cpu_utilization_825cc2,1512,2071,100.0,-17.02,-53.52,53.52,before,ANOMALY,3,True,True,TP,Extreme deviation with no similar patterns elsewhere.
+NAB,ec2_cpu_utilization_ac20cd,336,671,95.65217391304348,-16.83,-18.53,18.53,before,ANOMALY,3,True,False,FP,Severe deviation with z_max > 5σ and visually distinct pattern.
+NAB,ec2_cpu_utilization_ac20cd,3360,3751,100.0,34.91,34.94,34.94,before,ANOMALY,3,True,True,TP,Extreme deviation with z_max > 20σ and visually distinct pattern.
+NAB,ec2_cpu_utilization_fe7f93,0,223,92.53731343283582,77.76,6.56,77.76,after,ANOMALY,3,True,False,FP,Extreme deviation with z_max > 77σ and visually distinct from background.
+NAB,ec2_cpu_utilization_fe7f93,672,951,95.52238805970148,79.44,183.18,183.18,before,ANOMALY,3,True,True,TP,Extreme deviation with z_max > 183σ and visually distinct from background.
+NAB,ec2_cpu_utilization_fe7f93,2800,3191,100.0,77.27,119.62,119.62,before,ANOMALY,3,True,False,FP,"Extreme deviation with z_max > 119σ, visually distinct from background."
+NAB,ec2_disk_write_bytes_1ef3de,448,727,92.5925925925926,6.0,1710710000000.0,1710710000000.0,before,ANOMALY,3,True,False,FP,Clear deviation with z_max > 5σ and no similar patterns elsewhere.
+NAB,ec2_disk_write_bytes_1ef3de,2408,2799,100.0,15.75,4489870000000.0,4489870000000.0,before,ANOMALY,3,True,True,TP,Extreme deviation with z_max > 5σ and visually distinct pattern.
+NAB,ec2_disk_write_bytes_1ef3de,3136,3359,93.82716049382715,15.84,11.48,15.84,before,ANOMALY,3,True,False,FP,"Distinct pattern with severe deviation, z_max > 5σ, not similar to background."
+NAB,ec2_disk_write_bytes_1ef3de,4424,4703,95.06172839506173,19.2,2103.06,2103.06,before,ANOMALY,3,True,False,FP,Extreme deviation with z_max > 2103σ and visually distinct from background.
+NAB,ec2_disk_write_bytes_c0d644,1624,2015,100.0,9.57,13.58,13.58,before,ANOMALY,3,True,True,TP,Severe deviation with z_max > 5σ and visually distinct pattern.
+NAB,ec2_disk_write_bytes_c0d644,2576,2855,97.10144927536231,9.71,5.76,9.71,before,ANOMALY,3,True,False,FP,Distinct severe deviation with z_max > 5σ and no similar patterns elsewhere.
+NAB,ec2_disk_write_bytes_c0d644,3080,3303,91.30434782608695,9.35,6579460000000.0,6579460000000.0,before,ANOMALY,3,True,True,TP,Extreme deviation with z_max > 5σ and visually distinct pattern.
+NAB,ec2_network_in_257a54,1400,1959,100.0,9428.75,220.14,9428.75,before,ANOMALY,3,True,True,TP,Extreme deviation with no similar patterns elsewhere.
+NAB,ec2_network_in_5abac7,448,783,97.53086419753086,134055.64,197931.09,197931.09,before,ANOMALY,3,True,False,FP,Extreme deviation with z_max > 20σ and visually distinct pattern.
+NAB,ec2_network_in_5abac7,2408,2799,100.0,166902.77,242594.93,242594.93,before,ANOMALY,3,True,True,TP,Extreme deviation with z_max > 20σ and visually distinct pattern.
+NAB,ec2_network_in_5abac7,4424,4703,95.06172839506173,208590.95,219.65,208590.95,before,ANOMALY,3,True,False,FP,Extreme deviation with z_max > 20σ and visually distinct from background.
+NAB,elb_request_count_8c0756,560,839,94.20289855072464,6.42,5.39,6.42,before,ANOMALY,3,True,True,TP,Clear deviation with z_max > 5σ and no similar patterns elsewhere.
+NAB,elb_request_count_8c0756,3472,3919,100.0,11.65,10.4,11.65,before,ANOMALY,3,True,True,TP,Severe deviation with z_max > 11σ and visually distinct pattern.
+NAB,grok_asg_anomaly,1120,1567,96.20253164556962,-2.91,-7.29,7.29,before,ANOMALY,3,True,True,TP,Severe deviation of -7.3σ from context with no similar patterns elsewhere.
+NAB,grok_asg_anomaly,3584,3919,100.0,-9.62,-19.62,19.62,before,ANOMALY,3,True,True,TP,Severe deviation with z_max > 5σ and visually distinct from background.
+NAB,iio_us-east-1_i-a2eb1cd9_NetworkIn,0,279,100.0,48.51,5.73,48.51,after,ANOMALY,3,True,True,TP,Extreme deviation with z_max > 48σ and visually distinct from background.
+NAB,rds_cpu_utilization_cc0c53,2800,3359,100.0,63.33,56.0,63.33,before,ANOMALY,3,True,True,TP,Extreme deviation with z_max > 63σ and no similar patterns elsewhere.
+NAB,rds_cpu_utilization_e47b3b,728,1119,100.0,7.15,132.42,132.42,before,ANOMALY,3,True,True,TP,"Extreme deviation with z_max > 132σ, visually distinct from background."
+NAB,rds_cpu_utilization_e47b3b,2408,2687,94.20289855072464,1.53,20.22,20.22,before,ANOMALY,3,True,True,TP,Extreme shift of +20.2σ with no similar patterns elsewhere.
+NAB,rds_cpu_utilization_e47b3b,3472,3695,91.30434782608695,1.66,3.19,3.19,before,ANOMALY,2,True,False,FP,"Distinct shift with z_max 3.2σ, not similar to background patterns."
+SMAP,D-1,56,447,93.46733668341709,-3.37,-3.26,3.37,after,ANOMALY,2,True,False,FP,"Distinct deviation with z_max > 3σ, not similar to background patterns."
+SMAP,D-1,1680,1959,91.95979899497488,-2.7,-2.75,2.75,before,NORMAL,1,False,False,FP,Pattern resembles normal variation; z_max < 3σ.
+SMAP,D-1,7952,8903,100.0,22.26,31.42,31.42,before,ANOMALY,3,True,True,TP,"Extreme deviation with z_max > 31σ, visually distinct from background."
+SMAP,E-1,1232,1567,94.5,2.48,1.84,2.48,before,NORMAL,1,False,False,FP,Pattern resembles normal variation with z_max < 3σ.
+SMAP,E-1,2632,2855,90.5,2.48,2.59,2.59,before,NORMAL,1,False,False,FP,Pattern resembles normal variation with z_max < 3σ.
+SMAP,E-1,8232,8903,100.0,2.48,2.54,2.54,before,NORMAL,1,False,True,TP,Pattern resembles normal variation with z_max < 3σ.
+SMAP,E-1,10640,11199,96.0,2.48,2.32,2.48,before,NORMAL,1,False,False,FP,Pattern resembles normal variation with z_max < 3σ.
+SMAP,E-2,56,391,94.0,4.08,3.15,4.08,after,NORMAL,1,False,False,FP,Similar patterns exist elsewhere; candidate resembles normal variation.
+SMAP,E-2,784,1063,93.5,4.08,1.91,4.08,before,NORMAL,1,False,False,FP,Similar patterns exist elsewhere; deviation resembles normal variation.
+SMAP,E-2,1344,1567,91.0,4.08,2.03,4.08,before,NORMAL,1,False,False,FP,Similar patterns exist elsewhere; deviation resembles normal variation.
+SMAP,E-2,2464,2911,97.5,4.35,3.26,4.35,before,NORMAL,1,False,False,FP,Similar patterns exist elsewhere; deviation resembles normal variation.
+SMAP,E-2,8288,8959,100.0,4.63,4.32,4.63,before,ANOMALY,2,True,True,TP,"Distinct deviation with z_max 4.6σ, not similar to background patterns."
+SMAP,E-3,280,559,91.3265306122449,-11.43,-0.87,11.43,before,ANOMALY,3,True,False,FP,Severe deviation of -11.4σ from global normal.
+SMAP,E-3,2632,3079,98.9795918367347,-16.0,-4.42,16.0,before,ANOMALY,3,True,False,FP,Severe deviation of -16.0σ with no similar patterns elsewhere.
+SMAP,E-3,8288,8679,100.0,-14.89,-35.2,35.2,before,ANOMALY,3,True,True,TP,"Extreme deviation with z_max > 35σ, visually distinct from background."
+SMAP,E-3,9352,10023,98.46938775510205,-15.44,-0.74,15.44,before,ANOMALY,3,True,True,TP,Severe deviation of -15.4σ with no similar patterns elsewhere.
+SMAP,E-4,56,335,93.4010152284264,2.89,3.35,3.35,after,NORMAL,1,False,False,FP,Similar patterns exist elsewhere; deviation resembles normal variation.
+SMAP,E-4,784,1063,93.90862944162437,3.32,2.35,3.32,before,NORMAL,1,False,False,FP,Similar patterns exist elsewhere; deviation resembles normal variation.
+SMAP,E-4,1344,1567,90.35532994923858,3.06,2.64,3.06,before,NORMAL,1,False,False,FP,Similar patterns exist elsewhere; deviation resembles normal variation.
+SMAP,E-4,2464,2855,98.47715736040608,3.45,3.77,3.77,before,NORMAL,1,False,False,FP,Similar patterns exist elsewhere; deviation resembles normal variation.
+SMAP,E-4,8344,8791,100.0,3.2,3.4,3.4,before,NORMAL,1,False,True,TP,Similar patterns exist elsewhere; deviation resembles normal variation.
+SMAP,E-4,9184,9463,91.37055837563452,-2.77,-1.81,2.77,before,NORMAL,1,False,True,TP,Pattern resembles normal variation; z_max < 3σ.
+SMAP,E-4,10528,10919,97.46192893401016,2.95,2.74,2.95,before,NORMAL,1,False,True,TP,Pattern resembles normal variation; z_max < 3σ.
+SMAP,E-5,56,391,94.38775510204081,3.95,2.59,3.95,after,NORMAL,1,False,False,FP,Similar patterns exist elsewhere; deviation resembles normal variation.
+SMAP,E-5,1232,1623,96.42857142857143,3.95,1.84,3.95,before,NORMAL,1,False,False,FP,Similar patterns exist elsewhere; deviation resembles normal variation.
+SMAP,E-5,2576,3079,98.9795918367347,3.95,2.54,3.95,before,NORMAL,1,False,False,FP,Similar patterns exist elsewhere; deviation resembles normal variation.
+SMAP,E-5,8288,8735,100.0,3.95,4.54,4.54,before,ANOMALY,2,True,True,TP,"Distinct peak with z_max 4.5σ, not similar to background patterns."
+SMAP,E-5,10584,10863,92.3469387755102,1.97,1.87,1.97,before,NORMAL,1,False,False,FP,Pattern resembles normal variation; z_max < 3σ.
+SMAP,E-6,1288,1623,94.89795918367348,2.68,2.12,2.68,before,NORMAL,1,False,False,FP,Pattern resembles normal variation with z_max < 3σ.
+SMAP,E-6,2688,2967,94.38775510204081,2.68,3.26,3.26,before,NORMAL,1,False,False,FP,Pattern repeats elsewhere; deviation resembles normal variation.
+SMAP,E-6,4536,4871,92.85714285714286,2.68,3.33,3.33,before,NORMAL,1,False,False,FP,Pattern resembles normal variation seen elsewhere in the series.
+SMAP,E-6,8120,8847,100.0,-664.99,-660.79,664.99,before,ANOMALY,3,True,True,TP,"Extreme deviation >20σ, visually distinct from background."
+SMAP,E-6,10752,11087,95.40816326530613,2.68,3.06,3.06,before,NORMAL,1,False,False,FP,Pattern resembles normal variation seen elsewhere in the series.
+SMAP,E-7,4760,5207,94.3298969072165,2.38,2.67,2.67,before,NORMAL,1,False,False,FP,Pattern resembles normal variation; z_max < 3σ.
+SMAP,E-7,6216,6495,91.75257731958763,2.43,2.65,2.65,before,NORMAL,1,False,False,FP,Pattern resembles normal variation; z_max < 3σ.
+SMAP,E-7,7952,8847,100.0,37.5,48.55,48.55,before,ANOMALY,3,True,True,TP,"Extreme deviation with z_max > 48σ, visually distinct from background."
+SMAP,F-1,0,559,96.51741293532339,55.56,5.77,55.56,after,ANOMALY,3,True,False,FP,Extreme deviation with z_max > 55σ and visually distinct pattern.
+SMAP,F-1,896,1175,91.04477611940298,40.36,4.17,40.36,before,ANOMALY,3,True,False,FP,Extreme deviation of +40.4σ with no similar patterns elsewhere.
+SMAP,F-1,3920,4311,99.00497512437812,55.56,6.16,55.56,before,ANOMALY,3,True,False,FP,Extreme deviation with z_max > 55σ and visually distinct pattern.
+SMAP,F-1,8064,8511,100.0,41.38,4.6,41.38,before,ANOMALY,3,True,True,TP,Extreme deviation with z_max > 5σ and visually distinct from background.
+SMAP,F-1,10192,10583,94.02985074626866,51.63,5.31,51.63,before,ANOMALY,3,True,False,FP,Extreme deviation with z_max > 51σ and visually distinct pattern.
+SMAP,F-2,8456,8679,90.5940594059406,92.0,9.14,92.0,before,ANOMALY,3,True,True,TP,Extreme deviation with z_max > 5σ and visually distinct from background.
+SMAP,F-2,9408,10247,100.0,140.03,12.72,140.03,before,ANOMALY,3,True,True,TP,"Extreme deviation with z_max > 140σ, visually distinct from background."
+SMAP,F-2,10808,11423,95.04950495049505,103.98,549.32,549.32,before,ANOMALY,3,True,True,TP,"Extreme deviation with z_max > 549σ, visually distinct from background."
+SMAP,F-3,2016,3191,100.0,1.45,15.05,15.05,before,ANOMALY,3,True,False,FP,Severe deviation with z_max > 5σ and visually distinct from background.
+SMAP,F-3,8232,8735,97.97979797979798,0.68,13.5,13.5,before,ANOMALY,3,True,True,TP,Severe deviation with z_max > 5σ and visually distinct from background.
+SMAP,P-1,4928,5263,92.5,3.45,3.83,3.83,before,ANOMALY,2,True,True,TP,"Distinct shift with z_max > 3σ, not similar to background patterns."
+SMAP,P-1,6272,6663,98.0,3.37,2.18,3.37,before,NORMAL,1,False,True,TP,Pattern resembles normal variation; z_max < 3σ.
+SMAP,P-1,7000,7727,100.0,3.52,3.14,3.52,before,NORMAL,1,False,True,TP,Similar patterns exist elsewhere in the series.
+SMAP,P-1,9632,10023,96.0,3.61,4.16,4.16,before,ANOMALY,2,True,False,FP,"Distinct shift with z_max 4.2σ, not similar to background patterns."
+SMAP,T-1,2576,3023,96.03960396039604,-5.77,-2.69,5.77,before,ANOMALY,3,True,False,FP,Severe deviation with z_max > 5σ and visually distinct pattern.
+SMAP,T-1,5264,5599,92.07920792079209,-5.7,-2.75,5.7,before,ANOMALY,3,True,True,TP,Severe deviation with z_max > 5σ and visually distinct from background.
+SMAP,T-1,6048,6999,100.0,-5.73,-2.81,5.73,before,ANOMALY,3,True,True,TP,Severe deviation with z_max > 5σ and visually distinct pattern.

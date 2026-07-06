@@ -1,0 +1,18 @@
+CDE Probe — Discrimination Metrics
+==================================================
+
+SMAP F-3  (τ=28)
+  within-normal L2  : 10.9176
+  cross L2 (N vs A) : 9.9591
+  ratio             : 0.912
+  verdict           : NOT DISCRIMINATIVE — CDE unlikely to help this signal
+
+SMAP F-1  (τ=9)
+  within-normal L2  : 2.1331
+  cross L2 (N vs A) : 1.8258
+  ratio             : 0.856
+  verdict           : NOT DISCRIMINATIVE — CDE unlikely to help this signal
+
+Decision criterion:
+  ratio > 1.5 → anomalous windows are visually distinct → run full experiment
+  ratio < 1.0 → CDE encoding is not discriminative → do not proceed

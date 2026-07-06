@@ -1,0 +1,654 @@
+{
+  "config": {
+    "alpha": 0.01,
+    "n_signals": 17
+  },
+  "clip_fixed": [
+    {
+      "signal": "ec2_cpu_utilization_24ae8d",
+      "condition": "clip_fixed",
+      "n_gt": 2,
+      "n_detected": 9,
+      "precision": 0.2222,
+      "recall": 1.0,
+      "f1": 0.3636
+    },
+    {
+      "signal": "ec2_cpu_utilization_53ea38",
+      "condition": "clip_fixed",
+      "n_gt": 2,
+      "n_detected": 5,
+      "precision": 0.6,
+      "recall": 1.0,
+      "f1": 0.75
+    },
+    {
+      "signal": "ec2_cpu_utilization_5f5533",
+      "condition": "clip_fixed",
+      "n_gt": 2,
+      "n_detected": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0
+    },
+    {
+      "signal": "ec2_cpu_utilization_77c1ca",
+      "condition": "clip_fixed",
+      "n_gt": 1,
+      "n_detected": 0,
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0
+    },
+    {
+      "signal": "ec2_cpu_utilization_825cc2",
+      "condition": "clip_fixed",
+      "n_gt": 1,
+      "n_detected": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "signal": "ec2_cpu_utilization_ac20cd",
+      "condition": "clip_fixed",
+      "n_gt": 1,
+      "n_detected": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0
+    },
+    {
+      "signal": "ec2_cpu_utilization_c6585a",
+      "condition": "clip_fixed",
+      "n_gt": 0,
+      "n_detected": 11,
+      "precision": 0.0,
+      "recall": 0,
+      "f1": 0
+    },
+    {
+      "signal": "ec2_cpu_utilization_fe7f93",
+      "condition": "clip_fixed",
+      "n_gt": 3,
+      "n_detected": 3,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0
+    },
+    {
+      "signal": "ec2_disk_write_bytes_1ef3de",
+      "condition": "clip_fixed",
+      "n_gt": 1,
+      "n_detected": 2,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0
+    },
+    {
+      "signal": "ec2_disk_write_bytes_c0d644",
+      "condition": "clip_fixed",
+      "n_gt": 3,
+      "n_detected": 0,
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0
+    },
+    {
+      "signal": "ec2_network_in_257a54",
+      "condition": "clip_fixed",
+      "n_gt": 1,
+      "n_detected": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "signal": "ec2_network_in_5abac7",
+      "condition": "clip_fixed",
+      "n_gt": 2,
+      "n_detected": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0
+    },
+    {
+      "signal": "elb_request_count_8c0756",
+      "condition": "clip_fixed",
+      "n_gt": 2,
+      "n_detected": 3,
+      "precision": 0.6667,
+      "recall": 1.0,
+      "f1": 0.8
+    },
+    {
+      "signal": "grok_asg_anomaly",
+      "condition": "clip_fixed",
+      "n_gt": 3,
+      "n_detected": 2,
+      "precision": 0.5,
+      "recall": 0.3333,
+      "f1": 0.4
+    },
+    {
+      "signal": "iio_us-east-1_i-a2eb1cd9_NetworkIn",
+      "condition": "clip_fixed",
+      "n_gt": 2,
+      "n_detected": 3,
+      "precision": 0.3333,
+      "recall": 0.5,
+      "f1": 0.4
+    },
+    {
+      "signal": "rds_cpu_utilization_cc0c53",
+      "condition": "clip_fixed",
+      "n_gt": 2,
+      "n_detected": 1,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667
+    },
+    {
+      "signal": "rds_cpu_utilization_e47b3b",
+      "condition": "clip_fixed",
+      "n_gt": 2,
+      "n_detected": 3,
+      "precision": 0.6667,
+      "recall": 1.0,
+      "f1": 0.8
+    },
+    {
+      "signal": "AVERAGE",
+      "condition": "clip_fixed",
+      "precision": 0.3523,
+      "recall": 0.4314,
+      "f1": 0.3635
+    }
+  ],
+  "dino_fixed": [
+    {
+      "signal": "ec2_cpu_utilization_24ae8d",
+      "condition": "dino_fixed",
+      "n_gt": 2,
+      "n_detected": 10,
+      "precision": 0.1,
+      "recall": 0.5,
+      "f1": 0.1667
+    },
+    {
+      "signal": "ec2_cpu_utilization_53ea38",
+      "condition": "dino_fixed",
+      "n_gt": 2,
+      "n_detected": 8,
+      "precision": 0.125,
+      "recall": 0.5,
+      "f1": 0.2
+    },
+    {
+      "signal": "ec2_cpu_utilization_5f5533",
+      "condition": "dino_fixed",
+      "n_gt": 2,
+      "n_detected": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "signal": "ec2_cpu_utilization_77c1ca",
+      "condition": "dino_fixed",
+      "n_gt": 1,
+      "n_detected": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0
+    },
+    {
+      "signal": "ec2_cpu_utilization_825cc2",
+      "condition": "dino_fixed",
+      "n_gt": 1,
+      "n_detected": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "signal": "ec2_cpu_utilization_ac20cd",
+      "condition": "dino_fixed",
+      "n_gt": 1,
+      "n_detected": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "signal": "ec2_cpu_utilization_c6585a",
+      "condition": "dino_fixed",
+      "n_gt": 0,
+      "n_detected": 9,
+      "precision": 0.0,
+      "recall": 0,
+      "f1": 0
+    },
+    {
+      "signal": "ec2_cpu_utilization_fe7f93",
+      "condition": "dino_fixed",
+      "n_gt": 3,
+      "n_detected": 2,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0
+    },
+    {
+      "signal": "ec2_disk_write_bytes_1ef3de",
+      "condition": "dino_fixed",
+      "n_gt": 1,
+      "n_detected": 2,
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6667
+    },
+    {
+      "signal": "ec2_disk_write_bytes_c0d644",
+      "condition": "dino_fixed",
+      "n_gt": 3,
+      "n_detected": 3,
+      "precision": 0.3333,
+      "recall": 0.3333,
+      "f1": 0.3333
+    },
+    {
+      "signal": "ec2_network_in_257a54",
+      "condition": "dino_fixed",
+      "n_gt": 1,
+      "n_detected": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "signal": "ec2_network_in_5abac7",
+      "condition": "dino_fixed",
+      "n_gt": 2,
+      "n_detected": 2,
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5
+    },
+    {
+      "signal": "elb_request_count_8c0756",
+      "condition": "dino_fixed",
+      "n_gt": 2,
+      "n_detected": 1,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667
+    },
+    {
+      "signal": "grok_asg_anomaly",
+      "condition": "dino_fixed",
+      "n_gt": 3,
+      "n_detected": 4,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0
+    },
+    {
+      "signal": "iio_us-east-1_i-a2eb1cd9_NetworkIn",
+      "condition": "dino_fixed",
+      "n_gt": 2,
+      "n_detected": 2,
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5
+    },
+    {
+      "signal": "rds_cpu_utilization_cc0c53",
+      "condition": "dino_fixed",
+      "n_gt": 2,
+      "n_detected": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "signal": "rds_cpu_utilization_e47b3b",
+      "condition": "dino_fixed",
+      "n_gt": 2,
+      "n_detected": 1,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667
+    },
+    {
+      "signal": "AVERAGE",
+      "condition": "dino_fixed",
+      "precision": 0.5328,
+      "recall": 0.549,
+      "f1": 0.5118
+    }
+  ],
+  "dino_adaptive": [
+    {
+      "signal": "ec2_cpu_utilization_24ae8d",
+      "condition": "dino_adaptive",
+      "n_gt": 2,
+      "n_detected": 10,
+      "precision": 0.1,
+      "recall": 0.5,
+      "f1": 0.1667
+    },
+    {
+      "signal": "ec2_cpu_utilization_53ea38",
+      "condition": "dino_adaptive",
+      "n_gt": 2,
+      "n_detected": 11,
+      "precision": 0.2727,
+      "recall": 1.0,
+      "f1": 0.4286
+    },
+    {
+      "signal": "ec2_cpu_utilization_5f5533",
+      "condition": "dino_adaptive",
+      "n_gt": 2,
+      "n_detected": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "signal": "ec2_cpu_utilization_77c1ca",
+      "condition": "dino_adaptive",
+      "n_gt": 1,
+      "n_detected": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0
+    },
+    {
+      "signal": "ec2_cpu_utilization_825cc2",
+      "condition": "dino_adaptive",
+      "n_gt": 1,
+      "n_detected": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "signal": "ec2_cpu_utilization_ac20cd",
+      "condition": "dino_adaptive",
+      "n_gt": 1,
+      "n_detected": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "signal": "ec2_cpu_utilization_c6585a",
+      "condition": "dino_adaptive",
+      "n_gt": 0,
+      "n_detected": 14,
+      "precision": 0.0,
+      "recall": 0,
+      "f1": 0
+    },
+    {
+      "signal": "ec2_cpu_utilization_fe7f93",
+      "condition": "dino_adaptive",
+      "n_gt": 3,
+      "n_detected": 2,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0
+    },
+    {
+      "signal": "ec2_disk_write_bytes_1ef3de",
+      "condition": "dino_adaptive",
+      "n_gt": 1,
+      "n_detected": 2,
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6667
+    },
+    {
+      "signal": "ec2_disk_write_bytes_c0d644",
+      "condition": "dino_adaptive",
+      "n_gt": 3,
+      "n_detected": 3,
+      "precision": 0.3333,
+      "recall": 0.3333,
+      "f1": 0.3333
+    },
+    {
+      "signal": "ec2_network_in_257a54",
+      "condition": "dino_adaptive",
+      "n_gt": 1,
+      "n_detected": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "signal": "ec2_network_in_5abac7",
+      "condition": "dino_adaptive",
+      "n_gt": 2,
+      "n_detected": 2,
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5
+    },
+    {
+      "signal": "elb_request_count_8c0756",
+      "condition": "dino_adaptive",
+      "n_gt": 2,
+      "n_detected": 1,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667
+    },
+    {
+      "signal": "grok_asg_anomaly",
+      "condition": "dino_adaptive",
+      "n_gt": 3,
+      "n_detected": 4,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0
+    },
+    {
+      "signal": "iio_us-east-1_i-a2eb1cd9_NetworkIn",
+      "condition": "dino_adaptive",
+      "n_gt": 2,
+      "n_detected": 2,
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5
+    },
+    {
+      "signal": "rds_cpu_utilization_cc0c53",
+      "condition": "dino_adaptive",
+      "n_gt": 2,
+      "n_detected": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "signal": "rds_cpu_utilization_e47b3b",
+      "condition": "dino_adaptive",
+      "n_gt": 2,
+      "n_detected": 1,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667
+    },
+    {
+      "signal": "AVERAGE",
+      "condition": "dino_adaptive",
+      "precision": 0.5415,
+      "recall": 0.5784,
+      "f1": 0.5252
+    }
+  ],
+  "mae_fixed": [
+    {
+      "signal": "ec2_cpu_utilization_24ae8d",
+      "condition": "mae_fixed",
+      "n_gt": 2,
+      "n_detected": 11,
+      "precision": 0.2727,
+      "recall": 1.0,
+      "f1": 0.4286
+    },
+    {
+      "signal": "ec2_cpu_utilization_53ea38",
+      "condition": "mae_fixed",
+      "n_gt": 2,
+      "n_detected": 3,
+      "precision": 0.6667,
+      "recall": 1.0,
+      "f1": 0.8
+    },
+    {
+      "signal": "ec2_cpu_utilization_5f5533",
+      "condition": "mae_fixed",
+      "n_gt": 2,
+      "n_detected": 3,
+      "precision": 0.3333,
+      "recall": 0.5,
+      "f1": 0.4
+    },
+    {
+      "signal": "ec2_cpu_utilization_77c1ca",
+      "condition": "mae_fixed",
+      "n_gt": 1,
+      "n_detected": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0
+    },
+    {
+      "signal": "ec2_cpu_utilization_825cc2",
+      "condition": "mae_fixed",
+      "n_gt": 1,
+      "n_detected": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "signal": "ec2_cpu_utilization_ac20cd",
+      "condition": "mae_fixed",
+      "n_gt": 1,
+      "n_detected": 0,
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0
+    },
+    {
+      "signal": "ec2_cpu_utilization_c6585a",
+      "condition": "mae_fixed",
+      "n_gt": 0,
+      "n_detected": 13,
+      "precision": 0.0,
+      "recall": 0,
+      "f1": 0
+    },
+    {
+      "signal": "ec2_cpu_utilization_fe7f93",
+      "condition": "mae_fixed",
+      "n_gt": 3,
+      "n_detected": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0
+    },
+    {
+      "signal": "ec2_disk_write_bytes_1ef3de",
+      "condition": "mae_fixed",
+      "n_gt": 1,
+      "n_detected": 4,
+      "precision": 0.25,
+      "recall": 1.0,
+      "f1": 0.4
+    },
+    {
+      "signal": "ec2_disk_write_bytes_c0d644",
+      "condition": "mae_fixed",
+      "n_gt": 3,
+      "n_detected": 2,
+      "precision": 0.5,
+      "recall": 0.3333,
+      "f1": 0.4
+    },
+    {
+      "signal": "ec2_network_in_257a54",
+      "condition": "mae_fixed",
+      "n_gt": 1,
+      "n_detected": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "signal": "ec2_network_in_5abac7",
+      "condition": "mae_fixed",
+      "n_gt": 2,
+      "n_detected": 5,
+      "precision": 0.4,
+      "recall": 1.0,
+      "f1": 0.5714
+    },
+    {
+      "signal": "elb_request_count_8c0756",
+      "condition": "mae_fixed",
+      "n_gt": 2,
+      "n_detected": 4,
+      "precision": 0.25,
+      "recall": 0.5,
+      "f1": 0.3333
+    },
+    {
+      "signal": "grok_asg_anomaly",
+      "condition": "mae_fixed",
+      "n_gt": 3,
+      "n_detected": 0,
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0
+    },
+    {
+      "signal": "iio_us-east-1_i-a2eb1cd9_NetworkIn",
+      "condition": "mae_fixed",
+      "n_gt": 2,
+      "n_detected": 1,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667
+    },
+    {
+      "signal": "rds_cpu_utilization_cc0c53",
+      "condition": "mae_fixed",
+      "n_gt": 2,
+      "n_detected": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0
+    },
+    {
+      "signal": "rds_cpu_utilization_e47b3b",
+      "condition": "mae_fixed",
+      "n_gt": 2,
+      "n_detected": 0,
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0
+    },
+    {
+      "signal": "AVERAGE",
+      "condition": "mae_fixed",
+      "precision": 0.3337,
+      "recall": 0.4608,
+      "f1": 0.3529
+    }
+  ]
+}

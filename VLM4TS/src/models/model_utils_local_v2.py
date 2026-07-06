@@ -89,3 +89,31 @@ def compute_dissimilarity_with_ref(token: torch.Tensor, ref: torch.Tensor) -> to
     sim    = torch.bmm(token_norm, ref_norm.permute(0, 2, 1))
     dissim = 1.0 - sim
     return 0.5 * torch.min(dissim, dim=2).values
+
+
+def compute_dissimilarity_mean(token: torch.Tensor, ref: torch.Tensor) -> torch.Tensor:
+    """Mean cosine dissimilarity over reference patches (vs nearest-neighbor min)."""
+    if token.ndim == 4 and token.shape[2] == 1:
+        token = token.squeeze(2)
+
+    token_norm = F.normalize(token, dim=-1)
+    ref_norm   = F.normalize(ref.unsqueeze(0), dim=-1)
+
+    sim    = torch.bmm(token_norm, ref_norm.permute(0, 2, 1))
+    dissim = 1.0 - sim
+    return 0.5 * torch.mean(dissim, dim=2)
+
+
+def compute_dissimilarity_euclidean(token: torch.Tensor, ref: torch.Tensor) -> torch.Tensor:
+    """Nearest-neighbor Euclidean distance (captures embedding magnitude, cosine ignores it)."""
+    if token.ndim == 4 and token.shape[2] == 1:
+        token = token.squeeze(2)
+
+    # token: [1, N, D], ref: [N_ref, D]
+    # pairwise squared distances via (a-b)^2 = a^2 + b^2 - 2ab
+    token_sq  = (token ** 2).sum(dim=-1, keepdim=True)           # [1, N, 1]
+    ref_sq    = (ref ** 2).sum(dim=-1).unsqueeze(0).unsqueeze(0)  # [1, 1, N_ref]
+    dot       = torch.bmm(token, ref.unsqueeze(0).permute(0, 2, 1))  # [1, N, N_ref]
+    dist_sq   = (token_sq + ref_sq - 2.0 * dot).clamp(min=0.0)
+    dist      = dist_sq.sqrt()
+    return torch.min(dist, dim=2).values

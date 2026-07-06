@@ -1,0 +1,450 @@
+{
+  "config": {
+    "alpha": 0.01,
+    "n_channels": 11,
+    "seed": 42,
+    "ran": [
+      "mae"
+    ]
+  },
+  "clip": [
+    {
+      "channel": "P-11",
+      "backbone": "clip",
+      "n_gt": 2,
+      "n_detected": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "channel": "T-12",
+      "backbone": "clip",
+      "n_gt": 1,
+      "n_detected": 0,
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0
+    },
+    {
+      "channel": "D-15",
+      "backbone": "clip",
+      "n_gt": 1,
+      "n_detected": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0
+    },
+    {
+      "channel": "C-1",
+      "backbone": "clip",
+      "n_gt": 2,
+      "n_detected": 2,
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5
+    },
+    {
+      "channel": "F-8",
+      "backbone": "clip",
+      "n_gt": 1,
+      "n_detected": 4,
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6667
+    },
+    {
+      "channel": "F-7",
+      "backbone": "clip",
+      "n_gt": 3,
+      "n_detected": 4,
+      "precision": 0.75,
+      "recall": 1.0,
+      "f1": 0.8571
+    },
+    {
+      "channel": "T-13",
+      "backbone": "clip",
+      "n_gt": 2,
+      "n_detected": 4,
+      "precision": 0.25,
+      "recall": 0.5,
+      "f1": 0.3333
+    },
+    {
+      "channel": "D-16",
+      "backbone": "clip",
+      "n_gt": 1,
+      "n_detected": 0,
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0
+    },
+    {
+      "channel": "T-8",
+      "backbone": "clip",
+      "n_gt": 2,
+      "n_detected": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "channel": "P-14",
+      "backbone": "clip",
+      "n_gt": 1,
+      "n_detected": 4,
+      "precision": 0.25,
+      "recall": 1.0,
+      "f1": 0.4
+    },
+    {
+      "channel": "D-14",
+      "backbone": "clip",
+      "n_gt": 2,
+      "n_detected": 3,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "channel": "AVERAGE",
+      "backbone": "clip",
+      "n_gt": "-",
+      "n_detected": "-",
+      "precision": 0.4773,
+      "recall": 0.6364,
+      "f1": 0.5234
+    }
+  ],
+  "dino": [
+    {
+      "channel": "P-11",
+      "backbone": "dino",
+      "n_gt": 2,
+      "n_detected": 5,
+      "precision": 0.4,
+      "recall": 1.0,
+      "f1": 0.5714
+    },
+    {
+      "channel": "T-12",
+      "backbone": "dino",
+      "n_gt": 1,
+      "n_detected": 2,
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6667
+    },
+    {
+      "channel": "D-15",
+      "backbone": "dino",
+      "n_gt": 1,
+      "n_detected": 4,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0
+    },
+    {
+      "channel": "C-1",
+      "backbone": "dino",
+      "n_gt": 2,
+      "n_detected": 3,
+      "precision": 0.3333,
+      "recall": 0.5,
+      "f1": 0.4
+    },
+    {
+      "channel": "F-8",
+      "backbone": "dino",
+      "n_gt": 1,
+      "n_detected": 2,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0
+    },
+    {
+      "channel": "F-7",
+      "backbone": "dino",
+      "n_gt": 3,
+      "n_detected": 7,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0
+    },
+    {
+      "channel": "T-13",
+      "backbone": "dino",
+      "n_gt": 2,
+      "n_detected": 2,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0
+    },
+    {
+      "channel": "D-16",
+      "backbone": "dino",
+      "n_gt": 1,
+      "n_detected": 0,
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0
+    },
+    {
+      "channel": "T-8",
+      "backbone": "dino",
+      "n_gt": 2,
+      "n_detected": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "channel": "P-14",
+      "backbone": "dino",
+      "n_gt": 1,
+      "n_detected": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "channel": "D-14",
+      "backbone": "dino",
+      "n_gt": 2,
+      "n_detected": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "channel": "AVERAGE",
+      "backbone": "dino",
+      "n_gt": "-",
+      "n_detected": "-",
+      "precision": 0.3848,
+      "recall": 0.5,
+      "f1": 0.4216
+    }
+  ],
+  "convnext": [
+    {
+      "channel": "P-11",
+      "backbone": "convnext",
+      "n_gt": 2,
+      "n_detected": 10,
+      "precision": 0.1,
+      "recall": 0.5,
+      "f1": 0.1667
+    },
+    {
+      "channel": "T-12",
+      "backbone": "convnext",
+      "n_gt": 1,
+      "n_detected": 5,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0
+    },
+    {
+      "channel": "D-15",
+      "backbone": "convnext",
+      "n_gt": 1,
+      "n_detected": 5,
+      "precision": 0.4,
+      "recall": 1.0,
+      "f1": 0.5714
+    },
+    {
+      "channel": "C-1",
+      "backbone": "convnext",
+      "n_gt": 2,
+      "n_detected": 3,
+      "precision": 0.3333,
+      "recall": 0.5,
+      "f1": 0.4
+    },
+    {
+      "channel": "F-8",
+      "backbone": "convnext",
+      "n_gt": 1,
+      "n_detected": 8,
+      "precision": 0.125,
+      "recall": 1.0,
+      "f1": 0.2222
+    },
+    {
+      "channel": "F-7",
+      "backbone": "convnext",
+      "n_gt": 3,
+      "n_detected": 7,
+      "precision": 0.1429,
+      "recall": 0.3333,
+      "f1": 0.2
+    },
+    {
+      "channel": "T-13",
+      "backbone": "convnext",
+      "n_gt": 2,
+      "n_detected": 5,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0
+    },
+    {
+      "channel": "D-16",
+      "backbone": "convnext",
+      "n_gt": 1,
+      "n_detected": 3,
+      "precision": 0.6667,
+      "recall": 1.0,
+      "f1": 0.8
+    },
+    {
+      "channel": "T-8",
+      "backbone": "convnext",
+      "n_gt": 2,
+      "n_detected": 5,
+      "precision": 0.4,
+      "recall": 1.0,
+      "f1": 0.5714
+    },
+    {
+      "channel": "P-14",
+      "backbone": "convnext",
+      "n_gt": 1,
+      "n_detected": 6,
+      "precision": 0.1667,
+      "recall": 1.0,
+      "f1": 0.2857
+    },
+    {
+      "channel": "D-14",
+      "backbone": "convnext",
+      "n_gt": 2,
+      "n_detected": 3,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "channel": "AVERAGE",
+      "backbone": "convnext",
+      "n_gt": "-",
+      "n_detected": "-",
+      "precision": 0.3031,
+      "recall": 0.6667,
+      "f1": 0.3834
+    }
+  ],
+  "mae": [
+    {
+      "channel": "P-11",
+      "backbone": "mae",
+      "n_gt": 2,
+      "n_detected": 4,
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6667
+    },
+    {
+      "channel": "T-12",
+      "backbone": "mae",
+      "n_gt": 1,
+      "n_detected": 4,
+      "precision": 0.25,
+      "recall": 1.0,
+      "f1": 0.4
+    },
+    {
+      "channel": "D-15",
+      "backbone": "mae",
+      "n_gt": 1,
+      "n_detected": 2,
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6667
+    },
+    {
+      "channel": "C-1",
+      "backbone": "mae",
+      "n_gt": 2,
+      "n_detected": 1,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667
+    },
+    {
+      "channel": "F-8",
+      "backbone": "mae",
+      "n_gt": 1,
+      "n_detected": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "channel": "F-7",
+      "backbone": "mae",
+      "n_gt": 3,
+      "n_detected": 4,
+      "precision": 0.5,
+      "recall": 0.6667,
+      "f1": 0.5714
+    },
+    {
+      "channel": "T-13",
+      "backbone": "mae",
+      "n_gt": 2,
+      "n_detected": 2,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0
+    },
+    {
+      "channel": "D-16",
+      "backbone": "mae",
+      "n_gt": 1,
+      "n_detected": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0
+    },
+    {
+      "channel": "T-8",
+      "backbone": "mae",
+      "n_gt": 2,
+      "n_detected": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "channel": "P-14",
+      "backbone": "mae",
+      "n_gt": 1,
+      "n_detected": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "channel": "D-14",
+      "backbone": "mae",
+      "n_gt": 2,
+      "n_detected": 4,
+      "precision": 0.75,
+      "recall": 1.0,
+      "f1": 0.8571
+    },
+    {
+      "channel": "AVERAGE",
+      "backbone": "mae",
+      "n_gt": "-",
+      "n_detected": "-",
+      "precision": 0.5909,
+      "recall": 0.7424,
+      "f1": 0.6208
+    }
+  ]
+}

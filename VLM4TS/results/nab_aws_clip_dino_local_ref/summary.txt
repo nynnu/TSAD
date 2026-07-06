@@ -1,0 +1,31 @@
+======================================================================
+CLIP / DINO  local k=5  ---  NAB-AWS
+alpha(detection)=0.01
+======================================================================
+Signal                                           CLIP    DINO     MAE
+------------------------------------------------------------------
+  ec2_cpu_utilization_24ae8d                   0.0000  0.0000  0.4286
+  ec2_cpu_utilization_53ea38                   0.6667  0.2222     0.8
+  ec2_cpu_utilization_5f5533                   1.0000  1.0000  0.6667
+  ec2_cpu_utilization_77c1ca                   0.5000  0.0000     1.0
+  ec2_cpu_utilization_825cc2                   1.0000  1.0000     1.0
+  ec2_cpu_utilization_ac20cd                   0.5000  0.5000     0.5
+  ec2_cpu_utilization_c6585a                   0.0000  0.0000       0
+  ec2_cpu_utilization_fe7f93                   0.3333  0.0000     0.4
+  ec2_disk_write_bytes_1ef3de                  0.6667  0.6667     0.5
+  ec2_disk_write_bytes_c0d644                  0.2857  0.2857     0.5
+  ec2_network_in_257a54                        1.0000  1.0000     1.0
+  ec2_network_in_5abac7                        0.5000  0.5000     0.4
+  elb_request_count_8c0756                     0.5714  0.6667     0.5
+  grok_asg_anomaly                             0.5000  0.6667     0.5
+  iio_us-east-1_i-a2eb1cd9_NetworkIn           0.5000  0.5000  0.6667
+  rds_cpu_utilization_cc0c53                   0.6667  0.6667     1.0
+  rds_cpu_utilization_e47b3b                   0.8000  0.8000     0.8
+------------------------------------------------------------------
+  AVERAGE                                      0.5583  0.4985  0.6272
+
+  Baseline MAE local k=5: 0.6272
+  CLIP   local k=5    : 0.5583  (worse, -0.0689)
+  DINO   local k=5    : 0.4985  (worse, -0.1287)
+
+Results: C:\Users\김나영\Desktop\TSAD\VLM4TS\results\nab_aws_clip_dino_local_ref\results.json

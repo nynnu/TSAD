@@ -1,0 +1,4 @@
+entity,n_gt,stage1_f1,stage1_p,stage1_r,stage1_n_pred,stage2_f1,stage2_p,stage2_r,stage2_n_pred,n_candidates,change,description
+machine-1-1,8,0.6153846153846154,0.8,0.5,5,0.6153846153846154,0.8,0.5,5,5,0.0,"Detected intervals show deviations in the time series, with changes in amplitude and pattern. No false positives observed."
+machine-1-2,10,0.7368421052631577,0.7777777777777778,0.7,9,0.7368421052631577,0.7777777777777778,0.7,9,9,0.0,"Intervals show deviations in the time-series patterns, with fluctuations and spikes that differ from the normal trend. Stage1 candidates are likely accurate due to high recall."
+machine-1-5,7,1.0,1.0,1.0,7,1.0,1.0,1.0,7,7,0.0,"Detected intervals show deviations from normal patterns, with noticeable spikes or drops in the time-series data."
