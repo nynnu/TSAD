@@ -1,0 +1,86 @@
+{
+  "model_name": "gpt-4o",
+  "temperature": 0.0,
+  "n_per_case": 30,
+  "T": 300,
+  "parse_status_counts": {
+    "OK": 210
+  },
+  "classification_metrics": {
+    "n": 210,
+    "accuracy": 0.8095238095238095,
+    "precision_broken": 1.0,
+    "recall_broken": 0.7333333333333333,
+    "f1_broken": 0.8461538461538461,
+    "f1_macro": 0.7980769230769231
+  },
+  "classification_by_case": {
+    "C0": {
+      "n": 30,
+      "accuracy": 1.0,
+      "precision_broken": 0.0,
+      "recall_broken": 0.0,
+      "f1_broken": 0.0,
+      "f1_macro": 1.0
+    },
+    "C1": {
+      "n": 30,
+      "accuracy": 0.9666666666666667,
+      "precision_broken": 1.0,
+      "recall_broken": 0.9666666666666667,
+      "f1_broken": 0.9830508474576272,
+      "f1_macro": 0.4915254237288136
+    },
+    "C2": {
+      "n": 30,
+      "accuracy": 1.0,
+      "precision_broken": 1.0,
+      "recall_broken": 1.0,
+      "f1_broken": 1.0,
+      "f1_macro": 1.0
+    },
+    "C3": {
+      "n": 30,
+      "accuracy": 0.6333333333333333,
+      "precision_broken": 1.0,
+      "recall_broken": 0.6333333333333333,
+      "f1_broken": 0.7755102040816326,
+      "f1_macro": 0.3877551020408163
+    },
+    "C4": {
+      "n": 30,
+      "accuracy": 0.9666666666666667,
+      "precision_broken": 1.0,
+      "recall_broken": 0.9666666666666667,
+      "f1_broken": 0.9830508474576272,
+      "f1_macro": 0.4915254237288136
+    },
+    "C5": {
+      "n": 30,
+      "accuracy": 0.1,
+      "precision_broken": 1.0,
+      "recall_broken": 0.1,
+      "f1_broken": 0.18181818181818182,
+      "f1_macro": 0.09090909090909091
+    },
+    "C6": {
+      "n": 30,
+      "accuracy": 1.0,
+      "precision_broken": 0.0,
+      "recall_broken": 0.0,
+      "f1_broken": 0.0,
+      "f1_macro": 1.0
+    }
+  },
+  "localization_metrics": {
+    "n_broken": 150,
+    "interval_iou_mean": 0.605,
+    "interval_iou_median": 0.75,
+    "hit_iou_0.3": 0.7333333333333333,
+    "hit_iou_0.5": 0.6733333333333333,
+    "start_mae": 17.272727272727273,
+    "end_mae": 15.454545454545455,
+    "n_maintained": 60,
+    "false_localization_rate": 0.0
+  }
+}

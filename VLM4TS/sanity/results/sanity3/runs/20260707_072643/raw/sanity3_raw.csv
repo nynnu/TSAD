@@ -1,0 +1,211 @@
+case_id,case_type,ground_truth_label,expected_break_start,expected_break_end,model_answer,predicted_break_start,predicted_break_end,interval_iou,model_confidence,model_reason,parse_status
+C0_000,C0,maintained,,,maintained,,,,0.95,"The two channels move closely together throughout the entire interval, maintaining a consistent relationship.",OK
+C0_001,C0,maintained,,,maintained,,,,0.95,"The two channels move closely together throughout the entire interval, maintaining a consistent relationship.",OK
+C0_002,C0,maintained,,,maintained,,,,0.95,"Channel A and Channel B move closely together throughout the entire interval, maintaining a consistent relationship.",OK
+C0_003,C0,maintained,,,maintained,,,,0.95,"Channel A and Channel B move together consistently throughout the entire interval, maintaining a stable phase relationship.",OK
+C0_004,C0,maintained,,,maintained,,,,0.95,"The two channels move closely together throughout the entire interval, maintaining a consistent relationship.",OK
+C0_005,C0,maintained,,,maintained,,,,0.95,"Channel A and Channel B move closely together throughout the entire interval, maintaining a consistent relationship.",OK
+C0_006,C0,maintained,,,maintained,,,,0.95,Channel A and Channel B move together consistently throughout the entire interval.,OK
+C0_007,C0,maintained,,,maintained,,,,0.95,"The two channels move closely together throughout the entire interval, maintaining a consistent relationship.",OK
+C0_008,C0,maintained,,,maintained,,,,0.95,"Channel A and Channel B move together consistently throughout the entire interval, maintaining a stable phase relationship.",OK
+C0_009,C0,maintained,,,maintained,,,,0.95,"The two channels move closely together throughout the entire interval, maintaining a consistent relationship.",OK
+C0_010,C0,maintained,,,maintained,,,,0.95,"The two channels move closely together throughout the entire interval, maintaining a consistent relationship.",OK
+C0_011,C0,maintained,,,maintained,,,,0.95,Channel A and Channel B move together consistently throughout the entire interval.,OK
+C0_012,C0,maintained,,,maintained,,,,0.95,"The two channels move closely together throughout the entire interval, maintaining a consistent relationship.",OK
+C0_013,C0,maintained,,,maintained,,,,0.95,"Channel A and Channel B move in sync throughout the entire interval, maintaining a stable relationship.",OK
+C0_014,C0,maintained,,,maintained,,,,0.95,"The two channels move closely together throughout the entire interval, maintaining a consistent phase relationship.",OK
+C0_015,C0,maintained,,,maintained,,,,0.95,"Channel A and Channel B move in sync throughout the entire interval, maintaining a stable relationship.",OK
+C0_016,C0,maintained,,,maintained,,,,0.95,"The two channels move together consistently throughout the entire interval, maintaining a stable phase relationship.",OK
+C0_017,C0,maintained,,,maintained,,,,0.95,"The two channels move closely together throughout the entire interval, maintaining a consistent relationship.",OK
+C0_018,C0,maintained,,,maintained,,,,0.95,"The two channels move closely together throughout the entire interval, maintaining a consistent relationship.",OK
+C0_019,C0,maintained,,,maintained,,,,0.95,"The two channels move closely together throughout the entire interval, maintaining a consistent phase relationship.",OK
+C0_020,C0,maintained,,,maintained,,,,0.95,"Channel A and Channel B move closely together throughout the entire interval, maintaining a consistent relationship.",OK
+C0_021,C0,maintained,,,maintained,,,,0.95,"Channel A and Channel B move closely together throughout the entire interval, maintaining a consistent relationship.",OK
+C0_022,C0,maintained,,,maintained,,,,0.95,"Channel A and Channel B move in sync throughout the entire interval, maintaining a stable phase relationship.",OK
+C0_023,C0,maintained,,,maintained,,,,0.95,"The two channels move closely together throughout the entire interval, maintaining a consistent relationship.",OK
+C0_024,C0,maintained,,,maintained,,,,0.95,"The two channels move closely together throughout the entire interval, maintaining a consistent relationship.",OK
+C0_025,C0,maintained,,,maintained,,,,0.95,"Channel A and Channel B move closely together throughout the entire interval, maintaining a consistent relationship.",OK
+C0_026,C0,maintained,,,maintained,,,,0.95,"The two channels move closely together throughout the entire interval, maintaining a consistent phase relationship.",OK
+C0_027,C0,maintained,,,maintained,,,,0.95,"The two channels move together consistently throughout the entire interval, maintaining a stable phase relationship.",OK
+C0_028,C0,maintained,,,maintained,,,,0.95,"Channel A and Channel B move closely together throughout the entire interval, maintaining a consistent relationship.",OK
+C0_029,C0,maintained,,,maintained,,,,0.95,"The two channels move closely together throughout the entire interval, maintaining a consistent relationship.",OK
+C1_000,C1,broken,100.0,200.0,broken,50.0,150.0,0.3333333333333333,0.95,"The relationship between Channel A and Channel B breaks down between time steps 50 and 150, where the channels diverge significantly.",OK
+C1_001,C1,broken,100.0,200.0,broken,100.0,200.0,1.0,0.95,"The relationship between Channel A and Channel B breaks down between time steps 100 and 200, where the channels diverge significantly.",OK
+C1_002,C1,broken,100.0,200.0,broken,100.0,200.0,1.0,0.95,"The relationship between Channel A and Channel B breaks down between time steps 100 and 200, where the channels diverge significantly.",OK
+C1_003,C1,broken,100.0,200.0,broken,50.0,150.0,0.3333333333333333,0.95,"The relationship between Channel A and Channel B breaks down between time steps 50 and 150, where the channels diverge significantly.",OK
+C1_004,C1,broken,100.0,200.0,broken,100.0,200.0,1.0,0.95,"The relationship between Channel A and Channel B breaks down between time steps 100 and 200, where the channels diverge significantly.",OK
+C1_005,C1,broken,100.0,200.0,broken,100.0,200.0,1.0,0.95,"The relationship between Channel A and Channel B breaks down between time steps 100 and 200, where the channels diverge significantly.",OK
+C1_006,C1,broken,100.0,200.0,broken,100.0,200.0,1.0,0.95,"The relationship between Channel A and Channel B breaks down between time steps 100 and 200, where the channels diverge significantly.",OK
+C1_007,C1,broken,100.0,200.0,broken,100.0,200.0,1.0,0.95,"The relationship between Channel A and Channel B breaks down between time steps 100 and 200, where the channels diverge significantly.",OK
+C1_008,C1,broken,100.0,200.0,broken,100.0,200.0,1.0,0.95,"The relationship between Channel A and Channel B breaks down between time steps 100 and 200, where the channels diverge significantly.",OK
+C1_009,C1,broken,100.0,200.0,broken,100.0,200.0,1.0,0.95,"The relationship between Channel A and Channel B breaks down between time steps 100 and 200, where the channels diverge significantly.",OK
+C1_010,C1,broken,100.0,200.0,broken,100.0,200.0,1.0,0.95,"The relationship between Channel A and Channel B breaks down between time steps 100 and 200, where the channels diverge significantly.",OK
+C1_011,C1,broken,100.0,200.0,broken,100.0,200.0,1.0,0.95,"The relationship between Channel A and Channel B breaks down between time steps 100 and 200, where the channels diverge significantly.",OK
+C1_012,C1,broken,100.0,200.0,broken,100.0,200.0,1.0,0.95,"The relationship between Channel A and Channel B breaks down between time steps 100 and 200, where the channels diverge significantly.",OK
+C1_013,C1,broken,100.0,200.0,broken,100.0,200.0,1.0,0.95,"The relationship between Channel A and Channel B breaks down between time steps 100 and 200, where the channels diverge significantly.",OK
+C1_014,C1,broken,100.0,200.0,broken,100.0,200.0,1.0,0.95,"The relationship between Channel A and Channel B breaks down between time steps 100 and 200, where the channels diverge significantly.",OK
+C1_015,C1,broken,100.0,200.0,broken,100.0,200.0,1.0,0.95,"The relationship between Channel A and Channel B breaks down between time steps 100 and 200, where the channels diverge significantly.",OK
+C1_016,C1,broken,100.0,200.0,broken,100.0,200.0,1.0,0.95,"The relationship between Channel A and Channel B breaks down between time steps 100 and 200, where the channels diverge significantly.",OK
+C1_017,C1,broken,100.0,200.0,broken,100.0,200.0,1.0,0.95,"The relationship between Channel A and Channel B breaks down between time steps 100 and 200, where the channels diverge significantly.",OK
+C1_018,C1,broken,100.0,200.0,broken,100.0,200.0,1.0,0.95,"The relationship between Channel A and Channel B breaks down between time steps 100 and 200, where the channels diverge significantly.",OK
+C1_019,C1,broken,100.0,200.0,broken,100.0,200.0,1.0,0.95,"The relationship between Channel A and Channel B breaks down between time steps 100 and 200, where the channels diverge significantly.",OK
+C1_020,C1,broken,100.0,200.0,broken,100.0,200.0,1.0,0.95,"The relationship between Channel A and Channel B breaks down between time steps 100 and 200, where Channel B deviates significantly from Channel A.",OK
+C1_021,C1,broken,100.0,200.0,broken,100.0,200.0,1.0,0.95,"The relationship between Channel A and Channel B breaks down between time steps 100 and 200, where the channels diverge significantly.",OK
+C1_022,C1,broken,100.0,200.0,maintained,,,0.0,0.95,"The two channels move together consistently throughout the entire interval, maintaining a stable phase relationship.",OK
+C1_023,C1,broken,100.0,200.0,broken,100.0,200.0,1.0,0.95,"The relationship between Channel A and Channel B breaks down between time steps 100 and 200, where the channels diverge significantly.",OK
+C1_024,C1,broken,100.0,200.0,broken,50.0,150.0,0.3333333333333333,0.95,"The relationship between Channel A and Channel B breaks down between time steps 50 and 150, where the channels diverge significantly.",OK
+C1_025,C1,broken,100.0,200.0,broken,100.0,200.0,1.0,0.95,"The relationship between Channel A and Channel B breaks down between time steps 100 and 200, where the channels diverge significantly.",OK
+C1_026,C1,broken,100.0,200.0,broken,100.0,200.0,1.0,0.95,"The relationship between Channel A and Channel B breaks down between time steps 100 and 200, where the channels diverge significantly.",OK
+C1_027,C1,broken,100.0,200.0,broken,100.0,200.0,1.0,0.95,"The relationship between Channel A and Channel B breaks down between time steps 100 and 200, where the channels diverge significantly.",OK
+C1_028,C1,broken,100.0,200.0,broken,100.0,200.0,1.0,0.95,"The relationship between Channel A and Channel B breaks down between time steps 100 and 200, where the channels diverge significantly.",OK
+C1_029,C1,broken,100.0,200.0,broken,100.0,200.0,1.0,0.95,"The relationship between Channel A and Channel B breaks down between time steps 100 and 200, where the channels diverge significantly.",OK
+C2_000,C2,broken,100.0,200.0,broken,100.0,200.0,1.0,0.95,"Channel A and Channel B move together initially and after time step 200, but between time steps 100 and 200, Channel B remains flat while Channel A continues to oscillate.",OK
+C2_001,C2,broken,100.0,200.0,broken,100.0,200.0,1.0,0.95,Channel A continues to oscillate while Channel B remains flat between time steps 100 and 200.,OK
+C2_002,C2,broken,100.0,200.0,broken,100.0,200.0,1.0,0.95,Channel A continues to oscillate while Channel B becomes flat between time steps 100 and 200.,OK
+C2_003,C2,broken,100.0,200.0,broken,100.0,200.0,1.0,0.95,"Channel A and Channel B move together initially and after time step 200, but Channel B becomes constant between time steps 100 and 200 while Channel A continues to oscillate.",OK
+C2_004,C2,broken,100.0,200.0,broken,100.0,200.0,1.0,0.95,"Channel A and Channel B move together initially and after time step 200, but Channel B remains constant while Channel A varies between time steps 100 and 200.",OK
+C2_005,C2,broken,100.0,200.0,broken,100.0,200.0,1.0,0.95,"Channel A and Channel B move together initially and after time step 200, but between time steps 100 and 200, Channel B remains flat while Channel A continues to oscillate.",OK
+C2_006,C2,broken,100.0,200.0,broken,100.0,200.0,1.0,0.95,"Channel A and Channel B move together initially and after time step 200, but Channel B remains constant while Channel A varies between time steps 100 and 200.",OK
+C2_007,C2,broken,100.0,200.0,broken,100.0,200.0,1.0,0.95,"Channel A and Channel B move together initially and after time step 200, but Channel B remains constant while Channel A varies between time steps 100 and 200.",OK
+C2_008,C2,broken,100.0,200.0,broken,100.0,200.0,1.0,0.95,Channel A continues to oscillate while Channel B remains flat between time steps 100 and 200.,OK
+C2_009,C2,broken,100.0,200.0,broken,100.0,200.0,1.0,0.95,"Channel A and Channel B move together initially and after time step 200, but Channel B remains flat while Channel A varies between time steps 100 and 200.",OK
+C2_010,C2,broken,100.0,200.0,broken,100.0,200.0,1.0,0.95,"Channel A and Channel B move together initially and after time step 200, but Channel B becomes constant between time steps 100 and 200 while Channel A continues to oscillate.",OK
+C2_011,C2,broken,100.0,200.0,broken,100.0,200.0,1.0,0.95,"Channel A and Channel B move together initially and after time step 200, but Channel B remains constant while Channel A varies between time steps 100 and 200.",OK
+C2_012,C2,broken,100.0,200.0,broken,100.0,200.0,1.0,0.95,"Channel A and Channel B move together initially and after time step 200, but Channel B becomes constant between time steps 100 and 200, breaking the relationship.",OK
+C2_013,C2,broken,100.0,200.0,broken,100.0,200.0,1.0,0.95,"Channel A and Channel B move together initially and after time step 200, but Channel B remains constant while Channel A varies between time steps 100 and 200.",OK
+C2_014,C2,broken,100.0,200.0,broken,100.0,200.0,1.0,0.95,"Channel A and Channel B move together initially and after time step 200, but Channel B remains constant while Channel A varies between time steps 100 and 200.",OK
+C2_015,C2,broken,100.0,200.0,broken,100.0,200.0,1.0,0.95,"Channel A and Channel B move together initially and after time step 200, but Channel B remains constant while Channel A varies between time steps 100 and 200.",OK
+C2_016,C2,broken,100.0,200.0,broken,100.0,200.0,1.0,0.95,"Channel A and Channel B move together initially and after time step 200, but Channel B remains constant while Channel A varies between time steps 100 and 200.",OK
+C2_017,C2,broken,100.0,200.0,broken,100.0,200.0,1.0,0.95,"Channel A and Channel B move together initially and after time step 200, but Channel B remains constant while Channel A varies between time steps 100 and 200.",OK
+C2_018,C2,broken,100.0,200.0,broken,100.0,200.0,1.0,0.95,Channel A continues to oscillate while Channel B remains flat between time steps 100 and 200.,OK
+C2_019,C2,broken,100.0,200.0,broken,100.0,200.0,1.0,0.95,"Channel A and Channel B move together initially and after time step 200, but Channel B becomes constant between time steps 100 and 200 while Channel A continues to oscillate.",OK
+C2_020,C2,broken,100.0,200.0,broken,100.0,200.0,1.0,0.95,"Channel A and Channel B move together initially and after time step 200, but between time steps 100 and 200, Channel B remains flat while Channel A continues its oscillation.",OK
+C2_021,C2,broken,100.0,200.0,broken,100.0,200.0,1.0,0.95,"The relationship between Channel A and Channel B breaks down between time steps 100 and 200, where Channel A remains constant while Channel B continues to oscillate.",OK
+C2_022,C2,broken,100.0,200.0,broken,100.0,200.0,1.0,0.95,Channel B remains constant while Channel A continues to oscillate between time steps 100 and 200.,OK
+C2_023,C2,broken,100.0,200.0,broken,100.0,200.0,1.0,0.95,"Channel A and Channel B move together initially and after time step 200, but Channel B remains constant while Channel A varies between time steps 100 and 200.",OK
+C2_024,C2,broken,100.0,200.0,broken,100.0,200.0,1.0,0.95,"Channel A and Channel B move together initially and after time step 200, but Channel B becomes constant between time steps 100 and 200.",OK
+C2_025,C2,broken,100.0,200.0,broken,100.0,200.0,1.0,0.95,"Channel A and Channel B move together initially and after time step 200, but Channel B becomes constant while Channel A continues to oscillate between time steps 100 and 200.",OK
+C2_026,C2,broken,100.0,200.0,broken,100.0,200.0,1.0,0.95,"Channel A and Channel B move together initially and after time step 200, but Channel B remains flat while Channel A oscillates between time steps 100 and 200.",OK
+C2_027,C2,broken,100.0,200.0,broken,100.0,200.0,1.0,0.95,"Channel A and Channel B move together initially and after time step 200, but between time steps 100 and 200, Channel B remains constant while Channel A varies significantly.",OK
+C2_028,C2,broken,100.0,200.0,broken,100.0,200.0,1.0,0.95,"Channel A and Channel B move together initially and after time step 200, but Channel B remains constant while Channel A varies between time steps 100 and 200.",OK
+C2_029,C2,broken,100.0,200.0,broken,100.0,200.0,1.0,0.95,"Channel A and Channel B move together initially and after time step 200, but between time steps 100 and 200, Channel B remains flat while Channel A continues to oscillate.",OK
+C3_000,C3,broken,100.0,200.0,broken,100.0,200.0,1.0,0.95,"The relationship between Channel A and Channel B breaks down between time steps 100 and 200, where the channels are out of phase.",OK
+C3_001,C3,broken,100.0,200.0,maintained,,,0.0,0.95,The two channels move together in a consistent phase relationship throughout the entire interval.,OK
+C3_002,C3,broken,100.0,200.0,maintained,,,0.0,0.95,"The two channels move together consistently throughout the entire interval, maintaining a stable phase relationship.",OK
+C3_003,C3,broken,100.0,200.0,maintained,,,0.0,0.95,The two channels move in sync with a stable phase relationship throughout the entire interval.,OK
+C3_004,C3,broken,100.0,200.0,broken,150.0,250.0,0.3333333333333333,0.95,"The relationship between Channel A and Channel B breaks down between time steps 150 and 250, where the channels are out of sync.",OK
+C3_005,C3,broken,100.0,200.0,broken,100.0,200.0,1.0,0.95,"The relationship between Channel A and Channel B breaks down between time steps 100 and 200, where the channels are out of sync and do not maintain a stable phase relationship.",OK
+C3_006,C3,broken,100.0,200.0,broken,100.0,200.0,1.0,0.95,"The relationship between Channel A and Channel B breaks down between time steps 100 and 200, where the channels are out of phase.",OK
+C3_007,C3,broken,100.0,200.0,maintained,,,0.0,0.95,"The two channels move together consistently throughout the entire interval, maintaining a stable phase relationship.",OK
+C3_008,C3,broken,100.0,200.0,maintained,,,0.0,0.95,"The two channels move together consistently throughout the entire interval, maintaining a stable phase relationship.",OK
+C3_009,C3,broken,100.0,200.0,broken,100.0,200.0,1.0,0.95,"The relationship between Channel A and Channel B breaks down between time steps 100 and 200, where the channels are out of sync.",OK
+C3_010,C3,broken,100.0,200.0,broken,100.0,200.0,1.0,0.95,"The relationship between Channel A and Channel B breaks down between time steps 100 and 200, where the channels are out of phase.",OK
+C3_011,C3,broken,100.0,200.0,maintained,,,0.0,0.95,"The two channels move together consistently throughout the entire interval, maintaining a stable phase relationship.",OK
+C3_012,C3,broken,100.0,200.0,broken,100.0,200.0,1.0,0.95,"The relationship between Channel A and Channel B breaks down between time steps 100 and 200, where the channels are out of phase.",OK
+C3_013,C3,broken,100.0,200.0,broken,50.0,150.0,0.3333333333333333,0.95,"The relationship between Channel A and Channel B breaks down between time steps 50 and 150, where they are out of phase.",OK
+C3_014,C3,broken,100.0,200.0,broken,100.0,200.0,1.0,0.95,"The relationship between Channel A and Channel B breaks down between time steps 100 and 200, where the channels are out of phase.",OK
+C3_015,C3,broken,100.0,200.0,broken,100.0,200.0,1.0,0.95,"The relationship between Channel A and Channel B breaks down between time steps 100 and 200, where the channels are out of sync.",OK
+C3_016,C3,broken,100.0,200.0,broken,100.0,200.0,1.0,0.95,"The relationship between Channel A and Channel B breaks down between time steps 100 and 200, where the channels are out of sync.",OK
+C3_017,C3,broken,100.0,200.0,broken,100.0,200.0,1.0,0.95,"The relationship between Channel A and Channel B breaks down between time steps 100 and 200, where the channels are out of phase.",OK
+C3_018,C3,broken,100.0,200.0,broken,150.0,250.0,0.3333333333333333,0.95,"The relationship between Channel A and Channel B breaks down between time steps 150 and 250, where the channels are out of sync.",OK
+C3_019,C3,broken,100.0,200.0,broken,100.0,200.0,1.0,0.95,"The relationship between Channel A and Channel B breaks down between time steps 100 and 200, where the channels are out of sync.",OK
+C3_020,C3,broken,100.0,200.0,maintained,,,0.0,0.95,"The two channels move in sync with each other throughout the entire interval, maintaining a consistent phase relationship.",OK
+C3_021,C3,broken,100.0,200.0,broken,100.0,200.0,1.0,0.95,"The relationship between Channel A and Channel B breaks down between time steps 100 and 200, where the channels are out of sync.",OK
+C3_022,C3,broken,100.0,200.0,maintained,,,0.0,0.95,The two channels move together in a consistent phase relationship throughout the entire interval.,OK
+C3_023,C3,broken,100.0,200.0,maintained,,,0.0,0.95,"The two channels move in sync with each other throughout the entire interval, maintaining a consistent phase relationship.",OK
+C3_024,C3,broken,100.0,200.0,maintained,,,0.0,0.95,"The two channels move together consistently throughout the entire interval, maintaining a stable phase relationship.",OK
+C3_025,C3,broken,100.0,200.0,broken,0.0,300.0,0.3333333333333333,0.95,"Channel A and Channel B are out of phase throughout the entire interval, indicating a breakdown in their relationship.",OK
+C3_026,C3,broken,100.0,200.0,broken,100.0,200.0,1.0,0.95,"The relationship between Channel A and Channel B breaks down between time steps 100 and 200, where the channels diverge significantly.",OK
+C3_027,C3,broken,100.0,200.0,broken,100.0,200.0,1.0,0.95,"The relationship between Channel A and Channel B breaks down between time steps 100 and 200, where they are out of phase.",OK
+C3_028,C3,broken,100.0,200.0,maintained,,,0.0,0.95,"The two channels move together consistently throughout the entire interval, maintaining a stable phase relationship.",OK
+C3_029,C3,broken,100.0,200.0,broken,100.0,200.0,1.0,0.95,"The relationship between Channel A and Channel B breaks down between time steps 100 and 200, where they are out of phase.",OK
+C4_000,C4,broken,100.0,300.0,broken,150.0,250.0,0.5,0.95,"The relationship between Channel A and Channel B breaks down between time steps 150 and 250, where the channels are out of sync.",OK
+C4_001,C4,broken,100.0,300.0,broken,150.0,250.0,0.5,0.95,"The relationship between Channel A and Channel B breaks down between time steps 150 and 250, where the channels diverge significantly.",OK
+C4_002,C4,broken,100.0,300.0,broken,150.0,300.0,0.75,0.95,"The relationship between Channel A and Channel B breaks down after time step 150, where they start to diverge significantly in phase and amplitude.",OK
+C4_003,C4,broken,100.0,300.0,broken,150.0,250.0,0.5,0.95,"The relationship between Channel A and Channel B breaks down between time steps 150 and 250, where the channels are out of sync.",OK
+C4_004,C4,broken,100.0,300.0,broken,150.0,300.0,0.75,0.95,"The relationship between Channel A and Channel B breaks down after time step 150, where they start to diverge significantly in phase and amplitude.",OK
+C4_005,C4,broken,100.0,300.0,broken,150.0,250.0,0.5,0.95,"The relationship between Channel A and Channel B breaks down between time steps 150 and 250, where the channels diverge significantly.",OK
+C4_006,C4,broken,100.0,300.0,maintained,,,0.0,0.95,"The two channels move together consistently throughout the entire interval, maintaining a stable phase relationship.",OK
+C4_007,C4,broken,100.0,300.0,broken,150.0,250.0,0.5,0.95,"The relationship between Channel A and Channel B breaks down between time steps 150 and 250, where the channels diverge significantly.",OK
+C4_008,C4,broken,100.0,300.0,broken,150.0,250.0,0.5,0.95,"The relationship between Channel A and Channel B breaks down between time steps 150 and 250, where the channels diverge significantly.",OK
+C4_009,C4,broken,100.0,300.0,broken,150.0,250.0,0.5,0.95,"The relationship between Channel A and Channel B breaks down between time steps 150 and 250, where the channels are out of sync.",OK
+C4_010,C4,broken,100.0,300.0,broken,150.0,250.0,0.5,0.95,"The relationship between Channel A and Channel B breaks down between time steps 150 and 250, where the channels diverge significantly in their phase and amplitude.",OK
+C4_011,C4,broken,100.0,300.0,broken,150.0,250.0,0.5,0.95,"The relationship between Channel A and Channel B breaks down between time steps 150 and 250, where the channels are out of sync.",OK
+C4_012,C4,broken,100.0,300.0,broken,100.0,200.0,0.5,0.95,"The relationship between Channel A and Channel B breaks down between time steps 100 and 200, where the channels are out of sync.",OK
+C4_013,C4,broken,100.0,300.0,broken,150.0,300.0,0.75,0.95,"The relationship between Channel A and Channel B breaks down after time step 150, where they start to diverge significantly.",OK
+C4_014,C4,broken,100.0,300.0,broken,150.0,250.0,0.5,0.95,"The relationship between Channel A and Channel B breaks down between time steps 150 and 250, where the channels are out of sync.",OK
+C4_015,C4,broken,100.0,300.0,broken,150.0,300.0,0.75,0.95,"The relationship between Channel A and Channel B breaks down after time step 150, where they start to diverge significantly.",OK
+C4_016,C4,broken,100.0,300.0,broken,150.0,250.0,0.5,0.95,"The relationship between Channel A and Channel B breaks down between time steps 150 and 250, where the channels are out of sync and do not follow the same pattern.",OK
+C4_017,C4,broken,100.0,300.0,broken,150.0,250.0,0.5,0.95,"The relationship between Channel A and Channel B breaks down between time steps 150 and 250, where the channels are out of sync.",OK
+C4_018,C4,broken,100.0,300.0,broken,150.0,250.0,0.5,0.95,"The relationship between Channel A and Channel B breaks down between time steps 150 and 250, where the channels are out of sync.",OK
+C4_019,C4,broken,100.0,300.0,broken,150.0,250.0,0.5,0.95,"The relationship between Channel A and Channel B breaks down between time steps 150 and 250, where the channels are out of sync.",OK
+C4_020,C4,broken,100.0,300.0,broken,150.0,250.0,0.5,0.95,"The relationship between Channel A and Channel B breaks down between time steps 150 and 250, where the channels are out of sync.",OK
+C4_021,C4,broken,100.0,300.0,broken,150.0,250.0,0.5,0.95,"The relationship between Channel A and Channel B breaks down between time steps 150 and 250, where the channels move out of sync.",OK
+C4_022,C4,broken,100.0,300.0,broken,150.0,250.0,0.5,0.95,"The relationship between Channel A and Channel B breaks down between time steps 150 and 250, where the channels diverge significantly in their phase and amplitude.",OK
+C4_023,C4,broken,100.0,300.0,broken,150.0,250.0,0.5,0.95,"The relationship between Channel A and Channel B breaks down between time steps 150 and 250, where the channels move out of sync.",OK
+C4_024,C4,broken,100.0,300.0,broken,100.0,200.0,0.5,0.95,"The relationship between Channel A and Channel B breaks down between time steps 100 and 200, where the channels diverge significantly.",OK
+C4_025,C4,broken,100.0,300.0,broken,150.0,300.0,0.75,0.95,"The relationship between Channel A and Channel B breaks down after time step 150, where they start to move out of sync.",OK
+C4_026,C4,broken,100.0,300.0,broken,150.0,250.0,0.5,0.95,"The relationship between Channel A and Channel B breaks down between time steps 150 and 250, where the channels diverge significantly.",OK
+C4_027,C4,broken,100.0,300.0,broken,150.0,250.0,0.5,0.95,"The relationship between Channel A and Channel B breaks down between time steps 150 and 250, where the channels are out of sync.",OK
+C4_028,C4,broken,100.0,300.0,broken,150.0,300.0,0.75,0.95,"The relationship between Channel A and Channel B breaks down after time step 150, where they start to diverge significantly in phase and amplitude.",OK
+C4_029,C4,broken,100.0,300.0,broken,150.0,300.0,0.75,0.95,"The relationship between Channel A and Channel B breaks down after time step 150, where they start to diverge significantly in phase and amplitude.",OK
+C5_000,C5,broken,100.0,200.0,maintained,,,0.0,0.95,"The two channels move closely together throughout the entire interval, maintaining a consistent relationship.",OK
+C5_001,C5,broken,100.0,200.0,maintained,,,0.0,0.95,"The two channels move closely together throughout the entire interval, maintaining a consistent relationship.",OK
+C5_002,C5,broken,100.0,200.0,maintained,,,0.0,0.95,"Channel A and Channel B move closely together throughout the entire interval, maintaining a consistent relationship.",OK
+C5_003,C5,broken,100.0,200.0,maintained,,,0.0,0.95,"The two channels move closely together throughout the entire interval, maintaining a consistent relationship.",OK
+C5_004,C5,broken,100.0,200.0,maintained,,,0.0,0.95,"Channel A and Channel B move closely together throughout the entire interval, maintaining a consistent relationship.",OK
+C5_005,C5,broken,100.0,200.0,maintained,,,0.0,0.95,"The two channels move closely together throughout the entire interval, maintaining a consistent relationship.",OK
+C5_006,C5,broken,100.0,200.0,maintained,,,0.0,0.95,"The two channels move together consistently throughout the entire interval, maintaining a stable phase relationship.",OK
+C5_007,C5,broken,100.0,200.0,broken,150.0,250.0,0.3333333333333333,0.95,"The relationship between Channel A and Channel B breaks down between time steps 150 and 250, where the channels diverge significantly.",OK
+C5_008,C5,broken,100.0,200.0,maintained,,,0.0,0.95,"The two channels move closely together throughout the entire interval, maintaining a consistent phase relationship.",OK
+C5_009,C5,broken,100.0,200.0,maintained,,,0.0,0.95,"The two channels move closely together throughout the entire interval, maintaining a consistent relationship.",OK
+C5_010,C5,broken,100.0,200.0,maintained,,,0.0,0.95,"The two channels move closely together throughout the entire interval, maintaining a consistent phase relationship.",OK
+C5_011,C5,broken,100.0,200.0,maintained,,,0.0,0.95,"The two channels move closely together throughout the entire interval, maintaining a consistent phase relationship.",OK
+C5_012,C5,broken,100.0,200.0,maintained,,,0.0,0.95,"Channel A and Channel B move together consistently throughout the entire interval, maintaining a stable phase relationship.",OK
+C5_013,C5,broken,100.0,200.0,maintained,,,0.0,0.95,"The two channels move closely together throughout the entire interval, maintaining a consistent phase relationship.",OK
+C5_014,C5,broken,100.0,200.0,maintained,,,0.0,0.95,"The two channels move together consistently throughout the entire interval, maintaining a stable relationship.",OK
+C5_015,C5,broken,100.0,200.0,maintained,,,0.0,0.95,"Channel A and Channel B move together consistently throughout the entire interval, maintaining a stable phase relationship.",OK
+C5_016,C5,broken,100.0,200.0,maintained,,,0.0,0.95,"The two channels move closely together throughout the entire interval, maintaining a consistent relationship.",OK
+C5_017,C5,broken,100.0,200.0,maintained,,,0.0,0.95,"The two channels move closely together throughout the entire interval, maintaining a consistent relationship.",OK
+C5_018,C5,broken,100.0,200.0,maintained,,,0.0,0.95,"The two channels move closely together throughout the entire interval, maintaining a consistent phase relationship.",OK
+C5_019,C5,broken,100.0,200.0,broken,150.0,200.0,0.5,0.95,"The relationship between Channel A and Channel B breaks down between time steps 150 and 200, where the channels diverge significantly.",OK
+C5_020,C5,broken,100.0,200.0,maintained,,,0.0,0.95,"The two channels move closely together throughout the entire interval, maintaining a consistent relationship.",OK
+C5_021,C5,broken,100.0,200.0,maintained,,,0.0,0.95,"The two channels move together consistently throughout the entire interval, maintaining a stable phase relationship.",OK
+C5_022,C5,broken,100.0,200.0,maintained,,,0.0,0.95,"The two channels move closely together throughout the entire interval, maintaining a consistent relationship.",OK
+C5_023,C5,broken,100.0,200.0,maintained,,,0.0,0.95,"The two channels move together consistently throughout the entire interval, maintaining a stable phase relationship.",OK
+C5_024,C5,broken,100.0,200.0,maintained,,,0.0,0.95,"The two channels move closely together throughout the entire interval, maintaining a consistent relationship.",OK
+C5_025,C5,broken,100.0,200.0,broken,150.0,250.0,0.3333333333333333,0.95,"The relationship between Channel A and Channel B breaks down between time steps 150 and 250, where the channels diverge significantly.",OK
+C5_026,C5,broken,100.0,200.0,maintained,,,0.0,0.95,"The two channels move together consistently throughout the entire interval, maintaining a stable phase relationship.",OK
+C5_027,C5,broken,100.0,200.0,maintained,,,0.0,0.95,"The two channels move together consistently throughout the entire interval, maintaining a stable phase relationship.",OK
+C5_028,C5,broken,100.0,200.0,maintained,,,0.0,0.95,"The two channels move together consistently throughout the entire interval, maintaining a stable phase relationship.",OK
+C5_029,C5,broken,100.0,200.0,maintained,,,0.0,0.95,"The two channels move together consistently throughout the entire interval, maintaining a stable phase relationship.",OK
+C6_000,C6,maintained,,,maintained,,,,0.95,"The two channels move together consistently throughout the entire interval, maintaining a stable phase relationship.",OK
+C6_001,C6,maintained,,,maintained,,,,0.95,"The two channels move closely together throughout the entire interval, maintaining a consistent relationship.",OK
+C6_002,C6,maintained,,,maintained,,,,0.95,"The two channels move together consistently throughout the entire interval, maintaining a stable relationship.",OK
+C6_003,C6,maintained,,,maintained,,,,0.95,"Channel A and Channel B move closely together throughout the entire interval, maintaining a consistent relationship.",OK
+C6_004,C6,maintained,,,maintained,,,,0.95,"The two channels move together consistently throughout the entire interval, maintaining a stable relationship.",OK
+C6_005,C6,maintained,,,maintained,,,,0.95,"Channel A and Channel B move together consistently throughout the entire interval, maintaining a stable relationship.",OK
+C6_006,C6,maintained,,,maintained,,,,0.95,"The two channels move together consistently throughout the entire interval, maintaining a stable phase relationship.",OK
+C6_007,C6,maintained,,,maintained,,,,0.95,"The two channels move together consistently throughout the entire interval, maintaining a stable phase relationship.",OK
+C6_008,C6,maintained,,,maintained,,,,0.95,"The two channels move together consistently throughout the entire interval, maintaining a stable phase relationship.",OK
+C6_009,C6,maintained,,,maintained,,,,0.95,"The two channels move together consistently throughout the entire interval, maintaining a stable phase relationship.",OK
+C6_010,C6,maintained,,,maintained,,,,0.95,"The two channels move together consistently throughout the entire interval, maintaining a stable relationship.",OK
+C6_011,C6,maintained,,,maintained,,,,0.95,"Channel A and Channel B move together consistently throughout the entire interval, maintaining a stable relationship.",OK
+C6_012,C6,maintained,,,maintained,,,,0.95,"The two channels move together consistently throughout the entire interval, maintaining a stable relationship.",OK
+C6_013,C6,maintained,,,maintained,,,,0.95,"The two channels move together consistently throughout the entire interval, maintaining a stable phase relationship.",OK
+C6_014,C6,maintained,,,maintained,,,,0.95,"The two channels move together consistently throughout the entire interval, maintaining a stable relationship.",OK
+C6_015,C6,maintained,,,maintained,,,,0.95,"The two channels move together consistently throughout the entire interval, maintaining a stable phase relationship.",OK
+C6_016,C6,maintained,,,maintained,,,,0.95,"Channel A and Channel B move together consistently throughout the entire interval, maintaining a stable relationship.",OK
+C6_017,C6,maintained,,,maintained,,,,0.95,The relationship between Channel A and Channel B is maintained throughout the interval as they move together consistently.,OK
+C6_018,C6,maintained,,,maintained,,,,0.95,"The two channels move closely together throughout the entire interval, maintaining a consistent relationship.",OK
+C6_019,C6,maintained,,,maintained,,,,0.95,"The relationship between Channel A and Channel B is maintained throughout the interval as they move together consistently, showing a stable phase relationship.",OK
+C6_020,C6,maintained,,,maintained,,,,0.95,"The two channels move together consistently throughout the entire interval, maintaining a stable phase relationship.",OK
+C6_021,C6,maintained,,,maintained,,,,0.95,The relationship between Channel A and Channel B is maintained throughout the interval as they move together in a consistent pattern.,OK
+C6_022,C6,maintained,,,maintained,,,,0.95,"The relationship between Channel A and Channel B is maintained throughout the interval, as they move together in a consistent pattern.",OK
+C6_023,C6,maintained,,,maintained,,,,0.95,"The two channels move together consistently throughout the entire interval, maintaining a stable phase relationship.",OK
+C6_024,C6,maintained,,,maintained,,,,0.95,"The two channels move together consistently throughout the entire interval, maintaining a stable relationship.",OK
+C6_025,C6,maintained,,,maintained,,,,0.95,"The two channels move together consistently throughout the entire interval, maintaining a stable relationship.",OK
+C6_026,C6,maintained,,,maintained,,,,0.95,The relationship between Channel A and Channel B is maintained throughout the entire interval as they move together consistently.,OK
+C6_027,C6,maintained,,,maintained,,,,0.95,"Channel A and Channel B move together consistently throughout the entire interval, maintaining a stable relationship.",OK
+C6_028,C6,maintained,,,maintained,,,,0.95,"The two channels move together consistently throughout the entire interval, maintaining a stable phase relationship.",OK
+C6_029,C6,maintained,,,maintained,,,,0.95,"The two channels move together consistently throughout the entire interval, maintaining a stable relationship.",OK

@@ -1,0 +1,13 @@
+case_id,scenario,source_case,candidate_start,candidate_end,ground_truth_label,model_answer,model_confidence,model_reason,parse_status
+V3_015,V3,C3,0,100,invalid,valid,0.95,"Inside the red interval, Channel A and Channel B diverge and do not maintain their previous synchronized pattern.",OK
+V5_002,V5,C5,100,200,valid,invalid,0.95,The relationship between Channel A and Channel B is maintained inside the red shaded interval as they continue to move together.,OK
+V5_009,V5,C5,100,200,valid,invalid,0.95,The relationship between Channel A and Channel B is maintained inside the red shaded interval as they continue to move together.,OK
+V5_010,V5,C5,100,200,valid,invalid,0.95,The relationship between Channel A and Channel B is maintained inside the red shaded interval as they move together in sync.,OK
+V5_011,V5,C5,100,200,valid,invalid,0.95,The relationship between Channel A and Channel B is maintained inside the red interval as they move together in a similar pattern.,OK
+V5_012,V5,C5,100,200,valid,invalid,0.95,The relationship between Channel A and Channel B is maintained inside the red shaded interval as they move together in sync.,OK
+V5_015,V5,C5,100,200,valid,invalid,0.95,The relationship between Channel A and Channel B is maintained inside the red shaded interval as they move together closely.,OK
+V5_023,V5,C5,100,200,valid,invalid,0.95,The relationship between Channel A and Channel B is maintained inside the red shaded interval as they move together in sync.,OK
+V5_024,V5,C5,100,200,valid,invalid,0.95,The relationship between Channel A and Channel B is maintained inside the red interval as they move together in sync.,OK
+V5_028,V5,C5,100,200,valid,invalid,0.95,The relationship between Channel A and Channel B is maintained inside the red interval as they move together in sync.,OK
+V6_008,V6,C6,100,200,invalid,valid,0.95,"Inside the red interval, Channel A and Channel B show a noticeable divergence in their movements, indicating a break in their relationship.",OK
+V6_010,V6,C6,100,200,invalid,valid,0.95,"Inside the red interval, Channel A and Channel B show a noticeable divergence in their patterns, indicating a break in their relationship.",OK
