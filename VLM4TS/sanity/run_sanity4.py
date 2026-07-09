@@ -18,7 +18,13 @@ from vlm_client import VLMClient, VLMResponse
 
 
 SANITY4_ROOT = ROOT / "results" / "sanity4" / "runs"
-SCENARIOS = ["V0", "V1", "V2", "V3", "V4", "V5", "V6"]
+# V0-V6 were the original scenarios; each source case only ever got ONE ground-truth
+# label (e.g. C1 only had a "valid" candidate, C3 only had an "invalid" one), so
+# precision and recall couldn't be separated per case. V7-V11 fill in the missing
+# counterpart for each broken case: an "invalid" (candidate before the break) version
+# for C1/C2/C4/C5, and the missing "valid" (candidate exactly on the break) version
+# for C3. C0/C6 have no break at all, so no "valid" counterpart is possible for them.
+SCENARIOS = ["V0", "V1", "V2", "V3", "V4", "V5", "V6", "V7", "V8", "V9", "V10", "V11"]
 
 RAW_COLUMNS = [
     "case_id", "scenario", "source_case", "candidate_start", "candidate_end",
@@ -56,6 +62,11 @@ def _scenario(index: int, scenario: str):
         "V4": ("C4", 150, 250, "valid", "late sustained phase drift candidate"),
         "V5": ("C5", 100, 200, "valid", "subtle frequency drift candidate"),
         "V6": ("C6", 100, 200, "invalid", "noisy maintained negative control"),
+        "V7": ("C1", 0, 100, "invalid", "false candidate before amplitude break"),
+        "V8": ("C2", 0, 100, "invalid", "false candidate before flatline break"),
+        "V9": ("C3", 100, 200, "valid", "phase flip break candidate"),
+        "V10": ("C4", 0, 100, "invalid", "false candidate before sustained phase drift"),
+        "V11": ("C5", 0, 100, "invalid", "false candidate before frequency drift break"),
     }
     source_case, cand_start, cand_end, verdict, description = mapping[scenario]
     seed = 10_000 * int(source_case[1:]) + index

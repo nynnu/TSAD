@@ -1,0 +1,137 @@
+{
+  "model_name": "gpt-4o",
+  "temperature": 0.0,
+  "n_per_case": 30,
+  "T": 300,
+  "maintained_cases": [
+    "H1a",
+    "H1b",
+    "H1c",
+    "H1d",
+    "H2"
+  ],
+  "broken_cases": [
+    "H3",
+    "H4"
+  ],
+  "status_counts": {
+    "OK": 210
+  },
+  "overall_metrics": {
+    "n": 210,
+    "accuracy": 0.8666666666666667,
+    "precision_broken": 0.7352941176470589,
+    "recall_broken": 0.8333333333333334,
+    "f1_broken": 0.78125,
+    "f1_macro": 0.842679794520548
+  },
+  "overall_confidence": {
+    "mean_confidence": 0.9499999999999998,
+    "mean_confidence_correct": 0.9500000000000001,
+    "mean_confidence_incorrect": 0.9499999999999998
+  },
+  "per_case_metrics": {
+    "H1a": {
+      "n": 30,
+      "accuracy": 0.9333333333333333,
+      "precision_broken": 0.0,
+      "recall_broken": 0.0,
+      "f1_broken": 0.0,
+      "f1_macro": 0.4827586206896552
+    },
+    "H1b": {
+      "n": 30,
+      "accuracy": 1.0,
+      "precision_broken": 0.0,
+      "recall_broken": 0.0,
+      "f1_broken": 0.0,
+      "f1_macro": 1.0
+    },
+    "H1c": {
+      "n": 30,
+      "accuracy": 1.0,
+      "precision_broken": 0.0,
+      "recall_broken": 0.0,
+      "f1_broken": 0.0,
+      "f1_macro": 1.0
+    },
+    "H1d": {
+      "n": 30,
+      "accuracy": 1.0,
+      "precision_broken": 0.0,
+      "recall_broken": 0.0,
+      "f1_broken": 0.0,
+      "f1_macro": 1.0
+    },
+    "H2": {
+      "n": 30,
+      "accuracy": 0.4666666666666667,
+      "precision_broken": 0.0,
+      "recall_broken": 0.0,
+      "f1_broken": 0.0,
+      "f1_macro": 0.3181818181818182
+    },
+    "H3": {
+      "n": 30,
+      "accuracy": 0.9666666666666667,
+      "precision_broken": 1.0,
+      "recall_broken": 0.9666666666666667,
+      "f1_broken": 0.9830508474576272,
+      "f1_macro": 0.4915254237288136
+    },
+    "H4": {
+      "n": 30,
+      "accuracy": 0.7,
+      "precision_broken": 1.0,
+      "recall_broken": 0.7,
+      "f1_broken": 0.8235294117647058,
+      "f1_macro": 0.4117647058823529
+    }
+  },
+  "per_case_confidence": {
+    "H1a": {
+      "mean_confidence": 0.9499999999999997,
+      "mean_confidence_correct": 0.9499999999999998,
+      "mean_confidence_incorrect": 0.95
+    },
+    "H1b": {
+      "mean_confidence": 0.9499999999999997,
+      "mean_confidence_correct": 0.9499999999999997,
+      "mean_confidence_incorrect": null
+    },
+    "H1c": {
+      "mean_confidence": 0.9499999999999997,
+      "mean_confidence_correct": 0.9499999999999997,
+      "mean_confidence_incorrect": null
+    },
+    "H1d": {
+      "mean_confidence": 0.9499999999999997,
+      "mean_confidence_correct": 0.9499999999999997,
+      "mean_confidence_incorrect": null
+    },
+    "H2": {
+      "mean_confidence": 0.9499999999999997,
+      "mean_confidence_correct": 0.9499999999999996,
+      "mean_confidence_incorrect": 0.95
+    },
+    "H3": {
+      "mean_confidence": 0.9499999999999997,
+      "mean_confidence_correct": 0.9499999999999997,
+      "mean_confidence_incorrect": 0.95
+    },
+    "H4": {
+      "mean_confidence": 0.9499999999999997,
+      "mean_confidence_correct": 0.9499999999999998,
+      "mean_confidence_incorrect": 0.9499999999999998
+    }
+  },
+  "verdicts": {
+    "H1a": "PASS",
+    "H1b": "PASS",
+    "H1c": "PASS",
+    "H1d": "PASS",
+    "H2": "WARNING",
+    "H3": "PASS",
+    "H4": "FAIL"
+  }
+}
