@@ -1,0 +1,75 @@
+{
+  "model_name": "gpt-4o",
+  "temperature": 0.0,
+  "n_per_case": 30,
+  "T": 300,
+  "condition": "sanity1_phaseportrait (time-series overlay + phase portrait, 2 images/call)",
+  "status_counts": {
+    "OK": 9
+  },
+  "overall_metrics": {
+    "n": 9,
+    "accuracy": 0.5555555555555556,
+    "precision_broken": 0.75,
+    "recall_broken": 0.5,
+    "f1_broken": 0.6,
+    "f1_macro": 0.55
+  },
+  "overall_confidence": {
+    "mean_confidence": 0.9166666666666666,
+    "mean_confidence_correct": 0.9099999999999999,
+    "mean_confidence_incorrect": 0.9249999999999999
+  },
+  "per_case_metrics": {
+    "C3": {
+      "n": 3,
+      "accuracy": 0.3333333333333333,
+      "precision_broken": 1.0,
+      "recall_broken": 0.3333333333333333,
+      "f1_broken": 0.5,
+      "f1_macro": 0.25
+    },
+    "C5": {
+      "n": 3,
+      "accuracy": 0.6666666666666666,
+      "precision_broken": 1.0,
+      "recall_broken": 0.6666666666666666,
+      "f1_broken": 0.8,
+      "f1_macro": 0.4
+    },
+    "C6": {
+      "n": 3,
+      "accuracy": 0.6666666666666666,
+      "precision_broken": 0.0,
+      "recall_broken": 0.0,
+      "f1_broken": 0.0,
+      "f1_macro": 0.4
+    }
+  },
+  "per_case_confidence": {
+    "C3": {
+      "mean_confidence": 0.9499999999999998,
+      "mean_confidence_correct": 0.95,
+      "mean_confidence_incorrect": 0.95
+    },
+    "C5": {
+      "mean_confidence": 0.8833333333333333,
+      "mean_confidence_correct": 0.85,
+      "mean_confidence_incorrect": 0.95
+    },
+    "C6": {
+      "mean_confidence": 0.9166666666666666,
+      "mean_confidence_correct": 0.95,
+      "mean_confidence_incorrect": 0.85
+    }
+  },
+  "verdicts": {
+    "C0": "NO_DATA",
+    "C1": "NO_DATA",
+    "C2": "NO_DATA",
+    "C3": "FAIL",
+    "C4": "NO_DATA",
+    "C5": "BOUNDARY (no threshold applied)",
+    "C6": "WARNING"
+  }
+}

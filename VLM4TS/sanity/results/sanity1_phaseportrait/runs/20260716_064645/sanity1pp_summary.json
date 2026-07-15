@@ -1,0 +1,127 @@
+{
+  "model_name": "gpt-4o",
+  "temperature": 0.0,
+  "n_per_case": 30,
+  "T": 300,
+  "condition": "sanity1_phaseportrait (time-series overlay + phase portrait, 2 images/call)",
+  "status_counts": {
+    "OK": 14
+  },
+  "overall_metrics": {
+    "n": 14,
+    "accuracy": 0.6428571428571429,
+    "precision_broken": 0.8571428571428571,
+    "recall_broken": 0.6,
+    "f1_broken": 0.7058823529411764,
+    "f1_macro": 0.6256684491978609
+  },
+  "overall_confidence": {
+    "mean_confidence": 0.9499999999999996,
+    "mean_confidence_correct": 0.9499999999999998,
+    "mean_confidence_incorrect": 0.95
+  },
+  "per_case_metrics": {
+    "C0": {
+      "n": 2,
+      "accuracy": 1.0,
+      "precision_broken": 0.0,
+      "recall_broken": 0.0,
+      "f1_broken": 0.0,
+      "f1_macro": 1.0
+    },
+    "C1": {
+      "n": 2,
+      "accuracy": 1.0,
+      "precision_broken": 1.0,
+      "recall_broken": 1.0,
+      "f1_broken": 1.0,
+      "f1_macro": 1.0
+    },
+    "C2": {
+      "n": 2,
+      "accuracy": 1.0,
+      "precision_broken": 1.0,
+      "recall_broken": 1.0,
+      "f1_broken": 1.0,
+      "f1_macro": 1.0
+    },
+    "C3": {
+      "n": 2,
+      "accuracy": 0.0,
+      "precision_broken": 0.0,
+      "recall_broken": 0.0,
+      "f1_broken": 0.0,
+      "f1_macro": 0.0
+    },
+    "C4": {
+      "n": 2,
+      "accuracy": 1.0,
+      "precision_broken": 1.0,
+      "recall_broken": 1.0,
+      "f1_broken": 1.0,
+      "f1_macro": 1.0
+    },
+    "C5": {
+      "n": 2,
+      "accuracy": 0.0,
+      "precision_broken": 0.0,
+      "recall_broken": 0.0,
+      "f1_broken": 0.0,
+      "f1_macro": 0.0
+    },
+    "C6": {
+      "n": 2,
+      "accuracy": 0.5,
+      "precision_broken": 0.0,
+      "recall_broken": 0.0,
+      "f1_broken": 0.0,
+      "f1_macro": 0.3333333333333333
+    }
+  },
+  "per_case_confidence": {
+    "C0": {
+      "mean_confidence": 0.95,
+      "mean_confidence_correct": 0.95,
+      "mean_confidence_incorrect": null
+    },
+    "C1": {
+      "mean_confidence": 0.95,
+      "mean_confidence_correct": 0.95,
+      "mean_confidence_incorrect": null
+    },
+    "C2": {
+      "mean_confidence": 0.95,
+      "mean_confidence_correct": 0.95,
+      "mean_confidence_incorrect": null
+    },
+    "C3": {
+      "mean_confidence": 0.95,
+      "mean_confidence_correct": null,
+      "mean_confidence_incorrect": 0.95
+    },
+    "C4": {
+      "mean_confidence": 0.95,
+      "mean_confidence_correct": 0.95,
+      "mean_confidence_incorrect": null
+    },
+    "C5": {
+      "mean_confidence": 0.95,
+      "mean_confidence_correct": null,
+      "mean_confidence_incorrect": 0.95
+    },
+    "C6": {
+      "mean_confidence": 0.95,
+      "mean_confidence_correct": 0.95,
+      "mean_confidence_incorrect": 0.95
+    }
+  },
+  "verdicts": {
+    "C0": "PASS",
+    "C1": "PASS",
+    "C2": "PASS",
+    "C3": "FAIL",
+    "C4": "BOUNDARY (no threshold applied)",
+    "C5": "BOUNDARY (no threshold applied)",
+    "C6": "WARNING"
+  }
+}

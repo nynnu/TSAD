@@ -1,0 +1,128 @@
+{
+  "C0_000": {
+    "status": "OK",
+    "case_type": "C0",
+    "ground_truth_label": "maintained",
+    "model_answer": "maintained",
+    "model_confidence": 0.95,
+    "model_reason": "The phase portrait shows a consistent, stable trajectory with no significant divergence over time, indicating a maintained relationship between the channels.",
+    "parse_status": "OK"
+  },
+  "C0_001": {
+    "status": "OK",
+    "case_type": "C0",
+    "ground_truth_label": "maintained",
+    "model_answer": "maintained",
+    "model_confidence": 0.95,
+    "model_reason": "The phase portrait shows a consistent linear trajectory with no significant divergence over time, indicating a stable relationship between the channels.",
+    "parse_status": "OK"
+  },
+  "C1_000": {
+    "status": "OK",
+    "case_type": "C1",
+    "ground_truth_label": "broken",
+    "model_answer": "broken",
+    "model_confidence": 0.95,
+    "model_reason": "The phase portrait shows a divergence in the trajectory over time, indicating a breakdown in the relationship between Channel A and Channel B.",
+    "parse_status": "OK"
+  },
+  "C1_001": {
+    "status": "OK",
+    "case_type": "C1",
+    "ground_truth_label": "broken",
+    "model_answer": "broken",
+    "model_confidence": 0.95,
+    "model_reason": "The phase portrait shows a divergence in the trajectory over time, with later segments (yellow) deviating from earlier ones (dark purple), indicating a breakdown in the relationship.",
+    "parse_status": "OK"
+  },
+  "C2_000": {
+    "status": "OK",
+    "case_type": "C2",
+    "ground_truth_label": "broken",
+    "model_answer": "broken",
+    "model_confidence": 0.95,
+    "model_reason": "The phase portrait shows a clear divergence in the trajectory, particularly around the middle of the interval, indicating a breakdown in the relationship between Channel A and Channel B.",
+    "parse_status": "OK"
+  },
+  "C2_001": {
+    "status": "OK",
+    "case_type": "C2",
+    "ground_truth_label": "broken",
+    "model_answer": "broken",
+    "model_confidence": 0.95,
+    "model_reason": "The phase portrait shows a clear divergence in the trajectory, with later segments (yellow) deviating from earlier ones (purple), indicating a breakdown in the relationship.",
+    "parse_status": "OK"
+  },
+  "C3_000": {
+    "status": "OK",
+    "case_type": "C3",
+    "ground_truth_label": "broken",
+    "model_answer": "maintained",
+    "model_confidence": 0.95,
+    "model_reason": "The phase portrait shows a consistent, repeating trajectory with no significant divergence over time, indicating a stable relationship between the channels.",
+    "parse_status": "OK"
+  },
+  "C3_001": {
+    "status": "OK",
+    "case_type": "C3",
+    "ground_truth_label": "broken",
+    "model_answer": "maintained",
+    "model_confidence": 0.95,
+    "model_reason": "The phase portrait shows a consistent linear trajectory with no significant divergence over time, indicating a stable relationship between the channels.",
+    "parse_status": "OK"
+  },
+  "C4_000": {
+    "status": "OK",
+    "case_type": "C4",
+    "ground_truth_label": "broken",
+    "model_answer": "broken",
+    "model_confidence": 0.95,
+    "model_reason": "The phase portrait shows a divergence in the trajectory over time, with later segments (yellow) not overlapping earlier ones (dark purple), indicating a breakdown in the relationship.",
+    "parse_status": "OK"
+  },
+  "C4_001": {
+    "status": "OK",
+    "case_type": "C4",
+    "ground_truth_label": "broken",
+    "model_answer": "broken",
+    "model_confidence": 0.95,
+    "model_reason": "The phase portrait shows a shift from a tight loop to a more dispersed pattern, indicating a breakdown in the relationship between the channels over time.",
+    "parse_status": "OK"
+  },
+  "C5_000": {
+    "status": "OK",
+    "case_type": "C5",
+    "ground_truth_label": "broken",
+    "model_answer": "maintained",
+    "model_confidence": 0.95,
+    "model_reason": "The phase portrait shows a consistent trajectory with no significant divergence over time, indicating a stable relationship between the channels.",
+    "parse_status": "OK"
+  },
+  "C5_001": {
+    "status": "OK",
+    "case_type": "C5",
+    "ground_truth_label": "broken",
+    "model_answer": "maintained",
+    "model_confidence": 0.95,
+    "model_reason": "The phase portrait shows a consistent trajectory with no significant divergence over time, indicating a stable relationship between the channels.",
+    "parse_status": "OK"
+  },
+  "C6_000": {
+    "status": "OK",
+    "case_type": "C6",
+    "ground_truth_label": "maintained",
+    "model_answer": "broken",
+    "model_confidence": 0.95,
+    "model_reason": "The phase portrait shows a divergence in the trajectory over time, with later segments not aligning with earlier ones, indicating a breakdown in the relationship.",
+    "parse_status": "OK"
+  },
+  "C6_001": {
+    "status": "OK",
+    "case_type": "C6",
+    "ground_truth_label": "maintained",
+    "model_answer": "maintained",
+    "model_confidence": 0.95,
+    "model_reason": "The phase portrait shows a consistent trajectory with no significant divergence over time, indicating a stable relationship between the channels.",
+    "parse_status": "OK"
+  }
+}

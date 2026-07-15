@@ -52,9 +52,41 @@ class VLMClient:
             return VLMResponse(status="API_ERROR", latency_seconds=latency, error=str(exc))
 
     def call(self, prompt: str, img_b64: str) -> VLMResponse:
+        return self._retry_loop(lambda: self._call_once(prompt, img_b64))
+
+    def _call_once_multi(self, prompt: str, images: list[str]) -> VLMResponse | None:
+        content = [{"type": "input_text", "text": prompt}]
+        for img_b64 in images:
+            content.append({"type": "input_image", "image_url": f"data:image/png;base64,{img_b64}"})
+        payload = [{"role": "user", "content": content}]
+        start = time.perf_counter()
+        try:
+            resp = self.client.responses.create(
+                model=self.vlm_model,
+                input=payload,
+                temperature=TEMPERATURE,
+            )
+            latency = time.perf_counter() - start
+            usage = getattr(resp, "usage", None)
+            return VLMResponse(
+                status="OK",
+                raw_response=(getattr(resp, "output_text", "") or "").strip(),
+                input_tokens=getattr(usage, "input_tokens", None) if usage else None,
+                output_tokens=getattr(usage, "output_tokens", None) if usage else None,
+                total_tokens=getattr(usage, "total_tokens", None) if usage else None,
+                latency_seconds=latency,
+            )
+        except Exception as exc:
+            latency = time.perf_counter() - start
+            return VLMResponse(status="API_ERROR", latency_seconds=latency, error=str(exc))
+
+    def call_multi(self, prompt: str, images: list[str]) -> VLMResponse:
+        return self._retry_loop(lambda: self._call_once_multi(prompt, images))
+
+    def _retry_loop(self, do_call) -> VLMResponse:
         last = None
         for attempt in range(MAX_RETRIES):
-            last = self._call_once(prompt, img_b64)
+            last = do_call()
             if last and last.status == "OK":
                 return last
             if last and last.error and _is_non_retryable(last.error):
@@ -79,6 +111,12 @@ def _is_non_retryable(error: str) -> bool:
 
 class MockVLMClient:
     def call(self, prompt: str, img_b64: str, answer: str = "maintained") -> VLMResponse:
+        return self._mock_response(answer)
+
+    def call_multi(self, prompt: str, images: list[str], answer: str = "maintained") -> VLMResponse:
+        return self._mock_response(answer)
+
+    def _mock_response(self, answer: str) -> VLMResponse:
         raw = (
             '{"answer": "%s", "reason": "Mock response for pipeline validation.", '
             '"confidence": 0.99}'

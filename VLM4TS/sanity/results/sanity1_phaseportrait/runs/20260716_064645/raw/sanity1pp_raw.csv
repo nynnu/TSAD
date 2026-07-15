@@ -1,0 +1,15 @@
+case_id,case_type,ground_truth_label,model_answer,model_confidence,model_reason,parse_status
+C0_000,C0,maintained,maintained,0.95,"The phase portrait shows a consistent, stable trajectory with no significant divergence over time, indicating a maintained relationship between the channels.",OK
+C0_001,C0,maintained,maintained,0.95,"The phase portrait shows a consistent linear trajectory with no significant divergence over time, indicating a stable relationship between the channels.",OK
+C1_000,C1,broken,broken,0.95,"The phase portrait shows a divergence in the trajectory over time, indicating a breakdown in the relationship between Channel A and Channel B.",OK
+C1_001,C1,broken,broken,0.95,"The phase portrait shows a divergence in the trajectory over time, with later segments (yellow) deviating from earlier ones (dark purple), indicating a breakdown in the relationship.",OK
+C2_000,C2,broken,broken,0.95,"The phase portrait shows a clear divergence in the trajectory, particularly around the middle of the interval, indicating a breakdown in the relationship between Channel A and Channel B.",OK
+C2_001,C2,broken,broken,0.95,"The phase portrait shows a clear divergence in the trajectory, with later segments (yellow) deviating from earlier ones (purple), indicating a breakdown in the relationship.",OK
+C3_000,C3,broken,maintained,0.95,"The phase portrait shows a consistent, repeating trajectory with no significant divergence over time, indicating a stable relationship between the channels.",OK
+C3_001,C3,broken,maintained,0.95,"The phase portrait shows a consistent linear trajectory with no significant divergence over time, indicating a stable relationship between the channels.",OK
+C4_000,C4,broken,broken,0.95,"The phase portrait shows a divergence in the trajectory over time, with later segments (yellow) not overlapping earlier ones (dark purple), indicating a breakdown in the relationship.",OK
+C4_001,C4,broken,broken,0.95,"The phase portrait shows a shift from a tight loop to a more dispersed pattern, indicating a breakdown in the relationship between the channels over time.",OK
+C5_000,C5,broken,maintained,0.95,"The phase portrait shows a consistent trajectory with no significant divergence over time, indicating a stable relationship between the channels.",OK
+C5_001,C5,broken,maintained,0.95,"The phase portrait shows a consistent trajectory with no significant divergence over time, indicating a stable relationship between the channels.",OK
+C6_000,C6,maintained,broken,0.95,"The phase portrait shows a divergence in the trajectory over time, with later segments not aligning with earlier ones, indicating a breakdown in the relationship.",OK
+C6_001,C6,maintained,maintained,0.95,"The phase portrait shows a consistent trajectory with no significant divergence over time, indicating a stable relationship between the channels.",OK
