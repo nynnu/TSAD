@@ -1,0 +1,83 @@
+{
+  "C3_000": {
+    "status": "OK",
+    "case_type": "C3",
+    "ground_truth_label": "broken",
+    "model_answer": "maintained",
+    "model_confidence": 0.95,
+    "model_reason": "The phase portrait shows a consistent linear trajectory with no significant deviations across the entire time interval, indicating a stable relationship between Channel A and Channel B.",
+    "parse_status": "OK"
+  },
+  "C3_001": {
+    "status": "OK",
+    "case_type": "C3",
+    "ground_truth_label": "broken",
+    "model_answer": "maintained",
+    "model_confidence": 0.95,
+    "model_reason": "The phase portrait shows a consistent linear trajectory with no significant deviations across the entire time interval, indicating a stable relationship between Channel A and Channel B.",
+    "parse_status": "OK"
+  },
+  "C3_002": {
+    "status": "OK",
+    "case_type": "C3",
+    "ground_truth_label": "broken",
+    "model_answer": "broken",
+    "model_confidence": 0.95,
+    "model_reason": "The phase portrait shows a distinct deviation from the main linear trajectory, indicating a breakdown in the relationship between Channel A and Channel B at some point.",
+    "parse_status": "OK"
+  },
+  "C5_000": {
+    "status": "OK",
+    "case_type": "C5",
+    "ground_truth_label": "broken",
+    "model_answer": "maintained",
+    "model_confidence": 0.95,
+    "model_reason": "The phase portrait shows a consistent linear trajectory with no significant deviations, indicating a stable relationship between Channel A and Channel B throughout the interval.",
+    "parse_status": "OK"
+  },
+  "C5_001": {
+    "status": "OK",
+    "case_type": "C5",
+    "ground_truth_label": "broken",
+    "model_answer": "broken",
+    "model_confidence": 0.85,
+    "model_reason": "The phase portrait shows a deviation from the dominant linear trajectory, particularly with some segments sticking out, indicating a breakdown in the relationship.",
+    "parse_status": "OK"
+  },
+  "C5_002": {
+    "status": "OK",
+    "case_type": "C5",
+    "ground_truth_label": "broken",
+    "model_answer": "broken",
+    "model_confidence": 0.85,
+    "model_reason": "The phase portrait shows a deviation from the main linear trajectory, indicating a breakdown in the relationship between Channel A and Channel B at some point.",
+    "parse_status": "OK"
+  },
+  "C6_000": {
+    "status": "OK",
+    "case_type": "C6",
+    "ground_truth_label": "maintained",
+    "model_answer": "broken",
+    "model_confidence": 0.85,
+    "model_reason": "The phase portrait shows segments of different colors deviating from the dominant shape, indicating a breakdown in the relationship between Channel A and Channel B at some points.",
+    "parse_status": "OK"
+  },
+  "C6_001": {
+    "status": "OK",
+    "case_type": "C6",
+    "ground_truth_label": "maintained",
+    "model_answer": "maintained",
+    "model_confidence": 0.95,
+    "model_reason": "The phase portrait shows a consistent linear trajectory with no significant deviations across the entire time interval, indicating a stable relationship between Channel A and Channel B.",
+    "parse_status": "OK"
+  },
+  "C6_002": {
+    "status": "OK",
+    "case_type": "C6",
+    "ground_truth_label": "maintained",
+    "model_answer": "maintained",
+    "model_confidence": 0.95,
+    "model_reason": "The phase portrait shows a consistent trajectory with no significant deviations, indicating a stable relationship between the channels throughout the interval.",
+    "parse_status": "OK"
+  }
+}

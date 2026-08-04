@@ -10,6 +10,22 @@ Respond with only the following JSON object, no other text:
 {"answer": "maintained" | "broken", "reason": "<1-3 sentences>", "confidence": <0.00-1.00>}"""
 
 
+SANITY1_PHASEPORTRAIT_PROMPT = """You are shown two plots describing the same two time-series channels, "Channel A" and "Channel B", over the same 300-step interval.
+
+Plot 1 (time series): Channel A and Channel B plotted against time.
+
+Plot 2 (phase portrait): the same data re-plotted with Channel A's value on the x-axis and Channel B's value on the y-axis, connected in time order. The line color shows time progression (dark purple = early, yellow = late) using a continuous colormap. This turns the relationship between the two channels into a geometric trajectory: if the two channels stay in a stable, consistent relationship (in sync, in a stable proportional or phase relationship) for the ENTIRE interval, all colors trace approximately the same repeating shape (e.g. a line or closed loop) on top of each other. If the relationship breaks down at ANY point in time, even temporarily, a distinguishable subset of the trajectory (regardless of its color / time position) will visibly deviate from that shape — for example a different orientation, an outlying loop, or a segment of a different color sticking out from the rest. Do not just compare the earliest-colored and latest-colored segments to each other; scan the whole trajectory for any colored segment, of any color, that does not overlap with the dominant shape traced by the others.
+
+Task: Using both plots, determine whether the relationship between Channel A and Channel B is MAINTAINED throughout the entire interval, or whether it BREAKS DOWN at some point and does not (or does not fully) recover.
+
+"Relationship" refers to how the two channels move together, not to the absolute value of either signal.
+
+Answer with exactly one of: "maintained" or "broken".
+
+Respond with only the following JSON object, no other text:
+{"answer": "maintained" | "broken", "reason": "<1-3 sentences>", "confidence": <0.00-1.00>}"""
+
+
 SANITY7_PROMPT = """You are shown a plot with two time-series channels, "Channel A" and "Channel B", plotted over the same time axis.
 
 Task: Determine whether there is an anomalous interval in this plot, or whether both channels behave normally throughout the entire plotted interval.

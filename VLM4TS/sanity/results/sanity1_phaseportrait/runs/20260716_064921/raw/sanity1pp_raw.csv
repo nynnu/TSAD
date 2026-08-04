@@ -1,0 +1,10 @@
+case_id,case_type,ground_truth_label,model_answer,model_confidence,model_reason,parse_status
+C3_000,C3,broken,maintained,0.95,"The phase portrait shows a consistent linear trajectory with no significant deviations across the entire time interval, indicating a stable relationship between Channel A and Channel B.",OK
+C3_001,C3,broken,maintained,0.95,"The phase portrait shows a consistent linear trajectory with no significant deviations across the entire time interval, indicating a stable relationship between Channel A and Channel B.",OK
+C3_002,C3,broken,broken,0.95,"The phase portrait shows a distinct deviation from the main linear trajectory, indicating a breakdown in the relationship between Channel A and Channel B at some point.",OK
+C5_000,C5,broken,maintained,0.95,"The phase portrait shows a consistent linear trajectory with no significant deviations, indicating a stable relationship between Channel A and Channel B throughout the interval.",OK
+C5_001,C5,broken,broken,0.85,"The phase portrait shows a deviation from the dominant linear trajectory, particularly with some segments sticking out, indicating a breakdown in the relationship.",OK
+C5_002,C5,broken,broken,0.85,"The phase portrait shows a deviation from the main linear trajectory, indicating a breakdown in the relationship between Channel A and Channel B at some point.",OK
+C6_000,C6,maintained,broken,0.85,"The phase portrait shows segments of different colors deviating from the dominant shape, indicating a breakdown in the relationship between Channel A and Channel B at some points.",OK
+C6_001,C6,maintained,maintained,0.95,"The phase portrait shows a consistent linear trajectory with no significant deviations across the entire time interval, indicating a stable relationship between Channel A and Channel B.",OK
+C6_002,C6,maintained,maintained,0.95,"The phase portrait shows a consistent trajectory with no significant deviations, indicating a stable relationship between the channels throughout the interval.",OK

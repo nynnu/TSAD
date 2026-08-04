@@ -5,6 +5,7 @@ import base64
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+from matplotlib.collections import LineCollection
 import numpy as np
 
 from config import DPI, FIGSIZE
@@ -19,6 +20,41 @@ def render_overlay(a: np.ndarray, b: np.ndarray, save_path: Path) -> str:
     ax.set_xlabel("Time step")
     ax.set_ylabel("Value")
     ax.legend()
+    ax.grid(True, alpha=0.25, linewidth=0.5)
+    fig.tight_layout()
+
+    fig.savefig(save_path, format="png", dpi=DPI)
+    buf = BytesIO()
+    fig.savefig(buf, format="png", dpi=DPI)
+    plt.close(fig)
+    buf.seek(0)
+    return base64.b64encode(buf.read()).decode("utf-8")
+
+
+def render_phase_portrait(a: np.ndarray, b: np.ndarray, save_path: Path) -> str:
+    """Plot Channel A (x-axis) against Channel B (y-axis), colored by time progression.
+
+    Re-encodes the temporal relationship as a static trajectory shape: a stable
+    relationship traces a repeating closed loop, while a drifting/breaking
+    relationship produces a spiral or a loop that visibly changes shape.
+    Color-by-time uses a continuous colormap (not tied to the ground-truth
+    break interval) so it does not leak the label.
+    """
+    save_path.parent.mkdir(parents=True, exist_ok=True)
+    fig, ax = plt.subplots(figsize=FIGSIZE, dpi=DPI)
+    t = len(a)
+    points = np.stack([a, b], axis=1).reshape(-1, 1, 2)
+    segments = np.concatenate([points[:-1], points[1:]], axis=1)
+    lc = LineCollection(segments, cmap="viridis", linewidth=1.2)
+    lc.set_array(np.arange(t - 1))
+    ax.add_collection(lc)
+    ax.set_xlim(float(np.min(a)) - 0.5, float(np.max(a)) + 0.5)
+    ax.set_ylim(float(np.min(b)) - 0.5, float(np.max(b)) + 0.5)
+    ax.set_xlabel("Channel A value")
+    ax.set_ylabel("Channel B value")
+    ax.set_aspect("equal", adjustable="box")
+    cbar = fig.colorbar(lc, ax=ax)
+    cbar.set_label("Time step (dark=early, light=late)")
     ax.grid(True, alpha=0.25, linewidth=0.5)
     fig.tight_layout()
 
