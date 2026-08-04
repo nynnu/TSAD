@@ -124,3 +124,15 @@ Use the image to check whether the reason is visually supported. Do not judge wh
 
 Respond with only this JSON object, no markdown and no extra text:
 {{"reason_type": "relational" | "single_channel" | "vague" | "hallucinated", "rationale": "<one short sentence>"}}"""
+
+
+SANITY9_PROMPT = """You are shown a plot of 6 time-series channels, labeled "1" through "6", plotted over the same time axis from time step 0 to 299. The channels may influence each other, or some may be completely unrelated to the others -- there is no predetermined grouping; you must infer any structure yourself from the plot.
+
+Task:
+1. If there is a channel where an anomaly first originated (a "root cause" channel), identify which one it is. If all 6 channels look normal throughout, answer "none".
+2. Identify all channels that became anomalous as a consequence of the root cause, including channels that only react after a delay or react only weakly/gradually.
+3. Identify all channels that stay in their normal pattern, unrelated to the root cause.
+4. Estimate the time step at which the root cause channel's anomaly first began (null if there is no root cause).
+
+Respond with only the following JSON object, no markdown and no extra text:
+{"root_cause_channel": "1"-"6" | "none", "affected_channels": ["..."], "unaffected_channels": ["..."], "onset_time": <integer or null>, "reason": "<2-3 sentences>", "confidence": <0.00-1.00>}"""
