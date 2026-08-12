@@ -1,9 +1,12 @@
 import time
 from dataclasses import dataclass
 
+from dotenv import load_dotenv
 from openai import OpenAI
 
 from config import BACKOFF_BASE_SECONDS, MAX_RETRIES, MODEL_NAME, TEMPERATURE
+
+load_dotenv()  # picks up OPENAI_API_KEY from sanity/.env if present
 
 
 @dataclass
