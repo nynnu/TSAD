@@ -15,10 +15,15 @@ refs -- NOT distance-of-means) to the SIMPLEST baseline first: INTRA
 (per-channel, no grouping at all -- render_single/embed_channel_window from
 step1v3_dino_graph_smd.py), before re-testing INTER with the same fix.
 
-Also excludes the 8 zero-variance (constant) channels found in machine-3-4
-([4,7,16,17,26,28,36,37]) from both scoring and the max-over-channels
-aggregation -- they carry no signal and their correlation-grouping was
-already shown to be meaningless (NaN->0 fallback).
+Also excludes zero-variance (constant) channels -- detected per-entity from
+train data (std < 1e-8), not hardcoded -- from both scoring and the
+max-over-channels aggregation, since machine-3-4 had 8 such channels and they
+carry no signal (their correlation-grouping was already shown meaningless,
+NaN->0 fallback).
+
+--entities: run this same fixed setup (multiref-5, constant-channel exclusion,
+INTRA, report12 post-processing) across multiple entities to check whether
+machine-3-4's F1 jump (0.1765 -> 0.4598) generalizes or was a fluke.
 
 No VLM/GPT calls anywhere in this script.
 """
@@ -43,6 +48,7 @@ OUT_DIR.mkdir(parents=True, exist_ok=True)
 CACHE_DIR.mkdir(parents=True, exist_ok=True)
 
 ENTITY = "machine-3-4"
+DEFAULT_ENTITIES = ["machine-3-4", "machine-1-1", "machine-1-4", "machine-2-1", "machine-3-7", "machine-1-8"]
 WIN = 224
 STRIDE = 56
 N_STATIC_REFS = 5  # exact port of §34 (smd_step0_multiref_ensemble.py)
@@ -51,9 +57,12 @@ MERGE_GAP = WIN // 2
 MIN_LEN = 10
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-# found via corr_grouping/std check on machine-3-4 train -- constant channels
-# carry no signal and poison correlation-based grouping (NaN -> 0 fallback)
-CONSTANT_CHANNELS = {4, 7, 16, 17, 26, 28, 36, 37}
+
+def constant_channels(train, n_channels, eps=1e-8):
+    """Per-entity zero-variance channel detection (not hardcoded -- different
+    entities have different constant channels)."""
+    stds = train.std(axis=0)
+    return {c for c in range(n_channels) if stds[c] < eps}
 
 
 class HFDinov2Wrapper:
@@ -195,50 +204,54 @@ def interval_f1_fixed(pred_ivs, gt_ivs):
     return F, P, R
 
 
-def run(mode, batch_size=64):
+def run_test_timing(entity, model):
     from step1v3_dino_graph_smd import load_smd, N_CHANNELS
 
-    print(f"Device: {DEVICE}", flush=True)
-    print("Loading DINOv2 ViT-S/14 via transformers/HuggingFace Hub...", flush=True)
-    model = _load_dinov2_via_pip(DEVICE)
-
-    train, test = load_smd(ENTITY)
-    active_channels = [c for c in range(N_CHANNELS) if c not in CONSTANT_CHANNELS]
-    print(f"Entity: {ENTITY}  active channels: {len(active_channels)}/{N_CHANNELS} "
-          f"(excluded constant: {sorted(CONSTANT_CHANNELS)})", flush=True)
+    train, test = load_smd(entity)
+    const = constant_channels(train, N_CHANNELS)
+    active_channels = [c for c in range(N_CHANNELS) if c not in const]
+    print(f"Entity: {entity}  active channels: {len(active_channels)}/{N_CHANNELS} "
+          f"(excluded constant: {sorted(const)})", flush=True)
 
     starts_all = sliding_windows(len(test), WIN, STRIDE)
     n_all = len(starts_all)
     print(f"windows/channel={n_all}  N_STATIC_REFS={N_STATIC_REFS}", flush=True)
 
-    if mode == "test":
-        n_sub = max(1, int(n_all * 0.15))
-        t0 = time.time()
-        c = active_channels[0]
-        ref_windows = static_ref_windows(len(train), WIN, N_STATIC_REFS)
-        ref_imgs = [render_single(normed_window(train[:, c], s, e)) for s, e in ref_windows]
-        ref_embs = embed_batch(ref_imgs, model, DEVICE)
-        dyn_imgs = [render_single(normed_window(test[:, c], s, s + WIN)) for s in starts_all[:n_sub]]
-        dyn_embs = embed_batch(dyn_imgs, model, DEVICE)
-        _ = np.mean([cosine_dist_batch(dyn_embs, ref) for ref in ref_embs], axis=0)
-        elapsed = time.time() - t0
-        per_window = elapsed / n_sub
-        est_1ch = per_window * n_all
-        est_all_ch = est_1ch * len(active_channels)
-        print(f"\n{n_sub}/{n_all} 윈도우(채널 1개) 소요: {elapsed:.1f}s ({per_window*1000:.1f}ms/window)", flush=True)
-        print(f"채널 1개 전체: {est_1ch:.1f}s  {len(active_channels)}개 활성채널 전체 추정: "
-              f"{est_all_ch:.1f}s ({est_all_ch/60:.1f}분)", flush=True)
-        print("\n[STOP] 테스트 모드 완료 -- 승인 후 --full로 재실행해라.", flush=True)
-        return
+    n_sub = max(1, int(n_all * 0.15))
+    t0 = time.time()
+    c = active_channels[0]
+    ref_windows = static_ref_windows(len(train), WIN, N_STATIC_REFS)
+    ref_imgs = [render_single(normed_window(train[:, c], s, e)) for s, e in ref_windows]
+    ref_embs = embed_batch(ref_imgs, model, DEVICE)
+    dyn_imgs = [render_single(normed_window(test[:, c], s, s + WIN)) for s in starts_all[:n_sub]]
+    dyn_embs = embed_batch(dyn_imgs, model, DEVICE)
+    _ = np.mean([cosine_dist_batch(dyn_embs, ref) for ref in ref_embs], axis=0)
+    elapsed = time.time() - t0
+    per_window = elapsed / n_sub
+    est_1ch = per_window * n_all
+    est_all_ch = est_1ch * len(active_channels)
+    print(f"\n{n_sub}/{n_all} 윈도우(채널 1개) 소요: {elapsed:.1f}s ({per_window*1000:.1f}ms/window)", flush=True)
+    print(f"채널 1개 전체: {est_1ch:.1f}s  {len(active_channels)}개 활성채널 전체 추정: "
+          f"{est_all_ch:.1f}s ({est_all_ch/60:.1f}분)", flush=True)
 
-    # ---- full mode ----
+
+def run_full_one_entity(entity, model, batch_size=64):
+    from step1v3_dino_graph_smd import load_smd, N_CHANNELS
+
+    train, test = load_smd(entity)
+    const = constant_channels(train, N_CHANNELS)
+    active_channels = [c for c in range(N_CHANNELS) if c not in const]
+    starts_all = sliding_windows(len(test), WIN, STRIDE)
+    n_all = len(starts_all)
+    print(f"\n=== {entity} === active={len(active_channels)}/{N_CHANNELS} "
+          f"(excluded constant: {sorted(const)})  windows/ch={n_all}", flush=True)
+
     t0 = time.time()
     channel_scores = {}
     for c in active_channels:
-        cache_path = CACHE_DIR / ENTITY / f"ch{c}_winscores.npy"
+        cache_path = CACHE_DIR / entity / f"ch{c}_winscores.npy"
         if cache_path.exists():
             channel_scores[c] = np.load(cache_path)
-            print(f"  [SKIP cached] ch{c}", flush=True)
             continue
         cache_path.parent.mkdir(parents=True, exist_ok=True)
         ref_windows = static_ref_windows(len(train), WIN, N_STATIC_REFS)
@@ -250,30 +263,55 @@ def run(mode, batch_size=64):
             batch_starts = starts_all[b:b + batch_size]
             dyn_imgs = [render_single(normed_window(test[:, c], s, s + WIN)) for s in batch_starts]
             dyn_embs = embed_batch(dyn_imgs, model, DEVICE)
-            dists_per_ref = np.stack([cosine_dist_batch(dyn_embs, ref) for ref in ref_embs])  # (5, batch)
+            dists_per_ref = np.stack([cosine_dist_batch(dyn_embs, ref) for ref in ref_embs])  # (n_refs, batch)
             scores[b:b + len(batch_starts)] = dists_per_ref.mean(axis=0)  # mean-of-distances, not distance-of-means
         channel_scores[c] = scores
         np.save(cache_path, scores)
         print(f"  ch{c} done ({time.time()-t0:.0f}s elapsed)", flush=True)
 
     entity_win_score = np.stack(list(channel_scores.values())).max(axis=0)  # max-over-active-channels
-    gt_intervals, T = get_gt_intervals(ENTITY)
+    gt_intervals, T = get_gt_intervals(entity)
     pred_intervals = scores_to_intervals_report12(entity_win_score, T)
     F, P, R = interval_f1_fixed(pred_intervals, gt_intervals)
-
     total_elapsed = time.time() - t0
-    print(f"\nGT intervals: {len(gt_intervals)}  Pred intervals: {len(pred_intervals)}", flush=True)
-    print(f"(C) INTRA multiref(5)  F1={F:.4f}  P={P:.4f}  R={R:.4f}", flush=True)
-    print(f"Total elapsed: {total_elapsed:.1f}s ({total_elapsed/60:.1f}min)", flush=True)
 
-    (OUT_DIR / "intra_multiref_full_result.json").write_text(json.dumps({
-        "entity": ENTITY, "n_active_channels": len(active_channels), "excluded_constant_channels": sorted(CONSTANT_CHANNELS),
+    print(f"GT intervals: {len(gt_intervals)}  Pred intervals: {len(pred_intervals)}", flush=True)
+    print(f"{entity}: F1={F:.4f}  P={P:.4f}  R={R:.4f}  ({total_elapsed:.0f}s)", flush=True)
+
+    return {
+        "entity": entity, "n_active_channels": len(active_channels), "excluded_constant_channels": sorted(const),
         "n_windows": n_all, "n_static_refs": N_STATIC_REFS,
         "n_gt_intervals": len(gt_intervals), "n_pred_intervals": len(pred_intervals),
         "gt_intervals": gt_intervals, "pred_intervals": pred_intervals,
         "F1": F, "precision": P, "recall": R, "total_elapsed_s": total_elapsed,
+    }
+
+
+def run(mode, entities, batch_size=64):
+    print(f"Device: {DEVICE}", flush=True)
+    print("Loading DINOv2 ViT-S/14 via transformers/HuggingFace Hub...", flush=True)
+    model = _load_dinov2_via_pip(DEVICE)
+
+    if mode == "test":
+        run_test_timing(entities[0], model)
+        print("\n[STOP] 테스트 모드 완료 -- 승인 후 --full로 재실행해라.", flush=True)
+        return
+
+    results = [run_full_one_entity(e, model, batch_size) for e in entities]
+
+    f1s = [r["F1"] for r in results]
+    print(f"\n{'='*60}\nSUMMARY ({len(results)} entities)\n{'='*60}")
+    for r in results:
+        print(f"  {r['entity']:<15} F1={r['F1']:.4f}  P={r['precision']:.4f}  R={r['recall']:.4f}  "
+              f"n_gt={r['n_gt_intervals']}  n_pred={r['n_pred_intervals']}  n_active_ch={r['n_active_channels']}")
+    print(f"\nMean F1={np.mean(f1s):.4f}  Std={np.std(f1s):.4f}  Min={np.min(f1s):.4f}  Max={np.max(f1s):.4f}")
+
+    (OUT_DIR / "intra_multiref_multi_entity_result.json").write_text(json.dumps({
+        "entities": entities, "results": results,
+        "mean_f1": float(np.mean(f1s)), "std_f1": float(np.std(f1s)),
+        "min_f1": float(np.min(f1s)), "max_f1": float(np.max(f1s)),
     }, indent=2), encoding="utf-8")
-    print(f"\nSaved: {OUT_DIR / 'intra_multiref_full_result.json'}")
+    print(f"\nSaved: {OUT_DIR / 'intra_multiref_multi_entity_result.json'}")
 
 
 def demo():
@@ -295,7 +333,10 @@ def demo():
     assert any(s <= 850 <= e for s, e in ivs), f"expected spike detected, got {ivs}"
     F, P, R = interval_f1_fixed(ivs, [(800, 900 + WIN)])
     assert F > 0
-    assert CONSTANT_CHANNELS.issubset(set(range(38)))
+    train = np.random.randn(1000, 10)
+    train[:, 3] = 5.0  # constant channel
+    const = constant_channels(train, 10)
+    assert const == {3}, f"expected only channel 3 flagged constant, got {const}"
     print("demo OK")
 
 
@@ -304,10 +345,13 @@ if __name__ == "__main__":
     p.add_argument("--demo", action="store_true")
     p.add_argument("--test", action="store_true")
     p.add_argument("--full", action="store_true")
+    p.add_argument("--entities", type=str, default=None,
+                    help="comma-separated entity list, default: " + ",".join(DEFAULT_ENTITIES))
     args = p.parse_args()
+    entities = args.entities.split(",") if args.entities else DEFAULT_ENTITIES
     if args.demo:
         demo()
     elif args.full:
-        run("full")
+        run("full", entities)
     else:
-        run("test")
+        run("test", entities)
