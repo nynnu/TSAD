@@ -62,17 +62,57 @@ CACHE_DIR = OUT_DIR / "cache"
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 CACHE_DIR.mkdir(parents=True, exist_ok=True)
 
-ENTITY = "machine-3-4"
+DEFAULT_ENTITY = "machine-3-4"
+DEFAULT_ENTITIES = ["machine-3-4", "machine-1-1", "machine-1-5", "machine-2-1", "machine-3-2", "machine-3-6"]
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 N_TOP_OVERLAY = 8
 
-# reverify_3way_broad_sample.NEW_SEGMENTS -- the only machine-3-4 spans with
-# known per-channel GT (0-indexed here already)
-KNOWN_GT_CHANNEL_SPANS = [
-    ((2734, 3520), [0, 1, 2, 3, 5, 6, 10, 15]),
-    ((6013, 6016), [9, 11, 12, 13]),
-    ((10963, 10969), [29, 32, 33]),
-]
+# Known per-channel GT spans, 0-indexed, per entity -- sourced from
+# reverify_3way_broad_sample.py's ORIG_SEGMENTS/NEW_SEGMENTS (machine-1-1,
+# machine-1-5, machine-2-1, machine-3-2, machine-3-4) and
+# _interp_cache/machine-3-6.txt (machine-3-6). Only these spans are usable
+# for recall@k evaluation -- any GT interval outside this list has no known
+# causal channels available locally.
+KNOWN_GT_CHANNEL_SPANS_BY_ENTITY = {
+    "machine-3-4": [
+        ((2734, 3520), [0, 1, 2, 3, 5, 6, 10, 15]),
+        ((6013, 6016), [9, 11, 12, 13]),
+        ((10963, 10969), [29, 32, 33]),
+    ],
+    "machine-1-1": [
+        ((15849, 16368), [0, 8, 9, 11, 12, 13, 14]),
+        ((18071, 18528), [0, 1, 8, 9, 11, 12, 13, 14]),
+        ((24679, 24682), [8, 12, 13, 14]),
+    ],
+    "machine-1-5": [
+        ((10620, 10637), [0, 1, 2, 3, 6, 23, 25, 31]),
+        ((14068, 14072), [18, 19, 20, 21, 27, 30]),
+        ((21287, 21298), [0, 1, 2, 3, 5, 6, 23, 25]),
+    ],
+    "machine-2-1": [
+        ((6506, 6528), [22, 24, 31, 34, 35]),
+        ((7907, 7961), [8, 9, 10, 12, 31]),
+        ((9340, 9386), [8, 9, 10, 12, 31, 32, 33]),
+    ],
+    "machine-3-2": [
+        ((135, 161), [9, 11, 12, 35]),
+        ((3080, 3917), [8, 12, 13, 16]),
+        ((15577, 15582), [8, 12, 13, 34, 35]),
+    ],
+    "machine-3-6": [
+        ((1187, 1221), [0, 1, 2, 3, 18, 19, 20, 21, 22, 23, 24, 27, 28, 30, 31, 32, 33, 34, 35]),
+        ((8177, 8211), [0, 1, 2, 3, 32, 33]),
+        ((10637, 10743), [0, 32, 33]),
+        ((15633, 15863), [0, 8, 9, 11, 12, 13, 14, 15]),
+        ((16788, 16995), [0, 9, 11, 12, 13, 14]),
+        ((18054, 18134), [0, 9, 11, 12, 13, 14]),
+        ((19276, 19500), [0, 9, 11, 12, 13, 14]),
+        ((20681, 20865), [0, 8, 9, 11, 12, 13, 14]),
+        ((24503, 24506), [0, 8, 9, 11, 12, 13, 14]),
+        ((26138, 26149), [0, 11]),
+        ((27877, 27958), [0, 1, 2, 3, 5, 6, 10, 15, 18, 19, 20, 21, 22, 23, 24, 25, 27, 29, 30, 31, 32, 34, 35]),
+    ],
+}
 
 
 class HFDinov2Wrapper:
@@ -135,7 +175,7 @@ def f1max_with_intervals(ts_scores, labels, cm):
     return best_f1, best_ivs, best_alpha
 
 
-def stage1_inter_candidates(cm, train, test, labels):
+def stage1_inter_candidates(cm, train, test, labels, entity):
     """Exact INTER pathway from f1_track_report12_repro.py / colab_multivariate_v2.run_entity,
     but keeping the winning pred_ivs instead of discarding them."""
     T_test = test.shape[0]
@@ -144,7 +184,7 @@ def stage1_inter_candidates(cm, train, test, labels):
 
     group_scores_ts = []
     for gi, g in enumerate(groups):
-        cache_path = CACHE_DIR / "inter_groups" / f"group{gi}_ts.npz"
+        cache_path = CACHE_DIR / entity / "inter_groups" / f"group{gi}_ts.npz"
         if cache_path.exists():
             loaded = np.load(cache_path)
             group_scores_ts.append({k: loaded[k] for k in loaded.files})
@@ -246,42 +286,31 @@ def parse_combined_response(raw):
     return obj
 
 
-def known_gt_channels_for_interval(gt_iv):
-    for (s, e), chans in KNOWN_GT_CHANNEL_SPANS:
+def known_gt_channels_for_interval(gt_iv, entity):
+    for (s, e), chans in KNOWN_GT_CHANNEL_SPANS_BY_ENTITY.get(entity, []):
         if not (e < gt_iv[0] or gt_iv[1] < s):
             return chans
     return None
 
 
-def run(mode):
-    import colab_multivariate_v2 as cm
-
-    print(f"Device: {DEVICE}", flush=True)
-    print("Loading DINOv2 ViT-S/14 via transformers/HuggingFace Hub...", flush=True)
-    model = _load_dinov2_via_pip(DEVICE)
-    cm.DEVICE = DEVICE
-    cm._model = model
-
-    train, test, labels = cm.load_smd(BASE / "mv_data", ENTITY)
+def run_one_entity(mode, entity, model, cm):
+    train, test, labels = cm.load_smd(BASE / "mv_data", entity)
     gt_intervals = cm.get_intervals(labels.astype(int))
-    print(f"Entity: {ENTITY}  T={test.shape[0]}  C={test.shape[1]}  GT_intervals={len(gt_intervals)}: {gt_intervals}", flush=True)
+    print(f"\n{'='*70}\nEntity: {entity}  T={test.shape[0]}  C={test.shape[1]}  "
+          f"GT_intervals={len(gt_intervals)}: {gt_intervals}\n{'='*70}", flush=True)
 
     print("\n=== Stage 1: INTER 후보 구간 생성 (patch-KNN, VLM 없음) ===", flush=True)
     t0 = time.time()
-    best = stage1_inter_candidates(cm, train, test, labels)
+    best = stage1_inter_candidates(cm, train, test, labels, entity)
     segments = intervals_to_segments(best["ivs"], test.shape[0], cm.WINDOW_SIZE, cm)
     print(f"\nStage1 완료 ({time.time()-t0:.0f}s). 후보 구간(=224틱 세그먼트) {len(segments)}개:", flush=True)
     for s in segments:
         print(f"  orig={s['orig_interval']}  seg=({s['seg_start']},{s['seg_end']})", flush=True)
 
     if mode == "stage1":
-        print(f"\n[STOP] Stage1만 실행. 예상 VLM 콜 수 = 세그먼트 수 = {len(segments)}개.", flush=True)
-        print("승인 후 --full로 재실행하면 Stage1.5(production 재점수) + Stage2(VLM) 이어서 진행.", flush=True)
-        (OUT_DIR / "stage1_segments.json").write_text(json.dumps({
-            "best_inter_combo": best["key"], "best_inter_f1_reference": best["f1"],
-            "segments": segments, "gt_intervals": gt_intervals,
-        }, indent=2), encoding="utf-8")
-        return
+        return {"entity": entity, "n_segments": len(segments), "segments": segments,
+                "best_inter_combo": best["key"], "best_inter_f1_reference": best["f1"],
+                "gt_intervals": gt_intervals}
 
     print("\n=== Stage 1.5: production 다중참조(5) 재점수 (VLM 없음) ===", flush=True)
     from f1_track_pilot_intra_multiref import static_ref_windows, render_single, normed_window, embed_batch, cosine_dist_batch, N_STATIC_REFS, WIN
@@ -308,7 +337,8 @@ def run(mode):
     from smd_3way_baseline_comparison import call_vlm
     all_channels = list(range(N_CHANNELS))
     stage2_results = []
-    checkpoint_path = OUT_DIR / "stage2_checkpoint.json"
+    checkpoint_path = OUT_DIR / entity / "stage2_checkpoint.json"
+    checkpoint_path.parent.mkdir(parents=True, exist_ok=True)
     checkpoint = json.loads(checkpoint_path.read_text(encoding="utf-8")) if checkpoint_path.exists() else {}
 
     for si, seg in enumerate(segments):
@@ -342,17 +372,20 @@ def run(mode):
 
         for gt_iv in gt_intervals:
             if not (gt_iv[1] < abs_s or abs_e < gt_iv[0]):
-                gt_chans = known_gt_channels_for_interval(gt_iv)
+                gt_chans = known_gt_channels_for_interval(gt_iv, entity)
                 if gt_chans is not None:
                     pred_chans = set(p.get("anomalous_channels") or [])
                     k = len(gt_chans)
                     hit = len(pred_chans & set(gt_chans))
-                    tp_diag_rows.append({"seg": si, "gt_interval": gt_iv, "gt_channels": gt_chans,
-                                          "pred_channels": list(pred_chans), "k": k,
-                                          "recall_at_k": hit / k if k else None})
+                    tp_diag_rows.append({
+                        "seg": si, "gt_interval": gt_iv, "gt_channels": gt_chans,
+                        "pred_channels": list(pred_chans), "k": k, "n_pred_channels": len(pred_chans),
+                        "recall_at_k": hit / k if k else None,
+                        "precision_at_k": hit / len(pred_chans) if pred_chans else None,
+                    })
                 break
 
-    f1, precision, recall = cm._eval_f1(gt_intervals, pred_intervals), None, None
+    f1 = cm._eval_f1(gt_intervals, pred_intervals)
     tp_count = sum(1 for p in pred_intervals if any(not (g[1] < p[0] or p[1] < g[0]) for g in gt_intervals))
     fp_count = len(pred_intervals) - tp_count
     fn_count = sum(1 for g in gt_intervals if not any(not (g[1] < p[0] or p[1] < g[0]) for p in pred_intervals))
@@ -360,25 +393,30 @@ def run(mode):
     rec = tp_count / len(gt_intervals) if gt_intervals else 0.0
 
     mean_recall_at_k = float(np.mean([r["recall_at_k"] for r in tp_diag_rows])) if tp_diag_rows else None
+    mean_precision_at_k = float(np.mean([r["precision_at_k"] for r in tp_diag_rows if r["precision_at_k"] is not None])) if tp_diag_rows else None
 
     print(f"F1(detection) = {f1:.4f}  (P={prec:.4f} R={rec:.4f}, TP={tp_count} FP={fp_count} FN={fn_count})")
     print(f"recall@k(diagnosis, GT채널 알려진 {len(tp_diag_rows)}개 TP 구간만) = {mean_recall_at_k}")
+    print(f"precision@k(같은 구간들) = {mean_precision_at_k}")
     for r in tp_diag_rows:
-        print(f"  seg{r['seg']}: gt_channels={r['gt_channels']}  pred={r['pred_channels']}  recall@k={r['recall_at_k']:.2f}")
+        print(f"  seg{r['seg']}: gt={r['gt_channels']}  pred={r['pred_channels']}(n={r['n_pred_channels']})  "
+              f"recall@k={r['recall_at_k']:.2f}  precision@k={r['precision_at_k']}")
 
-    print(f"\n비교 기준: F1 트랙 단독(INTER, patch-KNN) 참고F1={best['f1']:.4f} vs 이번 통합 F1={f1:.4f}")
-    print("recall@k 트랙 단독(I8/K2) 참고치는 0.324~0.327 (74개 세그먼트 평균) -- 표본 규모가 다르니 방향성만 참고")
-
-    (OUT_DIR / "final_result.json").write_text(json.dumps({
-        "entity": ENTITY, "segments": segments, "stage2_results": [
+    result = {
+        "entity": entity, "segments": segments, "stage2_results": [
             {"seg": r["seg"], "parsed": r["parsed"]} for r in stage2_results
         ],
         "f1_detection": f1, "precision": prec, "recall": rec,
         "tp": tp_count, "fp": fp_count, "fn": fn_count,
-        "recall_at_k_diagnosis": mean_recall_at_k, "tp_diag_rows": tp_diag_rows,
+        "recall_at_k_diagnosis": mean_recall_at_k, "precision_at_k_diagnosis": mean_precision_at_k,
+        "n_tp_diag_rows": len(tp_diag_rows), "tp_diag_rows": tp_diag_rows,
         "reference_f1_track_only": best["f1"],
-    }, indent=2), encoding="utf-8")
-    print(f"\nSaved: {OUT_DIR / 'final_result.json'}")
+    }
+    out_path = OUT_DIR / entity / "final_result.json"
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    out_path.write_text(json.dumps(result, indent=2), encoding="utf-8")
+    print(f"\nSaved: {out_path}")
+    return result
 
 
 def demo():
@@ -394,9 +432,11 @@ def demo():
     assert f1 > 0.9, f"expected near-perfect detection, got f1={f1} ivs={ivs}"
     assert ivs and ivs[0][0] <= 55 <= ivs[0][1]
 
-    known = known_gt_channels_for_interval((2800, 3000))
+    known = known_gt_channels_for_interval((2800, 3000), "machine-3-4")
     assert known == [0, 1, 2, 3, 5, 6, 10, 15], f"unexpected: {known}"
-    assert known_gt_channels_for_interval((99999, 100000)) is None
+    assert known_gt_channels_for_interval((99999, 100000), "machine-3-4") is None
+    assert known_gt_channels_for_interval((2800, 3000), "machine-1-1") is None  # different entity, no match
+    assert len(KNOWN_GT_CHANNEL_SPANS_BY_ENTITY) == len(DEFAULT_ENTITIES)
 
     parsed = parse_combined_response('```json\n{"is_anomaly": true, "refined_start": 10, "refined_end": 20, "anomalous_channels": [1,2], "confidence": "high"}\n```')
     assert parsed["is_anomaly"] is True and parsed["refined_start"] == 10
@@ -430,15 +470,75 @@ def _demo_eval_f1(gt_ivs, pred_ivs):
     return 2 * p * r / (p + r) if (p + r) > 0 else 0
 
 
+def run(mode, entities):
+    import colab_multivariate_v2 as cm
+
+    print(f"Device: {DEVICE}", flush=True)
+    print("Loading DINOv2 ViT-S/14 via transformers/HuggingFace Hub...", flush=True)
+    model = _load_dinov2_via_pip(DEVICE)
+    cm.DEVICE = DEVICE
+    cm._model = model
+
+    results = [run_one_entity(mode, e, model, cm) for e in entities]
+
+    if mode == "stage1":
+        total_calls = sum(r["n_segments"] for r in results)
+        print(f"\n{'='*70}\nSUMMARY ({len(entities)} entities)\n{'='*70}")
+        for r in results:
+            print(f"  {r['entity']:<15} 후보구간(=콜수)={r['n_segments']}  "
+                  f"참고F1={r['best_inter_f1_reference']:.4f}  ({r['best_inter_combo']})")
+        print(f"\n총 VLM 콜 수(전체 entity 합산) = {total_calls}")
+        print("\n[STOP] Stage1만 실행. 승인 후 --full로 재실행하면 전체 entity Stage1.5+2 이어서 진행.", flush=True)
+        (OUT_DIR / "stage1_multi_entity_summary.json").write_text(json.dumps({
+            "entities": entities, "total_calls": total_calls,
+            "per_entity": [{"entity": r["entity"], "n_segments": r["n_segments"],
+                             "best_inter_f1_reference": r["best_inter_f1_reference"]} for r in results],
+        }, indent=2), encoding="utf-8")
+        return
+
+    print(f"\n{'='*70}\nSUMMARY ({len(entities)} entities)\n{'='*70}")
+    for r in results:
+        print(f"  {r['entity']:<15} F1={r['f1_detection']:.4f}  P={r['precision']:.4f}  R={r['recall']:.4f}  "
+              f"TP={r['tp']} FP={r['fp']} FN={r['fn']}  "
+              f"recall@k={r['recall_at_k_diagnosis']}  precision@k={r['precision_at_k_diagnosis']}  "
+              f"(n_diag={r['n_tp_diag_rows']})  참고F1(Stage1단독)={r['reference_f1_track_only']:.4f}")
+
+    f1s = [r["f1_detection"] for r in results]
+    ref_f1s = [r["reference_f1_track_only"] for r in results]
+    diag_rows_all = [row for r in results for row in r["tp_diag_rows"]]
+    print(f"\n평균 F1(통합) = {np.mean(f1s):.4f}  평균 참고F1(Stage1단독) = {np.mean(ref_f1s):.4f}  "
+          f"차이 = {np.mean(f1s)-np.mean(ref_f1s):+.4f}")
+    if diag_rows_all:
+        print(f"전체 recall@k 평균(n={len(diag_rows_all)}) = {np.mean([r['recall_at_k'] for r in diag_rows_all]):.4f}")
+        pk = [r['precision_at_k'] for r in diag_rows_all if r['precision_at_k'] is not None]
+        if pk:
+            print(f"전체 precision@k 평균(n={len(pk)}) = {np.mean(pk):.4f}")
+
+    (OUT_DIR / "multi_entity_summary.json").write_text(json.dumps({
+        "entities": entities,
+        "per_entity": [{"entity": r["entity"], "f1_detection": r["f1_detection"], "precision": r["precision"],
+                         "recall": r["recall"], "tp": r["tp"], "fp": r["fp"], "fn": r["fn"],
+                         "recall_at_k_diagnosis": r["recall_at_k_diagnosis"],
+                         "precision_at_k_diagnosis": r["precision_at_k_diagnosis"],
+                         "n_tp_diag_rows": r["n_tp_diag_rows"],
+                         "reference_f1_track_only": r["reference_f1_track_only"]} for r in results],
+        "mean_f1_unified": float(np.mean(f1s)), "mean_f1_reference": float(np.mean(ref_f1s)),
+    }, indent=2), encoding="utf-8")
+    print(f"\nSaved: {OUT_DIR / 'multi_entity_summary.json'}")
+
+
 if __name__ == "__main__":
     p = argparse.ArgumentParser()
     p.add_argument("--demo", action="store_true")
     p.add_argument("--stage1", action="store_true", help="Stage1(+1.5 skip)만: 후보 구간 수 보고 후 멈춤, VLM 없음")
     p.add_argument("--full", action="store_true", help="Stage1+1.5+2 전부, VLM 호출 포함")
+    p.add_argument("--entities", type=str, default=None,
+                    help="comma-separated entity list, default: " + ",".join(DEFAULT_ENTITIES))
     args = p.parse_args()
+    entities = args.entities.split(",") if args.entities else DEFAULT_ENTITIES
     if args.demo:
         demo()
     elif args.full:
-        run("full")
+        run("full", entities)
     else:
-        run("stage1")
+        run("stage1", entities)
