@@ -176,34 +176,24 @@ def ts_to_image_fast(window):
 
 def overlay_to_image(windows_list):
     """
-    Multi-channel overlay plot via PIL.
+    Multi-channel overlay plot via PIL ImageDraw.line (vectorized per channel,
+    same visual output as the previous per-pixel Python loop -- see
+    ts_to_image_fast for the identical optimization applied earlier).
     windows_list: list of 1D arrays (each channel's window), all same length.
     Each channel gets a different color.
     """
     img = Image.new("RGB", (IMAGE_SIZE, IMAGE_SIZE), "white")
-    pixels = img.load()
-    n_channels = len(windows_list)
+    draw = ImageDraw.Draw(img)
 
     for ch_idx, window in enumerate(windows_list):
         w_min, w_max = window.min(), window.max()
         normed = (window - w_min) / (w_max - w_min + 1e-8)
         color = OVERLAY_COLORS[ch_idx % len(OVERLAY_COLORS)]
         n = len(normed)
-
-        for i in range(n - 1):
-            x0 = int(i * (IMAGE_SIZE - 1) / (n - 1))
-            x1 = int((i + 1) * (IMAGE_SIZE - 1) / (n - 1))
-            y0 = IMAGE_SIZE - 1 - int(normed[i] * (IMAGE_SIZE - 5) + 2)
-            y1 = IMAGE_SIZE - 1 - int(normed[i + 1] * (IMAGE_SIZE - 5) + 2)
-            y0 = max(0, min(IMAGE_SIZE - 1, y0))
-            y1 = max(0, min(IMAGE_SIZE - 1, y1))
-            steps = max(abs(x1 - x0), abs(y1 - y0), 1)
-            for s in range(steps + 1):
-                t = s / steps
-                x = int(x0 + t * (x1 - x0))
-                y = int(y0 + t * (y1 - y0))
-                if 0 <= x < IMAGE_SIZE and 0 <= y < IMAGE_SIZE:
-                    pixels[x, y] = color
+        xs = (np.arange(n) * (IMAGE_SIZE - 1) / (n - 1)).astype(int)
+        ys = IMAGE_SIZE - 1 - (normed * (IMAGE_SIZE - 5) + 2).astype(int)
+        ys = np.clip(ys, 0, IMAGE_SIZE - 1)
+        draw.line(list(zip(xs.tolist(), ys.tolist())), fill=color, width=2)
     return img
 
 
