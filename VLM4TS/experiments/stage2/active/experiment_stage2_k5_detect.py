@@ -53,6 +53,12 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import colab_multivariate_v2 as cm
 from step1v3_dino_graph_smd import load_smd, N_CHANNELS
 from smd_3way_baseline_comparison import call_vlm
+# v16(구 Stage2 파이프라인)의 검증된 정규화/정상참조 로직 재사용 -- K5의 heatmap+overlay/
+# subplot_grid 전부 윈도우 자기자신의 min/max로 정규화했는데, 이러면 작은 정상 변동도
+# [0,1] 전체를 채우게 늘어나서 진짜 큰 이상처럼 보인다(sanity-check 100% 오탐의 유력한
+# 원인). v16은 train 전체의 min/max를 고정 기준으로 쓰고, 정상 참조 윈도우를 나란히
+# 보여준다 -- 새로 구현하지 않고 그대로 import.
+import experiment_stage2_v16 as v16
 
 # K4 진단에서 채널선택/렌더링 로직 재사용 (새로 안 만듦) -- render_heatmap_overlay는
 # K4와 완전히 동일해서 그대로 import (아래서 재정의하지 않음)
@@ -248,6 +254,149 @@ def render_heatmap_subplot_grid(window, ranked, selected, n_cols=6):
     return base64.b64encode(buf.read()).decode("utf-8")
 
 
+def render_train_referenced(window, train, selected, cmin, cmax, train_cal_starts,
+                             ranked=None, cmin_all=None, cmax_all=None):
+    """v16 스타일: train min/max 고정 정규화 + train에서 뽑은 확인된 정상 윈도우를
+    후보와 나란히 보여줌 (v16.gn_train/_n/get_train_cal_windows를 그대로 사용해서
+    계산한 cmin/cmax/train_cal_starts를 받는다 -- 새로 계산 로직 만들지 않음).
+
+    ranked/cmin_all/cmax_all이 주어지면 맨 위에 38채널 heatmap도 추가(K2~K5가 계속
+    써온 개요 패널) -- 단, window 자기자신 min/max가 아니라 여기서도 train min/max로
+    정규화해서 같은 자기참조 정규화 버그가 heatmap에도 생기지 않게 함."""
+    import matplotlib
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+    from matplotlib import gridspec
+
+    n_cols = max(len(train_cal_starts), 1)
+    ylim_max = 1.05
+    for c in selected:
+        for src, s, length in [(train, s0, v16.WIN) for s0 in train_cal_starts] + [(window, 0, len(window))]:
+            vals = v16._n(src[s:s + length, c], cmin[c], cmax[c])
+            ylim_max = max(ylim_max, float(vals.max()) + 0.1)
+    ylim_max = min(ylim_max, 3.0)
+
+    def _panel(ax, data, s, length, title, face, edge):
+        for i, c in enumerate(selected):
+            vals = v16._n(data[s:s + length, c], cmin[c], cmax[c])
+            ax.plot(np.arange(length), vals, color=v16.LC[i % len(v16.LC)], lw=0.9, label=f"Ch{c}")
+        ax.axhline(y=1.0, color="#ff9800", lw=0.9, ls="--", alpha=0.75)
+        ax.set_ylim(-0.05, ylim_max)
+        ax.set_xlim(0, length - 1)
+        ax.set_yticks([0, 0.5, 1.0])
+        ax.tick_params(labelsize=6)
+        ax.set_title(title, fontsize=7, color=edge, fontweight="bold")
+        ax.set_facecolor(face)
+        for sp in ax.spines.values():
+            sp.set_edgecolor(edge); sp.set_linewidth(1.2)
+
+    has_heatmap = ranked is not None
+    height_ratios = ([1.3] if has_heatmap else []) + [1, 1]
+    fig = plt.figure(figsize=(3.8 * n_cols, 4.5 + (1.6 if has_heatmap else 0)), dpi=100)
+    gs = gridspec.GridSpec(3 if has_heatmap else 2, n_cols, figure=fig,
+                            height_ratios=height_ratios, hspace=0.65, wspace=0.28)
+    row = 0
+
+    if has_heatmap:
+        ax0 = fig.add_subplot(gs[0, :])
+        heat = np.zeros((len(ranked), len(window)))
+        for i, c in enumerate(ranked):
+            heat[i] = np.clip(v16._n(window[:, c], cmin_all[c], cmax_all[c]), 0, 1.5)
+        ax0.imshow(heat, aspect="auto", cmap="viridis", vmin=0, vmax=1.5)
+        ax0.set_yticks(range(len(ranked)))
+        ax0.set_yticklabels([str(c) for c in ranked], fontsize=4.5)
+        ax0.set_xticks([])
+        ax0.set_title("Heatmap: 38 channels, TRAIN min/max normalized, sorted by adaptive z-score "
+                       "(bright/capped = exceeds training range)", fontsize=6.5)
+        row = 1
+
+    for i, s in enumerate(train_cal_starts):
+        ax = fig.add_subplot(gs[row, i])
+        _panel(ax, train, s, v16.WIN, f"TRAIN NORMAL {i+1}", "#f5f5f5", "#555")
+    for i in range(len(train_cal_starts), n_cols):
+        fig.add_subplot(gs[row, i]).axis("off")
+
+    offset = (n_cols - 1) // 2
+    ax = fig.add_subplot(gs[row + 1, offset])
+    _panel(ax, window, 0, len(window), "CANDIDATE", "#fff8e1", "#b71c1c")
+    ax.legend(fontsize=5, loc="upper right", ncol=2)
+    for j in list(range(offset)) + list(range(offset + 1, n_cols)):
+        fig.add_subplot(gs[row + 1, j]).axis("off")
+
+    buf = BytesIO()
+    fig.savefig(buf, format="png", dpi=100, bbox_inches="tight")
+    plt.close(fig)
+    buf.seek(0)
+    return base64.b64encode(buf.read()).decode("utf-8")
+
+
+def build_prompt_train_referenced(selected, width, n_cal, window=None, cmin=None, cmax=None):
+    """v16 스타일 이중가설 프롬프트를 K5 스키마(verdict/start/end/confidence)에 맞게 축약.
+    train min/max 고정 정규화 + 정상참조 패널을 설명하고, 정상/이상 두 가설을 각각
+    논증한 뒤 종합 판단하게 시킨다 (여전히 1콜, JSON 하나로 응답).
+
+    window/cmin/cmax가 주어지면 K2/K3/K4에서 이미 검증된(2x2 factorial, +0.042 유의)
+    index-aware 텍스트를 top-25 포인트로 추가 -- 눈대중으로 y=1.0 선 높이를 읽다가
+    틀리는 할루시네이션(예: 실제 0.65인데 "1.0 넘었다"고 주장)을 정확한 숫자로 방지."""
+    text_block = ""
+    if window is not None:
+        lines = []
+        for c in selected:
+            nv = v16._n(window[:, c], cmin[c], cmax[c])
+            top_idx = np.sort(np.argsort(-nv)[:N_POINTS_PER_CHANNEL])
+            pts = ", ".join(f"({idx}, {nv[idx]:.3f})" for idx in top_idx)
+            lines.append(f"  Channel {c}, top-{N_POINTS_PER_CHANNEL} highest-normalized points (index, value; "
+                         f"value>1.0 = above confirmed training max): {pts}")
+        text_block = "\n\n--- EXACT NUMBERS (cross-check against the image; do not eyeball the orange line) ---\n" + "\n".join(lines)
+
+    return f"""=== SYSTEM ANOMALY VERIFICATION -- DUAL HYPOTHESIS ANALYSIS ===
+Candidate window width: {width} ticks (relative indices 0 to {width-1}). Channels shown: {selected}.
+
+--- NORMALIZATION (CRITICAL for interpretation) ---
+y=0.0 = confirmed TRAINING minimum for each channel (machine in known-normal operation)
+y=1.0 = confirmed TRAINING maximum for each channel (machine in known-normal operation)
+The dashed ORANGE LINE marks y=1.0 -- the normal operating ceiling.
+Values ABOVE the orange line indicate the channel has EXCEEDED its confirmed normal range.
+Values between 0 and 1 are within the machine's confirmed normal operating envelope.
+{text_block}
+
+--- IMAGE LAYOUT ---
+TOP (heatmap, if present): all 38 channels, one row each, TRAIN min/max normalized like everything
+  else here -- use it only as a rough overview of which channels look most elevated; the line
+  panels below and the EXACT NUMBERS table are the reliable source for precise judgments.
+MIDDLE ROW (gray, "TRAIN NORMAL 1/2/3"): {n_cal} CONFIRMED NORMAL windows from TRAINING data.
+  Training data is guaranteed anomaly-free -- these show the machine's true normal operation.
+  These are your ground-truth baseline: compare the candidate's values against these.
+BOTTOM (yellow/red border, "CANDIDATE"): the window you are judging.
+
+Most candidates shown to you may in fact be normal (an automated screening step over-selects
+loosely) -- do not assume anomaly just because a window was shown to you.
+
+=== REQUIRED: DUAL HYPOTHESIS ANALYSIS ===
+Before reaching a verdict, work through BOTH hypotheses:
+
+STEP 1 -- HYPOTHESIS: CANDIDATE IS NORMAL
+  (a) Are the candidate channel values within y=[0,1] (below the orange training-max line)?
+  (b) Could any exceedance above y=1.0 be explained by the variation shown in the TRAIN NORMAL panels?
+  (c) How strong is the normal-hypothesis evidence? (weak / moderate / strong)
+
+STEP 2 -- HYPOTHESIS: CANDIDATE IS ANOMALOUS
+  (a) Which EXACT CHANNELS show values clearly above the orange y=1.0 line, and by how much?
+      Use the EXACT NUMBERS table above -- only claim an exceedance if a listed value is actually >1.0.
+  (b) Is this exceedance ABSENT in ALL of the TRAIN NORMAL panels?
+  (c) How strong is the anomaly-hypothesis evidence? (weak / moderate / strong)
+
+STEP 3 -- VERDICT: pick NORMAL unless the anomaly-hypothesis is clearly stronger than the
+normal-hypothesis. If evidence is tied or ambiguous, default to NORMAL.
+If genuine, what is the TIGHTEST relative sub-range [start, end] (0 to {width-1}) that
+captures the core anomalous behavior?
+
+Respond ONLY with valid JSON (no markdown, no extra text):
+{{"normal_hypothesis": "...", "anomaly_hypothesis": "...", "normal_strength": "weak/moderate/strong",
+"anomaly_strength": "weak/moderate/strong", "verdict": "ANOMALY" or "NORMAL",
+"start": <int>, "end": <int>, "confidence": "low" or "medium" or "high"}}"""
+
+
 def build_prompt(selected, width, window, train, primed=True, viz="heatmap_overlay"):
     blocks = []
     for i, c in enumerate(selected):
@@ -337,12 +486,16 @@ def parse_detect_response(raw):
 # 3. 실행
 # ══════════════════════════════════════════════════════════════════
 
-def run(entity, execute=False, method="fixed", alpha=0.1, alpha_strict=0.01, corr_thr=0.5):
+def run(entity, execute=False, method="fixed", alpha=0.1, alpha_strict=0.01, corr_thr=0.5,
+        viz="heatmap_overlay"):
     train = np.loadtxt(SMD_DIR / "train" / f"{entity}.txt", delimiter=",")
     test = np.loadtxt(SMD_DIR / "test" / f"{entity}.txt", delimiter=",")
     labels = np.loadtxt(SMD_DIR / "test_label" / f"{entity}.txt", delimiter=",").astype(int)
     degenerate_ch = constant_channels(train)
     corr = np.nan_to_num(np.corrcoef(train.T), nan=0.0) if method == "hysteresis" else None
+
+    train_cal_starts = v16.get_train_cal_windows(train) if viz == "train_referenced" else None
+    cmin_all, cmax_all = (v16.gn_train(train, range(N_CHANNELS)) if viz == "train_referenced" else (None, None))
 
     print(f"[{entity}] Stage1 후보 구간 생성 중 (전체 시계열 슬라이딩)...", flush=True)
     loose_ivs, inter, entity_channel_calib = stage1_candidates(entity, train, test, degenerate_ch)
@@ -352,7 +505,7 @@ def run(entity, execute=False, method="fixed", alpha=0.1, alpha_strict=0.01, cor
         print("[STOP] --run 플래그로 실행하세요.")
         return
 
-    checkpoint_path = OUT_DIR / f"checkpoint_{entity}_{method}.json"
+    checkpoint_path = OUT_DIR / f"checkpoint_{entity}_{method}_{viz}.json"
     checkpoint = json.loads(checkpoint_path.read_text(encoding="utf-8")) if checkpoint_path.exists() else {}
     confirmed = []
 
@@ -374,8 +527,14 @@ def run(entity, execute=False, method="fixed", alpha=0.1, alpha_strict=0.01, cor
         if checkpoint.get(key, {}).get("status") == "OK":
             pred = checkpoint[key]["pred"]
         else:
-            img = render_heatmap_overlay(window, ranked, selected)
-            prompt = build_prompt(selected, width, window, train)
+            if viz == "train_referenced":
+                img = render_train_referenced(window, train, selected, cmin_all, cmax_all, train_cal_starts,
+                                               ranked=ranked, cmin_all=cmin_all, cmax_all=cmax_all)
+                prompt = build_prompt_train_referenced(selected, width, len(train_cal_starts),
+                                                        window, cmin_all, cmax_all)
+            else:
+                img = render_heatmap_overlay(window, ranked, selected)
+                prompt = build_prompt(selected, width, window, train)
             raw = call_vlm(prompt, img)
             pred = parse_detect_response(raw)
             checkpoint[key] = {"status": "OK" if pred is not None else "PARSE_ERROR", "pred": pred}
@@ -396,11 +555,11 @@ def run(entity, execute=False, method="fixed", alpha=0.1, alpha_strict=0.01, cor
         pred_binary[s:e + 1] = 1
     point_f1 = pt_f1(labels, pred_binary)
 
-    print(f"\n=== [{entity}, method={method}] 결과 ===")
+    print(f"\n=== [{entity}, method={method}, viz={viz}] 결과 ===")
     print(f"후보 {len(loose_ivs)}개 -> 확정 {len(confirmed)}개")
     print(f"interval-F1 = {iv_f1:.4f}")
     print(f"point-F1    = {point_f1:.4f}")
-    (OUT_DIR / f"summary_{entity}_{method}.json").write_text(json.dumps({
+    (OUT_DIR / f"summary_{entity}_{method}_{viz}.json").write_text(json.dumps({
         "n_candidates": len(loose_ivs), "n_confirmed": len(confirmed),
         "interval_f1": iv_f1, "point_f1": point_f1, "confirmed": confirmed,
     }, indent=2), encoding="utf-8")
@@ -434,6 +593,10 @@ def sanity_check(entity, n=5, method="fixed", alpha=0.1, alpha_strict=0.01, corr
     starts = pick_normal_windows(labels, n=n, seed=seed)
     print(f"[{entity}] 정상 컨트롤 윈도우 {len(starts)}개 (GT와 전혀 안 겹침), viz={viz}: {starts}", flush=True)
 
+    train_cal_starts, cmin, cmax = None, None, None
+    if viz == "train_referenced":
+        train_cal_starts = v16.get_train_cal_windows(train)
+
     checkpoint_path = OUT_DIR / f"sanity_{entity}_{method}_{viz}.json"
     checkpoint = json.loads(checkpoint_path.read_text(encoding="utf-8")) if checkpoint_path.exists() else {}
     entity_channel_calib = {}
@@ -454,9 +617,18 @@ def sanity_check(entity, n=5, method="fixed", alpha=0.1, alpha_strict=0.01, corr
                 img = render_subplot_grid(window)
             elif viz == "heatmap_subplot_grid":
                 img = render_heatmap_subplot_grid(window, ranked, selected)
+            elif viz == "train_referenced":
+                cmin_all, cmax_all = v16.gn_train(train, range(N_CHANNELS))
+                cmin, cmax = cmin_all, cmax_all
+                img = render_train_referenced(window, train, selected, cmin, cmax, train_cal_starts,
+                                               ranked=ranked, cmin_all=cmin_all, cmax_all=cmax_all)
             else:
                 img = render_heatmap_overlay(window, ranked, selected)
-            prompt = build_prompt(selected, WIN, window, train, primed=False, viz=viz)
+
+            if viz == "train_referenced":
+                prompt = build_prompt_train_referenced(selected, WIN, len(train_cal_starts), window, cmin, cmax)
+            else:
+                prompt = build_prompt(selected, WIN, window, train, primed=False, viz=viz)
             raw = call_vlm(prompt, img)
             pred = parse_detect_response(raw)
             checkpoint[key] = {"status": "OK" if pred is not None else "PARSE_ERROR", "pred": pred}
@@ -481,10 +653,11 @@ if __name__ == "__main__":
     ap.add_argument("--sanity-check", action="store_true",
                      help="정상 컨트롤 윈도우에 탈-프라이밍 프롬프트로 오탐률(FPR) 측정, VLM 콜 발생")
     ap.add_argument("--n-sanity", type=int, default=5)
-    ap.add_argument("--viz", choices=["heatmap_overlay", "subplot_grid", "heatmap_subplot_grid"],
+    ap.add_argument("--viz", choices=["heatmap_overlay", "subplot_grid", "heatmap_subplot_grid", "train_referenced"],
                      default="heatmap_overlay",
                      help="subplot_grid=38채널 전부 독립칸(논문 방식) / heatmap_subplot_grid=heatmap 유지+"
-                          "selected 채널만 독립칸(overlay의 겹쳐그리기만 교체). sanity-check에서만 사용")
+                          "selected 채널만 독립칸(overlay의 겹쳐그리기만 교체) / train_referenced=v16 방식"
+                          "(train min/max 고정 정규화 + 정상참조 패널 + heatmap + index-aware 텍스트 + 이중가설)")
     ap.add_argument("--method", choices=["fixed", "hysteresis"], default="fixed")
     ap.add_argument("--alpha", type=float, default=0.1)
     ap.add_argument("--alpha-strict", type=float, default=0.01)
@@ -495,4 +668,4 @@ if __name__ == "__main__":
                      alpha_strict=args.alpha_strict, corr_thr=args.corr_thr, viz=args.viz)
     else:
         run(args.entity, execute=args.run, method=args.method, alpha=args.alpha,
-            alpha_strict=args.alpha_strict, corr_thr=args.corr_thr)
+            alpha_strict=args.alpha_strict, corr_thr=args.corr_thr, viz=args.viz)
