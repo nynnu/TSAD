@@ -135,10 +135,8 @@ def constant_channels(train, eps=1e-3):
     return {c for c in range(N_CHANNELS) if stds[c] < eps}
 
 
-def select_channels(entity, train, window, entity_channel_calib, alpha, degenerate_ch):
-    """38채널 전부 z-score 계산 -> alpha 임계값 넘는 채널만 선택(가변 개수).
-    반환: (ranked_all_38, selected_subset) -- ranked는 heatmap 정렬용, selected는 overlay/텍스트/VLM 후보.
-    상수(degenerate) 채널은 애초에 후보에서 제외."""
+def compute_zscores(entity, train, window, entity_channel_calib, degenerate_ch):
+    """38채널 전부의 z-score 계산 (상수채널은 -inf로 고정해서 후보에서 제외)."""
     zs = {}
     for c in range(N_CHANNELS):
         if c in degenerate_ch:
@@ -151,11 +149,48 @@ def select_channels(entity, train, window, entity_channel_calib, alpha, degenera
         test_img = cm.ts_to_image_fast(window[:, c])
         seg_sum = score_segment_channel(tr_cls, tr_patches, test_img)
         zs[c] = (seg_sum - stats["mu"]) / stats["sigma"]
+    return zs
 
+
+def select_channels_fixed(zs, alpha):
+    """단일 고정 임계값(alpha)으로 선택 -- 기존 방식. GT 작은 세그먼트에서 과다선택되는 문제 있음."""
     ranked = sorted(range(N_CHANNELS), key=lambda c: -zs[c])
     z_thr = norm.ppf(1 - alpha)
     selected = [c for c in ranked if zs[c] > z_thr]
-    if not selected:  # 아무것도 안 넘으면 최소 1개(최고점)는 후보로
+    if not selected:
+        selected = ranked[:1]
+    return ranked, selected
+
+
+def select_channels_hysteresis(zs, corr, alpha_strict=0.01, alpha_loose=0.1, corr_thr=0.5):
+    """이력 임계값(Canny의 strong/weak edge 아이디어를 채널 상관구조에 적용).
+
+    Canny는 "약한 신호도, 강한 신호와 공간적으로 인접하면 진짜"로 보는데, 우리는
+    채널에 그런 공간 인접성이 없다 -- z-score로 정렬하면 순위상 인접성은 항상
+    "약한 임계값 하나로 뽑는 것"과 같아져 버려서 의미가 없다(정렬된 리스트에서
+    약한 임계값 넘는 게 강한 임계값 넘는 것 뒤에 끊겨 나타날 수 없기 때문).
+    그래서 "인접성"을 채널 간 상관관계(train 기준)로 재정의한다.
+
+    1. seed = z > alpha_strict인 채널 (확정 후보)
+    2. seed와 상관계수(|corr|) > corr_thr이고, 동시에 z > alpha_loose인 채널만 추가
+       (약한 신호라도 확정후보와 "같이 흔들리는" 채널이면 같은 고장의 일부로 봄)
+    3. GT가 작으면(진짜 고장 채널이 몇 개 안 되면) 그 채널들과 안 엮인 나머지는
+       z가 alpha_loose를 넘어도 자동으로 걸러짐 -> 소규모 GT에서 과다선택 완화 기대.
+    """
+    ranked = sorted(range(N_CHANNELS), key=lambda c: -zs[c])
+    z_strict = norm.ppf(1 - alpha_strict)
+    z_loose = norm.ppf(1 - alpha_loose)
+
+    seed = {c for c in range(N_CHANNELS) if zs[c] > z_strict}
+    extended = set(seed)
+    for c in range(N_CHANNELS):
+        if c in extended or zs[c] <= z_loose:
+            continue
+        if any(abs(corr[c, s]) > corr_thr for s in seed):
+            extended.add(c)
+
+    selected = [c for c in ranked if c in extended]
+    if not selected:
         selected = ranked[:1]
     return ranked, selected
 
@@ -242,13 +277,14 @@ def f1_of(pred, gt):
     return 2 * p * r / (p + r) if (p + r) > 0 else 0.0
 
 
-def run(execute=False, alpha=0.1):
+def run(execute=False, alpha=0.1, method="fixed", alpha_strict=0.01, corr_thr=0.5):
     segments = json.loads(GT_SEGMENTS_PATH.read_text(encoding="utf-8"))
-    print(f"세그먼트 수 = {len(segments)} (나연의 원본 SMD 48개, GT 필터링 없음), alpha={alpha}")
+    print(f"세그먼트 수 = {len(segments)} (나연의 원본 SMD 48개, GT 필터링 없음), method={method}, alpha={alpha}")
 
-    entity_data, entity_channel_calib, entity_degenerate = {}, {}, {}
+    entity_data, entity_channel_calib, entity_degenerate, entity_corr = {}, {}, {}, {}
     all_channels = list(range(N_CHANNELS))
-    checkpoint_path = OUT_DIR / f"checkpoint_a{alpha}.json"
+    tag = f"a{alpha}" if method == "fixed" else f"hyst_s{alpha_strict}_l{alpha}_c{corr_thr}"
+    checkpoint_path = OUT_DIR / f"checkpoint_{tag}.json"
     checkpoint = json.loads(checkpoint_path.read_text(encoding="utf-8")) if checkpoint_path.exists() else {}
     rows = []
 
@@ -264,12 +300,19 @@ def run(execute=False, alpha=0.1):
         if entity not in entity_degenerate:
             entity_degenerate[entity] = constant_channels(train)
             print(f"  [{entity}] 상수채널(제외) = {sorted(entity_degenerate[entity])}", flush=True)
+        if method == "hysteresis" and entity not in entity_corr:
+            corr = np.corrcoef(train.T)
+            entity_corr[entity] = np.nan_to_num(corr, nan=0.0)
         center = (cs + ce) // 2
         s_, e_ = _centered_window(len(test), center, WIN)
         window = test[s_:e_]
 
         t0 = time.time()
-        ranked, selected = select_channels(entity, train, window, entity_channel_calib, alpha, entity_degenerate[entity])
+        zs = compute_zscores(entity, train, window, entity_channel_calib, entity_degenerate[entity])
+        if method == "fixed":
+            ranked, selected = select_channels_fixed(zs, alpha)
+        else:
+            ranked, selected = select_channels_hysteresis(zs, entity_corr[entity], alpha_strict, alpha, corr_thr)
         print(f"  {seg_id}: k(GT)={len(gt)} selected={len(selected)}개 {selected} ({time.time()-t0:.1f}s)", flush=True)
 
         if not execute:
@@ -299,6 +342,11 @@ if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--stage1", action="store_true", help="채널 선택 결과만 확인, VLM 없음")
     ap.add_argument("--run", action="store_true", help="VLM 실행")
-    ap.add_argument("--alpha", type=float, default=0.1, help="z-threshold 유의수준(작을수록 더 적게 선택)")
+    ap.add_argument("--method", choices=["fixed", "hysteresis"], default="fixed",
+                     help="fixed=단일 alpha 임계값(기존) / hysteresis=강한+상관관계로 연결된 약한 채널(신규)")
+    ap.add_argument("--alpha", type=float, default=0.1, help="fixed: z-threshold 유의수준. hysteresis: 약한(loose) 임계값")
+    ap.add_argument("--alpha-strict", type=float, default=0.01, help="hysteresis: 강한(seed) 임계값")
+    ap.add_argument("--corr-thr", type=float, default=0.5, help="hysteresis: seed와의 상관계수 임계값")
     args = ap.parse_args()
-    run(execute=args.run, alpha=args.alpha)
+    run(execute=args.run, alpha=args.alpha, method=args.method,
+        alpha_strict=args.alpha_strict, corr_thr=args.corr_thr)
