@@ -247,8 +247,11 @@ def run(entity, execute=False, method="fixed", alpha=0.1, alpha_strict=0.01, cor
 
     for cs, ce in loose_ivs:
         key = f"{cs}_{ce}"
-        window = test[cs:ce + 1] if (ce - cs + 1) >= WIN else test[max(0, cs - (WIN - (ce - cs + 1)) // 2):][:WIN]
-        # 224틱보다 좁으면 중심 확장, 넓으면 그대로(폭 가변 허용 -- 넓은 후보를 그대로 보여주는 게 이번 취지)
+        # 224틱보다 좁으면 중심 확장, 넓으면 그대로(폭 가변 허용 -- 넓은 후보를 그대로 보여주는 게 이번 취지).
+        # ws = 실제 표시되는 창의 절대 시작점 -- 확장된 경우 cs와 다르므로 이걸 기준으로 좌표를 복원해야 함
+        # (예전 버그: 여기서 cs를 썼는데, 확장된 창(예: 폭 56 -> ws=cs-84)에서는 84틱씩 밀려서 저장됐음).
+        ws = cs if (ce - cs + 1) >= WIN else max(0, cs - (WIN - (ce - cs + 1)) // 2)
+        window = test[ws:ws + WIN] if (ce - cs + 1) < WIN else test[cs:ce + 1]
         width = len(window)
 
         zs = compute_zscores(entity, train, window, entity_channel_calib, degenerate_ch)
@@ -269,8 +272,8 @@ def run(entity, execute=False, method="fixed", alpha=0.1, alpha_strict=0.01, cor
             print(f"  [{key}] pred={pred}", flush=True)
 
         if pred and pred.get("verdict") == "ANOMALY":
-            s = cs + max(0, min(width - 1, int(pred.get("start", 0))))
-            e = cs + max(0, min(width - 1, int(pred.get("end", width - 1))))
+            s = ws + max(0, min(width - 1, int(pred.get("start", 0))))
+            e = ws + max(0, min(width - 1, int(pred.get("end", width - 1))))
             if e < s:
                 s, e = cs, ce
             confirmed.append((s, e))
