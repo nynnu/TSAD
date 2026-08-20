@@ -174,7 +174,7 @@ def stage1_candidates(entity, train, test, degenerate_ch, loose_pct=90.0):
 #    질문/출력스키마만 탐지용으로 교체)
 # ══════════════════════════════════════════════════════════════════
 
-def build_prompt(selected, width, window, train):
+def build_prompt(selected, width, window, train, primed=True):
     blocks = []
     for i, c in enumerate(selected):
         v = window[:, c]
@@ -187,17 +187,32 @@ def build_prompt(selected, width, window, train):
         blocks.append(f"Channel {c} (rank {i+1}), top-{N_POINTS_PER_CHANNEL} most-deviating points: {pts}")
     history_text = "\n".join(blocks)
 
-    return f"""You are shown a composite image for a multivariate industrial system, for a Stage-1 candidate window of width {width} (relative indices 0 to {width-1}) flagged by an adaptive per-channel anomaly scorer.
+    if primed:
+        setup = (f"for a Stage-1 candidate window of width {width} (relative indices 0 to {width-1}) "
+                 "flagged by an adaptive per-channel anomaly scorer.\n\n"
+                 "Top panel: heatmap of all 38 channels, sorted by adaptive z-score.\n"
+                 f"Bottom panel: overlay of the {len(selected)} channels ({selected}) that an adaptive "
+                 "per-channel threshold flagged as statistically unusual in this window.")
+        context_note = ("Stage-1's window-merging often produces candidates WIDER than the true anomaly "
+                         "(padded with quiet, normal periods). ")
+    else:
+        # 프라이밍 제거 버전 (sanity check용): "이미 이상하다고 판정됨"을 암시하는 문구를 전부 중립화
+        setup = (f"for a {width}-tick window (relative indices 0 to {width-1}) from a multivariate industrial "
+                 f"time series with {N_CHANNELS} channels.\n\n"
+                 "Top panel: heatmap of all 38 channels, sorted by an automated per-channel deviation score "
+                 "(this ranking is a screening heuristic, not a verdict).\n"
+                 f"Bottom panel: overlay of {len(selected)} channels ({selected}) selected by that same "
+                 "heuristic for closer inspection -- this selection does NOT imply they are anomalous.")
+        context_note = ""
 
-Top panel: heatmap of all 38 channels, sorted by adaptive z-score.
-Bottom panel: overlay of the {len(selected)} channels ({selected}) that an adaptive per-channel threshold flagged as statistically unusual in this window.
+    return f"""You are shown a composite image for a multivariate industrial system, {setup}
 
 For each of these channels, here are the (time index, normalized value) points that deviate most strongly from that channel's normal (training) range:
 
 {history_text}
 
-Stage-1's window-merging often produces candidates WIDER than the true anomaly (padded with quiet, normal periods). Judge:
-(a) is this window a genuine anomaly, or does it just contain normal variation / an isolated non-anomalous blip?
+{context_note}Judge independently, from the data itself:
+(a) is this window a genuine anomaly, or does it just contain normal variation / an isolated non-anomalous blip? Most windows shown to you may in fact be normal -- do not assume otherwise.
 (b) if genuine, what is the TIGHTEST relative sub-range [start, end] (0 to {width-1}) that captures the core anomalous behavior? (use the full range if the whole window looks anomalous)
 
 Respond ONLY with valid JSON (no markdown, no extra text):
@@ -295,15 +310,83 @@ def run(entity, execute=False, method="fixed", alpha=0.1, alpha_strict=0.01, cor
     }, indent=2), encoding="utf-8")
 
 
+# ══════════════════════════════════════════════════════════════════
+# 4. Sanity check: 14/14 후보가 전부 ANOMALY로 나온 게 프롬프트 프라이밍
+#    ("Stage-1이 이미 이상하다고 플래그했다") 때문인지, 아니면 VLM이 이 시각화
+#    포맷에서는 원래 거의 항상 ANOMALY라고 하는지 구분하기 위한 진단.
+#    GT와 전혀 안 겹치는 확실한 정상 윈도우에, 프라이밍 문구를 뺀 프롬프트로
+#    같은 채널선택/시각화를 그대로 돌려서 오탐률(FPR)을 직접 잰다.
+# ══════════════════════════════════════════════════════════════════
+
+def pick_normal_windows(labels, n=5, seed=0):
+    starts = list(range(0, len(labels) - WIN + 1, STRIDE))
+    safe = [s for s in starts if labels[s:s + WIN].sum() == 0]
+    rng = np.random.default_rng(seed)
+    if len(safe) <= n:
+        return safe
+    return sorted(int(s) for s in rng.choice(safe, size=n, replace=False))
+
+
+def sanity_check(entity, n=5, method="fixed", alpha=0.1, alpha_strict=0.01, corr_thr=0.5, seed=0):
+    train = np.loadtxt(SMD_DIR / "train" / f"{entity}.txt", delimiter=",")
+    test = np.loadtxt(SMD_DIR / "test" / f"{entity}.txt", delimiter=",")
+    labels = np.loadtxt(SMD_DIR / "test_label" / f"{entity}.txt", delimiter=",").astype(int)
+    degenerate_ch = constant_channels(train)
+    corr = np.nan_to_num(np.corrcoef(train.T), nan=0.0) if method == "hysteresis" else None
+
+    starts = pick_normal_windows(labels, n=n, seed=seed)
+    print(f"[{entity}] 정상 컨트롤 윈도우 {len(starts)}개 (GT와 전혀 안 겹침): {starts}", flush=True)
+
+    checkpoint_path = OUT_DIR / f"sanity_{entity}_{method}.json"
+    checkpoint = json.loads(checkpoint_path.read_text(encoding="utf-8")) if checkpoint_path.exists() else {}
+    entity_channel_calib = {}
+    n_anomaly = 0
+    for s in starts:
+        window = test[s:s + WIN]
+        key = f"{s}_{s + WIN - 1}"
+        zs = compute_zscores(entity, train, window, entity_channel_calib, degenerate_ch)
+        if method == "fixed":
+            ranked, selected = select_channels_fixed(zs, alpha)
+        else:
+            ranked, selected = select_channels_hysteresis(zs, corr, alpha_strict, alpha, corr_thr)
+
+        if checkpoint.get(key, {}).get("status") == "OK":
+            pred = checkpoint[key]["pred"]
+        else:
+            img = render_heatmap_overlay(window, ranked, selected)
+            prompt = build_prompt(selected, WIN, window, train, primed=False)
+            raw = call_vlm(prompt, img)
+            pred = parse_detect_response(raw)
+            checkpoint[key] = {"status": "OK" if pred is not None else "PARSE_ERROR", "pred": pred}
+            checkpoint_path.write_text(json.dumps(checkpoint, indent=2, ensure_ascii=False), encoding="utf-8")
+
+        verdict = pred.get("verdict") if pred else None
+        if verdict == "ANOMALY":
+            n_anomaly += 1
+        print(f"  [{key}] verdict={verdict} (실제로는 정상, GT 없음)", flush=True)
+
+    fpr = n_anomaly / len(starts) if starts else 0.0
+    print(f"\n=== [{entity}] 정상 컨트롤 오탐률(FPR) = {n_anomaly}/{len(starts)} = {fpr:.2%} "
+          f"(탈-프라이밍 프롬프트, method={method}) ===")
+    return fpr
+
+
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--entity", default="machine-1-1")
     ap.add_argument("--stage1", action="store_true", help="후보 구간/콜 수만 확인, VLM 없음")
     ap.add_argument("--run", action="store_true", help="VLM 실행")
+    ap.add_argument("--sanity-check", action="store_true",
+                     help="정상 컨트롤 윈도우에 탈-프라이밍 프롬프트로 오탐률(FPR) 측정, VLM 콜 발생")
+    ap.add_argument("--n-sanity", type=int, default=5)
     ap.add_argument("--method", choices=["fixed", "hysteresis"], default="fixed")
     ap.add_argument("--alpha", type=float, default=0.1)
     ap.add_argument("--alpha-strict", type=float, default=0.01)
     ap.add_argument("--corr-thr", type=float, default=0.5)
     args = ap.parse_args()
-    run(args.entity, execute=args.run, method=args.method, alpha=args.alpha,
-        alpha_strict=args.alpha_strict, corr_thr=args.corr_thr)
+    if args.sanity_check:
+        sanity_check(args.entity, n=args.n_sanity, method=args.method, alpha=args.alpha,
+                     alpha_strict=args.alpha_strict, corr_thr=args.corr_thr)
+    else:
+        run(args.entity, execute=args.run, method=args.method, alpha=args.alpha,
+            alpha_strict=args.alpha_strict, corr_thr=args.corr_thr)
