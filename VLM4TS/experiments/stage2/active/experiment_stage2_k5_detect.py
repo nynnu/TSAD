@@ -34,10 +34,12 @@ index-aware 포맷을 그대로 재사용**하고 출력만 채널목록 대신 
   python experiment_stage2_k5_detect.py --run --entity machine-1-1 --method hysteresis
 """
 import argparse
+import base64
 import json
 import re
 import sys
 import time
+from io import BytesIO
 from pathlib import Path
 
 import numpy as np
@@ -170,11 +172,39 @@ def stage1_candidates(entity, train, test, degenerate_ch, loose_pct=90.0):
 
 
 # ══════════════════════════════════════════════════════════════════
-# 2. 프롬프트 (렌더링은 K4의 render_heatmap_overlay를 그대로 import해서 재사용,
-#    질문/출력스키마만 탐지용으로 교체)
+# 2. 렌더링 + 프롬프트
+#    - render_heatmap_overlay: K4에서 import(기존 방식)
+#    - render_subplot_grid: VLM4TS 논문의 실제 다변량 시각화(38채널을 각각
+#      독립된 작은 칸에 따로 그림, attachments-19/presentation_A_vlm4ts_
+#      subplot_grid.png 참고) -- overlay(겹쳐그리기)가 sanity-check에서
+#      100% 오탐(정상 컨트롤 5/5 ANOMALY)을 낸 것과 비교하기 위한 대조군.
 # ══════════════════════════════════════════════════════════════════
 
-def build_prompt(selected, width, window, train, primed=True):
+def render_subplot_grid(window, n_cols=8):
+    import matplotlib
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+
+    n_rows = -(-N_CHANNELS // n_cols)
+    fig, axes = plt.subplots(n_rows, n_cols, figsize=(n_cols * 1.6, n_rows * 1.1), dpi=100)
+    axes = axes.flatten()
+    for c in range(N_CHANNELS):
+        ax = axes[c]
+        ax.plot(window[:, c], color="black", linewidth=0.6)
+        ax.set_title(f"ch{c}", fontsize=6)
+        ax.set_xticks([])
+        ax.set_yticks([])
+    for c in range(N_CHANNELS, len(axes)):
+        axes[c].axis("off")
+    fig.tight_layout(pad=0.3)
+    buf = BytesIO()
+    fig.savefig(buf, format="png", dpi=100)
+    plt.close(fig)
+    buf.seek(0)
+    return base64.b64encode(buf.read()).decode("utf-8")
+
+
+def build_prompt(selected, width, window, train, primed=True, viz="heatmap_overlay"):
     blocks = []
     for i, c in enumerate(selected):
         v = window[:, c]
@@ -187,7 +217,17 @@ def build_prompt(selected, width, window, train, primed=True):
         blocks.append(f"Channel {c} (rank {i+1}), top-{N_POINTS_PER_CHANNEL} most-deviating points: {pts}")
     history_text = "\n".join(blocks)
 
-    if primed:
+    if viz == "subplot_grid":
+        # VLM4TS 논문 방식: 38채널을 각각 독립된 작은 칸에 그림(겹쳐그리기 없음)
+        flag_note = ("" if primed else " (this is a screening heuristic, not a verdict -- most windows may be normal)")
+        setup = (f"for a {width}-tick window (relative indices 0 to {width-1}) from a multivariate industrial "
+                 f"time series with {N_CHANNELS} channels.\n\n"
+                 f"The image is a grid of {N_CHANNELS} small subplots, one per channel (labeled ch0-ch{N_CHANNELS-1}), "
+                 "each showing that channel's raw values over this window independently -- no channels are "
+                 f"overlaid together. Channels {selected} were flagged by an automated per-channel screening "
+                 f"step for closer attention{flag_note}.")
+        context_note = ""
+    elif primed:
         setup = (f"for a Stage-1 candidate window of width {width} (relative indices 0 to {width-1}) "
                  "flagged by an adaptive per-channel anomaly scorer.\n\n"
                  "Top panel: heatmap of all 38 channels, sorted by adaptive z-score.\n"
@@ -327,7 +367,8 @@ def pick_normal_windows(labels, n=5, seed=0):
     return sorted(int(s) for s in rng.choice(safe, size=n, replace=False))
 
 
-def sanity_check(entity, n=5, method="fixed", alpha=0.1, alpha_strict=0.01, corr_thr=0.5, seed=0):
+def sanity_check(entity, n=5, method="fixed", alpha=0.1, alpha_strict=0.01, corr_thr=0.5, seed=0,
+                  viz="heatmap_overlay"):
     train = np.loadtxt(SMD_DIR / "train" / f"{entity}.txt", delimiter=",")
     test = np.loadtxt(SMD_DIR / "test" / f"{entity}.txt", delimiter=",")
     labels = np.loadtxt(SMD_DIR / "test_label" / f"{entity}.txt", delimiter=",").astype(int)
@@ -335,9 +376,9 @@ def sanity_check(entity, n=5, method="fixed", alpha=0.1, alpha_strict=0.01, corr
     corr = np.nan_to_num(np.corrcoef(train.T), nan=0.0) if method == "hysteresis" else None
 
     starts = pick_normal_windows(labels, n=n, seed=seed)
-    print(f"[{entity}] 정상 컨트롤 윈도우 {len(starts)}개 (GT와 전혀 안 겹침): {starts}", flush=True)
+    print(f"[{entity}] 정상 컨트롤 윈도우 {len(starts)}개 (GT와 전혀 안 겹침), viz={viz}: {starts}", flush=True)
 
-    checkpoint_path = OUT_DIR / f"sanity_{entity}_{method}.json"
+    checkpoint_path = OUT_DIR / f"sanity_{entity}_{method}_{viz}.json"
     checkpoint = json.loads(checkpoint_path.read_text(encoding="utf-8")) if checkpoint_path.exists() else {}
     entity_channel_calib = {}
     n_anomaly = 0
@@ -353,8 +394,8 @@ def sanity_check(entity, n=5, method="fixed", alpha=0.1, alpha_strict=0.01, corr
         if checkpoint.get(key, {}).get("status") == "OK":
             pred = checkpoint[key]["pred"]
         else:
-            img = render_heatmap_overlay(window, ranked, selected)
-            prompt = build_prompt(selected, WIN, window, train, primed=False)
+            img = render_subplot_grid(window) if viz == "subplot_grid" else render_heatmap_overlay(window, ranked, selected)
+            prompt = build_prompt(selected, WIN, window, train, primed=False, viz=viz)
             raw = call_vlm(prompt, img)
             pred = parse_detect_response(raw)
             checkpoint[key] = {"status": "OK" if pred is not None else "PARSE_ERROR", "pred": pred}
@@ -367,7 +408,7 @@ def sanity_check(entity, n=5, method="fixed", alpha=0.1, alpha_strict=0.01, corr
 
     fpr = n_anomaly / len(starts) if starts else 0.0
     print(f"\n=== [{entity}] 정상 컨트롤 오탐률(FPR) = {n_anomaly}/{len(starts)} = {fpr:.2%} "
-          f"(탈-프라이밍 프롬프트, method={method}) ===")
+          f"(탈-프라이밍 프롬프트, method={method}, viz={viz}) ===")
     return fpr
 
 
@@ -379,6 +420,8 @@ if __name__ == "__main__":
     ap.add_argument("--sanity-check", action="store_true",
                      help="정상 컨트롤 윈도우에 탈-프라이밍 프롬프트로 오탐률(FPR) 측정, VLM 콜 발생")
     ap.add_argument("--n-sanity", type=int, default=5)
+    ap.add_argument("--viz", choices=["heatmap_overlay", "subplot_grid"], default="heatmap_overlay",
+                     help="subplot_grid = VLM4TS 논문 방식(38채널 각각 독립된 칸), sanity-check에서만 사용")
     ap.add_argument("--method", choices=["fixed", "hysteresis"], default="fixed")
     ap.add_argument("--alpha", type=float, default=0.1)
     ap.add_argument("--alpha-strict", type=float, default=0.01)
@@ -386,7 +429,7 @@ if __name__ == "__main__":
     args = ap.parse_args()
     if args.sanity_check:
         sanity_check(args.entity, n=args.n_sanity, method=args.method, alpha=args.alpha,
-                     alpha_strict=args.alpha_strict, corr_thr=args.corr_thr)
+                     alpha_strict=args.alpha_strict, corr_thr=args.corr_thr, viz=args.viz)
     else:
         run(args.entity, execute=args.run, method=args.method, alpha=args.alpha,
             alpha_strict=args.alpha_strict, corr_thr=args.corr_thr)
