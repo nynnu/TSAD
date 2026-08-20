@@ -51,7 +51,7 @@ from pathlib import Path
 
 import numpy as np
 import torch
-from scipy.stats import norm
+from scipy.stats import norm, wilcoxon
 
 BASE = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(BASE / "experiments" / "stage1" / "active"))
@@ -338,15 +338,204 @@ def run(execute=False, alpha=0.1, method="fixed", alpha_strict=0.01, corr_thr=0.
         print(f"\n평균 F1 (n={len(rows)}, alpha={alpha}) = {mean_f1:.4f}")
 
 
+# ══════════════════════════════════════════════════════════════════
+# 4. Sweep: z-score는 방식(fixed/hysteresis)과 무관하게 동일하므로 한 번만
+#    캐싱해두고, alpha/corr_thr 튜닝은 캐시만으로(=DINOv2 재계산 없이) 돌린다.
+#    ROC(채널단위, 방식-무관 z 판별력) + fixed의 alpha sweep(PR 포인트들) +
+#    hysteresis의 corr_thr 후보들 + paired Wilcoxon(세그먼트별 F1, fixed vs
+#    hysteresis)까지 한 번에 계산.
+# ══════════════════════════════════════════════════════════════════
+
+ZS_CACHE_PATH = OUT_DIR / "zs_cache.json"
+
+
+def build_zs_cache():
+    segments = json.loads(GT_SEGMENTS_PATH.read_text(encoding="utf-8"))
+    cache = json.loads(ZS_CACHE_PATH.read_text(encoding="utf-8")) if ZS_CACHE_PATH.exists() else {}
+    entity_data, entity_channel_calib, entity_degenerate = {}, {}, {}
+    for seg in segments:
+        entity, cs, ce = seg["entity"], seg["start"], seg["end"]
+        seg_id = f"{entity}_{cs}_{ce}"
+        if seg_id in cache:
+            continue
+        if entity not in entity_data:
+            entity_data[entity] = load_smd(entity)
+        train, test = entity_data[entity]
+        if entity not in entity_degenerate:
+            entity_degenerate[entity] = sorted(constant_channels(train))
+            print(f"  [{entity}] 상수채널(제외) = {entity_degenerate[entity]}", flush=True)
+        center = (cs + ce) // 2
+        s_, e_ = _centered_window(len(test), center, WIN)
+        window = test[s_:e_]
+        zs = compute_zscores(entity, train, window, entity_channel_calib, set(entity_degenerate[entity]))
+        gt = sorted(d - 1 for d in seg["dims"])
+        cache[seg_id] = {
+            "entity": entity,
+            "gt": gt,
+            "zs": {str(c): (None if v == -np.inf else v) for c, v in zs.items()},
+        }
+        ZS_CACHE_PATH.write_text(json.dumps(cache), encoding="utf-8")
+        print(f"  [zs cache] {seg_id} done", flush=True)
+    return cache
+
+
+def get_entity_corr(entity, train):
+    p = OUT_DIR / f"corr_{entity}.npy"
+    if p.exists():
+        return np.load(p)
+    corr = np.nan_to_num(np.corrcoef(train.T), nan=0.0)
+    np.save(p, corr)
+    return corr
+
+
+def eval_selection(cache, select_fn):
+    """select_fn(seg_id, zs_dict) -> selected channel list. zs_dict values are -inf for excluded channels."""
+    rows = []
+    pooled_z, pooled_label = [], []
+    for seg_id, entry in cache.items():
+        gt = set(entry["gt"])
+        zs = {int(c): (v if v is not None else -np.inf) for c, v in entry["zs"].items()}
+        sel = set(select_fn(seg_id, zs))
+        tp = len(sel & gt)
+        prec = tp / len(sel) if sel else 0.0
+        rec = tp / len(gt) if gt else 0.0
+        f1 = 2 * prec * rec / (prec + rec) if (prec + rec) else 0.0
+        rows.append({"seg_id": seg_id, "k": len(gt), "n_selected": len(sel),
+                      "precision": prec, "recall": rec, "f1": f1})
+        for c, z in zs.items():
+            if z == -np.inf:
+                continue
+            pooled_z.append(z)
+            pooled_label.append(1 if c in gt else 0)
+    return rows, np.array(pooled_z), np.array(pooled_label)
+
+
+def roc_curve_manual(scores, labels):
+    """sklearn 없이 threshold sweep으로 ROC 계산 (AUC는 사다리꼴 적분)."""
+    order = np.argsort(-scores)
+    labels = labels[order]
+    P, N = labels.sum(), len(labels) - labels.sum()
+    tpr = np.concatenate([[0], np.cumsum(labels) / P, [1]]) if P else np.zeros(len(labels) + 2)
+    fpr = np.concatenate([[0], np.cumsum(1 - labels) / N, [1]]) if N else np.zeros(len(labels) + 2)
+    auc = float(np.trapz(tpr, fpr))
+    return fpr, tpr, auc
+
+
+def sweep(corr_thr_list=(0.5, 0.7), alpha_strict=0.01, alpha_loose=0.1):
+    cache = build_zs_cache()
+    entity_train, entity_corr = {}, {}
+    for entry in cache.values():
+        ent = entry["entity"]
+        if ent not in entity_train:
+            entity_train[ent], _ = load_smd(ent)
+        if ent not in entity_corr:
+            entity_corr[ent] = get_entity_corr(ent, entity_train[ent])
+
+    # 1) 채널단위 ROC -- z-score 자체의 판별력, fixed/hysteresis 어느 쪽을 쓰든 동일한 신호
+    _, pooled_z, pooled_label = eval_selection(cache, lambda sid, zs: [])
+    fpr, tpr, auc = roc_curve_manual(pooled_z, pooled_label)
+    print(f"\n[채널단위 ROC] pooled n={len(pooled_z)}개 채널판정, AUC={auc:.4f}")
+
+    # 2) fixed: alpha sweep
+    alphas = [0.5, 0.3, 0.2, 0.1, 0.05, 0.02, 0.01, 0.005, 0.001]
+    fixed_rows_by_alpha = {}
+    print("\n[fixed] alpha sweep (PR 포인트)")
+    for a in alphas:
+        z_thr = norm.ppf(1 - a)
+
+        def sel_fn(sid, zs, z_thr=z_thr):
+            ranked = sorted(zs, key=lambda c: -zs[c])
+            s = [c for c in ranked if zs[c] > z_thr]
+            return s if s else ranked[:1]
+
+        rows, _, _ = eval_selection(cache, sel_fn)
+        fixed_rows_by_alpha[a] = rows
+        P, R = np.mean([r["precision"] for r in rows]), np.mean([r["recall"] for r in rows])
+        print(f"  alpha={a:<6} P={P:.4f} R={R:.4f}")
+
+    # 3) hysteresis: corr_thr 후보들 (alpha_strict/alpha_loose 고정)
+    hyst_rows_by_corr = {}
+    print(f"\n[hysteresis] corr_thr sweep (alpha_strict={alpha_strict}, alpha_loose={alpha_loose})")
+    for ct in corr_thr_list:
+        def sel_fn(sid, zs, ct=ct):
+            corr = entity_corr[cache[sid]["entity"]]
+            _, sel = select_channels_hysteresis(zs, corr, alpha_strict, alpha_loose, ct)
+            return sel
+
+        rows, _, _ = eval_selection(cache, sel_fn)
+        hyst_rows_by_corr[ct] = rows
+        P, R = np.mean([r["precision"] for r in rows]), np.mean([r["recall"] for r in rows])
+        print(f"  corr_thr={ct} P={P:.4f} R={R:.4f}")
+
+    # 4) paired Wilcoxon: fixed(alpha=alpha_loose) vs hysteresis(각 corr_thr), 세그먼트별 F1
+    print(f"\n[paired Wilcoxon] fixed(alpha={alpha_loose}) vs hysteresis, 세그먼트별 F1 대응비교")
+    fixed_f1 = {r["seg_id"]: r["f1"] for r in fixed_rows_by_alpha[alpha_loose]}
+    for ct, rows in hyst_rows_by_corr.items():
+        hyst_f1 = {r["seg_id"]: r["f1"] for r in rows}
+        common = sorted(set(fixed_f1) & set(hyst_f1))
+        a_ = np.array([fixed_f1[s] for s in common])
+        b_ = np.array([hyst_f1[s] for s in common])
+        diff = b_ - a_
+        if np.allclose(diff, 0):
+            print(f"  corr_thr={ct}: fixed와 완전히 동일(차이 0) -> Wilcoxon 불가")
+            continue
+        stat, p = wilcoxon(a_, b_)
+        print(f"  corr_thr={ct}, n={len(common)}: mean F1 {a_.mean():.4f} -> {b_.mean():.4f} "
+              f"(diff={diff.mean():+.4f}), Wilcoxon p={p:.4f}")
+
+    # 5) ROC + PR 그림 저장
+    import matplotlib
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(10, 4.5))
+    ax1.plot(fpr, tpr, label=f"z-score (AUC={auc:.3f})")
+    ax1.plot([0, 1], [0, 1], "--", color="gray", linewidth=0.8)
+    ax1.set_xlabel("FPR"); ax1.set_ylabel("TPR"); ax1.set_title("채널단위 ROC (z-score)")
+    ax1.legend(fontsize=8)
+
+    fp = [(np.mean([r["recall"] for r in rows]), np.mean([r["precision"] for r in rows]))
+          for rows in fixed_rows_by_alpha.values()]
+    fp.sort()
+    ax2.plot([r for r, _ in fp], [p for _, p in fp], marker="o", markersize=3, label="fixed (alpha sweep)")
+    for ct, rows in hyst_rows_by_corr.items():
+        R, P = np.mean([r["recall"] for r in rows]), np.mean([r["precision"] for r in rows])
+        ax2.scatter([R], [P], marker="*", s=100, label=f"hysteresis corr_thr={ct}")
+    ax2.set_xlabel("Recall"); ax2.set_ylabel("Precision"); ax2.set_title("PR: fixed sweep vs hysteresis")
+    ax2.legend(fontsize=7)
+
+    plt.tight_layout()
+    fig.savefig(OUT_DIR / "sweep_roc_pr.png", dpi=120)
+    print(f"\n저장: {OUT_DIR / 'sweep_roc_pr.png'}")
+
+    out = {
+        "channel_roc_auc": auc,
+        "fixed_points": {str(a): {"precision": float(np.mean([r["precision"] for r in rows])),
+                                   "recall": float(np.mean([r["recall"] for r in rows]))}
+                          for a, rows in fixed_rows_by_alpha.items()},
+        "hysteresis_points": {str(ct): {"precision": float(np.mean([r["precision"] for r in rows])),
+                                         "recall": float(np.mean([r["recall"] for r in rows]))}
+                               for ct, rows in hyst_rows_by_corr.items()},
+    }
+    (OUT_DIR / "sweep_results.json").write_text(json.dumps(out, indent=2), encoding="utf-8")
+    print(f"저장: {OUT_DIR / 'sweep_results.json'}")
+
+
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--stage1", action="store_true", help="채널 선택 결과만 확인, VLM 없음")
     ap.add_argument("--run", action="store_true", help="VLM 실행")
+    ap.add_argument("--sweep", action="store_true",
+                     help="ROC(채널단위) + fixed alpha sweep + hysteresis corr_thr 후보 + paired Wilcoxon, VLM 없음")
     ap.add_argument("--method", choices=["fixed", "hysteresis"], default="fixed",
                      help="fixed=단일 alpha 임계값(기존) / hysteresis=강한+상관관계로 연결된 약한 채널(신규)")
     ap.add_argument("--alpha", type=float, default=0.1, help="fixed: z-threshold 유의수준. hysteresis: 약한(loose) 임계값")
     ap.add_argument("--alpha-strict", type=float, default=0.01, help="hysteresis: 강한(seed) 임계값")
     ap.add_argument("--corr-thr", type=float, default=0.5, help="hysteresis: seed와의 상관계수 임계값")
+    ap.add_argument("--corr-thr-list", type=float, nargs="+", default=[0.5, 0.7],
+                     help="--sweep: hysteresis corr_thr 후보들 (기본 0.5, 0.7)")
     args = ap.parse_args()
-    run(execute=args.run, alpha=args.alpha, method=args.method,
-        alpha_strict=args.alpha_strict, corr_thr=args.corr_thr)
+    if args.sweep:
+        sweep(corr_thr_list=args.corr_thr_list, alpha_strict=args.alpha_strict, alpha_loose=args.alpha)
+    else:
+        run(execute=args.run, alpha=args.alpha, method=args.method,
+            alpha_strict=args.alpha_strict, corr_thr=args.corr_thr)
