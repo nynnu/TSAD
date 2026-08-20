@@ -52,7 +52,7 @@ from scipy.stats import norm
 
 BASE = Path(__file__).resolve().parents[2]
 ANALYSIS_DIR = BASE / "experiments" / "analysis"
-STAGE1_DIR = BASE / "experiments" / "stage1"
+STAGE1_DIR = BASE / "experiments" / "stage1" / "active"
 sys.path.insert(0, str(ANALYSIS_DIR))
 sys.path.insert(0, str(STAGE1_DIR))
 
