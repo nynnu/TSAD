@@ -1,0 +1,211 @@
+{
+  "NORMAL1": {
+    "status": "OK",
+    "pred": {
+      "verdict": "ANOMALY",
+      "confidence": 3,
+      "reasoning": "The peak deviation is at the 96th percentile, and the visual pattern shows a sustained shift in multiple channels, indicating a genuine fault."
+    },
+    "raw": "```json\n{\"verdict\": \"ANOMALY\", \"confidence\": 3, \"reasoning\": \"The peak deviation is at the 96th percentile, and the visual pattern shows a sustained shift in multiple channels, indicating a genuine fault.\"}\n```",
+    "max_z": 60.524885061724255,
+    "pctl": 96.5
+  },
+  "NORMAL2": {
+    "status": "OK",
+    "pred": {
+      "verdict": "NORMAL",
+      "confidence": 2,
+      "reasoning": "The peak deviation is at the 28th percentile, well below the 90th percentile, and the visual pattern does not show a clear fault."
+    },
+    "raw": "```json\n{\"verdict\": \"NORMAL\", \"confidence\": 2, \"reasoning\": \"The peak deviation is at the 28th percentile, well below the 90th percentile, and the visual pattern does not show a clear fault.\"}\n```",
+    "max_z": 5.974022366938726,
+    "pctl": 28.000000000000004
+  },
+  "NORMAL3": {
+    "status": "OK",
+    "pred": {
+      "verdict": "NORMAL",
+      "confidence": 2,
+      "reasoning": "The peak deviation is at the 80th percentile, below the 90th-99th percentile threshold, and the visual pattern does not show a clear fault."
+    },
+    "raw": "```json\n{\"verdict\": \"NORMAL\", \"confidence\": 2, \"reasoning\": \"The peak deviation is at the 80th percentile, below the 90th-99th percentile threshold, and the visual pattern does not show a clear fault.\"}\n```",
+    "max_z": 12.506666464236002,
+    "pctl": 79.5
+  },
+  "NORMAL4": {
+    "status": "OK",
+    "pred": {
+      "verdict": "NORMAL",
+      "confidence": 2,
+      "reasoning": "The peak deviation is below the 90th percentile and the visual pattern does not show a clear fault."
+    },
+    "raw": "```json\n{\"verdict\": \"NORMAL\", \"confidence\": 2, \"reasoning\": \"The peak deviation is below the 90th percentile and the visual pattern does not show a clear fault.\"}\n```",
+    "max_z": 12.427580280477807,
+    "pctl": 79.5
+  },
+  "NORMAL5": {
+    "status": "OK",
+    "pred": {
+      "verdict": "NORMAL",
+      "confidence": 2,
+      "reasoning": "The peak deviation is below the 90th percentile and the visual pattern does not show a clear fault."
+    },
+    "raw": "```json\n{\"verdict\": \"NORMAL\", \"confidence\": 2, \"reasoning\": \"The peak deviation is below the 90th percentile and the visual pattern does not show a clear fault.\"}\n```",
+    "max_z": 12.731275877814339,
+    "pctl": 82.5
+  },
+  "NORMAL6": {
+    "status": "OK",
+    "pred": {
+      "verdict": "NORMAL",
+      "confidence": 2,
+      "reasoning": "The peak deviation is at the 90th percentile, which is within the expected range for normal operation, and the visual pattern does not show a clear fault."
+    },
+    "raw": "```json\n{\"verdict\": \"NORMAL\", \"confidence\": 2, \"reasoning\": \"The peak deviation is at the 90th percentile, which is within the expected range for normal operation, and the visual pattern does not show a clear fault.\"}\n```",
+    "max_z": 19.20840092135715,
+    "pctl": 90.0
+  },
+  "NORMAL7": {
+    "status": "OK",
+    "pred": {
+      "verdict": "ANOMALY",
+      "confidence": 3,
+      "reasoning": "The peak deviation is at the 96th percentile, indicating a substantial deviation, and the visual pattern shows a sustained shift, suggesting a genuine fault."
+    },
+    "raw": "```json\n{\"verdict\": \"ANOMALY\", \"confidence\": 3, \"reasoning\": \"The peak deviation is at the 96th percentile, indicating a substantial deviation, and the visual pattern shows a sustained shift, suggesting a genuine fault.\"}\n```",
+    "max_z": 56.464995324440245,
+    "pctl": 96.5
+  },
+  "NORMAL8": {
+    "status": "OK",
+    "pred": {
+      "verdict": "NORMAL",
+      "confidence": 2,
+      "reasoning": "The peak deviation is at the 80th percentile, below the 90th-99th percentile threshold for anomalies, and the visual pattern does not show a clear fault."
+    },
+    "raw": "```json\n{\"verdict\": \"NORMAL\", \"confidence\": 2, \"reasoning\": \"The peak deviation is at the 80th percentile, below the 90th-99th percentile threshold for anomalies, and the visual pattern does not show a clear fault.\"}\n```",
+    "max_z": 12.427580280477807,
+    "pctl": 79.5
+  },
+  "NORMAL9": {
+    "status": "OK",
+    "pred": {
+      "verdict": "NORMAL",
+      "confidence": 2,
+      "reasoning": "The peak deviation is at the 84th percentile, which is within the normal range, and the visual pattern does not show a clear, sustained fault."
+    },
+    "raw": "```json\n{\"verdict\": \"NORMAL\", \"confidence\": 2, \"reasoning\": \"The peak deviation is at the 84th percentile, which is within the normal range, and the visual pattern does not show a clear, sustained fault.\"}\n```",
+    "max_z": 12.996912436098466,
+    "pctl": 84.0
+  },
+  "NORMAL10": {
+    "status": "OK",
+    "pred": {
+      "verdict": "NORMAL",
+      "confidence": 2,
+      "reasoning": "The peak deviation is below the 90th percentile of normal windows and the visual pattern does not show a clear fault."
+    },
+    "raw": "```json\n{\"verdict\": \"NORMAL\", \"confidence\": 2, \"reasoning\": \"The peak deviation is below the 90th percentile of normal windows and the visual pattern does not show a clear fault.\"}\n```",
+    "max_z": 7.970938898604913,
+    "pctl": 38.5
+  },
+  "NORMAL11": {
+    "status": "OK",
+    "pred": {
+      "verdict": "NORMAL",
+      "confidence": 2,
+      "reasoning": "The peak deviation is at the 28th percentile, well below the 90th percentile, and the visual pattern does not show a clear fault."
+    },
+    "raw": "```json\n{\"verdict\": \"NORMAL\", \"confidence\": 2, \"reasoning\": \"The peak deviation is at the 28th percentile, well below the 90th percentile, and the visual pattern does not show a clear fault.\"}\n```",
+    "max_z": 6.236321050020674,
+    "pctl": 28.000000000000004
+  },
+  "NORMAL12": {
+    "status": "OK",
+    "pred": {
+      "verdict": "NORMAL",
+      "confidence": 2,
+      "reasoning": "The peak deviation is well below the 90th percentile of normal windows, and the visual pattern does not show a clear fault."
+    },
+    "raw": "```json\n{\"verdict\": \"NORMAL\", \"confidence\": 2, \"reasoning\": \"The peak deviation is well below the 90th percentile of normal windows, and the visual pattern does not show a clear fault.\"}\n```",
+    "max_z": 4.9083295889453495,
+    "pctl": 18.0
+  },
+  "NORMAL13": {
+    "status": "OK",
+    "pred": {
+      "verdict": "NORMAL",
+      "confidence": 2,
+      "reasoning": "The peak deviation is below the 90th percentile of normal windows, and the visual pattern does not show a clear fault."
+    },
+    "raw": "```json\n{\"verdict\": \"NORMAL\", \"confidence\": 2, \"reasoning\": \"The peak deviation is below the 90th percentile of normal windows, and the visual pattern does not show a clear fault.\"}\n```",
+    "max_z": 12.617098760657127,
+    "pctl": 82.5
+  },
+  "NORMAL14": {
+    "status": "OK",
+    "pred": {
+      "verdict": "NORMAL",
+      "confidence": 2,
+      "reasoning": "The peak deviation is below the 90th percentile and the visual pattern does not show a clear fault."
+    },
+    "raw": "```json\n{\"verdict\": \"NORMAL\", \"confidence\": 2, \"reasoning\": \"The peak deviation is below the 90th percentile and the visual pattern does not show a clear fault.\"}\n```",
+    "max_z": 15.781325240796821,
+    "pctl": 87.0
+  },
+  "NORMAL15": {
+    "status": "OK",
+    "pred": {
+      "verdict": "NORMAL",
+      "confidence": 2,
+      "reasoning": "The peak deviation is at the 95th percentile, which is not substantially above the typical range, and the visual pattern does not show a clear fault."
+    },
+    "raw": "```json\n{\"verdict\": \"NORMAL\", \"confidence\": 2, \"reasoning\": \"The peak deviation is at the 95th percentile, which is not substantially above the typical range, and the visual pattern does not show a clear fault.\"}\n```",
+    "max_z": 25.26279702213044,
+    "pctl": 95.0
+  },
+  "NORMAL16": {
+    "status": "OK",
+    "pred": {
+      "verdict": "NORMAL",
+      "confidence": 2,
+      "reasoning": "The peak deviation is below the 90th percentile and the visual pattern does not show a clear fault."
+    },
+    "raw": "```json\n{\"verdict\": \"NORMAL\", \"confidence\": 2, \"reasoning\": \"The peak deviation is below the 90th percentile and the visual pattern does not show a clear fault.\"}\n```",
+    "max_z": 16.414638954332016,
+    "pctl": 87.0
+  },
+  "TINY_24679": {
+    "status": "OK",
+    "pred": {
+      "verdict": "NORMAL",
+      "confidence": 2,
+      "reasoning": "The peak deviation is within the expected range for normal operation, and the visual pattern does not show a sustained shift or sharp spike indicative of a genuine fault."
+    },
+    "raw": "```json\n{\"verdict\": \"NORMAL\", \"confidence\": 2, \"reasoning\": \"The peak deviation is within the expected range for normal operation, and the visual pattern does not show a sustained shift or sharp spike indicative of a genuine fault.\"}\n```",
+    "max_z": 84.57961395660915,
+    "pctl": 96.5
+  },
+  "TINY_26114": {
+    "status": "OK",
+    "pred": {
+      "verdict": "NORMAL",
+      "confidence": 2,
+      "reasoning": "The peak deviation is within the expected range for normal operation, not substantially above the 99th percentile, and the visual pattern does not show a sustained shift or sharp spike indicative of a genuine fault."
+    },
+    "raw": "```json\n{\"verdict\": \"NORMAL\", \"confidence\": 2, \"reasoning\": \"The peak deviation is within the expected range for normal operation, not substantially above the 99th percentile, and the visual pattern does not show a sustained shift or sharp spike indicative of a genuine fault.\"}\n```",
+    "max_z": 67.38964990177195,
+    "pctl": 96.5
+  },
+  "TINY_27554": {
+    "status": "OK",
+    "pred": {
+      "verdict": "ANOMALY",
+      "confidence": 3,
+      "reasoning": "The peak deviation is at the 96th percentile, with a sharp spike indicating a genuine fault."
+    },
+    "raw": "```json\n{\"verdict\": \"ANOMALY\", \"confidence\": 3, \"reasoning\": \"The peak deviation is at the 96th percentile, with a sharp spike indicating a genuine fault.\"}\n```",
+    "max_z": 76.73113963172408,
+    "pctl": 96.5
+  }
+}

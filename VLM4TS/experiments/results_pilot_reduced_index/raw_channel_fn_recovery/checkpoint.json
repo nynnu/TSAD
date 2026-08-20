@@ -1,0 +1,47 @@
+{
+  "TP1": {
+    "status": "PARSE_ERROR",
+    "pred": null,
+    "raw": "```json\n{\"verdict\": \"ANOMALY\", \"confidence\": 3, \"reasoning\": \"Multiple channels significantly exceed the normal range, indicating a deviation from normal operating conditions.\"}\n```"
+  },
+  "TP2": {
+    "status": "PARSE_ERROR",
+    "pred": null,
+    "raw": "```json\n{\"verdict\": \"ANOMALY\", \"confidence\": 3, \"reasoning\": \"Multiple channels exceed the normalized range, indicating a deviation from normal operating conditions.\"}\n```"
+  },
+  "TP3_partial": {
+    "status": "PARSE_ERROR",
+    "pred": null,
+    "raw": "```json\n{\"verdict\": \"ANOMALY\", \"confidence\": 3, \"reasoning\": \"The values significantly exceed the normal range, indicating a deviation from normal operating conditions.\"}\n```"
+  },
+  "FN_457": {
+    "status": "PARSE_ERROR",
+    "pred": null,
+    "raw": "```json\n{\"verdict\": \"ANOMALY\", \"confidence\": 3, \"reasoning\": \"Channel values significantly exceed the normal range, indicating a deviation from normal operating conditions.\"}\n```"
+  },
+  "FN_409": {
+    "status": "PARSE_ERROR",
+    "pred": null,
+    "raw": "```json\n{\"verdict\": \"ANOMALY\", \"confidence\": 3, \"reasoning\": \"Multiple channels exceed the normal range significantly, indicating a deviation from normal operating conditions.\"}\n```"
+  },
+  "NORMAL1": {
+    "status": "PARSE_ERROR",
+    "pred": null,
+    "raw": "```json\n{\"verdict\": \"ANOMALY\", \"confidence\": 3, \"reasoning\": \"Multiple channels show a sustained deviation from the normal range towards the end of the window.\"}\n```"
+  },
+  "NORMAL2": {
+    "status": "PARSE_ERROR",
+    "pred": null,
+    "raw": "```json\n{\"verdict\": \"ANOMALY\", \"confidence\": 3, \"reasoning\": \"Channel 14 consistently exceeds the normal range, indicating a significant deviation.\"}\n```"
+  },
+  "NORMAL3": {
+    "status": "PARSE_ERROR",
+    "pred": null,
+    "raw": "```json\n{\"verdict\": \"ANOMALY\", \"confidence\": 3, \"reasoning\": \"Channel 11 significantly exceeds the normal range, indicating a deviation from expected behavior.\"}\n```"
+  },
+  "NORMAL4": {
+    "status": "PARSE_ERROR",
+    "pred": null,
+    "raw": "```json\n{\"verdict\": \"ANOMALY\", \"confidence\": 3, \"reasoning\": \"Channel 33 consistently exceeds the normal range, indicating a deviation from expected behavior.\"}\n```"
+  }
+}

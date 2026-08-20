@@ -1,0 +1,93 @@
+{
+  "rows": [
+    {
+      "name": "TP1",
+      "s": 15849,
+      "e": 16394,
+      "is_true_anom": true,
+      "verdict": "ANOMALY",
+      "max_z": 32100.0,
+      "pctl": 100.0
+    },
+    {
+      "name": "TP2",
+      "s": 16963,
+      "e": 17516,
+      "is_true_anom": true,
+      "verdict": "ANOMALY",
+      "max_z": 100000000.0,
+      "pctl": 100.0
+    },
+    {
+      "name": "TP3_partial",
+      "s": 19367,
+      "e": 20087,
+      "is_true_anom": true,
+      "verdict": "ANOMALY",
+      "max_z": 578400.0,
+      "pctl": 100.0
+    },
+    {
+      "name": "FN_457",
+      "s": 18071,
+      "e": 18527,
+      "is_true_anom": true,
+      "verdict": "ANOMALY",
+      "max_z": 1740400.0,
+      "pctl": 100.0
+    },
+    {
+      "name": "FN_409",
+      "s": 20786,
+      "e": 21194,
+      "is_true_anom": true,
+      "verdict": "ANOMALY",
+      "max_z": 513.4305566456646,
+      "pctl": 100.0
+    },
+    {
+      "name": "NORMAL1",
+      "s": 7561,
+      "e": 8013,
+      "is_true_anom": false,
+      "verdict": "NORMAL",
+      "max_z": 60.524885061724255,
+      "pctl": 95.5
+    },
+    {
+      "name": "NORMAL2",
+      "s": 1150,
+      "e": 1541,
+      "is_true_anom": false,
+      "verdict": "NORMAL",
+      "max_z": 47.55652766665411,
+      "pctl": 94.0
+    },
+    {
+      "name": "NORMAL3",
+      "s": 465,
+      "e": 786,
+      "is_true_anom": false,
+      "verdict": "NORMAL",
+      "max_z": 12.506666464236002,
+      "pctl": 78.0
+    },
+    {
+      "name": "NORMAL4",
+      "s": 22874,
+      "e": 23225,
+      "is_true_anom": false,
+      "verdict": "NORMAL",
+      "max_z": 25.36026966452644,
+      "pctl": 93.0
+    }
+  ],
+  "tp": 5,
+  "fp": 0,
+  "tn": 4,
+  "fn": 0,
+  "cal_stats": {
+    "mean": 14.465797304298844,
+    "std": 20.846935423726702
+  }
+}
