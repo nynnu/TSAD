@@ -204,6 +204,50 @@ def render_subplot_grid(window, n_cols=8):
     return base64.b64encode(buf.read()).decode("utf-8")
 
 
+def render_heatmap_subplot_grid(window, ranked, selected, n_cols=6):
+    """상단 = 기존과 동일한 38채널 heatmap(전체 개요), 하단 = overlay(겹쳐그리기) 대신
+    선택된 채널만 각각 독립된 작은 칸에 따로 그림(논문의 subplot grid 방식을 detail
+    패널에 적용) -- heatmap의 전체 개요 기능은 유지하면서, overlay가 오탐(FPR=100%)을
+    낸 "겹쳐그리기" 부분만 subplot grid로 교체해서 원인을 좁히기 위한 버전."""
+    import matplotlib
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+    from matplotlib.gridspec import GridSpec
+
+    n_sel = len(selected)
+    n_rows = -(-n_sel // n_cols)
+    fig = plt.figure(figsize=(6, 3.5 + n_rows * 1.1), dpi=100)
+    gs = GridSpec(2, 1, height_ratios=[1.4, n_rows * 0.9], hspace=0.35)
+
+    ax1 = fig.add_subplot(gs[0])
+    heat = np.zeros((len(ranked), window.shape[0]))
+    for i, c in enumerate(ranked):
+        v = window[:, c]
+        lo, hi = float(v.min()), float(v.max())
+        heat[i] = (v - lo) / (hi - lo) if hi - lo > 1e-9 else 0.0
+    ax1.imshow(heat, aspect="auto", cmap="viridis")
+    ax1.set_yticks(range(len(ranked)))
+    ax1.set_yticklabels([str(c) for c in ranked], fontsize=5)
+    ax1.set_xticks([])
+    ax1.set_title("Heatmap: 38 channels, sorted by adaptive z-score", fontsize=7)
+
+    gs_bottom = gs[1].subgridspec(n_rows, n_cols, hspace=0.6, wspace=0.3)
+    for i, c in enumerate(selected):
+        ax = fig.add_subplot(gs_bottom[i // n_cols, i % n_cols])
+        ax.plot(window[:, c], color="black", linewidth=0.6)
+        ax.set_title(f"ch{c}", fontsize=6)
+        ax.set_xticks([])
+        ax.set_yticks([])
+    fig.suptitle(f"Bottom: {n_sel} candidate channels, each in its own independent panel (no overlay)",
+                 fontsize=7, y=0.5 - n_rows * 0.02)
+
+    buf = BytesIO()
+    fig.savefig(buf, format="png", dpi=100, bbox_inches="tight")
+    plt.close(fig)
+    buf.seek(0)
+    return base64.b64encode(buf.read()).decode("utf-8")
+
+
 def build_prompt(selected, width, window, train, primed=True, viz="heatmap_overlay"):
     blocks = []
     for i, c in enumerate(selected):
@@ -226,6 +270,18 @@ def build_prompt(selected, width, window, train, primed=True, viz="heatmap_overl
                  "each showing that channel's raw values over this window independently -- no channels are "
                  f"overlaid together. Channels {selected} were flagged by an automated per-channel screening "
                  f"step for closer attention{flag_note}.")
+        context_note = ""
+    elif viz == "heatmap_subplot_grid":
+        # heatmap(개요, 38채널 전부)은 유지하고, overlay(겹쳐그리기)만 selected 채널 각각
+        # 독립된 작은 칸으로 교체 -- overlay의 "겹쳐그리기" 요소만 분리해서 원인을 좁히기 위함.
+        flag_note = ("" if primed else " -- this selection does NOT imply they are anomalous")
+        setup = (f"for a {width}-tick window (relative indices 0 to {width-1}) from a multivariate industrial "
+                 f"time series with {N_CHANNELS} channels.\n\n"
+                 "Top panel: heatmap of all 38 channels, sorted by an automated per-channel deviation score "
+                 "(this ranking is a screening heuristic, not a verdict).\n"
+                 f"Bottom panel: a grid of {len(selected)} small subplots, one per candidate channel "
+                 f"({selected}), each showing that channel's raw values independently -- no channels are "
+                 f"overlaid together{flag_note}.")
         context_note = ""
     elif primed:
         setup = (f"for a Stage-1 candidate window of width {width} (relative indices 0 to {width-1}) "
@@ -394,7 +450,12 @@ def sanity_check(entity, n=5, method="fixed", alpha=0.1, alpha_strict=0.01, corr
         if checkpoint.get(key, {}).get("status") == "OK":
             pred = checkpoint[key]["pred"]
         else:
-            img = render_subplot_grid(window) if viz == "subplot_grid" else render_heatmap_overlay(window, ranked, selected)
+            if viz == "subplot_grid":
+                img = render_subplot_grid(window)
+            elif viz == "heatmap_subplot_grid":
+                img = render_heatmap_subplot_grid(window, ranked, selected)
+            else:
+                img = render_heatmap_overlay(window, ranked, selected)
             prompt = build_prompt(selected, WIN, window, train, primed=False, viz=viz)
             raw = call_vlm(prompt, img)
             pred = parse_detect_response(raw)
@@ -420,8 +481,10 @@ if __name__ == "__main__":
     ap.add_argument("--sanity-check", action="store_true",
                      help="정상 컨트롤 윈도우에 탈-프라이밍 프롬프트로 오탐률(FPR) 측정, VLM 콜 발생")
     ap.add_argument("--n-sanity", type=int, default=5)
-    ap.add_argument("--viz", choices=["heatmap_overlay", "subplot_grid"], default="heatmap_overlay",
-                     help="subplot_grid = VLM4TS 논문 방식(38채널 각각 독립된 칸), sanity-check에서만 사용")
+    ap.add_argument("--viz", choices=["heatmap_overlay", "subplot_grid", "heatmap_subplot_grid"],
+                     default="heatmap_overlay",
+                     help="subplot_grid=38채널 전부 독립칸(논문 방식) / heatmap_subplot_grid=heatmap 유지+"
+                          "selected 채널만 독립칸(overlay의 겹쳐그리기만 교체). sanity-check에서만 사용")
     ap.add_argument("--method", choices=["fixed", "hysteresis"], default="fixed")
     ap.add_argument("--alpha", type=float, default=0.1)
     ap.add_argument("--alpha-strict", type=float, default=0.01)
