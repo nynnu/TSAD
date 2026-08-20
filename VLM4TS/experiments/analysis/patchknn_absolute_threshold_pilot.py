@@ -89,7 +89,7 @@ def _load_dinov2_via_pip(device):
 # 스크립트 파일 위치 기준 상대경로 -- 로컬(Windows)/Colab(Drive 마운트) 어디서 돌려도 그대로 동작
 BASE = Path(__file__).resolve().parents[2]
 ANALYSIS_DIR = BASE / "experiments" / "analysis"
-STAGE1_DIR = BASE / "experiments" / "stage1"
+STAGE1_DIR = BASE / "experiments" / "stage1" / "active"
 sys.path.insert(0, str(ANALYSIS_DIR))
 sys.path.insert(0, str(STAGE1_DIR))
 
