@@ -37,6 +37,7 @@ import argparse
 import json
 import re
 import sys
+import time
 from pathlib import Path
 
 import numpy as np
@@ -127,8 +128,21 @@ def stage1_candidates(entity, train, test, degenerate_ch, loose_pct=90.0):
     starts = list(range(0, T_test - WIN + 1, STRIDE))
     entity_channel_calib = {}
     z_thr = norm.ppf(1 - 0.1)
-    win_score = np.zeros(len(starts))
+
+    # 윈도우별 점수를 .npy로 체크포인트 -- 중간에 끊겨도(타임아웃/인터럽트) 재실행 시
+    # 이미 계산된 윈도우는 건너뛴다 (안 채워진 자리는 NaN으로 표시).
+    cache_path = OUT_DIR / f"{entity}_candidates_winscore.npy"
+    if cache_path.exists():
+        win_score = np.load(cache_path)
+        n_done = int(np.sum(~np.isnan(win_score)))
+        print(f"    [candidates] 체크포인트에서 재개: {n_done}/{len(starts)} 완료", flush=True)
+    else:
+        win_score = np.full(len(starts), np.nan)
+
+    t0 = time.time()
     for wi, s in enumerate(starts):
+        if not np.isnan(win_score[wi]):
+            continue
         window = test[s:s + WIN]
         n_sel = 0
         for c in range(N_CHANNELS):
@@ -144,6 +158,10 @@ def stage1_candidates(entity, train, test, degenerate_ch, loose_pct=90.0):
             if z > z_thr:
                 n_sel += 1
         win_score[wi] = n_sel
+        if wi % 20 == 0:
+            np.save(cache_path, win_score)
+            print(f"    [candidates] window {wi}/{len(starts)} ({time.time()-t0:.0f}s elapsed)", flush=True)
+    np.save(cache_path, win_score)
 
     inter = win_to_ts(win_score, T_test)
     thr = np.percentile(inter, loose_pct)
