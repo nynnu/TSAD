@@ -129,9 +129,14 @@ def win_to_ts(win_scores, n_ts):
     return scores
 
 
-def stage1_candidates(entity, train, test, degenerate_ch, loose_pct=90.0):
+def stage1_candidates(entity, train, test, degenerate_ch, loose_alpha=0.3):
     """K4 detect 점수(윈도우당 alpha=0.1 넘는 채널 개수)를 슬라이딩해서 느슨한
-    후보 구간을 만든다 (Stage1 K3/v16과 같은 관용: 널널하게 뽑고 Stage2가 거름)."""
+    후보 구간을 만든다 (Stage1 K3/v16과 같은 관용: 널널하게 뽑고 Stage2가 거름).
+
+    v16의 FIX I(robust mu/sig)를 그대로 이식: 윈도우 점수(win_score=all_ws) 상위
+    20%(이상치로 추정)를 빼고 남은 하위 80%만으로 정상분포(mu, sig)를 추정한 뒤
+    z-threshold(loose_alpha)를 적용 -- raw percentile(90) 컷보다 이상치에 덜 오염됨.
+    all_ws(=win_score)도 같이 반환 -- v16.pct_rank가 이 배열을 그대로 씀."""
     T_test = len(test)
     starts = list(range(0, T_test - WIN + 1, STRIDE))
     entity_channel_calib = {}
@@ -172,9 +177,18 @@ def stage1_candidates(entity, train, test, degenerate_ch, loose_pct=90.0):
     np.save(cache_path, win_score)
 
     inter = win_to_ts(win_score, T_test)
-    thr = np.percentile(inter, loose_pct)
-    loose_ivs = get_intervals((inter > thr).astype(int))
-    return loose_ivs, inter, entity_channel_calib
+    all_ws = win_score
+    cutoff = np.percentile(all_ws, 80)
+    clean = all_ws[all_ws <= cutoff]
+    if len(clean) < 10:
+        clean = all_ws
+    mu, sig = float(clean.mean()), float(clean.std())
+    if sig < 1e-12:
+        loose_ivs = []
+    else:
+        thr = mu + norm.ppf(1 - loose_alpha) * sig
+        loose_ivs = get_intervals((inter > thr).astype(int))
+    return loose_ivs, inter, entity_channel_calib, all_ws
 
 
 # ══════════════════════════════════════════════════════════════════
@@ -330,14 +344,64 @@ def render_train_referenced(window, train, selected, cmin, cmax, train_cal_start
     return base64.b64encode(buf.read()).decode("utf-8")
 
 
-def build_prompt_train_referenced(selected, width, n_cal, window=None, cmin=None, cmax=None):
+def build_prompt_train_referenced(selected, width, n_cal, window=None, cmin=None, cmax=None, pct=None):
     """v16 스타일 이중가설 프롬프트를 K5 스키마(verdict/start/end/confidence)에 맞게 축약.
     train min/max 고정 정규화 + 정상참조 패널을 설명하고, 정상/이상 두 가설을 각각
     논증한 뒤 종합 판단하게 시킨다 (여전히 1콜, JSON 하나로 응답).
 
     window/cmin/cmax가 주어지면 K2/K3/K4에서 이미 검증된(2x2 factorial, +0.042 유의)
     index-aware 텍스트를 top-25 포인트로 추가 -- 눈대중으로 y=1.0 선 높이를 읽다가
-    틀리는 할루시네이션(예: 실제 0.65인데 "1.0 넘었다"고 주장)을 정확한 숫자로 방지."""
+    틀리는 할루시네이션(예: 실제 0.65인데 "1.0 넘었다"고 주장)을 정확한 숫자로 방지.
+
+    pct가 주어지면 v16의 prior-tiered 지시문을 그대로 이식: 이 후보가 "이 entity의
+    test 시계열 자체" 분포에서 몇 퍼센타일인지에 따라 기본 입장(ANOMALY/NORMAL 중
+    어느 쪽이 디폴트인지)과 요구되는 증거 강도를 다르게 지시한다."""
+    if pct is not None:
+        if pct >= v16.PCT_HIGH:
+            prior = "HIGH"
+            prior_interp = (f"This window is in the {pct:.0f}th percentile of this entity's own test series "
+                             "-- rarely seen even within this series' own range.\n"
+                             "  Default position: ANOMALY. Override requires clear visual evidence of normalcy.")
+            decision_guide = ("Decision rule for HIGH prior:\n"
+                               "  -> NORMAL if your normal-hypothesis argument is clearly stronger\n"
+                               "  -> ANOMALY if your anomaly-hypothesis argument is stronger OR the evidence is tied")
+        elif pct >= v16.PCT_MID:
+            prior = "MODERATE"
+            prior_interp = (f"This window is in the {pct:.0f}th percentile of this entity's own test series "
+                             "-- elevated but not extreme.\n  No default position. Visual evidence is the deciding factor.")
+            decision_guide = ("Decision rule for MODERATE prior:\n"
+                               "  -> ANOMALY if your anomaly-hypothesis argument is clearly stronger\n"
+                               "  -> NORMAL if your normal-hypothesis argument is clearly stronger or the evidence is tied")
+        else:
+            prior = "LOW"
+            prior_interp = (f"This window is in the {pct:.0f}th percentile of this entity's own test series "
+                             "-- only modestly elevated relative to this series' own typical range.\n"
+                             "  Default position: NORMAL. Override requires compelling visual structural change.")
+            decision_guide = ("Decision rule for LOW prior:\n"
+                               "  -> NORMAL if the evidence is tied or ambiguous\n"
+                               "  -> ANOMALY only if your anomaly-hypothesis is CLEARLY and UNAMBIGUOUSLY stronger")
+        prior_block = f"""
+--- STATISTICAL PRIOR (relative to THIS entity's own test series, separate from the TRAIN comparison above) ---
+Prior strength: {prior}
+{prior_interp}
+"""
+        verdict_step = f"""STEP 3 -- VERDICT
+{decision_guide}
+Confidence scale:
+  3 = One hypothesis is clearly dominant; evidence is specific and unambiguous
+  2 = One hypothesis is probably stronger; some ambiguity remains
+  1 = Evidence is roughly balanced or genuinely unclear
+If genuine, what is the TIGHTEST relative sub-range [start, end] (0 to {width-1}) that
+captures the core anomalous behavior?"""
+        confidence_field = '"confidence": 1, 2, or 3'
+    else:
+        prior_block = ""
+        verdict_step = f"""STEP 3 -- VERDICT: pick NORMAL unless the anomaly-hypothesis is clearly stronger than the
+normal-hypothesis. If evidence is tied or ambiguous, default to NORMAL.
+If genuine, what is the TIGHTEST relative sub-range [start, end] (0 to {width-1}) that
+captures the core anomalous behavior?"""
+        confidence_field = '"confidence": "low" or "medium" or "high"'
+
     text_block = ""
     if window is not None:
         lines = []
@@ -359,7 +423,7 @@ The dashed ORANGE LINE marks y=1.0 -- the normal operating ceiling.
 Values ABOVE the orange line indicate the channel has EXCEEDED its confirmed normal range.
 Values between 0 and 1 are within the machine's confirmed normal operating envelope.
 {text_block}
-
+{prior_block}
 --- IMAGE LAYOUT ---
 TOP (heatmap, if present): all 38 channels, one row each, TRAIN min/max normalized like everything
   else here -- use it only as a rough overview of which channels look most elevated; the line
@@ -386,15 +450,12 @@ STEP 2 -- HYPOTHESIS: CANDIDATE IS ANOMALOUS
   (b) Is this exceedance ABSENT in ALL of the TRAIN NORMAL panels?
   (c) How strong is the anomaly-hypothesis evidence? (weak / moderate / strong)
 
-STEP 3 -- VERDICT: pick NORMAL unless the anomaly-hypothesis is clearly stronger than the
-normal-hypothesis. If evidence is tied or ambiguous, default to NORMAL.
-If genuine, what is the TIGHTEST relative sub-range [start, end] (0 to {width-1}) that
-captures the core anomalous behavior?
+{verdict_step}
 
 Respond ONLY with valid JSON (no markdown, no extra text):
 {{"normal_hypothesis": "...", "anomaly_hypothesis": "...", "normal_strength": "weak/moderate/strong",
 "anomaly_strength": "weak/moderate/strong", "verdict": "ANOMALY" or "NORMAL",
-"start": <int>, "end": <int>, "confidence": "low" or "medium" or "high"}}"""
+"start": <int>, "end": <int>, {confidence_field}}}"""
 
 
 def build_prompt(selected, width, window, train, primed=True, viz="heatmap_overlay"):
@@ -498,7 +559,7 @@ def run(entity, execute=False, method="fixed", alpha=0.1, alpha_strict=0.01, cor
     cmin_all, cmax_all = (v16.gn_train(train, range(N_CHANNELS)) if viz == "train_referenced" else (None, None))
 
     print(f"[{entity}] Stage1 후보 구간 생성 중 (전체 시계열 슬라이딩)...", flush=True)
-    loose_ivs, inter, entity_channel_calib = stage1_candidates(entity, train, test, degenerate_ch)
+    loose_ivs, inter, entity_channel_calib, all_ws = stage1_candidates(entity, train, test, degenerate_ch)
     print(f"  후보 {len(loose_ivs)}개 = 예상 VLM 콜 수", flush=True)
 
     if not execute:
@@ -508,21 +569,31 @@ def run(entity, execute=False, method="fixed", alpha=0.1, alpha_strict=0.01, cor
     checkpoint_path = OUT_DIR / f"checkpoint_{entity}_{method}_{viz}.json"
     checkpoint = json.loads(checkpoint_path.read_text(encoding="utf-8")) if checkpoint_path.exists() else {}
     confirmed = []
+    T_test = len(test)
 
     for cs, ce in loose_ivs:
         key = f"{cs}_{ce}"
-        # 224틱보다 좁으면 중심 확장, 넓으면 그대로(폭 가변 허용 -- 넓은 후보를 그대로 보여주는 게 이번 취지).
-        # ws = 실제 표시되는 창의 절대 시작점 -- 확장된 경우 cs와 다르므로 이걸 기준으로 좌표를 복원해야 함
-        # (예전 버그: 여기서 cs를 썼는데, 확장된 창(예: 폭 56 -> ws=cs-84)에서는 84틱씩 밀려서 저장됐음).
-        ws = cs if (ce - cs + 1) >= WIN else max(0, cs - (WIN - (ce - cs + 1)) // 2)
-        window = test[ws:ws + WIN] if (ce - cs + 1) < WIN else test[cs:ce + 1]
-        width = len(window)
+        iv_len = ce - cs + 1
+        if iv_len > WIN:
+            # v16 get_peak_s 이식: 넓은 후보는 전체를 그대로 안 보여주고, inter 점수가
+            # 가장 높은 WIN길이 서브윈도우(진짜 피크)에 맞춰 이미지/텍스트를 정렬
+            ws = v16.get_peak_s(cs, ce, inter, T_test)
+        elif iv_len < WIN:
+            ws = max(0, cs - (WIN - iv_len) // 2)
+        else:
+            ws = cs
+        window = test[ws:ws + WIN]
+        width = WIN
 
         zs = compute_zscores(entity, train, window, entity_channel_calib, degenerate_ch)
         if method == "fixed":
             ranked, selected = select_channels_fixed(zs, alpha)
         else:
             ranked, selected = select_channels_hysteresis(zs, corr, alpha_strict, alpha, corr_thr)
+
+        # v16 pct_rank 이식: 이 후보가 "이 entity의 test 시계열 자체" 분포에서 몇
+        # 퍼센타일인지 -- train 기준 정규화와 별개로, 후보별 통계적 맥락을 프롬프트에 줌
+        pct = v16.pct_rank((cs, ce), inter, all_ws, T_test)
 
         if checkpoint.get(key, {}).get("status") == "OK":
             pred = checkpoint[key]["pred"]
@@ -531,7 +602,7 @@ def run(entity, execute=False, method="fixed", alpha=0.1, alpha_strict=0.01, cor
                 img = render_train_referenced(window, train, selected, cmin_all, cmax_all, train_cal_starts,
                                                ranked=ranked, cmin_all=cmin_all, cmax_all=cmax_all)
                 prompt = build_prompt_train_referenced(selected, width, len(train_cal_starts),
-                                                        window, cmin_all, cmax_all)
+                                                        window, cmin_all, cmax_all, pct=pct)
             else:
                 img = render_heatmap_overlay(window, ranked, selected)
                 prompt = build_prompt(selected, width, window, train)
@@ -539,9 +610,23 @@ def run(entity, execute=False, method="fixed", alpha=0.1, alpha_strict=0.01, cor
             pred = parse_detect_response(raw)
             checkpoint[key] = {"status": "OK" if pred is not None else "PARSE_ERROR", "pred": pred}
             checkpoint_path.write_text(json.dumps(checkpoint, indent=2, ensure_ascii=False), encoding="utf-8")
-            print(f"  [{key}] pred={pred}", flush=True)
+            print(f"  [{key}] pct={pct:.0f} pred={pred}", flush=True)
 
-        if pred and pred.get("verdict") == "ANOMALY":
+        if not pred:
+            continue
+
+        verdict = pred.get("verdict", "ANOMALY")
+        if viz == "train_referenced":
+            # v16 decide() 이식: verdict 하나만 보고 그대로 믿지 않고, confidence(1-3)
+            # + normal/anomaly_strength + pct(prior)까지 융합해서 최종 keep/discard 결정
+            conf = int(pred.get("confidence", 1))
+            ns = pred.get("normal_strength", "moderate")
+            as_ = pred.get("anomaly_strength", "moderate")
+            keep = v16.decide(verdict, conf, pct, ns, as_)
+        else:
+            keep = verdict == "ANOMALY"
+
+        if keep:
             s = ws + max(0, min(width - 1, int(pred.get("start", 0))))
             e = ws + max(0, min(width - 1, int(pred.get("end", width - 1))))
             if e < s:
