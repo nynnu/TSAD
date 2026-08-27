@@ -1,0 +1,132 @@
+{
+  "delta_cls": {
+    "role_kruskal": {
+      "H": 15.075310207188522,
+      "p": 0.00053264515626954,
+      "epsilon_squared": 0.007276188206560112,
+      "n": 1800
+    },
+    "role_pairwise": [
+      {
+        "comparison": "cascade vs unrelated (role)",
+        "mean_cascade": 0.03993931654711058,
+        "mean_unrelated": 0.03581133663654328,
+        "cohens_d": 0.050508719656996624,
+        "auc": 0.5209667440061871,
+        "p_value": 0.21520669631220157,
+        "n_cascade": 431,
+        "n_unrelated": 900
+      },
+      {
+        "comparison": "mild vs unrelated (role)",
+        "mean_mild": 0.03684002148317121,
+        "mean_unrelated": 0.03581133663654328,
+        "cohens_d": 0.012835554360457415,
+        "auc": 0.565745084103293,
+        "p_value": 6.40025412032165e-05,
+        "n_mild": 469,
+        "n_unrelated": 900
+      },
+      {
+        "comparison": "cascade vs mild (role)",
+        "mean_cascade": 0.03993931654711058,
+        "mean_mild": 0.03684002148317121,
+        "cohens_d": 0.04088127766454396,
+        "auc": 0.4631862233413641,
+        "p_value": 0.05613258568923324,
+        "n_cascade": 431,
+        "n_mild": 469
+      }
+    ],
+    "type_match_all_pairs": {
+      "comparison": "type_match True vs False (all pairs)",
+      "mean_match": 0.02508350901614088,
+      "mean_no_match": 0.041169789591269386,
+      "cohens_d": -0.20268298550525743,
+      "auc": 0.46089072798727576,
+      "p_value": 0.012261626233475256,
+      "n_match": 459,
+      "n_no_match": 1341
+    },
+    "type_match_affected_only": {
+      "comparison": "homogeneous vs heterogeneous (affected only)",
+      "mean_homogeneous": 0.02508350901614088,
+      "mean_heterogeneous": 0.05210540786622062,
+      "cohens_d": -0.36216410347918887,
+      "auc": 0.38992387078288104,
+      "p_value": 1.0952559555931926e-08,
+      "n_homogeneous": 459,
+      "n_heterogeneous": 441
+    }
+  },
+  "delta_patch": {
+    "role_kruskal": {
+      "H": 23.983117794516463,
+      "p": 6.196295792646438e-06,
+      "epsilon_squared": 0.01223323193907427,
+      "n": 1800
+    },
+    "role_pairwise": [
+      {
+        "comparison": "cascade vs unrelated (role)",
+        "mean_cascade": 0.046499303488056504,
+        "mean_unrelated": 0.03939675721857283,
+        "cohens_d": 0.09620789105478403,
+        "auc": 0.534395462748131,
+        "p_value": 0.04203081745569062,
+        "n_cascade": 431,
+        "n_unrelated": 900
+      },
+      {
+        "comparison": "mild vs unrelated (role)",
+        "mean_mild": 0.039780947572386836,
+        "mean_unrelated": 0.03939675721857283,
+        "cohens_d": 0.005365428533835255,
+        "auc": 0.582485193082208,
+        "p_value": 5.291625537410036e-07,
+        "n_mild": 469,
+        "n_unrelated": 900
+      },
+      {
+        "comparison": "cascade vs mild (role)",
+        "mean_cascade": 0.046499303488056504,
+        "mean_mild": 0.039780947572386836,
+        "cohens_d": 0.09595493703314134,
+        "auc": 0.4627459322545377,
+        "p_value": 0.053254680230550355,
+        "n_cascade": 431,
+        "n_mild": 469
+      }
+    ],
+    "type_match_all_pairs": {
+      "comparison": "type_match True vs False (all pairs)",
+      "mean_match": 0.03310664131231037,
+      "mean_no_match": 0.0439668884035547,
+      "cohens_d": -0.15098276125077162,
+      "auc": 0.4663081074670319,
+      "p_value": 0.03095952431836116,
+      "n_match": 459,
+      "n_no_match": 1341
+    },
+    "type_match_affected_only": {
+      "comparison": "homogeneous vs heterogeneous (affected only)",
+      "mean_homogeneous": 0.03310664131231037,
+      "mean_heterogeneous": 0.05329368674025242,
+      "cohens_d": -0.29102867478437594,
+      "auc": 0.3833311102218665,
+      "p_value": 1.3817769361971542e-09,
+      "n_homogeneous": 459,
+      "n_heterogeneous": 441
+    }
+  },
+  "failure_rate_cls": {
+    "n_applicable_cases": 240,
+    "n_failure_pattern": 102,
+    "failure_rate": 0.425
+  },
+  "failure_rate_patch": {
+    "n_applicable_cases": 240,
+    "n_failure_pattern": 91,
+    "failure_rate": 0.37916666666666665
+  }
+}

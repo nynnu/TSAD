@@ -1,0 +1,107 @@
+{
+  "A만 틀림 (B는 맞음)": {
+    "n_total": 287,
+    "examples": [
+      {
+        "case_id": "NA1_LAG10_002",
+        "pair": "2-5",
+        "role_i": "mild",
+        "role_j": "root",
+        "gt_edge": 1,
+        "corr_full": 0.08,
+        "corr_post": 0.901,
+        "attn_sim": 0.936
+      },
+      {
+        "case_id": "NA1_LAG10_010",
+        "pair": "2-5",
+        "role_i": "cascade",
+        "role_j": "root",
+        "gt_edge": 1,
+        "corr_full": 0.279,
+        "corr_post": 0.112,
+        "attn_sim": 0.943
+      },
+      {
+        "case_id": "NA1_LAG10_016",
+        "pair": "2-5",
+        "role_i": "root",
+        "role_j": "cascade",
+        "gt_edge": 1,
+        "corr_full": 0.282,
+        "corr_post": 0.116,
+        "attn_sim": 0.933
+      }
+    ]
+  },
+  "B만 틀림 (A는 맞음)": {
+    "n_total": 56,
+    "examples": [
+      {
+        "case_id": "NA1_LAG50_019",
+        "pair": "1-2",
+        "role_i": "cascade",
+        "role_j": "unrelated",
+        "gt_edge": 0,
+        "corr_full": 0.0,
+        "corr_post": 0.56,
+        "attn_sim": 0.8
+      },
+      {
+        "case_id": "NA1_LAG50_019",
+        "pair": "1-3",
+        "role_i": "cascade",
+        "role_j": "unrelated",
+        "gt_edge": 0,
+        "corr_full": 0.002,
+        "corr_post": 0.564,
+        "attn_sim": 0.799
+      },
+      {
+        "case_id": "NA1_LAG50_019",
+        "pair": "1-5",
+        "role_i": "cascade",
+        "role_j": "unrelated",
+        "gt_edge": 0,
+        "corr_full": 0.005,
+        "corr_post": 0.553,
+        "attn_sim": 0.806
+      }
+    ]
+  },
+  "둘 다 틀림": {
+    "n_total": 3244,
+    "examples": [
+      {
+        "case_id": "NA0_LAG10_000",
+        "pair": "1-2",
+        "role_i": "unrelated",
+        "role_j": "root",
+        "gt_edge": 0,
+        "corr_full": 0.323,
+        "corr_post": 0.996,
+        "attn_sim": 0.78
+      },
+      {
+        "case_id": "NA0_LAG10_000",
+        "pair": "1-3",
+        "role_i": "unrelated",
+        "role_j": "unrelated",
+        "gt_edge": 0,
+        "corr_full": 0.995,
+        "corr_post": 0.995,
+        "attn_sim": 0.986
+      },
+      {
+        "case_id": "NA0_LAG10_000",
+        "pair": "1-4",
+        "role_i": "unrelated",
+        "role_j": "unrelated",
+        "gt_edge": 0,
+        "corr_full": 0.995,
+        "corr_post": 0.996,
+        "attn_sim": 0.995
+      }
+    ]
+  }
+}

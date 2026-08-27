@@ -692,7 +692,7 @@ if __name__ == "__main__":
     parser.add_argument("--max_entities", type=int, default=5)
     args = parser.parse_args()
 
-    DEVICE = torch.device("cuda" if args.gpu and torch.cuda.is_available() else "cpu")
+    DEVICE = torch.device("cuda" if torch.cuda.is_available() else ("mps" if torch.backends.mps.is_available() else "cpu"))
     RESULTS_DIR = Path(args.output_dir)
     RESULTS_DIR.mkdir(parents=True, exist_ok=True)
     data_dir = Path(args.data_dir)

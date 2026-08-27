@@ -1,0 +1,2786 @@
+{
+  "machine-2-2_21405_21428": {
+    "entity": "machine-2-2",
+    "start": 21405,
+    "end": 21428,
+    "k": 6,
+    "gt_channels": [
+      18,
+      19,
+      20,
+      21,
+      27,
+      30
+    ],
+    "auto_confirmed": [
+      0,
+      2,
+      3,
+      18,
+      19,
+      20,
+      21,
+      23,
+      25,
+      27
+    ],
+    "overlay_channels": [
+      5,
+      6,
+      8,
+      9,
+      10,
+      12,
+      14,
+      22,
+      24,
+      29,
+      30,
+      31,
+      34,
+      35
+    ],
+    "n_groups": 2,
+    "group_logs": [
+      {
+        "group": [
+          5,
+          6,
+          8,
+          9,
+          10,
+          12,
+          14,
+          22
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [5, 6, 9, 10, 12, 22],\n    \"reason\": {\n        \"5\": \"Level shift around time index 180.\",\n        \"6\": \"Spike and subsequent drop around time index 180.\",\n        \"9\": \"Spike around time index 100.\",\n        \"10\": \"Spike around time index 100.\",\n        \"12\": \"Spike around time index 25.\",\n        \"22\": \"Spike around time index 123.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            5,
+            6,
+            9,
+            10,
+            12,
+            22
+          ],
+          "reason": {
+            "5": "Level shift around time index 180.",
+            "6": "Spike and subsequent drop around time index 180.",
+            "9": "Spike around time index 100.",
+            "10": "Spike around time index 100.",
+            "12": "Spike around time index 25.",
+            "22": "Spike around time index 123."
+          }
+        },
+        "picks": [
+          5,
+          6,
+          9,
+          10,
+          12,
+          22
+        ]
+      },
+      {
+        "group": [
+          24,
+          29,
+          30,
+          31,
+          34,
+          35
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [29, 30, 31],\n    \"reason\": {\n        \"29\": \"Sustained zero values from index 143 to 162 indicate a potential fault or sensor failure.\",\n        \"30\": \"Significant level shift around index 119 to 122 suggests an anomaly.\",\n        \"31\": \"Sharp spike at index 122 indicates a potential anomaly.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            29,
+            30,
+            31
+          ],
+          "reason": {
+            "29": "Sustained zero values from index 143 to 162 indicate a potential fault or sensor failure.",
+            "30": "Significant level shift around index 119 to 122 suggests an anomaly.",
+            "31": "Sharp spike at index 122 indicates a potential anomaly."
+          }
+        },
+        "picks": [
+          29,
+          30,
+          31
+        ]
+      }
+    ],
+    "all_vlm_picks": [
+      5,
+      6,
+      9,
+      10,
+      12,
+      22,
+      29,
+      30,
+      31
+    ],
+    "final_pred": [
+      0,
+      2,
+      3,
+      5,
+      6,
+      9,
+      10,
+      12,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      25,
+      27,
+      29,
+      30,
+      31
+    ],
+    "f1_ours_vlm_subplot8_noredband_heatmapz": 0.4799999999999999,
+    "f1_ours_no_vlm": 0.625,
+    "f1_k2": 0.28571428571428575
+  },
+  "machine-2-7_13623_13625": {
+    "entity": "machine-2-7",
+    "start": 13623,
+    "end": 13625,
+    "k": 4,
+    "gt_channels": [
+      8,
+      12,
+      13,
+      14
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      3,
+      8,
+      9,
+      11,
+      12,
+      13,
+      14,
+      23,
+      25,
+      29,
+      33
+    ],
+    "n_groups": 2,
+    "group_logs": [
+      {
+        "group": [
+          3,
+          8,
+          9,
+          11,
+          12,
+          13,
+          14,
+          23
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [8, 9, 11, 12, 13, 14, 23],\n    \"reason\": {\n        \"8\": \"Spike at time index 111.\",\n        \"9\": \"Spike at time index 141-165.\",\n        \"11\": \"Spike at time index 111.\",\n        \"12\": \"Spike at time index 111.\",\n        \"13\": \"Spike at time index 111.\",\n        \"14\": \"Spike at time index 111.\",\n        \"23\": \"Level shift starting around time index 170.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            8,
+            9,
+            11,
+            12,
+            13,
+            14,
+            23
+          ],
+          "reason": {
+            "8": "Spike at time index 111.",
+            "9": "Spike at time index 141-165.",
+            "11": "Spike at time index 111.",
+            "12": "Spike at time index 111.",
+            "13": "Spike at time index 111.",
+            "14": "Spike at time index 111.",
+            "23": "Level shift starting around time index 170."
+          }
+        },
+        "picks": [
+          8,
+          9,
+          11,
+          12,
+          13,
+          14,
+          23
+        ]
+      },
+      {
+        "group": [
+          25,
+          29,
+          33
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [25, 29],\n    \"reason\": {\n        \"25\": \"Channel 25 shows a gradual increase and a spike towards the end, indicating a level shift.\",\n        \"29\": \"Channel 29 has a prolonged period of constant maximum value, suggesting a potential sensor fault or saturation.\",\n        \"33\": \"Channel 33 shows frequent deviations but no clear pattern break or spike, likely normal variability.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            25,
+            29
+          ],
+          "reason": {
+            "25": "Channel 25 shows a gradual increase and a spike towards the end, indicating a level shift.",
+            "29": "Channel 29 has a prolonged period of constant maximum value, suggesting a potential sensor fault or saturation.",
+            "33": "Channel 33 shows frequent deviations but no clear pattern break or spike, likely normal variability."
+          }
+        },
+        "picks": [
+          25,
+          29
+        ]
+      }
+    ],
+    "all_vlm_picks": [
+      8,
+      9,
+      11,
+      12,
+      13,
+      14,
+      23,
+      25,
+      29
+    ],
+    "final_pred": [
+      8,
+      9,
+      11,
+      12,
+      13,
+      14,
+      23,
+      25,
+      29
+    ],
+    "f1_ours_vlm_subplot8_noredband_heatmapz": 0.6153846153846153,
+    "f1_ours_no_vlm": 0.6666666666666665,
+    "f1_k2": 0.2
+  },
+  "machine-3-5_15953_16057": {
+    "entity": "machine-3-5",
+    "start": 15953,
+    "end": 16057,
+    "k": 8,
+    "gt_channels": [
+      5,
+      6,
+      22,
+      23,
+      24,
+      25,
+      29,
+      31
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      0,
+      5,
+      6,
+      9,
+      10,
+      11,
+      14,
+      16,
+      19,
+      21,
+      22,
+      23,
+      24,
+      25,
+      27,
+      29,
+      30,
+      31
+    ],
+    "n_groups": 3,
+    "group_logs": [
+      {
+        "group": [
+          0,
+          5,
+          6,
+          9,
+          10,
+          11,
+          14,
+          16
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [0, 5, 6, 9, 10, 11, 16],\n    \"reason\": {\n        \"0\": \"Significant increase in values towards the end, indicating a spike.\",\n        \"5\": \"Sharp drop followed by a gradual increase, indicating a level shift.\",\n        \"6\": \"Sharp drop followed by a gradual increase, indicating a level shift.\",\n        \"9\": \"Multiple spikes throughout the time window.\",\n        \"10\": \"Multiple spikes throughout the time window.\",\n        \"11\": \"Multiple spikes throughout the time window.\",\n        \"16\": \"Sudden spike at the end of the time window.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            0,
+            5,
+            6,
+            9,
+            10,
+            11,
+            16
+          ],
+          "reason": {
+            "0": "Significant increase in values towards the end, indicating a spike.",
+            "5": "Sharp drop followed by a gradual increase, indicating a level shift.",
+            "6": "Sharp drop followed by a gradual increase, indicating a level shift.",
+            "9": "Multiple spikes throughout the time window.",
+            "10": "Multiple spikes throughout the time window.",
+            "11": "Multiple spikes throughout the time window.",
+            "16": "Sudden spike at the end of the time window."
+          }
+        },
+        "picks": [
+          0,
+          5,
+          6,
+          9,
+          10,
+          11,
+          16
+        ]
+      },
+      {
+        "group": [
+          19,
+          21,
+          22,
+          23,
+          24,
+          25,
+          27,
+          29
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [22, 23, 24, 25],\n    \"reason\": {\n        \"22\": \"Spike at time index 124.\",\n        \"23\": \"Pattern break and spike at time index 122.\",\n        \"24\": \"Spike at time index 162.\",\n        \"25\": \"Level shift and pattern break around time index 124.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            22,
+            23,
+            24,
+            25
+          ],
+          "reason": {
+            "22": "Spike at time index 124.",
+            "23": "Pattern break and spike at time index 122.",
+            "24": "Spike at time index 162.",
+            "25": "Level shift and pattern break around time index 124."
+          }
+        },
+        "picks": [
+          22,
+          23,
+          24,
+          25
+        ]
+      },
+      {
+        "group": [
+          30,
+          31
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [31],\n  \"reason\": \"Channel 31 shows a significant spike at time index 150, deviating strongly from its normal pattern. Channel 30 shows fluctuations but no clear anomaly like a spike or level shift.\"\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            31
+          ],
+          "reason": "Channel 31 shows a significant spike at time index 150, deviating strongly from its normal pattern. Channel 30 shows fluctuations but no clear anomaly like a spike or level shift."
+        },
+        "picks": [
+          31
+        ]
+      }
+    ],
+    "all_vlm_picks": [
+      0,
+      5,
+      6,
+      9,
+      10,
+      11,
+      16,
+      22,
+      23,
+      24,
+      25,
+      31
+    ],
+    "final_pred": [
+      0,
+      5,
+      6,
+      9,
+      10,
+      11,
+      16,
+      22,
+      23,
+      24,
+      25,
+      31
+    ],
+    "f1_ours_vlm_subplot8_noredband_heatmapz": 0.7000000000000001,
+    "f1_ours_no_vlm": 1.0,
+    "f1_k2": 0.875
+  },
+  "machine-1-1_18071_18528": {
+    "entity": "machine-1-1",
+    "start": 18071,
+    "end": 18528,
+    "k": 8,
+    "gt_channels": [
+      0,
+      1,
+      8,
+      9,
+      11,
+      12,
+      13,
+      14
+    ],
+    "auto_confirmed": [
+      0,
+      1,
+      2,
+      3,
+      12,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      27,
+      30,
+      31,
+      34,
+      35
+    ],
+    "overlay_channels": [
+      5,
+      6,
+      8,
+      9,
+      10,
+      11,
+      13,
+      15,
+      29,
+      32,
+      33
+    ],
+    "n_groups": 2,
+    "group_logs": [
+      {
+        "group": [
+          5,
+          6,
+          8,
+          9,
+          10,
+          11,
+          13,
+          15
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [5, 6, 9],\n    \"reason\": {\n        \"5\": \"Channel 5 shows a clear level shift starting around index 169.\",\n        \"6\": \"Channel 6 exhibits a spike around index 136 and a gradual increase in values.\",\n        \"9\": \"Channel 9 has a significant spike at index 112.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            5,
+            6,
+            9
+          ],
+          "reason": {
+            "5": "Channel 5 shows a clear level shift starting around index 169.",
+            "6": "Channel 6 exhibits a spike around index 136 and a gradual increase in values.",
+            "9": "Channel 9 has a significant spike at index 112."
+          }
+        },
+        "picks": [
+          5,
+          6,
+          9
+        ]
+      },
+      {
+        "group": [
+          29,
+          32,
+          33
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [29, 32],\n    \"reason\": {\n        \"29\": \"Shows a clear upward trend and level shift starting around index 200.\",\n        \"32\": \"Exhibits frequent spikes to maximum value, indicating instability.\",\n        \"33\": \"No clear pattern break or level shift; fluctuations are within normal range.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            29,
+            32
+          ],
+          "reason": {
+            "29": "Shows a clear upward trend and level shift starting around index 200.",
+            "32": "Exhibits frequent spikes to maximum value, indicating instability.",
+            "33": "No clear pattern break or level shift; fluctuations are within normal range."
+          }
+        },
+        "picks": [
+          29,
+          32
+        ]
+      }
+    ],
+    "all_vlm_picks": [
+      5,
+      6,
+      9,
+      29,
+      32
+    ],
+    "final_pred": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      6,
+      9,
+      12,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      27,
+      29,
+      30,
+      31,
+      32,
+      34,
+      35
+    ],
+    "f1_ours_vlm_subplot8_noredband_heatmapz": 0.25806451612903225,
+    "f1_ours_no_vlm": 0.23076923076923078,
+    "f1_k2": 0.25
+  },
+  "machine-1-5_10620_10637": {
+    "entity": "machine-1-5",
+    "start": 10620,
+    "end": 10637,
+    "k": 8,
+    "gt_channels": [
+      0,
+      1,
+      2,
+      3,
+      6,
+      23,
+      25,
+      31
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      6,
+      8,
+      12,
+      13,
+      14,
+      15,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      27,
+      29,
+      30,
+      32,
+      33,
+      34
+    ],
+    "n_groups": 4,
+    "group_logs": [
+      {
+        "group": [
+          0,
+          1,
+          2,
+          3,
+          5,
+          6,
+          8,
+          12
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [0, 1, 2, 3, 5, 6, 12],\n    \"reason\": {\n        \"0\": \"Spike at indices 107-112.\",\n        \"1\": \"Spike at indices 107-112.\",\n        \"2\": \"Spike at indices 107-112.\",\n        \"3\": \"Spike at indices 108-112.\",\n        \"5\": \"Spike at indices 108-112 and level shift starting at 203.\",\n        \"6\": \"Spike at indices 107-112.\",\n        \"12\": \"Spike at index 98.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            0,
+            1,
+            2,
+            3,
+            5,
+            6,
+            12
+          ],
+          "reason": {
+            "0": "Spike at indices 107-112.",
+            "1": "Spike at indices 107-112.",
+            "2": "Spike at indices 107-112.",
+            "3": "Spike at indices 108-112.",
+            "5": "Spike at indices 108-112 and level shift starting at 203.",
+            "6": "Spike at indices 107-112.",
+            "12": "Spike at index 98."
+          }
+        },
+        "picks": [
+          0,
+          1,
+          2,
+          3,
+          5,
+          6,
+          12
+        ]
+      },
+      {
+        "group": [
+          13,
+          14,
+          15,
+          18,
+          19,
+          20,
+          21,
+          22
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [18, 19, 20, 21, 22],\n    \"reason\": {\n        \"18\": \"Significant spike and level shift around time index 108-112.\",\n        \"19\": \"Spike and pattern break around time index 31 and 113.\",\n        \"20\": \"Spike and pattern break around time index 113.\",\n        \"21\": \"Spike and pattern break around time index 113.\",\n        \"22\": \"Spike and pattern break around time index 113.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            18,
+            19,
+            20,
+            21,
+            22
+          ],
+          "reason": {
+            "18": "Significant spike and level shift around time index 108-112.",
+            "19": "Spike and pattern break around time index 31 and 113.",
+            "20": "Spike and pattern break around time index 113.",
+            "21": "Spike and pattern break around time index 113.",
+            "22": "Spike and pattern break around time index 113."
+          }
+        },
+        "picks": [
+          18,
+          19,
+          20,
+          21,
+          22
+        ]
+      },
+      {
+        "group": [
+          23,
+          24,
+          25,
+          27,
+          29,
+          30,
+          32,
+          33
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [23, 25, 29],\n    \"reason\": {\n        \"23\": \"Significant spike at time index 108.\",\n        \"25\": \"Significant spike at time index 108.\",\n        \"29\": \"Sudden spike at time index 162.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            23,
+            25,
+            29
+          ],
+          "reason": {
+            "23": "Significant spike at time index 108.",
+            "25": "Significant spike at time index 108.",
+            "29": "Sudden spike at time index 162."
+          }
+        },
+        "picks": [
+          23,
+          25,
+          29
+        ]
+      },
+      {
+        "group": [
+          34
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [34],\n  \"reason\": \"Channel 34 shows a significant spike at time index 62, reaching a normalized value of 1.000, which deviates strongly from its normal range.\"\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            34
+          ],
+          "reason": "Channel 34 shows a significant spike at time index 62, reaching a normalized value of 1.000, which deviates strongly from its normal range."
+        },
+        "picks": [
+          34
+        ]
+      }
+    ],
+    "all_vlm_picks": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      6,
+      12,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      25,
+      29,
+      34
+    ],
+    "final_pred": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      6,
+      12,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      25,
+      29,
+      34
+    ],
+    "f1_ours_vlm_subplot8_noredband_heatmapz": 0.5833333333333334,
+    "f1_ours_no_vlm": 0.9333333333333333,
+    "f1_k2": 0.7999999999999999
+  },
+  "machine-1-8_2105_2171": {
+    "entity": "machine-1-8",
+    "start": 2105,
+    "end": 2171,
+    "k": 5,
+    "gt_channels": [
+      0,
+      8,
+      9,
+      10,
+      11
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      0,
+      1,
+      8,
+      9,
+      11,
+      12,
+      14,
+      15,
+      23,
+      25,
+      32
+    ],
+    "n_groups": 2,
+    "group_logs": [
+      {
+        "group": [
+          0,
+          1,
+          8,
+          9,
+          11,
+          12,
+          14,
+          15
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [0, 8, 9, 11, 12],\n    \"reason\": {\n        \"0\": \"Sustained high values indicating a level shift.\",\n        \"8\": \"Sharp spike at time index 80.\",\n        \"9\": \"Multiple spikes, especially around time index 80.\",\n        \"11\": \"Multiple spikes, especially around time index 80.\",\n        \"12\": \"Multiple spikes, especially around time index 80.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            0,
+            8,
+            9,
+            11,
+            12
+          ],
+          "reason": {
+            "0": "Sustained high values indicating a level shift.",
+            "8": "Sharp spike at time index 80.",
+            "9": "Multiple spikes, especially around time index 80.",
+            "11": "Multiple spikes, especially around time index 80.",
+            "12": "Multiple spikes, especially around time index 80."
+          }
+        },
+        "picks": [
+          0,
+          8,
+          9,
+          11,
+          12
+        ]
+      },
+      {
+        "group": [
+          23,
+          25,
+          32
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [32],\n  \"reason\": {\n    \"23\": \"No significant deviation; values are within a decreasing trend.\",\n    \"25\": \"No significant deviation; values are within a decreasing trend.\",\n    \"32\": \"Consistent high deviation at multiple points, indicating a pattern break or level shift.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            32
+          ],
+          "reason": {
+            "23": "No significant deviation; values are within a decreasing trend.",
+            "25": "No significant deviation; values are within a decreasing trend.",
+            "32": "Consistent high deviation at multiple points, indicating a pattern break or level shift."
+          }
+        },
+        "picks": [
+          32
+        ]
+      }
+    ],
+    "all_vlm_picks": [
+      0,
+      8,
+      9,
+      11,
+      12,
+      32
+    ],
+    "final_pred": [
+      0,
+      8,
+      9,
+      11,
+      12,
+      32
+    ],
+    "f1_ours_vlm_subplot8_noredband_heatmapz": 0.7272727272727272,
+    "f1_ours_no_vlm": 0.4000000000000001,
+    "f1_k2": 0.0
+  },
+  "machine-3-8_21405_21548": {
+    "entity": "machine-3-8",
+    "start": 21405,
+    "end": 21548,
+    "k": 4,
+    "gt_channels": [
+      8,
+      9,
+      11,
+      12
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      0,
+      2,
+      3,
+      5,
+      6,
+      8,
+      9,
+      11,
+      12,
+      13,
+      14,
+      20,
+      23,
+      25,
+      31,
+      34,
+      35
+    ],
+    "n_groups": 3,
+    "group_logs": [
+      {
+        "group": [
+          0,
+          2,
+          3,
+          5,
+          6,
+          8,
+          9,
+          11
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [0, 2, 3, 5, 6, 9, 11],\n    \"reason\": {\n        \"0\": \"Sustained level shift around time index 136.\",\n        \"2\": \"Spike at time index 118.\",\n        \"3\": \"Spike at time index 118.\",\n        \"5\": \"Spike at time index 21.\",\n        \"6\": \"Spike at time index 21.\",\n        \"9\": \"Spike at time index 40.\",\n        \"11\": \"Spike at time index 39.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            0,
+            2,
+            3,
+            5,
+            6,
+            9,
+            11
+          ],
+          "reason": {
+            "0": "Sustained level shift around time index 136.",
+            "2": "Spike at time index 118.",
+            "3": "Spike at time index 118.",
+            "5": "Spike at time index 21.",
+            "6": "Spike at time index 21.",
+            "9": "Spike at time index 40.",
+            "11": "Spike at time index 39."
+          }
+        },
+        "picks": [
+          0,
+          2,
+          3,
+          5,
+          6,
+          9,
+          11
+        ]
+      },
+      {
+        "group": [
+          12,
+          13,
+          14,
+          20,
+          23,
+          25,
+          31,
+          34
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [12, 20, 23, 25, 31, 34],\n    \"reason\": {\n        \"12\": \"Multiple spikes deviating from normal range.\",\n        \"20\": \"Sustained level shift and pattern break.\",\n        \"23\": \"Sustained level shift and pattern break.\",\n        \"25\": \"Sustained level shift and pattern break.\",\n        \"31\": \"Sustained level shift and pattern break.\",\n        \"34\": \"Pattern break with multiple level shifts.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            12,
+            20,
+            23,
+            25,
+            31,
+            34
+          ],
+          "reason": {
+            "12": "Multiple spikes deviating from normal range.",
+            "20": "Sustained level shift and pattern break.",
+            "23": "Sustained level shift and pattern break.",
+            "25": "Sustained level shift and pattern break.",
+            "31": "Sustained level shift and pattern break.",
+            "34": "Pattern break with multiple level shifts."
+          }
+        },
+        "picks": [
+          12,
+          20,
+          23,
+          25,
+          31,
+          34
+        ]
+      },
+      {
+        "group": [
+          35
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [35],\n  \"reason\": \"Channel 35 shows a sustained level shift to the maximum normalized value of 1.000 at multiple time points, indicating a genuine anomaly.\"\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            35
+          ],
+          "reason": "Channel 35 shows a sustained level shift to the maximum normalized value of 1.000 at multiple time points, indicating a genuine anomaly."
+        },
+        "picks": [
+          35
+        ]
+      }
+    ],
+    "all_vlm_picks": [
+      0,
+      2,
+      3,
+      5,
+      6,
+      9,
+      11,
+      12,
+      20,
+      23,
+      25,
+      31,
+      34,
+      35
+    ],
+    "final_pred": [
+      0,
+      2,
+      3,
+      5,
+      6,
+      9,
+      11,
+      12,
+      20,
+      23,
+      25,
+      31,
+      34,
+      35
+    ],
+    "f1_ours_vlm_subplot8_noredband_heatmapz": 0.3333333333333333,
+    "f1_ours_no_vlm": 0.4444444444444445,
+    "f1_k2": 0.0
+  },
+  "machine-1-8_3594_3598": {
+    "entity": "machine-1-8",
+    "start": 3594,
+    "end": 3598,
+    "k": 5,
+    "gt_channels": [
+      6,
+      8,
+      12,
+      13,
+      14
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      0,
+      1,
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      14,
+      15,
+      21,
+      24,
+      27,
+      29,
+      30,
+      32
+    ],
+    "n_groups": 2,
+    "group_logs": [
+      {
+        "group": [
+          0,
+          1,
+          6,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [0, 8, 9, 11, 12],\n    \"reason\": {\n        \"0\": \"Significant level shift and spikes around indices 150-223.\",\n        \"8\": \"Sharp spike at index 111.\",\n        \"9\": \"Multiple spikes and zero values indicating potential anomalies.\",\n        \"11\": \"Increased variability and spikes around indices 110-222.\",\n        \"12\": \"Sharp spike at index 111 and prolonged zero values.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            0,
+            8,
+            9,
+            11,
+            12
+          ],
+          "reason": {
+            "0": "Significant level shift and spikes around indices 150-223.",
+            "8": "Sharp spike at index 111.",
+            "9": "Multiple spikes and zero values indicating potential anomalies.",
+            "11": "Increased variability and spikes around indices 110-222.",
+            "12": "Sharp spike at index 111 and prolonged zero values."
+          }
+        },
+        "picks": [
+          0,
+          8,
+          9,
+          11,
+          12
+        ]
+      },
+      {
+        "group": [
+          14,
+          15,
+          21,
+          24,
+          27,
+          29,
+          30,
+          32
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [14, 15, 32],\n    \"reason\": {\n        \"14\": \"Significant spike around time index 111 and elevated values thereafter.\",\n        \"15\": \"Multiple spikes throughout the time window, indicating instability.\",\n        \"32\": \"Erratic behavior with frequent spikes and drops, deviating from normal pattern.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            14,
+            15,
+            32
+          ],
+          "reason": {
+            "14": "Significant spike around time index 111 and elevated values thereafter.",
+            "15": "Multiple spikes throughout the time window, indicating instability.",
+            "32": "Erratic behavior with frequent spikes and drops, deviating from normal pattern."
+          }
+        },
+        "picks": [
+          14,
+          15,
+          32
+        ]
+      }
+    ],
+    "all_vlm_picks": [
+      0,
+      8,
+      9,
+      11,
+      12,
+      14,
+      15,
+      32
+    ],
+    "final_pred": [
+      0,
+      8,
+      9,
+      11,
+      12,
+      14,
+      15,
+      32
+    ],
+    "f1_ours_vlm_subplot8_noredband_heatmapz": 0.4615384615384615,
+    "f1_ours_no_vlm": 0.28571428571428575,
+    "f1_k2": 0.15384615384615385
+  },
+  "machine-3-1_10696_10717": {
+    "entity": "machine-3-1",
+    "start": 10696,
+    "end": 10717,
+    "k": 8,
+    "gt_channels": [
+      0,
+      1,
+      18,
+      19,
+      20,
+      21,
+      27,
+      30
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      18,
+      19,
+      20,
+      21,
+      24,
+      27,
+      29,
+      30,
+      32,
+      33,
+      34,
+      35
+    ],
+    "n_groups": 4,
+    "group_logs": [
+      {
+        "group": [
+          0,
+          1,
+          2,
+          3,
+          5,
+          6,
+          8,
+          9
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [0, 1, 2, 3, 5, 6, 8, 9],\n    \"reason\": {\n        \"0\": \"Spike at index 102.\",\n        \"1\": \"Spike at index 102.\",\n        \"2\": \"Spike at index 102.\",\n        \"3\": \"Level shift starting around index 134.\",\n        \"5\": \"Frequent spikes and high values around index 148.\",\n        \"6\": \"Spike at index 102.\",\n        \"8\": \"Spike at index 152.\",\n        \"9\": \"Spike at index 151.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            0,
+            1,
+            2,
+            3,
+            5,
+            6,
+            8,
+            9
+          ],
+          "reason": {
+            "0": "Spike at index 102.",
+            "1": "Spike at index 102.",
+            "2": "Spike at index 102.",
+            "3": "Level shift starting around index 134.",
+            "5": "Frequent spikes and high values around index 148.",
+            "6": "Spike at index 102.",
+            "8": "Spike at index 152.",
+            "9": "Spike at index 151."
+          }
+        },
+        "picks": [
+          0,
+          1,
+          2,
+          3,
+          5,
+          6,
+          8,
+          9
+        ]
+      },
+      {
+        "group": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          18,
+          19
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [11, 12, 13, 14, 18, 19],\n    \"reason\": {\n        \"11\": \"Multiple spikes and irregular patterns.\",\n        \"12\": \"Significant spikes and deviations from baseline.\",\n        \"13\": \"Sharp spikes indicating anomalies.\",\n        \"14\": \"Irregular spikes and deviations.\",\n        \"18\": \"Level shift and pattern change.\",\n        \"19\": \"Level shift and pattern change.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            11,
+            12,
+            13,
+            14,
+            18,
+            19
+          ],
+          "reason": {
+            "11": "Multiple spikes and irregular patterns.",
+            "12": "Significant spikes and deviations from baseline.",
+            "13": "Sharp spikes indicating anomalies.",
+            "14": "Irregular spikes and deviations.",
+            "18": "Level shift and pattern change.",
+            "19": "Level shift and pattern change."
+          }
+        },
+        "picks": [
+          11,
+          12,
+          13,
+          14,
+          18,
+          19
+        ]
+      },
+      {
+        "group": [
+          20,
+          21,
+          24,
+          27,
+          29,
+          30,
+          32,
+          33
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [20, 21, 24, 27, 29, 30, 32],\n    \"reason\": {\n        \"20\": \"Spike at index 102.\",\n        \"21\": \"Spike at index 102.\",\n        \"24\": \"Spike at index 134.\",\n        \"27\": \"Spike at index 102.\",\n        \"29\": \"Multiple spikes at indices 93, 114, 115, 132, 135, 152, 172, 175.\",\n        \"30\": \"Spike at index 102.\",\n        \"32\": \"Sustained high values from index 137 to 161.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            20,
+            21,
+            24,
+            27,
+            29,
+            30,
+            32
+          ],
+          "reason": {
+            "20": "Spike at index 102.",
+            "21": "Spike at index 102.",
+            "24": "Spike at index 134.",
+            "27": "Spike at index 102.",
+            "29": "Multiple spikes at indices 93, 114, 115, 132, 135, 152, 172, 175.",
+            "30": "Spike at index 102.",
+            "32": "Sustained high values from index 137 to 161."
+          }
+        },
+        "picks": [
+          20,
+          21,
+          24,
+          27,
+          29,
+          30,
+          32
+        ]
+      },
+      {
+        "group": [
+          34,
+          35
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [34, 35],\n    \"reason\": \"Both channels 34 and 35 show a significant spike at time index 101, reaching a normalized value of 1.000, indicating a clear anomaly.\"\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            34,
+            35
+          ],
+          "reason": "Both channels 34 and 35 show a significant spike at time index 101, reaching a normalized value of 1.000, indicating a clear anomaly."
+        },
+        "picks": [
+          34,
+          35
+        ]
+      }
+    ],
+    "all_vlm_picks": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      6,
+      8,
+      9,
+      11,
+      12,
+      13,
+      14,
+      18,
+      19,
+      20,
+      21,
+      24,
+      27,
+      29,
+      30,
+      32,
+      34,
+      35
+    ],
+    "final_pred": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      6,
+      8,
+      9,
+      11,
+      12,
+      13,
+      14,
+      18,
+      19,
+      20,
+      21,
+      24,
+      27,
+      29,
+      30,
+      32,
+      34,
+      35
+    ],
+    "f1_ours_vlm_subplot8_noredband_heatmapz": 0.5161290322580645,
+    "f1_ours_no_vlm": 0.25,
+    "f1_k2": 0.13333333333333333
+  },
+  "machine-1-6_5167_5172": {
+    "entity": "machine-1-6",
+    "start": 5167,
+    "end": 5172,
+    "k": 5,
+    "gt_channels": [
+      8,
+      9,
+      10,
+      12,
+      17
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      0,
+      1,
+      2,
+      4,
+      5,
+      8,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      22,
+      23,
+      29,
+      31
+    ],
+    "n_groups": 2,
+    "group_logs": [
+      {
+        "group": [
+          0,
+          1,
+          2,
+          4,
+          5,
+          8,
+          12,
+          13
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [0, 1, 2, 4, 5, 8, 12, 13],\n    \"reason\": {\n        \"0\": \"Spike at index 111.\",\n        \"1\": \"Multiple spikes, notably at index 111 and 208.\",\n        \"2\": \"Spike at index 0 and 111.\",\n        \"4\": \"Level shift from index 0 to 4.\",\n        \"5\": \"Level shift and spike around index 169.\",\n        \"8\": \"Spike at index 111.\",\n        \"12\": \"Spike at index 112.\",\n        \"13\": \"Spike at index 112.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            0,
+            1,
+            2,
+            4,
+            5,
+            8,
+            12,
+            13
+          ],
+          "reason": {
+            "0": "Spike at index 111.",
+            "1": "Multiple spikes, notably at index 111 and 208.",
+            "2": "Spike at index 0 and 111.",
+            "4": "Level shift from index 0 to 4.",
+            "5": "Level shift and spike around index 169.",
+            "8": "Spike at index 111.",
+            "12": "Spike at index 112.",
+            "13": "Spike at index 112."
+          }
+        },
+        "picks": [
+          0,
+          1,
+          2,
+          4,
+          5,
+          8,
+          12,
+          13
+        ]
+      },
+      {
+        "group": [
+          14,
+          15,
+          16,
+          17,
+          22,
+          23,
+          29,
+          31
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [14, 15, 16, 17, 23, 29],\n    \"reason\": {\n        \"14\": \"Spike at index 112.\",\n        \"15\": \"Spike at index 113.\",\n        \"16\": \"Spike at index 23.\",\n        \"17\": \"Spike at index 110.\",\n        \"23\": \"Spike at index 112.\",\n        \"29\": \"Level shift starting around index 147.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            14,
+            15,
+            16,
+            17,
+            23,
+            29
+          ],
+          "reason": {
+            "14": "Spike at index 112.",
+            "15": "Spike at index 113.",
+            "16": "Spike at index 23.",
+            "17": "Spike at index 110.",
+            "23": "Spike at index 112.",
+            "29": "Level shift starting around index 147."
+          }
+        },
+        "picks": [
+          14,
+          15,
+          16,
+          17,
+          23,
+          29
+        ]
+      }
+    ],
+    "all_vlm_picks": [
+      0,
+      1,
+      2,
+      4,
+      5,
+      8,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      23,
+      29
+    ],
+    "final_pred": [
+      0,
+      1,
+      2,
+      4,
+      5,
+      8,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      23,
+      29
+    ],
+    "f1_ours_vlm_subplot8_noredband_heatmapz": 0.3157894736842105,
+    "f1_ours_no_vlm": 0.28571428571428575,
+    "f1_k2": 0.3076923076923077
+  },
+  "machine-2-9_24475_24478": {
+    "entity": "machine-2-9",
+    "start": 24475,
+    "end": 24478,
+    "k": 4,
+    "gt_channels": [
+      8,
+      12,
+      13,
+      14
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      1,
+      2,
+      6,
+      8,
+      9,
+      11,
+      12,
+      13,
+      14,
+      19,
+      20,
+      21,
+      27,
+      30,
+      31
+    ],
+    "n_groups": 2,
+    "group_logs": [
+      {
+        "group": [
+          1,
+          2,
+          6,
+          8,
+          9,
+          11,
+          12,
+          13
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [1, 2, 8, 9, 11, 12, 13],\n    \"reason\": {\n        \"1\": \"Multiple spikes, especially around index 71.\",\n        \"2\": \"Significant spike around index 71.\",\n        \"8\": \"Sharp spike at index 111.\",\n        \"9\": \"Sharp spike at index 31.\",\n        \"11\": \"Multiple spikes, especially around index 111.\",\n        \"12\": \"Sharp spike at index 111.\",\n        \"13\": \"Sharp spike at index 112.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            1,
+            2,
+            8,
+            9,
+            11,
+            12,
+            13
+          ],
+          "reason": {
+            "1": "Multiple spikes, especially around index 71.",
+            "2": "Significant spike around index 71.",
+            "8": "Sharp spike at index 111.",
+            "9": "Sharp spike at index 31.",
+            "11": "Multiple spikes, especially around index 111.",
+            "12": "Sharp spike at index 111.",
+            "13": "Sharp spike at index 112."
+          }
+        },
+        "picks": [
+          1,
+          2,
+          8,
+          9,
+          11,
+          12,
+          13
+        ]
+      },
+      {
+        "group": [
+          14,
+          19,
+          20,
+          21,
+          27,
+          30,
+          31
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [14, 31],\n    \"reason\": {\n        \"14\": \"Spike observed around time index 111.\",\n        \"31\": \"Level shift observed around time index 75 to 97.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            14,
+            31
+          ],
+          "reason": {
+            "14": "Spike observed around time index 111.",
+            "31": "Level shift observed around time index 75 to 97."
+          }
+        },
+        "picks": [
+          14,
+          31
+        ]
+      }
+    ],
+    "all_vlm_picks": [
+      1,
+      2,
+      8,
+      9,
+      11,
+      12,
+      13,
+      14,
+      31
+    ],
+    "final_pred": [
+      1,
+      2,
+      8,
+      9,
+      11,
+      12,
+      13,
+      14,
+      31
+    ],
+    "f1_ours_vlm_subplot8_noredband_heatmapz": 0.6153846153846153,
+    "f1_ours_no_vlm": 0.8,
+    "f1_k2": 0.7272727272727273
+  },
+  "machine-3-2_3080_3917": {
+    "entity": "machine-3-2",
+    "start": 3080,
+    "end": 3917,
+    "k": 4,
+    "gt_channels": [
+      8,
+      12,
+      13,
+      16
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      0,
+      12,
+      15,
+      16,
+      18,
+      19,
+      25,
+      32,
+      34,
+      35
+    ],
+    "n_groups": 2,
+    "group_logs": [
+      {
+        "group": [
+          0,
+          12,
+          15,
+          16,
+          18,
+          19,
+          25,
+          32
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [0, 12, 15, 16, 18, 19, 32],\n    \"reason\": {\n        \"0\": \"Multiple spikes and a level shift around index 200.\",\n        \"12\": \"Significant spike at index 114.\",\n        \"15\": \"Significant spike at index 114.\",\n        \"16\": \"Two significant spikes at indices 36 and 52.\",\n        \"18\": \"Spike at index 206 and a drop around index 200.\",\n        \"19\": \"Significant spike at index 114.\",\n        \"32\": \"Significant spike at index 114.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            0,
+            12,
+            15,
+            16,
+            18,
+            19,
+            32
+          ],
+          "reason": {
+            "0": "Multiple spikes and a level shift around index 200.",
+            "12": "Significant spike at index 114.",
+            "15": "Significant spike at index 114.",
+            "16": "Two significant spikes at indices 36 and 52.",
+            "18": "Spike at index 206 and a drop around index 200.",
+            "19": "Significant spike at index 114.",
+            "32": "Significant spike at index 114."
+          }
+        },
+        "picks": [
+          0,
+          12,
+          15,
+          16,
+          18,
+          19,
+          32
+        ]
+      },
+      {
+        "group": [
+          34,
+          35
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [34, 35],\n    \"reason\": \"Channel 34 shows frequent drops to zero, indicating potential anomalies. Channel 35 also exhibits similar drops to zero, suggesting anomalous behavior.\"\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            34,
+            35
+          ],
+          "reason": "Channel 34 shows frequent drops to zero, indicating potential anomalies. Channel 35 also exhibits similar drops to zero, suggesting anomalous behavior."
+        },
+        "picks": [
+          34,
+          35
+        ]
+      }
+    ],
+    "all_vlm_picks": [
+      0,
+      12,
+      15,
+      16,
+      18,
+      19,
+      32,
+      34,
+      35
+    ],
+    "final_pred": [
+      0,
+      12,
+      15,
+      16,
+      18,
+      19,
+      32,
+      34,
+      35
+    ],
+    "f1_ours_vlm_subplot8_noredband_heatmapz": 0.30769230769230765,
+    "f1_ours_no_vlm": 0.25,
+    "f1_k2": 0.16666666666666666
+  },
+  "machine-2-5_16524_16549": {
+    "entity": "machine-2-5",
+    "start": 16524,
+    "end": 16549,
+    "k": 5,
+    "gt_channels": [
+      0,
+      8,
+      12,
+      13,
+      14
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      0,
+      5,
+      6,
+      8,
+      9,
+      11,
+      12,
+      13,
+      14,
+      29,
+      31,
+      32,
+      33
+    ],
+    "n_groups": 2,
+    "group_logs": [
+      {
+        "group": [
+          0,
+          5,
+          6,
+          8,
+          9,
+          11,
+          12,
+          13
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [0, 5, 8, 9, 11, 12, 13],\n    \"reason\": {\n        \"0\": \"Multiple spikes and high deviations from normal range.\",\n        \"5\": \"Significant level shift and deviations.\",\n        \"8\": \"Sharp spike indicating a deviation.\",\n        \"9\": \"Prolonged zero values indicating a potential issue.\",\n        \"11\": \"Frequent spikes and pattern changes.\",\n        \"12\": \"Sharp spike and prolonged zero values.\",\n        \"13\": \"Sharp spike indicating a deviation.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            0,
+            5,
+            8,
+            9,
+            11,
+            12,
+            13
+          ],
+          "reason": {
+            "0": "Multiple spikes and high deviations from normal range.",
+            "5": "Significant level shift and deviations.",
+            "8": "Sharp spike indicating a deviation.",
+            "9": "Prolonged zero values indicating a potential issue.",
+            "11": "Frequent spikes and pattern changes.",
+            "12": "Sharp spike and prolonged zero values.",
+            "13": "Sharp spike indicating a deviation."
+          }
+        },
+        "picks": [
+          0,
+          5,
+          8,
+          9,
+          11,
+          12,
+          13
+        ]
+      },
+      {
+        "group": [
+          14,
+          29,
+          31,
+          32,
+          33
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [14, 29, 31, 32, 33],\n    \"reason\": {\n        \"14\": \"Spike and level shift around index 100.\",\n        \"29\": \"Prolonged zero values followed by spikes at indices 168, 169, and 178.\",\n        \"31\": \"Pattern break with prolonged zero values and fluctuations.\",\n        \"32\": \"Spike and level shift around indices 108 to 123.\",\n        \"33\": \"Spike at index 72 and prolonged zero values.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            14,
+            29,
+            31,
+            32,
+            33
+          ],
+          "reason": {
+            "14": "Spike and level shift around index 100.",
+            "29": "Prolonged zero values followed by spikes at indices 168, 169, and 178.",
+            "31": "Pattern break with prolonged zero values and fluctuations.",
+            "32": "Spike and level shift around indices 108 to 123.",
+            "33": "Spike at index 72 and prolonged zero values."
+          }
+        },
+        "picks": [
+          14,
+          29,
+          31,
+          32,
+          33
+        ]
+      }
+    ],
+    "all_vlm_picks": [
+      0,
+      5,
+      8,
+      9,
+      11,
+      12,
+      13,
+      14,
+      29,
+      31,
+      32,
+      33
+    ],
+    "final_pred": [
+      0,
+      5,
+      8,
+      9,
+      11,
+      12,
+      13,
+      14,
+      29,
+      31,
+      32,
+      33
+    ],
+    "f1_ours_vlm_subplot8_noredband_heatmapz": 0.5882352941176471,
+    "f1_ours_no_vlm": 0.22222222222222224,
+    "f1_k2": 0.15384615384615385
+  },
+  "machine-1-6_15052_15055": {
+    "entity": "machine-1-6",
+    "start": 15052,
+    "end": 15055,
+    "k": 4,
+    "gt_channels": [
+      8,
+      9,
+      10,
+      12
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      0,
+      1,
+      3,
+      5,
+      6,
+      8,
+      11,
+      12,
+      14,
+      15,
+      21,
+      22,
+      23,
+      27,
+      29,
+      30,
+      31,
+      33
+    ],
+    "n_groups": 3,
+    "group_logs": [
+      {
+        "group": [
+          0,
+          1,
+          3,
+          5,
+          6,
+          8,
+          11,
+          12
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [0, 1, 3, 5, 6, 8, 11, 12],\n    \"reason\": {\n        \"0\": \"Spike at index 112.\",\n        \"1\": \"Spike at index 95.\",\n        \"3\": \"Spike at index 95.\",\n        \"5\": \"Spike at index 51 and drop at index 114.\",\n        \"6\": \"Spike at index 51.\",\n        \"8\": \"Spike at index 112.\",\n        \"11\": \"Spike at index 95.\",\n        \"12\": \"Spike at index 112.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            0,
+            1,
+            3,
+            5,
+            6,
+            8,
+            11,
+            12
+          ],
+          "reason": {
+            "0": "Spike at index 112.",
+            "1": "Spike at index 95.",
+            "3": "Spike at index 95.",
+            "5": "Spike at index 51 and drop at index 114.",
+            "6": "Spike at index 51.",
+            "8": "Spike at index 112.",
+            "11": "Spike at index 95.",
+            "12": "Spike at index 112."
+          }
+        },
+        "picks": [
+          0,
+          1,
+          3,
+          5,
+          6,
+          8,
+          11,
+          12
+        ]
+      },
+      {
+        "group": [
+          14,
+          15,
+          21,
+          22,
+          23,
+          27,
+          29,
+          30
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [14, 21, 22, 23, 27, 29, 30],\n    \"reason\": {\n        \"14\": \"Spike at index 95.\",\n        \"21\": \"Level shift starting around index 115.\",\n        \"22\": \"Level shift starting around index 115.\",\n        \"23\": \"Sudden drop around index 78.\",\n        \"27\": \"Level shift starting around index 115.\",\n        \"29\": \"Level shift starting around index 120.\",\n        \"30\": \"Level shift starting around index 115.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            14,
+            21,
+            22,
+            23,
+            27,
+            29,
+            30
+          ],
+          "reason": {
+            "14": "Spike at index 95.",
+            "21": "Level shift starting around index 115.",
+            "22": "Level shift starting around index 115.",
+            "23": "Sudden drop around index 78.",
+            "27": "Level shift starting around index 115.",
+            "29": "Level shift starting around index 120.",
+            "30": "Level shift starting around index 115."
+          }
+        },
+        "picks": [
+          14,
+          21,
+          22,
+          23,
+          27,
+          29,
+          30
+        ]
+      },
+      {
+        "group": [
+          31,
+          33
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [31, 33],\n  \"reason\": {\n    \"31\": \"Channel 31 shows a significant drop and recovery around time index 80, indicating a pattern break.\",\n    \"33\": \"Channel 33 exhibits a sharp spike at time index 90, indicating a significant deviation from normal behavior.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            31,
+            33
+          ],
+          "reason": {
+            "31": "Channel 31 shows a significant drop and recovery around time index 80, indicating a pattern break.",
+            "33": "Channel 33 exhibits a sharp spike at time index 90, indicating a significant deviation from normal behavior."
+          }
+        },
+        "picks": [
+          31,
+          33
+        ]
+      }
+    ],
+    "all_vlm_picks": [
+      0,
+      1,
+      3,
+      5,
+      6,
+      8,
+      11,
+      12,
+      14,
+      21,
+      22,
+      23,
+      27,
+      29,
+      30,
+      31,
+      33
+    ],
+    "final_pred": [
+      0,
+      1,
+      3,
+      5,
+      6,
+      8,
+      11,
+      12,
+      14,
+      21,
+      22,
+      23,
+      27,
+      29,
+      30,
+      31,
+      33
+    ],
+    "f1_ours_vlm_subplot8_noredband_heatmapz": 0.19047619047619047,
+    "f1_ours_no_vlm": 0.0,
+    "f1_k2": 0.16666666666666666
+  },
+  "machine-1-7_12359_12374": {
+    "entity": "machine-1-7",
+    "start": 12359,
+    "end": 12374,
+    "k": 7,
+    "gt_channels": [
+      0,
+      8,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      0,
+      1,
+      2,
+      5,
+      8,
+      9,
+      11,
+      12,
+      13,
+      14,
+      15,
+      22,
+      29,
+      32
+    ],
+    "n_groups": 2,
+    "group_logs": [
+      {
+        "group": [
+          0,
+          1,
+          2,
+          5,
+          8,
+          9,
+          11,
+          12
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [0, 1, 2, 5, 8, 9, 11, 12],\n    \"reason\": {\n        \"0\": \"Spike at index 117.\",\n        \"1\": \"Spike at index 117.\",\n        \"2\": \"Spike at index 117.\",\n        \"5\": \"Level shift starting around index 127.\",\n        \"8\": \"Spike at index 117.\",\n        \"9\": \"Spike at index 175.\",\n        \"11\": \"Spike at index 116.\",\n        \"12\": \"Spike at index 116.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            0,
+            1,
+            2,
+            5,
+            8,
+            9,
+            11,
+            12
+          ],
+          "reason": {
+            "0": "Spike at index 117.",
+            "1": "Spike at index 117.",
+            "2": "Spike at index 117.",
+            "5": "Level shift starting around index 127.",
+            "8": "Spike at index 117.",
+            "9": "Spike at index 175.",
+            "11": "Spike at index 116.",
+            "12": "Spike at index 116."
+          }
+        },
+        "picks": [
+          0,
+          1,
+          2,
+          5,
+          8,
+          9,
+          11,
+          12
+        ]
+      },
+      {
+        "group": [
+          13,
+          14,
+          15,
+          22,
+          29,
+          32
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [13, 14, 15],\n    \"reason\": {\n        \"13\": \"Spike at time index 117 with a value of 1.000.\",\n        \"14\": \"Spike at time index 116 with a value of 1.000.\",\n        \"15\": \"Spike at time index 116 with a value of 1.000.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            13,
+            14,
+            15
+          ],
+          "reason": {
+            "13": "Spike at time index 117 with a value of 1.000.",
+            "14": "Spike at time index 116 with a value of 1.000.",
+            "15": "Spike at time index 116 with a value of 1.000."
+          }
+        },
+        "picks": [
+          13,
+          14,
+          15
+        ]
+      }
+    ],
+    "all_vlm_picks": [
+      0,
+      1,
+      2,
+      5,
+      8,
+      9,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "final_pred": [
+      0,
+      1,
+      2,
+      5,
+      8,
+      9,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "f1_ours_vlm_subplot8_noredband_heatmapz": 0.7777777777777778,
+    "f1_ours_no_vlm": 0.25,
+    "f1_k2": 0.923076923076923
+  },
+  "machine-1-2_4629_4688": {
+    "entity": "machine-1-2",
+    "start": 4629,
+    "end": 4688,
+    "k": 6,
+    "gt_channels": [
+      8,
+      9,
+      10,
+      12,
+      14,
+      17
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      3,
+      4,
+      5,
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      27,
+      30,
+      31,
+      33,
+      34,
+      35
+    ],
+    "n_groups": 4,
+    "group_logs": [
+      {
+        "group": [
+          3,
+          4,
+          5,
+          6,
+          8,
+          9,
+          10,
+          11
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [3, 4, 5, 6, 8, 9, 10, 11],\n    \"reason\": {\n        \"3\": \"Multiple spikes and deviations from normal range.\",\n        \"4\": \"Sustained high level followed by a drop.\",\n        \"5\": \"Frequent spikes and high deviations.\",\n        \"6\": \"Multiple spikes and high deviations.\",\n        \"8\": \"Significant spike at time index 137.\",\n        \"9\": \"Frequent spikes and high deviations.\",\n        \"10\": \"Significant spike at time index 137.\",\n        \"11\": \"Sustained high level with multiple spikes.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            3,
+            4,
+            5,
+            6,
+            8,
+            9,
+            10,
+            11
+          ],
+          "reason": {
+            "3": "Multiple spikes and deviations from normal range.",
+            "4": "Sustained high level followed by a drop.",
+            "5": "Frequent spikes and high deviations.",
+            "6": "Multiple spikes and high deviations.",
+            "8": "Significant spike at time index 137.",
+            "9": "Frequent spikes and high deviations.",
+            "10": "Significant spike at time index 137.",
+            "11": "Sustained high level with multiple spikes."
+          }
+        },
+        "picks": [
+          3,
+          4,
+          5,
+          6,
+          8,
+          9,
+          10,
+          11
+        ]
+      },
+      {
+        "group": [
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [12, 13, 14, 15, 16, 17, 18, 19],\n    \"reason\": {\n        \"12\": \"Sustained level shift around time index 102-127.\",\n        \"13\": \"Multiple spikes, notably around time index 52 and 158.\",\n        \"14\": \"Significant spike at time index 137.\",\n        \"15\": \"Significant spike at time index 137.\",\n        \"16\": \"Spike at time index 95.\",\n        \"17\": \"Spike at time index 84.\",\n        \"18\": \"Spike at time index 136.\",\n        \"19\": \"Spike at time index 53.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19
+          ],
+          "reason": {
+            "12": "Sustained level shift around time index 102-127.",
+            "13": "Multiple spikes, notably around time index 52 and 158.",
+            "14": "Significant spike at time index 137.",
+            "15": "Significant spike at time index 137.",
+            "16": "Spike at time index 95.",
+            "17": "Spike at time index 84.",
+            "18": "Spike at time index 136.",
+            "19": "Spike at time index 53."
+          }
+        },
+        "picks": [
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ]
+      },
+      {
+        "group": [
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          27,
+          30
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [20, 21, 22, 23, 24, 25, 27, 30],\n    \"reason\": {\n        \"20\": \"Spike at index 136.\",\n        \"21\": \"Spike at index 136.\",\n        \"22\": \"Level shift around index 83.\",\n        \"23\": \"Spike between indices 86 and 87.\",\n        \"24\": \"Spike at index 96.\",\n        \"25\": \"Spike between indices 86 and 87.\",\n        \"27\": \"Spike at index 136.\",\n        \"30\": \"Spike at index 136.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            27,
+            30
+          ],
+          "reason": {
+            "20": "Spike at index 136.",
+            "21": "Spike at index 136.",
+            "22": "Level shift around index 83.",
+            "23": "Spike between indices 86 and 87.",
+            "24": "Spike at index 96.",
+            "25": "Spike between indices 86 and 87.",
+            "27": "Spike at index 136.",
+            "30": "Spike at index 136."
+          }
+        },
+        "picks": [
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          27,
+          30
+        ]
+      },
+      {
+        "group": [
+          31,
+          33,
+          34,
+          35
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [31, 33, 34, 35],\n    \"reason\": {\n        \"31\": \"Multiple spikes to 1.000 and a prolonged drop to 0.000 indicate anomalies.\",\n        \"33\": \"Several spikes, including a peak at 1.000, suggest anomalous behavior.\",\n        \"34\": \"A spike to 1.000 and a prolonged drop to 0.000 indicate anomalies.\",\n        \"35\": \"A spike to 1.000 and a prolonged drop to 0.000 indicate anomalies.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            31,
+            33,
+            34,
+            35
+          ],
+          "reason": {
+            "31": "Multiple spikes to 1.000 and a prolonged drop to 0.000 indicate anomalies.",
+            "33": "Several spikes, including a peak at 1.000, suggest anomalous behavior.",
+            "34": "A spike to 1.000 and a prolonged drop to 0.000 indicate anomalies.",
+            "35": "A spike to 1.000 and a prolonged drop to 0.000 indicate anomalies."
+          }
+        },
+        "picks": [
+          31,
+          33,
+          34,
+          35
+        ]
+      }
+    ],
+    "all_vlm_picks": [
+      3,
+      4,
+      5,
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      27,
+      30,
+      31,
+      33,
+      34,
+      35
+    ],
+    "final_pred": [
+      3,
+      4,
+      5,
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      27,
+      30,
+      31,
+      33,
+      34,
+      35
+    ],
+    "f1_ours_vlm_subplot8_noredband_heatmapz": 0.35294117647058826,
+    "f1_ours_no_vlm": 0.0,
+    "f1_k2": 0.1818181818181818
+  },
+  "machine-2-9_17914_18096": {
+    "entity": "machine-2-9",
+    "start": 17914,
+    "end": 18096,
+    "k": 5,
+    "gt_channels": [
+      10,
+      11,
+      12,
+      14,
+      15
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      0,
+      5,
+      9,
+      10,
+      11,
+      12,
+      13,
+      15,
+      18,
+      22,
+      23,
+      24,
+      25,
+      31
+    ],
+    "n_groups": 2,
+    "group_logs": [
+      {
+        "group": [
+          0,
+          5,
+          9,
+          10,
+          11,
+          12,
+          13,
+          15
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [0, 5, 9, 10, 11, 12],\n    \"reason\": {\n        \"0\": \"Sustained high values and spikes around indices 178-206.\",\n        \"5\": \"Sharp spike at index 86.\",\n        \"9\": \"Significant spike at index 180.\",\n        \"10\": \"Spike at index 170.\",\n        \"11\": \"Spike at index 180.\",\n        \"12\": \"Spike at index 180.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            0,
+            5,
+            9,
+            10,
+            11,
+            12
+          ],
+          "reason": {
+            "0": "Sustained high values and spikes around indices 178-206.",
+            "5": "Sharp spike at index 86.",
+            "9": "Significant spike at index 180.",
+            "10": "Spike at index 170.",
+            "11": "Spike at index 180.",
+            "12": "Spike at index 180."
+          }
+        },
+        "picks": [
+          0,
+          5,
+          9,
+          10,
+          11,
+          12
+        ]
+      },
+      {
+        "group": [
+          18,
+          22,
+          23,
+          24,
+          25,
+          31
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [22, 24, 31],\n    \"reason\": {\n        \"22\": \"Sustained level shift and high deviation from normal range.\",\n        \"24\": \"Sharp spike at time index 144.\",\n        \"31\": \"Significant drop and sustained low values indicating a level shift.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            22,
+            24,
+            31
+          ],
+          "reason": {
+            "22": "Sustained level shift and high deviation from normal range.",
+            "24": "Sharp spike at time index 144.",
+            "31": "Significant drop and sustained low values indicating a level shift."
+          }
+        },
+        "picks": [
+          22,
+          24,
+          31
+        ]
+      }
+    ],
+    "all_vlm_picks": [
+      0,
+      5,
+      9,
+      10,
+      11,
+      12,
+      22,
+      24,
+      31
+    ],
+    "final_pred": [
+      0,
+      5,
+      9,
+      10,
+      11,
+      12,
+      22,
+      24,
+      31
+    ],
+    "f1_ours_vlm_subplot8_noredband_heatmapz": 0.42857142857142855,
+    "f1_ours_no_vlm": 0.28571428571428575,
+    "f1_k2": 0.3636363636363636
+  },
+  "machine-3-3_20897_20903": {
+    "entity": "machine-3-3",
+    "start": 20897,
+    "end": 20903,
+    "k": 4,
+    "gt_channels": [
+      9,
+      10,
+      11,
+      12
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      8,
+      12,
+      14,
+      15,
+      19,
+      22,
+      24,
+      26,
+      31,
+      36,
+      37
+    ],
+    "n_groups": 2,
+    "group_logs": [
+      {
+        "group": [
+          8,
+          12,
+          14,
+          15,
+          19,
+          22,
+          24,
+          26
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [12, 19, 22, 24, 26],\n    \"reason\": {\n        \"12\": \"Spike at index 111.\",\n        \"19\": \"Spike around indices 38-41 and drop around indices 188-192.\",\n        \"22\": \"Spike around indices 38-41 and drop around indices 212-214.\",\n        \"24\": \"Spike around indices 38-41 and drop around indices 212-214.\",\n        \"26\": \"Spike at index 84.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            12,
+            19,
+            22,
+            24,
+            26
+          ],
+          "reason": {
+            "12": "Spike at index 111.",
+            "19": "Spike around indices 38-41 and drop around indices 188-192.",
+            "22": "Spike around indices 38-41 and drop around indices 212-214.",
+            "24": "Spike around indices 38-41 and drop around indices 212-214.",
+            "26": "Spike at index 84."
+          }
+        },
+        "picks": [
+          12,
+          19,
+          22,
+          24,
+          26
+        ]
+      },
+      {
+        "group": [
+          31,
+          36,
+          37
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [31, 36, 37],\n  \"reason\": {\n    \"31\": \"Spike at indices 38-41 with values reaching 1.0.\",\n    \"36\": \"Spike at indices 38-41 with values reaching 1.0.\",\n    \"37\": \"Spike at indices 38-41 with values reaching 1.0.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            31,
+            36,
+            37
+          ],
+          "reason": {
+            "31": "Spike at indices 38-41 with values reaching 1.0.",
+            "36": "Spike at indices 38-41 with values reaching 1.0.",
+            "37": "Spike at indices 38-41 with values reaching 1.0."
+          }
+        },
+        "picks": [
+          31,
+          36,
+          37
+        ]
+      }
+    ],
+    "all_vlm_picks": [
+      12,
+      19,
+      22,
+      24,
+      26,
+      31,
+      36,
+      37
+    ],
+    "final_pred": [
+      12,
+      19,
+      22,
+      24,
+      26,
+      31,
+      36,
+      37
+    ],
+    "f1_ours_vlm_subplot8_noredband_heatmapz": 0.16666666666666666,
+    "f1_ours_no_vlm": 0.0,
+    "f1_k2": 0.2
+  }
+}

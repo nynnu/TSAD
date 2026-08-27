@@ -1,0 +1,7255 @@
+{
+  "machine-2-2_12760_12771": {
+    "entity": "machine-2-2",
+    "start": 12760,
+    "end": 12771,
+    "k": 16,
+    "gt_channels": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      6,
+      22,
+      23,
+      24,
+      25,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35
+    ],
+    "auto_confirmed": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      6,
+      8,
+      12,
+      14,
+      18,
+      20,
+      22,
+      23,
+      25,
+      31,
+      32,
+      33,
+      34,
+      35
+    ],
+    "overlay_channels": [
+      9,
+      10,
+      11,
+      13,
+      15,
+      19,
+      21,
+      24,
+      27,
+      29,
+      30
+    ],
+    "n_groups": 3,
+    "group_logs": [
+      {
+        "group": [
+          9,
+          10,
+          11,
+          13
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [9, 10],\n  \"reason\": {\n    \"9\": \"Channel 9 shows a significant spike at the beginning, which deviates from the rest of the pattern.\",\n    \"10\": \"Channel 10 has a large spike in the middle, which is not consistent with the other values.\",\n    \"11\": \"Channel 11 shows consistent variability without clear anomalies.\",\n    \"13\": \"Channel 13 displays a regular repeating pattern without anomalies.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            9,
+            10
+          ],
+          "reason": {
+            "9": "Channel 9 shows a significant spike at the beginning, which deviates from the rest of the pattern.",
+            "10": "Channel 10 has a large spike in the middle, which is not consistent with the other values.",
+            "11": "Channel 11 shows consistent variability without clear anomalies.",
+            "13": "Channel 13 displays a regular repeating pattern without anomalies."
+          }
+        },
+        "picks": [
+          9,
+          10
+        ]
+      },
+      {
+        "group": [
+          15,
+          19,
+          21,
+          24
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [19, 21, 24],\n  \"reason\": {\n    \"15\": \"No significant deviation from normal pattern.\",\n    \"19\": \"Contains a large spike at the beginning.\",\n    \"21\": \"Shows a level shift and pattern break.\",\n    \"24\": \"Exhibits a level shift and pattern break.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            19,
+            21,
+            24
+          ],
+          "reason": {
+            "15": "No significant deviation from normal pattern.",
+            "19": "Contains a large spike at the beginning.",
+            "21": "Shows a level shift and pattern break.",
+            "24": "Exhibits a level shift and pattern break."
+          }
+        },
+        "picks": [
+          19,
+          21,
+          24
+        ]
+      },
+      {
+        "group": [
+          27,
+          29,
+          30
+        ],
+        "raw": "```json\n{\"anomalous_channels\": [29], \"reason\": \"Ch29 shows multiple sharp spikes deviating from a flat baseline, indicating anomalous behavior. Ch27 and Ch30 show consistent patterns without clear anomalies.\"}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            29
+          ],
+          "reason": "Ch29 shows multiple sharp spikes deviating from a flat baseline, indicating anomalous behavior. Ch27 and Ch30 show consistent patterns without clear anomalies."
+        },
+        "picks": [
+          29
+        ]
+      }
+    ],
+    "all_vlm_picks": [
+      9,
+      10,
+      19,
+      21,
+      24,
+      29
+    ],
+    "final_pred": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      6,
+      8,
+      9,
+      10,
+      12,
+      14,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      29,
+      31,
+      32,
+      33,
+      34,
+      35
+    ],
+    "f1_ours_vlm_subplot6_noredband": 0.7317073170731707,
+    "f1_ours_no_vlm": 0.7999999999999999
+  },
+  "machine-2-2_14511_14521": {
+    "entity": "machine-2-2",
+    "start": 14511,
+    "end": 14521,
+    "k": 14,
+    "gt_channels": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      6,
+      22,
+      23,
+      24,
+      25,
+      30,
+      31,
+      34,
+      35
+    ],
+    "auto_confirmed": [
+      0,
+      1,
+      2,
+      3,
+      6,
+      12,
+      18,
+      22,
+      23,
+      25,
+      31,
+      32,
+      33
+    ],
+    "overlay_channels": [
+      5,
+      9,
+      10,
+      11,
+      14,
+      15,
+      19,
+      20,
+      21,
+      24,
+      27,
+      29,
+      30,
+      34,
+      35
+    ],
+    "n_groups": 4,
+    "group_logs": [
+      {
+        "group": [
+          5,
+          9,
+          10,
+          11
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [5, 9, 10],\n  \"reason\": {\n    \"5\": \"Level shift observed with a sudden drop.\",\n    \"9\": \"Significant spike detected.\",\n    \"10\": \"Significant spike detected.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            5,
+            9,
+            10
+          ],
+          "reason": {
+            "5": "Level shift observed with a sudden drop.",
+            "9": "Significant spike detected.",
+            "10": "Significant spike detected."
+          }
+        },
+        "picks": [
+          5,
+          9,
+          10
+        ]
+      },
+      {
+        "group": [
+          14,
+          15,
+          19,
+          20
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [14, 19, 20],\n  \"reason\": {\n    \"14\": \"Irregular pattern with inconsistent spike heights.\",\n    \"19\": \"Significant spike not consistent with the rest of the pattern.\",\n    \"20\": \"Significant spike and pattern break towards the end.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            14,
+            19,
+            20
+          ],
+          "reason": {
+            "14": "Irregular pattern with inconsistent spike heights.",
+            "19": "Significant spike not consistent with the rest of the pattern.",
+            "20": "Significant spike and pattern break towards the end."
+          }
+        },
+        "picks": [
+          14,
+          19,
+          20
+        ]
+      },
+      {
+        "group": [
+          21,
+          24,
+          27,
+          29
+        ],
+        "raw": "{\n  \"anomalous_channels\": [24, 29],\n  \"reason\": {\n    \"21\": \"No significant deviation from normal pattern.\",\n    \"24\": \"Contains a significant dip, indicating a pattern break.\",\n    \"27\": \"No significant deviation from normal pattern.\",\n    \"29\": \"Contains a spike, indicating an anomaly.\"\n  }\n}",
+        "parsed": {
+          "anomalous_channels": [
+            24,
+            29
+          ],
+          "reason": {
+            "21": "No significant deviation from normal pattern.",
+            "24": "Contains a significant dip, indicating a pattern break.",
+            "27": "No significant deviation from normal pattern.",
+            "29": "Contains a spike, indicating an anomaly."
+          }
+        },
+        "picks": [
+          24,
+          29
+        ]
+      },
+      {
+        "group": [
+          30,
+          34,
+          35
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [34, 35],\n  \"reason\": \"Ch34: Spike and pattern break observed. Ch35: Spike and pattern break observed. Ch30: No significant anomaly detected.\"\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            34,
+            35
+          ],
+          "reason": "Ch34: Spike and pattern break observed. Ch35: Spike and pattern break observed. Ch30: No significant anomaly detected."
+        },
+        "picks": [
+          34,
+          35
+        ]
+      }
+    ],
+    "all_vlm_picks": [
+      5,
+      9,
+      10,
+      14,
+      19,
+      20,
+      24,
+      29,
+      34,
+      35
+    ],
+    "final_pred": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      6,
+      9,
+      10,
+      12,
+      14,
+      18,
+      19,
+      20,
+      22,
+      23,
+      24,
+      25,
+      29,
+      31,
+      32,
+      33,
+      34,
+      35
+    ],
+    "f1_ours_vlm_subplot6_noredband": 0.7027027027027025,
+    "f1_ours_no_vlm": 0.6666666666666666
+  },
+  "machine-2-2_15630_16502": {
+    "entity": "machine-2-2",
+    "start": 15630,
+    "end": 16502,
+    "k": 4,
+    "gt_channels": [
+      9,
+      10,
+      11,
+      12
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      0,
+      5,
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      14,
+      15,
+      18,
+      20,
+      21,
+      23,
+      24,
+      27,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35
+    ],
+    "n_groups": 6,
+    "group_logs": [
+      {
+        "group": [
+          0,
+          5,
+          6,
+          8
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [0, 5, 6],\n    \"reason\": {\n        \"0\": \"Pattern break with irregular spikes and drops.\",\n        \"5\": \"Sudden level shift downward.\",\n        \"6\": \"Significant spike and drop in values.\",\n        \"8\": \"No clear anomaly; consistent pattern of spikes.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            0,
+            5,
+            6
+          ],
+          "reason": {
+            "0": "Pattern break with irregular spikes and drops.",
+            "5": "Sudden level shift downward.",
+            "6": "Significant spike and drop in values.",
+            "8": "No clear anomaly; consistent pattern of spikes."
+          }
+        },
+        "picks": [
+          0,
+          5,
+          6
+        ]
+      },
+      {
+        "group": [
+          9,
+          10,
+          11,
+          12
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [11],\n    \"reason\": {\n        \"9\": \"No significant deviation from normal pattern.\",\n        \"10\": \"No significant deviation from normal pattern.\",\n        \"11\": \"Increased variability and irregular spikes indicate a pattern break.\",\n        \"12\": \"No significant deviation from normal pattern.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            11
+          ],
+          "reason": {
+            "9": "No significant deviation from normal pattern.",
+            "10": "No significant deviation from normal pattern.",
+            "11": "Increased variability and irregular spikes indicate a pattern break.",
+            "12": "No significant deviation from normal pattern."
+          }
+        },
+        "picks": [
+          11
+        ]
+      },
+      {
+        "group": [
+          14,
+          15,
+          18,
+          20
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [18, 20],\n  \"reason\": {\n    \"14\": \"No significant anomaly; pattern is consistent with normal behavior.\",\n    \"15\": \"No significant anomaly; pattern is consistent with normal behavior.\",\n    \"18\": \"Level shift observed; pattern drops significantly in the middle.\",\n    \"20\": \"Level shift observed; pattern drops significantly in the middle.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            18,
+            20
+          ],
+          "reason": {
+            "14": "No significant anomaly; pattern is consistent with normal behavior.",
+            "15": "No significant anomaly; pattern is consistent with normal behavior.",
+            "18": "Level shift observed; pattern drops significantly in the middle.",
+            "20": "Level shift observed; pattern drops significantly in the middle."
+          }
+        },
+        "picks": [
+          18,
+          20
+        ]
+      },
+      {
+        "group": [
+          21,
+          23,
+          24,
+          27
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [23],\n  \"reason\": \"Ch21: Normal pattern with consistent peaks. Ch23: Irregular spikes and increased variability. Ch24: Normal pattern with consistent peaks. Ch27: Normal pattern with consistent peaks.\"\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            23
+          ],
+          "reason": "Ch21: Normal pattern with consistent peaks. Ch23: Irregular spikes and increased variability. Ch24: Normal pattern with consistent peaks. Ch27: Normal pattern with consistent peaks."
+        },
+        "picks": [
+          23
+        ]
+      },
+      {
+        "group": [
+          29,
+          30,
+          31,
+          32
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [30],\n  \"reason\": {\n    \"29\": \"Regular pattern of spikes, no anomaly detected.\",\n    \"30\": \"Pattern shows a gradual decline, indicating a potential anomaly.\",\n    \"31\": \"Irregular spikes but consistent with a normal pattern.\",\n    \"32\": \"Regular pattern of spikes, no anomaly detected.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            30
+          ],
+          "reason": {
+            "29": "Regular pattern of spikes, no anomaly detected.",
+            "30": "Pattern shows a gradual decline, indicating a potential anomaly.",
+            "31": "Irregular spikes but consistent with a normal pattern.",
+            "32": "Regular pattern of spikes, no anomaly detected."
+          }
+        },
+        "picks": [
+          30
+        ]
+      },
+      {
+        "group": [
+          33,
+          34,
+          35
+        ],
+        "raw": "```json\n{\"anomalous_channels\": [33], \"reason\": \"Ch33 shows multiple spikes that deviate significantly from the baseline pattern. Ch34 and Ch35 show consistent patterns without anomalies.\"}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            33
+          ],
+          "reason": "Ch33 shows multiple spikes that deviate significantly from the baseline pattern. Ch34 and Ch35 show consistent patterns without anomalies."
+        },
+        "picks": [
+          33
+        ]
+      }
+    ],
+    "all_vlm_picks": [
+      0,
+      5,
+      6,
+      11,
+      18,
+      20,
+      23,
+      30,
+      33
+    ],
+    "final_pred": [
+      0,
+      5,
+      6,
+      11,
+      18,
+      20,
+      23,
+      30,
+      33
+    ],
+    "f1_ours_vlm_subplot6_noredband": 0.15384615384615383,
+    "f1_ours_no_vlm": 0.4
+  },
+  "machine-2-2_17090_17942": {
+    "entity": "machine-2-2",
+    "start": 17090,
+    "end": 17942,
+    "k": 4,
+    "gt_channels": [
+      9,
+      10,
+      11,
+      12
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      0,
+      5,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      20,
+      21,
+      23,
+      24,
+      27,
+      29,
+      30,
+      31,
+      33,
+      34,
+      35
+    ],
+    "n_groups": 6,
+    "group_logs": [
+      {
+        "group": [
+          0,
+          5,
+          8,
+          9
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [0, 9],\n    \"reason\": {\n        \"0\": \"Pattern break with a sudden level shift and increased variability.\",\n        \"5\": \"No significant anomaly; normal variability observed.\",\n        \"8\": \"No significant anomaly; consistent spike pattern.\",\n        \"9\": \"Spike significantly larger than others, indicating an anomaly.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            0,
+            9
+          ],
+          "reason": {
+            "0": "Pattern break with a sudden level shift and increased variability.",
+            "5": "No significant anomaly; normal variability observed.",
+            "8": "No significant anomaly; consistent spike pattern.",
+            "9": "Spike significantly larger than others, indicating an anomaly."
+          }
+        },
+        "picks": [
+          0,
+          9
+        ]
+      },
+      {
+        "group": [
+          10,
+          11,
+          12,
+          13
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [10, 11, 12],\n  \"reason\": {\n    \"10\": \"Contains spikes that deviate significantly from the baseline.\",\n    \"11\": \"Shows a spike that is much higher than the surrounding values.\",\n    \"12\": \"Exhibits spikes that are not consistent with the rest of the pattern.\",\n    \"13\": \"Pattern appears consistent with no significant anomalies.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            10,
+            11,
+            12
+          ],
+          "reason": {
+            "10": "Contains spikes that deviate significantly from the baseline.",
+            "11": "Shows a spike that is much higher than the surrounding values.",
+            "12": "Exhibits spikes that are not consistent with the rest of the pattern.",
+            "13": "Pattern appears consistent with no significant anomalies."
+          }
+        },
+        "picks": [
+          10,
+          11,
+          12
+        ]
+      },
+      {
+        "group": [
+          14,
+          15,
+          20,
+          21
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [20, 21],\n    \"reason\": {\n        \"20\": \"Pattern break with a downward trend and reduced amplitude.\",\n        \"21\": \"Pattern break with a downward trend and reduced amplitude.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            20,
+            21
+          ],
+          "reason": {
+            "20": "Pattern break with a downward trend and reduced amplitude.",
+            "21": "Pattern break with a downward trend and reduced amplitude."
+          }
+        },
+        "picks": [
+          20,
+          21
+        ]
+      },
+      {
+        "group": [
+          23,
+          24,
+          27,
+          29
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [23, 29],\n    \"reason\": {\n        \"23\": \"Contains multiple spikes that deviate from the normal pattern.\",\n        \"29\": \"Shows a pattern break with isolated spikes and long periods of inactivity.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            23,
+            29
+          ],
+          "reason": {
+            "23": "Contains multiple spikes that deviate from the normal pattern.",
+            "29": "Shows a pattern break with isolated spikes and long periods of inactivity."
+          }
+        },
+        "picks": [
+          23,
+          29
+        ]
+      },
+      {
+        "group": [
+          30,
+          31,
+          33,
+          34
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [31, 34],\n    \"reason\": {\n        \"30\": \"No significant anomaly; consistent pattern.\",\n        \"31\": \"Pattern break; flat line at the end.\",\n        \"33\": \"No significant anomaly; consistent pattern.\",\n        \"34\": \"Level shift; gradual downward trend.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            31,
+            34
+          ],
+          "reason": {
+            "30": "No significant anomaly; consistent pattern.",
+            "31": "Pattern break; flat line at the end.",
+            "33": "No significant anomaly; consistent pattern.",
+            "34": "Level shift; gradual downward trend."
+          }
+        },
+        "picks": [
+          31,
+          34
+        ]
+      },
+      {
+        "group": [
+          35
+        ],
+        "raw": "{\n    \"anomalous_channels\": [35],\n    \"reason\": \"Channel 35 shows a pattern break with a noticeable change in the amplitude and frequency of oscillations.\"\n}",
+        "parsed": {
+          "anomalous_channels": [
+            35
+          ],
+          "reason": "Channel 35 shows a pattern break with a noticeable change in the amplitude and frequency of oscillations."
+        },
+        "picks": [
+          35
+        ]
+      }
+    ],
+    "all_vlm_picks": [
+      0,
+      9,
+      10,
+      11,
+      12,
+      20,
+      21,
+      23,
+      29,
+      31,
+      34,
+      35
+    ],
+    "final_pred": [
+      0,
+      9,
+      10,
+      11,
+      12,
+      20,
+      21,
+      23,
+      29,
+      31,
+      34,
+      35
+    ],
+    "f1_ours_vlm_subplot6_noredband": 0.5,
+    "f1_ours_no_vlm": 0.4
+  },
+  "machine-2-2_18541_19382": {
+    "entity": "machine-2-2",
+    "start": 18541,
+    "end": 19382,
+    "k": 4,
+    "gt_channels": [
+      9,
+      10,
+      11,
+      12
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      0,
+      5,
+      6,
+      8,
+      10,
+      12,
+      13,
+      14,
+      15,
+      19,
+      23,
+      24,
+      29,
+      31,
+      32,
+      33,
+      35
+    ],
+    "n_groups": 5,
+    "group_logs": [
+      {
+        "group": [
+          0,
+          5,
+          6,
+          8
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [0, 6],\n  \"reason\": {\n    \"0\": \"Contains a spike and pattern break.\",\n    \"5\": \"No significant anomaly; normal variability.\",\n    \"6\": \"Shows a clear level shift.\",\n    \"8\": \"No significant anomaly; consistent pattern.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            0,
+            6
+          ],
+          "reason": {
+            "0": "Contains a spike and pattern break.",
+            "5": "No significant anomaly; normal variability.",
+            "6": "Shows a clear level shift.",
+            "8": "No significant anomaly; consistent pattern."
+          }
+        },
+        "picks": [
+          0,
+          6
+        ]
+      },
+      {
+        "group": [
+          10,
+          12,
+          13,
+          14
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [10, 12],\n  \"reason\": {\n    \"10\": \"Contains a significant spike not consistent with the rest of the pattern.\",\n    \"12\": \"Contains a significant spike not consistent with the rest of the pattern.\",\n    \"13\": \"No clear anomaly; pattern is consistent throughout.\",\n    \"14\": \"No clear anomaly; pattern is consistent throughout.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            10,
+            12
+          ],
+          "reason": {
+            "10": "Contains a significant spike not consistent with the rest of the pattern.",
+            "12": "Contains a significant spike not consistent with the rest of the pattern.",
+            "13": "No clear anomaly; pattern is consistent throughout.",
+            "14": "No clear anomaly; pattern is consistent throughout."
+          }
+        },
+        "picks": [
+          10,
+          12
+        ]
+      },
+      {
+        "group": [
+          15,
+          19,
+          23,
+          24
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [19, 24],\n  \"reason\": {\n    \"15\": \"No anomaly detected; consistent pattern.\",\n    \"19\": \"Spike detected in the middle of the series.\",\n    \"23\": \"No anomaly detected; consistent pattern.\",\n    \"24\": \"Pattern break with irregular peaks towards the end.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            19,
+            24
+          ],
+          "reason": {
+            "15": "No anomaly detected; consistent pattern.",
+            "19": "Spike detected in the middle of the series.",
+            "23": "No anomaly detected; consistent pattern.",
+            "24": "Pattern break with irregular peaks towards the end."
+          }
+        },
+        "picks": [
+          19,
+          24
+        ]
+      },
+      {
+        "group": [
+          29,
+          31,
+          32,
+          33
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [31, 33],\n  \"reason\": {\n    \"29\": \"Normal pattern with regular spikes.\",\n    \"31\": \"Pattern break with irregular spikes and a sudden drop.\",\n    \"32\": \"Normal pattern with regular spikes.\",\n    \"33\": \"Increased noise level between spikes.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            31,
+            33
+          ],
+          "reason": {
+            "29": "Normal pattern with regular spikes.",
+            "31": "Pattern break with irregular spikes and a sudden drop.",
+            "32": "Normal pattern with regular spikes.",
+            "33": "Increased noise level between spikes."
+          }
+        },
+        "picks": [
+          31,
+          33
+        ]
+      },
+      {
+        "group": [
+          35
+        ],
+        "raw": "```json\n{\"anomalous_channels\": [35], \"reason\": \"Channel 35 shows a gradual downward trend, which may indicate a level shift or pattern break.\"}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            35
+          ],
+          "reason": "Channel 35 shows a gradual downward trend, which may indicate a level shift or pattern break."
+        },
+        "picks": [
+          35
+        ]
+      }
+    ],
+    "all_vlm_picks": [
+      0,
+      6,
+      10,
+      12,
+      19,
+      24,
+      31,
+      33,
+      35
+    ],
+    "final_pred": [
+      0,
+      6,
+      10,
+      12,
+      19,
+      24,
+      31,
+      33,
+      35
+    ],
+    "f1_ours_vlm_subplot6_noredband": 0.30769230769230765,
+    "f1_ours_no_vlm": 0.2
+  },
+  "machine-2-2_20820_20823": {
+    "entity": "machine-2-2",
+    "start": 20820,
+    "end": 20823,
+    "k": 4,
+    "gt_channels": [
+      9,
+      10,
+      11,
+      12
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      22,
+      23,
+      24,
+      25,
+      29,
+      32,
+      33
+    ],
+    "n_groups": 5,
+    "group_logs": [
+      {
+        "group": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [0, 1, 2, 3],\n  \"reason\": {\n    \"0\": \"Multiple spikes and a significant spike at the end.\",\n    \"1\": \"Large spike in the middle of the series.\",\n    \"2\": \"Large spike in the middle of the series.\",\n    \"3\": \"Large spike in the middle of the series.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "reason": {
+            "0": "Multiple spikes and a significant spike at the end.",
+            "1": "Large spike in the middle of the series.",
+            "2": "Large spike in the middle of the series.",
+            "3": "Large spike in the middle of the series."
+          }
+        },
+        "picks": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "group": [
+          5,
+          8,
+          9,
+          10
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [9, 10],\n  \"reason\": {\n    \"5\": \"No significant deviation from normal pattern.\",\n    \"8\": \"No significant deviation from normal pattern.\",\n    \"9\": \"Contains a large spike indicating an anomaly.\",\n    \"10\": \"Contains a large spike indicating an anomaly.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            9,
+            10
+          ],
+          "reason": {
+            "5": "No significant deviation from normal pattern.",
+            "8": "No significant deviation from normal pattern.",
+            "9": "Contains a large spike indicating an anomaly.",
+            "10": "Contains a large spike indicating an anomaly."
+          }
+        },
+        "picks": [
+          9,
+          10
+        ]
+      },
+      {
+        "group": [
+          11,
+          12,
+          13,
+          14
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [11, 12],\n    \"reason\": {\n        \"11\": \"Contains a significant spike not consistent with the rest of the pattern.\",\n        \"12\": \"Shows a large spike from a baseline of near zero, indicating an anomaly.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            11,
+            12
+          ],
+          "reason": {
+            "11": "Contains a significant spike not consistent with the rest of the pattern.",
+            "12": "Shows a large spike from a baseline of near zero, indicating an anomaly."
+          }
+        },
+        "picks": [
+          11,
+          12
+        ]
+      },
+      {
+        "group": [
+          15,
+          22,
+          23,
+          24
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [22, 24],\n  \"reason\": {\n    \"15\": \"Consistent pattern with regular spikes, no anomaly detected.\",\n    \"22\": \"Irregular spikes and increased variability, indicating a pattern break.\",\n    \"23\": \"Consistent pattern with regular spikes, no anomaly detected.\",\n    \"24\": \"Irregular pattern with frequent spikes and variability, indicating a pattern break.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            22,
+            24
+          ],
+          "reason": {
+            "15": "Consistent pattern with regular spikes, no anomaly detected.",
+            "22": "Irregular spikes and increased variability, indicating a pattern break.",
+            "23": "Consistent pattern with regular spikes, no anomaly detected.",
+            "24": "Irregular pattern with frequent spikes and variability, indicating a pattern break."
+          }
+        },
+        "picks": [
+          22,
+          24
+        ]
+      },
+      {
+        "group": [
+          25,
+          29,
+          32,
+          33
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [25, 29],\n    \"reason\": {\n        \"25\": \"Irregular spikes and increased noise compared to a consistent pattern.\",\n        \"29\": \"Multiple spikes close together, deviating from the regular pattern.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            25,
+            29
+          ],
+          "reason": {
+            "25": "Irregular spikes and increased noise compared to a consistent pattern.",
+            "29": "Multiple spikes close together, deviating from the regular pattern."
+          }
+        },
+        "picks": [
+          25,
+          29
+        ]
+      }
+    ],
+    "all_vlm_picks": [
+      0,
+      1,
+      2,
+      3,
+      9,
+      10,
+      11,
+      12,
+      22,
+      24,
+      25,
+      29
+    ],
+    "final_pred": [
+      0,
+      1,
+      2,
+      3,
+      9,
+      10,
+      11,
+      12,
+      22,
+      24,
+      25,
+      29
+    ],
+    "f1_ours_vlm_subplot6_noredband": 0.5,
+    "f1_ours_no_vlm": 0.3333333333333333
+  },
+  "machine-2-2_21024_21027": {
+    "entity": "machine-2-2",
+    "start": 21024,
+    "end": 21027,
+    "k": 1,
+    "gt_channels": [
+      10
+    ],
+    "auto_confirmed": [
+      5,
+      6,
+      8,
+      13,
+      14,
+      15,
+      18,
+      20,
+      22,
+      23,
+      25,
+      31,
+      32
+    ],
+    "overlay_channels": [
+      0,
+      9,
+      10,
+      21,
+      24,
+      27,
+      30,
+      33
+    ],
+    "n_groups": 2,
+    "group_logs": [
+      {
+        "group": [
+          0,
+          9,
+          10,
+          21
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [0, 9, 10],\n  \"reason\": {\n    \"0\": \"Multiple spikes and a level shift at the end.\",\n    \"9\": \"Several sharp spikes.\",\n    \"10\": \"A significant spike.\",\n    \"21\": \"No clear anomalies; consistent pattern.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            0,
+            9,
+            10
+          ],
+          "reason": {
+            "0": "Multiple spikes and a level shift at the end.",
+            "9": "Several sharp spikes.",
+            "10": "A significant spike.",
+            "21": "No clear anomalies; consistent pattern."
+          }
+        },
+        "picks": [
+          0,
+          9,
+          10
+        ]
+      },
+      {
+        "group": [
+          24,
+          27,
+          30,
+          33
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [27, 30],\n    \"reason\": {\n        \"24\": \"No significant anomaly; pattern is consistent.\",\n        \"27\": \"Spike observed around the middle of the window.\",\n        \"30\": \"Spike observed around the middle of the window.\",\n        \"33\": \"No significant anomaly; pattern is consistent.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            27,
+            30
+          ],
+          "reason": {
+            "24": "No significant anomaly; pattern is consistent.",
+            "27": "Spike observed around the middle of the window.",
+            "30": "Spike observed around the middle of the window.",
+            "33": "No significant anomaly; pattern is consistent."
+          }
+        },
+        "picks": [
+          27,
+          30
+        ]
+      }
+    ],
+    "all_vlm_picks": [
+      0,
+      9,
+      10,
+      27,
+      30
+    ],
+    "final_pred": [
+      0,
+      5,
+      6,
+      8,
+      9,
+      10,
+      13,
+      14,
+      15,
+      18,
+      20,
+      22,
+      23,
+      25,
+      27,
+      30,
+      31,
+      32
+    ],
+    "f1_ours_vlm_subplot6_noredband": 0.10526315789473684,
+    "f1_ours_no_vlm": 0.0
+  },
+  "machine-2-2_21280_21295": {
+    "entity": "machine-2-2",
+    "start": 21280,
+    "end": 21295,
+    "k": 7,
+    "gt_channels": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      6,
+      31
+    ],
+    "auto_confirmed": [
+      0,
+      1,
+      2,
+      3,
+      6,
+      8,
+      12,
+      13,
+      14,
+      15,
+      18,
+      20,
+      23,
+      25,
+      31,
+      32
+    ],
+    "overlay_channels": [
+      5,
+      9,
+      10,
+      19,
+      21,
+      22,
+      24,
+      27,
+      29,
+      30,
+      33
+    ],
+    "n_groups": 3,
+    "group_logs": [
+      {
+        "group": [
+          5,
+          9,
+          10,
+          19
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [5],\n  \"reason\": {\n    \"5\": \"Level shift observed with a sudden drop.\",\n    \"9\": \"No clear anomaly; spikes are part of normal pattern.\",\n    \"10\": \"No clear anomaly; spikes are part of normal pattern.\",\n    \"19\": \"No clear anomaly; pattern is consistent throughout.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            5
+          ],
+          "reason": {
+            "5": "Level shift observed with a sudden drop.",
+            "9": "No clear anomaly; spikes are part of normal pattern.",
+            "10": "No clear anomaly; spikes are part of normal pattern.",
+            "19": "No clear anomaly; pattern is consistent throughout."
+          }
+        },
+        "picks": [
+          5
+        ]
+      },
+      {
+        "group": [
+          21,
+          22,
+          24,
+          27
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [22],\n    \"reason\": {\n        \"21\": \"No significant deviation from normal pattern.\",\n        \"22\": \"Level shift at the beginning of the window.\",\n        \"24\": \"No significant deviation from normal pattern.\",\n        \"27\": \"No significant deviation from normal pattern.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            22
+          ],
+          "reason": {
+            "21": "No significant deviation from normal pattern.",
+            "22": "Level shift at the beginning of the window.",
+            "24": "No significant deviation from normal pattern.",
+            "27": "No significant deviation from normal pattern."
+          }
+        },
+        "picks": [
+          22
+        ]
+      },
+      {
+        "group": [
+          29,
+          30,
+          33
+        ],
+        "raw": "{\"anomalous_channels\": [29], \"reason\": \"Ch29 shows a level shift and spikes that deviate from a flat baseline. Ch30 and Ch33 show consistent patterns without anomalies.\"}",
+        "parsed": {
+          "anomalous_channels": [
+            29
+          ],
+          "reason": "Ch29 shows a level shift and spikes that deviate from a flat baseline. Ch30 and Ch33 show consistent patterns without anomalies."
+        },
+        "picks": [
+          29
+        ]
+      }
+    ],
+    "all_vlm_picks": [
+      5,
+      22,
+      29
+    ],
+    "final_pred": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      6,
+      8,
+      12,
+      13,
+      14,
+      15,
+      18,
+      20,
+      22,
+      23,
+      25,
+      29,
+      31,
+      32
+    ],
+    "f1_ours_vlm_subplot6_noredband": 0.5384615384615384,
+    "f1_ours_no_vlm": 0.5217391304347825
+  },
+  "machine-2-2_21405_21428": {
+    "entity": "machine-2-2",
+    "start": 21405,
+    "end": 21428,
+    "k": 6,
+    "gt_channels": [
+      18,
+      19,
+      20,
+      21,
+      27,
+      30
+    ],
+    "auto_confirmed": [
+      0,
+      2,
+      3,
+      18,
+      19,
+      20,
+      21,
+      23,
+      25,
+      27
+    ],
+    "overlay_channels": [
+      5,
+      6,
+      8,
+      9,
+      10,
+      12,
+      14,
+      22,
+      24,
+      29,
+      30,
+      31,
+      34,
+      35
+    ],
+    "n_groups": 4,
+    "group_logs": [
+      {
+        "group": [
+          5,
+          6,
+          8,
+          9
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [5, 6, 9],\n    \"reason\": {\n        \"5\": \"Level shift observed towards the end of the channel.\",\n        \"6\": \"Significant spike followed by a drop, indicating a pattern break.\",\n        \"9\": \"Large spike observed, deviating from the normal pattern.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            5,
+            6,
+            9
+          ],
+          "reason": {
+            "5": "Level shift observed towards the end of the channel.",
+            "6": "Significant spike followed by a drop, indicating a pattern break.",
+            "9": "Large spike observed, deviating from the normal pattern."
+          }
+        },
+        "picks": [
+          5,
+          6,
+          9
+        ]
+      },
+      {
+        "group": [
+          10,
+          12,
+          14,
+          22
+        ],
+        "raw": "```json\n{\"anomalous_channels\": [10, 12, 22], \"reason\": {\"10\": \"Spike observed in the middle of the channel.\", \"12\": \"Single large spike observed.\", \"22\": \"Significant spike and pattern change observed.\"}}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            10,
+            12,
+            22
+          ],
+          "reason": {
+            "10": "Spike observed in the middle of the channel.",
+            "12": "Single large spike observed.",
+            "22": "Significant spike and pattern change observed."
+          }
+        },
+        "picks": [
+          10,
+          12,
+          22
+        ]
+      },
+      {
+        "group": [
+          24,
+          29,
+          30,
+          31
+        ],
+        "raw": "```json\n{\"anomalous_channels\": [29, 30, 31], \"reason\": \"Ch29: Multiple sharp spikes; Ch30: Significant level shift; Ch31: Large spike.\"}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            29,
+            30,
+            31
+          ],
+          "reason": "Ch29: Multiple sharp spikes; Ch30: Significant level shift; Ch31: Large spike."
+        },
+        "picks": [
+          29,
+          30,
+          31
+        ]
+      },
+      {
+        "group": [
+          34,
+          35
+        ],
+        "raw": "{\"anomalous_channels\": [34, 35], \"reason\": \"Channel 34 shows a pattern break with an unusual increase in amplitude. Channel 35 also displays a similar pattern break with increased amplitude.\"}",
+        "parsed": {
+          "anomalous_channels": [
+            34,
+            35
+          ],
+          "reason": "Channel 34 shows a pattern break with an unusual increase in amplitude. Channel 35 also displays a similar pattern break with increased amplitude."
+        },
+        "picks": [
+          34,
+          35
+        ]
+      }
+    ],
+    "all_vlm_picks": [
+      5,
+      6,
+      9,
+      10,
+      12,
+      22,
+      29,
+      30,
+      31,
+      34,
+      35
+    ],
+    "final_pred": [
+      0,
+      2,
+      3,
+      5,
+      6,
+      9,
+      10,
+      12,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      25,
+      27,
+      29,
+      30,
+      31,
+      34,
+      35
+    ],
+    "f1_ours_vlm_subplot6_noredband": 0.4444444444444445,
+    "f1_ours_no_vlm": 0.625
+  },
+  "machine-2-2_22260_22263": {
+    "entity": "machine-2-2",
+    "start": 22260,
+    "end": 22263,
+    "k": 5,
+    "gt_channels": [
+      5,
+      9,
+      10,
+      11,
+      12
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      0,
+      5,
+      6,
+      8,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      18,
+      19,
+      20,
+      21,
+      23,
+      24,
+      25,
+      27,
+      29,
+      30,
+      31,
+      32,
+      33
+    ],
+    "n_groups": 6,
+    "group_logs": [
+      {
+        "group": [
+          0,
+          5,
+          6,
+          8
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [5, 6],\n  \"reason\": {\n    \"0\": \"No anomaly; pattern of spikes is consistent.\",\n    \"5\": \"Level shift; sudden drop in values.\",\n    \"6\": \"Pattern break; gradual decline in values.\",\n    \"8\": \"No anomaly; pattern of spikes is consistent.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            5,
+            6
+          ],
+          "reason": {
+            "0": "No anomaly; pattern of spikes is consistent.",
+            "5": "Level shift; sudden drop in values.",
+            "6": "Pattern break; gradual decline in values.",
+            "8": "No anomaly; pattern of spikes is consistent."
+          }
+        },
+        "picks": [
+          5,
+          6
+        ]
+      },
+      {
+        "group": [
+          10,
+          11,
+          12,
+          13
+        ],
+        "raw": "{\n    \"anomalous_channels\": [10, 11, 12],\n    \"reason\": {\n        \"10\": \"Channel 10 shows a significant spike that deviates from its normal low-level pattern.\",\n        \"11\": \"Channel 11 exhibits a large spike that is not consistent with its usual variability.\",\n        \"12\": \"Channel 12 has a pronounced spike, breaking its typical low-level pattern.\"\n    }\n}",
+        "parsed": {
+          "anomalous_channels": [
+            10,
+            11,
+            12
+          ],
+          "reason": {
+            "10": "Channel 10 shows a significant spike that deviates from its normal low-level pattern.",
+            "11": "Channel 11 exhibits a large spike that is not consistent with its usual variability.",
+            "12": "Channel 12 has a pronounced spike, breaking its typical low-level pattern."
+          }
+        },
+        "picks": [
+          10,
+          11,
+          12
+        ]
+      },
+      {
+        "group": [
+          14,
+          15,
+          18,
+          19
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [14, 15],\n    \"reason\": {\n        \"14\": \"Irregular spike pattern with inconsistent intervals.\",\n        \"15\": \"Sudden level shift and irregular spike pattern.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            14,
+            15
+          ],
+          "reason": {
+            "14": "Irregular spike pattern with inconsistent intervals.",
+            "15": "Sudden level shift and irregular spike pattern."
+          }
+        },
+        "picks": [
+          14,
+          15
+        ]
+      },
+      {
+        "group": [
+          20,
+          21,
+          23,
+          24
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [23],\n    \"reason\": {\n        \"20\": \"Pattern is consistent with normal behavior.\",\n        \"21\": \"Pattern is consistent with normal behavior.\",\n        \"23\": \"Contains a significant spike deviating from the normal pattern.\",\n        \"24\": \"Pattern is consistent with normal behavior.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            23
+          ],
+          "reason": {
+            "20": "Pattern is consistent with normal behavior.",
+            "21": "Pattern is consistent with normal behavior.",
+            "23": "Contains a significant spike deviating from the normal pattern.",
+            "24": "Pattern is consistent with normal behavior."
+          }
+        },
+        "picks": [
+          23
+        ]
+      },
+      {
+        "group": [
+          25,
+          27,
+          29,
+          30
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [25],\n    \"reason\": {\n        \"25\": \"Spike detected in the middle of the channel.\",\n        \"27\": \"No anomaly; consistent pattern throughout.\",\n        \"29\": \"No anomaly; consistent pattern of spikes.\",\n        \"30\": \"No anomaly; consistent pattern throughout.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            25
+          ],
+          "reason": {
+            "25": "Spike detected in the middle of the channel.",
+            "27": "No anomaly; consistent pattern throughout.",
+            "29": "No anomaly; consistent pattern of spikes.",
+            "30": "No anomaly; consistent pattern throughout."
+          }
+        },
+        "picks": [
+          25
+        ]
+      },
+      {
+        "group": [
+          31,
+          32,
+          33
+        ],
+        "raw": "```json\n{\"anomalous_channels\": [31], \"reason\": \"Ch31 shows a significant spike that deviates from the normal pattern. Ch32 and Ch33 maintain consistent patterns without anomalies.\"}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            31
+          ],
+          "reason": "Ch31 shows a significant spike that deviates from the normal pattern. Ch32 and Ch33 maintain consistent patterns without anomalies."
+        },
+        "picks": [
+          31
+        ]
+      }
+    ],
+    "all_vlm_picks": [
+      5,
+      6,
+      10,
+      11,
+      12,
+      14,
+      15,
+      23,
+      25,
+      31
+    ],
+    "final_pred": [
+      5,
+      6,
+      10,
+      11,
+      12,
+      14,
+      15,
+      23,
+      25,
+      31
+    ],
+    "f1_ours_vlm_subplot6_noredband": 0.5333333333333333,
+    "f1_ours_no_vlm": 0.3333333333333333
+  },
+  "machine-2-2_23099_23299": {
+    "entity": "machine-2-2",
+    "start": 23099,
+    "end": 23299,
+    "k": 2,
+    "gt_channels": [
+      8,
+      14
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      18,
+      20,
+      21,
+      24,
+      27,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35
+    ],
+    "n_groups": 7,
+    "group_logs": [
+      {
+        "group": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [0, 2],\n  \"reason\": {\n    \"0\": \"Channel 0 shows a level shift and pattern break.\",\n    \"1\": \"Channel 1 shows normal variability with no clear anomalies.\",\n    \"2\": \"Channel 2 shows a significant spike and pattern break.\",\n    \"3\": \"Channel 3 shows a gradual decline but no clear anomaly.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            0,
+            2
+          ],
+          "reason": {
+            "0": "Channel 0 shows a level shift and pattern break.",
+            "1": "Channel 1 shows normal variability with no clear anomalies.",
+            "2": "Channel 2 shows a significant spike and pattern break.",
+            "3": "Channel 3 shows a gradual decline but no clear anomaly."
+          }
+        },
+        "picks": [
+          0,
+          2
+        ]
+      },
+      {
+        "group": [
+          5,
+          8,
+          9,
+          10
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [8],\n  \"reason\": {\n    \"5\": \"No significant deviation from normal pattern.\",\n    \"8\": \"Contains a large spike that deviates from the usual pattern.\",\n    \"9\": \"No significant deviation from normal pattern.\",\n    \"10\": \"No significant deviation from normal pattern.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            8
+          ],
+          "reason": {
+            "5": "No significant deviation from normal pattern.",
+            "8": "Contains a large spike that deviates from the usual pattern.",
+            "9": "No significant deviation from normal pattern.",
+            "10": "No significant deviation from normal pattern."
+          }
+        },
+        "picks": [
+          8
+        ]
+      },
+      {
+        "group": [
+          11,
+          12,
+          13,
+          14
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [12, 14],\n  \"reason\": {\n    \"11\": \"No significant anomaly; pattern is consistent with normal behavior.\",\n    \"12\": \"Contains large spikes that deviate significantly from the baseline.\",\n    \"13\": \"No significant anomaly; pattern is consistent with normal behavior.\",\n    \"14\": \"Contains a large spike that deviates significantly from the baseline.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            12,
+            14
+          ],
+          "reason": {
+            "11": "No significant anomaly; pattern is consistent with normal behavior.",
+            "12": "Contains large spikes that deviate significantly from the baseline.",
+            "13": "No significant anomaly; pattern is consistent with normal behavior.",
+            "14": "Contains a large spike that deviates significantly from the baseline."
+          }
+        },
+        "picks": [
+          12,
+          14
+        ]
+      },
+      {
+        "group": [
+          15,
+          18,
+          20,
+          21
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [18],\n  \"reason\": {\n    \"15\": \"No anomaly detected; consistent pattern.\",\n    \"18\": \"Level shift observed in the middle of the window.\",\n    \"20\": \"No anomaly detected; consistent pattern.\",\n    \"21\": \"No anomaly detected; consistent pattern.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            18
+          ],
+          "reason": {
+            "15": "No anomaly detected; consistent pattern.",
+            "18": "Level shift observed in the middle of the window.",
+            "20": "No anomaly detected; consistent pattern.",
+            "21": "No anomaly detected; consistent pattern."
+          }
+        },
+        "picks": [
+          18
+        ]
+      },
+      {
+        "group": [
+          24,
+          27,
+          29,
+          30
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [24, 29],\n  \"reason\": {\n    \"24\": \"Level shift observed in the middle of the channel.\",\n    \"27\": \"No significant anomaly detected.\",\n    \"29\": \"Spike detected in the middle of the channel.\",\n    \"30\": \"No significant anomaly detected.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            24,
+            29
+          ],
+          "reason": {
+            "24": "Level shift observed in the middle of the channel.",
+            "27": "No significant anomaly detected.",
+            "29": "Spike detected in the middle of the channel.",
+            "30": "No significant anomaly detected."
+          }
+        },
+        "picks": [
+          24,
+          29
+        ]
+      },
+      {
+        "group": [
+          31,
+          32,
+          33,
+          34
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [31, 34],\n  \"reason\": {\n    \"31\": \"Contains a significant spike not consistent with the rest of the pattern.\",\n    \"32\": \"Regular pattern of spikes, no anomaly detected.\",\n    \"33\": \"Consistent pattern of spikes, no anomaly detected.\",\n    \"34\": \"Shows a level shift downward, indicating a pattern break.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            31,
+            34
+          ],
+          "reason": {
+            "31": "Contains a significant spike not consistent with the rest of the pattern.",
+            "32": "Regular pattern of spikes, no anomaly detected.",
+            "33": "Consistent pattern of spikes, no anomaly detected.",
+            "34": "Shows a level shift downward, indicating a pattern break."
+          }
+        },
+        "picks": [
+          31,
+          34
+        ]
+      },
+      {
+        "group": [
+          35
+        ],
+        "raw": "```json\n{\"anomalous_channels\": [35], \"reason\": \"Channel 35 shows a level shift and pattern break in the middle of the window.\"}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            35
+          ],
+          "reason": "Channel 35 shows a level shift and pattern break in the middle of the window."
+        },
+        "picks": [
+          35
+        ]
+      }
+    ],
+    "all_vlm_picks": [
+      0,
+      2,
+      8,
+      12,
+      14,
+      18,
+      24,
+      29,
+      31,
+      34,
+      35
+    ],
+    "final_pred": [
+      0,
+      2,
+      8,
+      12,
+      14,
+      18,
+      24,
+      29,
+      31,
+      34,
+      35
+    ],
+    "f1_ours_vlm_subplot6_noredband": 0.3076923076923077,
+    "f1_ours_no_vlm": 0.5
+  },
+  "machine-2-9_15131_15253": {
+    "entity": "machine-2-9",
+    "start": 15131,
+    "end": 15253,
+    "k": 12,
+    "gt_channels": [
+      0,
+      1,
+      2,
+      3,
+      18,
+      19,
+      20,
+      21,
+      27,
+      30,
+      34,
+      35
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      6,
+      13,
+      18,
+      19,
+      20,
+      21,
+      23,
+      24,
+      25,
+      27,
+      30,
+      31,
+      33,
+      34,
+      35
+    ],
+    "n_groups": 5,
+    "group_logs": [
+      {
+        "group": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [0, 1, 2, 3],\n    \"reason\": {\n        \"0\": \"Channel 0 shows a sudden drop after a peak, indicating a level shift.\",\n        \"1\": \"Channel 1 shows a sudden drop after a peak, indicating a level shift.\",\n        \"2\": \"Channel 2 shows a sudden drop after a peak, indicating a level shift.\",\n        \"3\": \"Channel 3 shows a sudden drop after a peak, indicating a level shift.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "reason": {
+            "0": "Channel 0 shows a sudden drop after a peak, indicating a level shift.",
+            "1": "Channel 1 shows a sudden drop after a peak, indicating a level shift.",
+            "2": "Channel 2 shows a sudden drop after a peak, indicating a level shift.",
+            "3": "Channel 3 shows a sudden drop after a peak, indicating a level shift."
+          }
+        },
+        "picks": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "group": [
+          5,
+          6,
+          13,
+          18
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [5, 6, 18],\n    \"reason\": {\n        \"5\": \"Spike observed in the middle of the channel.\",\n        \"6\": \"Spike observed in the middle of the channel.\",\n        \"18\": \"Sudden level shift observed towards the end of the channel.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            5,
+            6,
+            18
+          ],
+          "reason": {
+            "5": "Spike observed in the middle of the channel.",
+            "6": "Spike observed in the middle of the channel.",
+            "18": "Sudden level shift observed towards the end of the channel."
+          }
+        },
+        "picks": [
+          5,
+          6,
+          18
+        ]
+      },
+      {
+        "group": [
+          19,
+          20,
+          21,
+          23
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [19, 20, 21, 23],\n  \"reason\": \"All channels show a sudden drop after a gradual increase, indicating a level shift anomaly.\"\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            19,
+            20,
+            21,
+            23
+          ],
+          "reason": "All channels show a sudden drop after a gradual increase, indicating a level shift anomaly."
+        },
+        "picks": [
+          19,
+          20,
+          21,
+          23
+        ]
+      },
+      {
+        "group": [
+          24,
+          25,
+          27,
+          30
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [24],\n    \"reason\": {\n        \"24\": \"Multiple sharp spikes indicating anomalous behavior.\",\n        \"25\": \"No anomaly; gradual increase and decrease are consistent.\",\n        \"27\": \"No anomaly; gradual increase and decrease are consistent.\",\n        \"30\": \"No anomaly; gradual increase and decrease are consistent.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            24
+          ],
+          "reason": {
+            "24": "Multiple sharp spikes indicating anomalous behavior.",
+            "25": "No anomaly; gradual increase and decrease are consistent.",
+            "27": "No anomaly; gradual increase and decrease are consistent.",
+            "30": "No anomaly; gradual increase and decrease are consistent."
+          }
+        },
+        "picks": [
+          24
+        ]
+      },
+      {
+        "group": [
+          31,
+          33,
+          34,
+          35
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [31, 33, 34],\n    \"reason\": {\n        \"31\": \"Sharp drop indicating a level shift.\",\n        \"33\": \"Multiple spikes deviating from normal pattern.\",\n        \"34\": \"Sudden drop after a peak indicating a pattern break.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            31,
+            33,
+            34
+          ],
+          "reason": {
+            "31": "Sharp drop indicating a level shift.",
+            "33": "Multiple spikes deviating from normal pattern.",
+            "34": "Sudden drop after a peak indicating a pattern break."
+          }
+        },
+        "picks": [
+          31,
+          33,
+          34
+        ]
+      }
+    ],
+    "all_vlm_picks": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      6,
+      18,
+      19,
+      20,
+      21,
+      23,
+      24,
+      31,
+      33,
+      34
+    ],
+    "final_pred": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      6,
+      18,
+      19,
+      20,
+      21,
+      23,
+      24,
+      31,
+      33,
+      34
+    ],
+    "f1_ours_vlm_subplot6_noredband": 0.6666666666666665,
+    "f1_ours_no_vlm": 0.375
+  },
+  "machine-2-9_15598_16012": {
+    "entity": "machine-2-9",
+    "start": 15598,
+    "end": 16012,
+    "k": 18,
+    "gt_channels": [
+      0,
+      1,
+      2,
+      3,
+      8,
+      9,
+      11,
+      12,
+      13,
+      14,
+      18,
+      19,
+      20,
+      21,
+      27,
+      30,
+      34,
+      35
+    ],
+    "auto_confirmed": [
+      0,
+      1,
+      2,
+      3,
+      9,
+      11,
+      12,
+      18,
+      19,
+      20,
+      21,
+      27,
+      30,
+      35
+    ],
+    "overlay_channels": [
+      5,
+      6,
+      8,
+      13,
+      14,
+      22,
+      23,
+      24,
+      25,
+      31,
+      34
+    ],
+    "n_groups": 3,
+    "group_logs": [
+      {
+        "group": [
+          5,
+          6,
+          8,
+          13
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [5, 6, 8, 13],\n  \"reason\": {\n    \"5\": \"Two significant spikes are present.\",\n    \"6\": \"Two significant spikes are present.\",\n    \"8\": \"A large spike followed by a pattern break.\",\n    \"13\": \"A large spike followed by a pattern break.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            5,
+            6,
+            8,
+            13
+          ],
+          "reason": {
+            "5": "Two significant spikes are present.",
+            "6": "Two significant spikes are present.",
+            "8": "A large spike followed by a pattern break.",
+            "13": "A large spike followed by a pattern break."
+          }
+        },
+        "picks": [
+          5,
+          6,
+          8,
+          13
+        ]
+      },
+      {
+        "group": [
+          14,
+          22,
+          23,
+          24
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [14, 22, 24],\n    \"reason\": {\n        \"14\": \"Pattern break with a sudden drop in variability and level.\",\n        \"22\": \"Level shift with a sudden drop to a lower level.\",\n        \"24\": \"Spike with a sudden, isolated peak.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            14,
+            22,
+            24
+          ],
+          "reason": {
+            "14": "Pattern break with a sudden drop in variability and level.",
+            "22": "Level shift with a sudden drop to a lower level.",
+            "24": "Spike with a sudden, isolated peak."
+          }
+        },
+        "picks": [
+          14,
+          22,
+          24
+        ]
+      },
+      {
+        "group": [
+          25,
+          31,
+          34
+        ],
+        "raw": "```json\n{\"anomalous_channels\": [31, 34], \"reason\": \"Ch31: Sharp upward spike at the end. Ch34: Sudden level shift upwards.\"}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            31,
+            34
+          ],
+          "reason": "Ch31: Sharp upward spike at the end. Ch34: Sudden level shift upwards."
+        },
+        "picks": [
+          31,
+          34
+        ]
+      }
+    ],
+    "all_vlm_picks": [
+      5,
+      6,
+      8,
+      13,
+      14,
+      22,
+      24,
+      31,
+      34
+    ],
+    "final_pred": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      6,
+      8,
+      9,
+      11,
+      12,
+      13,
+      14,
+      18,
+      19,
+      20,
+      21,
+      22,
+      24,
+      27,
+      30,
+      31,
+      34,
+      35
+    ],
+    "f1_ours_vlm_subplot6_noredband": 0.878048780487805,
+    "f1_ours_no_vlm": 0.8750000000000001
+  },
+  "machine-2-9_16729_16982": {
+    "entity": "machine-2-9",
+    "start": 16729,
+    "end": 16982,
+    "k": 8,
+    "gt_channels": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      0,
+      2,
+      5,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      15,
+      21,
+      22,
+      23,
+      24,
+      25,
+      34,
+      35
+    ],
+    "n_groups": 5,
+    "group_logs": [
+      {
+        "group": [
+          0,
+          2,
+          5,
+          8
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [0, 5],\n    \"reason\": {\n        \"0\": \"Pattern break with frequent sharp drops to zero.\",\n        \"2\": \"No significant anomaly; fluctuations are within normal range.\",\n        \"5\": \"Significant spike and level shift observed.\",\n        \"8\": \"No significant anomaly; spikes are consistent with normal pattern.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            0,
+            5
+          ],
+          "reason": {
+            "0": "Pattern break with frequent sharp drops to zero.",
+            "2": "No significant anomaly; fluctuations are within normal range.",
+            "5": "Significant spike and level shift observed.",
+            "8": "No significant anomaly; spikes are consistent with normal pattern."
+          }
+        },
+        "picks": [
+          0,
+          5
+        ]
+      },
+      {
+        "group": [
+          9,
+          10,
+          11,
+          12
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [9, 10, 12],\n    \"reason\": {\n        \"9\": \"Contains multiple spikes that deviate significantly from the baseline.\",\n        \"10\": \"Exhibits a large spike towards the end of the window.\",\n        \"12\": \"Shows several spikes that are not consistent with the normal pattern.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            9,
+            10,
+            12
+          ],
+          "reason": {
+            "9": "Contains multiple spikes that deviate significantly from the baseline.",
+            "10": "Exhibits a large spike towards the end of the window.",
+            "12": "Shows several spikes that are not consistent with the normal pattern."
+          }
+        },
+        "picks": [
+          9,
+          10,
+          12
+        ]
+      },
+      {
+        "group": [
+          13,
+          15,
+          21,
+          22
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [13, 15],\n  \"reason\": {\n    \"13\": \"Initial spike at the beginning of the channel.\",\n    \"15\": \"Significant spike in the middle of the channel.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            13,
+            15
+          ],
+          "reason": {
+            "13": "Initial spike at the beginning of the channel.",
+            "15": "Significant spike in the middle of the channel."
+          }
+        },
+        "picks": [
+          13,
+          15
+        ]
+      },
+      {
+        "group": [
+          23,
+          24,
+          25,
+          34
+        ],
+        "raw": "{\n    \"anomalous_channels\": [24, 34],\n    \"reason\": {\n        \"23\": \"No anomaly; smooth pattern with expected variation.\",\n        \"24\": \"Spike detected; sudden sharp increase and decrease.\",\n        \"25\": \"No anomaly; smooth pattern with expected variation.\",\n        \"34\": \"Pattern break; irregular step-like changes.\"\n    }\n}",
+        "parsed": {
+          "anomalous_channels": [
+            24,
+            34
+          ],
+          "reason": {
+            "23": "No anomaly; smooth pattern with expected variation.",
+            "24": "Spike detected; sudden sharp increase and decrease.",
+            "25": "No anomaly; smooth pattern with expected variation.",
+            "34": "Pattern break; irregular step-like changes."
+          }
+        },
+        "picks": [
+          24,
+          34
+        ]
+      },
+      {
+        "group": [
+          35
+        ],
+        "raw": "{\"anomalous_channels\": [35], \"reason\": \"Channel 35 shows a level shift and pattern break with fluctuations deviating from a stable pattern.\"}",
+        "parsed": {
+          "anomalous_channels": [
+            35
+          ],
+          "reason": "Channel 35 shows a level shift and pattern break with fluctuations deviating from a stable pattern."
+        },
+        "picks": [
+          35
+        ]
+      }
+    ],
+    "all_vlm_picks": [
+      0,
+      5,
+      9,
+      10,
+      12,
+      13,
+      15,
+      24,
+      34,
+      35
+    ],
+    "final_pred": [
+      0,
+      5,
+      9,
+      10,
+      12,
+      13,
+      15,
+      24,
+      34,
+      35
+    ],
+    "f1_ours_vlm_subplot6_noredband": 0.5555555555555556,
+    "f1_ours_no_vlm": 0.5
+  },
+  "machine-2-9_17083_17286": {
+    "entity": "machine-2-9",
+    "start": 17083,
+    "end": 17286,
+    "k": 20,
+    "gt_channels": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      27,
+      29,
+      30,
+      31,
+      32,
+      34,
+      35
+    ],
+    "auto_confirmed": [
+      0,
+      1,
+      2,
+      5,
+      6,
+      22,
+      24,
+      29,
+      31,
+      32
+    ],
+    "overlay_channels": [
+      3,
+      8,
+      10,
+      11,
+      14,
+      15,
+      18,
+      19,
+      20,
+      21,
+      23,
+      25,
+      27,
+      30,
+      33,
+      34,
+      35
+    ],
+    "n_groups": 5,
+    "group_logs": [
+      {
+        "group": [
+          3,
+          8,
+          10,
+          11
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [3, 8],\n    \"reason\": {\n        \"3\": \"Channel 3 shows a level shift with a clear upward trend and subsequent downward trend.\",\n        \"8\": \"Channel 8 has a significant spike that deviates from the normal pattern.\",\n        \"10\": \"Channel 10 shows regular spikes but no clear anomaly compared to its normal pattern.\",\n        \"11\": \"Channel 11 has spikes but they are consistent with its normal pattern.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            3,
+            8
+          ],
+          "reason": {
+            "3": "Channel 3 shows a level shift with a clear upward trend and subsequent downward trend.",
+            "8": "Channel 8 has a significant spike that deviates from the normal pattern.",
+            "10": "Channel 10 shows regular spikes but no clear anomaly compared to its normal pattern.",
+            "11": "Channel 11 has spikes but they are consistent with its normal pattern."
+          }
+        },
+        "picks": [
+          3,
+          8
+        ]
+      },
+      {
+        "group": [
+          14,
+          15,
+          18,
+          19
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [14, 18],\n  \"reason\": {\n    \"14\": \"Contains a significant spike not present in the normal pattern.\",\n    \"15\": \"No clear anomaly; pattern is consistent with normal behavior.\",\n    \"18\": \"Shows a level shift and pattern break, indicating an anomaly.\",\n    \"19\": \"No clear anomaly; pattern is consistent with normal behavior.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            14,
+            18
+          ],
+          "reason": {
+            "14": "Contains a significant spike not present in the normal pattern.",
+            "15": "No clear anomaly; pattern is consistent with normal behavior.",
+            "18": "Shows a level shift and pattern break, indicating an anomaly.",
+            "19": "No clear anomaly; pattern is consistent with normal behavior."
+          }
+        },
+        "picks": [
+          14,
+          18
+        ]
+      },
+      {
+        "group": [
+          20,
+          21,
+          23,
+          25
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [20, 21, 23, 25],\n  \"reason\": {\n    \"20\": \"Contains spikes and a pattern break.\",\n    \"21\": \"Contains spikes and a pattern break.\",\n    \"23\": \"Contains spikes and a pattern break.\",\n    \"25\": \"Contains spikes and a pattern break.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            20,
+            21,
+            23,
+            25
+          ],
+          "reason": {
+            "20": "Contains spikes and a pattern break.",
+            "21": "Contains spikes and a pattern break.",
+            "23": "Contains spikes and a pattern break.",
+            "25": "Contains spikes and a pattern break."
+          }
+        },
+        "picks": [
+          20,
+          21,
+          23,
+          25
+        ]
+      },
+      {
+        "group": [
+          27,
+          30,
+          33,
+          34
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [27, 30],\n    \"reason\": {\n        \"27\": \"Contains a significant spike and pattern break.\",\n        \"30\": \"Exhibits a similar spike and pattern break as channel 27.\",\n        \"33\": \"No clear anomaly; consistent noise pattern.\",\n        \"34\": \"No clear anomaly; consistent noise pattern.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            27,
+            30
+          ],
+          "reason": {
+            "27": "Contains a significant spike and pattern break.",
+            "30": "Exhibits a similar spike and pattern break as channel 27.",
+            "33": "No clear anomaly; consistent noise pattern.",
+            "34": "No clear anomaly; consistent noise pattern."
+          }
+        },
+        "picks": [
+          27,
+          30
+        ]
+      },
+      {
+        "group": [
+          35
+        ],
+        "raw": "```json\n{\"anomalous_channels\": [35], \"reason\": \"Channel 35 shows a significant spike and pattern break compared to the rest of the data.\"}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            35
+          ],
+          "reason": "Channel 35 shows a significant spike and pattern break compared to the rest of the data."
+        },
+        "picks": [
+          35
+        ]
+      }
+    ],
+    "all_vlm_picks": [
+      3,
+      8,
+      14,
+      18,
+      20,
+      21,
+      23,
+      25,
+      27,
+      30,
+      35
+    ],
+    "final_pred": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      6,
+      8,
+      14,
+      18,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      27,
+      29,
+      30,
+      31,
+      32,
+      35
+    ],
+    "f1_ours_vlm_subplot6_noredband": 0.8780487804878048,
+    "f1_ours_no_vlm": 0.6
+  },
+  "machine-2-9_17914_18096": {
+    "entity": "machine-2-9",
+    "start": 17914,
+    "end": 18096,
+    "k": 5,
+    "gt_channels": [
+      10,
+      11,
+      12,
+      14,
+      15
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      0,
+      5,
+      9,
+      10,
+      11,
+      12,
+      13,
+      15,
+      18,
+      22,
+      23,
+      24,
+      25,
+      31
+    ],
+    "n_groups": 4,
+    "group_logs": [
+      {
+        "group": [
+          0,
+          5,
+          9,
+          10
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [0, 5, 9],\n    \"reason\": {\n        \"0\": \"Level shift and pattern break towards the end.\",\n        \"5\": \"Significant spike in the middle.\",\n        \"9\": \"Multiple spikes towards the end.\",\n        \"10\": \"No significant anomalies detected.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            0,
+            5,
+            9
+          ],
+          "reason": {
+            "0": "Level shift and pattern break towards the end.",
+            "5": "Significant spike in the middle.",
+            "9": "Multiple spikes towards the end.",
+            "10": "No significant anomalies detected."
+          }
+        },
+        "picks": [
+          0,
+          5,
+          9
+        ]
+      },
+      {
+        "group": [
+          11,
+          12,
+          13,
+          15
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [11, 12, 15],\n  \"reason\": {\n    \"11\": \"Contains multiple spikes that deviate significantly from the normal pattern.\",\n    \"12\": \"Exhibits a sharp spike that is not consistent with the usual behavior.\",\n    \"15\": \"Shows a prominent spike indicating a deviation from the normal pattern.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            11,
+            12,
+            15
+          ],
+          "reason": {
+            "11": "Contains multiple spikes that deviate significantly from the normal pattern.",
+            "12": "Exhibits a sharp spike that is not consistent with the usual behavior.",
+            "15": "Shows a prominent spike indicating a deviation from the normal pattern."
+          }
+        },
+        "picks": [
+          11,
+          12,
+          15
+        ]
+      },
+      {
+        "group": [
+          18,
+          22,
+          23,
+          24
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [18, 24],\n  \"reason\": {\n    \"18\": \"Level shift observed with a sudden drop in values.\",\n    \"24\": \"Sharp spike detected in the otherwise flat pattern.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            18,
+            24
+          ],
+          "reason": {
+            "18": "Level shift observed with a sudden drop in values.",
+            "24": "Sharp spike detected in the otherwise flat pattern."
+          }
+        },
+        "picks": [
+          18,
+          24
+        ]
+      },
+      {
+        "group": [
+          25,
+          31
+        ],
+        "raw": "{\"anomalous_channels\": [31], \"reason\": \"Channel 31 shows a clear level shift with a sudden drop and prolonged low values, indicating an anomaly. Channel 25 shows a smooth pattern without abrupt changes.\"}",
+        "parsed": {
+          "anomalous_channels": [
+            31
+          ],
+          "reason": "Channel 31 shows a clear level shift with a sudden drop and prolonged low values, indicating an anomaly. Channel 25 shows a smooth pattern without abrupt changes."
+        },
+        "picks": [
+          31
+        ]
+      }
+    ],
+    "all_vlm_picks": [
+      0,
+      5,
+      9,
+      11,
+      12,
+      15,
+      18,
+      24,
+      31
+    ],
+    "final_pred": [
+      0,
+      5,
+      9,
+      11,
+      12,
+      15,
+      18,
+      24,
+      31
+    ],
+    "f1_ours_vlm_subplot6_noredband": 0.42857142857142855,
+    "f1_ours_no_vlm": 0.28571428571428575
+  },
+  "machine-2-9_19157_19501": {
+    "entity": "machine-2-9",
+    "start": 19157,
+    "end": 19501,
+    "k": 9,
+    "gt_channels": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      29
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      0,
+      1,
+      5,
+      9,
+      10,
+      11,
+      12,
+      13,
+      15,
+      18,
+      19,
+      20,
+      23,
+      25,
+      27,
+      29
+    ],
+    "n_groups": 4,
+    "group_logs": [
+      {
+        "group": [
+          0,
+          1,
+          5,
+          9
+        ],
+        "raw": "```json\n{\"anomalous_channels\": [1, 5, 9], \"reason\": {\"0\": \"No clear anomaly; pattern is consistent.\", \"1\": \"Spike observed around the middle of the plot.\", \"5\": \"Spike at the beginning of the plot.\", \"9\": \"Spike observed towards the end of the plot.\"}}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            1,
+            5,
+            9
+          ],
+          "reason": {
+            "0": "No clear anomaly; pattern is consistent.",
+            "1": "Spike observed around the middle of the plot.",
+            "5": "Spike at the beginning of the plot.",
+            "9": "Spike observed towards the end of the plot."
+          }
+        },
+        "picks": [
+          1,
+          5,
+          9
+        ]
+      },
+      {
+        "group": [
+          10,
+          11,
+          12,
+          13
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [11, 12],\n  \"reason\": {\n    \"11\": \"Channel 11 shows a significant spike around the middle of the plot.\",\n    \"12\": \"Channel 12 exhibits a pronounced spike towards the end of the plot.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            11,
+            12
+          ],
+          "reason": {
+            "11": "Channel 11 shows a significant spike around the middle of the plot.",
+            "12": "Channel 12 exhibits a pronounced spike towards the end of the plot."
+          }
+        },
+        "picks": [
+          11,
+          12
+        ]
+      },
+      {
+        "group": [
+          15,
+          18,
+          19,
+          20
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [18, 19, 20],\n  \"reason\": {\n    \"15\": \"No significant deviation from normal pattern.\",\n    \"18\": \"Contains a significant spike and level shift.\",\n    \"19\": \"Contains a significant spike and level shift.\",\n    \"20\": \"Contains a significant spike and level shift.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            18,
+            19,
+            20
+          ],
+          "reason": {
+            "15": "No significant deviation from normal pattern.",
+            "18": "Contains a significant spike and level shift.",
+            "19": "Contains a significant spike and level shift.",
+            "20": "Contains a significant spike and level shift."
+          }
+        },
+        "picks": [
+          18,
+          19,
+          20
+        ]
+      },
+      {
+        "group": [
+          23,
+          25,
+          27,
+          29
+        ],
+        "raw": "```json\n{\"anomalous_channels\": [27, 29], \"reason\": \"Ch27: Pattern break with a sharp peak. Ch29: Large spike at the beginning.\"}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            27,
+            29
+          ],
+          "reason": "Ch27: Pattern break with a sharp peak. Ch29: Large spike at the beginning."
+        },
+        "picks": [
+          27,
+          29
+        ]
+      }
+    ],
+    "all_vlm_picks": [
+      1,
+      5,
+      9,
+      11,
+      12,
+      18,
+      19,
+      20,
+      27,
+      29
+    ],
+    "final_pred": [
+      1,
+      5,
+      9,
+      11,
+      12,
+      18,
+      19,
+      20,
+      27,
+      29
+    ],
+    "f1_ours_vlm_subplot6_noredband": 0.4210526315789474,
+    "f1_ours_no_vlm": 0.3636363636363636
+  },
+  "machine-2-9_20615_20845": {
+    "entity": "machine-2-9",
+    "start": 20615,
+    "end": 20845,
+    "k": 8,
+    "gt_channels": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      0,
+      1,
+      2,
+      5,
+      6,
+      9,
+      10,
+      11,
+      12,
+      13,
+      15,
+      18,
+      22
+    ],
+    "n_groups": 4,
+    "group_logs": [
+      {
+        "group": [
+          0,
+          1,
+          2,
+          5
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [0, 1, 5],\n  \"reason\": {\n    \"0\": \"Channel 0 shows a level shift and pattern break.\",\n    \"1\": \"Channel 1 has multiple spikes.\",\n    \"2\": \"Channel 2 appears normal with no significant anomalies.\",\n    \"5\": \"Channel 5 has a prominent spike.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            0,
+            1,
+            5
+          ],
+          "reason": {
+            "0": "Channel 0 shows a level shift and pattern break.",
+            "1": "Channel 1 has multiple spikes.",
+            "2": "Channel 2 appears normal with no significant anomalies.",
+            "5": "Channel 5 has a prominent spike."
+          }
+        },
+        "picks": [
+          0,
+          1,
+          5
+        ]
+      },
+      {
+        "group": [
+          6,
+          9,
+          10,
+          11
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [6, 9, 10, 11],\n  \"reason\": {\n    \"6\": \"Spike observed in the middle of the channel.\",\n    \"9\": \"Significant spike and level shift observed.\",\n    \"10\": \"Spike observed in the middle of the channel.\",\n    \"11\": \"Multiple spikes and pattern breaks observed.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            6,
+            9,
+            10,
+            11
+          ],
+          "reason": {
+            "6": "Spike observed in the middle of the channel.",
+            "9": "Significant spike and level shift observed.",
+            "10": "Spike observed in the middle of the channel.",
+            "11": "Multiple spikes and pattern breaks observed."
+          }
+        },
+        "picks": [
+          6,
+          9,
+          10,
+          11
+        ]
+      },
+      {
+        "group": [
+          12,
+          13,
+          15,
+          18
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [12, 15, 18],\n  \"reason\": {\n    \"12\": \"Contains multiple spikes significantly higher than the rest of the data.\",\n    \"13\": \"No significant anomalies; pattern is consistent with normal fluctuations.\",\n    \"15\": \"Contains a prominent spike that stands out from the rest of the data.\",\n    \"18\": \"Shows a downward trend followed by a sudden spike at the end.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            12,
+            15,
+            18
+          ],
+          "reason": {
+            "12": "Contains multiple spikes significantly higher than the rest of the data.",
+            "13": "No significant anomalies; pattern is consistent with normal fluctuations.",
+            "15": "Contains a prominent spike that stands out from the rest of the data.",
+            "18": "Shows a downward trend followed by a sudden spike at the end."
+          }
+        },
+        "picks": [
+          12,
+          15,
+          18
+        ]
+      },
+      {
+        "group": [
+          22
+        ],
+        "raw": "```json\n{\"anomalous_channels\": [22], \"reason\": \"Channel 22 shows a significant upward trend and spike towards the end, indicating a pattern break.\"}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            22
+          ],
+          "reason": "Channel 22 shows a significant upward trend and spike towards the end, indicating a pattern break."
+        },
+        "picks": [
+          22
+        ]
+      }
+    ],
+    "all_vlm_picks": [
+      0,
+      1,
+      5,
+      6,
+      9,
+      10,
+      11,
+      12,
+      15,
+      18,
+      22
+    ],
+    "final_pred": [
+      0,
+      1,
+      5,
+      6,
+      9,
+      10,
+      11,
+      12,
+      15,
+      18,
+      22
+    ],
+    "f1_ours_vlm_subplot6_noredband": 0.5263157894736842,
+    "f1_ours_no_vlm": 0.3333333333333333
+  },
+  "machine-2-9_24475_24478": {
+    "entity": "machine-2-9",
+    "start": 24475,
+    "end": 24478,
+    "k": 4,
+    "gt_channels": [
+      8,
+      12,
+      13,
+      14
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      1,
+      2,
+      6,
+      8,
+      9,
+      11,
+      12,
+      13,
+      14,
+      19,
+      20,
+      21,
+      27,
+      30,
+      31
+    ],
+    "n_groups": 4,
+    "group_logs": [
+      {
+        "group": [
+          1,
+          2,
+          6,
+          8
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [1, 2, 8],\n  \"reason\": {\n    \"1\": \"Contains multiple spikes that deviate significantly from the normal pattern.\",\n    \"2\": \"Exhibits a large spike that is not consistent with the usual fluctuations.\",\n    \"6\": \"No clear anomalies; fluctuations appear within normal range.\",\n    \"8\": \"Shows a significant spike that breaks the typical pattern.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            1,
+            2,
+            8
+          ],
+          "reason": {
+            "1": "Contains multiple spikes that deviate significantly from the normal pattern.",
+            "2": "Exhibits a large spike that is not consistent with the usual fluctuations.",
+            "6": "No clear anomalies; fluctuations appear within normal range.",
+            "8": "Shows a significant spike that breaks the typical pattern."
+          }
+        },
+        "picks": [
+          1,
+          2,
+          8
+        ]
+      },
+      {
+        "group": [
+          9,
+          11,
+          12,
+          13
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [9, 11, 12, 13],\n    \"reason\": {\n        \"9\": \"Two significant spikes observed.\",\n        \"11\": \"Increased variability and multiple spikes.\",\n        \"12\": \"Large spike followed by increased variability.\",\n        \"13\": \"Large spike followed by increased variability.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            9,
+            11,
+            12,
+            13
+          ],
+          "reason": {
+            "9": "Two significant spikes observed.",
+            "11": "Increased variability and multiple spikes.",
+            "12": "Large spike followed by increased variability.",
+            "13": "Large spike followed by increased variability."
+          }
+        },
+        "picks": [
+          9,
+          11,
+          12,
+          13
+        ]
+      },
+      {
+        "group": [
+          14,
+          19,
+          20,
+          21
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [14],\n  \"reason\": {\n    \"14\": \"Spike observed in the middle of the channel.\",\n    \"19\": \"No anomaly; gradual decay pattern is consistent.\",\n    \"20\": \"No anomaly; gradual decay pattern is consistent.\",\n    \"21\": \"No anomaly; gradual decay pattern is consistent.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            14
+          ],
+          "reason": {
+            "14": "Spike observed in the middle of the channel.",
+            "19": "No anomaly; gradual decay pattern is consistent.",
+            "20": "No anomaly; gradual decay pattern is consistent.",
+            "21": "No anomaly; gradual decay pattern is consistent."
+          }
+        },
+        "picks": [
+          14
+        ]
+      },
+      {
+        "group": [
+          27,
+          30,
+          31
+        ],
+        "raw": "```json\n{\"anomalous_channels\": [31], \"reason\": \"Ch31 shows a level shift and pattern break, while Ch27 and Ch30 follow a normal decay pattern.\"}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            31
+          ],
+          "reason": "Ch31 shows a level shift and pattern break, while Ch27 and Ch30 follow a normal decay pattern."
+        },
+        "picks": [
+          31
+        ]
+      }
+    ],
+    "all_vlm_picks": [
+      1,
+      2,
+      8,
+      9,
+      11,
+      12,
+      13,
+      14,
+      31
+    ],
+    "final_pred": [
+      1,
+      2,
+      8,
+      9,
+      11,
+      12,
+      13,
+      14,
+      31
+    ],
+    "f1_ours_vlm_subplot6_noredband": 0.6153846153846153,
+    "f1_ours_no_vlm": 0.8
+  },
+  "machine-2-9_25904_25906": {
+    "entity": "machine-2-9",
+    "start": 25904,
+    "end": 25906,
+    "k": 4,
+    "gt_channels": [
+      8,
+      12,
+      13,
+      14
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      0,
+      2,
+      3,
+      5,
+      6,
+      8,
+      9,
+      11,
+      12,
+      13,
+      14,
+      18,
+      19,
+      20,
+      21,
+      27,
+      30,
+      31
+    ],
+    "n_groups": 5,
+    "group_logs": [
+      {
+        "group": [
+          0,
+          2,
+          3,
+          5
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [2, 3, 5],\n  \"reason\": {\n    \"0\": \"No significant anomaly; pattern is consistent.\",\n    \"2\": \"Spike observed in the middle of the window.\",\n    \"3\": \"Spike observed in the middle of the window.\",\n    \"5\": \"Spike observed in the middle of the window.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            2,
+            3,
+            5
+          ],
+          "reason": {
+            "0": "No significant anomaly; pattern is consistent.",
+            "2": "Spike observed in the middle of the window.",
+            "3": "Spike observed in the middle of the window.",
+            "5": "Spike observed in the middle of the window."
+          }
+        },
+        "picks": [
+          2,
+          3,
+          5
+        ]
+      },
+      {
+        "group": [
+          6,
+          8,
+          9,
+          11
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [6, 8, 9],\n    \"reason\": {\n        \"6\": \"Spike observed in the middle of the channel.\",\n        \"8\": \"Significant spike and level shift observed.\",\n        \"9\": \"Large spike observed in the middle of the channel.\",\n        \"11\": \"No clear anomaly; pattern remains consistent.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            6,
+            8,
+            9
+          ],
+          "reason": {
+            "6": "Spike observed in the middle of the channel.",
+            "8": "Significant spike and level shift observed.",
+            "9": "Large spike observed in the middle of the channel.",
+            "11": "No clear anomaly; pattern remains consistent."
+          }
+        },
+        "picks": [
+          6,
+          8,
+          9
+        ]
+      },
+      {
+        "group": [
+          12,
+          13,
+          14,
+          18
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [12, 13, 14],\n  \"reason\": {\n    \"12\": \"Spike observed in the middle of the channel.\",\n    \"13\": \"Spike observed in the middle of the channel.\",\n    \"14\": \"Spike observed in the middle of the channel.\",\n    \"18\": \"No anomaly; gradual decrease is consistent with normal behavior.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            12,
+            13,
+            14
+          ],
+          "reason": {
+            "12": "Spike observed in the middle of the channel.",
+            "13": "Spike observed in the middle of the channel.",
+            "14": "Spike observed in the middle of the channel.",
+            "18": "No anomaly; gradual decrease is consistent with normal behavior."
+          }
+        },
+        "picks": [
+          12,
+          13,
+          14
+        ]
+      },
+      {
+        "group": [
+          19,
+          20,
+          21,
+          27
+        ],
+        "raw": "```json\n{\"anomalous_channels\": [], \"reason\": \"All channels show a similar pattern with an initial spike followed by a decay to a stable level, indicating no anomalies.\"}\n```",
+        "parsed": {
+          "anomalous_channels": [],
+          "reason": "All channels show a similar pattern with an initial spike followed by a decay to a stable level, indicating no anomalies."
+        },
+        "picks": []
+      },
+      {
+        "group": [
+          30,
+          31
+        ],
+        "raw": "```json\n{\"anomalous_channels\": [30, 31], \"reason\": \"Channel 30 shows a spike at the beginning followed by a rapid decline. Channel 31 shows a level shift from high to low values.\"}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            30,
+            31
+          ],
+          "reason": "Channel 30 shows a spike at the beginning followed by a rapid decline. Channel 31 shows a level shift from high to low values."
+        },
+        "picks": [
+          30,
+          31
+        ]
+      }
+    ],
+    "all_vlm_picks": [
+      2,
+      3,
+      5,
+      6,
+      8,
+      9,
+      12,
+      13,
+      14,
+      30,
+      31
+    ],
+    "final_pred": [
+      2,
+      3,
+      5,
+      6,
+      8,
+      9,
+      12,
+      13,
+      14,
+      30,
+      31
+    ],
+    "f1_ours_vlm_subplot6_noredband": 0.5333333333333333,
+    "f1_ours_no_vlm": 0.75
+  },
+  "machine-2-9_27356_27358": {
+    "entity": "machine-2-9",
+    "start": 27356,
+    "end": 27358,
+    "k": 4,
+    "gt_channels": [
+      8,
+      12,
+      13,
+      14
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      5,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      31
+    ],
+    "n_groups": 3,
+    "group_logs": [
+      {
+        "group": [
+          5,
+          8,
+          9,
+          10
+        ],
+        "raw": "{\"anomalous_channels\": [5, 8, 9], \"reason\": {\"5\": \"Level shift observed in the middle of the channel.\", \"8\": \"Significant spike detected.\", \"9\": \"Significant spike detected.\"}}",
+        "parsed": {
+          "anomalous_channels": [
+            5,
+            8,
+            9
+          ],
+          "reason": {
+            "5": "Level shift observed in the middle of the channel.",
+            "8": "Significant spike detected.",
+            "9": "Significant spike detected."
+          }
+        },
+        "picks": [
+          5,
+          8,
+          9
+        ]
+      },
+      {
+        "group": [
+          11,
+          12,
+          13,
+          14
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [11, 12, 13, 14],\n  \"reason\": {\n    \"11\": \"Spike observed in the middle of the channel.\",\n    \"12\": \"Significant spike observed in the middle of the channel.\",\n    \"13\": \"Significant spike observed in the middle of the channel.\",\n    \"14\": \"Multiple spikes observed in the channel.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            11,
+            12,
+            13,
+            14
+          ],
+          "reason": {
+            "11": "Spike observed in the middle of the channel.",
+            "12": "Significant spike observed in the middle of the channel.",
+            "13": "Significant spike observed in the middle of the channel.",
+            "14": "Multiple spikes observed in the channel."
+          }
+        },
+        "picks": [
+          11,
+          12,
+          13,
+          14
+        ]
+      },
+      {
+        "group": [
+          31
+        ],
+        "raw": "```json\n{\"anomalous_channels\": [31], \"reason\": \"Channel 31 shows a significant level shift and pattern break.\"}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            31
+          ],
+          "reason": "Channel 31 shows a significant level shift and pattern break."
+        },
+        "picks": [
+          31
+        ]
+      }
+    ],
+    "all_vlm_picks": [
+      5,
+      8,
+      9,
+      11,
+      12,
+      13,
+      14,
+      31
+    ],
+    "final_pred": [
+      5,
+      8,
+      9,
+      11,
+      12,
+      13,
+      14,
+      31
+    ],
+    "f1_ours_vlm_subplot6_noredband": 0.6666666666666666,
+    "f1_ours_no_vlm": 0.8
+  },
+  "machine-3-1_1209_1240": {
+    "entity": "machine-3-1",
+    "start": 1209,
+    "end": 1240,
+    "k": 12,
+    "gt_channels": [
+      0,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      27,
+      30,
+      31
+    ],
+    "auto_confirmed": [
+      0,
+      1,
+      2,
+      3,
+      10,
+      18,
+      19,
+      20,
+      21,
+      22,
+      30,
+      31,
+      34,
+      35
+    ],
+    "overlay_channels": [
+      6,
+      12,
+      13,
+      14,
+      15,
+      23,
+      24,
+      25,
+      27,
+      29,
+      32
+    ],
+    "n_groups": 3,
+    "group_logs": [
+      {
+        "group": [
+          6,
+          12,
+          13,
+          14
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [6, 12, 14],\n  \"reason\": {\n    \"6\": \"Contains a significant spike around the middle of the plot.\",\n    \"12\": \"Shows multiple sharp spikes and a sudden level shift towards the end.\",\n    \"14\": \"Exhibits a pattern break with a prolonged high level followed by a sharp drop.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            6,
+            12,
+            14
+          ],
+          "reason": {
+            "6": "Contains a significant spike around the middle of the plot.",
+            "12": "Shows multiple sharp spikes and a sudden level shift towards the end.",
+            "14": "Exhibits a pattern break with a prolonged high level followed by a sharp drop."
+          }
+        },
+        "picks": [
+          6,
+          12,
+          14
+        ]
+      },
+      {
+        "group": [
+          15,
+          23,
+          24,
+          25
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [15, 23, 24, 25],\n  \"reason\": {\n    \"15\": \"Spike observed at the end of the window.\",\n    \"23\": \"Significant level shift downward and then back up.\",\n    \"24\": \"Spike observed in the middle of the window.\",\n    \"25\": \"Significant level shift downward and then back up.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            15,
+            23,
+            24,
+            25
+          ],
+          "reason": {
+            "15": "Spike observed at the end of the window.",
+            "23": "Significant level shift downward and then back up.",
+            "24": "Spike observed in the middle of the window.",
+            "25": "Significant level shift downward and then back up."
+          }
+        },
+        "picks": [
+          15,
+          23,
+          24,
+          25
+        ]
+      },
+      {
+        "group": [
+          27,
+          29,
+          32
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [27],\n  \"reason\": \"Channel 27 shows a significant level shift and spike, indicating anomalous behavior. Channels 29 and 32 display normal binary patterns without anomalies.\"\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            27
+          ],
+          "reason": "Channel 27 shows a significant level shift and spike, indicating anomalous behavior. Channels 29 and 32 display normal binary patterns without anomalies."
+        },
+        "picks": [
+          27
+        ]
+      }
+    ],
+    "all_vlm_picks": [
+      6,
+      12,
+      14,
+      15,
+      23,
+      24,
+      25,
+      27
+    ],
+    "final_pred": [
+      0,
+      1,
+      2,
+      3,
+      6,
+      10,
+      12,
+      14,
+      15,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      27,
+      30,
+      31,
+      34,
+      35
+    ],
+    "f1_ours_vlm_subplot6_noredband": 0.7058823529411764,
+    "f1_ours_no_vlm": 0.6153846153846153
+  },
+  "machine-3-1_5399_5530": {
+    "entity": "machine-3-1",
+    "start": 5399,
+    "end": 5530,
+    "k": 3,
+    "gt_channels": [
+      26,
+      32,
+      33
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      0,
+      2,
+      3,
+      6,
+      8,
+      10,
+      12,
+      13,
+      15,
+      18,
+      19,
+      20,
+      21,
+      26,
+      27,
+      29,
+      30,
+      32,
+      33,
+      34,
+      35
+    ],
+    "n_groups": 6,
+    "group_logs": [
+      {
+        "group": [
+          0,
+          2,
+          3,
+          6
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [0, 2, 3, 6],\n  \"reason\": {\n    \"0\": \"Level shift observed towards the end of the window.\",\n    \"2\": \"Level shift observed towards the end of the window.\",\n    \"3\": \"Level shift observed towards the end of the window.\",\n    \"6\": \"Multiple spikes observed throughout the window.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            0,
+            2,
+            3,
+            6
+          ],
+          "reason": {
+            "0": "Level shift observed towards the end of the window.",
+            "2": "Level shift observed towards the end of the window.",
+            "3": "Level shift observed towards the end of the window.",
+            "6": "Multiple spikes observed throughout the window."
+          }
+        },
+        "picks": [
+          0,
+          2,
+          3,
+          6
+        ]
+      },
+      {
+        "group": [
+          8,
+          10,
+          12,
+          13
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [8, 12],\n    \"reason\": {\n        \"8\": \"Contains irregular spikes that deviate from the normal pattern.\",\n        \"12\": \"Shows a significant spike that breaks the usual pattern.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            8,
+            12
+          ],
+          "reason": {
+            "8": "Contains irregular spikes that deviate from the normal pattern.",
+            "12": "Shows a significant spike that breaks the usual pattern."
+          }
+        },
+        "picks": [
+          8,
+          12
+        ]
+      },
+      {
+        "group": [
+          15,
+          18,
+          19,
+          20
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [15, 18, 19, 20],\n  \"reason\": {\n    \"15\": \"Spike detected in the middle of the channel.\",\n    \"18\": \"Level shift detected towards the end of the channel.\",\n    \"19\": \"Level shift detected towards the end of the channel.\",\n    \"20\": \"Level shift detected towards the end of the channel.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            15,
+            18,
+            19,
+            20
+          ],
+          "reason": {
+            "15": "Spike detected in the middle of the channel.",
+            "18": "Level shift detected towards the end of the channel.",
+            "19": "Level shift detected towards the end of the channel.",
+            "20": "Level shift detected towards the end of the channel."
+          }
+        },
+        "picks": [
+          15,
+          18,
+          19,
+          20
+        ]
+      },
+      {
+        "group": [
+          21,
+          26,
+          27,
+          29
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [21, 26, 27],\n  \"reason\": {\n    \"21\": \"Level shift observed towards the end of the channel.\",\n    \"26\": \"Multiple spikes observed throughout the channel.\",\n    \"27\": \"Level shift observed towards the end of the channel.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            21,
+            26,
+            27
+          ],
+          "reason": {
+            "21": "Level shift observed towards the end of the channel.",
+            "26": "Multiple spikes observed throughout the channel.",
+            "27": "Level shift observed towards the end of the channel."
+          }
+        },
+        "picks": [
+          21,
+          26,
+          27
+        ]
+      },
+      {
+        "group": [
+          30,
+          32,
+          33,
+          34
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [30, 32, 33, 34],\n  \"reason\": {\n    \"30\": \"Level shift observed towards the end of the window.\",\n    \"32\": \"Pattern break with high variability and sudden changes.\",\n    \"33\": \"Pattern break with high variability and sudden changes.\",\n    \"34\": \"Pattern break with high variability and sudden changes.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            30,
+            32,
+            33,
+            34
+          ],
+          "reason": {
+            "30": "Level shift observed towards the end of the window.",
+            "32": "Pattern break with high variability and sudden changes.",
+            "33": "Pattern break with high variability and sudden changes.",
+            "34": "Pattern break with high variability and sudden changes."
+          }
+        },
+        "picks": [
+          30,
+          32,
+          33,
+          34
+        ]
+      },
+      {
+        "group": [
+          35
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [35],\n  \"reason\": \"Channel 35 shows a level shift followed by increased variability, indicating a pattern break.\"\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            35
+          ],
+          "reason": "Channel 35 shows a level shift followed by increased variability, indicating a pattern break."
+        },
+        "picks": [
+          35
+        ]
+      }
+    ],
+    "all_vlm_picks": [
+      0,
+      2,
+      3,
+      6,
+      8,
+      12,
+      15,
+      18,
+      19,
+      20,
+      21,
+      26,
+      27,
+      30,
+      32,
+      33,
+      34,
+      35
+    ],
+    "final_pred": [
+      0,
+      2,
+      3,
+      6,
+      8,
+      12,
+      15,
+      18,
+      19,
+      20,
+      21,
+      26,
+      27,
+      30,
+      32,
+      33,
+      34,
+      35
+    ],
+    "f1_ours_vlm_subplot6_noredband": 0.2857142857142857,
+    "f1_ours_no_vlm": 0.7499999999999999
+  },
+  "machine-3-1_10696_10717": {
+    "entity": "machine-3-1",
+    "start": 10696,
+    "end": 10717,
+    "k": 8,
+    "gt_channels": [
+      0,
+      1,
+      18,
+      19,
+      20,
+      21,
+      27,
+      30
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      18,
+      19,
+      20,
+      21,
+      24,
+      27,
+      29,
+      30,
+      32,
+      33,
+      34,
+      35
+    ],
+    "n_groups": 7,
+    "group_logs": [
+      {
+        "group": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [0, 1, 2, 3],\n  \"reason\": {\n    \"0\": \"Spike followed by a level shift.\",\n    \"1\": \"Spike followed by a level shift.\",\n    \"2\": \"Spike followed by a level shift.\",\n    \"3\": \"Level shift with a gradual increase.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "reason": {
+            "0": "Spike followed by a level shift.",
+            "1": "Spike followed by a level shift.",
+            "2": "Spike followed by a level shift.",
+            "3": "Level shift with a gradual increase."
+          }
+        },
+        "picks": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "group": [
+          5,
+          6,
+          8,
+          9
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [5, 6, 9],\n    \"reason\": {\n        \"5\": \"Pattern break with erratic fluctuations and a significant drop.\",\n        \"6\": \"Level shift with a sudden increase and sustained higher values.\",\n        \"9\": \"Multiple spikes and increased variability compared to a stable baseline.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            5,
+            6,
+            9
+          ],
+          "reason": {
+            "5": "Pattern break with erratic fluctuations and a significant drop.",
+            "6": "Level shift with a sudden increase and sustained higher values.",
+            "9": "Multiple spikes and increased variability compared to a stable baseline."
+          }
+        },
+        "picks": [
+          5,
+          6,
+          9
+        ]
+      },
+      {
+        "group": [
+          10,
+          11,
+          12,
+          13
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [11, 12],\n    \"reason\": {\n        \"11\": \"Irregular spikes and increased variability compared to a typical pattern.\",\n        \"12\": \"Presence of large spikes and a level shift not seen in normal patterns.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            11,
+            12
+          ],
+          "reason": {
+            "11": "Irregular spikes and increased variability compared to a typical pattern.",
+            "12": "Presence of large spikes and a level shift not seen in normal patterns."
+          }
+        },
+        "picks": [
+          11,
+          12
+        ]
+      },
+      {
+        "group": [
+          14,
+          15,
+          18,
+          19
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [14, 18, 19],\n    \"reason\": {\n        \"14\": \"Contains a significant spike not consistent with the rest of the pattern.\",\n        \"15\": \"Pattern is consistent with regular spikes; no anomaly detected.\",\n        \"18\": \"Shows a level shift followed by a pattern change.\",\n        \"19\": \"Shows a level shift followed by a pattern change.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            14,
+            18,
+            19
+          ],
+          "reason": {
+            "14": "Contains a significant spike not consistent with the rest of the pattern.",
+            "15": "Pattern is consistent with regular spikes; no anomaly detected.",
+            "18": "Shows a level shift followed by a pattern change.",
+            "19": "Shows a level shift followed by a pattern change."
+          }
+        },
+        "picks": [
+          14,
+          18,
+          19
+        ]
+      },
+      {
+        "group": [
+          20,
+          21,
+          24,
+          27
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [20, 21, 24, 27],\n  \"reason\": {\n    \"20\": \"Spike and level shift observed.\",\n    \"21\": \"Spike and level shift observed.\",\n    \"24\": \"Spike observed.\",\n    \"27\": \"Spike and level shift observed.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            20,
+            21,
+            24,
+            27
+          ],
+          "reason": {
+            "20": "Spike and level shift observed.",
+            "21": "Spike and level shift observed.",
+            "24": "Spike observed.",
+            "27": "Spike and level shift observed."
+          }
+        },
+        "picks": [
+          20,
+          21,
+          24,
+          27
+        ]
+      },
+      {
+        "group": [
+          29,
+          30,
+          32,
+          33
+        ],
+        "raw": "{\"anomalous_channels\": [30], \"reason\": {\"29\": \"No anomaly; consistent pattern with spikes.\", \"30\": \"Anomaly detected; sudden spike and level shift.\", \"32\": \"No anomaly; consistent binary pattern.\", \"33\": \"No anomaly; consistent random fluctuations.\"}}",
+        "parsed": {
+          "anomalous_channels": [
+            30
+          ],
+          "reason": {
+            "29": "No anomaly; consistent pattern with spikes.",
+            "30": "Anomaly detected; sudden spike and level shift.",
+            "32": "No anomaly; consistent binary pattern.",
+            "33": "No anomaly; consistent random fluctuations."
+          }
+        },
+        "picks": [
+          30
+        ]
+      },
+      {
+        "group": [
+          34,
+          35
+        ],
+        "raw": "{\"anomalous_channels\": [34, 35], \"reason\": \"Channel 34 shows a spike; Channel 35 shows a spike.\"}",
+        "parsed": {
+          "anomalous_channels": [
+            34,
+            35
+          ],
+          "reason": "Channel 34 shows a spike; Channel 35 shows a spike."
+        },
+        "picks": [
+          34,
+          35
+        ]
+      }
+    ],
+    "all_vlm_picks": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      6,
+      9,
+      11,
+      12,
+      14,
+      18,
+      19,
+      20,
+      21,
+      24,
+      27,
+      30,
+      34,
+      35
+    ],
+    "final_pred": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      6,
+      9,
+      11,
+      12,
+      14,
+      18,
+      19,
+      20,
+      21,
+      24,
+      27,
+      30,
+      34,
+      35
+    ],
+    "f1_ours_vlm_subplot6_noredband": 0.5925925925925926,
+    "f1_ours_no_vlm": 0.25
+  },
+  "machine-3-1_27839_27964": {
+    "entity": "machine-3-1",
+    "start": 27839,
+    "end": 27964,
+    "k": 15,
+    "gt_channels": [
+      0,
+      1,
+      2,
+      3,
+      9,
+      18,
+      19,
+      20,
+      21,
+      22,
+      27,
+      30,
+      31,
+      34,
+      35
+    ],
+    "auto_confirmed": [
+      0,
+      1,
+      2,
+      3,
+      10,
+      13,
+      15,
+      22,
+      31,
+      32
+    ],
+    "overlay_channels": [
+      5,
+      6,
+      8,
+      11,
+      12,
+      14,
+      18,
+      19,
+      20,
+      21,
+      23,
+      24,
+      25,
+      27,
+      29,
+      30,
+      34,
+      35
+    ],
+    "n_groups": 5,
+    "group_logs": [
+      {
+        "group": [
+          5,
+          6,
+          8,
+          11
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [5, 6],\n  \"reason\": {\n    \"5\": \"Channel 5 shows a significant drop and recovery, indicating a level shift.\",\n    \"6\": \"Channel 6 has multiple spikes and a level shift, deviating from a normal pattern.\",\n    \"8\": \"Channel 8 shows frequent spikes but appears consistent with its pattern.\",\n    \"11\": \"Channel 11 has high variability but no clear anomaly compared to its pattern.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            5,
+            6
+          ],
+          "reason": {
+            "5": "Channel 5 shows a significant drop and recovery, indicating a level shift.",
+            "6": "Channel 6 has multiple spikes and a level shift, deviating from a normal pattern.",
+            "8": "Channel 8 shows frequent spikes but appears consistent with its pattern.",
+            "11": "Channel 11 has high variability but no clear anomaly compared to its pattern."
+          }
+        },
+        "picks": [
+          5,
+          6
+        ]
+      },
+      {
+        "group": [
+          12,
+          14,
+          18,
+          19
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [18, 19],\n  \"reason\": {\n    \"12\": \"No significant anomalies; normal fluctuations.\",\n    \"14\": \"No significant anomalies; normal fluctuations.\",\n    \"18\": \"Significant level shift and pattern break observed.\",\n    \"19\": \"Significant level shift and pattern break observed.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            18,
+            19
+          ],
+          "reason": {
+            "12": "No significant anomalies; normal fluctuations.",
+            "14": "No significant anomalies; normal fluctuations.",
+            "18": "Significant level shift and pattern break observed.",
+            "19": "Significant level shift and pattern break observed."
+          }
+        },
+        "picks": [
+          18,
+          19
+        ]
+      },
+      {
+        "group": [
+          20,
+          21,
+          23,
+          24
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [20, 21, 23, 24],\n  \"reason\": {\n    \"20\": \"Contains a significant spike and pattern break.\",\n    \"21\": \"Contains a significant spike and pattern break.\",\n    \"23\": \"Contains a significant spike and pattern break.\",\n    \"24\": \"Contains a large spike not consistent with normal pattern.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            20,
+            21,
+            23,
+            24
+          ],
+          "reason": {
+            "20": "Contains a significant spike and pattern break.",
+            "21": "Contains a significant spike and pattern break.",
+            "23": "Contains a significant spike and pattern break.",
+            "24": "Contains a large spike not consistent with normal pattern."
+          }
+        },
+        "picks": [
+          20,
+          21,
+          23,
+          24
+        ]
+      },
+      {
+        "group": [
+          25,
+          27,
+          29,
+          30
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [25, 27, 29, 30],\n    \"reason\": {\n        \"25\": \"Spike and level shift observed.\",\n        \"27\": \"Spike and level shift observed.\",\n        \"29\": \"Multiple spikes observed.\",\n        \"30\": \"Spike and level shift observed.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            25,
+            27,
+            29,
+            30
+          ],
+          "reason": {
+            "25": "Spike and level shift observed.",
+            "27": "Spike and level shift observed.",
+            "29": "Multiple spikes observed.",
+            "30": "Spike and level shift observed."
+          }
+        },
+        "picks": [
+          25,
+          27,
+          29,
+          30
+        ]
+      },
+      {
+        "group": [
+          34,
+          35
+        ],
+        "raw": "{\"anomalous_channels\": [], \"reason\": \"Both channels 34 and 35 show similar patterns with no distinct anomalies such as spikes, level shifts, or pattern breaks.\"}",
+        "parsed": {
+          "anomalous_channels": [],
+          "reason": "Both channels 34 and 35 show similar patterns with no distinct anomalies such as spikes, level shifts, or pattern breaks."
+        },
+        "picks": []
+      }
+    ],
+    "all_vlm_picks": [
+      5,
+      6,
+      18,
+      19,
+      20,
+      21,
+      23,
+      24,
+      25,
+      27,
+      29,
+      30
+    ],
+    "final_pred": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      6,
+      10,
+      13,
+      15,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      27,
+      29,
+      30,
+      31,
+      32
+    ],
+    "f1_ours_vlm_subplot6_noredband": 0.6486486486486486,
+    "f1_ours_no_vlm": 0.48
+  },
+  "machine-3-2_135_161": {
+    "entity": "machine-3-2",
+    "start": 135,
+    "end": 161,
+    "k": 4,
+    "gt_channels": [
+      9,
+      11,
+      12,
+      35
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      2,
+      5,
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      21,
+      23,
+      25,
+      27,
+      30,
+      31,
+      32,
+      34,
+      35
+    ],
+    "n_groups": 5,
+    "group_logs": [
+      {
+        "group": [
+          2,
+          5,
+          6,
+          8
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [5, 6, 8],\n  \"reason\": {\n    \"2\": \"No clear anomaly; fluctuations appear normal.\",\n    \"5\": \"Multiple spikes and a level shift observed.\",\n    \"6\": \"Multiple spikes and a level shift observed.\",\n    \"8\": \"Frequent spikes and pattern breaks observed.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            5,
+            6,
+            8
+          ],
+          "reason": {
+            "2": "No clear anomaly; fluctuations appear normal.",
+            "5": "Multiple spikes and a level shift observed.",
+            "6": "Multiple spikes and a level shift observed.",
+            "8": "Frequent spikes and pattern breaks observed."
+          }
+        },
+        "picks": [
+          5,
+          6,
+          8
+        ]
+      },
+      {
+        "group": [
+          9,
+          10,
+          11,
+          12
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [9, 10, 11, 12],\n  \"reason\": {\n    \"9\": \"Contains a significant spike.\",\n    \"10\": \"Contains a significant spike.\",\n    \"11\": \"Contains a significant spike and pattern break with increased variability.\",\n    \"12\": \"Contains a significant spike and pattern break with increased variability.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            9,
+            10,
+            11,
+            12
+          ],
+          "reason": {
+            "9": "Contains a significant spike.",
+            "10": "Contains a significant spike.",
+            "11": "Contains a significant spike and pattern break with increased variability.",
+            "12": "Contains a significant spike and pattern break with increased variability."
+          }
+        },
+        "picks": [
+          9,
+          10,
+          11,
+          12
+        ]
+      },
+      {
+        "group": [
+          13,
+          14,
+          21,
+          23
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [13, 14, 21, 23],\n    \"reason\": {\n        \"13\": \"Contains multiple spikes deviating from the normal pattern.\",\n        \"14\": \"Shows several sharp spikes indicating anomalous behavior.\",\n        \"21\": \"Exhibits spikes and a pattern break, suggesting anomalies.\",\n        \"23\": \"Displays spikes and a level shift, indicating anomalies.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            13,
+            14,
+            21,
+            23
+          ],
+          "reason": {
+            "13": "Contains multiple spikes deviating from the normal pattern.",
+            "14": "Shows several sharp spikes indicating anomalous behavior.",
+            "21": "Exhibits spikes and a pattern break, suggesting anomalies.",
+            "23": "Displays spikes and a level shift, indicating anomalies."
+          }
+        },
+        "picks": [
+          13,
+          14,
+          21,
+          23
+        ]
+      },
+      {
+        "group": [
+          25,
+          27,
+          30,
+          31
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [25, 31],\n    \"reason\": {\n        \"25\": \"Contains a level shift and a spike at the end.\",\n        \"31\": \"Shows repeated spikes, indicating a pattern break.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            25,
+            31
+          ],
+          "reason": {
+            "25": "Contains a level shift and a spike at the end.",
+            "31": "Shows repeated spikes, indicating a pattern break."
+          }
+        },
+        "picks": [
+          25,
+          31
+        ]
+      },
+      {
+        "group": [
+          32,
+          34,
+          35
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [32, 35],\n  \"reason\": {\n    \"32\": \"Contains multiple spikes deviating from the normal pattern.\",\n    \"34\": \"No clear anomaly; pattern is consistent with normal behavior.\",\n    \"35\": \"Contains a significant spike deviating from the normal pattern.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            32,
+            35
+          ],
+          "reason": {
+            "32": "Contains multiple spikes deviating from the normal pattern.",
+            "34": "No clear anomaly; pattern is consistent with normal behavior.",
+            "35": "Contains a significant spike deviating from the normal pattern."
+          }
+        },
+        "picks": [
+          32,
+          35
+        ]
+      }
+    ],
+    "all_vlm_picks": [
+      5,
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      21,
+      23,
+      25,
+      31,
+      32,
+      35
+    ],
+    "final_pred": [
+      5,
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      21,
+      23,
+      25,
+      31,
+      32,
+      35
+    ],
+    "f1_ours_vlm_subplot6_noredband": 0.4210526315789474,
+    "f1_ours_no_vlm": 0.3333333333333333
+  },
+  "machine-3-2_3080_3917": {
+    "entity": "machine-3-2",
+    "start": 3080,
+    "end": 3917,
+    "k": 4,
+    "gt_channels": [
+      8,
+      12,
+      13,
+      16
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      0,
+      12,
+      15,
+      16,
+      18,
+      19,
+      25,
+      32,
+      34,
+      35
+    ],
+    "n_groups": 3,
+    "group_logs": [
+      {
+        "group": [
+          0,
+          12,
+          15,
+          16
+        ],
+        "raw": "{\n    \"anomalous_channels\": [0, 12, 15, 16],\n    \"reason\": {\n        \"0\": \"Multiple spikes and a level shift observed.\",\n        \"12\": \"Two significant spikes from a baseline of zero.\",\n        \"15\": \"Two large spikes and a pattern break.\",\n        \"16\": \"Two large spikes from a baseline of zero.\"\n    }\n}",
+        "parsed": {
+          "anomalous_channels": [
+            0,
+            12,
+            15,
+            16
+          ],
+          "reason": {
+            "0": "Multiple spikes and a level shift observed.",
+            "12": "Two significant spikes from a baseline of zero.",
+            "15": "Two large spikes and a pattern break.",
+            "16": "Two large spikes from a baseline of zero."
+          }
+        },
+        "picks": [
+          0,
+          12,
+          15,
+          16
+        ]
+      },
+      {
+        "group": [
+          18,
+          19,
+          25,
+          32
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [18, 19, 25],\n  \"reason\": {\n    \"18\": \"Level shift and pattern break towards the end.\",\n    \"19\": \"Spike and level shift towards the end.\",\n    \"25\": \"Spike and level shift towards the end.\",\n    \"32\": \"No significant anomaly; consistent pattern with spikes.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            18,
+            19,
+            25
+          ],
+          "reason": {
+            "18": "Level shift and pattern break towards the end.",
+            "19": "Spike and level shift towards the end.",
+            "25": "Spike and level shift towards the end.",
+            "32": "No significant anomaly; consistent pattern with spikes."
+          }
+        },
+        "picks": [
+          18,
+          19,
+          25
+        ]
+      },
+      {
+        "group": [
+          34,
+          35
+        ],
+        "raw": "```json\n{\"anomalous_channels\": [], \"reason\": \"Both channels show binary switching patterns without clear spikes, level shifts, or pattern breaks.\"}\n```",
+        "parsed": {
+          "anomalous_channels": [],
+          "reason": "Both channels show binary switching patterns without clear spikes, level shifts, or pattern breaks."
+        },
+        "picks": []
+      }
+    ],
+    "all_vlm_picks": [
+      0,
+      12,
+      15,
+      16,
+      18,
+      19,
+      25
+    ],
+    "final_pred": [
+      0,
+      12,
+      15,
+      16,
+      18,
+      19,
+      25
+    ],
+    "f1_ours_vlm_subplot6_noredband": 0.36363636363636365,
+    "f1_ours_no_vlm": 0.25
+  },
+  "machine-3-2_9139_9144": {
+    "entity": "machine-3-2",
+    "start": 9139,
+    "end": 9144,
+    "k": 4,
+    "gt_channels": [
+      8,
+      12,
+      13,
+      17
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      3,
+      5,
+      10,
+      12,
+      13,
+      14,
+      17,
+      23,
+      25,
+      29,
+      32,
+      33,
+      34,
+      35
+    ],
+    "n_groups": 4,
+    "group_logs": [
+      {
+        "group": [
+          3,
+          5,
+          10,
+          12
+        ],
+        "raw": "```json\n{\"anomalous_channels\": [5, 10, 12], \"reason\": \"Ch5: Repeated spikes and level shifts. Ch10: Multiple sharp spikes. Ch12: Multiple sharp spikes.\"}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            5,
+            10,
+            12
+          ],
+          "reason": "Ch5: Repeated spikes and level shifts. Ch10: Multiple sharp spikes. Ch12: Multiple sharp spikes."
+        },
+        "picks": [
+          5,
+          10,
+          12
+        ]
+      },
+      {
+        "group": [
+          13,
+          14,
+          17,
+          23
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [13, 17, 23],\n  \"reason\": {\n    \"13\": \"Contains a significant spike not consistent with the rest of the pattern.\",\n    \"14\": \"No clear anomaly; pattern is consistent with normal fluctuations.\",\n    \"17\": \"Contains a significant spike not consistent with the rest of the pattern.\",\n    \"23\": \"Shows a level shift and pattern break with a gradual increase.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            13,
+            17,
+            23
+          ],
+          "reason": {
+            "13": "Contains a significant spike not consistent with the rest of the pattern.",
+            "14": "No clear anomaly; pattern is consistent with normal fluctuations.",
+            "17": "Contains a significant spike not consistent with the rest of the pattern.",
+            "23": "Shows a level shift and pattern break with a gradual increase."
+          }
+        },
+        "picks": [
+          13,
+          17,
+          23
+        ]
+      },
+      {
+        "group": [
+          25,
+          29,
+          32,
+          33
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [25, 29],\n    \"reason\": {\n        \"25\": \"Level shift and spikes observed, deviating from a normal gradual increase.\",\n        \"29\": \"Multiple sharp spikes, indicating sudden changes from a stable baseline.\",\n        \"32\": \"No clear anomaly; pattern is consistent with normal variability.\",\n        \"33\": \"Regular oscillations without any unusual deviations.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            25,
+            29
+          ],
+          "reason": {
+            "25": "Level shift and spikes observed, deviating from a normal gradual increase.",
+            "29": "Multiple sharp spikes, indicating sudden changes from a stable baseline.",
+            "32": "No clear anomaly; pattern is consistent with normal variability.",
+            "33": "Regular oscillations without any unusual deviations."
+          }
+        },
+        "picks": [
+          25,
+          29
+        ]
+      },
+      {
+        "group": [
+          34,
+          35
+        ],
+        "raw": "```json\n{\"anomalous_channels\": [], \"reason\": \"Both channels 34 and 35 show consistent binary switching patterns without any spikes, level shifts, or pattern breaks.\"}\n```",
+        "parsed": {
+          "anomalous_channels": [],
+          "reason": "Both channels 34 and 35 show consistent binary switching patterns without any spikes, level shifts, or pattern breaks."
+        },
+        "picks": []
+      }
+    ],
+    "all_vlm_picks": [
+      5,
+      10,
+      12,
+      13,
+      17,
+      23,
+      25,
+      29
+    ],
+    "final_pred": [
+      5,
+      10,
+      12,
+      13,
+      17,
+      23,
+      25,
+      29
+    ],
+    "f1_ours_vlm_subplot6_noredband": 0.5,
+    "f1_ours_no_vlm": 0.4444444444444445
+  },
+  "machine-3-2_9199_9204": {
+    "entity": "machine-3-2",
+    "start": 9199,
+    "end": 9204,
+    "k": 3,
+    "gt_channels": [
+      8,
+      12,
+      13
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      12,
+      14,
+      15,
+      17,
+      20,
+      23,
+      24,
+      25,
+      27,
+      29,
+      32,
+      33,
+      34,
+      35
+    ],
+    "n_groups": 4,
+    "group_logs": [
+      {
+        "group": [
+          12,
+          14,
+          15,
+          17
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [12, 17],\n    \"reason\": {\n        \"12\": \"Contains multiple sharp spikes that deviate significantly from the baseline.\",\n        \"14\": \"No clear anomaly; consistent pattern with expected variability.\",\n        \"15\": \"No clear anomaly; consistent pattern with expected variability.\",\n        \"17\": \"Contains a single sharp spike that deviates significantly from the baseline.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            12,
+            17
+          ],
+          "reason": {
+            "12": "Contains multiple sharp spikes that deviate significantly from the baseline.",
+            "14": "No clear anomaly; consistent pattern with expected variability.",
+            "15": "No clear anomaly; consistent pattern with expected variability.",
+            "17": "Contains a single sharp spike that deviates significantly from the baseline."
+          }
+        },
+        "picks": [
+          12,
+          17
+        ]
+      },
+      {
+        "group": [
+          20,
+          23,
+          24,
+          25
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [20],\n  \"reason\": \"Channel 20 shows multiple spikes that deviate from its normal pattern, while channels 23, 24, and 25 show consistent patterns without anomalies.\"\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            20
+          ],
+          "reason": "Channel 20 shows multiple spikes that deviate from its normal pattern, while channels 23, 24, and 25 show consistent patterns without anomalies."
+        },
+        "picks": [
+          20
+        ]
+      },
+      {
+        "group": [
+          27,
+          29,
+          32,
+          33
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [27, 29, 32],\n    \"reason\": {\n        \"27\": \"Contains spikes that deviate from the normal pattern.\",\n        \"29\": \"Exhibits multiple large spikes that are not typical.\",\n        \"32\": \"Shows spikes that break the usual pattern.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            27,
+            29,
+            32
+          ],
+          "reason": {
+            "27": "Contains spikes that deviate from the normal pattern.",
+            "29": "Exhibits multiple large spikes that are not typical.",
+            "32": "Shows spikes that break the usual pattern."
+          }
+        },
+        "picks": [
+          27,
+          29,
+          32
+        ]
+      },
+      {
+        "group": [
+          34,
+          35
+        ],
+        "raw": "{\"anomalous_channels\": [], \"reason\": \"Both channels 34 and 35 show consistent binary switching patterns without any visible spikes, level shifts, or pattern breaks.\"}",
+        "parsed": {
+          "anomalous_channels": [],
+          "reason": "Both channels 34 and 35 show consistent binary switching patterns without any visible spikes, level shifts, or pattern breaks."
+        },
+        "picks": []
+      }
+    ],
+    "all_vlm_picks": [
+      12,
+      17,
+      20,
+      27,
+      29,
+      32
+    ],
+    "final_pred": [
+      12,
+      17,
+      20,
+      27,
+      29,
+      32
+    ],
+    "f1_ours_vlm_subplot6_noredband": 0.2222222222222222,
+    "f1_ours_no_vlm": 0.0
+  },
+  "machine-3-2_15577_15582": {
+    "entity": "machine-3-2",
+    "start": 15577,
+    "end": 15582,
+    "k": 5,
+    "gt_channels": [
+      8,
+      12,
+      13,
+      34,
+      35
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      0,
+      1,
+      2,
+      3,
+      10,
+      11,
+      15,
+      18,
+      20,
+      21,
+      25,
+      27,
+      30,
+      31,
+      33,
+      34,
+      35
+    ],
+    "n_groups": 5,
+    "group_logs": [
+      {
+        "group": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [0, 1],\n  \"reason\": {\n    \"0\": \"Multiple sharp spikes indicating potential anomalies.\",\n    \"1\": \"Sharp spike and increased variability suggesting an anomaly.\",\n    \"2\": \"No clear anomaly; pattern appears consistent.\",\n    \"3\": \"No clear anomaly; pattern appears consistent.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            0,
+            1
+          ],
+          "reason": {
+            "0": "Multiple sharp spikes indicating potential anomalies.",
+            "1": "Sharp spike and increased variability suggesting an anomaly.",
+            "2": "No clear anomaly; pattern appears consistent.",
+            "3": "No clear anomaly; pattern appears consistent."
+          }
+        },
+        "picks": [
+          0,
+          1
+        ]
+      },
+      {
+        "group": [
+          10,
+          11,
+          15,
+          18
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [10, 11, 15, 18],\n  \"reason\": {\n    \"10\": \"Multiple sharp spikes indicating sudden changes.\",\n    \"11\": \"A significant spike deviating from the baseline.\",\n    \"15\": \"Several spikes indicating abrupt changes.\",\n    \"18\": \"A level shift followed by a gradual decline.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            10,
+            11,
+            15,
+            18
+          ],
+          "reason": {
+            "10": "Multiple sharp spikes indicating sudden changes.",
+            "11": "A significant spike deviating from the baseline.",
+            "15": "Several spikes indicating abrupt changes.",
+            "18": "A level shift followed by a gradual decline."
+          }
+        },
+        "picks": [
+          10,
+          11,
+          15,
+          18
+        ]
+      },
+      {
+        "group": [
+          20,
+          21,
+          25,
+          27
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [],\n    \"reason\": \"All channels show similar patterns with no distinct anomalies such as spikes, level shifts, or pattern breaks.\"\n}\n```",
+        "parsed": {
+          "anomalous_channels": [],
+          "reason": "All channels show similar patterns with no distinct anomalies such as spikes, level shifts, or pattern breaks."
+        },
+        "picks": []
+      },
+      {
+        "group": [
+          30,
+          31,
+          33,
+          34
+        ],
+        "raw": "```json\n{\"anomalous_channels\": [30, 33], \"reason\": {\"30\": \"Multiple spikes observed.\", \"33\": \"Single large spike observed.\"}}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            30,
+            33
+          ],
+          "reason": {
+            "30": "Multiple spikes observed.",
+            "33": "Single large spike observed."
+          }
+        },
+        "picks": [
+          30,
+          33
+        ]
+      },
+      {
+        "group": [
+          35
+        ],
+        "raw": "```json\n{\"anomalous_channels\": [35], \"reason\": \"Channel 35 shows a pattern break with irregular fluctuations and abrupt changes.\"}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            35
+          ],
+          "reason": "Channel 35 shows a pattern break with irregular fluctuations and abrupt changes."
+        },
+        "picks": [
+          35
+        ]
+      }
+    ],
+    "all_vlm_picks": [
+      0,
+      1,
+      10,
+      11,
+      15,
+      18,
+      30,
+      33,
+      35
+    ],
+    "final_pred": [
+      0,
+      1,
+      10,
+      11,
+      15,
+      18,
+      30,
+      33,
+      35
+    ],
+    "f1_ours_vlm_subplot6_noredband": 0.14285714285714285,
+    "f1_ours_no_vlm": 0.4000000000000001
+  },
+  "machine-3-2_11900_12023": {
+    "entity": "machine-3-2",
+    "start": 11900,
+    "end": 12023,
+    "k": 3,
+    "gt_channels": [
+      8,
+      12,
+      13
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      3,
+      8,
+      9,
+      10,
+      11,
+      13,
+      14,
+      15,
+      21,
+      23,
+      25,
+      27,
+      32,
+      33,
+      34,
+      35
+    ],
+    "n_groups": 4,
+    "group_logs": [
+      {
+        "group": [
+          3,
+          8,
+          9,
+          10
+        ],
+        "raw": "```json\n{\"anomalous_channels\": [8], \"reason\": \"Ch8 shows multiple spikes deviating from a mostly flat baseline, indicating anomalous behavior. Ch3, Ch9, and Ch10 show consistent patterns without clear anomalies.\"}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            8
+          ],
+          "reason": "Ch8 shows multiple spikes deviating from a mostly flat baseline, indicating anomalous behavior. Ch3, Ch9, and Ch10 show consistent patterns without clear anomalies."
+        },
+        "picks": [
+          8
+        ]
+      },
+      {
+        "group": [
+          11,
+          13,
+          14,
+          15
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [11, 14],\n  \"reason\": {\n    \"11\": \"Contains a significant spike not consistent with the rest of the pattern.\",\n    \"13\": \"Pattern is consistent with regular spikes; no anomaly detected.\",\n    \"14\": \"Contains a significant spike not consistent with the rest of the pattern.\",\n    \"15\": \"Pattern is consistent with regular spikes; no anomaly detected.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            11,
+            14
+          ],
+          "reason": {
+            "11": "Contains a significant spike not consistent with the rest of the pattern.",
+            "13": "Pattern is consistent with regular spikes; no anomaly detected.",
+            "14": "Contains a significant spike not consistent with the rest of the pattern.",
+            "15": "Pattern is consistent with regular spikes; no anomaly detected."
+          }
+        },
+        "picks": [
+          11,
+          14
+        ]
+      },
+      {
+        "group": [
+          21,
+          23,
+          25,
+          27
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [21, 27],\n    \"reason\": {\n        \"21\": \"Contains multiple spikes and a significant drop, indicating anomalous behavior.\",\n        \"23\": \"No anomalies; consistent pattern with expected spikes.\",\n        \"25\": \"No anomalies; consistent pattern with expected spikes.\",\n        \"27\": \"Contains multiple spikes and a significant drop, indicating anomalous behavior.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            21,
+            27
+          ],
+          "reason": {
+            "21": "Contains multiple spikes and a significant drop, indicating anomalous behavior.",
+            "23": "No anomalies; consistent pattern with expected spikes.",
+            "25": "No anomalies; consistent pattern with expected spikes.",
+            "27": "Contains multiple spikes and a significant drop, indicating anomalous behavior."
+          }
+        },
+        "picks": [
+          21,
+          27
+        ]
+      },
+      {
+        "group": [
+          32,
+          33,
+          34,
+          35
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [32, 33, 34],\n    \"reason\": {\n        \"32\": \"Contains multiple spikes that deviate from the normal pattern.\",\n        \"33\": \"Shows a spike towards the end that breaks the usual pattern.\",\n        \"34\": \"Exhibits a significant spike and pattern break early in the sequence.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            32,
+            33,
+            34
+          ],
+          "reason": {
+            "32": "Contains multiple spikes that deviate from the normal pattern.",
+            "33": "Shows a spike towards the end that breaks the usual pattern.",
+            "34": "Exhibits a significant spike and pattern break early in the sequence."
+          }
+        },
+        "picks": [
+          32,
+          33,
+          34
+        ]
+      }
+    ],
+    "all_vlm_picks": [
+      8,
+      11,
+      14,
+      21,
+      27,
+      32,
+      33,
+      34
+    ],
+    "final_pred": [
+      8,
+      11,
+      14,
+      21,
+      27,
+      32,
+      33,
+      34
+    ],
+    "f1_ours_vlm_subplot6_noredband": 0.18181818181818182,
+    "f1_ours_no_vlm": 0.0
+  },
+  "machine-3-2_15644_15739": {
+    "entity": "machine-3-2",
+    "start": 15644,
+    "end": 15739,
+    "k": 4,
+    "gt_channels": [
+      11,
+      13,
+      14,
+      31
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      0,
+      1,
+      5,
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      15,
+      20,
+      23,
+      25,
+      27,
+      29,
+      31,
+      32,
+      33,
+      34,
+      35
+    ],
+    "n_groups": 6,
+    "group_logs": [
+      {
+        "group": [
+          0,
+          1,
+          5,
+          6
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [1],\n    \"reason\": {\n        \"0\": \"No anomaly; consistent pattern with spikes.\",\n        \"1\": \"Anomalous; irregular fluctuations and pattern breaks.\",\n        \"5\": \"No anomaly; consistent pattern with spikes.\",\n        \"6\": \"No anomaly; consistent pattern with spikes.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            1
+          ],
+          "reason": {
+            "0": "No anomaly; consistent pattern with spikes.",
+            "1": "Anomalous; irregular fluctuations and pattern breaks.",
+            "5": "No anomaly; consistent pattern with spikes.",
+            "6": "No anomaly; consistent pattern with spikes."
+          }
+        },
+        "picks": [
+          1
+        ]
+      },
+      {
+        "group": [
+          8,
+          9,
+          10,
+          11
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [8, 9, 10, 11],\n  \"reason\": {\n    \"8\": \"Multiple large spikes deviating from the baseline.\",\n    \"9\": \"Frequent spikes and increased variability.\",\n    \"10\": \"Numerous spikes indicating high variability.\",\n    \"11\": \"Several large spikes deviating from the baseline.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            8,
+            9,
+            10,
+            11
+          ],
+          "reason": {
+            "8": "Multiple large spikes deviating from the baseline.",
+            "9": "Frequent spikes and increased variability.",
+            "10": "Numerous spikes indicating high variability.",
+            "11": "Several large spikes deviating from the baseline."
+          }
+        },
+        "picks": [
+          8,
+          9,
+          10,
+          11
+        ]
+      },
+      {
+        "group": [
+          12,
+          13,
+          15,
+          20
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [12, 13, 15, 20],\n    \"reason\": {\n        \"12\": \"Multiple large spikes indicating potential anomalies.\",\n        \"13\": \"A significant spike deviating from the baseline.\",\n        \"15\": \"Frequent spikes and increased variability.\",\n        \"20\": \"Several spikes and a pattern break.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            12,
+            13,
+            15,
+            20
+          ],
+          "reason": {
+            "12": "Multiple large spikes indicating potential anomalies.",
+            "13": "A significant spike deviating from the baseline.",
+            "15": "Frequent spikes and increased variability.",
+            "20": "Several spikes and a pattern break."
+          }
+        },
+        "picks": [
+          12,
+          13,
+          15,
+          20
+        ]
+      },
+      {
+        "group": [
+          23,
+          25,
+          27,
+          29
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [27],\n    \"reason\": {\n        \"23\": \"Pattern is consistent with normal behavior.\",\n        \"25\": \"Pattern is consistent with normal behavior.\",\n        \"27\": \"Irregular spikes and increased noise indicate anomalous behavior.\",\n        \"29\": \"Pattern is consistent with normal behavior.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            27
+          ],
+          "reason": {
+            "23": "Pattern is consistent with normal behavior.",
+            "25": "Pattern is consistent with normal behavior.",
+            "27": "Irregular spikes and increased noise indicate anomalous behavior.",
+            "29": "Pattern is consistent with normal behavior."
+          }
+        },
+        "picks": [
+          27
+        ]
+      },
+      {
+        "group": [
+          31,
+          32,
+          33,
+          34
+        ],
+        "raw": "{\n    \"anomalous_channels\": [31, 32],\n    \"reason\": {\n        \"31\": \"Contains a significant spike that deviates from the normal pattern.\",\n        \"32\": \"Shows multiple spikes and increased variability compared to a normal pattern.\",\n        \"33\": \"Pattern appears consistent with normal variability.\",\n        \"34\": \"Pattern appears consistent with normal variability.\"\n    }\n}",
+        "parsed": {
+          "anomalous_channels": [
+            31,
+            32
+          ],
+          "reason": {
+            "31": "Contains a significant spike that deviates from the normal pattern.",
+            "32": "Shows multiple spikes and increased variability compared to a normal pattern.",
+            "33": "Pattern appears consistent with normal variability.",
+            "34": "Pattern appears consistent with normal variability."
+          }
+        },
+        "picks": [
+          31,
+          32
+        ]
+      },
+      {
+        "group": [
+          35
+        ],
+        "raw": "```json\n{\"anomalous_channels\": [], \"reason\": \"Channel 35 shows a consistent pattern with no visible spikes, level shifts, or pattern breaks.\"}\n```",
+        "parsed": {
+          "anomalous_channels": [],
+          "reason": "Channel 35 shows a consistent pattern with no visible spikes, level shifts, or pattern breaks."
+        },
+        "picks": []
+      }
+    ],
+    "all_vlm_picks": [
+      1,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      15,
+      20,
+      27,
+      31,
+      32
+    ],
+    "final_pred": [
+      1,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      15,
+      20,
+      27,
+      31,
+      32
+    ],
+    "f1_ours_vlm_subplot6_noredband": 0.375,
+    "f1_ours_no_vlm": 0.0
+  },
+  "machine-3-2_20717_20723": {
+    "entity": "machine-3-2",
+    "start": 20717,
+    "end": 20723,
+    "k": 2,
+    "gt_channels": [
+      9,
+      10
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      2,
+      5,
+      8,
+      14,
+      17,
+      29,
+      32,
+      33,
+      34,
+      35
+    ],
+    "n_groups": 3,
+    "group_logs": [
+      {
+        "group": [
+          2,
+          5,
+          8,
+          14
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [5],\n    \"reason\": {\n        \"2\": \"No significant deviation from normal pattern.\",\n        \"5\": \"Contains multiple spikes that deviate from the normal pattern.\",\n        \"8\": \"No significant deviation from normal pattern.\",\n        \"14\": \"No significant deviation from normal pattern.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            5
+          ],
+          "reason": {
+            "2": "No significant deviation from normal pattern.",
+            "5": "Contains multiple spikes that deviate from the normal pattern.",
+            "8": "No significant deviation from normal pattern.",
+            "14": "No significant deviation from normal pattern."
+          }
+        },
+        "picks": [
+          5
+        ]
+      },
+      {
+        "group": [
+          17,
+          29,
+          32,
+          33
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [17, 29, 32, 33],\n  \"reason\": {\n    \"17\": \"Spike observed in an otherwise flat pattern.\",\n    \"29\": \"Multiple spikes observed in an otherwise flat pattern.\",\n    \"32\": \"Spike observed in a fluctuating pattern.\",\n    \"33\": \"Spike observed in a fluctuating pattern.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            17,
+            29,
+            32,
+            33
+          ],
+          "reason": {
+            "17": "Spike observed in an otherwise flat pattern.",
+            "29": "Multiple spikes observed in an otherwise flat pattern.",
+            "32": "Spike observed in a fluctuating pattern.",
+            "33": "Spike observed in a fluctuating pattern."
+          }
+        },
+        "picks": [
+          17,
+          29,
+          32,
+          33
+        ]
+      },
+      {
+        "group": [
+          34,
+          35
+        ],
+        "raw": "{\"anomalous_channels\": [], \"reason\": \"Both channels 34 and 35 show consistent binary switching patterns without any visible spikes, level shifts, or pattern breaks.\"}",
+        "parsed": {
+          "anomalous_channels": [],
+          "reason": "Both channels 34 and 35 show consistent binary switching patterns without any visible spikes, level shifts, or pattern breaks."
+        },
+        "picks": []
+      }
+    ],
+    "all_vlm_picks": [
+      5,
+      17,
+      29,
+      32,
+      33
+    ],
+    "final_pred": [
+      5,
+      17,
+      29,
+      32,
+      33
+    ],
+    "f1_ours_vlm_subplot6_noredband": 0.0,
+    "f1_ours_no_vlm": 0.0
+  },
+  "machine-3-2_23059_23062": {
+    "entity": "machine-3-2",
+    "start": 23059,
+    "end": 23062,
+    "k": 3,
+    "gt_channels": [
+      8,
+      12,
+      15
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      1,
+      2,
+      3,
+      5,
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      14,
+      15,
+      19,
+      20,
+      23,
+      25,
+      27,
+      29,
+      31,
+      32,
+      33,
+      34,
+      35
+    ],
+    "n_groups": 6,
+    "group_logs": [
+      {
+        "group": [
+          1,
+          2,
+          3,
+          5
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [1, 2, 3, 5],\n  \"reason\": {\n    \"1\": \"Channel 1 shows a significant drop, indicating a pattern break.\",\n    \"2\": \"Channel 2 exhibits a sharp dip, suggesting a pattern break.\",\n    \"3\": \"Channel 3 has a noticeable drop, indicating a pattern break.\",\n    \"5\": \"Channel 5 displays multiple spikes and a level shift, indicating anomalous behavior.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            1,
+            2,
+            3,
+            5
+          ],
+          "reason": {
+            "1": "Channel 1 shows a significant drop, indicating a pattern break.",
+            "2": "Channel 2 exhibits a sharp dip, suggesting a pattern break.",
+            "3": "Channel 3 has a noticeable drop, indicating a pattern break.",
+            "5": "Channel 5 displays multiple spikes and a level shift, indicating anomalous behavior."
+          }
+        },
+        "picks": [
+          1,
+          2,
+          3,
+          5
+        ]
+      },
+      {
+        "group": [
+          6,
+          8,
+          9,
+          10
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [6, 8],\n  \"reason\": {\n    \"6\": \"Channel 6 shows a level shift and multiple spikes.\",\n    \"8\": \"Channel 8 has a significant spike.\",\n    \"9\": \"Channel 9 shows a consistent pattern of spikes, no anomaly.\",\n    \"10\": \"Channel 10 shows a consistent pattern of spikes, no anomaly.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            6,
+            8
+          ],
+          "reason": {
+            "6": "Channel 6 shows a level shift and multiple spikes.",
+            "8": "Channel 8 has a significant spike.",
+            "9": "Channel 9 shows a consistent pattern of spikes, no anomaly.",
+            "10": "Channel 10 shows a consistent pattern of spikes, no anomaly."
+          }
+        },
+        "picks": [
+          6,
+          8
+        ]
+      },
+      {
+        "group": [
+          11,
+          12,
+          14,
+          15
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [11, 12, 14, 15],\n    \"reason\": {\n        \"11\": \"Multiple spikes and pattern breaks.\",\n        \"12\": \"Significant spike breaking the normal pattern.\",\n        \"14\": \"Multiple spikes and pattern breaks.\",\n        \"15\": \"Multiple spikes and pattern breaks.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            11,
+            12,
+            14,
+            15
+          ],
+          "reason": {
+            "11": "Multiple spikes and pattern breaks.",
+            "12": "Significant spike breaking the normal pattern.",
+            "14": "Multiple spikes and pattern breaks.",
+            "15": "Multiple spikes and pattern breaks."
+          }
+        },
+        "picks": [
+          11,
+          12,
+          14,
+          15
+        ]
+      },
+      {
+        "group": [
+          19,
+          20,
+          23,
+          25
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [19, 20, 23, 25],\n    \"reason\": {\n        \"19\": \"Contains multiple spikes and a level shift.\",\n        \"20\": \"Shows spikes and a pattern break with a level shift.\",\n        \"23\": \"Exhibits a level shift and pattern break.\",\n        \"25\": \"Displays a level shift and pattern break.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            19,
+            20,
+            23,
+            25
+          ],
+          "reason": {
+            "19": "Contains multiple spikes and a level shift.",
+            "20": "Shows spikes and a pattern break with a level shift.",
+            "23": "Exhibits a level shift and pattern break.",
+            "25": "Displays a level shift and pattern break."
+          }
+        },
+        "picks": [
+          19,
+          20,
+          23,
+          25
+        ]
+      },
+      {
+        "group": [
+          27,
+          29,
+          31,
+          32
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [27, 31],\n    \"reason\": {\n        \"27\": \"Multiple spikes and a level shift observed.\",\n        \"31\": \"Frequent spikes indicating pattern break.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            27,
+            31
+          ],
+          "reason": {
+            "27": "Multiple spikes and a level shift observed.",
+            "31": "Frequent spikes indicating pattern break."
+          }
+        },
+        "picks": [
+          27,
+          31
+        ]
+      },
+      {
+        "group": [
+          33,
+          34,
+          35
+        ],
+        "raw": "```json\n{\"anomalous_channels\": [34, 35], \"reason\": \"Ch33: No anomaly, consistent pattern. Ch34: Anomalous due to frequent level shifts. Ch35: Anomalous due to frequent level shifts.\"}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            34,
+            35
+          ],
+          "reason": "Ch33: No anomaly, consistent pattern. Ch34: Anomalous due to frequent level shifts. Ch35: Anomalous due to frequent level shifts."
+        },
+        "picks": [
+          34,
+          35
+        ]
+      }
+    ],
+    "all_vlm_picks": [
+      1,
+      2,
+      3,
+      5,
+      6,
+      8,
+      11,
+      12,
+      14,
+      15,
+      19,
+      20,
+      23,
+      25,
+      27,
+      31,
+      34,
+      35
+    ],
+    "final_pred": [
+      1,
+      2,
+      3,
+      5,
+      6,
+      8,
+      11,
+      12,
+      14,
+      15,
+      19,
+      20,
+      23,
+      25,
+      27,
+      31,
+      34,
+      35
+    ],
+    "f1_ours_vlm_subplot6_noredband": 0.2857142857142857,
+    "f1_ours_no_vlm": 0.2222222222222222
+  },
+  "machine-3-8_15144_15266": {
+    "entity": "machine-3-8",
+    "start": 15144,
+    "end": 15266,
+    "k": 12,
+    "gt_channels": [
+      0,
+      1,
+      2,
+      3,
+      18,
+      19,
+      20,
+      21,
+      27,
+      30,
+      34,
+      35
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      0,
+      1,
+      2,
+      3,
+      8,
+      10,
+      12,
+      13,
+      14,
+      15,
+      18,
+      19,
+      20,
+      23,
+      24,
+      25,
+      27,
+      34,
+      35
+    ],
+    "n_groups": 5,
+    "group_logs": [
+      {
+        "group": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [1],\n  \"reason\": \"Ch0: Normal pattern with a rise and fall. Ch1: Spike and irregular fluctuations before a drop. Ch2: Normal pattern with a rise and fall. Ch3: Normal pattern with a rise and fall.\"\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            1
+          ],
+          "reason": "Ch0: Normal pattern with a rise and fall. Ch1: Spike and irregular fluctuations before a drop. Ch2: Normal pattern with a rise and fall. Ch3: Normal pattern with a rise and fall."
+        },
+        "picks": [
+          1
+        ]
+      },
+      {
+        "group": [
+          8,
+          10,
+          12,
+          13
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [10],\n  \"reason\": \"Ch10 shows a spike that is significantly higher than the surrounding data points, indicating a potential anomaly. Channels 8, 12, and 13 do not show any unusual spikes, level shifts, or pattern breaks.\"\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            10
+          ],
+          "reason": "Ch10 shows a spike that is significantly higher than the surrounding data points, indicating a potential anomaly. Channels 8, 12, and 13 do not show any unusual spikes, level shifts, or pattern breaks."
+        },
+        "picks": [
+          10
+        ]
+      },
+      {
+        "group": [
+          14,
+          15,
+          18,
+          19
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [18, 19],\n  \"reason\": {\n    \"14\": \"No anomaly; consistent pattern of spikes.\",\n    \"15\": \"No anomaly; consistent pattern with minor fluctuations.\",\n    \"18\": \"Anomaly detected; sudden level shift after gradual increase.\",\n    \"19\": \"Anomaly detected; sudden level shift after gradual increase.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            18,
+            19
+          ],
+          "reason": {
+            "14": "No anomaly; consistent pattern of spikes.",
+            "15": "No anomaly; consistent pattern with minor fluctuations.",
+            "18": "Anomaly detected; sudden level shift after gradual increase.",
+            "19": "Anomaly detected; sudden level shift after gradual increase."
+          }
+        },
+        "picks": [
+          18,
+          19
+        ]
+      },
+      {
+        "group": [
+          20,
+          23,
+          24,
+          25
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [20, 23, 24, 25],\n    \"reason\": {\n        \"20\": \"Sharp drop after a peak, indicating a level shift.\",\n        \"23\": \"Sharp drop after a peak, indicating a level shift.\",\n        \"24\": \"Frequent spikes, indicating pattern breaks.\",\n        \"25\": \"Sharp drop after a peak, indicating a level shift.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            20,
+            23,
+            24,
+            25
+          ],
+          "reason": {
+            "20": "Sharp drop after a peak, indicating a level shift.",
+            "23": "Sharp drop after a peak, indicating a level shift.",
+            "24": "Frequent spikes, indicating pattern breaks.",
+            "25": "Sharp drop after a peak, indicating a level shift."
+          }
+        },
+        "picks": [
+          20,
+          23,
+          24,
+          25
+        ]
+      },
+      {
+        "group": [
+          27,
+          34,
+          35
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [27, 34, 35],\n  \"reason\": {\n    \"27\": \"Sharp drop after a gradual increase indicates a level shift.\",\n    \"34\": \"Sudden spike followed by a drop suggests a pattern break.\",\n    \"35\": \"Sudden spike followed by a drop suggests a pattern break.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            27,
+            34,
+            35
+          ],
+          "reason": {
+            "27": "Sharp drop after a gradual increase indicates a level shift.",
+            "34": "Sudden spike followed by a drop suggests a pattern break.",
+            "35": "Sudden spike followed by a drop suggests a pattern break."
+          }
+        },
+        "picks": [
+          27,
+          34,
+          35
+        ]
+      }
+    ],
+    "all_vlm_picks": [
+      1,
+      10,
+      18,
+      19,
+      20,
+      23,
+      24,
+      25,
+      27,
+      34,
+      35
+    ],
+    "final_pred": [
+      1,
+      10,
+      18,
+      19,
+      20,
+      23,
+      24,
+      25,
+      27,
+      34,
+      35
+    ],
+    "f1_ours_vlm_subplot6_noredband": 0.6086956521739131,
+    "f1_ours_no_vlm": 0.3157894736842105
+  },
+  "machine-3-8_15941_16514": {
+    "entity": "machine-3-8",
+    "start": 15941,
+    "end": 16514,
+    "k": 11,
+    "gt_channels": [
+      0,
+      1,
+      2,
+      3,
+      18,
+      19,
+      20,
+      21,
+      27,
+      29,
+      30
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      0,
+      2,
+      3,
+      5,
+      8,
+      9,
+      12,
+      13,
+      14,
+      20,
+      21,
+      23,
+      24,
+      25,
+      27,
+      30,
+      31,
+      34,
+      35
+    ],
+    "n_groups": 5,
+    "group_logs": [
+      {
+        "group": [
+          0,
+          2,
+          3,
+          5
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [2, 3, 5],\n  \"reason\": {\n    \"0\": \"No significant anomaly; normal fluctuations.\",\n    \"2\": \"Sharp spike followed by a level shift.\",\n    \"3\": \"Sharp spike followed by a level shift.\",\n    \"5\": \"Sudden drop indicating a level shift.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            2,
+            3,
+            5
+          ],
+          "reason": {
+            "0": "No significant anomaly; normal fluctuations.",
+            "2": "Sharp spike followed by a level shift.",
+            "3": "Sharp spike followed by a level shift.",
+            "5": "Sudden drop indicating a level shift."
+          }
+        },
+        "picks": [
+          2,
+          3,
+          5
+        ]
+      },
+      {
+        "group": [
+          8,
+          9,
+          12,
+          13
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [9],\n  \"reason\": {\n    \"8\": \"No significant anomaly; pattern is consistent.\",\n    \"9\": \"Contains a large spike not consistent with the rest of the pattern.\",\n    \"12\": \"No significant anomaly; pattern is consistent.\",\n    \"13\": \"No significant anomaly; pattern is consistent.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            9
+          ],
+          "reason": {
+            "8": "No significant anomaly; pattern is consistent.",
+            "9": "Contains a large spike not consistent with the rest of the pattern.",
+            "12": "No significant anomaly; pattern is consistent.",
+            "13": "No significant anomaly; pattern is consistent."
+          }
+        },
+        "picks": [
+          9
+        ]
+      },
+      {
+        "group": [
+          14,
+          20,
+          21,
+          23
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [14, 23],\n  \"reason\": {\n    \"14\": \"Channel 14 shows a consistent pattern of spikes, which may be normal for this channel.\",\n    \"20\": \"Channel 20 shows a gradual trend but no clear anomaly.\",\n    \"21\": \"Channel 21 shows a gradual trend but no clear anomaly.\",\n    \"23\": \"Channel 23 shows a significant level shift and pattern break towards the end.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            14,
+            23
+          ],
+          "reason": {
+            "14": "Channel 14 shows a consistent pattern of spikes, which may be normal for this channel.",
+            "20": "Channel 20 shows a gradual trend but no clear anomaly.",
+            "21": "Channel 21 shows a gradual trend but no clear anomaly.",
+            "23": "Channel 23 shows a significant level shift and pattern break towards the end."
+          }
+        },
+        "picks": [
+          14,
+          23
+        ]
+      },
+      {
+        "group": [
+          24,
+          25,
+          27,
+          30
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [24, 25],\n  \"reason\": {\n    \"24\": \"Channel 24 shows frequent spikes, indicating potential anomalies.\",\n    \"25\": \"Channel 25 exhibits a significant upward trend, suggesting a level shift.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            24,
+            25
+          ],
+          "reason": {
+            "24": "Channel 24 shows frequent spikes, indicating potential anomalies.",
+            "25": "Channel 25 exhibits a significant upward trend, suggesting a level shift."
+          }
+        },
+        "picks": [
+          24,
+          25
+        ]
+      },
+      {
+        "group": [
+          31,
+          34,
+          35
+        ],
+        "raw": "```json\n{\"anomalous_channels\": [31], \"reason\": \"Ch31 shows a significant level shift downward, indicating a potential anomaly. Ch34 and Ch35 do not show any clear spikes, level shifts, or pattern breaks.\"}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            31
+          ],
+          "reason": "Ch31 shows a significant level shift downward, indicating a potential anomaly. Ch34 and Ch35 do not show any clear spikes, level shifts, or pattern breaks."
+        },
+        "picks": [
+          31
+        ]
+      }
+    ],
+    "all_vlm_picks": [
+      2,
+      3,
+      5,
+      9,
+      14,
+      23,
+      24,
+      25,
+      31
+    ],
+    "final_pred": [
+      2,
+      3,
+      5,
+      9,
+      14,
+      23,
+      24,
+      25,
+      31
+    ],
+    "f1_ours_vlm_subplot6_noredband": 0.19999999999999998,
+    "f1_ours_no_vlm": 0.2222222222222222
+  },
+  "machine-3-8_17063_17276": {
+    "entity": "machine-3-8",
+    "start": 17063,
+    "end": 17276,
+    "k": 21,
+    "gt_channels": [
+      0,
+      1,
+      2,
+      3,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35
+    ],
+    "auto_confirmed": [
+      0,
+      2,
+      5,
+      6,
+      8,
+      12,
+      13,
+      14,
+      19,
+      23,
+      24,
+      25,
+      28,
+      29,
+      32,
+      33
+    ],
+    "overlay_channels": [
+      1,
+      3,
+      10,
+      11,
+      18,
+      20,
+      21,
+      22,
+      27,
+      30,
+      31,
+      34,
+      35
+    ],
+    "n_groups": 4,
+    "group_logs": [
+      {
+        "group": [
+          1,
+          3,
+          10,
+          11
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [1, 3],\n    \"reason\": {\n        \"1\": \"Channel 1 shows a significant spike and drop, indicating a pattern break.\",\n        \"3\": \"Channel 3 exhibits a level shift and a pattern break.\",\n        \"10\": \"Channel 10 shows consistent spiky behavior, which appears normal for this channel.\",\n        \"11\": \"Channel 11 displays regular spiky behavior, consistent with its normal pattern.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            1,
+            3
+          ],
+          "reason": {
+            "1": "Channel 1 shows a significant spike and drop, indicating a pattern break.",
+            "3": "Channel 3 exhibits a level shift and a pattern break.",
+            "10": "Channel 10 shows consistent spiky behavior, which appears normal for this channel.",
+            "11": "Channel 11 displays regular spiky behavior, consistent with its normal pattern."
+          }
+        },
+        "picks": [
+          1,
+          3
+        ]
+      },
+      {
+        "group": [
+          18,
+          20,
+          21,
+          22
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [22],\n  \"reason\": {\n    \"18\": \"Pattern is consistent with normal behavior.\",\n    \"20\": \"Pattern is consistent with normal behavior.\",\n    \"21\": \"Pattern is consistent with normal behavior.\",\n    \"22\": \"Exhibits a significant spike, indicating anomalous behavior.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            22
+          ],
+          "reason": {
+            "18": "Pattern is consistent with normal behavior.",
+            "20": "Pattern is consistent with normal behavior.",
+            "21": "Pattern is consistent with normal behavior.",
+            "22": "Exhibits a significant spike, indicating anomalous behavior."
+          }
+        },
+        "picks": [
+          22
+        ]
+      },
+      {
+        "group": [
+          27,
+          30,
+          31,
+          34
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [27, 31],\n    \"reason\": {\n        \"27\": \"Contains multiple sharp drops and spikes indicating pattern breaks.\",\n        \"31\": \"Exhibits a significant spike that deviates from the normal pattern.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            27,
+            31
+          ],
+          "reason": {
+            "27": "Contains multiple sharp drops and spikes indicating pattern breaks.",
+            "31": "Exhibits a significant spike that deviates from the normal pattern."
+          }
+        },
+        "picks": [
+          27,
+          31
+        ]
+      },
+      {
+        "group": [
+          35
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [35],\n  \"reason\": \"Channel 35 shows a level shift and increased variability compared to the initial stable pattern.\"\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            35
+          ],
+          "reason": "Channel 35 shows a level shift and increased variability compared to the initial stable pattern."
+        },
+        "picks": [
+          35
+        ]
+      }
+    ],
+    "all_vlm_picks": [
+      1,
+      3,
+      22,
+      27,
+      31,
+      35
+    ],
+    "final_pred": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      6,
+      8,
+      12,
+      13,
+      14,
+      19,
+      22,
+      23,
+      24,
+      25,
+      27,
+      28,
+      29,
+      31,
+      32,
+      33,
+      35
+    ],
+    "f1_ours_vlm_subplot6_noredband": 0.7441860465116279,
+    "f1_ours_no_vlm": 0.5405405405405405
+  },
+  "machine-3-8_21405_21548": {
+    "entity": "machine-3-8",
+    "start": 21405,
+    "end": 21548,
+    "k": 4,
+    "gt_channels": [
+      8,
+      9,
+      11,
+      12
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      0,
+      2,
+      3,
+      5,
+      6,
+      8,
+      9,
+      11,
+      12,
+      13,
+      14,
+      20,
+      23,
+      25,
+      31,
+      34,
+      35
+    ],
+    "n_groups": 5,
+    "group_logs": [
+      {
+        "group": [
+          0,
+          2,
+          3,
+          5
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [2, 3, 5],\n  \"reason\": {\n    \"0\": \"No clear anomaly; pattern is consistent with step changes.\",\n    \"2\": \"Spike observed around the middle of the plot.\",\n    \"3\": \"Spike observed around the middle of the plot.\",\n    \"5\": \"Spike observed at the beginning of the plot.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            2,
+            3,
+            5
+          ],
+          "reason": {
+            "0": "No clear anomaly; pattern is consistent with step changes.",
+            "2": "Spike observed around the middle of the plot.",
+            "3": "Spike observed around the middle of the plot.",
+            "5": "Spike observed at the beginning of the plot."
+          }
+        },
+        "picks": [
+          2,
+          3,
+          5
+        ]
+      },
+      {
+        "group": [
+          6,
+          8,
+          9,
+          11
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [6, 9],\n    \"reason\": {\n        \"6\": \"Channel 6 shows a significant spike at the beginning, which deviates from the rest of the pattern.\",\n        \"8\": \"Channel 8 shows frequent spikes, but they appear consistent throughout the window.\",\n        \"9\": \"Channel 9 has two distinct spikes that break the otherwise flat pattern.\",\n        \"11\": \"Channel 11 shows a spike, but it appears consistent with the rest of the pattern.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            6,
+            9
+          ],
+          "reason": {
+            "6": "Channel 6 shows a significant spike at the beginning, which deviates from the rest of the pattern.",
+            "8": "Channel 8 shows frequent spikes, but they appear consistent throughout the window.",
+            "9": "Channel 9 has two distinct spikes that break the otherwise flat pattern.",
+            "11": "Channel 11 shows a spike, but it appears consistent with the rest of the pattern."
+          }
+        },
+        "picks": [
+          6,
+          9
+        ]
+      },
+      {
+        "group": [
+          12,
+          13,
+          14,
+          20
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [12, 20],\n  \"reason\": {\n    \"12\": \"Contains a significant spike not present in other channels.\",\n    \"20\": \"Shows a level shift and pattern break with a gradual increase and decrease.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            12,
+            20
+          ],
+          "reason": {
+            "12": "Contains a significant spike not present in other channels.",
+            "20": "Shows a level shift and pattern break with a gradual increase and decrease."
+          }
+        },
+        "picks": [
+          12,
+          20
+        ]
+      },
+      {
+        "group": [
+          23,
+          25,
+          31,
+          34
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [31, 34],\n  \"reason\": {\n    \"23\": \"No significant anomaly; consistent pattern.\",\n    \"25\": \"No significant anomaly; consistent pattern.\",\n    \"31\": \"Level shift observed; sudden increase and decrease.\",\n    \"34\": \"Pattern break; irregular fluctuations and spikes.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            31,
+            34
+          ],
+          "reason": {
+            "23": "No significant anomaly; consistent pattern.",
+            "25": "No significant anomaly; consistent pattern.",
+            "31": "Level shift observed; sudden increase and decrease.",
+            "34": "Pattern break; irregular fluctuations and spikes."
+          }
+        },
+        "picks": [
+          31,
+          34
+        ]
+      },
+      {
+        "group": [
+          35
+        ],
+        "raw": "```json\n{\"anomalous_channels\": [35], \"reason\": \"Channel 35 shows a level shift and pattern break.\"}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            35
+          ],
+          "reason": "Channel 35 shows a level shift and pattern break."
+        },
+        "picks": [
+          35
+        ]
+      }
+    ],
+    "all_vlm_picks": [
+      2,
+      3,
+      5,
+      6,
+      9,
+      12,
+      20,
+      31,
+      34,
+      35
+    ],
+    "final_pred": [
+      2,
+      3,
+      5,
+      6,
+      9,
+      12,
+      20,
+      31,
+      34,
+      35
+    ],
+    "f1_ours_vlm_subplot6_noredband": 0.28571428571428575,
+    "f1_ours_no_vlm": 0.4444444444444445
+  },
+  "machine-3-8_23478_23781": {
+    "entity": "machine-3-8",
+    "start": 23478,
+    "end": 23781,
+    "k": 5,
+    "gt_channels": [
+      8,
+      9,
+      12,
+      13,
+      29
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      0,
+      1,
+      2,
+      3,
+      8,
+      9,
+      11,
+      12,
+      13,
+      15,
+      18,
+      19,
+      20,
+      21,
+      23,
+      24,
+      25,
+      27,
+      29,
+      30,
+      33,
+      34,
+      35
+    ],
+    "n_groups": 6,
+    "group_logs": [
+      {
+        "group": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [0, 1, 2],\n  \"reason\": {\n    \"0\": \"Level shift from high to low values.\",\n    \"1\": \"Spike followed by a level shift to lower values.\",\n    \"2\": \"Level shift from high to low values.\",\n    \"3\": \"No significant anomaly; gradual rise and fall.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            0,
+            1,
+            2
+          ],
+          "reason": {
+            "0": "Level shift from high to low values.",
+            "1": "Spike followed by a level shift to lower values.",
+            "2": "Level shift from high to low values.",
+            "3": "No significant anomaly; gradual rise and fall."
+          }
+        },
+        "picks": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "group": [
+          8,
+          9,
+          11,
+          12
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [9, 11, 12],\n  \"reason\": {\n    \"8\": \"No significant deviation from normal pattern.\",\n    \"9\": \"Contains a large spike deviating from the baseline.\",\n    \"11\": \"Exhibits a significant spike not consistent with normal fluctuations.\",\n    \"12\": \"Shows a pronounced spike breaking the usual pattern.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            9,
+            11,
+            12
+          ],
+          "reason": {
+            "8": "No significant deviation from normal pattern.",
+            "9": "Contains a large spike deviating from the baseline.",
+            "11": "Exhibits a significant spike not consistent with normal fluctuations.",
+            "12": "Shows a pronounced spike breaking the usual pattern."
+          }
+        },
+        "picks": [
+          9,
+          11,
+          12
+        ]
+      },
+      {
+        "group": [
+          13,
+          15,
+          18,
+          19
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [18, 19],\n  \"reason\": {\n    \"13\": \"Regular pattern of spikes, no anomaly detected.\",\n    \"15\": \"Consistent pattern with minor fluctuations, no anomaly detected.\",\n    \"18\": \"Significant level shift observed.\",\n    \"19\": \"Significant level shift observed.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            18,
+            19
+          ],
+          "reason": {
+            "13": "Regular pattern of spikes, no anomaly detected.",
+            "15": "Consistent pattern with minor fluctuations, no anomaly detected.",
+            "18": "Significant level shift observed.",
+            "19": "Significant level shift observed."
+          }
+        },
+        "picks": [
+          18,
+          19
+        ]
+      },
+      {
+        "group": [
+          20,
+          21,
+          23,
+          24
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [20, 21, 23],\n  \"reason\": {\n    \"20\": \"Level shift observed with a sudden drop after a peak.\",\n    \"21\": \"Level shift observed with a sudden drop after a peak.\",\n    \"23\": \"Level shift observed with a sudden drop after a peak.\",\n    \"24\": \"No clear anomaly; pattern is consistent with normal behavior.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            20,
+            21,
+            23
+          ],
+          "reason": {
+            "20": "Level shift observed with a sudden drop after a peak.",
+            "21": "Level shift observed with a sudden drop after a peak.",
+            "23": "Level shift observed with a sudden drop after a peak.",
+            "24": "No clear anomaly; pattern is consistent with normal behavior."
+          }
+        },
+        "picks": [
+          20,
+          21,
+          23
+        ]
+      },
+      {
+        "group": [
+          25,
+          27,
+          29,
+          30
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [25, 27, 29, 30],\n  \"reason\": {\n    \"25\": \"Pattern break with a sudden drop after a peak.\",\n    \"27\": \"Level shift with a sharp decline after a gradual increase.\",\n    \"29\": \"Multiple spikes indicating sudden anomalies.\",\n    \"30\": \"Level shift with a sharp decline after a gradual increase.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            25,
+            27,
+            29,
+            30
+          ],
+          "reason": {
+            "25": "Pattern break with a sudden drop after a peak.",
+            "27": "Level shift with a sharp decline after a gradual increase.",
+            "29": "Multiple spikes indicating sudden anomalies.",
+            "30": "Level shift with a sharp decline after a gradual increase."
+          }
+        },
+        "picks": [
+          25,
+          27,
+          29,
+          30
+        ]
+      },
+      {
+        "group": [
+          33,
+          34,
+          35
+        ],
+        "raw": "{\"anomalous_channels\": [33, 34, 35], \"reason\": {\"33\": \"Contains a significant spike.\", \"34\": \"Shows a sudden level shift downward.\", \"35\": \"Exhibits a sudden level shift downward.\"}}",
+        "parsed": {
+          "anomalous_channels": [
+            33,
+            34,
+            35
+          ],
+          "reason": {
+            "33": "Contains a significant spike.",
+            "34": "Shows a sudden level shift downward.",
+            "35": "Exhibits a sudden level shift downward."
+          }
+        },
+        "picks": [
+          33,
+          34,
+          35
+        ]
+      }
+    ],
+    "all_vlm_picks": [
+      0,
+      1,
+      2,
+      9,
+      11,
+      12,
+      18,
+      19,
+      20,
+      21,
+      23,
+      25,
+      27,
+      29,
+      30,
+      33,
+      34,
+      35
+    ],
+    "final_pred": [
+      0,
+      1,
+      2,
+      9,
+      11,
+      12,
+      18,
+      19,
+      20,
+      21,
+      23,
+      25,
+      27,
+      29,
+      30,
+      33,
+      34,
+      35
+    ],
+    "f1_ours_vlm_subplot6_noredband": 0.2608695652173913,
+    "f1_ours_no_vlm": 0.6666666666666666
+  },
+  "machine-3-8_28253_28270": {
+    "entity": "machine-3-8",
+    "start": 28253,
+    "end": 28270,
+    "k": 3,
+    "gt_channels": [
+      9,
+      11,
+      12
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      0,
+      1,
+      3,
+      5,
+      8,
+      9,
+      11,
+      12,
+      13,
+      14,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      27,
+      29,
+      30,
+      31,
+      34,
+      35
+    ],
+    "n_groups": 6,
+    "group_logs": [
+      {
+        "group": [
+          0,
+          1,
+          3,
+          5
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [0, 1, 3],\n  \"reason\": {\n    \"0\": \"Multiple sharp spikes deviating from a baseline of zero.\",\n    \"1\": \"Several large spikes not consistent with the rest of the pattern.\",\n    \"3\": \"Sudden level shift to a higher value, breaking the previous pattern.\",\n    \"5\": \"No significant anomalies; gradual changes appear normal.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            0,
+            1,
+            3
+          ],
+          "reason": {
+            "0": "Multiple sharp spikes deviating from a baseline of zero.",
+            "1": "Several large spikes not consistent with the rest of the pattern.",
+            "3": "Sudden level shift to a higher value, breaking the previous pattern.",
+            "5": "No significant anomalies; gradual changes appear normal."
+          }
+        },
+        "picks": [
+          0,
+          1,
+          3
+        ]
+      },
+      {
+        "group": [
+          8,
+          9,
+          11,
+          12
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [9, 11, 12],\n    \"reason\": {\n        \"8\": \"No significant deviation from normal pattern.\",\n        \"9\": \"Large spike deviating from baseline.\",\n        \"11\": \"Significant spike deviating from normal fluctuations.\",\n        \"12\": \"Noticeable spike breaking the regular pattern.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            9,
+            11,
+            12
+          ],
+          "reason": {
+            "8": "No significant deviation from normal pattern.",
+            "9": "Large spike deviating from baseline.",
+            "11": "Significant spike deviating from normal fluctuations.",
+            "12": "Noticeable spike breaking the regular pattern."
+          }
+        },
+        "picks": [
+          9,
+          11,
+          12
+        ]
+      },
+      {
+        "group": [
+          13,
+          14,
+          18,
+          19
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [14, 18, 19],\n  \"reason\": {\n    \"13\": \"No anomaly; consistent pattern of spikes.\",\n    \"14\": \"Pattern break; irregular spike pattern.\",\n    \"18\": \"Level shift; sudden increase and decrease.\",\n    \"19\": \"Level shift; sudden increase and decrease.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            14,
+            18,
+            19
+          ],
+          "reason": {
+            "13": "No anomaly; consistent pattern of spikes.",
+            "14": "Pattern break; irregular spike pattern.",
+            "18": "Level shift; sudden increase and decrease.",
+            "19": "Level shift; sudden increase and decrease."
+          }
+        },
+        "picks": [
+          14,
+          18,
+          19
+        ]
+      },
+      {
+        "group": [
+          20,
+          21,
+          22,
+          23
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [20, 21, 22, 23],\n  \"reason\": {\n    \"20\": \"Spike followed by a sudden drop.\",\n    \"21\": \"Spike followed by a sudden drop.\",\n    \"22\": \"Significant drop and recovery.\",\n    \"23\": \"Level shift with a drop and recovery.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            20,
+            21,
+            22,
+            23
+          ],
+          "reason": {
+            "20": "Spike followed by a sudden drop.",
+            "21": "Spike followed by a sudden drop.",
+            "22": "Significant drop and recovery.",
+            "23": "Level shift with a drop and recovery."
+          }
+        },
+        "picks": [
+          20,
+          21,
+          22,
+          23
+        ]
+      },
+      {
+        "group": [
+          24,
+          25,
+          27,
+          29
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [24, 25, 27, 29],\n  \"reason\": {\n    \"24\": \"Multiple sharp spikes observed.\",\n    \"25\": \"Significant level shifts detected.\",\n    \"27\": \"Sharp spike followed by a level shift.\",\n    \"29\": \"Single sharp spike observed.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            24,
+            25,
+            27,
+            29
+          ],
+          "reason": {
+            "24": "Multiple sharp spikes observed.",
+            "25": "Significant level shifts detected.",
+            "27": "Sharp spike followed by a level shift.",
+            "29": "Single sharp spike observed."
+          }
+        },
+        "picks": [
+          24,
+          25,
+          27,
+          29
+        ]
+      },
+      {
+        "group": [
+          30,
+          31,
+          34,
+          35
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [30, 31],\n    \"reason\": {\n        \"30\": \"Spike followed by a sudden drop.\",\n        \"31\": \"Significant level shift downward and then upward.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            30,
+            31
+          ],
+          "reason": {
+            "30": "Spike followed by a sudden drop.",
+            "31": "Significant level shift downward and then upward."
+          }
+        },
+        "picks": [
+          30,
+          31
+        ]
+      }
+    ],
+    "all_vlm_picks": [
+      0,
+      1,
+      3,
+      9,
+      11,
+      12,
+      14,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      27,
+      29,
+      30,
+      31
+    ],
+    "final_pred": [
+      0,
+      1,
+      3,
+      9,
+      11,
+      12,
+      14,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      27,
+      29,
+      30,
+      31
+    ],
+    "f1_ours_vlm_subplot6_noredband": 0.2727272727272727,
+    "f1_ours_no_vlm": 0.3333333333333333
+  }
+}

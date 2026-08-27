@@ -1,0 +1,3181 @@
+{
+  "machine-2-2_21405_21428": {
+    "entity": "machine-2-2",
+    "start": 21405,
+    "end": 21428,
+    "k": 6,
+    "gt_channels": [
+      18,
+      19,
+      20,
+      21,
+      27,
+      30
+    ],
+    "auto_confirmed": [
+      0,
+      2,
+      3,
+      18,
+      19,
+      20,
+      21,
+      23,
+      25,
+      27
+    ],
+    "overlay_channels": [
+      5,
+      6,
+      8,
+      9,
+      10,
+      12,
+      14,
+      22,
+      24,
+      29,
+      30,
+      31,
+      34,
+      35
+    ],
+    "n_groups": 4,
+    "group_logs": [
+      {
+        "group": [
+          5,
+          6,
+          8,
+          9
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [5, 6, 9],\n    \"reason\": {\n        \"5\": \"Brief spike in values within the shaded region.\",\n        \"6\": \"Noticeable fluctuation and deviation within the shaded region.\",\n        \"9\": \"Significant spike in values within the shaded region.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            5,
+            6,
+            9
+          ],
+          "reason": {
+            "5": "Brief spike in values within the shaded region.",
+            "6": "Noticeable fluctuation and deviation within the shaded region.",
+            "9": "Significant spike in values within the shaded region."
+          }
+        },
+        "picks": [
+          5,
+          6,
+          9
+        ]
+      },
+      {
+        "group": [
+          10,
+          12,
+          14,
+          22
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [10, 22],\n  \"reason\": {\n    \"10\": \"A significant spike occurs within the shaded region.\",\n    \"12\": \"No significant deviation within the shaded region.\",\n    \"14\": \"No distinct anomaly concentrated in the shaded region.\",\n    \"22\": \"A noticeable spike occurs within the shaded region.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            10,
+            22
+          ],
+          "reason": {
+            "10": "A significant spike occurs within the shaded region.",
+            "12": "No significant deviation within the shaded region.",
+            "14": "No distinct anomaly concentrated in the shaded region.",
+            "22": "A noticeable spike occurs within the shaded region."
+          }
+        },
+        "picks": [
+          10,
+          22
+        ]
+      },
+      {
+        "group": [
+          24,
+          29,
+          30,
+          31
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [29, 30, 31],\n    \"reason\": {\n        \"24\": \"No significant deviation in the shaded region.\",\n        \"29\": \"Spike in the shaded region.\",\n        \"30\": \"Increase in values within the shaded region.\",\n        \"31\": \"Spike in the shaded region.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            29,
+            30,
+            31
+          ],
+          "reason": {
+            "24": "No significant deviation in the shaded region.",
+            "29": "Spike in the shaded region.",
+            "30": "Increase in values within the shaded region.",
+            "31": "Spike in the shaded region."
+          }
+        },
+        "picks": [
+          29,
+          30,
+          31
+        ]
+      },
+      {
+        "group": [
+          34,
+          35
+        ],
+        "raw": "```json\n{\"anomalous_channels\": [34, 35], \"reason\": \"Channel 34 shows a significant spike in the shaded region. Channel 35 also shows a spike in the same region.\"}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            34,
+            35
+          ],
+          "reason": "Channel 34 shows a significant spike in the shaded region. Channel 35 also shows a spike in the same region."
+        },
+        "picks": [
+          34,
+          35
+        ]
+      }
+    ],
+    "all_vlm_picks": [
+      5,
+      6,
+      9,
+      10,
+      22,
+      29,
+      30,
+      31,
+      34,
+      35
+    ],
+    "final_pred": [
+      0,
+      2,
+      3,
+      5,
+      6,
+      9,
+      10,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      25,
+      27,
+      29,
+      30,
+      31,
+      34,
+      35
+    ],
+    "f1_ours_vlm_subplot4": 0.4615384615384615,
+    "f1_ours_no_vlm": 0.625,
+    "f1_k2": 0.28571428571428575
+  },
+  "machine-2-7_13623_13625": {
+    "entity": "machine-2-7",
+    "start": 13623,
+    "end": 13625,
+    "k": 4,
+    "gt_channels": [
+      8,
+      12,
+      13,
+      14
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      3,
+      8,
+      9,
+      11,
+      12,
+      13,
+      14,
+      23,
+      25,
+      29,
+      33
+    ],
+    "n_groups": 3,
+    "group_logs": [
+      {
+        "group": [
+          3,
+          8,
+          9,
+          11
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [8, 9, 11],\n  \"reason\": {\n    \"3\": \"No significant deviation specifically within the shaded region.\",\n    \"8\": \"Sharp spike coinciding with the shaded region.\",\n    \"9\": \"Sharp spike coinciding with the shaded region.\",\n    \"11\": \"Sharp spike coinciding with the shaded region.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            8,
+            9,
+            11
+          ],
+          "reason": {
+            "3": "No significant deviation specifically within the shaded region.",
+            "8": "Sharp spike coinciding with the shaded region.",
+            "9": "Sharp spike coinciding with the shaded region.",
+            "11": "Sharp spike coinciding with the shaded region."
+          }
+        },
+        "picks": [
+          8,
+          9,
+          11
+        ]
+      },
+      {
+        "group": [
+          12,
+          13,
+          14,
+          23
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [12, 13, 14],\n    \"reason\": {\n        \"12\": \"A significant spike occurs precisely within the shaded region.\",\n        \"13\": \"A significant spike occurs precisely within the shaded region.\",\n        \"14\": \"A significant spike occurs precisely within the shaded region.\",\n        \"23\": \"No distinct anomaly concentrated within the shaded region; the increase is gradual and extends beyond the region.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            12,
+            13,
+            14
+          ],
+          "reason": {
+            "12": "A significant spike occurs precisely within the shaded region.",
+            "13": "A significant spike occurs precisely within the shaded region.",
+            "14": "A significant spike occurs precisely within the shaded region.",
+            "23": "No distinct anomaly concentrated within the shaded region; the increase is gradual and extends beyond the region."
+          }
+        },
+        "picks": [
+          12,
+          13,
+          14
+        ]
+      },
+      {
+        "group": [
+          25,
+          29,
+          33
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [25],\n    \"reason\": {\n        \"25\": \"Channel 25 shows a brief spike in the shaded region, indicating anomalous behavior.\",\n        \"29\": \"Channel 29 does not show any deviation specifically in the shaded region.\",\n        \"33\": \"Channel 33 does not show any deviation specifically in the shaded region.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            25
+          ],
+          "reason": {
+            "25": "Channel 25 shows a brief spike in the shaded region, indicating anomalous behavior.",
+            "29": "Channel 29 does not show any deviation specifically in the shaded region.",
+            "33": "Channel 33 does not show any deviation specifically in the shaded region."
+          }
+        },
+        "picks": [
+          25
+        ]
+      }
+    ],
+    "all_vlm_picks": [
+      8,
+      9,
+      11,
+      12,
+      13,
+      14,
+      25
+    ],
+    "final_pred": [
+      8,
+      9,
+      11,
+      12,
+      13,
+      14,
+      25
+    ],
+    "f1_ours_vlm_subplot4": 0.7272727272727273,
+    "f1_ours_no_vlm": 0.6666666666666665,
+    "f1_k2": 0.2
+  },
+  "machine-3-5_15953_16057": {
+    "entity": "machine-3-5",
+    "start": 15953,
+    "end": 16057,
+    "k": 8,
+    "gt_channels": [
+      5,
+      6,
+      22,
+      23,
+      24,
+      25,
+      29,
+      31
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      0,
+      5,
+      6,
+      9,
+      10,
+      11,
+      14,
+      16,
+      19,
+      21,
+      22,
+      23,
+      24,
+      25,
+      27,
+      29,
+      30,
+      31
+    ],
+    "n_groups": 5,
+    "group_logs": [
+      {
+        "group": [
+          0,
+          5,
+          6,
+          9
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [0, 5, 6, 9],\n    \"reason\": {\n        \"0\": \"Significant increase in values within the shaded region.\",\n        \"5\": \"Sharp drop and recovery within the shaded region.\",\n        \"6\": \"Sharp drop and recovery within the shaded region.\",\n        \"9\": \"Multiple spikes in values within the shaded region.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            0,
+            5,
+            6,
+            9
+          ],
+          "reason": {
+            "0": "Significant increase in values within the shaded region.",
+            "5": "Sharp drop and recovery within the shaded region.",
+            "6": "Sharp drop and recovery within the shaded region.",
+            "9": "Multiple spikes in values within the shaded region."
+          }
+        },
+        "picks": [
+          0,
+          5,
+          6,
+          9
+        ]
+      },
+      {
+        "group": [
+          10,
+          11,
+          14,
+          16
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [10, 11],\n    \"reason\": {\n        \"10\": \"Channel 10 shows a significant spike within the shaded region.\",\n        \"11\": \"Channel 11 has a noticeable peak within the shaded region.\",\n        \"14\": \"Channel 14 shows consistent noise but no distinct anomaly concentrated in the shaded region.\",\n        \"16\": \"Channel 16 has a spike outside the shaded region, not within it.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            10,
+            11
+          ],
+          "reason": {
+            "10": "Channel 10 shows a significant spike within the shaded region.",
+            "11": "Channel 11 has a noticeable peak within the shaded region.",
+            "14": "Channel 14 shows consistent noise but no distinct anomaly concentrated in the shaded region.",
+            "16": "Channel 16 has a spike outside the shaded region, not within it."
+          }
+        },
+        "picks": [
+          10,
+          11
+        ]
+      },
+      {
+        "group": [
+          19,
+          21,
+          22,
+          23
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [22, 23],\n  \"reason\": {\n    \"19\": \"No distinct anomaly concentrated in the shaded region; fluctuations are spread out.\",\n    \"21\": \"No distinct anomaly concentrated in the shaded region; fluctuations are spread out.\",\n    \"22\": \"Sharp spikes occur specifically within the shaded region.\",\n    \"23\": \"Distinct drop and recovery occur specifically within the shaded region.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            22,
+            23
+          ],
+          "reason": {
+            "19": "No distinct anomaly concentrated in the shaded region; fluctuations are spread out.",
+            "21": "No distinct anomaly concentrated in the shaded region; fluctuations are spread out.",
+            "22": "Sharp spikes occur specifically within the shaded region.",
+            "23": "Distinct drop and recovery occur specifically within the shaded region."
+          }
+        },
+        "picks": [
+          22,
+          23
+        ]
+      },
+      {
+        "group": [
+          24,
+          25,
+          27,
+          29
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [24, 25, 29],\n    \"reason\": {\n        \"24\": \"Brief spikes occur within the shaded region.\",\n        \"25\": \"A significant drop and recovery occur within the shaded region.\",\n        \"29\": \"Brief spikes occur within the shaded region.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            24,
+            25,
+            29
+          ],
+          "reason": {
+            "24": "Brief spikes occur within the shaded region.",
+            "25": "A significant drop and recovery occur within the shaded region.",
+            "29": "Brief spikes occur within the shaded region."
+          }
+        },
+        "picks": [
+          24,
+          25,
+          29
+        ]
+      },
+      {
+        "group": [
+          30,
+          31
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [31],\n  \"reason\": \"Channel 31 shows a brief spike within the shaded region, indicating anomalous behavior. Channel 30 has fluctuations but no distinct anomaly concentrated in the shaded region.\"\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            31
+          ],
+          "reason": "Channel 31 shows a brief spike within the shaded region, indicating anomalous behavior. Channel 30 has fluctuations but no distinct anomaly concentrated in the shaded region."
+        },
+        "picks": [
+          31
+        ]
+      }
+    ],
+    "all_vlm_picks": [
+      0,
+      5,
+      6,
+      9,
+      10,
+      11,
+      22,
+      23,
+      24,
+      25,
+      29,
+      31
+    ],
+    "final_pred": [
+      0,
+      5,
+      6,
+      9,
+      10,
+      11,
+      22,
+      23,
+      24,
+      25,
+      29,
+      31
+    ],
+    "f1_ours_vlm_subplot4": 0.8,
+    "f1_ours_no_vlm": 1.0,
+    "f1_k2": 0.875
+  },
+  "machine-1-1_18071_18528": {
+    "entity": "machine-1-1",
+    "start": 18071,
+    "end": 18528,
+    "k": 8,
+    "gt_channels": [
+      0,
+      1,
+      8,
+      9,
+      11,
+      12,
+      13,
+      14
+    ],
+    "auto_confirmed": [
+      0,
+      1,
+      2,
+      3,
+      12,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      27,
+      30,
+      31,
+      34,
+      35
+    ],
+    "overlay_channels": [
+      5,
+      6,
+      8,
+      9,
+      10,
+      11,
+      13,
+      15,
+      29,
+      32,
+      33
+    ],
+    "n_groups": 3,
+    "group_logs": [
+      {
+        "group": [
+          5,
+          6,
+          8,
+          9
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [5, 9],\n    \"reason\": {\n        \"5\": \"Sustained increase in values within the shaded region, indicating a shift.\",\n        \"9\": \"Sharp spike in values within the shaded region, indicating a brief anomaly.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            5,
+            9
+          ],
+          "reason": {
+            "5": "Sustained increase in values within the shaded region, indicating a shift.",
+            "9": "Sharp spike in values within the shaded region, indicating a brief anomaly."
+          }
+        },
+        "picks": [
+          5,
+          9
+        ]
+      },
+      {
+        "group": [
+          10,
+          11,
+          13,
+          15
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [11, 13],\n    \"reason\": {\n        \"10\": \"No significant deviation within the shaded region.\",\n        \"11\": \"Multiple spikes within the shaded region indicating anomalous behavior.\",\n        \"13\": \"Significant spike within the shaded region indicating anomalous behavior.\",\n        \"15\": \"No significant deviation within the shaded region.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            11,
+            13
+          ],
+          "reason": {
+            "10": "No significant deviation within the shaded region.",
+            "11": "Multiple spikes within the shaded region indicating anomalous behavior.",
+            "13": "Significant spike within the shaded region indicating anomalous behavior.",
+            "15": "No significant deviation within the shaded region."
+          }
+        },
+        "picks": [
+          11,
+          13
+        ]
+      },
+      {
+        "group": [
+          29,
+          32,
+          33
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [29],\n    \"reason\": \"Channel 29 shows a clear upward trend and spike within the shaded region, indicating anomalous behavior. Channel 32 and 33 do not show distinct anomalies concentrated in the shaded region.\"\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            29
+          ],
+          "reason": "Channel 29 shows a clear upward trend and spike within the shaded region, indicating anomalous behavior. Channel 32 and 33 do not show distinct anomalies concentrated in the shaded region."
+        },
+        "picks": [
+          29
+        ]
+      }
+    ],
+    "all_vlm_picks": [
+      5,
+      9,
+      11,
+      13,
+      29
+    ],
+    "final_pred": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      9,
+      11,
+      12,
+      13,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      27,
+      29,
+      30,
+      31,
+      34,
+      35
+    ],
+    "f1_ours_vlm_subplot4": 0.3870967741935483,
+    "f1_ours_no_vlm": 0.23076923076923078,
+    "f1_k2": 0.25
+  },
+  "machine-1-5_10620_10637": {
+    "entity": "machine-1-5",
+    "start": 10620,
+    "end": 10637,
+    "k": 8,
+    "gt_channels": [
+      0,
+      1,
+      2,
+      3,
+      6,
+      23,
+      25,
+      31
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      6,
+      8,
+      12,
+      13,
+      14,
+      15,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      27,
+      29,
+      30,
+      32,
+      33,
+      34
+    ],
+    "n_groups": 7,
+    "group_logs": [
+      {
+        "group": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [0, 1, 2, 3],\n    \"reason\": {\n        \"0\": \"Channel 0 shows a significant spike within the shaded region.\",\n        \"1\": \"Channel 1 shows a significant spike within the shaded region.\",\n        \"2\": \"Channel 2 shows a significant spike within the shaded region.\",\n        \"3\": \"Channel 3 shows a significant spike within the shaded region.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "reason": {
+            "0": "Channel 0 shows a significant spike within the shaded region.",
+            "1": "Channel 1 shows a significant spike within the shaded region.",
+            "2": "Channel 2 shows a significant spike within the shaded region.",
+            "3": "Channel 3 shows a significant spike within the shaded region."
+          }
+        },
+        "picks": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "group": [
+          5,
+          6,
+          8,
+          12
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [5, 6, 12],\n    \"reason\": {\n        \"5\": \"Brief spike in values within the shaded region.\",\n        \"6\": \"Brief spike in values within the shaded region.\",\n        \"12\": \"Brief spike in values within the shaded region.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            5,
+            6,
+            12
+          ],
+          "reason": {
+            "5": "Brief spike in values within the shaded region.",
+            "6": "Brief spike in values within the shaded region.",
+            "12": "Brief spike in values within the shaded region."
+          }
+        },
+        "picks": [
+          5,
+          6,
+          12
+        ]
+      },
+      {
+        "group": [
+          13,
+          14,
+          15,
+          18
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [18],\n    \"reason\": {\n        \"13\": \"No significant deviation in the shaded region.\",\n        \"14\": \"No significant deviation in the shaded region.\",\n        \"15\": \"No significant deviation in the shaded region.\",\n        \"18\": \"Distinct spike within the shaded region.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            18
+          ],
+          "reason": {
+            "13": "No significant deviation in the shaded region.",
+            "14": "No significant deviation in the shaded region.",
+            "15": "No significant deviation in the shaded region.",
+            "18": "Distinct spike within the shaded region."
+          }
+        },
+        "picks": [
+          18
+        ]
+      },
+      {
+        "group": [
+          19,
+          20,
+          21,
+          22
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [20, 21, 22],\n    \"reason\": {\n        \"19\": \"No significant deviation in the shaded region.\",\n        \"20\": \"Significant spike in the shaded region.\",\n        \"21\": \"Significant spike in the shaded region.\",\n        \"22\": \"Significant spike in the shaded region.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            20,
+            21,
+            22
+          ],
+          "reason": {
+            "19": "No significant deviation in the shaded region.",
+            "20": "Significant spike in the shaded region.",
+            "21": "Significant spike in the shaded region.",
+            "22": "Significant spike in the shaded region."
+          }
+        },
+        "picks": [
+          20,
+          21,
+          22
+        ]
+      },
+      {
+        "group": [
+          23,
+          24,
+          25,
+          27
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [23, 25],\n  \"reason\": {\n    \"23\": \"A significant spike occurs within the shaded region, deviating from the normal flat pattern.\",\n    \"24\": \"No distinct anomaly within the shaded region; the pattern is consistent with normal fluctuations.\",\n    \"25\": \"A significant spike occurs within the shaded region, deviating from the normal flat pattern.\",\n    \"27\": \"No distinct anomaly within the shaded region; the pattern is consistent with normal fluctuations.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            23,
+            25
+          ],
+          "reason": {
+            "23": "A significant spike occurs within the shaded region, deviating from the normal flat pattern.",
+            "24": "No distinct anomaly within the shaded region; the pattern is consistent with normal fluctuations.",
+            "25": "A significant spike occurs within the shaded region, deviating from the normal flat pattern.",
+            "27": "No distinct anomaly within the shaded region; the pattern is consistent with normal fluctuations."
+          }
+        },
+        "picks": [
+          23,
+          25
+        ]
+      },
+      {
+        "group": [
+          29,
+          30,
+          32,
+          33
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [29, 30],\n    \"reason\": {\n        \"29\": \"A significant spike occurs within the shaded region.\",\n        \"30\": \"Increased amplitude and variability are observed within the shaded region.\",\n        \"32\": \"No significant deviation within the shaded region.\",\n        \"33\": \"No significant deviation within the shaded region.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            29,
+            30
+          ],
+          "reason": {
+            "29": "A significant spike occurs within the shaded region.",
+            "30": "Increased amplitude and variability are observed within the shaded region.",
+            "32": "No significant deviation within the shaded region.",
+            "33": "No significant deviation within the shaded region."
+          }
+        },
+        "picks": [
+          29,
+          30
+        ]
+      },
+      {
+        "group": [
+          34
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [34],\n  \"reason\": \"Channel 34 shows a significant spike within the shaded red region, indicating anomalous behavior.\"\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            34
+          ],
+          "reason": "Channel 34 shows a significant spike within the shaded red region, indicating anomalous behavior."
+        },
+        "picks": [
+          34
+        ]
+      }
+    ],
+    "all_vlm_picks": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      6,
+      12,
+      18,
+      20,
+      21,
+      22,
+      23,
+      25,
+      29,
+      30,
+      34
+    ],
+    "final_pred": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      6,
+      12,
+      18,
+      20,
+      21,
+      22,
+      23,
+      25,
+      29,
+      30,
+      34
+    ],
+    "f1_ours_vlm_subplot4": 0.5833333333333334,
+    "f1_ours_no_vlm": 0.9333333333333333,
+    "f1_k2": 0.7999999999999999
+  },
+  "machine-1-8_2105_2171": {
+    "entity": "machine-1-8",
+    "start": 2105,
+    "end": 2171,
+    "k": 5,
+    "gt_channels": [
+      0,
+      8,
+      9,
+      10,
+      11
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      0,
+      1,
+      8,
+      9,
+      11,
+      12,
+      14,
+      15,
+      23,
+      25,
+      32
+    ],
+    "n_groups": 3,
+    "group_logs": [
+      {
+        "group": [
+          0,
+          1,
+          8,
+          9
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [0, 8, 9],\n    \"reason\": {\n        \"0\": \"Significant spike in values within the shaded region.\",\n        \"1\": \"No distinct anomaly concentrated in the shaded region.\",\n        \"8\": \"Sharp spike in values within the shaded region.\",\n        \"9\": \"Multiple spikes in values within the shaded region.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            0,
+            8,
+            9
+          ],
+          "reason": {
+            "0": "Significant spike in values within the shaded region.",
+            "1": "No distinct anomaly concentrated in the shaded region.",
+            "8": "Sharp spike in values within the shaded region.",
+            "9": "Multiple spikes in values within the shaded region."
+          }
+        },
+        "picks": [
+          0,
+          8,
+          9
+        ]
+      },
+      {
+        "group": [
+          11,
+          12,
+          14,
+          15
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [11, 12, 14],\n    \"reason\": {\n        \"11\": \"Significant spike within the shaded region.\",\n        \"12\": \"Multiple spikes within the shaded region.\",\n        \"14\": \"Noticeable spike within the shaded region.\",\n        \"15\": \"No significant deviation concentrated in the shaded region.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            11,
+            12,
+            14
+          ],
+          "reason": {
+            "11": "Significant spike within the shaded region.",
+            "12": "Multiple spikes within the shaded region.",
+            "14": "Noticeable spike within the shaded region.",
+            "15": "No significant deviation concentrated in the shaded region."
+          }
+        },
+        "picks": [
+          11,
+          12,
+          14
+        ]
+      },
+      {
+        "group": [
+          23,
+          25,
+          32
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [32],\n    \"reason\": \"Channel 32 shows a distinct spike within the shaded region, indicating anomalous behavior. Channels 23 and 25 show a gradual decline but no distinct anomaly within the shaded region.\"\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            32
+          ],
+          "reason": "Channel 32 shows a distinct spike within the shaded region, indicating anomalous behavior. Channels 23 and 25 show a gradual decline but no distinct anomaly within the shaded region."
+        },
+        "picks": [
+          32
+        ]
+      }
+    ],
+    "all_vlm_picks": [
+      0,
+      8,
+      9,
+      11,
+      12,
+      14,
+      32
+    ],
+    "final_pred": [
+      0,
+      8,
+      9,
+      11,
+      12,
+      14,
+      32
+    ],
+    "f1_ours_vlm_subplot4": 0.6666666666666666,
+    "f1_ours_no_vlm": 0.4000000000000001,
+    "f1_k2": 0.0
+  },
+  "machine-3-8_21405_21548": {
+    "entity": "machine-3-8",
+    "start": 21405,
+    "end": 21548,
+    "k": 4,
+    "gt_channels": [
+      8,
+      9,
+      11,
+      12
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      0,
+      2,
+      3,
+      5,
+      6,
+      8,
+      9,
+      11,
+      12,
+      13,
+      14,
+      20,
+      23,
+      25,
+      31,
+      34,
+      35
+    ],
+    "n_groups": 5,
+    "group_logs": [
+      {
+        "group": [
+          0,
+          2,
+          3,
+          5
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [2, 3],\n    \"reason\": {\n        \"0\": \"No significant deviation within the shaded region.\",\n        \"2\": \"Sharp spike within the shaded region.\",\n        \"3\": \"Sharp spike within the shaded region.\",\n        \"5\": \"Spike occurs before the shaded region.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            2,
+            3
+          ],
+          "reason": {
+            "0": "No significant deviation within the shaded region.",
+            "2": "Sharp spike within the shaded region.",
+            "3": "Sharp spike within the shaded region.",
+            "5": "Spike occurs before the shaded region."
+          }
+        },
+        "picks": [
+          2,
+          3
+        ]
+      },
+      {
+        "group": [
+          6,
+          8,
+          9,
+          11
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [6, 9, 11],\n    \"reason\": {\n        \"6\": \"Brief spike at the start of the shaded region.\",\n        \"9\": \"Significant spike within the shaded region.\",\n        \"11\": \"Noticeable spike within the shaded region.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            6,
+            9,
+            11
+          ],
+          "reason": {
+            "6": "Brief spike at the start of the shaded region.",
+            "9": "Significant spike within the shaded region.",
+            "11": "Noticeable spike within the shaded region."
+          }
+        },
+        "picks": [
+          6,
+          9,
+          11
+        ]
+      },
+      {
+        "group": [
+          12,
+          13,
+          14,
+          20
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [12, 20],\n    \"reason\": {\n        \"12\": \"Brief spike at the start of the shaded region.\",\n        \"20\": \"Sustained increase and peak within the shaded region.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            12,
+            20
+          ],
+          "reason": {
+            "12": "Brief spike at the start of the shaded region.",
+            "20": "Sustained increase and peak within the shaded region."
+          }
+        },
+        "picks": [
+          12,
+          20
+        ]
+      },
+      {
+        "group": [
+          23,
+          25,
+          31,
+          34
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [23, 25, 31],\n    \"reason\": {\n        \"23\": \"Channel 23 shows a significant spike in the shaded region.\",\n        \"25\": \"Channel 25 shows a significant spike in the shaded region.\",\n        \"31\": \"Channel 31 shows a significant spike in the shaded region.\",\n        \"34\": \"Channel 34 does not show a distinct anomaly concentrated in the shaded region.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            23,
+            25,
+            31
+          ],
+          "reason": {
+            "23": "Channel 23 shows a significant spike in the shaded region.",
+            "25": "Channel 25 shows a significant spike in the shaded region.",
+            "31": "Channel 31 shows a significant spike in the shaded region.",
+            "34": "Channel 34 does not show a distinct anomaly concentrated in the shaded region."
+          }
+        },
+        "picks": [
+          23,
+          25,
+          31
+        ]
+      },
+      {
+        "group": [
+          35
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [35],\n  \"reason\": \"Channel 35 shows a sustained deviation at the maximum normalized value of 1.000 within the shaded red region, indicating anomalous behavior.\"\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            35
+          ],
+          "reason": "Channel 35 shows a sustained deviation at the maximum normalized value of 1.000 within the shaded red region, indicating anomalous behavior."
+        },
+        "picks": [
+          35
+        ]
+      }
+    ],
+    "all_vlm_picks": [
+      2,
+      3,
+      6,
+      9,
+      11,
+      12,
+      20,
+      23,
+      25,
+      31,
+      35
+    ],
+    "final_pred": [
+      2,
+      3,
+      6,
+      9,
+      11,
+      12,
+      20,
+      23,
+      25,
+      31,
+      35
+    ],
+    "f1_ours_vlm_subplot4": 0.39999999999999997,
+    "f1_ours_no_vlm": 0.4444444444444445,
+    "f1_k2": 0.0
+  },
+  "machine-1-8_3594_3598": {
+    "entity": "machine-1-8",
+    "start": 3594,
+    "end": 3598,
+    "k": 5,
+    "gt_channels": [
+      6,
+      8,
+      12,
+      13,
+      14
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      0,
+      1,
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      14,
+      15,
+      21,
+      24,
+      27,
+      29,
+      30,
+      32
+    ],
+    "n_groups": 4,
+    "group_logs": [
+      {
+        "group": [
+          0,
+          1,
+          6,
+          8
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [0, 6, 8],\n    \"reason\": {\n        \"0\": \"Significant increase in deviation within the shaded region.\",\n        \"6\": \"Distinct pattern change and deviation within the shaded region.\",\n        \"8\": \"Sharp spike in deviation within the shaded region.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            0,
+            6,
+            8
+          ],
+          "reason": {
+            "0": "Significant increase in deviation within the shaded region.",
+            "6": "Distinct pattern change and deviation within the shaded region.",
+            "8": "Sharp spike in deviation within the shaded region."
+          }
+        },
+        "picks": [
+          0,
+          6,
+          8
+        ]
+      },
+      {
+        "group": [
+          9,
+          10,
+          11,
+          12
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [11, 12],\n    \"reason\": {\n        \"9\": \"No significant deviation in the shaded region.\",\n        \"10\": \"No significant deviation in the shaded region.\",\n        \"11\": \"Significant spike in the shaded region.\",\n        \"12\": \"Significant spike in the shaded region.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            11,
+            12
+          ],
+          "reason": {
+            "9": "No significant deviation in the shaded region.",
+            "10": "No significant deviation in the shaded region.",
+            "11": "Significant spike in the shaded region.",
+            "12": "Significant spike in the shaded region."
+          }
+        },
+        "picks": [
+          11,
+          12
+        ]
+      },
+      {
+        "group": [
+          14,
+          15,
+          21,
+          24
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [14],\n  \"reason\": \"Channel 14 shows a significant spike within the shaded region, indicating anomalous behavior. Channels 15, 21, and 24 do not show distinct anomalies specifically within the shaded region.\"\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            14
+          ],
+          "reason": "Channel 14 shows a significant spike within the shaded region, indicating anomalous behavior. Channels 15, 21, and 24 do not show distinct anomalies specifically within the shaded region."
+        },
+        "picks": [
+          14
+        ]
+      },
+      {
+        "group": [
+          27,
+          29,
+          30,
+          32
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [27, 30, 32],\n    \"reason\": {\n        \"27\": \"Brief spike in deviation within the shaded region.\",\n        \"30\": \"Brief spike in deviation within the shaded region.\",\n        \"32\": \"Significant drop in value within the shaded region.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            27,
+            30,
+            32
+          ],
+          "reason": {
+            "27": "Brief spike in deviation within the shaded region.",
+            "30": "Brief spike in deviation within the shaded region.",
+            "32": "Significant drop in value within the shaded region."
+          }
+        },
+        "picks": [
+          27,
+          30,
+          32
+        ]
+      }
+    ],
+    "all_vlm_picks": [
+      0,
+      6,
+      8,
+      11,
+      12,
+      14,
+      27,
+      30,
+      32
+    ],
+    "final_pred": [
+      0,
+      6,
+      8,
+      11,
+      12,
+      14,
+      27,
+      30,
+      32
+    ],
+    "f1_ours_vlm_subplot4": 0.5714285714285714,
+    "f1_ours_no_vlm": 0.28571428571428575,
+    "f1_k2": 0.15384615384615385
+  },
+  "machine-3-1_10696_10717": {
+    "entity": "machine-3-1",
+    "start": 10696,
+    "end": 10717,
+    "k": 8,
+    "gt_channels": [
+      0,
+      1,
+      18,
+      19,
+      20,
+      21,
+      27,
+      30
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      18,
+      19,
+      20,
+      21,
+      24,
+      27,
+      29,
+      30,
+      32,
+      33,
+      34,
+      35
+    ],
+    "n_groups": 7,
+    "group_logs": [
+      {
+        "group": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [0, 1, 2],\n  \"reason\": {\n    \"0\": \"Channel 0 shows a brief spike in the shaded region.\",\n    \"1\": \"Channel 1 shows a brief spike in the shaded region.\",\n    \"2\": \"Channel 2 shows a brief spike in the shaded region.\",\n    \"3\": \"Channel 3 shows a gradual increase that starts before the shaded region and continues beyond it.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            0,
+            1,
+            2
+          ],
+          "reason": {
+            "0": "Channel 0 shows a brief spike in the shaded region.",
+            "1": "Channel 1 shows a brief spike in the shaded region.",
+            "2": "Channel 2 shows a brief spike in the shaded region.",
+            "3": "Channel 3 shows a gradual increase that starts before the shaded region and continues beyond it."
+          }
+        },
+        "picks": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "group": [
+          5,
+          6,
+          8,
+          9
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [5, 6, 9],\n    \"reason\": {\n        \"5\": \"Significant deviation within the shaded region.\",\n        \"6\": \"Noticeable spike within the shaded region.\",\n        \"9\": \"Distinct spike within the shaded region.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            5,
+            6,
+            9
+          ],
+          "reason": {
+            "5": "Significant deviation within the shaded region.",
+            "6": "Noticeable spike within the shaded region.",
+            "9": "Distinct spike within the shaded region."
+          }
+        },
+        "picks": [
+          5,
+          6,
+          9
+        ]
+      },
+      {
+        "group": [
+          10,
+          11,
+          12,
+          13
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [11, 12],\n    \"reason\": {\n        \"10\": \"No significant deviation in the shaded region; spikes are consistent with normal pattern.\",\n        \"11\": \"Significant spike in the shaded region, deviating from normal pattern.\",\n        \"12\": \"Brief spike in the shaded region, deviating from normal pattern.\",\n        \"13\": \"No significant deviation in the shaded region; pattern remains consistent.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            11,
+            12
+          ],
+          "reason": {
+            "10": "No significant deviation in the shaded region; spikes are consistent with normal pattern.",
+            "11": "Significant spike in the shaded region, deviating from normal pattern.",
+            "12": "Brief spike in the shaded region, deviating from normal pattern.",
+            "13": "No significant deviation in the shaded region; pattern remains consistent."
+          }
+        },
+        "picks": [
+          11,
+          12
+        ]
+      },
+      {
+        "group": [
+          14,
+          15,
+          18,
+          19
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [18, 19],\n  \"reason\": {\n    \"14\": \"No significant deviation in the shaded region.\",\n    \"15\": \"No significant deviation in the shaded region.\",\n    \"18\": \"Significant spike in the shaded region.\",\n    \"19\": \"Significant spike in the shaded region.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            18,
+            19
+          ],
+          "reason": {
+            "14": "No significant deviation in the shaded region.",
+            "15": "No significant deviation in the shaded region.",
+            "18": "Significant spike in the shaded region.",
+            "19": "Significant spike in the shaded region."
+          }
+        },
+        "picks": [
+          18,
+          19
+        ]
+      },
+      {
+        "group": [
+          20,
+          21,
+          24,
+          27
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [20, 21, 27],\n    \"reason\": {\n        \"20\": \"Spike in values coinciding with the shaded region.\",\n        \"21\": \"Spike in values coinciding with the shaded region.\",\n        \"27\": \"Spike in values coinciding with the shaded region.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            20,
+            21,
+            27
+          ],
+          "reason": {
+            "20": "Spike in values coinciding with the shaded region.",
+            "21": "Spike in values coinciding with the shaded region.",
+            "27": "Spike in values coinciding with the shaded region."
+          }
+        },
+        "picks": [
+          20,
+          21,
+          27
+        ]
+      },
+      {
+        "group": [
+          29,
+          30,
+          32,
+          33
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [30, 32],\n    \"reason\": {\n        \"29\": \"No significant deviation in the shaded region; spikes occur outside.\",\n        \"30\": \"Significant spike occurs within the shaded region.\",\n        \"32\": \"Sustained high values occur within the shaded region.\",\n        \"33\": \"No significant deviation concentrated in the shaded region.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            30,
+            32
+          ],
+          "reason": {
+            "29": "No significant deviation in the shaded region; spikes occur outside.",
+            "30": "Significant spike occurs within the shaded region.",
+            "32": "Sustained high values occur within the shaded region.",
+            "33": "No significant deviation concentrated in the shaded region."
+          }
+        },
+        "picks": [
+          30,
+          32
+        ]
+      },
+      {
+        "group": [
+          34,
+          35
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [34, 35],\n  \"reason\": \"Both channels show a significant spike at time index 101, which coincides with the shaded red region, indicating anomalous behavior.\"\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            34,
+            35
+          ],
+          "reason": "Both channels show a significant spike at time index 101, which coincides with the shaded red region, indicating anomalous behavior."
+        },
+        "picks": [
+          34,
+          35
+        ]
+      }
+    ],
+    "all_vlm_picks": [
+      0,
+      1,
+      2,
+      5,
+      6,
+      9,
+      11,
+      12,
+      18,
+      19,
+      20,
+      21,
+      27,
+      30,
+      32,
+      34,
+      35
+    ],
+    "final_pred": [
+      0,
+      1,
+      2,
+      5,
+      6,
+      9,
+      11,
+      12,
+      18,
+      19,
+      20,
+      21,
+      27,
+      30,
+      32,
+      34,
+      35
+    ],
+    "f1_ours_vlm_subplot4": 0.6399999999999999,
+    "f1_ours_no_vlm": 0.25,
+    "f1_k2": 0.13333333333333333
+  },
+  "machine-1-6_5167_5172": {
+    "entity": "machine-1-6",
+    "start": 5167,
+    "end": 5172,
+    "k": 5,
+    "gt_channels": [
+      8,
+      9,
+      10,
+      12,
+      17
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      0,
+      1,
+      2,
+      4,
+      5,
+      8,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      22,
+      23,
+      29,
+      31
+    ],
+    "n_groups": 4,
+    "group_logs": [
+      {
+        "group": [
+          0,
+          1,
+          2,
+          4
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [0, 1, 2],\n    \"reason\": {\n        \"0\": \"Channel 0 shows a significant spike within the shaded region.\",\n        \"1\": \"Channel 1 has a noticeable peak within the shaded region.\",\n        \"2\": \"Channel 2 exhibits a clear spike within the shaded region.\",\n        \"4\": \"Channel 4 remains flat and does not show any anomaly within the shaded region.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            0,
+            1,
+            2
+          ],
+          "reason": {
+            "0": "Channel 0 shows a significant spike within the shaded region.",
+            "1": "Channel 1 has a noticeable peak within the shaded region.",
+            "2": "Channel 2 exhibits a clear spike within the shaded region.",
+            "4": "Channel 4 remains flat and does not show any anomaly within the shaded region."
+          }
+        },
+        "picks": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "group": [
+          5,
+          8,
+          12,
+          13
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [5, 8, 12, 13],\n    \"reason\": {\n        \"5\": \"Significant spike in values within the shaded region.\",\n        \"8\": \"Sharp spike in values within the shaded region.\",\n        \"12\": \"Sharp spike in values within the shaded region.\",\n        \"13\": \"Sharp spike in values within the shaded region.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            5,
+            8,
+            12,
+            13
+          ],
+          "reason": {
+            "5": "Significant spike in values within the shaded region.",
+            "8": "Sharp spike in values within the shaded region.",
+            "12": "Sharp spike in values within the shaded region.",
+            "13": "Sharp spike in values within the shaded region."
+          }
+        },
+        "picks": [
+          5,
+          8,
+          12,
+          13
+        ]
+      },
+      {
+        "group": [
+          14,
+          15,
+          16,
+          17
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [14, 15, 17],\n    \"reason\": {\n        \"14\": \"A significant spike occurs within the shaded region.\",\n        \"15\": \"A significant spike occurs within the shaded region.\",\n        \"17\": \"A significant spike occurs within the shaded region.\",\n        \"16\": \"No significant deviation occurs specifically within the shaded region.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            14,
+            15,
+            17
+          ],
+          "reason": {
+            "14": "A significant spike occurs within the shaded region.",
+            "15": "A significant spike occurs within the shaded region.",
+            "17": "A significant spike occurs within the shaded region.",
+            "16": "No significant deviation occurs specifically within the shaded region."
+          }
+        },
+        "picks": [
+          14,
+          15,
+          17
+        ]
+      },
+      {
+        "group": [
+          22,
+          23,
+          29,
+          31
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [23, 29, 31],\n    \"reason\": {\n        \"22\": \"No significant deviation in the shaded region.\",\n        \"23\": \"Brief spike in the shaded region.\",\n        \"29\": \"Sustained shift in the shaded region.\",\n        \"31\": \"Brief dip in the shaded region.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            23,
+            29,
+            31
+          ],
+          "reason": {
+            "22": "No significant deviation in the shaded region.",
+            "23": "Brief spike in the shaded region.",
+            "29": "Sustained shift in the shaded region.",
+            "31": "Brief dip in the shaded region."
+          }
+        },
+        "picks": [
+          23,
+          29,
+          31
+        ]
+      }
+    ],
+    "all_vlm_picks": [
+      0,
+      1,
+      2,
+      5,
+      8,
+      12,
+      13,
+      14,
+      15,
+      17,
+      23,
+      29,
+      31
+    ],
+    "final_pred": [
+      0,
+      1,
+      2,
+      5,
+      8,
+      12,
+      13,
+      14,
+      15,
+      17,
+      23,
+      29,
+      31
+    ],
+    "f1_ours_vlm_subplot4": 0.33333333333333337,
+    "f1_ours_no_vlm": 0.28571428571428575,
+    "f1_k2": 0.3076923076923077
+  },
+  "machine-2-9_24475_24478": {
+    "entity": "machine-2-9",
+    "start": 24475,
+    "end": 24478,
+    "k": 4,
+    "gt_channels": [
+      8,
+      12,
+      13,
+      14
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      1,
+      2,
+      6,
+      8,
+      9,
+      11,
+      12,
+      13,
+      14,
+      19,
+      20,
+      21,
+      27,
+      30,
+      31
+    ],
+    "n_groups": 4,
+    "group_logs": [
+      {
+        "group": [
+          1,
+          2,
+          6,
+          8
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [1, 2, 6, 8],\n    \"reason\": {\n        \"1\": \"Channel 1 shows a spike at index 8 within the shaded region.\",\n        \"2\": \"Channel 2 shows a spike at index 8 within the shaded region.\",\n        \"6\": \"Channel 6 shows a spike at index 9 within the shaded region.\",\n        \"8\": \"Channel 8 shows a spike at index 8 within the shaded region.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            1,
+            2,
+            6,
+            8
+          ],
+          "reason": {
+            "1": "Channel 1 shows a spike at index 8 within the shaded region.",
+            "2": "Channel 2 shows a spike at index 8 within the shaded region.",
+            "6": "Channel 6 shows a spike at index 9 within the shaded region.",
+            "8": "Channel 8 shows a spike at index 8 within the shaded region."
+          }
+        },
+        "picks": [
+          1,
+          2,
+          6,
+          8
+        ]
+      },
+      {
+        "group": [
+          9,
+          11,
+          12,
+          13
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [11, 12, 13],\n  \"reason\": {\n    \"9\": \"No significant deviation in the shaded region.\",\n    \"11\": \"Increased variability and spikes in the shaded region.\",\n    \"12\": \"Significant spike in the shaded region.\",\n    \"13\": \"Significant spike in the shaded region.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            11,
+            12,
+            13
+          ],
+          "reason": {
+            "9": "No significant deviation in the shaded region.",
+            "11": "Increased variability and spikes in the shaded region.",
+            "12": "Significant spike in the shaded region.",
+            "13": "Significant spike in the shaded region."
+          }
+        },
+        "picks": [
+          11,
+          12,
+          13
+        ]
+      },
+      {
+        "group": [
+          14,
+          19,
+          20,
+          21
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [14],\n    \"reason\": {\n        \"14\": \"A significant spike occurs precisely within the shaded region.\",\n        \"19\": \"No distinct anomaly within the shaded region; the pattern is a gradual decline.\",\n        \"20\": \"No distinct anomaly within the shaded region; the pattern is a gradual decline.\",\n        \"21\": \"No distinct anomaly within the shaded region; the pattern is a gradual decline.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            14
+          ],
+          "reason": {
+            "14": "A significant spike occurs precisely within the shaded region.",
+            "19": "No distinct anomaly within the shaded region; the pattern is a gradual decline.",
+            "20": "No distinct anomaly within the shaded region; the pattern is a gradual decline.",
+            "21": "No distinct anomaly within the shaded region; the pattern is a gradual decline."
+          }
+        },
+        "picks": [
+          14
+        ]
+      },
+      {
+        "group": [
+          27,
+          30,
+          31
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [31],\n    \"reason\": {\n        \"27\": \"No significant deviation in the shaded region; values are low and stable.\",\n        \"30\": \"No significant deviation in the shaded region; values are low and stable.\",\n        \"31\": \"Significant deviation with a sharp drop and rise in the shaded region.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            31
+          ],
+          "reason": {
+            "27": "No significant deviation in the shaded region; values are low and stable.",
+            "30": "No significant deviation in the shaded region; values are low and stable.",
+            "31": "Significant deviation with a sharp drop and rise in the shaded region."
+          }
+        },
+        "picks": [
+          31
+        ]
+      }
+    ],
+    "all_vlm_picks": [
+      1,
+      2,
+      6,
+      8,
+      11,
+      12,
+      13,
+      14,
+      31
+    ],
+    "final_pred": [
+      1,
+      2,
+      6,
+      8,
+      11,
+      12,
+      13,
+      14,
+      31
+    ],
+    "f1_ours_vlm_subplot4": 0.6153846153846153,
+    "f1_ours_no_vlm": 0.8,
+    "f1_k2": 0.7272727272727273
+  },
+  "machine-3-2_3080_3917": {
+    "entity": "machine-3-2",
+    "start": 3080,
+    "end": 3917,
+    "k": 4,
+    "gt_channels": [
+      8,
+      12,
+      13,
+      16
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      0,
+      12,
+      15,
+      16,
+      18,
+      19,
+      25,
+      32,
+      34,
+      35
+    ],
+    "n_groups": 3,
+    "group_logs": [
+      {
+        "group": [
+          0,
+          12,
+          15,
+          16
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [0, 12, 15],\n    \"reason\": {\n        \"0\": \"Multiple spikes within the shaded region indicating deviation from normal behavior.\",\n        \"12\": \"A significant spike occurs within the shaded region.\",\n        \"15\": \"A prominent spike is present within the shaded region.\",\n        \"16\": \"No significant deviation within the shaded region; spikes occur outside it.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            0,
+            12,
+            15
+          ],
+          "reason": {
+            "0": "Multiple spikes within the shaded region indicating deviation from normal behavior.",
+            "12": "A significant spike occurs within the shaded region.",
+            "15": "A prominent spike is present within the shaded region.",
+            "16": "No significant deviation within the shaded region; spikes occur outside it."
+          }
+        },
+        "picks": [
+          0,
+          12,
+          15
+        ]
+      },
+      {
+        "group": [
+          18,
+          19,
+          25,
+          32
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [18, 19, 32],\n    \"reason\": {\n        \"18\": \"Significant drop in values within the shaded region.\",\n        \"19\": \"Sharp drop in values within the shaded region.\",\n        \"32\": \"Sharp drop in values within the shaded region.\",\n        \"25\": \"No significant deviation within the shaded region.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            18,
+            19,
+            32
+          ],
+          "reason": {
+            "18": "Significant drop in values within the shaded region.",
+            "19": "Sharp drop in values within the shaded region.",
+            "32": "Sharp drop in values within the shaded region.",
+            "25": "No significant deviation within the shaded region."
+          }
+        },
+        "picks": [
+          18,
+          19,
+          32
+        ]
+      },
+      {
+        "group": [
+          34,
+          35
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [34, 35],\n    \"reason\": \"Channel 34 and Channel 35 both show deviations within the shaded region, indicating anomalous behavior.\"\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            34,
+            35
+          ],
+          "reason": "Channel 34 and Channel 35 both show deviations within the shaded region, indicating anomalous behavior."
+        },
+        "picks": [
+          34,
+          35
+        ]
+      }
+    ],
+    "all_vlm_picks": [
+      0,
+      12,
+      15,
+      18,
+      19,
+      32,
+      34,
+      35
+    ],
+    "final_pred": [
+      0,
+      12,
+      15,
+      18,
+      19,
+      32,
+      34,
+      35
+    ],
+    "f1_ours_vlm_subplot4": 0.16666666666666666,
+    "f1_ours_no_vlm": 0.25,
+    "f1_k2": 0.16666666666666666
+  },
+  "machine-2-5_16524_16549": {
+    "entity": "machine-2-5",
+    "start": 16524,
+    "end": 16549,
+    "k": 5,
+    "gt_channels": [
+      0,
+      8,
+      12,
+      13,
+      14
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      0,
+      5,
+      6,
+      8,
+      9,
+      11,
+      12,
+      13,
+      14,
+      29,
+      31,
+      32,
+      33
+    ],
+    "n_groups": 4,
+    "group_logs": [
+      {
+        "group": [
+          0,
+          5,
+          6,
+          8
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [0, 5, 8],\n    \"reason\": {\n        \"0\": \"Significant spikes in the shaded region indicating deviation from normal.\",\n        \"5\": \"Noticeable drop and recovery within the shaded region.\",\n        \"8\": \"Sharp spike precisely within the shaded region.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            0,
+            5,
+            8
+          ],
+          "reason": {
+            "0": "Significant spikes in the shaded region indicating deviation from normal.",
+            "5": "Noticeable drop and recovery within the shaded region.",
+            "8": "Sharp spike precisely within the shaded region."
+          }
+        },
+        "picks": [
+          0,
+          5,
+          8
+        ]
+      },
+      {
+        "group": [
+          9,
+          11,
+          12,
+          13
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [9, 11, 12, 13],\n    \"reason\": {\n        \"9\": \"Brief spike in the shaded region.\",\n        \"11\": \"Increased variability and spikes in the shaded region.\",\n        \"12\": \"Significant spike in the shaded region.\",\n        \"13\": \"Sharp spike in the shaded region.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            9,
+            11,
+            12,
+            13
+          ],
+          "reason": {
+            "9": "Brief spike in the shaded region.",
+            "11": "Increased variability and spikes in the shaded region.",
+            "12": "Significant spike in the shaded region.",
+            "13": "Sharp spike in the shaded region."
+          }
+        },
+        "picks": [
+          9,
+          11,
+          12,
+          13
+        ]
+      },
+      {
+        "group": [
+          14,
+          29,
+          31,
+          32
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [14, 31, 32],\n    \"reason\": {\n        \"14\": \"Significant spike in values within the shaded region.\",\n        \"31\": \"Noticeable upward shift in values within the shaded region.\",\n        \"32\": \"Sharp spike in values within the shaded region.\",\n        \"29\": \"No significant deviation within the shaded region.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            14,
+            31,
+            32
+          ],
+          "reason": {
+            "14": "Significant spike in values within the shaded region.",
+            "31": "Noticeable upward shift in values within the shaded region.",
+            "32": "Sharp spike in values within the shaded region.",
+            "29": "No significant deviation within the shaded region."
+          }
+        },
+        "picks": [
+          14,
+          31,
+          32
+        ]
+      },
+      {
+        "group": [
+          33
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [33],\n  \"reason\": \"Channel 33 shows a brief spike at time index 72, which coincides with the shaded red region, indicating anomalous behavior.\"\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            33
+          ],
+          "reason": "Channel 33 shows a brief spike at time index 72, which coincides with the shaded red region, indicating anomalous behavior."
+        },
+        "picks": [
+          33
+        ]
+      }
+    ],
+    "all_vlm_picks": [
+      0,
+      5,
+      8,
+      9,
+      11,
+      12,
+      13,
+      14,
+      31,
+      32,
+      33
+    ],
+    "final_pred": [
+      0,
+      5,
+      8,
+      9,
+      11,
+      12,
+      13,
+      14,
+      31,
+      32,
+      33
+    ],
+    "f1_ours_vlm_subplot4": 0.625,
+    "f1_ours_no_vlm": 0.22222222222222224,
+    "f1_k2": 0.15384615384615385
+  },
+  "machine-1-6_15052_15055": {
+    "entity": "machine-1-6",
+    "start": 15052,
+    "end": 15055,
+    "k": 4,
+    "gt_channels": [
+      8,
+      9,
+      10,
+      12
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      0,
+      1,
+      3,
+      5,
+      6,
+      8,
+      11,
+      12,
+      14,
+      15,
+      21,
+      22,
+      23,
+      27,
+      29,
+      30,
+      31,
+      33
+    ],
+    "n_groups": 5,
+    "group_logs": [
+      {
+        "group": [
+          0,
+          1,
+          3,
+          5
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [0, 1, 3, 5],\n    \"reason\": {\n        \"0\": \"Spike in values within the shaded region.\",\n        \"1\": \"Spike in values within the shaded region.\",\n        \"3\": \"Sustained deviation within the shaded region.\",\n        \"5\": \"Sharp drop in values within the shaded region.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            0,
+            1,
+            3,
+            5
+          ],
+          "reason": {
+            "0": "Spike in values within the shaded region.",
+            "1": "Spike in values within the shaded region.",
+            "3": "Sustained deviation within the shaded region.",
+            "5": "Sharp drop in values within the shaded region."
+          }
+        },
+        "picks": [
+          0,
+          1,
+          3,
+          5
+        ]
+      },
+      {
+        "group": [
+          6,
+          8,
+          11,
+          12
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [6, 8, 12],\n    \"reason\": {\n        \"6\": \"Sharp drop in value coinciding with the shaded region.\",\n        \"8\": \"Significant spike in value within the shaded region.\",\n        \"12\": \"Noticeable spike in value within the shaded region.\",\n        \"11\": \"No significant deviation within the shaded region.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            6,
+            8,
+            12
+          ],
+          "reason": {
+            "6": "Sharp drop in value coinciding with the shaded region.",
+            "8": "Significant spike in value within the shaded region.",
+            "12": "Noticeable spike in value within the shaded region.",
+            "11": "No significant deviation within the shaded region."
+          }
+        },
+        "picks": [
+          6,
+          8,
+          12
+        ]
+      },
+      {
+        "group": [
+          14,
+          15,
+          21,
+          22
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [14, 21, 22],\n    \"reason\": {\n        \"14\": \"A significant spike occurs precisely within the shaded region.\",\n        \"15\": \"No distinct anomaly is concentrated within the shaded region.\",\n        \"21\": \"A noticeable upward shift starts within the shaded region.\",\n        \"22\": \"A clear upward shift begins within the shaded region.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            14,
+            21,
+            22
+          ],
+          "reason": {
+            "14": "A significant spike occurs precisely within the shaded region.",
+            "15": "No distinct anomaly is concentrated within the shaded region.",
+            "21": "A noticeable upward shift starts within the shaded region.",
+            "22": "A clear upward shift begins within the shaded region."
+          }
+        },
+        "picks": [
+          14,
+          21,
+          22
+        ]
+      },
+      {
+        "group": [
+          23,
+          27,
+          29,
+          30
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [27, 29, 30],\n    \"reason\": {\n        \"23\": \"No significant deviation in the shaded region.\",\n        \"27\": \"Sharp increase in values coinciding with the shaded region.\",\n        \"29\": \"Significant spike in values within the shaded region.\",\n        \"30\": \"Noticeable rise in values during the shaded region.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            27,
+            29,
+            30
+          ],
+          "reason": {
+            "23": "No significant deviation in the shaded region.",
+            "27": "Sharp increase in values coinciding with the shaded region.",
+            "29": "Significant spike in values within the shaded region.",
+            "30": "Noticeable rise in values during the shaded region."
+          }
+        },
+        "picks": [
+          27,
+          29,
+          30
+        ]
+      },
+      {
+        "group": [
+          31,
+          33
+        ],
+        "raw": "```json\n{\"anomalous_channels\": [31, 33], \"reason\": \"Channel 31 shows a significant drop in the shaded region. Channel 33 has a sharp spike in the shaded region.\"}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            31,
+            33
+          ],
+          "reason": "Channel 31 shows a significant drop in the shaded region. Channel 33 has a sharp spike in the shaded region."
+        },
+        "picks": [
+          31,
+          33
+        ]
+      }
+    ],
+    "all_vlm_picks": [
+      0,
+      1,
+      3,
+      5,
+      6,
+      8,
+      12,
+      14,
+      21,
+      22,
+      27,
+      29,
+      30,
+      31,
+      33
+    ],
+    "final_pred": [
+      0,
+      1,
+      3,
+      5,
+      6,
+      8,
+      12,
+      14,
+      21,
+      22,
+      27,
+      29,
+      30,
+      31,
+      33
+    ],
+    "f1_ours_vlm_subplot4": 0.2105263157894737,
+    "f1_ours_no_vlm": 0.0,
+    "f1_k2": 0.16666666666666666
+  },
+  "machine-1-7_12359_12374": {
+    "entity": "machine-1-7",
+    "start": 12359,
+    "end": 12374,
+    "k": 7,
+    "gt_channels": [
+      0,
+      8,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      0,
+      1,
+      2,
+      5,
+      8,
+      9,
+      11,
+      12,
+      13,
+      14,
+      15,
+      22,
+      29,
+      32
+    ],
+    "n_groups": 4,
+    "group_logs": [
+      {
+        "group": [
+          0,
+          1,
+          2,
+          5
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [0, 1, 2, 5],\n    \"reason\": {\n        \"0\": \"Channel 0 shows a significant spike within the shaded region.\",\n        \"1\": \"Channel 1 shows a significant spike within the shaded region.\",\n        \"2\": \"Channel 2 shows a significant spike within the shaded region.\",\n        \"5\": \"Channel 5 shows a significant drop within the shaded region.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            0,
+            1,
+            2,
+            5
+          ],
+          "reason": {
+            "0": "Channel 0 shows a significant spike within the shaded region.",
+            "1": "Channel 1 shows a significant spike within the shaded region.",
+            "2": "Channel 2 shows a significant spike within the shaded region.",
+            "5": "Channel 5 shows a significant drop within the shaded region."
+          }
+        },
+        "picks": [
+          0,
+          1,
+          2,
+          5
+        ]
+      },
+      {
+        "group": [
+          8,
+          9,
+          11,
+          12
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [8, 11, 12],\n    \"reason\": {\n        \"8\": \"Significant spike within the shaded region.\",\n        \"11\": \"Noticeable spike within the shaded region.\",\n        \"12\": \"Significant spike within the shaded region.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            8,
+            11,
+            12
+          ],
+          "reason": {
+            "8": "Significant spike within the shaded region.",
+            "11": "Noticeable spike within the shaded region.",
+            "12": "Significant spike within the shaded region."
+          }
+        },
+        "picks": [
+          8,
+          11,
+          12
+        ]
+      },
+      {
+        "group": [
+          13,
+          14,
+          15,
+          22
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [13, 14, 15],\n    \"reason\": {\n        \"13\": \"Significant spike within the shaded region.\",\n        \"14\": \"Significant spike within the shaded region.\",\n        \"15\": \"Significant spike within the shaded region.\",\n        \"22\": \"No significant deviation concentrated in the shaded region.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            13,
+            14,
+            15
+          ],
+          "reason": {
+            "13": "Significant spike within the shaded region.",
+            "14": "Significant spike within the shaded region.",
+            "15": "Significant spike within the shaded region.",
+            "22": "No significant deviation concentrated in the shaded region."
+          }
+        },
+        "picks": [
+          13,
+          14,
+          15
+        ]
+      },
+      {
+        "group": [
+          29,
+          32
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [32],\n    \"reason\": \"Channel 32 shows a sustained deviation at maximum value within the shaded region, indicating an anomaly. Channel 29 does not show a distinct deviation concentrated in the shaded region.\"\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            32
+          ],
+          "reason": "Channel 32 shows a sustained deviation at maximum value within the shaded region, indicating an anomaly. Channel 29 does not show a distinct deviation concentrated in the shaded region."
+        },
+        "picks": [
+          32
+        ]
+      }
+    ],
+    "all_vlm_picks": [
+      0,
+      1,
+      2,
+      5,
+      8,
+      11,
+      12,
+      13,
+      14,
+      15,
+      32
+    ],
+    "final_pred": [
+      0,
+      1,
+      2,
+      5,
+      8,
+      11,
+      12,
+      13,
+      14,
+      15,
+      32
+    ],
+    "f1_ours_vlm_subplot4": 0.7777777777777778,
+    "f1_ours_no_vlm": 0.25,
+    "f1_k2": 0.923076923076923
+  },
+  "machine-1-2_4629_4688": {
+    "entity": "machine-1-2",
+    "start": 4629,
+    "end": 4688,
+    "k": 6,
+    "gt_channels": [
+      8,
+      9,
+      10,
+      12,
+      14,
+      17
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      3,
+      4,
+      5,
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      27,
+      30,
+      31,
+      33,
+      34,
+      35
+    ],
+    "n_groups": 7,
+    "group_logs": [
+      {
+        "group": [
+          3,
+          4,
+          5,
+          6
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [3, 5, 6],\n    \"reason\": {\n        \"3\": \"Channel 3 shows a spike in the shaded region.\",\n        \"5\": \"Channel 5 has significant fluctuations within the shaded region.\",\n        \"6\": \"Channel 6 exhibits a spike and fluctuations in the shaded region.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            3,
+            5,
+            6
+          ],
+          "reason": {
+            "3": "Channel 3 shows a spike in the shaded region.",
+            "5": "Channel 5 has significant fluctuations within the shaded region.",
+            "6": "Channel 6 exhibits a spike and fluctuations in the shaded region."
+          }
+        },
+        "picks": [
+          3,
+          5,
+          6
+        ]
+      },
+      {
+        "group": [
+          8,
+          9,
+          10,
+          11
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [9, 10, 11],\n  \"reason\": {\n    \"8\": \"No significant deviation specifically within the shaded region.\",\n    \"9\": \"Multiple spikes and elevated values within the shaded region.\",\n    \"10\": \"Sustained elevated values within the shaded region.\",\n    \"11\": \"Sustained elevated values within the shaded region.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            9,
+            10,
+            11
+          ],
+          "reason": {
+            "8": "No significant deviation specifically within the shaded region.",
+            "9": "Multiple spikes and elevated values within the shaded region.",
+            "10": "Sustained elevated values within the shaded region.",
+            "11": "Sustained elevated values within the shaded region."
+          }
+        },
+        "picks": [
+          9,
+          10,
+          11
+        ]
+      },
+      {
+        "group": [
+          12,
+          13,
+          14,
+          15
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [12, 14, 15],\n    \"reason\": {\n        \"12\": \"Sustained high values within the shaded region.\",\n        \"14\": \"Significant spike within the shaded region.\",\n        \"15\": \"Significant spike within the shaded region.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            12,
+            14,
+            15
+          ],
+          "reason": {
+            "12": "Sustained high values within the shaded region.",
+            "14": "Significant spike within the shaded region.",
+            "15": "Significant spike within the shaded region."
+          }
+        },
+        "picks": [
+          12,
+          14,
+          15
+        ]
+      },
+      {
+        "group": [
+          16,
+          17,
+          18,
+          19
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [16, 17, 18],\n    \"reason\": {\n        \"16\": \"Multiple spikes within the shaded region.\",\n        \"17\": \"A significant spike occurs within the shaded region.\",\n        \"18\": \"A prominent spike is present within the shaded region.\",\n        \"19\": \"No significant deviation within the shaded region.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            16,
+            17,
+            18
+          ],
+          "reason": {
+            "16": "Multiple spikes within the shaded region.",
+            "17": "A significant spike occurs within the shaded region.",
+            "18": "A prominent spike is present within the shaded region.",
+            "19": "No significant deviation within the shaded region."
+          }
+        },
+        "picks": [
+          16,
+          17,
+          18
+        ]
+      },
+      {
+        "group": [
+          20,
+          21,
+          22,
+          23
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [20, 21, 22, 23],\n    \"reason\": {\n        \"20\": \"Significant spike within the shaded region.\",\n        \"21\": \"Notable peak within the shaded region.\",\n        \"22\": \"Distinct spike within the shaded region.\",\n        \"23\": \"Clear shift and peak within the shaded region.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            20,
+            21,
+            22,
+            23
+          ],
+          "reason": {
+            "20": "Significant spike within the shaded region.",
+            "21": "Notable peak within the shaded region.",
+            "22": "Distinct spike within the shaded region.",
+            "23": "Clear shift and peak within the shaded region."
+          }
+        },
+        "picks": [
+          20,
+          21,
+          22,
+          23
+        ]
+      },
+      {
+        "group": [
+          24,
+          25,
+          27,
+          30
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [24, 25, 27, 30],\n  \"reason\": {\n    \"24\": \"Multiple spikes within the shaded region.\",\n    \"25\": \"Significant spike within the shaded region.\",\n    \"27\": \"Distinct peak within the shaded region.\",\n    \"30\": \"Noticeable peak within the shaded region.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            24,
+            25,
+            27,
+            30
+          ],
+          "reason": {
+            "24": "Multiple spikes within the shaded region.",
+            "25": "Significant spike within the shaded region.",
+            "27": "Distinct peak within the shaded region.",
+            "30": "Noticeable peak within the shaded region."
+          }
+        },
+        "picks": [
+          24,
+          25,
+          27,
+          30
+        ]
+      },
+      {
+        "group": [
+          31,
+          33,
+          34,
+          35
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [31, 33, 34, 35],\n  \"reason\": {\n    \"31\": \"Brief spike within the shaded region.\",\n    \"33\": \"Increased noise and spikes within the shaded region.\",\n    \"34\": \"Spike within the shaded region.\",\n    \"35\": \"Spike within the shaded region.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            31,
+            33,
+            34,
+            35
+          ],
+          "reason": {
+            "31": "Brief spike within the shaded region.",
+            "33": "Increased noise and spikes within the shaded region.",
+            "34": "Spike within the shaded region.",
+            "35": "Spike within the shaded region."
+          }
+        },
+        "picks": [
+          31,
+          33,
+          34,
+          35
+        ]
+      }
+    ],
+    "all_vlm_picks": [
+      3,
+      5,
+      6,
+      9,
+      10,
+      11,
+      12,
+      14,
+      15,
+      16,
+      17,
+      18,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      27,
+      30,
+      31,
+      33,
+      34,
+      35
+    ],
+    "final_pred": [
+      3,
+      5,
+      6,
+      9,
+      10,
+      11,
+      12,
+      14,
+      15,
+      16,
+      17,
+      18,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      27,
+      30,
+      31,
+      33,
+      34,
+      35
+    ],
+    "f1_ours_vlm_subplot4": 0.33333333333333337,
+    "f1_ours_no_vlm": 0.0,
+    "f1_k2": 0.1818181818181818
+  },
+  "machine-2-9_17914_18096": {
+    "entity": "machine-2-9",
+    "start": 17914,
+    "end": 18096,
+    "k": 5,
+    "gt_channels": [
+      10,
+      11,
+      12,
+      14,
+      15
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      0,
+      5,
+      9,
+      10,
+      11,
+      12,
+      13,
+      15,
+      18,
+      22,
+      23,
+      24,
+      25,
+      31
+    ],
+    "n_groups": 4,
+    "group_logs": [
+      {
+        "group": [
+          0,
+          5,
+          9,
+          10
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [0, 9],\n    \"reason\": {\n        \"0\": \"Sustained high values and spikes within the shaded region.\",\n        \"5\": \"No significant deviation concentrated in the shaded region.\",\n        \"9\": \"Significant spike within the shaded region.\",\n        \"10\": \"No significant deviation concentrated in the shaded region.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            0,
+            9
+          ],
+          "reason": {
+            "0": "Sustained high values and spikes within the shaded region.",
+            "5": "No significant deviation concentrated in the shaded region.",
+            "9": "Significant spike within the shaded region.",
+            "10": "No significant deviation concentrated in the shaded region."
+          }
+        },
+        "picks": [
+          0,
+          9
+        ]
+      },
+      {
+        "group": [
+          11,
+          12,
+          13,
+          15
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [11, 12, 13],\n    \"reason\": {\n        \"11\": \"Significant spikes in the shaded region.\",\n        \"12\": \"Noticeable spike in the shaded region.\",\n        \"13\": \"Sustained high values and spikes in the shaded region.\",\n        \"15\": \"No significant deviation in the shaded region.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            11,
+            12,
+            13
+          ],
+          "reason": {
+            "11": "Significant spikes in the shaded region.",
+            "12": "Noticeable spike in the shaded region.",
+            "13": "Sustained high values and spikes in the shaded region.",
+            "15": "No significant deviation in the shaded region."
+          }
+        },
+        "picks": [
+          11,
+          12,
+          13
+        ]
+      },
+      {
+        "group": [
+          18,
+          22,
+          23,
+          24
+        ],
+        "raw": "```json\n{\n  \"anomalous_channels\": [18, 24],\n  \"reason\": {\n    \"18\": \"Brief spike in values within the shaded region.\",\n    \"22\": \"No distinct anomaly; gradual changes not concentrated in the shaded region.\",\n    \"23\": \"No distinct anomaly; gradual changes not concentrated in the shaded region.\",\n    \"24\": \"Sharp spike in values within the shaded region.\"\n  }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            18,
+            24
+          ],
+          "reason": {
+            "18": "Brief spike in values within the shaded region.",
+            "22": "No distinct anomaly; gradual changes not concentrated in the shaded region.",
+            "23": "No distinct anomaly; gradual changes not concentrated in the shaded region.",
+            "24": "Sharp spike in values within the shaded region."
+          }
+        },
+        "picks": [
+          18,
+          24
+        ]
+      },
+      {
+        "group": [
+          25,
+          31
+        ],
+        "raw": "```json\n{\"anomalous_channels\": [25, 31], \"reason\": \"Channel 25 shows a significant dip and recovery within the shaded region. Channel 31 shows a drop to near-zero values within the shaded region.\"}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            25,
+            31
+          ],
+          "reason": "Channel 25 shows a significant dip and recovery within the shaded region. Channel 31 shows a drop to near-zero values within the shaded region."
+        },
+        "picks": [
+          25,
+          31
+        ]
+      }
+    ],
+    "all_vlm_picks": [
+      0,
+      9,
+      11,
+      12,
+      13,
+      18,
+      24,
+      25,
+      31
+    ],
+    "final_pred": [
+      0,
+      9,
+      11,
+      12,
+      13,
+      18,
+      24,
+      25,
+      31
+    ],
+    "f1_ours_vlm_subplot4": 0.2857142857142857,
+    "f1_ours_no_vlm": 0.28571428571428575,
+    "f1_k2": 0.3636363636363636
+  },
+  "machine-3-3_20897_20903": {
+    "entity": "machine-3-3",
+    "start": 20897,
+    "end": 20903,
+    "k": 4,
+    "gt_channels": [
+      9,
+      10,
+      11,
+      12
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      8,
+      12,
+      14,
+      15,
+      19,
+      22,
+      24,
+      26,
+      31,
+      36,
+      37
+    ],
+    "n_groups": 3,
+    "group_logs": [
+      {
+        "group": [
+          8,
+          12,
+          14,
+          15
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [12, 14],\n    \"reason\": {\n        \"8\": \"No significant deviation in the shaded region compared to other areas.\",\n        \"12\": \"Sharp spike in the shaded region indicating an anomaly.\",\n        \"14\": \"Distinct drop in the shaded region indicating an anomaly.\",\n        \"15\": \"No significant deviation in the shaded region compared to other areas.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            12,
+            14
+          ],
+          "reason": {
+            "8": "No significant deviation in the shaded region compared to other areas.",
+            "12": "Sharp spike in the shaded region indicating an anomaly.",
+            "14": "Distinct drop in the shaded region indicating an anomaly.",
+            "15": "No significant deviation in the shaded region compared to other areas."
+          }
+        },
+        "picks": [
+          12,
+          14
+        ]
+      },
+      {
+        "group": [
+          19,
+          22,
+          24,
+          26
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [19, 22, 24],\n    \"reason\": {\n        \"19\": \"Brief spike in the shaded region.\",\n        \"22\": \"Brief spike in the shaded region.\",\n        \"24\": \"Brief spike in the shaded region.\",\n        \"26\": \"No significant deviation in the shaded region.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            19,
+            22,
+            24
+          ],
+          "reason": {
+            "19": "Brief spike in the shaded region.",
+            "22": "Brief spike in the shaded region.",
+            "24": "Brief spike in the shaded region.",
+            "26": "No significant deviation in the shaded region."
+          }
+        },
+        "picks": [
+          19,
+          22,
+          24
+        ]
+      },
+      {
+        "group": [
+          31,
+          36,
+          37
+        ],
+        "raw": "```json\n{\n    \"anomalous_channels\": [31, 36, 37],\n    \"reason\": {\n        \"31\": \"Channel 31 shows a significant spike within the shaded region.\",\n        \"36\": \"Channel 36 shows a significant spike within the shaded region.\",\n        \"37\": \"Channel 37 shows a significant spike within the shaded region.\"\n    }\n}\n```",
+        "parsed": {
+          "anomalous_channels": [
+            31,
+            36,
+            37
+          ],
+          "reason": {
+            "31": "Channel 31 shows a significant spike within the shaded region.",
+            "36": "Channel 36 shows a significant spike within the shaded region.",
+            "37": "Channel 37 shows a significant spike within the shaded region."
+          }
+        },
+        "picks": [
+          31,
+          36,
+          37
+        ]
+      }
+    ],
+    "all_vlm_picks": [
+      12,
+      14,
+      19,
+      22,
+      24,
+      31,
+      36,
+      37
+    ],
+    "final_pred": [
+      12,
+      14,
+      19,
+      22,
+      24,
+      31,
+      36,
+      37
+    ],
+    "f1_ours_vlm_subplot4": 0.16666666666666666,
+    "f1_ours_no_vlm": 0.0,
+    "f1_k2": 0.2
+  }
+}

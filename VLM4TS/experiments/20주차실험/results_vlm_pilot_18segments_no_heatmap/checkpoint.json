@@ -1,0 +1,1316 @@
+{
+  "machine-2-2_21405_21428": {
+    "entity": "machine-2-2",
+    "start": 21405,
+    "end": 21428,
+    "k": 6,
+    "gt_channels": [
+      18,
+      19,
+      20,
+      21,
+      27,
+      30
+    ],
+    "auto_confirmed": [
+      0,
+      2,
+      3,
+      18,
+      19,
+      20,
+      21,
+      23,
+      25,
+      27
+    ],
+    "overlay_channels": [
+      5,
+      6,
+      8,
+      9,
+      10,
+      12,
+      14,
+      22,
+      24,
+      29,
+      30,
+      31,
+      34,
+      35
+    ],
+    "raw_response": "```json\n{\n    \"anomalous_channels\": [6, 9, 10, 12, 29],\n    \"confidence\": \"medium\",\n    \"reason\": \"Channels 6, 9, 10, 12, and 29 show significant deviations from their normal patterns, with extended periods of low or zero values, indicating potential anomalies.\"\n}\n```",
+    "parsed": {
+      "anomalous_channels": [
+        6,
+        9,
+        10,
+        12,
+        29
+      ],
+      "confidence": "medium",
+      "reason": "Channels 6, 9, 10, 12, and 29 show significant deviations from their normal patterns, with extended periods of low or zero values, indicating potential anomalies."
+    },
+    "vlm_picks": [
+      6,
+      9,
+      10,
+      12,
+      29
+    ],
+    "final_pred": [
+      0,
+      2,
+      3,
+      6,
+      9,
+      10,
+      12,
+      18,
+      19,
+      20,
+      21,
+      23,
+      25,
+      27,
+      29
+    ],
+    "f1_ours_vlm": 0.47619047619047616,
+    "f1_ours_no_vlm": 0.625,
+    "f1_k2": 0.28571428571428575,
+    "gt_raw_zscore": {
+      "18": 16.0201423061437,
+      "19": 53.62409323612339,
+      "20": 11.598994474097859,
+      "21": 16.755012712837924,
+      "27": 9.385875919917753,
+      "30": 4.5708252569380186
+    }
+  },
+  "machine-2-7_13623_13625": {
+    "entity": "machine-2-7",
+    "start": 13623,
+    "end": 13625,
+    "k": 4,
+    "gt_channels": [
+      8,
+      12,
+      13,
+      14
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      3,
+      8,
+      9,
+      11,
+      12,
+      13,
+      14,
+      23,
+      25,
+      29,
+      33
+    ],
+    "raw_response": "```json\n{\n  \"anomalous_channels\": [23, 25, 29],\n  \"confidence\": \"high\",\n  \"reason\": \"Channels 23 and 25 show a clear upward trend with values approaching 1, indicating a coordinated deviation. Channel 29 maintains a constant value of 1 for an extended period, suggesting a strong anomaly. Other channels show minor or isolated deviations.\"\n}\n```",
+    "parsed": {
+      "anomalous_channels": [
+        23,
+        25,
+        29
+      ],
+      "confidence": "high",
+      "reason": "Channels 23 and 25 show a clear upward trend with values approaching 1, indicating a coordinated deviation. Channel 29 maintains a constant value of 1 for an extended period, suggesting a strong anomaly. Other channels show minor or isolated deviations."
+    },
+    "vlm_picks": [
+      23,
+      25,
+      29
+    ],
+    "final_pred": [
+      23,
+      25,
+      29
+    ],
+    "f1_ours_vlm": 0.0,
+    "f1_ours_no_vlm": 0.6666666666666665,
+    "f1_k2": 0.2,
+    "gt_raw_zscore": {
+      "8": 22.10891713967799,
+      "12": 20.5142018474055,
+      "13": 23.54974518777222,
+      "14": 7.9086222918371405
+    }
+  },
+  "machine-3-5_15953_16057": {
+    "entity": "machine-3-5",
+    "start": 15953,
+    "end": 16057,
+    "k": 8,
+    "gt_channels": [
+      5,
+      6,
+      22,
+      23,
+      24,
+      25,
+      29,
+      31
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      0,
+      5,
+      6,
+      9,
+      10,
+      11,
+      14,
+      16,
+      19,
+      21,
+      22,
+      23,
+      24,
+      25,
+      27,
+      29,
+      30,
+      31
+    ],
+    "raw_response": "```json\n{\n  \"anomalous_channels\": [0, 9, 11, 14, 19, 21, 27, 30],\n  \"confidence\": \"medium\",\n  \"reason\": \"These channels show significant deviations from their normal patterns, with multiple points reaching high normalized values, indicating potential anomalies. Channels 0, 9, 11, 14, 19, 21, 27, and 30 exhibit coordinated spikes and sustained deviations, suggesting genuine anomalous behavior.\"\n}\n```",
+    "parsed": {
+      "anomalous_channels": [
+        0,
+        9,
+        11,
+        14,
+        19,
+        21,
+        27,
+        30
+      ],
+      "confidence": "medium",
+      "reason": "These channels show significant deviations from their normal patterns, with multiple points reaching high normalized values, indicating potential anomalies. Channels 0, 9, 11, 14, 19, 21, 27, and 30 exhibit coordinated spikes and sustained deviations, suggesting genuine anomalous behavior."
+    },
+    "vlm_picks": [
+      0,
+      9,
+      11,
+      14,
+      19,
+      21,
+      27,
+      30
+    ],
+    "final_pred": [
+      0,
+      9,
+      11,
+      14,
+      19,
+      21,
+      27,
+      30
+    ],
+    "f1_ours_vlm": 0.0,
+    "f1_ours_no_vlm": 1.0,
+    "f1_k2": 0.875,
+    "gt_raw_zscore": {
+      "5": 23.859793662688816,
+      "6": 338.9310515653332,
+      "22": 279.8674226209059,
+      "23": 31.061752136377788,
+      "24": 307.8301749846014,
+      "25": 30.82238870067896,
+      "29": 100000000.0,
+      "31": 100000000.0
+    }
+  },
+  "machine-1-1_18071_18528": {
+    "entity": "machine-1-1",
+    "start": 18071,
+    "end": 18528,
+    "k": 8,
+    "gt_channels": [
+      0,
+      1,
+      8,
+      9,
+      11,
+      12,
+      13,
+      14
+    ],
+    "auto_confirmed": [
+      0,
+      1,
+      2,
+      3,
+      12,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      27,
+      30,
+      31,
+      34,
+      35
+    ],
+    "overlay_channels": [
+      5,
+      6,
+      8,
+      9,
+      10,
+      11,
+      13,
+      15,
+      29,
+      32,
+      33
+    ],
+    "raw_response": "```json\n{\n    \"anomalous_channels\": [5, 29, 32],\n    \"confidence\": \"medium\",\n    \"reason\": \"Channel 5 shows a consistent upward trend with values reaching 1.0, indicating a deviation from normal. Channel 29 has a clear upward trend with values peaking at 1.0, suggesting coordinated deviation. Channel 32 maintains a constant value of 1.0 for an extended period, indicating a strong anomaly.\"\n}\n```",
+    "parsed": {
+      "anomalous_channels": [
+        5,
+        29,
+        32
+      ],
+      "confidence": "medium",
+      "reason": "Channel 5 shows a consistent upward trend with values reaching 1.0, indicating a deviation from normal. Channel 29 has a clear upward trend with values peaking at 1.0, suggesting coordinated deviation. Channel 32 maintains a constant value of 1.0 for an extended period, indicating a strong anomaly."
+    },
+    "vlm_picks": [
+      5,
+      29,
+      32
+    ],
+    "final_pred": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      12,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      27,
+      29,
+      30,
+      31,
+      32,
+      34,
+      35
+    ],
+    "f1_ours_vlm": 0.20689655172413796,
+    "f1_ours_no_vlm": 0.23076923076923078,
+    "f1_k2": 0.25,
+    "gt_raw_zscore": {
+      "0": 8.921370501363459,
+      "1": 9.84961244204394,
+      "8": 14.51177886531796,
+      "9": 668.9933835543692,
+      "11": 19.47321058200502,
+      "12": 49.80539940427907,
+      "13": 10.191352703128649,
+      "14": 7.080949286847609
+    }
+  },
+  "machine-1-5_10620_10637": {
+    "entity": "machine-1-5",
+    "start": 10620,
+    "end": 10637,
+    "k": 8,
+    "gt_channels": [
+      0,
+      1,
+      2,
+      3,
+      6,
+      23,
+      25,
+      31
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      6,
+      8,
+      12,
+      13,
+      14,
+      15,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      27,
+      29,
+      30,
+      32,
+      33,
+      34
+    ],
+    "raw_response": "```json\n{\n    \"anomalous_channels\": [0, 1, 2, 3, 5, 6, 12, 29, 32],\n    \"confidence\": \"medium\",\n    \"reason\": \"Channels 0, 1, 2, 3, 5, and 6 show significant deviations around the same time index (106-113), indicating potential coordinated anomalies. Channel 12 and 29 have prolonged periods of zero values, which may indicate sensor failure or data dropout. Channel 32 shows repeated spikes to maximum value, suggesting abnormal behavior.\"\n}\n```",
+    "parsed": {
+      "anomalous_channels": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        12,
+        29,
+        32
+      ],
+      "confidence": "medium",
+      "reason": "Channels 0, 1, 2, 3, 5, and 6 show significant deviations around the same time index (106-113), indicating potential coordinated anomalies. Channel 12 and 29 have prolonged periods of zero values, which may indicate sensor failure or data dropout. Channel 32 shows repeated spikes to maximum value, suggesting abnormal behavior."
+    },
+    "vlm_picks": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      6,
+      12,
+      29,
+      32
+    ],
+    "final_pred": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      6,
+      12,
+      29,
+      32
+    ],
+    "f1_ours_vlm": 0.5882352941176471,
+    "f1_ours_no_vlm": 0.9333333333333333,
+    "f1_k2": 0.7999999999999999,
+    "gt_raw_zscore": {
+      "0": 86.947776395956,
+      "1": 896.7794385474779,
+      "2": 898.562602762716,
+      "3": 489.6006006573415,
+      "6": 9.44302128275772,
+      "23": 34.36945258736632,
+      "25": 35.15819472743152,
+      "31": 27.453017171973205
+    }
+  },
+  "machine-1-8_2105_2171": {
+    "entity": "machine-1-8",
+    "start": 2105,
+    "end": 2171,
+    "k": 5,
+    "gt_channels": [
+      0,
+      8,
+      9,
+      10,
+      11
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      0,
+      1,
+      8,
+      9,
+      11,
+      12,
+      14,
+      15,
+      23,
+      25,
+      32
+    ],
+    "raw_response": "```json\n{\n    \"anomalous_channels\": [0, 8, 9, 11, 12, 14],\n    \"confidence\": \"medium\",\n    \"reason\": \"Channels 0, 8, 9, 11, 12, and 14 show significant deviations from their normal patterns, with multiple points reaching extreme values or showing coordinated behavior. These deviations are more pronounced compared to other channels.\"\n}\n```",
+    "parsed": {
+      "anomalous_channels": [
+        0,
+        8,
+        9,
+        11,
+        12,
+        14
+      ],
+      "confidence": "medium",
+      "reason": "Channels 0, 8, 9, 11, 12, and 14 show significant deviations from their normal patterns, with multiple points reaching extreme values or showing coordinated behavior. These deviations are more pronounced compared to other channels."
+    },
+    "vlm_picks": [
+      0,
+      8,
+      9,
+      11,
+      12,
+      14
+    ],
+    "final_pred": [
+      0,
+      8,
+      9,
+      11,
+      12,
+      14
+    ],
+    "f1_ours_vlm": 0.7272727272727272,
+    "f1_ours_no_vlm": 0.4000000000000001,
+    "f1_k2": 0.0,
+    "gt_raw_zscore": {
+      "0": 3.0998685374435695,
+      "8": 13.69623022282855,
+      "9": 58.60096829604911,
+      "10": 5.566397775420063,
+      "11": 72.12570669008421
+    }
+  },
+  "machine-3-8_21405_21548": {
+    "entity": "machine-3-8",
+    "start": 21405,
+    "end": 21548,
+    "k": 4,
+    "gt_channels": [
+      8,
+      9,
+      11,
+      12
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      0,
+      2,
+      3,
+      5,
+      6,
+      8,
+      9,
+      11,
+      12,
+      13,
+      14,
+      20,
+      23,
+      25,
+      31,
+      34,
+      35
+    ],
+    "raw_response": "```json\n{\n    \"anomalous_channels\": [0, 3, 20, 35],\n    \"confidence\": \"medium\",\n    \"reason\": \"Channels 0, 3, 20, and 35 show sustained deviations at high normalized values, indicating potential anomalies. Channel 35, in particular, shows consistent high values across many points, suggesting a significant deviation from normal behavior.\"\n}\n```",
+    "parsed": {
+      "anomalous_channels": [
+        0,
+        3,
+        20,
+        35
+      ],
+      "confidence": "medium",
+      "reason": "Channels 0, 3, 20, and 35 show sustained deviations at high normalized values, indicating potential anomalies. Channel 35, in particular, shows consistent high values across many points, suggesting a significant deviation from normal behavior."
+    },
+    "vlm_picks": [
+      0,
+      3,
+      20,
+      35
+    ],
+    "final_pred": [
+      0,
+      3,
+      20,
+      35
+    ],
+    "f1_ours_vlm": 0.0,
+    "f1_ours_no_vlm": 0.4444444444444445,
+    "f1_k2": 0.0,
+    "gt_raw_zscore": {
+      "8": 6.060693837367679,
+      "9": 149.2376758644654,
+      "11": 0.3756464218819539,
+      "12": 17.615922191061582
+    }
+  },
+  "machine-1-8_3594_3598": {
+    "entity": "machine-1-8",
+    "start": 3594,
+    "end": 3598,
+    "k": 5,
+    "gt_channels": [
+      6,
+      8,
+      12,
+      13,
+      14
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      0,
+      1,
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      14,
+      15,
+      21,
+      24,
+      27,
+      29,
+      30,
+      32
+    ],
+    "raw_response": "```json\n{\n  \"anomalous_channels\": [0, 6, 8, 9, 12],\n  \"confidence\": \"medium\",\n  \"reason\": \"Channels 0, 6, 8, 9, and 12 show significant deviations from their normal patterns, with multiple points reaching extreme values. Channel 0 has several peaks near 1.0, Channel 6 shows consistent high values, Channel 8 has a sharp peak at 1.0, Channel 9 has multiple zero values, and Channel 12 has a peak at 1.0 with many zero values.\"\n}\n```",
+    "parsed": {
+      "anomalous_channels": [
+        0,
+        6,
+        8,
+        9,
+        12
+      ],
+      "confidence": "medium",
+      "reason": "Channels 0, 6, 8, 9, and 12 show significant deviations from their normal patterns, with multiple points reaching extreme values. Channel 0 has several peaks near 1.0, Channel 6 shows consistent high values, Channel 8 has a sharp peak at 1.0, Channel 9 has multiple zero values, and Channel 12 has a peak at 1.0 with many zero values."
+    },
+    "vlm_picks": [
+      0,
+      6,
+      8,
+      9,
+      12
+    ],
+    "final_pred": [
+      0,
+      6,
+      8,
+      9,
+      12
+    ],
+    "f1_ours_vlm": 0.6,
+    "f1_ours_no_vlm": 0.28571428571428575,
+    "f1_k2": 0.15384615384615385,
+    "gt_raw_zscore": {
+      "6": 2.5868225392290776,
+      "8": 17.46615796628074,
+      "12": 7.976266539443554,
+      "13": 1.9267179886539174,
+      "14": 16.25152646307946
+    }
+  },
+  "machine-3-1_10696_10717": {
+    "entity": "machine-3-1",
+    "start": 10696,
+    "end": 10717,
+    "k": 8,
+    "gt_channels": [
+      0,
+      1,
+      18,
+      19,
+      20,
+      21,
+      27,
+      30
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      18,
+      19,
+      20,
+      21,
+      24,
+      27,
+      29,
+      30,
+      32,
+      33,
+      34,
+      35
+    ],
+    "raw_response": "```json\n{\n    \"anomalous_channels\": [2, 3, 5, 32],\n    \"confidence\": \"medium\",\n    \"reason\": \"Channels 2 and 3 show sustained high deviations, indicating potential anomalies. Channel 5 has consistent high values across different time points. Channel 32 shows a prolonged period of maximum deviation, suggesting a significant anomaly.\"\n}\n```",
+    "parsed": {
+      "anomalous_channels": [
+        2,
+        3,
+        5,
+        32
+      ],
+      "confidence": "medium",
+      "reason": "Channels 2 and 3 show sustained high deviations, indicating potential anomalies. Channel 5 has consistent high values across different time points. Channel 32 shows a prolonged period of maximum deviation, suggesting a significant anomaly."
+    },
+    "vlm_picks": [
+      2,
+      3,
+      5,
+      32
+    ],
+    "final_pred": [
+      2,
+      3,
+      5,
+      32
+    ],
+    "f1_ours_vlm": 0.0,
+    "f1_ours_no_vlm": 0.25,
+    "f1_k2": 0.13333333333333333,
+    "gt_raw_zscore": {
+      "0": 10.624945162581634,
+      "1": 15.19100972942265,
+      "18": 7.633277992858561,
+      "19": 6.998708598388326,
+      "20": 7.697977492786735,
+      "21": 7.05038121697405,
+      "27": 7.81142779316384,
+      "30": 7.188423854671762
+    }
+  },
+  "machine-1-6_5167_5172": {
+    "entity": "machine-1-6",
+    "start": 5167,
+    "end": 5172,
+    "k": 5,
+    "gt_channels": [
+      8,
+      9,
+      10,
+      12,
+      17
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      0,
+      1,
+      2,
+      4,
+      5,
+      8,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      22,
+      23,
+      29,
+      31
+    ],
+    "raw_response": "```json\n{\n    \"anomalous_channels\": [4, 5, 12, 16],\n    \"confidence\": \"medium\",\n    \"reason\": \"Channels 4 and 16 show prolonged periods of zero deviation, indicating potential sensor failure or disconnection. Channel 5 shows a clear upward trend, deviating from its normal pattern. Channel 12 has a significant spike at time index 112, which is not observed in other channels.\"\n}\n```",
+    "parsed": {
+      "anomalous_channels": [
+        4,
+        5,
+        12,
+        16
+      ],
+      "confidence": "medium",
+      "reason": "Channels 4 and 16 show prolonged periods of zero deviation, indicating potential sensor failure or disconnection. Channel 5 shows a clear upward trend, deviating from its normal pattern. Channel 12 has a significant spike at time index 112, which is not observed in other channels."
+    },
+    "vlm_picks": [
+      4,
+      5,
+      12,
+      16
+    ],
+    "final_pred": [
+      4,
+      5,
+      12,
+      16
+    ],
+    "f1_ours_vlm": 0.22222222222222224,
+    "f1_ours_no_vlm": 0.28571428571428575,
+    "f1_k2": 0.3076923076923077,
+    "gt_raw_zscore": {
+      "8": 17.790614600985876,
+      "9": 17.769966704951937,
+      "10": 18.456613733501253,
+      "12": 17.000886363053073,
+      "17": 53.188231900250216
+    }
+  },
+  "machine-2-9_24475_24478": {
+    "entity": "machine-2-9",
+    "start": 24475,
+    "end": 24478,
+    "k": 4,
+    "gt_channels": [
+      8,
+      12,
+      13,
+      14
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      1,
+      2,
+      6,
+      8,
+      9,
+      11,
+      12,
+      13,
+      14,
+      19,
+      20,
+      21,
+      27,
+      30,
+      31
+    ],
+    "raw_response": "```json\n{\n  \"anomalous_channels\": [1, 2, 6, 11, 14],\n  \"confidence\": \"medium\",\n  \"reason\": \"Channels 1, 2, 6, 11, and 14 show significant deviations from their normal patterns, with multiple points reaching high normalized values, indicating potential anomalies. Other channels have lower deviations or consistent low values, suggesting normal behavior.\"\n}\n```",
+    "parsed": {
+      "anomalous_channels": [
+        1,
+        2,
+        6,
+        11,
+        14
+      ],
+      "confidence": "medium",
+      "reason": "Channels 1, 2, 6, 11, and 14 show significant deviations from their normal patterns, with multiple points reaching high normalized values, indicating potential anomalies. Other channels have lower deviations or consistent low values, suggesting normal behavior."
+    },
+    "vlm_picks": [
+      1,
+      2,
+      6,
+      11,
+      14
+    ],
+    "final_pred": [
+      1,
+      2,
+      6,
+      11,
+      14
+    ],
+    "f1_ours_vlm": 0.22222222222222224,
+    "f1_ours_no_vlm": 0.8,
+    "f1_k2": 0.7272727272727273,
+    "gt_raw_zscore": {
+      "8": 134.45870000450958,
+      "12": 36.02378071461989,
+      "13": 17.554641837740654,
+      "14": 57.88697387273758
+    }
+  },
+  "machine-3-2_3080_3917": {
+    "entity": "machine-3-2",
+    "start": 3080,
+    "end": 3917,
+    "k": 4,
+    "gt_channels": [
+      8,
+      12,
+      13,
+      16
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      0,
+      12,
+      15,
+      16,
+      18,
+      19,
+      25,
+      32,
+      34,
+      35
+    ],
+    "raw_response": "```json\n{\n    \"anomalous_channels\": [0, 12, 15, 18, 19],\n    \"confidence\": \"medium\",\n    \"reason\": \"Channels 0, 12, 15, 18, and 19 show significant deviations from their normal patterns, with multiple points reaching high deviation values. These channels exhibit behavior that is distinct from their typical range, suggesting potential anomalies.\"\n}\n```",
+    "parsed": {
+      "anomalous_channels": [
+        0,
+        12,
+        15,
+        18,
+        19
+      ],
+      "confidence": "medium",
+      "reason": "Channels 0, 12, 15, 18, and 19 show significant deviations from their normal patterns, with multiple points reaching high deviation values. These channels exhibit behavior that is distinct from their typical range, suggesting potential anomalies."
+    },
+    "vlm_picks": [
+      0,
+      12,
+      15,
+      18,
+      19
+    ],
+    "final_pred": [
+      0,
+      12,
+      15,
+      18,
+      19
+    ],
+    "f1_ours_vlm": 0.22222222222222224,
+    "f1_ours_no_vlm": 0.25,
+    "f1_k2": 0.16666666666666666,
+    "gt_raw_zscore": {
+      "8": 14.384191479319123,
+      "12": 12.571843205076188,
+      "13": 41.070073816244346,
+      "16": 8.212959113117103
+    }
+  },
+  "machine-2-5_16524_16549": {
+    "entity": "machine-2-5",
+    "start": 16524,
+    "end": 16549,
+    "k": 5,
+    "gt_channels": [
+      0,
+      8,
+      12,
+      13,
+      14
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      0,
+      5,
+      6,
+      8,
+      9,
+      11,
+      12,
+      13,
+      14,
+      29,
+      31,
+      32,
+      33
+    ],
+    "raw_response": "```json\n{\n    \"anomalous_channels\": [0, 5, 9, 29],\n    \"confidence\": \"medium\",\n    \"reason\": \"Channels 0 and 5 show sustained high deviations, indicating potential anomalies. Channel 9 and 29 have consistent zero values, which may indicate a sensor failure or other issue. Other channels show sporadic deviations but not as consistently or significantly.\"\n}\n```",
+    "parsed": {
+      "anomalous_channels": [
+        0,
+        5,
+        9,
+        29
+      ],
+      "confidence": "medium",
+      "reason": "Channels 0 and 5 show sustained high deviations, indicating potential anomalies. Channel 9 and 29 have consistent zero values, which may indicate a sensor failure or other issue. Other channels show sporadic deviations but not as consistently or significantly."
+    },
+    "vlm_picks": [
+      0,
+      5,
+      9,
+      29
+    ],
+    "final_pred": [
+      0,
+      5,
+      9,
+      29
+    ],
+    "f1_ours_vlm": 0.22222222222222224,
+    "f1_ours_no_vlm": 0.22222222222222224,
+    "f1_k2": 0.15384615384615385,
+    "gt_raw_zscore": {
+      "0": 4.7942037515634865,
+      "8": 63.38782586362042,
+      "12": 36.243500785428694,
+      "13": 77.69728216889104,
+      "14": 15.899709584013458
+    }
+  },
+  "machine-1-6_15052_15055": {
+    "entity": "machine-1-6",
+    "start": 15052,
+    "end": 15055,
+    "k": 4,
+    "gt_channels": [
+      8,
+      9,
+      10,
+      12
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      0,
+      1,
+      3,
+      5,
+      6,
+      8,
+      11,
+      12,
+      14,
+      15,
+      21,
+      22,
+      23,
+      27,
+      29,
+      30,
+      31,
+      33
+    ],
+    "raw_response": "```json\n{\n    \"anomalous_channels\": [3, 5, 6, 23, 31],\n    \"confidence\": \"medium\",\n    \"reason\": \"Channels 3, 5, 6, 23, and 31 show significant deviations from their normal patterns, with multiple points reaching high normalized values close to or at 1.0, indicating potential anomalies.\"\n}\n```",
+    "parsed": {
+      "anomalous_channels": [
+        3,
+        5,
+        6,
+        23,
+        31
+      ],
+      "confidence": "medium",
+      "reason": "Channels 3, 5, 6, 23, and 31 show significant deviations from their normal patterns, with multiple points reaching high normalized values close to or at 1.0, indicating potential anomalies."
+    },
+    "vlm_picks": [
+      3,
+      5,
+      6,
+      23,
+      31
+    ],
+    "final_pred": [
+      3,
+      5,
+      6,
+      23,
+      31
+    ],
+    "f1_ours_vlm": 0.0,
+    "f1_ours_no_vlm": 0.0,
+    "f1_k2": 0.16666666666666666,
+    "gt_raw_zscore": {
+      "8": 21.058489052713735,
+      "9": 26.356488192808683,
+      "10": 35.14205028645986,
+      "12": 16.828308428283666
+    }
+  },
+  "machine-1-7_12359_12374": {
+    "entity": "machine-1-7",
+    "start": 12359,
+    "end": 12374,
+    "k": 7,
+    "gt_channels": [
+      0,
+      8,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      0,
+      1,
+      2,
+      5,
+      8,
+      9,
+      11,
+      12,
+      13,
+      14,
+      15,
+      22,
+      29,
+      32
+    ],
+    "raw_response": "```json\n{\n  \"anomalous_channels\": [0, 8, 11, 12, 13, 14, 15, 29, 32],\n  \"confidence\": \"medium\",\n  \"reason\": \"Channels 0, 8, 11, 12, 13, 14, 15, 29, and 32 show significant deviations from their normal patterns, with sustained high values or abrupt changes indicating potential anomalies.\"\n}\n```",
+    "parsed": {
+      "anomalous_channels": [
+        0,
+        8,
+        11,
+        12,
+        13,
+        14,
+        15,
+        29,
+        32
+      ],
+      "confidence": "medium",
+      "reason": "Channels 0, 8, 11, 12, 13, 14, 15, 29, and 32 show significant deviations from their normal patterns, with sustained high values or abrupt changes indicating potential anomalies."
+    },
+    "vlm_picks": [
+      0,
+      8,
+      11,
+      12,
+      13,
+      14,
+      15,
+      29,
+      32
+    ],
+    "final_pred": [
+      0,
+      8,
+      11,
+      12,
+      13,
+      14,
+      15,
+      29,
+      32
+    ],
+    "f1_ours_vlm": 0.8750000000000001,
+    "f1_ours_no_vlm": 0.25,
+    "f1_k2": 0.923076923076923,
+    "gt_raw_zscore": {
+      "0": 6.9634830734755075,
+      "8": 11.081338761837511,
+      "11": 7.031601935782501,
+      "12": 11.019811941048975,
+      "13": 10.905185973197106,
+      "14": 6.920150338329368,
+      "15": 11.86003597447181
+    }
+  },
+  "machine-1-2_4629_4688": {
+    "entity": "machine-1-2",
+    "start": 4629,
+    "end": 4688,
+    "k": 6,
+    "gt_channels": [
+      8,
+      9,
+      10,
+      12,
+      14,
+      17
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      3,
+      4,
+      5,
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      27,
+      30,
+      31,
+      33,
+      34,
+      35
+    ],
+    "raw_response": "```json\n{\n  \"anomalous_channels\": [4, 5, 6, 11, 12, 31],\n  \"confidence\": \"medium\",\n  \"reason\": \"Channels 4, 5, 6, 11, 12, and 31 show sustained high deviations from their normal range, indicating potential anomalies. These channels have multiple points with values close to or at 1.0, suggesting significant deviations.\"\n}\n```",
+    "parsed": {
+      "anomalous_channels": [
+        4,
+        5,
+        6,
+        11,
+        12,
+        31
+      ],
+      "confidence": "medium",
+      "reason": "Channels 4, 5, 6, 11, 12, and 31 show sustained high deviations from their normal range, indicating potential anomalies. These channels have multiple points with values close to or at 1.0, suggesting significant deviations."
+    },
+    "vlm_picks": [
+      4,
+      5,
+      6,
+      11,
+      12,
+      31
+    ],
+    "final_pred": [
+      4,
+      5,
+      6,
+      11,
+      12,
+      31
+    ],
+    "f1_ours_vlm": 0.16666666666666666,
+    "f1_ours_no_vlm": 0.0,
+    "f1_k2": 0.1818181818181818,
+    "gt_raw_zscore": {
+      "8": 56.1002571163253,
+      "9": 24.932703645376154,
+      "10": 20.988969194564127,
+      "12": 15.475980239186002,
+      "14": 26.292457284890425,
+      "17": 33.697661269127096
+    }
+  },
+  "machine-2-9_17914_18096": {
+    "entity": "machine-2-9",
+    "start": 17914,
+    "end": 18096,
+    "k": 5,
+    "gt_channels": [
+      10,
+      11,
+      12,
+      14,
+      15
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      0,
+      5,
+      9,
+      10,
+      11,
+      12,
+      13,
+      15,
+      18,
+      22,
+      23,
+      24,
+      25,
+      31
+    ],
+    "raw_response": "```json\n{\n  \"anomalous_channels\": [0, 10, 13, 24],\n  \"confidence\": \"medium\",\n  \"reason\": \"Channels 0 and 24 show sustained high deviations, indicating potential anomalies. Channel 10 has a significant spike at time index 170. Channel 13 shows a notable peak at time index 143. These patterns suggest deviations from normal behavior.\"\n}\n```",
+    "parsed": {
+      "anomalous_channels": [
+        0,
+        10,
+        13,
+        24
+      ],
+      "confidence": "medium",
+      "reason": "Channels 0 and 24 show sustained high deviations, indicating potential anomalies. Channel 10 has a significant spike at time index 170. Channel 13 shows a notable peak at time index 143. These patterns suggest deviations from normal behavior."
+    },
+    "vlm_picks": [
+      0,
+      10,
+      13,
+      24
+    ],
+    "final_pred": [
+      0,
+      10,
+      13,
+      24
+    ],
+    "f1_ours_vlm": 0.22222222222222224,
+    "f1_ours_no_vlm": 0.28571428571428575,
+    "f1_k2": 0.3636363636363636,
+    "gt_raw_zscore": {
+      "10": 10.808228462903108,
+      "11": 51.59222488779521,
+      "12": 95.34354085863612,
+      "14": 31.147872174085276,
+      "15": 10.739260490790134
+    }
+  },
+  "machine-3-3_20897_20903": {
+    "entity": "machine-3-3",
+    "start": 20897,
+    "end": 20903,
+    "k": 4,
+    "gt_channels": [
+      9,
+      10,
+      11,
+      12
+    ],
+    "auto_confirmed": [],
+    "overlay_channels": [
+      8,
+      12,
+      14,
+      15,
+      19,
+      22,
+      24,
+      26,
+      31,
+      36,
+      37
+    ],
+    "raw_response": "```json\n{\n    \"anomalous_channels\": [15, 19, 22, 24, 26],\n    \"confidence\": \"medium\",\n    \"reason\": \"Channels 15, 19, 22, and 24 show significant deviations from their normal patterns with high peaks and low troughs. Channel 26 has a prolonged period of zero values, indicating potential sensor failure or disconnection.\"\n}\n```",
+    "parsed": {
+      "anomalous_channels": [
+        15,
+        19,
+        22,
+        24,
+        26
+      ],
+      "confidence": "medium",
+      "reason": "Channels 15, 19, 22, and 24 show significant deviations from their normal patterns with high peaks and low troughs. Channel 26 has a prolonged period of zero values, indicating potential sensor failure or disconnection."
+    },
+    "vlm_picks": [
+      15,
+      19,
+      22,
+      24,
+      26
+    ],
+    "final_pred": [
+      15,
+      19,
+      22,
+      24,
+      26
+    ],
+    "f1_ours_vlm": 0.0,
+    "f1_ours_no_vlm": 0.0,
+    "f1_k2": 0.2,
+    "gt_raw_zscore": {
+      "9": 31.50962408897892,
+      "10": 27.732574679740114,
+      "11": 2.642096106873204,
+      "12": 9.58348107582653
+    }
+  }
+}

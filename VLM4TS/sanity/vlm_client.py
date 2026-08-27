@@ -86,6 +86,32 @@ class VLMClient:
     def call_multi(self, prompt: str, images: list[str]) -> VLMResponse:
         return self._retry_loop(lambda: self._call_once_multi(prompt, images))
 
+    def _call_once_text(self, prompt: str) -> VLMResponse | None:
+        payload = [{"role": "user", "content": [{"type": "input_text", "text": prompt}]}]
+        start = time.perf_counter()
+        try:
+            resp = self.client.responses.create(
+                model=self.vlm_model,
+                input=payload,
+                temperature=TEMPERATURE,
+            )
+            latency = time.perf_counter() - start
+            usage = getattr(resp, "usage", None)
+            return VLMResponse(
+                status="OK",
+                raw_response=(getattr(resp, "output_text", "") or "").strip(),
+                input_tokens=getattr(usage, "input_tokens", None) if usage else None,
+                output_tokens=getattr(usage, "output_tokens", None) if usage else None,
+                total_tokens=getattr(usage, "total_tokens", None) if usage else None,
+                latency_seconds=latency,
+            )
+        except Exception as exc:
+            latency = time.perf_counter() - start
+            return VLMResponse(status="API_ERROR", latency_seconds=latency, error=str(exc))
+
+    def call_text(self, prompt: str) -> VLMResponse:
+        return self._retry_loop(lambda: self._call_once_text(prompt))
+
     def _retry_loop(self, do_call) -> VLMResponse:
         last = None
         for attempt in range(MAX_RETRIES):

@@ -1,0 +1,46 @@
+{
+  "mid_layer_cls_block5": {
+    "role_kruskal": {
+      "H": 14.483215623036612,
+      "p": 0.0007161593846487094,
+      "epsilon_squared": 0.006946697619942466,
+      "n": 1800
+    },
+    "cascade_vs_unrelated": {
+      "cohens_d": -0.14363179612735902,
+      "auc": 0.48323021397267335,
+      "p": 0.3215531103948699,
+      "mean_cascade": 0.010054873618061747,
+      "mean_unrelated": 0.012964219119813707
+    },
+    "homogeneous_vs_heterogeneous": {
+      "cohens_d": -0.36001393180173513,
+      "auc": 0.34768228278965907,
+      "p": 2.6038912075613954e-15,
+      "mean_homogeneous": 0.007276032485213934,
+      "mean_heterogeneous": 0.013771498284372343
+    }
+  },
+  "last_layer_attention_map": {
+    "role_kruskal": {
+      "H": 2.0574259197216263,
+      "p": 0.35746673867033707,
+      "epsilon_squared": 3.195654965032067e-05,
+      "n": 1800
+    },
+    "cascade_vs_unrelated": {
+      "cohens_d": 0.03543482961409249,
+      "auc": 0.47539700953854086,
+      "p": 0.1458542965140894,
+      "mean_cascade": 0.08874190517478642,
+      "mean_unrelated": 0.08574641009171803
+    },
+    "homogeneous_vs_heterogeneous": {
+      "cohens_d": -1.1880921462503198,
+      "auc": 0.17858501425261464,
+      "p": 1.5898035696729495e-62,
+      "mean_homogeneous": 0.041670661736157986,
+      "mean_heterogeneous": 0.12612142165501913
+    }
+  }
+}

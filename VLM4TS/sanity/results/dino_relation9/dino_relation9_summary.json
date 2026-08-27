@@ -1,0 +1,65 @@
+{
+  "n_pairs": 1800,
+  "kruskal_delta_cls_by_role": {
+    "groups": [
+      "cascade",
+      "mild",
+      "unrelated"
+    ],
+    "means": {
+      "cascade": 0.039939316547110575,
+      "mild": 0.03684002148317121,
+      "unrelated": 0.035811336636543276
+    },
+    "n": {
+      "cascade": 431,
+      "mild": 469,
+      "unrelated": 900
+    },
+    "H": 15.075310207188522,
+    "p": 0.00053264515626954
+  },
+  "kruskal_delta_patch_by_role": {
+    "groups": [
+      "cascade",
+      "mild",
+      "unrelated"
+    ],
+    "means": {
+      "cascade": 0.04649930348805651,
+      "mild": 0.03978094757238685,
+      "unrelated": 0.03939675721857283
+    },
+    "n": {
+      "cascade": 431,
+      "mild": 469,
+      "unrelated": 900
+    },
+    "H": 23.983117794516463,
+    "p": 6.196295792646438e-06
+  },
+  "kruskal_homogeneous_delta_cls": {
+    "means": {
+      "False": 0.05210540786622062,
+      "True": 0.025083509016140874
+    },
+    "n": {
+      "False": 441,
+      "True": 459
+    },
+    "H": 32.66585491433398,
+    "p": 1.0944301618821915e-08
+  },
+  "kruskal_homogeneous_delta_patch": {
+    "means": {
+      "False": 0.053293686740252436,
+      "True": 0.03310664131231038
+    },
+    "n": {
+      "False": 441,
+      "True": 459
+    },
+    "H": 36.69592706340601,
+    "p": 1.380676000231884e-09
+  }
+}

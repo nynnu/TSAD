@@ -152,3 +152,37 @@ Task:
 
 Respond with only the following JSON object, no markdown and no extra text:
 {"root_cause_channel": "1"-"6" | "none", "affected_channels": ["..."], "unaffected_channels": ["..."], "onset_time": <integer or null>, "reason": "<2-3 sentences>", "confidence": <0.00-1.00>}"""
+
+
+_ORACLE9_INTENSITY_BY_SUBROLE = {"root": 1.0, "cascade": 1.0, "mild": 0.35}
+
+
+def build_oracle9_prompt(roles: dict) -> str:
+    """Oracle-Clean variant of SANITY9_PROMPT: no image, ground-truth signal
+    facts (onset/breakdown_type/intensity) given as text instead. Role words
+    (root/cascade/mild/unrelated) are never exposed, matching what a human
+    reading only the plot could infer."""
+    lines = []
+    for i in range(1, 7):
+        info = roles[str(i)]
+        if info["role"] == "unrelated":
+            lines.append(f"Channel {i}: no anomaly detected")
+        else:
+            intensity = _ORACLE9_INTENSITY_BY_SUBROLE[info["role"]]
+            lines.append(
+                f"Channel {i}: anomaly_onset={info['onset']}, "
+                f"breakdown_type={info['break_type']}, intensity={intensity}"
+            )
+    channel_desc = "\n".join(lines)
+    return f"""You are given ground-truth signal information about 6 channels over a 300-step window. No image is shown. Use only the information below.
+
+{channel_desc}
+
+Task:
+1. If there is a channel where an anomaly first originated (a "root cause" channel), identify which one it is. If no channel shows anomaly, answer "none".
+2. Identify all channels that became anomalous as a consequence of the root cause, including channels that react after a delay or react only weakly/gradually.
+3. Identify all channels that remain unrelated to the root cause.
+4. Estimate the time step at which the root cause channel's anomaly first began (null if there is no root cause).
+
+Respond with only the following JSON object, no markdown and no extra text:
+{{"root_cause_channel": "1"-"6" | "none", "affected_channels": [...], "unaffected_channels": [...], "onset_time": <integer or null>, "reason": "...", "confidence": <0.00-1.00>}}"""
