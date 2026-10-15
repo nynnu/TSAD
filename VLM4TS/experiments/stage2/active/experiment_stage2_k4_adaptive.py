@@ -43,6 +43,7 @@ K3의 이미지/텍스트/VLM 구조는 그대로 두고, "몇 개 채널을 후
 """
 import argparse
 import base64
+import hashlib
 import json
 import sys
 import time
@@ -69,8 +70,11 @@ GT_SEGMENTS_PATH = BASE / "experiments" / "20주차실험" / "20주차 주요실
 
 N_CHANNELS = 38
 N_BANK = 60
-N_CALIB = 30
+N_CALIB = 120
 N_POINTS_PER_CHANNEL = 25
+# v4 adds a train-only column-score reference used by K37.  The channel
+# screening score itself remains the same sum-score empirical tail.
+CACHE_VERSION = "empirical-tail-wide-range-v4-column-calib"
 
 cm.DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -80,17 +84,68 @@ cm.DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 # ══════════════════════════════════════════════════════════════════
 
 def _bank_and_calib_idx(n_windows):
+    if n_windows < N_BANK + N_CALIB:
+        raise ValueError(
+            f"Need at least {N_BANK + N_CALIB} train windows for {N_BANK} bank and {N_CALIB} calibration windows, got {n_windows}."
+        )
     bank_idx = set(np.linspace(0, n_windows - 1, min(N_BANK, n_windows)).astype(int).tolist())
     fine = np.linspace(0, n_windows - 1, min(N_BANK + N_CALIB + 20, n_windows)).astype(int)
     calib_idx = [i for i in fine.tolist() if i not in bank_idx][:N_CALIB]
+    if len(calib_idx) < N_CALIB:
+        raise ValueError(f"Could not construct {N_CALIB} independent calibration windows, got {len(calib_idx)}.")
     return sorted(bank_idx), calib_idx
+
+
+def _train_image_range(train_channel):
+    """A fixed, train-only display range that preserves test level/amplitude shifts.
+
+    Per-window min/max makes two identically shaped windows pixel-identical even
+    when one is an absolute level shift.  Robust quantiles avoid a single noisy
+    training outlier setting the entire vertical scale.
+    """
+    # p1--p99 clipped ordinary test-regime variation too aggressively: the
+    # clipped line image became OOD even when the raw channel was not anomalous.
+    # This wider train-only range still preserves absolute shifts while making
+    # saturation a genuinely rare event.
+    lo, hi = np.quantile(train_channel, [0.001, 0.999])
+    if not np.isfinite(lo) or not np.isfinite(hi) or hi - lo < 1e-8:
+        lo, hi = float(np.min(train_channel)), float(np.max(train_channel))
+    if hi - lo < 1e-8:
+        hi = lo + 1.0
+    return float(lo), float(hi)
+
+
+def _robust_location_scale(values):
+    """Stable normal-score calibration; never turn an almost constant bank into 1e9 z-scores."""
+    center = float(np.median(values))
+    mad_scale = float(1.4826 * np.median(np.abs(values - center)))
+    iqr_scale = float((np.quantile(values, 0.75) - np.quantile(values, 0.25)) / 1.349)
+    scale = max(mad_scale, iqr_scale, 1e-6)
+    return center, scale
+
+
+def _tail_score(value, calib_sums):
+    """Smoothed empirical upper-tail score from train-only calibration samples.
+
+    This deliberately makes no Gaussian assumption about DINO KNN scores.  A
+    value beyond every one of 120 normal calibration windows receives p=1/121,
+    so the strict alpha=.01 hysteresis seed has an operational meaning.
+    """
+    p_value = (1 + np.count_nonzero(calib_sums >= value)) / (len(calib_sums) + 1)
+    return float(-np.log10(p_value))
+
+
+def _train_fingerprint(train):
+    """Keep cached embeddings tied to the exact train array, not just its entity name."""
+    data = np.ascontiguousarray(train)
+    return hashlib.sha256(data.view(np.uint8)).hexdigest()[:16]
 
 
 def get_or_build_channel_calib(entity, c, train):
     """채널의 정상 sum-score 분포(mu, sigma)를 train 뱅크/calib에서 구함 (test 안 봄).
     뱅크 임베딩(tr_cls/tr_patches)도 .npy로 캐시 -- 이게 제일 비싼 부분(ViT-B forward,
     채널당 60장)이라 재시작할 때마다 다시 계산하면 매번 15분 넘게 날아간다."""
-    ent_cache = CACHE_DIR / entity
+    ent_cache = CACHE_DIR / CACHE_VERSION / _train_fingerprint(train) / entity
     ent_cache.mkdir(parents=True, exist_ok=True)
     stats_path = ent_cache / f"ch{c}_stats.json"
     bank_cls_path = ent_cache / f"ch{c}_bank_cls.npy"
@@ -103,7 +158,8 @@ def get_or_build_channel_calib(entity, c, train):
         tr_cls = np.load(bank_cls_path)
         tr_patches = np.load(bank_patches_path)
     else:
-        bank_imgs = [cm.ts_to_image_fast(windows[i]) for i in bank_idx]
+        vmin, vmax = _train_image_range(train[:, c])
+        bank_imgs = [cm.ts_to_image_fast(windows[i], vmin=vmin, vmax=vmax) for i in bank_idx]
         tr_cls, tr_patches = cm.extract_dinov2(bank_imgs, multilayer=False)
         np.save(bank_cls_path, tr_cls)
         np.save(bank_patches_path, tr_patches)
@@ -111,13 +167,29 @@ def get_or_build_channel_calib(entity, c, train):
     if stats_path.exists():
         stats = json.loads(stats_path.read_text(encoding="utf-8"))
     else:
-        calib_imgs = [cm.ts_to_image_fast(windows[i]) for i in calib_idx]
+        if not calib_idx:
+            raise ValueError(f"No calibration windows available for {entity} channel {c}.")
+        vmin, vmax = _train_image_range(train[:, c])
+        calib_imgs = [cm.ts_to_image_fast(windows[i], vmin=vmin, vmax=vmax) for i in calib_idx]
         ca_cls, ca_patches = cm.extract_dinov2(calib_imgs, multilayer=False)
-        sc = cm.knn_patch_score(tr_patches, ca_patches, tr_cls, ca_cls)
+        sc = cm.knn_patch_score(tr_patches, ca_patches, tr_cls, ca_cls, return_win=True)
         calib_sums = sc["sum"]
-        stats = {"mu": float(calib_sums.mean()), "sigma": float(calib_sums.std() + 1e-8)}
+        patch_scores = sc["knn_win"]
+        side = int(np.sqrt(patch_scores.shape[-1]))
+        if side * side != patch_scores.shape[-1]:
+            raise ValueError(f"Expected square DINO patch grid, got {patch_scores.shape[-1]} patches.")
+        # One column corresponds to roughly 14 ticks.  Preserve the temporal
+        # peak within each column rather than averaging a brief excursion away.
+        calib_columns = patch_scores.reshape(len(patch_scores), side, side).max(axis=1).reshape(-1)
+        center, scale = _robust_location_scale(calib_sums)
+        stats = {"center": center, "scale": scale, "vmin": vmin, "vmax": vmax,
+                  "calib_sums": np.sort(calib_sums).tolist(), "cache_version": CACHE_VERSION,
+                  "n_calib": len(calib_sums),
+                  "calib_columns": np.sort(calib_columns).tolist()}
         stats_path.write_text(json.dumps(stats, indent=2), encoding="utf-8")
 
+    if stats.get("cache_version") != CACHE_VERSION:
+        raise RuntimeError(f"Stale calibration cache for {entity} ch{c}; remove {ent_cache} and rerun.")
     return tr_cls, tr_patches, stats
 
 
@@ -146,19 +218,17 @@ def compute_zscores(entity, train, window, entity_channel_calib, degenerate_ch):
         if key not in entity_channel_calib:
             entity_channel_calib[key] = get_or_build_channel_calib(entity, c, train)
         tr_cls, tr_patches, stats = entity_channel_calib[key]
-        test_img = cm.ts_to_image_fast(window[:, c])
+        test_img = cm.ts_to_image_fast(window[:, c], vmin=stats["vmin"], vmax=stats["vmax"])
         seg_sum = score_segment_channel(tr_cls, tr_patches, test_img)
-        zs[c] = (seg_sum - stats["mu"]) / stats["sigma"]
+        zs[c] = _tail_score(seg_sum, np.asarray(stats["calib_sums"]))
     return zs
 
 
 def select_channels_fixed(zs, alpha):
     """단일 고정 임계값(alpha)으로 선택 -- 기존 방식. GT 작은 세그먼트에서 과다선택되는 문제 있음."""
     ranked = sorted(range(N_CHANNELS), key=lambda c: -zs[c])
-    z_thr = norm.ppf(1 - alpha)
-    selected = [c for c in ranked if zs[c] > z_thr]
-    if not selected:
-        selected = ranked[:1]
+    tail_thr = -np.log10(alpha)
+    selected = [c for c in ranked if zs[c] > tail_thr]
     return ranked, selected
 
 
@@ -178,8 +248,8 @@ def select_channels_hysteresis(zs, corr, alpha_strict=0.01, alpha_loose=0.1, cor
        z가 alpha_loose를 넘어도 자동으로 걸러짐 -> 소규모 GT에서 과다선택 완화 기대.
     """
     ranked = sorted(range(N_CHANNELS), key=lambda c: -zs[c])
-    z_strict = norm.ppf(1 - alpha_strict)
-    z_loose = norm.ppf(1 - alpha_loose)
+    z_strict = -np.log10(alpha_strict)
+    z_loose = -np.log10(alpha_loose)
 
     seed = {c for c in range(N_CHANNELS) if zs[c] > z_strict}
     extended = set(seed)
@@ -190,8 +260,6 @@ def select_channels_hysteresis(zs, corr, alpha_strict=0.01, alpha_loose=0.1, cor
             extended.add(c)
 
     selected = [c for c in ranked if c in extended]
-    if not selected:
-        selected = ranked[:1]
     return ranked, selected
 
 
@@ -222,7 +290,10 @@ def render_heatmap_overlay(window, ranked, selected):
         lo, hi = float(v.min()), float(v.max())
         norm_v = (v - lo) / (hi - lo) if hi - lo > 1e-9 else np.zeros_like(v)
         ax2.plot(np.arange(len(norm_v)), norm_v, linewidth=0.8, color=cmap(i % cmap.N), label=f"Ch{c}")
-    ax2.legend(fontsize=5, ncol=min(8, len(selected)), loc="upper right")
+    if selected:
+        ax2.legend(fontsize=5, ncol=min(8, len(selected)), loc="upper right")
+    else:
+        ax2.text(0.5, 0.5, "No channel passed the Stage 1 threshold", ha="center", va="center", fontsize=8)
     ax2.set_xticks([])
     ax2.set_title(f"Overlay: {len(selected)} candidate channels selected by adaptive z-threshold (detail)", fontsize=7)
 
@@ -235,6 +306,10 @@ def render_heatmap_overlay(window, ranked, selected):
 
 
 def build_prompt(all_channels, selected, window, train):
+    if not selected:
+        return """Stage 1 found no statistically unusual channel in this window using train-only calibration.
+Respond ONLY with valid JSON (no markdown, no extra text):
+{\"anomalous_channels\": [], \"confidence\": \"high\"}"""
     blocks = []
     for i, c in enumerate(selected):
         v = window[:, c]
@@ -283,7 +358,7 @@ def run(execute=False, alpha=0.1, method="fixed", alpha_strict=0.01, corr_thr=0.
 
     entity_data, entity_channel_calib, entity_degenerate, entity_corr = {}, {}, {}, {}
     all_channels = list(range(N_CHANNELS))
-    tag = f"a{alpha}" if method == "fixed" else f"hyst_s{alpha_strict}_l{alpha}_c{corr_thr}"
+    tag = f"{CACHE_VERSION}_a{alpha}" if method == "fixed" else f"{CACHE_VERSION}_hyst_s{alpha_strict}_l{alpha}_c{corr_thr}"
     checkpoint_path = OUT_DIR / f"checkpoint_{tag}.json"
     checkpoint = json.loads(checkpoint_path.read_text(encoding="utf-8")) if checkpoint_path.exists() else {}
     rows = []
@@ -346,7 +421,7 @@ def run(execute=False, alpha=0.1, method="fixed", alpha_strict=0.01, corr_thr=0.
 #    hysteresis)까지 한 번에 계산.
 # ══════════════════════════════════════════════════════════════════
 
-ZS_CACHE_PATH = OUT_DIR / "zs_cache.json"
+ZS_CACHE_PATH = OUT_DIR / f"zs_cache_{CACHE_VERSION}.json"
 
 
 def build_zs_cache():
@@ -441,12 +516,12 @@ def sweep(corr_thr_list=(0.5, 0.7), alpha_strict=0.01, alpha_loose=0.1):
     fixed_rows_by_alpha = {}
     print("\n[fixed] alpha sweep (PR 포인트)")
     for a in alphas:
-        z_thr = norm.ppf(1 - a)
+        z_thr = -np.log10(a)
 
         def sel_fn(sid, zs, z_thr=z_thr):
             ranked = sorted(zs, key=lambda c: -zs[c])
             s = [c for c in ranked if zs[c] > z_thr]
-            return s if s else ranked[:1]
+            return s
 
         rows, _, _ = eval_selection(cache, sel_fn)
         fixed_rows_by_alpha[a] = rows

@@ -156,11 +156,23 @@ def load_psm(data_dir):
 # Image Generation
 # ════════════════════════════════════════════════════════
 
-def ts_to_image_fast(window):
+def ts_to_image_fast(window, vmin=None, vmax=None):
     """Single channel line plot via PIL ImageDraw (vectorized, ~10x faster than
     the previous per-pixel Python loop -- same visual output, negligible pixel
-    rounding differences)."""
-    w_min, w_max = window.min(), window.max()
+    rounding differences).
+
+    vmin/vmax: 지정하면 윈도우 자기 자신의 min/max 대신 이 고정 범위로 정규화한다.
+    (2026-09-17 감사에서 확정: 기본 동작인 "윈도우별 자기 min/max 정규화"는
+    레벨시프트/절대크기 이상을 원천적으로 구분 못한다 -- 모양이 같고 절대값만
+    다른 두 윈도우가 정규화 후 픽셀 단위로 완전히 동일한 이미지가 됨을 직접
+    검증함. vmin/vmax에 채널의 train min/max를 넘기면 절대 크기 정보가 보존된다.
+    기존 33개 파일이 이 함수를 인자 없이 호출하므로, 기본값(None)은 기존 동작을
+    그대로 유지해 하위호환을 깨지 않는다 -- 새 코드(K30)만 명시적으로 vmin/vmax를
+    넘겨 옵트인한다."""
+    if vmin is None or vmax is None:
+        w_min, w_max = window.min(), window.max()
+    else:
+        w_min, w_max = vmin, vmax
     normed = (window - w_min) / (w_max - w_min + 1e-8)
     n = len(normed)
 
