@@ -1,0 +1,20 @@
+DEVICE: mps
+잘 보이는 GT 채널(DINOv2 눈금 높이 ≥ 0.3)마다: 보정 spike 최댓값 vs dt / 그 채널 갑작스러움 최댓값 vs st
+machine-1-2 [23093,23115) 22틱    (dt 4.8, st 25.0) | ch6 높이0.48 spike 1.8 갑작 5.4 → spike 점수 + 갑작스러움 / ch18 높이0.54 spike 3.1 갑작 54.3 → spike 점수 / ch20 높이0.54 spike 3.4 갑작 54.2 → spike 점수 / ch21 높이0.96 spike 3.5 갑작 95.8 → spike 점수 / ch22 높이0.79 spike 2.6 갑작 79.2 → spike 점수 / ch27 높이0.99 spike 3.6 갑작 99.1 → spike 점수 / ch30 높이0.96 spike 3.3 갑작 95.7 → spike 점수
+machine-1-6 [5708,5713) 5틱       (dt 4.8, st 3.7) | ch8 높이0.48 spike 3.8 갑작 25.3 → spike 점수 / ch9 높이0.86 spike 4.7 갑작 85.8 → spike 점수 / ch10 높이0.81 spike 4.6 갑작 81.4 → spike 점수 / ch12 높이0.72 spike 3.8 갑작 23.6 → spike 점수
+machine-1-6 [16718,16721) 3틱     (dt 4.8, st 3.7) | ch9 높이0.65 spike 3.9 갑작 64.6 → spike 점수 / ch10 높이0.61 spike 4.7 갑작 61.0 → spike 점수 / ch12 높이0.41 spike 2.4 갑작 7.1 → spike 점수
+machine-1-6 [22417,22420) 3틱     (dt 4.8, st 3.7) | ch10 높이0.86 spike 3.9 갑작 85.5 → spike 점수 / ch12 높이0.64 spike 3.8 갑작 64.0 → spike 점수
+machine-1-8 [8317,8320) 3틱       (dt 4.4, st 12.5) | ch14 높이0.75 spike 3.2 갑작 50.0 → spike 점수
+machine-2-4 [9473,9505) 32틱      (dt 4.1, st 11.3) | ch11 높이0.59 spike 3.0 갑작 40.5 → spike 점수
+machine-2-7 [6030,6034) 4틱       (dt 4.0, st 7.4) | ch33 높이2.46 spike 3.9 갑작 246.9 → spike 점수
+machine-2-7 [14934,14938) 4틱     (dt 4.0, st 7.4) | ch33 높이0.80 spike 3.4 갑작 79.6 → spike 점수
+machine-3-10 [2875,2951) 76틱     (dt 3.5, st 2.8) | 
+machine-3-2 [135,161) 26틱        (dt 4.4, st 10.2) | ch11 높이0.74 spike 2.3 갑작 74.0 → spike 점수 / ch12 높이0.53 spike 1.9 갑작 52.6 → spike 점수
+machine-3-2 [3080,3917) 837틱     (dt 4.4, st 10.2) | ch8 높이0.43 spike 2.7 갑작 42.6 → spike 점수 / ch12 높이0.37 spike 3.0 갑작 36.8 → spike 점수 / ch13 높이0.98 spike 3.8 갑작 97.5 → spike 점수
+machine-3-2 [9199,9204) 5틱       (dt 4.4, st 10.2) | ch13 높이0.87 spike 4.3 갑작 86.8 → spike 점수
+machine-3-2 [15577,15582) 5틱     (dt 4.4, st 10.2) | 
+machine-3-2 [23059,23062) 3틱     (dt 4.4, st 10.2) | ch8 높이0.46 spike 1.2 갑작 46.0 → spike 점수 / ch12 높이0.42 spike 1.7 갑작 42.1 → spike 점수 / ch15 높이0.65 spike 1.0 갑작 36.2 → spike 점수
+machine-3-3 [19081,19088) 7틱     (dt 4.0, st 5.4) | 
+machine-3-5 [18426,18430) 4틱     (dt 4.4, st 6.2) | ch16 높이3.76 spike 2.2 갑작 376.1 → spike 점수
+machine-3-8 [21405,21548) 143틱   (dt 4.0, st 16.0) | ch9 높이1.43 spike 3.8 갑작 143.2 → spike 점수 / ch12 높이0.72 spike 2.0 갑작 72.0 → spike 점수
+machine-3-9 [5361,5487) 126틱     (dt 3.1, st 25.0) | ch32 높이1.50 spike 1.1 갑작 3.4 → spike 점수 + 갑작스러움 / ch33 높이1.24 spike 4.7 갑작 22.4 → 갑작스러움

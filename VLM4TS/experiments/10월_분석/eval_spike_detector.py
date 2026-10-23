@@ -23,7 +23,7 @@ def suddenness(te, tr):
     dev = (df - med).abs()
     mad = dev.rolling(201, center=True, min_periods=50).median()
     floor = 0.01 * (tr.max(0) - tr.min(0))
-    noise = np.maximum(1.4826 * mad.values, np.where(floor > 0, floor, 1e-6))
+    noise = np.maximum(1.4826 * mad.values, np.where(floor > 0, floor, 0.01))   # train 상수 채널: 0~1 눈금의 1% (2026-10-20, 원래 1e-6)
     return (dev.values / noise).T
 
 

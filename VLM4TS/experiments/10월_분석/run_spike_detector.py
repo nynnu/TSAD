@@ -3,6 +3,7 @@
   그래프(224틱, 비중첩, train min/max 정규화) → DINOv2 → patch 256 × 768 → spike 방향 점수
   → 열(14틱)마다 16행 중 최고 점수 → 틱별 점수 → 38채널 중 최고 = 그 시점 점수
 결과: spike_scores/{entity}.npz (scores: (38, T) 채널별, combined: (T,))
+  2026-10-20: train 상수인데 test에서 움직이는 채널은 0~1 눈금 (spike_scores_const01에서 합침, 원본 백업 spike_scores_orig/)
 """
 import pickle
 import sys
@@ -34,8 +35,10 @@ def main():
         scores = np.full((C, T), np.nan, dtype=np.float32)
         for ch in range(C):
             g_min, g_max = float(tr[:, ch].min()), float(tr[:, ch].max())
-            if g_max - g_min < 1e-6:                                    # train에서 상수인 채널은 그림이 의미 없음
-                continue
+            if g_max - g_min < 1e-6:                                    # train에서 상수인 채널
+                if np.ptp(te[:, ch]) < 1e-6:                            # test에서도 상수면 그림이 의미 없음
+                    continue
+                g_min, g_max = 0.0, 1.0                                 # test에서 움직이면 0~1 눈금 (2026-10-20, SMD는 원래 0~1 정규화)
             imgs = [ts_to_image_global(te[w * WIN:(w + 1) * WIN, ch], g_min, g_max) for w in range(nwin)]
             for s0 in range(0, nwin, 64):
                 _, pt, _ = extract(model, imgs[s0:s0 + 64])
