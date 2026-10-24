@@ -28,6 +28,7 @@ point-wise Max-F1(논문 Max-F1과 같은 정의)을 각각 계산한다.
   python experiment_stage1_k4_adaptive.py --entity machine-1-1 --alpha 0.1
 """
 import argparse
+import hashlib
 import json
 import time
 import sys
@@ -50,7 +51,8 @@ OUT_DIR.mkdir(parents=True, exist_ok=True)
 SMD_DIR = BASE / "mv_data" / "SMD"
 
 STRIDE, WIN = 56, 224
-N_BANK, N_CALIB = 60, 30
+N_BANK, N_CALIB = 60, 120
+CACHE_VERSION = "empirical-tail-wide-range-v3"
 
 cm.DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -61,14 +63,52 @@ def constant_channels(train, eps=1e-3):
 
 
 def _bank_and_calib_idx(n_windows):
+    if n_windows < N_BANK + N_CALIB:
+        raise ValueError(
+            f"Need at least {N_BANK + N_CALIB} train windows for {N_BANK} bank and {N_CALIB} calibration windows, got {n_windows}."
+        )
     bank_idx = set(np.linspace(0, n_windows - 1, min(N_BANK, n_windows)).astype(int).tolist())
     fine = np.linspace(0, n_windows - 1, min(N_BANK + N_CALIB + 20, n_windows)).astype(int)
     calib_idx = [i for i in fine.tolist() if i not in bank_idx][:N_CALIB]
+    if len(calib_idx) < N_CALIB:
+        raise ValueError(f"Could not construct {N_CALIB} independent calibration windows, got {len(calib_idx)}.")
     return sorted(bank_idx), calib_idx
 
 
+def _train_image_range(train_channel):
+    """Train-only robust display range; preserves level/amplitude changes in test windows."""
+    # Wider train-only quantiles avoid treating normal test-regime variation as
+    # an OOD clipped image while still retaining absolute level information.
+    lo, hi = np.quantile(train_channel, [0.001, 0.999])
+    if not np.isfinite(lo) or not np.isfinite(hi) or hi - lo < 1e-8:
+        lo, hi = float(np.min(train_channel)), float(np.max(train_channel))
+    if hi - lo < 1e-8:
+        hi = lo + 1.0
+    return float(lo), float(hi)
+
+
+def _robust_location_scale(values):
+    """Median/MAD calibration with an IQR fallback for near-constant normal scores."""
+    center = float(np.median(values))
+    mad_scale = float(1.4826 * np.median(np.abs(values - center)))
+    iqr_scale = float((np.quantile(values, 0.75) - np.quantile(values, 0.25)) / 1.349)
+    return center, max(mad_scale, iqr_scale, 1e-6)
+
+
+def _tail_score(value, calib_sums):
+    """Smoothed empirical upper-tail score; no Gaussian score-distribution assumption."""
+    p_value = (1 + np.count_nonzero(calib_sums >= value)) / (len(calib_sums) + 1)
+    return float(-np.log10(p_value))
+
+
+def _train_fingerprint(train):
+    """Keep cached embeddings tied to the exact train array, not just its entity name."""
+    data = np.ascontiguousarray(train)
+    return hashlib.sha256(data.view(np.uint8)).hexdigest()[:16]
+
+
 def get_or_build_channel_calib(entity, c, train):
-    ent_cache = CACHE_DIR / entity
+    ent_cache = CACHE_DIR / CACHE_VERSION / _train_fingerprint(train) / entity
     ent_cache.mkdir(parents=True, exist_ok=True)
     stats_path = ent_cache / f"ch{c}_stats.json"
     bank_cls_path = ent_cache / f"ch{c}_bank_cls.npy"
@@ -81,7 +121,8 @@ def get_or_build_channel_calib(entity, c, train):
         tr_cls = np.load(bank_cls_path)
         tr_patches = np.load(bank_patches_path)
     else:
-        bank_imgs = [cm.ts_to_image_fast(windows[i]) for i in bank_idx]
+        vmin, vmax = _train_image_range(train[:, c])
+        bank_imgs = [cm.ts_to_image_fast(windows[i], vmin=vmin, vmax=vmax) for i in bank_idx]
         tr_cls, tr_patches = cm.extract_dinov2(bank_imgs, multilayer=False)
         np.save(bank_cls_path, tr_cls)
         np.save(bank_patches_path, tr_patches)
@@ -89,13 +130,21 @@ def get_or_build_channel_calib(entity, c, train):
     if stats_path.exists():
         stats = json.loads(stats_path.read_text(encoding="utf-8"))
     else:
-        calib_imgs = [cm.ts_to_image_fast(windows[i]) for i in calib_idx]
+        if not calib_idx:
+            raise ValueError(f"No calibration windows available for {entity} channel {c}.")
+        vmin, vmax = _train_image_range(train[:, c])
+        calib_imgs = [cm.ts_to_image_fast(windows[i], vmin=vmin, vmax=vmax) for i in calib_idx]
         ca_cls, ca_patches = cm.extract_dinov2(calib_imgs, multilayer=False)
         sc = cm.knn_patch_score(tr_patches, ca_patches, tr_cls, ca_cls)
         calib_sums = sc["sum"]
-        stats = {"mu": float(calib_sums.mean()), "sigma": float(calib_sums.std() + 1e-8)}
+        center, scale = _robust_location_scale(calib_sums)
+        stats = {"center": center, "scale": scale, "vmin": vmin, "vmax": vmax,
+                 "calib_sums": np.sort(calib_sums).tolist(), "cache_version": CACHE_VERSION,
+                 "n_calib": len(calib_sums)}
         stats_path.write_text(json.dumps(stats, indent=2), encoding="utf-8")
 
+    if stats.get("cache_version") != CACHE_VERSION:
+        raise RuntimeError(f"Stale calibration cache for {entity} ch{c}; remove {ent_cache} and rerun.")
     return tr_cls, tr_patches, stats
 
 
@@ -119,9 +168,17 @@ def _ov(a, b):
 def eval_f1(gt_ivs, pred_ivs):
     if not gt_ivs:
         return 0.0
-    TP = sum(1 for d in pred_ivs if any(_ov(d, a) for a in gt_ivs))
-    FP = sum(1 for d in pred_ivs if not any(_ov(d, a) for a in gt_ivs))
-    FN = sum(1 for a in gt_ivs if not any(_ov(a, d) for d in pred_ivs))
+    # One-to-one matching: splitting one GT interval into many predictions must
+    # not create many true positives.
+    unmatched_gt = set(range(len(gt_ivs)))
+    TP = 0
+    for pred in pred_ivs:
+        match = next((i for i in unmatched_gt if _ov(pred, gt_ivs[i])), None)
+        if match is not None:
+            TP += 1
+            unmatched_gt.remove(match)
+    FP = len(pred_ivs) - TP
+    FN = len(unmatched_gt)
     p = TP / (TP + FP) if (TP + FP) else 0
     r = TP / (TP + FN) if (TP + FN) else 0
     return 2 * p * r / (p + r) if (p + r) else 0
@@ -136,11 +193,11 @@ def pt_f1(labels, pred):
     return 2 * p * r / (p + r) if (p + r) else 0
 
 
-def win_to_ts(win_scores, n_ts):
+def win_to_ts(win_scores, n_ts, starts):
     scores = np.zeros(n_ts)
     counts = np.zeros(n_ts)
     for i, s in enumerate(win_scores):
-        st = i * STRIDE
+        st = starts[i]
         en = min(st + WIN, n_ts)
         scores[st:en] += s
         counts[st:en] += 1
@@ -156,10 +213,14 @@ def score_entity(entity, alpha):
     labels = np.loadtxt(SMD_DIR / "test_label" / f"{entity}.txt", delimiter=",").astype(int)
     T_test = len(test)
     degenerate = constant_channels(train)
-    z_thr = norm.ppf(1 - alpha)
+    z_thr = -np.log10(alpha)
 
     entity_channel_calib = {}
+    if T_test < WIN:
+        raise ValueError(f"Test series ({T_test}) is shorter than WIN ({WIN}).")
     starts = list(range(0, T_test - WIN + 1, STRIDE))
+    if starts[-1] != T_test - WIN:
+        starts.append(T_test - WIN)  # do not silently leave the final tail unscored
     n_win = len(starts)
     win_score = np.zeros(n_win)  # 윈도우당: alpha 넘는 채널 개수
 
@@ -172,17 +233,17 @@ def score_entity(entity, alpha):
             if c not in entity_channel_calib:
                 entity_channel_calib[c] = get_or_build_channel_calib(entity, c, train)
             tr_cls, tr_patches, stats = entity_channel_calib[c]
-            test_img = cm.ts_to_image_fast(window[:, c])
+            test_img = cm.ts_to_image_fast(window[:, c], vmin=stats["vmin"], vmax=stats["vmax"])
             te_cls, te_patches = cm.extract_dinov2([test_img], multilayer=False)
             sc = cm.knn_patch_score(tr_patches, te_patches, tr_cls, te_cls)
-            z = (float(sc["sum"][0]) - stats["mu"]) / stats["sigma"]
+            z = _tail_score(float(sc["sum"][0]), np.asarray(stats["calib_sums"]))
             if z > z_thr:
                 n_selected += 1
         win_score[wi] = n_selected
         if wi % 20 == 0:
             print(f"    window {wi}/{n_win} ({time.time()-t0:.0f}s elapsed)", flush=True)
 
-    inter = win_to_ts(win_score, T_test)
+    inter = win_to_ts(win_score, T_test, starts)
     gt_ivs = get_intervals(labels)
 
     all_ws = np.array([inter[s:s + WIN].mean() for s in starts])
