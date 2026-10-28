@@ -152,8 +152,14 @@ def run_machine(e, data, cache, dino_fn):
     X = calib(drop_flat(spike[:, :T], te, tr)) + calib(drop_flat(height[:, :T], te, tr))   # spike 점수 + 높이 점수
     D = deseason(tr, te)[:, :T]; Dm = D.max(0)
     fin = np.isfinite(X); Xv = np.where(fin, X, -np.inf)
-    mask = (Xv > np.percentile(X[fin], 100 - INTERVAL_SPIKE)).any(0) | (Dm > np.percentile(Dm, 100 - INTERVAL_DESEASON))
+    ix, idd = np.percentile(X[fin], 100 - INTERVAL_SPIKE), np.percentile(Dm, 100 - INTERVAL_DESEASON)
+    mask = (Xv > ix).any(0) | (Dm > idd)
     pool = X[:, ::P]; tx = np.percentile(pool[np.isfinite(pool)], 100 - CHANNEL_PCT); td = np.percentile(D, 100 - CHANNEL_PCT)
+    # 평가용 점수 (SOTA 지표): 두 점수를 각자 threshold로 나눠 큰 값 → 1 초과 = 위 규칙과 같음
+    tick_score = np.maximum(Xv.max(0) / ix, Dm / idd)                     # (T,)  1 초과 = 이상 구간
+    channel_score = np.maximum(Xv / tx, D / td)                           # (C, T) 1 초과 = 채널 후보
+    np.savez_compressed(cache.parent / "scores" / f"{e}.npz", tick_score=tick_score.astype(np.float32),
+                        channel_score=channel_score.astype(np.float32))
     intervals = []
     for a, b in merge_close(segs(mask)):
         xs, ds = Xv[:, a:b].max(1), D[:, a:b].max(1); chans = []
@@ -180,6 +186,7 @@ def main():
     ap.add_argument("--out", type=Path, default=HERE / "output"); ap.add_argument("--cache", type=Path, default=HERE / "cache")
     ap.add_argument("--machines", nargs="*", help="생략하면 test/ 안의 전부")
     a = ap.parse_args(); a.out.mkdir(parents=True, exist_ok=True); a.cache.mkdir(parents=True, exist_ok=True)
+    (a.cache.parent / "scores").mkdir(exist_ok=True)
     holder = {}
     dino_fn = lambda: holder.setdefault("m", load_dino())
     for e in a.machines or sorted(p.stem for p in (a.data / "test").glob("*.txt")):

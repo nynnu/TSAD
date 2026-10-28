@@ -72,7 +72,7 @@ def make_image(norm_te, w0, w1, a, b, all_cands, page, zoom):
         v = norm_te[w0:w1, c]; lo, hi = stage1_scale(v); M.append((v - lo) / (hi - lo))
     h.imshow(np.array(M), aspect="auto", cmap="viridis", vmin=0, vmax=1, extent=(w0 - 0.5, w1 - 0.5, norm_te.shape[1] - 0.5, -0.5))
     h.set_yticks([]); h.tick_params(axis="x", labelsize=6, pad=1)
-    h.set_title("All channels, rows = channel 0–37 top to bottom; red strip = Stage-1 candidates", fontsize=8)
+    h.set_title(f"All channels, rows = channel 0–{norm_te.shape[1] - 1} top to bottom; red strip = Stage-1 candidates", fontsize=8)
     sub = gs[1].subgridspec(n, 2 if use_zoom else 1, hspace=0.0, wspace=0.02, **(dict(width_ratios=[1.45, 1]) if use_zoom else {}))
     for i, c in enumerate(page):
         ch = c["channel"]; ax = fig.add_subplot(sub[i, 0])
@@ -93,14 +93,14 @@ def make_image(norm_te, w0, w1, a, b, all_cands, page, zoom):
 
 
 # ── VLM ────────────────────────────────────────────────────────────
-def build_prompt(a, b, w0, w1, page, all_ids, page_i, n_pages, use_zoom):
+def build_prompt(a, b, w0, w1, page, all_ids, page_i, n_pages, use_zoom, n_ch):
     zoom_txt = (f"- Right column: an enlarged view of the orange interval with {ZOOM_PAD} ticks on each side, for the same channel. "
                 "Its vertical axis follows the same rule, applied only to the values inside the zoom.\n") if use_zoom else ""
-    return f"""You are validating Stage-1 anomaly proposals in a multivariate server-machine time series (38 channels).
+    return f"""You are validating Stage-1 anomaly proposals in a multivariate server-machine time series ({n_ch} channels).
 Stage 1 nominated channels {all_ids}. This is page {page_i + 1} of {n_pages}; decide ONLY the channels on this page: {page}.
 
 How the image is drawn:
-- Top heatmap: all 38 channels over the window [{w0}, {w1}). Rows are channels 0 to 37 from top to bottom. The red strip at the left marks Stage-1 candidate channels.
+- Top heatmap: all {n_ch} channels over the window [{w0}, {w1}). Rows are channels 0 to {n_ch - 1} from top to bottom. The red strip at the left marks Stage-1 candidate channels.
 - Each lower row: the full trace of one candidate channel over the same window. Its name is at the left.
 - Orange shading [{a}, {b}): where Stage-1 anomaly scores were high. Ticks outside it are context: they are NOT guaranteed to be normal, and an anomaly may continue into them.
 {zoom_txt}- Vertical axis of every trace: 0 = that channel's training minimum, 1 = training maximum (red dashed lines). If the values inside the plotted range go beyond the training range, the axis is widened to include them, so the axis numbers show how many training ranges a value reaches.
@@ -121,9 +121,13 @@ def call_vlm(client, prompt, png):
 
 
 def parse(raw, page):
-    m = re.search(r"\{.*\}", raw, re.S)
-    chans = json.loads(m.group(0)).get("anomalous_channels", []) if m else []
-    return sorted({int(c) for c in chans if int(c) in set(page)})
+    """VLM 답 → (고른 채널, 형식 정상 여부). 형식이 깨져도 멈추지 않고 ok=False로 남김"""
+    m = re.search(r"\{.*\}", raw or "", re.S)
+    try:
+        chans = json.loads(m.group(0)).get("anomalous_channels", [])
+    except (AttributeError, json.JSONDecodeError):
+        return [], False
+    return sorted({int(x) for c in chans for x in re.findall(r"\d+", str(c)) if int(x) in set(page)}), True
 
 
 # ── 실행 ───────────────────────────────────────────────────────────
@@ -152,8 +156,9 @@ def run_machine(e, data, out, zoom, order, client):
             if client is None:
                 continue
             if key not in done:
-                raw = call_vlm(client, build_prompt(a, b, w0, w1, ids, all_ids, p, len(pages), use_zoom), png)
-                done[key] = dict(key=key, page=ids, raw=raw, pred=parse(raw, ids))
+                raw = call_vlm(client, build_prompt(a, b, w0, w1, ids, all_ids, p, len(pages), use_zoom, te.shape[1]), png)
+                pred, ok = parse(raw, ids)
+                done[key] = dict(key=key, page=ids, raw=raw, pred=pred, parse_ok=ok)
                 with ck_path.open("a", encoding="utf-8") as f:
                     f.write(json.dumps(done[key], ensure_ascii=False) + "\n")
             picked |= set(done[key]["pred"])
@@ -162,7 +167,9 @@ def run_machine(e, data, out, zoom, order, client):
     if client is not None:
         res = dict(s1, intervals=kept, stage2=dict(model=MODEL, zoom=zoom, order=order, page=PAGE))
         (out / f"{e}.json").write_text(json.dumps(res, ensure_ascii=False, indent=1), encoding="utf-8")
-        print(f"{e}: Stage1 구간 {len(s1['intervals'])}개 → Stage2 남은 구간 {len(kept)}개", flush=True)
+        bad = sum(not r.get("parse_ok", True) for r in done.values())
+        print(f"{e}: Stage1 구간 {len(s1['intervals'])}개 → Stage2 남은 구간 {len(kept)}개"
+              + (f" (VLM 답 형식 오류 {bad}건)" if bad else ""), flush=True)
     else:
         print(f"{e}: 그림 {sum(1 for _ in img_dir.glob('*.png'))}장 저장 (VLM 호출 안 함)", flush=True)
 
@@ -170,7 +177,7 @@ def run_machine(e, data, out, zoom, order, client):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--data", default=str(BASE / "mv_data" / "SMD"))
-    ap.add_argument("--machines", nargs="+", required=True)
+    ap.add_argument("--machines", nargs="*", help="생략하면 --data의 test/ 중 Stage1 결과가 있는 machine 전부")
     ap.add_argument("--zoom", choices=["none", "a", "b"], default="b")
     ap.add_argument("--order", choices=["score", "channel"], default="score")
     ap.add_argument("--run", action="store_true", help="VLM 호출 (없으면 그림만 저장)")
@@ -181,9 +188,10 @@ def main():
         from dotenv import load_dotenv
         from openai import OpenAI
         load_dotenv(BASE / ".env", override=True)
-        client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
+        client = OpenAI(api_key=os.environ["OPENAI_API_KEY"], max_retries=8, timeout=120)   # 속도 제한·일시 오류는 SDK가 기다렸다 재시도
     plt.rcParams["font.family"] = "DejaVu Sans"
-    for e in args.machines:
+    machines = args.machines or sorted(p.stem for p in (Path(args.data) / "test").glob("*.txt") if (STAGE1_OUT / f"{p.stem}.json").exists())
+    for e in machines:
         run_machine(e, Path(args.data), out, args.zoom, args.order, client)
 
 

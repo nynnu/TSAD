@@ -1,0 +1,1866 @@
+{
+ "machine": "machine-2-4",
+ "length": 23689,
+ "n_channels": 38,
+ "config": {
+  "interval": "(spike+height) top 0.2% OR deseason top 1.0%, merged if gap <= 60",
+  "channel": "(spike+height) or deseason > machine top 10.0%",
+  "zoom_half_width": 30,
+  "spike_threshold": 2.2091,
+  "deseason_threshold": 1.5669
+ },
+ "intervals": [
+  {
+   "start": 1008,
+   "end": 1022,
+   "channels": [
+    {
+     "channel": 14,
+     "source": "spike",
+     "spike_score": 25.045,
+     "deseason_score": 1.445,
+     "zoom_center": 1015,
+     "zoom": [
+      985,
+      1045
+     ]
+    },
+    {
+     "channel": 13,
+     "source": "both",
+     "spike_score": 18.165,
+     "deseason_score": 2.598,
+     "zoom_center": 1015,
+     "zoom": [
+      985,
+      1045
+     ]
+    },
+    {
+     "channel": 8,
+     "source": "both",
+     "spike_score": 15.13,
+     "deseason_score": 1.945,
+     "zoom_center": 1015,
+     "zoom": [
+      985,
+      1045
+     ]
+    },
+    {
+     "channel": 12,
+     "source": "spike",
+     "spike_score": 11.869,
+     "deseason_score": 0.738,
+     "zoom_center": 1015,
+     "zoom": [
+      985,
+      1045
+     ]
+    }
+   ]
+  },
+  {
+   "start": 2086,
+   "end": 2114,
+   "channels": [
+    {
+     "channel": 13,
+     "source": "both",
+     "spike_score": 20.012,
+     "deseason_score": 2.138,
+     "zoom_center": 2093,
+     "zoom": [
+      2063,
+      2123
+     ]
+    },
+    {
+     "channel": 12,
+     "source": "spike",
+     "spike_score": 6.035,
+     "deseason_score": 0.368,
+     "zoom_center": 2093,
+     "zoom": [
+      2063,
+      2123
+     ]
+    },
+    {
+     "channel": 14,
+     "source": "spike",
+     "spike_score": 5.72,
+     "deseason_score": 0.297,
+     "zoom_center": 2107,
+     "zoom": [
+      2077,
+      2137
+     ]
+    },
+    {
+     "channel": 8,
+     "source": "spike",
+     "spike_score": 5.459,
+     "deseason_score": 0.555,
+     "zoom_center": 2107,
+     "zoom": [
+      2077,
+      2137
+     ]
+    }
+   ]
+  },
+  {
+   "start": 3528,
+   "end": 3542,
+   "channels": [
+    {
+     "channel": 13,
+     "source": "both",
+     "spike_score": 17.463,
+     "deseason_score": 1.797,
+     "zoom_center": 3535,
+     "zoom": [
+      3505,
+      3565
+     ]
+    },
+    {
+     "channel": 14,
+     "source": "spike",
+     "spike_score": 10.267,
+     "deseason_score": 0.199,
+     "zoom_center": 3535,
+     "zoom": [
+      3505,
+      3565
+     ]
+    },
+    {
+     "channel": 8,
+     "source": "spike",
+     "spike_score": 8.944,
+     "deseason_score": 0.714,
+     "zoom_center": 3535,
+     "zoom": [
+      3505,
+      3565
+     ]
+    },
+    {
+     "channel": 12,
+     "source": "spike",
+     "spike_score": 4.754,
+     "deseason_score": 0.328,
+     "zoom_center": 3535,
+     "zoom": [
+      3505,
+      3565
+     ]
+    }
+   ]
+  },
+  {
+   "start": 4564,
+   "end": 4578,
+   "channels": [
+    {
+     "channel": 15,
+     "source": "both",
+     "spike_score": 22.893,
+     "deseason_score": 5.285,
+     "zoom_center": 4571,
+     "zoom": [
+      4541,
+      4601
+     ]
+    },
+    {
+     "channel": 10,
+     "source": "both",
+     "spike_score": 15.289,
+     "deseason_score": 3.788,
+     "zoom_center": 4571,
+     "zoom": [
+      4541,
+      4601
+     ]
+    },
+    {
+     "channel": 5,
+     "source": "both",
+     "spike_score": 10.586,
+     "deseason_score": 3.547,
+     "zoom_center": 4571,
+     "zoom": [
+      4541,
+      4601
+     ]
+    },
+    {
+     "channel": 6,
+     "source": "both",
+     "spike_score": 9.174,
+     "deseason_score": 4.447,
+     "zoom_center": 4571,
+     "zoom": [
+      4541,
+      4601
+     ]
+    },
+    {
+     "channel": 21,
+     "source": "deseason",
+     "spike_score": 1.42,
+     "deseason_score": 1.977,
+     "zoom_center": 4564,
+     "zoom": [
+      4534,
+      4594
+     ]
+    },
+    {
+     "channel": 30,
+     "source": "deseason",
+     "spike_score": 0.399,
+     "deseason_score": 1.989,
+     "zoom_center": 4564,
+     "zoom": [
+      4534,
+      4594
+     ]
+    }
+   ]
+  },
+  {
+   "start": 4970,
+   "end": 4984,
+   "channels": [
+    {
+     "channel": 13,
+     "source": "both",
+     "spike_score": 17.576,
+     "deseason_score": 2.156,
+     "zoom_center": 4977,
+     "zoom": [
+      4947,
+      5007
+     ]
+    },
+    {
+     "channel": 14,
+     "source": "spike",
+     "spike_score": 16.236,
+     "deseason_score": 0.56,
+     "zoom_center": 4977,
+     "zoom": [
+      4947,
+      5007
+     ]
+    },
+    {
+     "channel": 8,
+     "source": "spike",
+     "spike_score": 9.236,
+     "deseason_score": 1.117,
+     "zoom_center": 4977,
+     "zoom": [
+      4947,
+      5007
+     ]
+    },
+    {
+     "channel": 12,
+     "source": "spike",
+     "spike_score": 6.028,
+     "deseason_score": 0.449,
+     "zoom_center": 4977,
+     "zoom": [
+      4947,
+      5007
+     ]
+    }
+   ]
+  },
+  {
+   "start": 5124,
+   "end": 5152,
+   "channels": [
+    {
+     "channel": 0,
+     "source": "spike",
+     "spike_score": 22.83,
+     "deseason_score": 1.258,
+     "zoom_center": 5131,
+     "zoom": [
+      5101,
+      5161
+     ]
+    },
+    {
+     "channel": 14,
+     "source": "both",
+     "spike_score": 8.858,
+     "deseason_score": 4.212,
+     "zoom_center": 5131,
+     "zoom": [
+      5101,
+      5161
+     ]
+    },
+    {
+     "channel": 11,
+     "source": "deseason",
+     "spike_score": 1.609,
+     "deseason_score": 2.993,
+     "zoom_center": 5147,
+     "zoom": [
+      5117,
+      5177
+     ]
+    },
+    {
+     "channel": 25,
+     "source": "deseason",
+     "spike_score": 1.253,
+     "deseason_score": 2.283,
+     "zoom_center": 5151,
+     "zoom": [
+      5121,
+      5181
+     ]
+    }
+   ]
+  },
+  {
+   "start": 6006,
+   "end": 6034,
+   "channels": [
+    {
+     "channel": 33,
+     "source": "both",
+     "spike_score": 34.637,
+     "deseason_score": 1.824,
+     "zoom_center": 6027,
+     "zoom": [
+      5997,
+      6057
+     ]
+    },
+    {
+     "channel": 32,
+     "source": "spike",
+     "spike_score": 2.853,
+     "deseason_score": 0.677,
+     "zoom_center": 6027,
+     "zoom": [
+      5997,
+      6057
+     ]
+    },
+    {
+     "channel": 24,
+     "source": "deseason",
+     "spike_score": -0.61,
+     "deseason_score": 3.515,
+     "zoom_center": 6006,
+     "zoom": [
+      5976,
+      6036
+     ]
+    },
+    {
+     "channel": 25,
+     "source": "deseason",
+     "spike_score": -0.717,
+     "deseason_score": 1.89,
+     "zoom_center": 6006,
+     "zoom": [
+      5976,
+      6036
+     ]
+    }
+   ]
+  },
+  {
+   "start": 6412,
+   "end": 6426,
+   "channels": [
+    {
+     "channel": 13,
+     "source": "both",
+     "spike_score": 19.681,
+     "deseason_score": 2.071,
+     "zoom_center": 6419,
+     "zoom": [
+      6389,
+      6449
+     ]
+    },
+    {
+     "channel": 14,
+     "source": "spike",
+     "spike_score": 14.201,
+     "deseason_score": 0.506,
+     "zoom_center": 6419,
+     "zoom": [
+      6389,
+      6449
+     ]
+    },
+    {
+     "channel": 8,
+     "source": "spike",
+     "spike_score": 10.656,
+     "deseason_score": 1.15,
+     "zoom_center": 6419,
+     "zoom": [
+      6389,
+      6449
+     ]
+    },
+    {
+     "channel": 12,
+     "source": "spike",
+     "spike_score": 9.368,
+     "deseason_score": 0.461,
+     "zoom_center": 6419,
+     "zoom": [
+      6389,
+      6449
+     ]
+    }
+   ]
+  },
+  {
+   "start": 7084,
+   "end": 7098,
+   "channels": [
+    {
+     "channel": 15,
+     "source": "both",
+     "spike_score": 27.459,
+     "deseason_score": 8.021,
+     "zoom_center": 7091,
+     "zoom": [
+      7061,
+      7121
+     ]
+    },
+    {
+     "channel": 10,
+     "source": "both",
+     "spike_score": 20.636,
+     "deseason_score": 7.377,
+     "zoom_center": 7091,
+     "zoom": [
+      7061,
+      7121
+     ]
+    },
+    {
+     "channel": 5,
+     "source": "both",
+     "spike_score": 12.687,
+     "deseason_score": 2.791,
+     "zoom_center": 7091,
+     "zoom": [
+      7061,
+      7121
+     ]
+    },
+    {
+     "channel": 6,
+     "source": "both",
+     "spike_score": 12.379,
+     "deseason_score": 4.105,
+     "zoom_center": 7091,
+     "zoom": [
+      7061,
+      7121
+     ]
+    },
+    {
+     "channel": 22,
+     "source": "spike",
+     "spike_score": 7.227,
+     "deseason_score": 1.101,
+     "zoom_center": 7091,
+     "zoom": [
+      7061,
+      7121
+     ]
+    },
+    {
+     "channel": 27,
+     "source": "spike",
+     "spike_score": 4.164,
+     "deseason_score": -0.261,
+     "zoom_center": 7091,
+     "zoom": [
+      7061,
+      7121
+     ]
+    },
+    {
+     "channel": 30,
+     "source": "spike",
+     "spike_score": 2.569,
+     "deseason_score": 0.091,
+     "zoom_center": 7091,
+     "zoom": [
+      7061,
+      7121
+     ]
+    }
+   ]
+  },
+  {
+   "start": 7462,
+   "end": 7476,
+   "channels": [
+    {
+     "channel": 15,
+     "source": "both",
+     "spike_score": 26.193,
+     "deseason_score": 4.794,
+     "zoom_center": 7469,
+     "zoom": [
+      7439,
+      7499
+     ]
+    },
+    {
+     "channel": 10,
+     "source": "both",
+     "spike_score": 11.456,
+     "deseason_score": 4.196,
+     "zoom_center": 7469,
+     "zoom": [
+      7439,
+      7499
+     ]
+    },
+    {
+     "channel": 22,
+     "source": "both",
+     "spike_score": 4.671,
+     "deseason_score": 1.719,
+     "zoom_center": 7469,
+     "zoom": [
+      7439,
+      7499
+     ]
+    },
+    {
+     "channel": 23,
+     "source": "spike",
+     "spike_score": 3.049,
+     "deseason_score": 0.109,
+     "zoom_center": 7469,
+     "zoom": [
+      7439,
+      7499
+     ]
+    },
+    {
+     "channel": 21,
+     "source": "spike",
+     "spike_score": 2.457,
+     "deseason_score": 1.189,
+     "zoom_center": 7469,
+     "zoom": [
+      7439,
+      7499
+     ]
+    },
+    {
+     "channel": 27,
+     "source": "spike",
+     "spike_score": 2.339,
+     "deseason_score": 0.971,
+     "zoom_center": 7469,
+     "zoom": [
+      7439,
+      7499
+     ]
+    },
+    {
+     "channel": 30,
+     "source": "spike",
+     "spike_score": 2.255,
+     "deseason_score": 1.21,
+     "zoom_center": 7469,
+     "zoom": [
+      7439,
+      7499
+     ]
+    },
+    {
+     "channel": 29,
+     "source": "deseason",
+     "spike_score": 0.107,
+     "deseason_score": 1.952,
+     "zoom_center": 7462,
+     "zoom": [
+      7432,
+      7492
+     ]
+    },
+    {
+     "channel": 35,
+     "source": "deseason",
+     "spike_score": 0.097,
+     "deseason_score": 1.814,
+     "zoom_center": 7462,
+     "zoom": [
+      7432,
+      7492
+     ]
+    },
+    {
+     "channel": 34,
+     "source": "deseason",
+     "spike_score": 0.017,
+     "deseason_score": 1.816,
+     "zoom_center": 7462,
+     "zoom": [
+      7432,
+      7492
+     ]
+    },
+    {
+     "channel": 24,
+     "source": "deseason",
+     "spike_score": -2.226,
+     "deseason_score": 1.954,
+     "zoom_center": 7462,
+     "zoom": [
+      7432,
+      7492
+     ]
+    }
+   ]
+  },
+  {
+   "start": 7854,
+   "end": 7868,
+   "channels": [
+    {
+     "channel": 13,
+     "source": "both",
+     "spike_score": 21.563,
+     "deseason_score": 2.048,
+     "zoom_center": 7861,
+     "zoom": [
+      7831,
+      7891
+     ]
+    },
+    {
+     "channel": 14,
+     "source": "spike",
+     "spike_score": 14.091,
+     "deseason_score": 0.605,
+     "zoom_center": 7861,
+     "zoom": [
+      7831,
+      7891
+     ]
+    },
+    {
+     "channel": 8,
+     "source": "spike",
+     "spike_score": 10.172,
+     "deseason_score": 1.054,
+     "zoom_center": 7861,
+     "zoom": [
+      7831,
+      7891
+     ]
+    },
+    {
+     "channel": 12,
+     "source": "spike",
+     "spike_score": 8.029,
+     "deseason_score": 0.522,
+     "zoom_center": 7861,
+     "zoom": [
+      7831,
+      7891
+     ]
+    }
+   ]
+  },
+  {
+   "start": 9282,
+   "end": 9310,
+   "channels": [
+    {
+     "channel": 13,
+     "source": "both",
+     "spike_score": 17.465,
+     "deseason_score": 2.243,
+     "zoom_center": 9303,
+     "zoom": [
+      9273,
+      9333
+     ]
+    },
+    {
+     "channel": 11,
+     "source": "spike",
+     "spike_score": 4.743,
+     "deseason_score": -0.057,
+     "zoom_center": 9303,
+     "zoom": [
+      9273,
+      9333
+     ]
+    },
+    {
+     "channel": 18,
+     "source": "spike",
+     "spike_score": 2.577,
+     "deseason_score": -0.905,
+     "zoom_center": 9289,
+     "zoom": [
+      9259,
+      9319
+     ]
+    },
+    {
+     "channel": 5,
+     "source": "deseason",
+     "spike_score": 1.229,
+     "deseason_score": 2.558,
+     "zoom_center": 9296,
+     "zoom": [
+      9266,
+      9326
+     ]
+    }
+   ]
+  },
+  {
+   "start": 10724,
+   "end": 10738,
+   "channels": [
+    {
+     "channel": 13,
+     "source": "both",
+     "spike_score": 21.656,
+     "deseason_score": 2.243,
+     "zoom_center": 10731,
+     "zoom": [
+      10701,
+      10761
+     ]
+    },
+    {
+     "channel": 14,
+     "source": "spike",
+     "spike_score": 14.206,
+     "deseason_score": 0.696,
+     "zoom_center": 10731,
+     "zoom": [
+      10701,
+      10761
+     ]
+    },
+    {
+     "channel": 8,
+     "source": "spike",
+     "spike_score": 9.584,
+     "deseason_score": 1.355,
+     "zoom_center": 10731,
+     "zoom": [
+      10701,
+      10761
+     ]
+    },
+    {
+     "channel": 12,
+     "source": "spike",
+     "spike_score": 6.812,
+     "deseason_score": 0.53,
+     "zoom_center": 10731,
+     "zoom": [
+      10701,
+      10761
+     ]
+    }
+   ]
+  },
+  {
+   "start": 12166,
+   "end": 12180,
+   "channels": [
+    {
+     "channel": 13,
+     "source": "both",
+     "spike_score": 19.207,
+     "deseason_score": 2.317,
+     "zoom_center": 12173,
+     "zoom": [
+      12143,
+      12203
+     ]
+    },
+    {
+     "channel": 14,
+     "source": "spike",
+     "spike_score": 15.389,
+     "deseason_score": 0.743,
+     "zoom_center": 12173,
+     "zoom": [
+      12143,
+      12203
+     ]
+    },
+    {
+     "channel": 8,
+     "source": "spike",
+     "spike_score": 8.888,
+     "deseason_score": 1.224,
+     "zoom_center": 12173,
+     "zoom": [
+      12143,
+      12203
+     ]
+    },
+    {
+     "channel": 12,
+     "source": "spike",
+     "spike_score": 6.464,
+     "deseason_score": 0.453,
+     "zoom_center": 12173,
+     "zoom": [
+      12143,
+      12203
+     ]
+    }
+   ]
+  },
+  {
+   "start": 13608,
+   "end": 13622,
+   "channels": [
+    {
+     "channel": 14,
+     "source": "spike",
+     "spike_score": 16.322,
+     "deseason_score": 0.682,
+     "zoom_center": 13615,
+     "zoom": [
+      13585,
+      13645
+     ]
+    },
+    {
+     "channel": 13,
+     "source": "both",
+     "spike_score": 16.007,
+     "deseason_score": 2.216,
+     "zoom_center": 13615,
+     "zoom": [
+      13585,
+      13645
+     ]
+    },
+    {
+     "channel": 8,
+     "source": "spike",
+     "spike_score": 8.976,
+     "deseason_score": 1.063,
+     "zoom_center": 13615,
+     "zoom": [
+      13585,
+      13645
+     ]
+    }
+   ]
+  },
+  {
+   "start": 14924,
+   "end": 14938,
+   "channels": [
+    {
+     "channel": 33,
+     "source": "spike",
+     "spike_score": 21.958,
+     "deseason_score": 1.431,
+     "zoom_center": 14931,
+     "zoom": [
+      14901,
+      14961
+     ]
+    }
+   ]
+  },
+  {
+   "start": 15050,
+   "end": 15064,
+   "channels": [
+    {
+     "channel": 13,
+     "source": "both",
+     "spike_score": 20.314,
+     "deseason_score": 2.4,
+     "zoom_center": 15057,
+     "zoom": [
+      15027,
+      15087
+     ]
+    },
+    {
+     "channel": 14,
+     "source": "spike",
+     "spike_score": 14.418,
+     "deseason_score": 0.669,
+     "zoom_center": 15057,
+     "zoom": [
+      15027,
+      15087
+     ]
+    },
+    {
+     "channel": 12,
+     "source": "spike",
+     "spike_score": 9.607,
+     "deseason_score": 0.524,
+     "zoom_center": 15057,
+     "zoom": [
+      15027,
+      15087
+     ]
+    },
+    {
+     "channel": 8,
+     "source": "spike",
+     "spike_score": 8.314,
+     "deseason_score": 1.173,
+     "zoom_center": 15057,
+     "zoom": [
+      15027,
+      15087
+     ]
+    },
+    {
+     "channel": 6,
+     "source": "both",
+     "spike_score": 2.516,
+     "deseason_score": 5.373,
+     "zoom_center": 15057,
+     "zoom": [
+      15027,
+      15087
+     ]
+    },
+    {
+     "channel": 5,
+     "source": "deseason",
+     "spike_score": 1.319,
+     "deseason_score": 8.221,
+     "zoom_center": 15063,
+     "zoom": [
+      15033,
+      15093
+     ]
+    }
+   ]
+  },
+  {
+   "start": 15624,
+   "end": 15638,
+   "channels": [
+    {
+     "channel": 15,
+     "source": "both",
+     "spike_score": 24.949,
+     "deseason_score": 5.401,
+     "zoom_center": 15631,
+     "zoom": [
+      15601,
+      15661
+     ]
+    },
+    {
+     "channel": 10,
+     "source": "both",
+     "spike_score": 16.881,
+     "deseason_score": 2.462,
+     "zoom_center": 15631,
+     "zoom": [
+      15601,
+      15661
+     ]
+    },
+    {
+     "channel": 22,
+     "source": "both",
+     "spike_score": 11.103,
+     "deseason_score": 8.473,
+     "zoom_center": 15631,
+     "zoom": [
+      15601,
+      15661
+     ]
+    },
+    {
+     "channel": 3,
+     "source": "spike",
+     "spike_score": 5.542,
+     "deseason_score": 1.069,
+     "zoom_center": 15631,
+     "zoom": [
+      15601,
+      15661
+     ]
+    },
+    {
+     "channel": 21,
+     "source": "spike",
+     "spike_score": 3.317,
+     "deseason_score": 0.192,
+     "zoom_center": 15631,
+     "zoom": [
+      15601,
+      15661
+     ]
+    }
+   ]
+  },
+  {
+   "start": 15708,
+   "end": 15750,
+   "channels": [
+    {
+     "channel": 15,
+     "source": "both",
+     "spike_score": 19.886,
+     "deseason_score": 7.994,
+     "zoom_center": 15715,
+     "zoom": [
+      15685,
+      15745
+     ]
+    },
+    {
+     "channel": 10,
+     "source": "both",
+     "spike_score": 14.108,
+     "deseason_score": 6.748,
+     "zoom_center": 15715,
+     "zoom": [
+      15685,
+      15745
+     ]
+    },
+    {
+     "channel": 22,
+     "source": "both",
+     "spike_score": 13.511,
+     "deseason_score": 7.612,
+     "zoom_center": 15715,
+     "zoom": [
+      15685,
+      15745
+     ]
+    },
+    {
+     "channel": 5,
+     "source": "both",
+     "spike_score": 8.73,
+     "deseason_score": 2.237,
+     "zoom_center": 15715,
+     "zoom": [
+      15685,
+      15745
+     ]
+    },
+    {
+     "channel": 6,
+     "source": "both",
+     "spike_score": 7.081,
+     "deseason_score": 7.603,
+     "zoom_center": 15715,
+     "zoom": [
+      15685,
+      15745
+     ]
+    },
+    {
+     "channel": 23,
+     "source": "spike",
+     "spike_score": 2.505,
+     "deseason_score": -0.616,
+     "zoom_center": 15715,
+     "zoom": [
+      15685,
+      15745
+     ]
+    },
+    {
+     "channel": 25,
+     "source": "spike",
+     "spike_score": 2.378,
+     "deseason_score": -0.608,
+     "zoom_center": 15729,
+     "zoom": [
+      15699,
+      15759
+     ]
+    },
+    {
+     "channel": 20,
+     "source": "spike",
+     "spike_score": 2.36,
+     "deseason_score": 0.124,
+     "zoom_center": 15715,
+     "zoom": [
+      15685,
+      15745
+     ]
+    }
+   ]
+  },
+  {
+   "start": 16520,
+   "end": 16618,
+   "channels": [
+    {
+     "channel": 14,
+     "source": "both",
+     "spike_score": 19.649,
+     "deseason_score": 2.555,
+     "zoom_center": 16527,
+     "zoom": [
+      16497,
+      16557
+     ]
+    },
+    {
+     "channel": 13,
+     "source": "both",
+     "spike_score": 18.552,
+     "deseason_score": 5.157,
+     "zoom_center": 16527,
+     "zoom": [
+      16497,
+      16557
+     ]
+    },
+    {
+     "channel": 0,
+     "source": "spike",
+     "spike_score": 10.323,
+     "deseason_score": 1.3,
+     "zoom_center": 16527,
+     "zoom": [
+      16497,
+      16557
+     ]
+    },
+    {
+     "channel": 32,
+     "source": "spike",
+     "spike_score": 3.999,
+     "deseason_score": 1.09,
+     "zoom_center": 16527,
+     "zoom": [
+      16497,
+      16557
+     ]
+    },
+    {
+     "channel": 24,
+     "source": "spike",
+     "spike_score": 3.476,
+     "deseason_score": -0.405,
+     "zoom_center": 16597,
+     "zoom": [
+      16567,
+      16627
+     ]
+    },
+    {
+     "channel": 6,
+     "source": "both",
+     "spike_score": 2.434,
+     "deseason_score": 2.386,
+     "zoom_center": 16611,
+     "zoom": [
+      16581,
+      16641
+     ]
+    },
+    {
+     "channel": 5,
+     "source": "deseason",
+     "spike_score": 2.104,
+     "deseason_score": 3.629,
+     "zoom_center": 16538,
+     "zoom": [
+      16508,
+      16568
+     ]
+    }
+   ]
+  },
+  {
+   "start": 16814,
+   "end": 16828,
+   "channels": [
+    {
+     "channel": 0,
+     "source": "spike",
+     "spike_score": 13.686,
+     "deseason_score": 1.296,
+     "zoom_center": 16821,
+     "zoom": [
+      16791,
+      16851
+     ]
+    },
+    {
+     "channel": 5,
+     "source": "both",
+     "spike_score": 5.107,
+     "deseason_score": 3.664,
+     "zoom_center": 16821,
+     "zoom": [
+      16791,
+      16851
+     ]
+    },
+    {
+     "channel": 3,
+     "source": "spike",
+     "spike_score": 2.544,
+     "deseason_score": 0.397,
+     "zoom_center": 16821,
+     "zoom": [
+      16791,
+      16851
+     ]
+    }
+   ]
+  },
+  {
+   "start": 17094,
+   "end": 17122,
+   "channels": [
+    {
+     "channel": 15,
+     "source": "both",
+     "spike_score": 25.863,
+     "deseason_score": 6.443,
+     "zoom_center": 17115,
+     "zoom": [
+      17085,
+      17145
+     ]
+    },
+    {
+     "channel": 2,
+     "source": "both",
+     "spike_score": 19.336,
+     "deseason_score": 3.289,
+     "zoom_center": 17115,
+     "zoom": [
+      17085,
+      17145
+     ]
+    },
+    {
+     "channel": 10,
+     "source": "both",
+     "spike_score": 16.223,
+     "deseason_score": 3.652,
+     "zoom_center": 17101,
+     "zoom": [
+      17071,
+      17131
+     ]
+    },
+    {
+     "channel": 3,
+     "source": "both",
+     "spike_score": 14.155,
+     "deseason_score": 3.747,
+     "zoom_center": 17115,
+     "zoom": [
+      17085,
+      17145
+     ]
+    },
+    {
+     "channel": 0,
+     "source": "both",
+     "spike_score": 10.015,
+     "deseason_score": 2.235,
+     "zoom_center": 17115,
+     "zoom": [
+      17085,
+      17145
+     ]
+    },
+    {
+     "channel": 23,
+     "source": "spike",
+     "spike_score": 7.754,
+     "deseason_score": -0.626,
+     "zoom_center": 17115,
+     "zoom": [
+      17085,
+      17145
+     ]
+    }
+   ]
+  },
+  {
+   "start": 17962,
+   "end": 17976,
+   "channels": [
+    {
+     "channel": 13,
+     "source": "both",
+     "spike_score": 19.518,
+     "deseason_score": 4.473,
+     "zoom_center": 17969,
+     "zoom": [
+      17939,
+      17999
+     ]
+    },
+    {
+     "channel": 14,
+     "source": "both",
+     "spike_score": 10.87,
+     "deseason_score": 2.925,
+     "zoom_center": 17969,
+     "zoom": [
+      17939,
+      17999
+     ]
+    },
+    {
+     "channel": 8,
+     "source": "both",
+     "spike_score": 8.78,
+     "deseason_score": 2.526,
+     "zoom_center": 17969,
+     "zoom": [
+      17939,
+      17999
+     ]
+    },
+    {
+     "channel": 12,
+     "source": "spike",
+     "spike_score": 6.473,
+     "deseason_score": 1.419,
+     "zoom_center": 17969,
+     "zoom": [
+      17939,
+      17999
+     ]
+    }
+   ]
+  },
+  {
+   "start": 18586,
+   "end": 18699,
+   "channels": [
+    {
+     "channel": 0,
+     "source": "both",
+     "spike_score": 20.929,
+     "deseason_score": 10.715,
+     "zoom_center": 18593,
+     "zoom": [
+      18563,
+      18623
+     ]
+    },
+    {
+     "channel": 22,
+     "source": "both",
+     "spike_score": 20.343,
+     "deseason_score": 267.203,
+     "zoom_center": 18593,
+     "zoom": [
+      18563,
+      18623
+     ]
+    },
+    {
+     "channel": 25,
+     "source": "both",
+     "spike_score": 18.725,
+     "deseason_score": 26.455,
+     "zoom_center": 18593,
+     "zoom": [
+      18563,
+      18623
+     ]
+    },
+    {
+     "channel": 2,
+     "source": "both",
+     "spike_score": 17.278,
+     "deseason_score": 13.614,
+     "zoom_center": 18593,
+     "zoom": [
+      18563,
+      18623
+     ]
+    },
+    {
+     "channel": 1,
+     "source": "both",
+     "spike_score": 16.309,
+     "deseason_score": 15.078,
+     "zoom_center": 18635,
+     "zoom": [
+      18605,
+      18665
+     ]
+    },
+    {
+     "channel": 29,
+     "source": "both",
+     "spike_score": 14.625,
+     "deseason_score": 17.417,
+     "zoom_center": 18593,
+     "zoom": [
+      18563,
+      18623
+     ]
+    },
+    {
+     "channel": 21,
+     "source": "both",
+     "spike_score": 13.709,
+     "deseason_score": 12.692,
+     "zoom_center": 18635,
+     "zoom": [
+      18605,
+      18665
+     ]
+    },
+    {
+     "channel": 18,
+     "source": "both",
+     "spike_score": 13.493,
+     "deseason_score": 8.221,
+     "zoom_center": 18593,
+     "zoom": [
+      18563,
+      18623
+     ]
+    },
+    {
+     "channel": 3,
+     "source": "both",
+     "spike_score": 12.625,
+     "deseason_score": 11.799,
+     "zoom_center": 18593,
+     "zoom": [
+      18563,
+      18623
+     ]
+    },
+    {
+     "channel": 24,
+     "source": "both",
+     "spike_score": 12.619,
+     "deseason_score": 14.581,
+     "zoom_center": 18593,
+     "zoom": [
+      18563,
+      18623
+     ]
+    },
+    {
+     "channel": 5,
+     "source": "both",
+     "spike_score": 12.254,
+     "deseason_score": 25.33,
+     "zoom_center": 18635,
+     "zoom": [
+      18605,
+      18665
+     ]
+    },
+    {
+     "channel": 30,
+     "source": "both",
+     "spike_score": 10.995,
+     "deseason_score": 12.507,
+     "zoom_center": 18635,
+     "zoom": [
+      18605,
+      18665
+     ]
+    },
+    {
+     "channel": 20,
+     "source": "both",
+     "spike_score": 10.208,
+     "deseason_score": 8.281,
+     "zoom_center": 18593,
+     "zoom": [
+      18563,
+      18623
+     ]
+    },
+    {
+     "channel": 27,
+     "source": "both",
+     "spike_score": 9.884,
+     "deseason_score": 8.259,
+     "zoom_center": 18593,
+     "zoom": [
+      18563,
+      18623
+     ]
+    },
+    {
+     "channel": 6,
+     "source": "both",
+     "spike_score": 7.524,
+     "deseason_score": 23.363,
+     "zoom_center": 18635,
+     "zoom": [
+      18605,
+      18665
+     ]
+    }
+   ]
+  },
+  {
+   "start": 18786,
+   "end": 18941,
+   "channels": [
+    {
+     "channel": 22,
+     "source": "both",
+     "spike_score": 19.266,
+     "deseason_score": 245.158,
+     "zoom_center": 18919,
+     "zoom": [
+      18889,
+      18949
+     ]
+    },
+    {
+     "channel": 18,
+     "source": "both",
+     "spike_score": 16.712,
+     "deseason_score": 10.231,
+     "zoom_center": 18919,
+     "zoom": [
+      18889,
+      18949
+     ]
+    },
+    {
+     "channel": 0,
+     "source": "both",
+     "spike_score": 16.582,
+     "deseason_score": 3.288,
+     "zoom_center": 18919,
+     "zoom": [
+      18889,
+      18949
+     ]
+    },
+    {
+     "channel": 19,
+     "source": "both",
+     "spike_score": 15.625,
+     "deseason_score": 44.285,
+     "zoom_center": 18919,
+     "zoom": [
+      18889,
+      18949
+     ]
+    },
+    {
+     "channel": 27,
+     "source": "both",
+     "spike_score": 15.258,
+     "deseason_score": 11.265,
+     "zoom_center": 18919,
+     "zoom": [
+      18889,
+      18949
+     ]
+    },
+    {
+     "channel": 30,
+     "source": "both",
+     "spike_score": 15.113,
+     "deseason_score": 17.703,
+     "zoom_center": 18919,
+     "zoom": [
+      18889,
+      18949
+     ]
+    },
+    {
+     "channel": 24,
+     "source": "both",
+     "spike_score": 12.738,
+     "deseason_score": 12.19,
+     "zoom_center": 18919,
+     "zoom": [
+      18889,
+      18949
+     ]
+    },
+    {
+     "channel": 3,
+     "source": "both",
+     "spike_score": 12.393,
+     "deseason_score": 5.235,
+     "zoom_center": 18905,
+     "zoom": [
+      18875,
+      18935
+     ]
+    },
+    {
+     "channel": 23,
+     "source": "both",
+     "spike_score": 4.316,
+     "deseason_score": 4.144,
+     "zoom_center": 18933,
+     "zoom": [
+      18903,
+      18963
+     ]
+    },
+    {
+     "channel": 25,
+     "source": "both",
+     "spike_score": 4.211,
+     "deseason_score": 4.955,
+     "zoom_center": 18919,
+     "zoom": [
+      18889,
+      18949
+     ]
+    },
+    {
+     "channel": 34,
+     "source": "both",
+     "spike_score": 4.133,
+     "deseason_score": 5.831,
+     "zoom_center": 18891,
+     "zoom": [
+      18861,
+      18921
+     ]
+    },
+    {
+     "channel": 35,
+     "source": "both",
+     "spike_score": 2.22,
+     "deseason_score": 5.834,
+     "zoom_center": 18891,
+     "zoom": [
+      18861,
+      18921
+     ]
+    }
+   ]
+  },
+  {
+   "start": 19404,
+   "end": 19418,
+   "channels": [
+    {
+     "channel": 13,
+     "source": "both",
+     "spike_score": 24.783,
+     "deseason_score": 4.66,
+     "zoom_center": 19411,
+     "zoom": [
+      19381,
+      19441
+     ]
+    },
+    {
+     "channel": 14,
+     "source": "both",
+     "spike_score": 7.757,
+     "deseason_score": 2.423,
+     "zoom_center": 19411,
+     "zoom": [
+      19381,
+      19441
+     ]
+    },
+    {
+     "channel": 6,
+     "source": "both",
+     "spike_score": 4.747,
+     "deseason_score": 8.957,
+     "zoom_center": 19411,
+     "zoom": [
+      19381,
+      19441
+     ]
+    },
+    {
+     "channel": 0,
+     "source": "spike",
+     "spike_score": 3.321,
+     "deseason_score": 0.29,
+     "zoom_center": 19411,
+     "zoom": [
+      19381,
+      19441
+     ]
+    },
+    {
+     "channel": 32,
+     "source": "spike",
+     "spike_score": 2.336,
+     "deseason_score": -0.308,
+     "zoom_center": 19411,
+     "zoom": [
+      19381,
+      19441
+     ]
+    }
+   ]
+  },
+  {
+   "start": 20846,
+   "end": 20860,
+   "channels": [
+    {
+     "channel": 0,
+     "source": "spike",
+     "spike_score": 11.169,
+     "deseason_score": 1.061,
+     "zoom_center": 20853,
+     "zoom": [
+      20823,
+      20883
+     ]
+    },
+    {
+     "channel": 12,
+     "source": "spike",
+     "spike_score": 7.015,
+     "deseason_score": 1.221,
+     "zoom_center": 20853,
+     "zoom": [
+      20823,
+      20883
+     ]
+    }
+   ]
+  },
+  {
+   "start": 22274,
+   "end": 22302,
+   "channels": [
+    {
+     "channel": 13,
+     "source": "both",
+     "spike_score": 18.698,
+     "deseason_score": 3.754,
+     "zoom_center": 22295,
+     "zoom": [
+      22265,
+      22325
+     ]
+    },
+    {
+     "channel": 14,
+     "source": "spike",
+     "spike_score": 11.102,
+     "deseason_score": 1.113,
+     "zoom_center": 22281,
+     "zoom": [
+      22251,
+      22311
+     ]
+    },
+    {
+     "channel": 12,
+     "source": "spike",
+     "spike_score": 9.068,
+     "deseason_score": 1.143,
+     "zoom_center": 22295,
+     "zoom": [
+      22265,
+      22325
+     ]
+    },
+    {
+     "channel": 8,
+     "source": "spike",
+     "spike_score": 5.628,
+     "deseason_score": 1.54,
+     "zoom_center": 22295,
+     "zoom": [
+      22265,
+      22325
+     ]
+    },
+    {
+     "channel": 11,
+     "source": "spike",
+     "spike_score": 3.774,
+     "deseason_score": 0.415,
+     "zoom_center": 22281,
+     "zoom": [
+      22251,
+      22311
+     ]
+    }
+   ]
+  },
+  {
+   "start": 22442,
+   "end": 22456,
+   "channels": [
+    {
+     "channel": 0,
+     "source": "spike",
+     "spike_score": 13.912,
+     "deseason_score": -0.001,
+     "zoom_center": 22449,
+     "zoom": [
+      22419,
+      22479
+     ]
+    },
+    {
+     "channel": 6,
+     "source": "deseason",
+     "spike_score": 0.458,
+     "deseason_score": 11.768,
+     "zoom_center": 22453,
+     "zoom": [
+      22423,
+      22483
+     ]
+    }
+   ]
+  }
+ ],
+ "stage2": {
+  "model": "gpt-4o",
+  "zoom": "b",
+  "order": "score",
+  "page": 8
+ }
+}

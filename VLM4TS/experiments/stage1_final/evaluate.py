@@ -34,6 +34,8 @@ def main():
     hit = half = ngt = nblk = good = 0; ch = []
     for f in sorted(a.out.glob("*.json")):
         r = json.loads(f.read_text()); e, T = r["machine"], r["length"]
+        if not (a.data / "test_label" / f"{e}.txt").exists():
+            continue                               # 다른 데이터셋(SMD/ASD) 결과가 같은 폴더에 섞여 있어도 건너뜀
         y = np.loadtxt(a.data / "test_label" / f"{e}.txt", delimiter=",").astype(int)[:T]
         p = np.zeros(T, bool)
         for iv in r["intervals"]:
