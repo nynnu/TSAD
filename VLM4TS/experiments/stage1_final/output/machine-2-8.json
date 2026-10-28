@@ -3,7 +3,7 @@
  "length": 23703,
  "n_channels": 38,
  "config": {
-  "interval": "(spike+height) top 0.2% OR deseason top 1.0%",
+  "interval": "(spike+height) top 0.2% OR deseason top 1.0%, merged if gap <= 60",
   "channel": "(spike+height) or deseason > machine top 10.0%",
   "zoom_half_width": 30,
   "spike_threshold": 2.3095,

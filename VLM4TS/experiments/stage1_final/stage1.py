@@ -25,6 +25,7 @@ P = WIN // GRID                # 열 하나 = 14틱
 ROLL_WIN = 60                  # 탈주기 이동평균 길이
 INTERVAL_SPIKE, INTERVAL_DESEASON, CHANNEL_PCT = 0.2, 1.0, 10.0   # 상위 %
 ZOOM_HALF = 30                 # 확대 위치 ±30틱 (Stage2 확대 그림 60틱)
+MERGE_GAP = 60                 # 이 틱 이하로 떨어진 이상 구간은 하나로 합침 (= 탈주기 이동평균 길이, 확대 그림 폭)
 
 
 # ── 그림 만들기 ─────────────────────────────────────────────────────
@@ -129,6 +130,17 @@ def segs(mask):
     d = np.diff(np.r_[0, mask.astype(int), 0]); return list(zip(np.where(d == 1)[0].tolist(), np.where(d == -1)[0].tolist()))
 
 
+def merge_close(iv, gap=MERGE_GAP):
+    """앞 구간 끝과 다음 구간 시작 사이가 gap틱 이하면 하나로 합침 (한 이상이 점수 1~2열 끊겨 여러 조각으로 나오는 것 방지)"""
+    out = []
+    for a, b in iv:
+        if out and a - out[-1][1] <= gap:
+            out[-1] = (out[-1][0], b)
+        else:
+            out.append((a, b))
+    return out
+
+
 def run_machine(e, data, cache, dino_fn):
     tr = np.loadtxt(data / "train" / f"{e}.txt", delimiter=","); te = np.loadtxt(data / "test" / f"{e}.txt", delimiter=",")
     f = cache / f"{e}_dino.npz"
@@ -143,7 +155,7 @@ def run_machine(e, data, cache, dino_fn):
     mask = (Xv > np.percentile(X[fin], 100 - INTERVAL_SPIKE)).any(0) | (Dm > np.percentile(Dm, 100 - INTERVAL_DESEASON))
     pool = X[:, ::P]; tx = np.percentile(pool[np.isfinite(pool)], 100 - CHANNEL_PCT); td = np.percentile(D, 100 - CHANNEL_PCT)
     intervals = []
-    for a, b in segs(mask):
+    for a, b in merge_close(segs(mask)):
         xs, ds = Xv[:, a:b].max(1), D[:, a:b].max(1); chans = []
         for c in np.where((xs > tx) | (ds > td))[0]:
             by_spike = bool(xs[c] > tx); by_des = bool(ds[c] > td)
@@ -156,7 +168,7 @@ def run_machine(e, data, cache, dino_fn):
         chans.sort(key=lambda r: -(r["spike_score"] if r["spike_score"] is not None else -1e9))
         intervals.append(dict(start=int(a), end=int(b), channels=chans))
     return dict(machine=e, length=int(T), n_channels=int(te.shape[1]),
-                config=dict(interval=f"(spike+height) top {INTERVAL_SPIKE}% OR deseason top {INTERVAL_DESEASON}%",
+                config=dict(interval=f"(spike+height) top {INTERVAL_SPIKE}% OR deseason top {INTERVAL_DESEASON}%, merged if gap <= {MERGE_GAP}",
                             channel=f"(spike+height) or deseason > machine top {CHANNEL_PCT}%", zoom_half_width=ZOOM_HALF,
                             spike_threshold=round(float(tx), 4), deseason_threshold=round(float(td), 4)),
                 intervals=intervals)

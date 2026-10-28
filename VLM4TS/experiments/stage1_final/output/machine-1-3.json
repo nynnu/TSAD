@@ -3,7 +3,7 @@
  "length": 23703,
  "n_channels": 38,
  "config": {
-  "interval": "(spike+height) top 0.2% OR deseason top 1.0%",
+  "interval": "(spike+height) top 0.2% OR deseason top 1.0%, merged if gap <= 60",
   "channel": "(spike+height) or deseason > machine top 10.0%",
   "zoom_half_width": 30,
   "spike_threshold": 2.051,
@@ -1035,13 +1035,24 @@
   },
   {
    "start": 13160,
-   "end": 13174,
+   "end": 13202,
    "channels": [
+    {
+     "channel": 6,
+     "source": "spike",
+     "spike_score": 15.719,
+     "deseason_score": 1.366,
+     "zoom_center": 13195,
+     "zoom": [
+      13165,
+      13225
+     ]
+    },
     {
      "channel": 14,
      "source": "spike",
      "spike_score": 14.09,
-     "deseason_score": 0.287,
+     "deseason_score": 0.288,
      "zoom_center": 13167,
      "zoom": [
       13137,
@@ -1074,7 +1085,7 @@
      "channel": 12,
      "source": "spike",
      "spike_score": 6.708,
-     "deseason_score": -0.09,
+     "deseason_score": -0.08,
      "zoom_center": 13167,
      "zoom": [
       13137,
@@ -1085,7 +1096,7 @@
      "channel": 8,
      "source": "spike",
      "spike_score": 4.876,
-     "deseason_score": -0.093,
+     "deseason_score": -0.09,
      "zoom_center": 13167,
      "zoom": [
       13137,
@@ -1093,31 +1104,14 @@
      ]
     },
     {
-     "channel": 29,
-     "source": "deseason",
-     "spike_score": null,
-     "deseason_score": 4.406,
-     "zoom_center": 13173,
-     "zoom": [
-      13143,
-      13203
-     ]
-    }
-   ]
-  },
-  {
-   "start": 13188,
-   "end": 13202,
-   "channels": [
-    {
-     "channel": 6,
+     "channel": 10,
      "source": "spike",
-     "spike_score": 15.719,
-     "deseason_score": 1.366,
-     "zoom_center": 13195,
+     "spike_score": 2.537,
+     "deseason_score": -0.089,
+     "zoom_center": 13181,
      "zoom": [
-      13165,
-      13225
+      13151,
+      13211
      ]
     },
     {

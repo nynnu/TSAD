@@ -3,7 +3,7 @@
  "length": 23697,
  "n_channels": 38,
  "config": {
-  "interval": "(spike+height) top 0.2% OR deseason top 1.0%",
+  "interval": "(spike+height) top 0.2% OR deseason top 1.0%, merged if gap <= 60",
   "channel": "(spike+height) or deseason > machine top 10.0%",
   "zoom_half_width": 30,
   "spike_threshold": 2.2246,
@@ -238,78 +238,6 @@
   },
   {
    "start": 2989,
-   "end": 2990,
-   "channels": [
-    {
-     "channel": 9,
-     "source": "spike",
-     "spike_score": 3.653,
-     "deseason_score": 0.038,
-     "zoom_center": 2989,
-     "zoom": [
-      2959,
-      3019
-     ]
-    },
-    {
-     "channel": 23,
-     "source": "spike",
-     "spike_score": 2.984,
-     "deseason_score": 0.474,
-     "zoom_center": 2989,
-     "zoom": [
-      2959,
-      3019
-     ]
-    },
-    {
-     "channel": 19,
-     "source": "spike",
-     "spike_score": 2.232,
-     "deseason_score": 0.218,
-     "zoom_center": 2989,
-     "zoom": [
-      2959,
-      3019
-     ]
-    },
-    {
-     "channel": 33,
-     "source": "deseason",
-     "spike_score": 1.73,
-     "deseason_score": 40.264,
-     "zoom_center": 2989,
-     "zoom": [
-      2959,
-      3019
-     ]
-    },
-    {
-     "channel": 6,
-     "source": "deseason",
-     "spike_score": 1.548,
-     "deseason_score": 1.318,
-     "zoom_center": 2989,
-     "zoom": [
-      2959,
-      3019
-     ]
-    },
-    {
-     "channel": 32,
-     "source": "deseason",
-     "spike_score": 1.27,
-     "deseason_score": 70.605,
-     "zoom_center": 2989,
-     "zoom": [
-      2959,
-      3019
-     ]
-    }
-   ]
-  },
-  {
-   "start": 2993,
    "end": 3002,
    "channels": [
     {
@@ -317,10 +245,10 @@
      "source": "spike",
      "spike_score": 3.653,
      "deseason_score": 0.075,
-     "zoom_center": 3000,
+     "zoom_center": 2996,
      "zoom": [
-      2970,
-      3030
+      2966,
+      3026
      ]
     },
     {
@@ -328,10 +256,10 @@
      "source": "spike",
      "spike_score": 2.984,
      "deseason_score": 0.546,
-     "zoom_center": 3000,
+     "zoom_center": 2996,
      "zoom": [
-      2970,
-      3030
+      2966,
+      3026
      ]
     },
     {
@@ -339,10 +267,10 @@
      "source": "spike",
      "spike_score": 2.232,
      "deseason_score": 0.281,
-     "zoom_center": 3000,
+     "zoom_center": 2996,
      "zoom": [
-      2970,
-      3030
+      2966,
+      3026
      ]
     },
     {
@@ -597,7 +525,7 @@
   },
   {
    "start": 5825,
-   "end": 5887,
+   "end": 5908,
    "channels": [
     {
      "channel": 9,
@@ -644,6 +572,39 @@
      ]
     },
     {
+     "channel": 23,
+     "source": "both",
+     "spike_score": 20.74,
+     "deseason_score": 2.727,
+     "zoom_center": 5888,
+     "zoom": [
+      5858,
+      5918
+     ]
+    },
+    {
+     "channel": 25,
+     "source": "both",
+     "spike_score": 17.877,
+     "deseason_score": 1.225,
+     "zoom_center": 5888,
+     "zoom": [
+      5858,
+      5918
+     ]
+    },
+    {
+     "channel": 29,
+     "source": "both",
+     "spike_score": 17.582,
+     "deseason_score": 5.746,
+     "zoom_center": 5888,
+     "zoom": [
+      5858,
+      5918
+     ]
+    },
+    {
      "channel": 1,
      "source": "both",
      "spike_score": 16.618,
@@ -652,6 +613,17 @@
      "zoom": [
       5816,
       5876
+     ]
+    },
+    {
+     "channel": 6,
+     "source": "both",
+     "spike_score": 12.8,
+     "deseason_score": 1.855,
+     "zoom_center": 5888,
+     "zoom": [
+      5858,
+      5918
      ]
     },
     {
@@ -677,25 +649,25 @@
      ]
     },
     {
-     "channel": 23,
-     "source": "both",
-     "spike_score": 9.157,
-     "deseason_score": 1.701,
-     "zoom_center": 5846,
+     "channel": 14,
+     "source": "spike",
+     "spike_score": 9.696,
+     "deseason_score": 0.755,
+     "zoom_center": 5888,
      "zoom": [
-      5816,
-      5876
+      5858,
+      5918
      ]
     },
     {
-     "channel": 25,
-     "source": "both",
-     "spike_score": 7.595,
-     "deseason_score": 1.225,
-     "zoom_center": 5846,
+     "channel": 11,
+     "source": "spike",
+     "spike_score": 7.436,
+     "deseason_score": 0.352,
+     "zoom_center": 5888,
      "zoom": [
-      5816,
-      5876
+      5858,
+      5918
      ]
     },
     {
@@ -736,17 +708,6 @@
      "source": "both",
      "spike_score": 7.273,
      "deseason_score": 1.536,
-     "zoom_center": 5846,
-     "zoom": [
-      5816,
-      5876
-     ]
-    },
-    {
-     "channel": 29,
-     "source": "both",
-     "spike_score": 7.231,
-     "deseason_score": 5.746,
      "zoom_center": 5846,
      "zoom": [
       5816,
@@ -811,12 +772,12 @@
     {
      "channel": 19,
      "source": "both",
-     "spike_score": 5.294,
+     "spike_score": 5.408,
      "deseason_score": 1.399,
-     "zoom_center": 5846,
+     "zoom_center": 5888,
      "zoom": [
-      5816,
-      5876
+      5858,
+      5918
      ]
     },
     {
@@ -845,299 +806,18 @@
      "channel": 32,
      "source": "spike",
      "spike_score": 3.593,
-     "deseason_score": 0.129,
+     "deseason_score": 0.326,
      "zoom_center": 5832,
      "zoom": [
       5802,
       5862
-     ]
-    },
-    {
-     "channel": 14,
-     "source": "spike",
-     "spike_score": 2.749,
-     "deseason_score": 0.464,
-     "zoom_center": 5874,
-     "zoom": [
-      5844,
-      5904
-     ]
-    },
-    {
-     "channel": 6,
-     "source": "both",
-     "spike_score": 2.503,
-     "deseason_score": 1.428,
-     "zoom_center": 5874,
-     "zoom": [
-      5844,
-      5904
-     ]
-    },
-    {
-     "channel": 11,
-     "source": "spike",
-     "spike_score": 2.286,
-     "deseason_score": 0.115,
-     "zoom_center": 5874,
-     "zoom": [
-      5844,
-      5904
-     ]
-    }
-   ]
-  },
-  {
-   "start": 5894,
-   "end": 5908,
-   "channels": [
-    {
-     "channel": 23,
-     "source": "both",
-     "spike_score": 20.74,
-     "deseason_score": 2.727,
-     "zoom_center": 5901,
-     "zoom": [
-      5871,
-      5931
-     ]
-    },
-    {
-     "channel": 25,
-     "source": "spike",
-     "spike_score": 17.877,
-     "deseason_score": 0.805,
-     "zoom_center": 5901,
-     "zoom": [
-      5871,
-      5931
-     ]
-    },
-    {
-     "channel": 29,
-     "source": "both",
-     "spike_score": 17.582,
-     "deseason_score": 3.841,
-     "zoom_center": 5901,
-     "zoom": [
-      5871,
-      5931
-     ]
-    },
-    {
-     "channel": 6,
-     "source": "both",
-     "spike_score": 12.8,
-     "deseason_score": 1.855,
-     "zoom_center": 5901,
-     "zoom": [
-      5871,
-      5931
-     ]
-    },
-    {
-     "channel": 10,
-     "source": "both",
-     "spike_score": 10.856,
-     "deseason_score": 7.165,
-     "zoom_center": 5901,
-     "zoom": [
-      5871,
-      5931
-     ]
-    },
-    {
-     "channel": 14,
-     "source": "spike",
-     "spike_score": 9.696,
-     "deseason_score": 0.755,
-     "zoom_center": 5901,
-     "zoom": [
-      5871,
-      5931
-     ]
-    },
-    {
-     "channel": 0,
-     "source": "spike",
-     "spike_score": 8.692,
-     "deseason_score": 0.366,
-     "zoom_center": 5901,
-     "zoom": [
-      5871,
-      5931
-     ]
-    },
-    {
-     "channel": 8,
-     "source": "spike",
-     "spike_score": 7.551,
-     "deseason_score": 0.251,
-     "zoom_center": 5901,
-     "zoom": [
-      5871,
-      5931
-     ]
-    },
-    {
-     "channel": 11,
-     "source": "spike",
-     "spike_score": 7.436,
-     "deseason_score": 0.352,
-     "zoom_center": 5901,
-     "zoom": [
-      5871,
-      5931
-     ]
-    },
-    {
-     "channel": 12,
-     "source": "spike",
-     "spike_score": 6.578,
-     "deseason_score": 0.163,
-     "zoom_center": 5901,
-     "zoom": [
-      5871,
-      5931
-     ]
-    },
-    {
-     "channel": 24,
-     "source": "spike",
-     "spike_score": 5.655,
-     "deseason_score": 1.055,
-     "zoom_center": 5901,
-     "zoom": [
-      5871,
-      5931
-     ]
-    },
-    {
-     "channel": 19,
-     "source": "spike",
-     "spike_score": 5.408,
-     "deseason_score": 0.927,
-     "zoom_center": 5901,
-     "zoom": [
-      5871,
-      5931
-     ]
-    },
-    {
-     "channel": 1,
-     "source": "spike",
-     "spike_score": 4.572,
-     "deseason_score": 0.116,
-     "zoom_center": 5901,
-     "zoom": [
-      5871,
-      5931
-     ]
-    },
-    {
-     "channel": 34,
-     "source": "spike",
-     "spike_score": 4.411,
-     "deseason_score": -0.026,
-     "zoom_center": 5901,
-     "zoom": [
-      5871,
-      5931
-     ]
-    },
-    {
-     "channel": 35,
-     "source": "spike",
-     "spike_score": 4.39,
-     "deseason_score": -0.026,
-     "zoom_center": 5901,
-     "zoom": [
-      5871,
-      5931
-     ]
-    },
-    {
-     "channel": 30,
-     "source": "spike",
-     "spike_score": 3.987,
-     "deseason_score": 0.832,
-     "zoom_center": 5901,
-     "zoom": [
-      5871,
-      5931
-     ]
-    },
-    {
-     "channel": 31,
-     "source": "spike",
-     "spike_score": 3.877,
-     "deseason_score": 0.29,
-     "zoom_center": 5901,
-     "zoom": [
-      5871,
-      5931
-     ]
-    },
-    {
-     "channel": 21,
-     "source": "spike",
-     "spike_score": 3.65,
-     "deseason_score": 0.833,
-     "zoom_center": 5901,
-     "zoom": [
-      5871,
-      5931
-     ]
-    },
-    {
-     "channel": 18,
-     "source": "spike",
-     "spike_score": 3.561,
-     "deseason_score": 0.787,
-     "zoom_center": 5901,
-     "zoom": [
-      5871,
-      5931
-     ]
-    },
-    {
-     "channel": 27,
-     "source": "spike",
-     "spike_score": 3.157,
-     "deseason_score": 0.802,
-     "zoom_center": 5901,
-     "zoom": [
-      5871,
-      5931
-     ]
-    },
-    {
-     "channel": 20,
-     "source": "spike",
-     "spike_score": 3.094,
-     "deseason_score": 0.804,
-     "zoom_center": 5901,
-     "zoom": [
-      5871,
-      5931
-     ]
-    },
-    {
-     "channel": 9,
-     "source": "deseason",
-     "spike_score": 0.46,
-     "deseason_score": 3.238,
-     "zoom_center": 5907,
-     "zoom": [
-      5877,
-      5937
      ]
     }
    ]
   },
   {
    "start": 7140,
-   "end": 7168,
+   "end": 7224,
    "channels": [
     {
      "channel": 0,
@@ -1239,6 +919,28 @@
      ]
     },
     {
+     "channel": 22,
+     "source": "spike",
+     "spike_score": 4.377,
+     "deseason_score": 0.809,
+     "zoom_center": 7175,
+     "zoom": [
+      7145,
+      7205
+     ]
+    },
+    {
+     "channel": 25,
+     "source": "spike",
+     "spike_score": 3.754,
+     "deseason_score": 0.414,
+     "zoom_center": 7217,
+     "zoom": [
+      7187,
+      7247
+     ]
+    },
+    {
      "channel": 3,
      "source": "spike",
      "spike_score": 3.686,
@@ -1247,6 +949,39 @@
      "zoom": [
       7117,
       7177
+     ]
+    },
+    {
+     "channel": 24,
+     "source": "spike",
+     "spike_score": 3.565,
+     "deseason_score": 0.858,
+     "zoom_center": 7175,
+     "zoom": [
+      7145,
+      7205
+     ]
+    },
+    {
+     "channel": 27,
+     "source": "spike",
+     "spike_score": 3.493,
+     "deseason_score": 0.865,
+     "zoom_center": 7175,
+     "zoom": [
+      7145,
+      7205
+     ]
+    },
+    {
+     "channel": 18,
+     "source": "spike",
+     "spike_score": 3.378,
+     "deseason_score": 0.928,
+     "zoom_center": 7175,
+     "zoom": [
+      7145,
+      7205
      ]
     },
     {
@@ -1264,11 +999,22 @@
      "channel": 31,
      "source": "spike",
      "spike_score": 2.892,
-     "deseason_score": -1.203,
+     "deseason_score": 0.836,
      "zoom_center": 7147,
      "zoom": [
       7117,
       7177
+     ]
+    },
+    {
+     "channel": 20,
+     "source": "spike",
+     "spike_score": 2.687,
+     "deseason_score": 0.867,
+     "zoom_center": 7175,
+     "zoom": [
+      7145,
+      7205
      ]
     },
     {
@@ -1286,138 +1032,11 @@
      "channel": 21,
      "source": "spike",
      "spike_score": 2.468,
-     "deseason_score": -0.845,
+     "deseason_score": 0.861,
      "zoom_center": 7147,
      "zoom": [
       7117,
       7177
-     ]
-    },
-    {
-     "channel": 25,
-     "source": "spike",
-     "spike_score": 2.45,
-     "deseason_score": -0.738,
-     "zoom_center": 7147,
-     "zoom": [
-      7117,
-      7177
-     ]
-    },
-    {
-     "channel": 32,
-     "source": "deseason",
-     "spike_score": -0.557,
-     "deseason_score": 2.411,
-     "zoom_center": 7163,
-     "zoom": [
-      7133,
-      7193
-     ]
-    }
-   ]
-  },
-  {
-   "start": 7196,
-   "end": 7224,
-   "channels": [
-    {
-     "channel": 12,
-     "source": "spike",
-     "spike_score": 22.735,
-     "deseason_score": 0.238,
-     "zoom_center": 7217,
-     "zoom": [
-      7187,
-      7247
-     ]
-    },
-    {
-     "channel": 8,
-     "source": "spike",
-     "spike_score": 20.67,
-     "deseason_score": 0.292,
-     "zoom_center": 7217,
-     "zoom": [
-      7187,
-      7247
-     ]
-    },
-    {
-     "channel": 13,
-     "source": "spike",
-     "spike_score": 8.013,
-     "deseason_score": 0.929,
-     "zoom_center": 7217,
-     "zoom": [
-      7187,
-      7247
-     ]
-    },
-    {
-     "channel": 0,
-     "source": "spike",
-     "spike_score": 7.368,
-     "deseason_score": 0.397,
-     "zoom_center": 7203,
-     "zoom": [
-      7173,
-      7233
-     ]
-    },
-    {
-     "channel": 14,
-     "source": "spike",
-     "spike_score": 4.726,
-     "deseason_score": -0.384,
-     "zoom_center": 7203,
-     "zoom": [
-      7173,
-      7233
-     ]
-    },
-    {
-     "channel": 11,
-     "source": "spike",
-     "spike_score": 4.328,
-     "deseason_score": -0.269,
-     "zoom_center": 7203,
-     "zoom": [
-      7173,
-      7233
-     ]
-    },
-    {
-     "channel": 25,
-     "source": "spike",
-     "spike_score": 3.754,
-     "deseason_score": 0.414,
-     "zoom_center": 7217,
-     "zoom": [
-      7187,
-      7247
-     ]
-    },
-    {
-     "channel": 27,
-     "source": "spike",
-     "spike_score": 2.794,
-     "deseason_score": 0.865,
-     "zoom_center": 7217,
-     "zoom": [
-      7187,
-      7247
-     ]
-    },
-    {
-     "channel": 20,
-     "source": "spike",
-     "spike_score": 2.616,
-     "deseason_score": 0.867,
-     "zoom_center": 7217,
-     "zoom": [
-      7187,
-      7247
      ]
     },
     {
@@ -1446,11 +1065,11 @@
      "channel": 32,
      "source": "deseason",
      "spike_score": 1.352,
-     "deseason_score": 2.026,
-     "zoom_center": 7203,
+     "deseason_score": 2.411,
+     "zoom_center": 7163,
      "zoom": [
-      7173,
-      7233
+      7133,
+      7193
      ]
     }
    ]
