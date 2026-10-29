@@ -1,16 +1,16 @@
 """
 Stage1 → Stage2 연결 (나연, 2026-10-27) — stage1_final/output/{machine}.json 의 구간·채널 후보를 그림으로 그려 VLM(GPT-4o)이 이상 채널을 고름
 
-  창    = Stage1 구간 ± max(60, 구간 길이)
+  evidence tile = Stage1 score peak 중심의 고정 224틱 window (긴 구간은 최대 3개 tile)
   그림  = 위: 38채널 히트맵(행 = 채널 0–37, 왼쪽 빨간 띠 = Stage1 후보) / 아래: 후보 채널 trace, 한 장에 8채널
           세로 눈금 = Stage1과 같음 (train 최솟값 0 – 최댓값 1, 창 안 값이 넘으면 그 값까지 넓힘)
-  zoom  = 창 ≤ 224틱일 때만. 폭 = 구간 ± 14틱, 세로 = 같은 규칙을 zoom 안 값에만 적용
-          none: zoom 없음 / a: 채널별 Stage1 zoom_center 중심 / b: 모든 채널 Stage1 구간
+  zoom  = 모든 tile에서 사용. 폭 = 후보별 Stage1 zoom_center ±30틱 (기본값 a)
+          none: zoom 없음 / a: 채널별 DINO/Stage1 peak 중심 / b: Stage1 구간 공통 zoom (비교용)
   출력  = VLM이 고른 채널만 남긴 구간 (채널이 없으면 구간 삭제). 위치는 Stage1 구간 그대로.
           형식은 stage1_final/output 과 같음 → stage1_final/evaluate.py --out 으로 채점
 
-  실행:  python run_stage2_link.py --machines machine-1-1 --zoom b                 # 그림만 (API 호출 없음)
-         python run_stage2_link.py --machines machine-1-1 machine-1-2 --zoom b --run   # VLM 호출
+  실행:  python run_stage2_link.py --machines machine-1-1 --zoom a                 # 그림만 (API 호출 없음)
+         python run_stage2_link.py --machines machine-1-1 machine-1-2 --zoom a --run   # VLM 호출
 """
 import argparse
 import base64
@@ -29,7 +29,7 @@ import numpy as np
 HERE = Path(__file__).resolve().parent
 BASE = HERE.parents[1]                                   # VLM4TS/
 STAGE1_OUT = BASE / "experiments" / "stage1_final" / "output"
-MARGIN_MIN, PAGE, ZOOM_PAD, LONG_WIN = 60, 8, 14, 224
+MARGIN_MIN, PAGE, ZOOM_PAD, TILE_LEN, MAX_TILES = 60, 8, 14, 224, 3
 MODEL = "gpt-4o"
 
 
@@ -39,10 +39,10 @@ def stage1_scale(v):
     return min(0.0, float(v.min())), max(1.0, float(v.max()))
 
 
-def draw_trace(ax, x, v, a, b):
+def draw_trace(ax, x, v, a, b, color="#f59e0b"):
     lo, hi = stage1_scale(v); pad = 0.05 * (hi - lo)
     ax.plot(x, v, color="black", lw=0.9)
-    ax.axvspan(a - 0.5, b - 0.5, color="#f59e0b", alpha=0.25)
+    ax.axvspan(a - 0.5, b - 0.5, color=color, alpha=0.25)
     for yv in (0, 1):
         ax.axhline(yv, color="#b91c1c", lw=0.6, ls="--")
     ax.set_xlim(x[0], x[-1]); ax.set_ylim(lo - pad, hi + pad)
@@ -50,14 +50,67 @@ def draw_trace(ax, x, v, a, b):
 
 
 def zoom_range(zoom, c, a, b, w0, w1):
-    z = (b - a) + 2 * ZOOM_PAD
+    # ``a`` uses a fixed local view around each candidate's DINO/Stage1 peak.
+    # ``b`` remains only as the legacy common-interval comparison condition.
+    z = 60 if zoom == "a" else (b - a) + 2 * ZOOM_PAD
+    z = min(z, w1 - w0)
     z0 = a - ZOOM_PAD if zoom == "b" else c["zoom_center"] - z // 2
     z0 = max(w0, min(z0, w1 - z))
     return z0, z0 + z
 
 
-def make_image(norm_te, w0, w1, a, b, all_cands, page, zoom):
-    use_zoom = zoom != "none" and w1 - w0 <= LONG_WIN
+def score_of(c):
+    """Stage1 evidence strength used only to choose diverse evidence tiles."""
+    vals = [v for v in (c.get("spike_score"), c.get("deseason_score")) if v is not None]
+    return max(vals, default=-np.inf)
+
+
+def fixed_tile(center, length):
+    """Return one 224-tick tile, keeping its width fixed whenever possible."""
+    width = min(TILE_LEN, length)
+    left = max(0, min(int(center) - width // 2, length - width))
+    return left, left + width
+
+
+def evidence_tiles(cands, a, b, length):
+    """Peak-centred, fixed-width evidence tiles.
+
+    A long merged Stage1 interval is not a single visual event.  We select up
+    to three high-scoring, spatially separated Stage1 peak locations, so the
+    VLM never loses its local view merely because the upstream interval is long.
+    No GT is used here.
+    """
+    ranked = sorted(cands, key=score_of, reverse=True)
+    centers = []
+    min_sep = TILE_LEN // 2
+    for c in ranked:
+        t = int(c["zoom_center"])
+        if not centers or all(abs(t - old) >= min_sep for old in centers):
+            centers.append(t)
+        if len(centers) == MAX_TILES:
+            break
+    if not centers:
+        centers = [(a + b) // 2]
+    # One score peak can occur near an endpoint.  For long intervals, add the
+    # opposite boundary only when the peak tiles leave it entirely uncovered.
+    if b - a > TILE_LEN and len(centers) < MAX_TILES:
+        covered = [fixed_tile(t, length) for t in centers]
+        for boundary in (a, b - 1):
+            if not any(s <= boundary < e for s, e in covered):
+                centers.append(boundary)
+                covered.append(fixed_tile(boundary, length))
+            if len(centers) == MAX_TILES:
+                break
+    tiles = []
+    for center in centers:
+        tile = fixed_tile(center, length)
+        if tile not in tiles:
+            tiles.append(tile)
+    return sorted(tiles)
+
+
+def make_image(norm_te, w0, w1, a, b, all_cands, page, zoom, tile_i, n_tiles):
+    use_zoom = zoom != "none"
     n = len(page); x = np.arange(w0, w1)
     fig = plt.figure(figsize=(13, 2.6 + n * 1.0), dpi=120)
     gs = GridSpec(2, 1, height_ratios=[1.5, n * 0.9], hspace=0.12, left=0.06, right=0.99, top=0.92, bottom=0.04)
@@ -83,26 +136,39 @@ def make_image(norm_te, w0, w1, a, b, all_cands, page, zoom):
         if use_zoom:
             z0, z1 = zoom_range(zoom, c, a, b, w0, w1)
             zx = fig.add_subplot(sub[i, 1])
-            draw_trace(zx, np.arange(z0, z1), norm_te[z0:z1, ch], a, b)
-            zx.text(0.01, 0.97, f"ch {ch} zoom [{z0}, {z1})", transform=zx.transAxes, fontsize=7, va="top")
+            if zoom == "a":
+                focus = int(c["zoom_center"])
+                draw_trace(zx, np.arange(z0, z1), norm_te[z0:z1, ch], focus - 7, focus + 7, color="#2563eb")
+                zx.text(0.01, 0.97, f"ch {ch} DINO/Stage-1 peak zoom [{z0}, {z1})", transform=zx.transAxes, fontsize=7, va="top")
+            else:
+                draw_trace(zx, np.arange(z0, z1), norm_te[z0:z1, ch], a, b)
+                zx.text(0.01, 0.97, f"ch {ch} interval zoom [{z0}, {z1})", transform=zx.transAxes, fontsize=7, va="top")
             ax.axvspan(z0 - 0.5, z1 - 0.5, fill=False, edgecolor="#2563eb", lw=0.8)
-    fig.suptitle(f"Stage-1 interval [{a}, {b}) shaded orange · window [{w0}, {w1}) = {w1 - w0} ticks · "
+    fig.suptitle(f"Stage-1 interval [{a}, {b}) shaded orange · evidence tile {tile_i + 1}/{n_tiles} "
+                 f"[{w0}, {w1}) = {w1 - w0} ticks · "
                  f"candidates on this page: {[c['channel'] for c in page]}", fontsize=10, y=0.995)
     buf = BytesIO(); fig.savefig(buf, format="png", dpi=120, bbox_inches="tight", pad_inches=0.05); plt.close(fig)
     return buf.getvalue(), use_zoom
 
 
 # ── VLM ────────────────────────────────────────────────────────────
-def build_prompt(a, b, w0, w1, page, all_ids, page_i, n_pages, use_zoom, n_ch):
-    zoom_txt = (f"- Right column: an enlarged view of the orange interval with {ZOOM_PAD} ticks on each side, for the same channel. "
-                "Its vertical axis follows the same rule, applied only to the values inside the zoom.\n") if use_zoom else ""
+def build_prompt(a, b, w0, w1, page, all_ids, page_i, n_pages, use_zoom, n_ch, tile_i, n_tiles, zoom):
+    if not use_zoom:
+        zoom_txt = ""
+    elif zoom == "a":
+        zoom_txt = ("- Right column: a 60-tick candidate-specific zoom centred on this channel's strongest "
+                    "Stage-1/DINO evidence location. Blue shading marks the local 14-tick focus; it need not "
+                    "be the same location for every channel.\n")
+    else:
+        zoom_txt = (f"- Right column: an enlarged view of the orange interval with {ZOOM_PAD} ticks on each side, for the same channel. "
+                    "Its vertical axis follows the same rule, applied only to the values inside the zoom.\n")
     return f"""You are validating Stage-1 anomaly proposals in a multivariate server-machine time series ({n_ch} channels).
-Stage 1 nominated channels {all_ids}. This is page {page_i + 1} of {n_pages}; decide ONLY the channels on this page: {page}.
+Stage 1 nominated channels {all_ids}. This is evidence tile {tile_i + 1} of {n_tiles}, page {page_i + 1} of {n_pages}; decide ONLY the channels on this page: {page}.
 
 How the image is drawn:
 - Top heatmap: all {n_ch} channels over the window [{w0}, {w1}). Rows are channels 0 to {n_ch - 1} from top to bottom. The red strip at the left marks Stage-1 candidate channels.
 - Each lower row: the full trace of one candidate channel over the same window. Its name is at the left.
-- Orange shading [{a}, {b}): where Stage-1 anomaly scores were high. Ticks outside it are context: they are NOT guaranteed to be normal, and an anomaly may continue into them.
+- Orange shading [{a}, {b}): where Stage-1 anomaly scores were high. The full Stage-1 interval can extend outside this fixed 224-tick tile. Ticks outside the orange span are context: they are NOT guaranteed to be normal, and an anomaly may continue into them.
 {zoom_txt}- Vertical axis of every trace: 0 = that channel's training minimum, 1 = training maximum (red dashed lines). If the values inside the plotted range go beyond the training range, the axis is widened to include them, so the axis numbers show how many training ranges a value reaches.
 
 Task: for each channel on this page, decide whether it behaves anomalously at or around the orange interval compared with its own normal behaviour. Reject channels whose movement looks like ordinary fluctuation within the training range. It is valid to reject every channel.
@@ -144,28 +210,34 @@ def run_machine(e, data, out, zoom, order, client):
     img_dir = out / "images" / e; img_dir.mkdir(parents=True, exist_ok=True)
     kept = []
     for k, iv in enumerate(s1["intervals"], 1):
-        a, b = iv["start"], iv["end"]; m = max(MARGIN_MIN, b - a)
-        w0, w1 = max(0, a - m), min(len(te), b + m)
+        a, b = iv["start"], iv["end"]
         cands = iv["channels"] if order == "score" else sorted(iv["channels"], key=lambda c: c["channel"])
         pages = [cands[i:i + PAGE] for i in range(0, len(cands), PAGE)]
         all_ids = [c["channel"] for c in cands]; picked = set()
-        for p, page in enumerate(pages):
-            key = f"{a}_{b}:p{p}"; ids = [c["channel"] for c in page]
-            png, use_zoom = make_image(norm_te, w0, w1, a, b, cands, page, zoom)
-            (img_dir / f"구간{k:03d}-{p + 1}_{a}_{b}.png").write_bytes(png)
-            if client is None:
-                continue
-            if key not in done:
-                raw = call_vlm(client, build_prompt(a, b, w0, w1, ids, all_ids, p, len(pages), use_zoom, te.shape[1]), png)
-                pred, ok = parse(raw, ids)
-                done[key] = dict(key=key, page=ids, raw=raw, pred=pred, parse_ok=ok)
-                with ck_path.open("a", encoding="utf-8") as f:
-                    f.write(json.dumps(done[key], ensure_ascii=False) + "\n")
-            picked |= set(done[key]["pred"])
+        tiles = evidence_tiles(cands, a, b, len(te))
+        for tile_i, (w0, w1) in enumerate(tiles):
+            for p, page in enumerate(pages):
+                # Include design parameters in the checkpoint key: old common-zoom
+                # answers must never be silently reused for evidence-tile rendering.
+                key = f"v2-tile{TILE_LEN}-n{MAX_TILES}-zoom{zoom}-{order}:{a}_{b}:t{tile_i}:p{p}"
+                ids = [c["channel"] for c in page]
+                png, use_zoom = make_image(norm_te, w0, w1, a, b, cands, page, zoom, tile_i, len(tiles))
+                (img_dir / f"구간{k:03d}-tile{tile_i + 1}-page{p + 1}_{a}_{b}.png").write_bytes(png)
+                if client is None:
+                    continue
+                if key not in done:
+                    raw = call_vlm(client, build_prompt(a, b, w0, w1, ids, all_ids, p, len(pages), use_zoom,
+                                                        te.shape[1], tile_i, len(tiles), zoom), png)
+                    pred, ok = parse(raw, ids)
+                    done[key] = dict(key=key, tile=[w0, w1], page=ids, raw=raw, pred=pred, parse_ok=ok)
+                    with ck_path.open("a", encoding="utf-8") as f:
+                        f.write(json.dumps(done[key], ensure_ascii=False) + "\n")
+                picked |= set(done[key]["pred"])
         if client is not None and picked:
             kept.append(dict(start=a, end=b, channels=[c for c in iv["channels"] if c["channel"] in picked]))
     if client is not None:
-        res = dict(s1, intervals=kept, stage2=dict(model=MODEL, zoom=zoom, order=order, page=PAGE))
+        res = dict(s1, intervals=kept, stage2=dict(model=MODEL, zoom=zoom, order=order, page=PAGE,
+                                                    evidence_tile_len=TILE_LEN, max_evidence_tiles=MAX_TILES))
         (out / f"{e}.json").write_text(json.dumps(res, ensure_ascii=False, indent=1), encoding="utf-8")
         bad = sum(not r.get("parse_ok", True) for r in done.values())
         print(f"{e}: Stage1 구간 {len(s1['intervals'])}개 → Stage2 남은 구간 {len(kept)}개"
@@ -178,7 +250,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--data", default=str(BASE / "mv_data" / "SMD"))
     ap.add_argument("--machines", nargs="*", help="생략하면 --data의 test/ 중 Stage1 결과가 있는 machine 전부")
-    ap.add_argument("--zoom", choices=["none", "a", "b"], default="b")
+    ap.add_argument("--zoom", choices=["none", "a", "b"], default="a")
     ap.add_argument("--order", choices=["score", "channel"], default="score")
     ap.add_argument("--run", action="store_true", help="VLM 호출 (없으면 그림만 저장)")
     args = ap.parse_args()
