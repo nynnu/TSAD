@@ -7,6 +7,8 @@ Stage1 → Stage2 연결 (나연, 2026-10-27) — stage1_final/output/{machine}.
   zoom  = 모든 tile에서 사용. 폭 = 후보별 Stage1 zoom_center ±30틱 (기본값 a)
           none: zoom 없음 / a: 채널별 DINO/Stage1 peak 중심 / b: Stage1 구간 공통 zoom (비교용)
   출력  = VLM이 고른 채널만 남긴 구간 (채널이 없으면 구간 삭제). 위치는 Stage1 구간 그대로.
+          각 구간에는 ``root_cause_candidates``도 저장한다. 이는 VLM 선택 횟수와
+          Stage1 evidence로 정렬한 점검 우선순위이며, 인과적 root cause의 증명은 아니다.
           형식은 stage1_final/output 과 같음 → stage1_final/evaluate.py --out 으로 채점
 
   실행:  python run_stage2_link.py --machines machine-1-1 --zoom a                 # 그림만 (API 호출 없음)
@@ -174,7 +176,7 @@ How the image is drawn:
 Task: for each channel on this page, decide whether it behaves anomalously at or around the orange interval compared with its own normal behaviour. Reject channels whose movement looks like ordinary fluctuation within the training range. It is valid to reject every channel.
 
 Respond ONLY as JSON:
-{{"anomalous_channels": [a subset of {page}], "confidence": "low" | "medium" | "high"}}"""
+{{"anomalous_channels": [a subset of {page}, ordered from strongest evidence to weakest], "confidence": "low" | "medium" | "high"}}"""
 
 
 def call_vlm(client, prompt, png):
@@ -187,21 +189,53 @@ def call_vlm(client, prompt, png):
 
 
 def parse(raw, page):
-    """VLM 답 → (고른 채널, 형식 정상 여부). 형식이 깨져도 멈추지 않고 ok=False로 남김"""
+    """VLM answer → (ordered channels, page confidence, format-ok).
+
+    The order is preserved because it becomes a tie-breaker in the exported
+    evidence ranking.  Page confidence is not treated as calibrated probability.
+    """
     m = re.search(r"\{.*\}", raw or "", re.S)
     try:
-        chans = json.loads(m.group(0)).get("anomalous_channels", [])
+        obj = json.loads(m.group(0)); chans = obj.get("anomalous_channels", [])
     except (AttributeError, json.JSONDecodeError):
-        return [], False
-    return sorted({int(x) for c in chans for x in re.findall(r"\d+", str(c)) if int(x) in set(page)}), True
+        return [], "unknown", False
+    valid, seen = [], set()
+    for c in chans:
+        for x in re.findall(r"\d+", str(c)):
+            v = int(x)
+            if v in page and v not in seen:
+                valid.append(v); seen.add(v)
+    confidence = str(obj.get("confidence", "unknown")).lower()
+    confidence = confidence if confidence in {"low", "medium", "high"} else "unknown"
+    return valid, confidence, True
+
+
+def root_ranking(cands, votes):
+    """Evidence-based inspection ranking, explicitly not a causal estimate."""
+    rows = []
+    for base_rank, c in enumerate(sorted(cands, key=score_of, reverse=True), 1):
+        ch = c["channel"]; info = votes.get(ch, {})
+        rows.append(dict(channel=int(ch), selected_by_vlm=ch in votes,
+                         vlm_votes=int(info.get("votes", 0)),
+                         vlm_confidence_weight=int(info.get("confidence_weight", 0)),
+                         vlm_first_rank=int(info.get("first_rank", 10**6)),
+                         stage1_evidence_score=round(float(score_of(c)), 3),
+                         stage1_rank=base_rank,
+                         peak_tick=int(c.get("zoom_center", -1))))
+    rows.sort(key=lambda r: (-int(r["selected_by_vlm"]), -r["vlm_votes"],
+                             -r["vlm_confidence_weight"], r["vlm_first_rank"],
+                             -r["stage1_evidence_score"], r["channel"]))
+    for rank, row in enumerate(rows, 1):
+        row["rank"] = rank
+    return rows
 
 
 # ── 실행 ───────────────────────────────────────────────────────────
-def run_machine(e, data, out, zoom, order, client):
+def run_machine(e, data, stage1_out, out, zoom, order, client):
     tr = np.loadtxt(data / "train" / f"{e}.txt", delimiter=","); te = np.loadtxt(data / "test" / f"{e}.txt", delimiter=",")
     g0, g1 = tr.min(0), tr.max(0); flat = g1 - g0 < 1e-6
     norm_te = (te - np.where(flat, 0.0, g0)) / np.where(flat, 1.0, g1 - g0)   # train 상수 채널은 0–1 눈금 (Stage1과 같음)
-    s1 = json.loads((STAGE1_OUT / f"{e}.json").read_text(encoding="utf-8"))
+    s1 = json.loads((stage1_out / f"{e}.json").read_text(encoding="utf-8"))
     ck_path = out / f"{e}_vlm.jsonl"
     done = {}
     if ck_path.exists():
@@ -213,7 +247,7 @@ def run_machine(e, data, out, zoom, order, client):
         a, b = iv["start"], iv["end"]
         cands = iv["channels"] if order == "score" else sorted(iv["channels"], key=lambda c: c["channel"])
         pages = [cands[i:i + PAGE] for i in range(0, len(cands), PAGE)]
-        all_ids = [c["channel"] for c in cands]; picked = set()
+        all_ids = [c["channel"] for c in cands]; picked = set(); votes = {}
         tiles = evidence_tiles(cands, a, b, len(te))
         for tile_i, (w0, w1) in enumerate(tiles):
             for p, page in enumerate(pages):
@@ -228,16 +262,26 @@ def run_machine(e, data, out, zoom, order, client):
                 if key not in done:
                     raw = call_vlm(client, build_prompt(a, b, w0, w1, ids, all_ids, p, len(pages), use_zoom,
                                                         te.shape[1], tile_i, len(tiles), zoom), png)
-                    pred, ok = parse(raw, ids)
-                    done[key] = dict(key=key, tile=[w0, w1], page=ids, raw=raw, pred=pred, parse_ok=ok)
+                    pred, confidence, ok = parse(raw, ids)
+                    done[key] = dict(key=key, tile=[w0, w1], page=ids, raw=raw, pred=pred,
+                                     confidence=confidence, parse_ok=ok)
                     with ck_path.open("a", encoding="utf-8") as f:
                         f.write(json.dumps(done[key], ensure_ascii=False) + "\n")
-                picked |= set(done[key]["pred"])
+                result = done[key]
+                confidence = result.get("confidence", "unknown")
+                weight = {"low": 1, "medium": 2, "high": 3}.get(confidence, 0)
+                for position, ch in enumerate(result["pred"], 1):
+                    picked.add(ch)
+                    item = votes.setdefault(ch, dict(votes=0, confidence_weight=0, first_rank=position))
+                    item["votes"] += 1; item["confidence_weight"] += weight
+                    item["first_rank"] = min(item["first_rank"], position)
         if client is not None and picked:
-            kept.append(dict(start=a, end=b, channels=[c for c in iv["channels"] if c["channel"] in picked]))
+            kept.append(dict(start=a, end=b, channels=[c for c in iv["channels"] if c["channel"] in picked],
+                             root_cause_candidates=root_ranking(cands, votes)))
     if client is not None:
         res = dict(s1, intervals=kept, stage2=dict(model=MODEL, zoom=zoom, order=order, page=PAGE,
-                                                    evidence_tile_len=TILE_LEN, max_evidence_tiles=MAX_TILES))
+                                                    evidence_tile_len=TILE_LEN, max_evidence_tiles=MAX_TILES,
+                                                    root_cause_note="evidence-based inspection ranking; not causal proof"))
         (out / f"{e}.json").write_text(json.dumps(res, ensure_ascii=False, indent=1), encoding="utf-8")
         bad = sum(not r.get("parse_ok", True) for r in done.values())
         print(f"{e}: Stage1 구간 {len(s1['intervals'])}개 → Stage2 남은 구간 {len(kept)}개"
@@ -249,12 +293,16 @@ def run_machine(e, data, out, zoom, order, client):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--data", default=str(BASE / "mv_data" / "SMD"))
+    ap.add_argument("--stage1-out", type=Path, default=STAGE1_OUT,
+                    help="Stage1 JSON directory; defaults to the legacy stage1_final/output")
+    ap.add_argument("--out", type=Path,
+                    help="Stage2 result directory; defaults to output/zoom-<zoom>_order-<order>")
     ap.add_argument("--machines", nargs="*", help="생략하면 --data의 test/ 중 Stage1 결과가 있는 machine 전부")
     ap.add_argument("--zoom", choices=["none", "a", "b"], default="a")
     ap.add_argument("--order", choices=["score", "channel"], default="score")
     ap.add_argument("--run", action="store_true", help="VLM 호출 (없으면 그림만 저장)")
     args = ap.parse_args()
-    out = HERE / "output" / f"zoom-{args.zoom}_order-{args.order}"; out.mkdir(parents=True, exist_ok=True)
+    out = args.out or HERE / "output" / f"zoom-{args.zoom}_order-{args.order}"; out.mkdir(parents=True, exist_ok=True)
     client = None
     if args.run:
         from dotenv import load_dotenv
@@ -262,9 +310,9 @@ def main():
         load_dotenv(BASE / ".env", override=True)
         client = OpenAI(api_key=os.environ["OPENAI_API_KEY"], max_retries=8, timeout=120)   # 속도 제한·일시 오류는 SDK가 기다렸다 재시도
     plt.rcParams["font.family"] = "DejaVu Sans"
-    machines = args.machines or sorted(p.stem for p in (Path(args.data) / "test").glob("*.txt") if (STAGE1_OUT / f"{p.stem}.json").exists())
+    machines = args.machines or sorted(p.stem for p in (Path(args.data) / "test").glob("*.txt") if (args.stage1_out / f"{p.stem}.json").exists())
     for e in machines:
-        run_machine(e, Path(args.data), out, args.zoom, args.order, client)
+        run_machine(e, Path(args.data), args.stage1_out, out, args.zoom, args.order, client)
 
 
 if __name__ == "__main__":
