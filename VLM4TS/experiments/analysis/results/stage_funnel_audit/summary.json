@@ -1,0 +1,48 @@
+{
+ "n_events": 327,
+ "label_status": {
+  "mismatch": 3,
+  "exact": 322,
+  "none": 2
+ },
+ "stage": {
+  "unknown_channels": 5,
+  "C_all_shown": 238,
+  "A_interval_miss": 41,
+  "B_channel_miss": 43
+ },
+ "stage1": {
+  "candidate_intervals": 1039,
+  "fp_intervals": 628,
+  "mean_channels_per_interval": 12.05
+ },
+ "A_interval_miss": {
+  "n": 41,
+  "cause": {
+   "scored_below_threshold": 41
+  },
+  "length_median": 7.0,
+  "length_le_14": 26,
+  "gap_median": 357.0,
+  "excess_gt_5pct": 7,
+  "move_lt_5pct": 0
+ },
+ "B_channel_miss": {
+  "n_events": 43,
+  "n_events_with_known_channels_and_overlap": 281,
+  "n_missed_channels": 102,
+  "cause": {
+   "scored_below_threshold": 95,
+   "unscorable": 7
+  },
+  "missed_move_median": 0.1545,
+  "missed_move_lt_5pct": 26,
+  "shown_gt_move_median": 0.825
+ },
+ "gt_channel_instances": {
+  "total": 2254,
+  "lost_at_A": 121,
+  "lost_at_B": 102,
+  "delivered_to_stage2": 2031
+ }
+}
