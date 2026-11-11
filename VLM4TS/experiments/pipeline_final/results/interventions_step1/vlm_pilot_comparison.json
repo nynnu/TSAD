@@ -1,0 +1,172 @@
+{
+  "paired_pages": 3,
+  "valid_vlm_response_pages": 6,
+  "event_validity_changes": 0,
+  "pilot_selection": "First initial page of first original DINO proposal in each of three development entities; fixed before reading GT/output",
+  "labels_used_only_for_posthoc_scope": true,
+  "entity_wide_or_complete_event_evaluation": false,
+  "performance_claim": "None. One completion per condition, three pages, incomplete multi-page cores. Not an F1 or adoption result.",
+  "rows": [
+    {
+      "page_id": "machine-1-1.e00000.c0000.r0.p1",
+      "machine": "machine-1-1",
+      "core": [
+        3920,
+        3934
+      ],
+      "page_index": 1,
+      "initial_page_count": 3,
+      "qa_point_gt_ticks": 0,
+      "core_ticks": 14,
+      "without_relation": {
+        "event_validity": "uncertain",
+        "anomalous_channels": [
+          31,
+          24,
+          21,
+          27,
+          30
+        ],
+        "channel_ranking": [
+          31,
+          24,
+          21,
+          27,
+          30,
+          25,
+          23,
+          0
+        ],
+        "confidence": "medium",
+        "additional_channels_to_review": []
+      },
+      "with_relation": {
+        "event_validity": "uncertain",
+        "anomalous_channels": [],
+        "channel_ranking": [
+          31,
+          24,
+          21,
+          27,
+          30,
+          25,
+          23,
+          0
+        ],
+        "confidence": "low",
+        "additional_channels_to_review": []
+      },
+      "event_validity_changed": false,
+      "relation_status_counts": {
+        "uncertain_reference": 8
+      }
+    },
+    {
+      "page_id": "machine-1-2.e00000.c0000.r0.p1",
+      "machine": "machine-1-2",
+      "core": [
+        84,
+        98
+      ],
+      "page_index": 1,
+      "initial_page_count": 2,
+      "qa_point_gt_ticks": 0,
+      "core_ticks": 14,
+      "without_relation": {
+        "event_validity": "uncertain",
+        "anomalous_channels": [
+          19,
+          30,
+          21,
+          13,
+          15,
+          20,
+          27
+        ],
+        "channel_ranking": [
+          19,
+          30,
+          21,
+          13,
+          15,
+          20,
+          27
+        ],
+        "confidence": "medium",
+        "additional_channels_to_review": []
+      },
+      "with_relation": {
+        "event_validity": "uncertain",
+        "anomalous_channels": [],
+        "channel_ranking": [
+          19,
+          30,
+          21,
+          13,
+          15,
+          20,
+          27,
+          34
+        ],
+        "confidence": "low",
+        "additional_channels_to_review": []
+      },
+      "event_validity_changed": false,
+      "relation_status_counts": {
+        "unavailable": 1,
+        "uncertain_state": 6,
+        "uncertain_train": 1
+      }
+    },
+    {
+      "page_id": "machine-1-6.e00000.c0000.r0.p1",
+      "machine": "machine-1-6",
+      "core": [
+        238,
+        252
+      ],
+      "page_index": 1,
+      "initial_page_count": 2,
+      "qa_point_gt_ticks": 6,
+      "core_ticks": 14,
+      "without_relation": {
+        "event_validity": "anomalous",
+        "anomalous_channels": [
+          9,
+          10,
+          12,
+          8
+        ],
+        "channel_ranking": [
+          9,
+          10,
+          12,
+          8
+        ],
+        "confidence": "medium",
+        "additional_channels_to_review": []
+      },
+      "with_relation": {
+        "event_validity": "anomalous",
+        "anomalous_channels": [
+          9,
+          10,
+          12
+        ],
+        "channel_ranking": [
+          9,
+          10,
+          12
+        ],
+        "confidence": "medium",
+        "additional_channels_to_review": []
+      },
+      "event_validity_changed": false,
+      "relation_status_counts": {
+        "unavailable": 2,
+        "uncertain_state": 5,
+        "uncertain_train": 1
+      }
+    }
+  ]
+}

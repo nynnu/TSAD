@@ -1,0 +1,208 @@
+{
+  "source": "existing DINO 28-machine manifest, precomputed inputs; GT posthoc only",
+  "totals": {
+    "cores": 1091,
+    "scope_hold": 433,
+    "gt_overlap_cores": 414,
+    "gt_overlap_scope_hold": 190
+  },
+  "by_machine": [
+    {
+      "machine": "machine-1-1",
+      "cores": 50,
+      "scope_hold": 31,
+      "gt_overlap_cores": 28,
+      "gt_overlap_scope_hold": 19
+    },
+    {
+      "machine": "machine-1-2",
+      "cores": 54,
+      "scope_hold": 13,
+      "gt_overlap_cores": 13,
+      "gt_overlap_scope_hold": 9
+    },
+    {
+      "machine": "machine-1-3",
+      "cores": 24,
+      "scope_hold": 2,
+      "gt_overlap_cores": 5,
+      "gt_overlap_scope_hold": 0
+    },
+    {
+      "machine": "machine-1-4",
+      "cores": 21,
+      "scope_hold": 8,
+      "gt_overlap_cores": 8,
+      "gt_overlap_scope_hold": 3
+    },
+    {
+      "machine": "machine-1-5",
+      "cores": 33,
+      "scope_hold": 10,
+      "gt_overlap_cores": 7,
+      "gt_overlap_scope_hold": 0
+    },
+    {
+      "machine": "machine-1-6",
+      "cores": 66,
+      "scope_hold": 26,
+      "gt_overlap_cores": 54,
+      "gt_overlap_scope_hold": 25
+    },
+    {
+      "machine": "machine-1-7",
+      "cores": 23,
+      "scope_hold": 6,
+      "gt_overlap_cores": 17,
+      "gt_overlap_scope_hold": 6
+    },
+    {
+      "machine": "machine-1-8",
+      "cores": 33,
+      "scope_hold": 15,
+      "gt_overlap_cores": 24,
+      "gt_overlap_scope_hold": 11
+    },
+    {
+      "machine": "machine-2-1",
+      "cores": 38,
+      "scope_hold": 14,
+      "gt_overlap_cores": 15,
+      "gt_overlap_scope_hold": 6
+    },
+    {
+      "machine": "machine-2-2",
+      "cores": 41,
+      "scope_hold": 16,
+      "gt_overlap_cores": 17,
+      "gt_overlap_scope_hold": 3
+    },
+    {
+      "machine": "machine-2-3",
+      "cores": 19,
+      "scope_hold": 4,
+      "gt_overlap_cores": 8,
+      "gt_overlap_scope_hold": 1
+    },
+    {
+      "machine": "machine-2-4",
+      "cores": 34,
+      "scope_hold": 7,
+      "gt_overlap_cores": 22,
+      "gt_overlap_scope_hold": 4
+    },
+    {
+      "machine": "machine-2-5",
+      "cores": 33,
+      "scope_hold": 14,
+      "gt_overlap_cores": 21,
+      "gt_overlap_scope_hold": 9
+    },
+    {
+      "machine": "machine-2-6",
+      "cores": 33,
+      "scope_hold": 8,
+      "gt_overlap_cores": 7,
+      "gt_overlap_scope_hold": 3
+    },
+    {
+      "machine": "machine-2-7",
+      "cores": 33,
+      "scope_hold": 7,
+      "gt_overlap_cores": 20,
+      "gt_overlap_scope_hold": 4
+    },
+    {
+      "machine": "machine-2-8",
+      "cores": 37,
+      "scope_hold": 4,
+      "gt_overlap_cores": 2,
+      "gt_overlap_scope_hold": 0
+    },
+    {
+      "machine": "machine-2-9",
+      "cores": 40,
+      "scope_hold": 17,
+      "gt_overlap_cores": 22,
+      "gt_overlap_scope_hold": 16
+    },
+    {
+      "machine": "machine-3-1",
+      "cores": 21,
+      "scope_hold": 6,
+      "gt_overlap_cores": 4,
+      "gt_overlap_scope_hold": 0
+    },
+    {
+      "machine": "machine-3-10",
+      "cores": 27,
+      "scope_hold": 11,
+      "gt_overlap_cores": 20,
+      "gt_overlap_scope_hold": 11
+    },
+    {
+      "machine": "machine-3-11",
+      "cores": 49,
+      "scope_hold": 21,
+      "gt_overlap_cores": 3,
+      "gt_overlap_scope_hold": 2
+    },
+    {
+      "machine": "machine-3-2",
+      "cores": 62,
+      "scope_hold": 39,
+      "gt_overlap_cores": 15,
+      "gt_overlap_scope_hold": 13
+    },
+    {
+      "machine": "machine-3-3",
+      "cores": 54,
+      "scope_hold": 33,
+      "gt_overlap_cores": 24,
+      "gt_overlap_scope_hold": 14
+    },
+    {
+      "machine": "machine-3-4",
+      "cores": 38,
+      "scope_hold": 11,
+      "gt_overlap_cores": 13,
+      "gt_overlap_scope_hold": 6
+    },
+    {
+      "machine": "machine-3-5",
+      "cores": 45,
+      "scope_hold": 27,
+      "gt_overlap_cores": 8,
+      "gt_overlap_scope_hold": 6
+    },
+    {
+      "machine": "machine-3-6",
+      "cores": 54,
+      "scope_hold": 27,
+      "gt_overlap_cores": 16,
+      "gt_overlap_scope_hold": 8
+    },
+    {
+      "machine": "machine-3-7",
+      "cores": 36,
+      "scope_hold": 10,
+      "gt_overlap_cores": 7,
+      "gt_overlap_scope_hold": 4
+    },
+    {
+      "machine": "machine-3-8",
+      "cores": 63,
+      "scope_hold": 40,
+      "gt_overlap_cores": 10,
+      "gt_overlap_scope_hold": 7
+    },
+    {
+      "machine": "machine-3-9",
+      "cores": 30,
+      "scope_hold": 6,
+      "gt_overlap_cores": 4,
+      "gt_overlap_scope_hold": 0
+    }
+  ],
+  "limitation": "core counts not independent events; no VLM responses; neighboring proposal not proof of interference"
+}

@@ -1,0 +1,1037 @@
+{
+  "machine-1-1.e00000.c0000.r0.p1": {
+    "fingerprint": "04f15d0ae47d5ec96d4398d41ce14f72d1e54ce5c6b4b44c3c61b32c4420ecf9",
+    "image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\pipeline_final\\results\\interventions_step1\\with_relation\\images\\machine-1-1.e00000.c0000.r0.p1.png",
+    "image_sha256": "eea2f621e30d7c33e49d9136378d54e54ab89f78354d07d078cac5c69ab183ff",
+    "reference_quality": [
+      {
+        "channel": 31,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.56640625,
+        "validation_focus_rmse_q90": 1.458020453153622,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 24,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.559375,
+        "validation_focus_rmse_q90": 1.4318057794724293,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 21,
+        "status": "out_of_support",
+        "context_support_p": 0.03076923076923077,
+        "validation_outside_fraction": 0.5179687500000001,
+        "validation_focus_rmse_q90": 1.2499087864552996,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0
+      },
+      {
+        "channel": 27,
+        "status": "out_of_support",
+        "context_support_p": 0.03076923076923077,
+        "validation_outside_fraction": 0.5026041666666667,
+        "validation_focus_rmse_q90": 1.142518679569726,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0
+      },
+      {
+        "channel": 30,
+        "status": "out_of_support",
+        "context_support_p": 0.03076923076923077,
+        "validation_outside_fraction": 0.5067708333333334,
+        "validation_focus_rmse_q90": 1.2362729659447027,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0
+      },
+      {
+        "channel": 25,
+        "status": "context_supported",
+        "context_support_p": 0.09230769230769231,
+        "validation_outside_fraction": 0.4619791666666666,
+        "validation_focus_rmse_q90": 0.4508247353443312,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0
+      },
+      {
+        "channel": 23,
+        "status": "context_supported",
+        "context_support_p": 0.09230769230769231,
+        "validation_outside_fraction": 0.47213541666666664,
+        "validation_focus_rmse_q90": 0.4462184651999431,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0
+      },
+      {
+        "channel": 0,
+        "status": "out_of_support",
+        "context_support_p": 0.03076923076923077,
+        "validation_outside_fraction": 0.41354166666666664,
+        "validation_focus_rmse_q90": 0.13451357362354657,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0
+      }
+    ],
+    "coupling_context": [
+      {
+        "source": "existing_signed_coupling",
+        "role": "diagnostic_context",
+        "observed_coupling": 0.9598336559119458,
+        "statistical_tail_p": 0.875,
+        "context_support_p": 0.0625,
+        "decrease_vs_reference": -0.13870391686611105,
+        "normal_train_variation_margin": 0.23770150560824632,
+        "status": "uncertain_reference",
+        "passes_train_use_conditions": false,
+        "event_decision": "undetermined",
+        "can_confirm_anomaly": false,
+        "can_reject_event": false,
+        "limitation": "Train rarity and normal-variation exceedance do not establish a practically abnormal relationship.",
+        "channel": 31,
+        "peer_channels": [
+          27,
+          20
+        ],
+        "peer_signs": [
+          1.0,
+          1.0
+        ],
+        "normal_calibration_median": 0.8484270619881986,
+        "normal_calibration_windows": 31,
+        "normal_audit_flag_rate": 0.0,
+        "window_start": 3815,
+        "window_end": 4039,
+        "core_overlap_ticks": 14,
+        "scope": "224-tick display context",
+        "initial_peer_support": true,
+        "normal_calibration_eligible": true
+      },
+      {
+        "source": "existing_signed_coupling",
+        "role": "diagnostic_context",
+        "observed_coupling": 0.9927192251076584,
+        "statistical_tail_p": 0.9375,
+        "context_support_p": 0.09375,
+        "decrease_vs_reference": -0.008079815868935025,
+        "normal_train_variation_margin": 0.1378492893830971,
+        "status": "uncertain_reference",
+        "passes_train_use_conditions": false,
+        "event_decision": "undetermined",
+        "can_confirm_anomaly": false,
+        "can_reject_event": false,
+        "limitation": "Train rarity and normal-variation exceedance do not establish a practically abnormal relationship.",
+        "channel": 24,
+        "peer_channels": [
+          21,
+          30
+        ],
+        "peer_signs": [
+          1.0,
+          1.0
+        ],
+        "normal_calibration_median": 0.967041530000919,
+        "normal_calibration_windows": 31,
+        "normal_audit_flag_rate": 0.0,
+        "window_start": 3815,
+        "window_end": 4039,
+        "core_overlap_ticks": 14,
+        "scope": "224-tick display context",
+        "initial_peer_support": true,
+        "normal_calibration_eligible": true
+      },
+      {
+        "source": "existing_signed_coupling",
+        "role": "diagnostic_context",
+        "observed_coupling": 0.9995415591369827,
+        "statistical_tail_p": 0.9375,
+        "context_support_p": 0.09375,
+        "decrease_vs_reference": -0.0008956757533561399,
+        "normal_train_variation_margin": 0.009194739305016242,
+        "status": "uncertain_reference",
+        "passes_train_use_conditions": false,
+        "event_decision": "undetermined",
+        "can_confirm_anomaly": false,
+        "can_reject_event": false,
+        "limitation": "Train rarity and normal-variation exceedance do not establish a practically abnormal relationship.",
+        "channel": 21,
+        "peer_channels": [
+          30,
+          20
+        ],
+        "peer_signs": [
+          1.0,
+          1.0
+        ],
+        "normal_calibration_median": 0.997138419857126,
+        "normal_calibration_windows": 31,
+        "normal_audit_flag_rate": 0.0,
+        "window_start": 3815,
+        "window_end": 4039,
+        "core_overlap_ticks": 14,
+        "scope": "224-tick display context",
+        "initial_peer_support": true,
+        "normal_calibration_eligible": true
+      },
+      {
+        "source": "existing_signed_coupling",
+        "role": "diagnostic_context",
+        "observed_coupling": 0.9995554394477749,
+        "statistical_tail_p": 0.9375,
+        "context_support_p": 0.09375,
+        "decrease_vs_reference": -0.0006773972576034071,
+        "normal_train_variation_margin": 0.007714578066847333,
+        "status": "uncertain_reference",
+        "passes_train_use_conditions": false,
+        "event_decision": "undetermined",
+        "can_confirm_anomaly": false,
+        "can_reject_event": false,
+        "limitation": "Train rarity and normal-variation exceedance do not establish a practically abnormal relationship.",
+        "channel": 27,
+        "peer_channels": [
+          20,
+          30
+        ],
+        "peer_signs": [
+          1.0,
+          1.0
+        ],
+        "normal_calibration_median": 0.9975765874244984,
+        "normal_calibration_windows": 31,
+        "normal_audit_flag_rate": 0.0,
+        "window_start": 3815,
+        "window_end": 4039,
+        "core_overlap_ticks": 14,
+        "scope": "224-tick display context",
+        "initial_peer_support": true,
+        "normal_calibration_eligible": true
+      },
+      {
+        "source": "existing_signed_coupling",
+        "role": "diagnostic_context",
+        "observed_coupling": 0.9996436571378773,
+        "statistical_tail_p": 0.9375,
+        "context_support_p": 0.09375,
+        "decrease_vs_reference": -0.0007398556087495622,
+        "normal_train_variation_margin": 0.007359900283915866,
+        "status": "uncertain_reference",
+        "passes_train_use_conditions": false,
+        "event_decision": "undetermined",
+        "can_confirm_anomaly": false,
+        "can_reject_event": false,
+        "limitation": "Train rarity and normal-variation exceedance do not establish a practically abnormal relationship.",
+        "channel": 30,
+        "peer_channels": [
+          21,
+          27
+        ],
+        "peer_signs": [
+          1.0,
+          1.0
+        ],
+        "normal_calibration_median": 0.9977155210575097,
+        "normal_calibration_windows": 31,
+        "normal_audit_flag_rate": 0.0,
+        "window_start": 3815,
+        "window_end": 4039,
+        "core_overlap_ticks": 14,
+        "scope": "224-tick display context",
+        "initial_peer_support": true,
+        "normal_calibration_eligible": true
+      },
+      {
+        "source": "existing_signed_coupling",
+        "role": "diagnostic_context",
+        "observed_coupling": 0.9080011825113867,
+        "statistical_tail_p": 0.875,
+        "context_support_p": 0.09375,
+        "decrease_vs_reference": -0.04831895938026065,
+        "normal_train_variation_margin": 0.3391940733032616,
+        "status": "uncertain_reference",
+        "passes_train_use_conditions": false,
+        "event_decision": "undetermined",
+        "can_confirm_anomaly": false,
+        "can_reject_event": false,
+        "limitation": "Train rarity and normal-variation exceedance do not establish a practically abnormal relationship.",
+        "channel": 25,
+        "peer_channels": [
+          23,
+          19
+        ],
+        "peer_signs": [
+          1.0,
+          1.0
+        ],
+        "normal_calibration_median": 0.7852218274185999,
+        "normal_calibration_windows": 31,
+        "normal_audit_flag_rate": 0.0,
+        "window_start": 3815,
+        "window_end": 4039,
+        "core_overlap_ticks": 14,
+        "scope": "224-tick display context",
+        "initial_peer_support": true,
+        "normal_calibration_eligible": true
+      },
+      {
+        "source": "existing_signed_coupling",
+        "role": "diagnostic_context",
+        "observed_coupling": 0.8967705346457958,
+        "statistical_tail_p": 0.84375,
+        "context_support_p": 0.09375,
+        "decrease_vs_reference": -0.040260725085109694,
+        "normal_train_variation_margin": 0.3393401280936789,
+        "status": "uncertain_reference",
+        "passes_train_use_conditions": false,
+        "event_decision": "undetermined",
+        "can_confirm_anomaly": false,
+        "can_reject_event": false,
+        "limitation": "Train rarity and normal-variation exceedance do not establish a practically abnormal relationship.",
+        "channel": 23,
+        "peer_channels": [
+          25,
+          19
+        ],
+        "peer_signs": [
+          1.0,
+          1.0
+        ],
+        "normal_calibration_median": 0.7814920091332442,
+        "normal_calibration_windows": 31,
+        "normal_audit_flag_rate": 0.0,
+        "window_start": 3815,
+        "window_end": 4039,
+        "core_overlap_ticks": 14,
+        "scope": "224-tick display context",
+        "initial_peer_support": true,
+        "normal_calibration_eligible": true
+      },
+      {
+        "source": "existing_signed_coupling",
+        "role": "diagnostic_context",
+        "observed_coupling": 0.9838244311951065,
+        "statistical_tail_p": 0.9375,
+        "context_support_p": 0.09375,
+        "decrease_vs_reference": -0.11889403142234023,
+        "normal_train_variation_margin": 0.5252347477966282,
+        "status": "uncertain_reference",
+        "passes_train_use_conditions": false,
+        "event_decision": "undetermined",
+        "can_confirm_anomaly": false,
+        "can_reject_event": false,
+        "limitation": "Train rarity and normal-variation exceedance do not establish a practically abnormal relationship.",
+        "channel": 0,
+        "peer_channels": [
+          21,
+          20
+        ],
+        "peer_signs": [
+          1.0,
+          1.0
+        ],
+        "normal_calibration_median": 0.8891051077161227,
+        "normal_calibration_windows": 31,
+        "normal_audit_flag_rate": 0.0,
+        "window_start": 3815,
+        "window_end": 4039,
+        "core_overlap_ticks": 14,
+        "scope": "224-tick display context",
+        "initial_peer_support": true,
+        "normal_calibration_eligible": true
+      }
+    ]
+  },
+  "machine-1-2.e00000.c0000.r0.p1": {
+    "fingerprint": "d3288fcee2fe2bbcbb7c840a0fad747d3821b836621a81d15d6ca94fc86ea503",
+    "image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\pipeline_final\\results\\interventions_step1\\with_relation\\images\\machine-1-2.e00000.c0000.r0.p1.png",
+    "image_sha256": "c5d16087526a13e79cabc95495e3e82449ec9fa6c80f3e156c57ec7a83c1dd69",
+    "reference_quality": [
+      {
+        "channel": 19,
+        "status": "context_supported",
+        "context_support_p": 0.16923076923076924,
+        "validation_outside_fraction": 0.30546874999999996,
+        "validation_focus_rmse_q90": 0.3455041860616222,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 30,
+        "status": "context_supported",
+        "context_support_p": 0.1076923076923077,
+        "validation_outside_fraction": 0.2973958333333333,
+        "validation_focus_rmse_q90": 0.24178700526312133,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 21,
+        "status": "context_supported",
+        "context_support_p": 0.1076923076923077,
+        "validation_outside_fraction": 0.29375,
+        "validation_focus_rmse_q90": 0.24249672195885602,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 13,
+        "status": "context_supported",
+        "context_support_p": 0.15384615384615385,
+        "validation_outside_fraction": 0.3114583333333333,
+        "validation_focus_rmse_q90": 0.25598822670265975,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 15,
+        "status": "context_supported",
+        "context_support_p": 0.13846153846153847,
+        "validation_outside_fraction": 0.30807291666666664,
+        "validation_focus_rmse_q90": 0.28241184232818173,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0
+      },
+      {
+        "channel": 34,
+        "status": "context_supported",
+        "context_support_p": 1.0,
+        "validation_outside_fraction": 0.0067708333333333336,
+        "validation_focus_rmse_q90": 0.06454972243679027,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0
+      },
+      {
+        "channel": 20,
+        "status": "context_supported",
+        "context_support_p": 0.1076923076923077,
+        "validation_outside_fraction": 0.35286458333333337,
+        "validation_focus_rmse_q90": 0.2592486903736537,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 27,
+        "status": "context_supported",
+        "context_support_p": 0.09230769230769231,
+        "validation_outside_fraction": 0.27083333333333337,
+        "validation_focus_rmse_q90": 0.2816016156981799,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      }
+    ],
+    "coupling_context": [
+      {
+        "source": "existing_signed_coupling",
+        "role": "diagnostic_context",
+        "observed_coupling": 0.9325787619717234,
+        "statistical_tail_p": 0.3333333333333333,
+        "context_support_p": null,
+        "decrease_vs_reference": null,
+        "normal_train_variation_margin": 0.03680214073512958,
+        "status": "uncertain_state",
+        "passes_train_use_conditions": false,
+        "event_decision": "undetermined",
+        "can_confirm_anomaly": false,
+        "can_reject_event": false,
+        "limitation": "Train rarity and normal-variation exceedance do not establish a practically abnormal relationship.",
+        "channel": 19,
+        "peer_channels": [
+          30,
+          21
+        ],
+        "peer_signs": [
+          1.0,
+          1.0
+        ],
+        "normal_calibration_median": 0.9462869725545472,
+        "normal_calibration_windows": 26,
+        "normal_audit_flag_rate": 0.0,
+        "window_start": 0,
+        "window_end": 224,
+        "core_overlap_ticks": 14,
+        "scope": "224-tick display context",
+        "initial_peer_support": true,
+        "normal_calibration_eligible": true
+      },
+      {
+        "source": "existing_signed_coupling",
+        "role": "diagnostic_context",
+        "observed_coupling": 0.9570918204536307,
+        "statistical_tail_p": 0.2962962962962963,
+        "context_support_p": null,
+        "decrease_vs_reference": null,
+        "normal_train_variation_margin": 0.029587449650532865,
+        "status": "uncertain_state",
+        "passes_train_use_conditions": false,
+        "event_decision": "undetermined",
+        "can_confirm_anomaly": false,
+        "can_reject_event": false,
+        "limitation": "Train rarity and normal-variation exceedance do not establish a practically abnormal relationship.",
+        "channel": 30,
+        "peer_channels": [
+          21,
+          19
+        ],
+        "peer_signs": [
+          1.0,
+          1.0
+        ],
+        "normal_calibration_median": 0.9679370611533471,
+        "normal_calibration_windows": 26,
+        "normal_audit_flag_rate": 0.0,
+        "window_start": 0,
+        "window_end": 224,
+        "core_overlap_ticks": 14,
+        "scope": "224-tick display context",
+        "initial_peer_support": true,
+        "normal_calibration_eligible": true
+      },
+      {
+        "source": "existing_signed_coupling",
+        "role": "diagnostic_context",
+        "observed_coupling": 0.9623586656610565,
+        "statistical_tail_p": 0.3333333333333333,
+        "context_support_p": null,
+        "decrease_vs_reference": null,
+        "normal_train_variation_margin": 0.02722618004904173,
+        "status": "uncertain_state",
+        "passes_train_use_conditions": false,
+        "event_decision": "undetermined",
+        "can_confirm_anomaly": false,
+        "can_reject_event": false,
+        "limitation": "Train rarity and normal-variation exceedance do not establish a practically abnormal relationship.",
+        "channel": 21,
+        "peer_channels": [
+          30,
+          19
+        ],
+        "peer_signs": [
+          1.0,
+          1.0
+        ],
+        "normal_calibration_median": 0.967394455032601,
+        "normal_calibration_windows": 26,
+        "normal_audit_flag_rate": 0.0,
+        "window_start": 0,
+        "window_end": 224,
+        "core_overlap_ticks": 14,
+        "scope": "224-tick display context",
+        "initial_peer_support": true,
+        "normal_calibration_eligible": true
+      },
+      {
+        "source": "existing_signed_coupling",
+        "role": "diagnostic_context",
+        "observed_coupling": 0.7210968182063052,
+        "statistical_tail_p": 0.37037037037037035,
+        "context_support_p": null,
+        "decrease_vs_reference": null,
+        "normal_train_variation_margin": 0.2039987364096431,
+        "status": "uncertain_state",
+        "passes_train_use_conditions": false,
+        "event_decision": "undetermined",
+        "can_confirm_anomaly": false,
+        "can_reject_event": false,
+        "limitation": "Train rarity and normal-variation exceedance do not establish a practically abnormal relationship.",
+        "channel": 13,
+        "peer_channels": [
+          15,
+          30
+        ],
+        "peer_signs": [
+          1.0,
+          1.0
+        ],
+        "normal_calibration_median": 0.7585688320595965,
+        "normal_calibration_windows": 26,
+        "normal_audit_flag_rate": 0.0,
+        "window_start": 0,
+        "window_end": 224,
+        "core_overlap_ticks": 14,
+        "scope": "224-tick display context",
+        "initial_peer_support": true,
+        "normal_calibration_eligible": true
+      },
+      {
+        "source": "existing_signed_coupling",
+        "role": "diagnostic_context",
+        "observed_coupling": 0.6886087253950801,
+        "statistical_tail_p": 0.2962962962962963,
+        "context_support_p": null,
+        "decrease_vs_reference": null,
+        "normal_train_variation_margin": 0.20753248585307602,
+        "status": "uncertain_state",
+        "passes_train_use_conditions": false,
+        "event_decision": "undetermined",
+        "can_confirm_anomaly": false,
+        "can_reject_event": false,
+        "limitation": "Train rarity and normal-variation exceedance do not establish a practically abnormal relationship.",
+        "channel": 15,
+        "peer_channels": [
+          13,
+          30
+        ],
+        "peer_signs": [
+          1.0,
+          1.0
+        ],
+        "normal_calibration_median": 0.7221987671689093,
+        "normal_calibration_windows": 26,
+        "normal_audit_flag_rate": 0.0,
+        "window_start": 0,
+        "window_end": 224,
+        "core_overlap_ticks": 14,
+        "scope": "224-tick display context",
+        "initial_peer_support": true,
+        "normal_calibration_eligible": true
+      },
+      {
+        "source": "existing_signed_coupling",
+        "role": "diagnostic_context",
+        "observed_coupling": 0.0,
+        "statistical_tail_p": null,
+        "context_support_p": null,
+        "decrease_vs_reference": null,
+        "normal_train_variation_margin": null,
+        "status": "unavailable",
+        "passes_train_use_conditions": false,
+        "event_decision": "undetermined",
+        "can_confirm_anomaly": false,
+        "can_reject_event": false,
+        "limitation": "Train rarity and normal-variation exceedance do not establish a practically abnormal relationship.",
+        "channel": 34,
+        "peer_channels": [
+          0,
+          1
+        ],
+        "peer_signs": [
+          0.0,
+          0.0
+        ],
+        "normal_calibration_median": null,
+        "normal_calibration_windows": 19,
+        "normal_audit_flag_rate": null,
+        "window_start": 0,
+        "window_end": 224,
+        "core_overlap_ticks": 14,
+        "scope": "224-tick display context",
+        "initial_peer_support": false,
+        "normal_calibration_eligible": false
+      },
+      {
+        "source": "existing_signed_coupling",
+        "role": "diagnostic_context",
+        "observed_coupling": 0.9601175549966713,
+        "statistical_tail_p": 0.48148148148148145,
+        "context_support_p": null,
+        "decrease_vs_reference": null,
+        "normal_train_variation_margin": 0.05794983108225504,
+        "status": "uncertain_state",
+        "passes_train_use_conditions": false,
+        "event_decision": "undetermined",
+        "can_confirm_anomaly": false,
+        "can_reject_event": false,
+        "limitation": "Train rarity and normal-variation exceedance do not establish a practically abnormal relationship.",
+        "channel": 20,
+        "peer_channels": [
+          18,
+          27
+        ],
+        "peer_signs": [
+          1.0,
+          1.0
+        ],
+        "normal_calibration_median": 0.9655152448103692,
+        "normal_calibration_windows": 26,
+        "normal_audit_flag_rate": 0.0,
+        "window_start": 0,
+        "window_end": 224,
+        "core_overlap_ticks": 14,
+        "scope": "224-tick display context",
+        "initial_peer_support": true,
+        "normal_calibration_eligible": true
+      },
+      {
+        "source": "existing_signed_coupling",
+        "role": "diagnostic_context",
+        "observed_coupling": 0.9577800272477512,
+        "statistical_tail_p": 0.5555555555555556,
+        "context_support_p": null,
+        "decrease_vs_reference": null,
+        "normal_train_variation_margin": 0.03529078500471747,
+        "status": "uncertain_train",
+        "passes_train_use_conditions": false,
+        "event_decision": "undetermined",
+        "can_confirm_anomaly": false,
+        "can_reject_event": false,
+        "limitation": "Train rarity and normal-variation exceedance do not establish a practically abnormal relationship.",
+        "channel": 27,
+        "peer_channels": [
+          21,
+          30
+        ],
+        "peer_signs": [
+          1.0,
+          1.0
+        ],
+        "normal_calibration_median": 0.9539837693612392,
+        "normal_calibration_windows": 26,
+        "normal_audit_flag_rate": 0.11538461538461539,
+        "window_start": 0,
+        "window_end": 224,
+        "core_overlap_ticks": 14,
+        "scope": "224-tick display context",
+        "initial_peer_support": true,
+        "normal_calibration_eligible": true
+      }
+    ]
+  },
+  "machine-1-6.e00000.c0000.r0.p1": {
+    "fingerprint": "119e5c6b6f376805e596ad8545a3084faec055ab0a8a24404e704a9f948c9fd5",
+    "image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\pipeline_final\\results\\interventions_step1\\with_relation\\images\\machine-1-6.e00000.c0000.r0.p1.png",
+    "image_sha256": "21b4b57c00fccfcd6e1d1556cb81bbae0019916ecd52719136759425a676cc9f",
+    "reference_quality": [
+      {
+        "channel": 9,
+        "status": "context_supported",
+        "context_support_p": 0.46153846153846156,
+        "validation_outside_fraction": 0.17890625,
+        "validation_focus_rmse_q90": 4.555520619387248,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 10,
+        "status": "context_supported",
+        "context_support_p": 0.5230769230769231,
+        "validation_outside_fraction": 0.11953125,
+        "validation_focus_rmse_q90": 7.2483403541478495,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 12,
+        "status": "context_supported",
+        "context_support_p": 0.4307692307692308,
+        "validation_outside_fraction": 0.16927083333333334,
+        "validation_focus_rmse_q90": 1.0783460039564154,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 8,
+        "status": "context_supported",
+        "context_support_p": 0.3384615384615385,
+        "validation_outside_fraction": 0.37786458333333334,
+        "validation_focus_rmse_q90": 1.1507664784418676,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 0,
+        "status": "context_supported",
+        "context_support_p": 0.18461538461538463,
+        "validation_outside_fraction": 0.23828124999999997,
+        "validation_focus_rmse_q90": 0.19998410950081175,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 14,
+        "status": "context_supported",
+        "context_support_p": 0.6,
+        "validation_outside_fraction": 0.36223958333333334,
+        "validation_focus_rmse_q90": 0.25943348903965857,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 20,
+        "status": "out_of_support",
+        "context_support_p": 0.046153846153846156,
+        "validation_outside_fraction": 0.3104166666666667,
+        "validation_focus_rmse_q90": 0.15846321142931705,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 31,
+        "status": "context_supported",
+        "context_support_p": 0.1076923076923077,
+        "validation_outside_fraction": 0.32838541666666665,
+        "validation_focus_rmse_q90": 0.16882653505923267,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      }
+    ],
+    "coupling_context": [
+      {
+        "source": "existing_signed_coupling",
+        "role": "diagnostic_context",
+        "observed_coupling": 0.5777504328271201,
+        "statistical_tail_p": null,
+        "context_support_p": null,
+        "decrease_vs_reference": null,
+        "normal_train_variation_margin": null,
+        "status": "unavailable",
+        "passes_train_use_conditions": false,
+        "event_decision": "undetermined",
+        "can_confirm_anomaly": false,
+        "can_reject_event": false,
+        "limitation": "Train rarity and normal-variation exceedance do not establish a practically abnormal relationship.",
+        "channel": 9,
+        "peer_channels": [
+          10,
+          11
+        ],
+        "peer_signs": [
+          1.0,
+          1.0
+        ],
+        "normal_calibration_median": 0.5033773576294844,
+        "normal_calibration_windows": 26,
+        "normal_audit_flag_rate": null,
+        "window_start": 133,
+        "window_end": 357,
+        "core_overlap_ticks": 14,
+        "scope": "224-tick display context",
+        "initial_peer_support": false,
+        "normal_calibration_eligible": false
+      },
+      {
+        "source": "existing_signed_coupling",
+        "role": "diagnostic_context",
+        "observed_coupling": 0.5533011727925,
+        "statistical_tail_p": null,
+        "context_support_p": null,
+        "decrease_vs_reference": null,
+        "normal_train_variation_margin": null,
+        "status": "unavailable",
+        "passes_train_use_conditions": false,
+        "event_decision": "undetermined",
+        "can_confirm_anomaly": false,
+        "can_reject_event": false,
+        "limitation": "Train rarity and normal-variation exceedance do not establish a practically abnormal relationship.",
+        "channel": 10,
+        "peer_channels": [
+          9,
+          11
+        ],
+        "peer_signs": [
+          1.0,
+          1.0
+        ],
+        "normal_calibration_median": 0.5026811317078509,
+        "normal_calibration_windows": 26,
+        "normal_audit_flag_rate": null,
+        "window_start": 133,
+        "window_end": 357,
+        "core_overlap_ticks": 14,
+        "scope": "224-tick display context",
+        "initial_peer_support": false,
+        "normal_calibration_eligible": false
+      },
+      {
+        "source": "existing_signed_coupling",
+        "role": "diagnostic_context",
+        "observed_coupling": 0.8619218636787174,
+        "statistical_tail_p": 0.8888888888888888,
+        "context_support_p": null,
+        "decrease_vs_reference": null,
+        "normal_train_variation_margin": 0.0786575873095704,
+        "status": "uncertain_state",
+        "passes_train_use_conditions": false,
+        "event_decision": "undetermined",
+        "can_confirm_anomaly": false,
+        "can_reject_event": false,
+        "limitation": "Train rarity and normal-variation exceedance do not establish a practically abnormal relationship.",
+        "channel": 12,
+        "peer_channels": [
+          8,
+          11
+        ],
+        "peer_signs": [
+          1.0,
+          1.0
+        ],
+        "normal_calibration_median": 0.8322059024506145,
+        "normal_calibration_windows": 26,
+        "normal_audit_flag_rate": 0.038461538461538464,
+        "window_start": 133,
+        "window_end": 357,
+        "core_overlap_ticks": 14,
+        "scope": "224-tick display context",
+        "initial_peer_support": true,
+        "normal_calibration_eligible": true
+      },
+      {
+        "source": "existing_signed_coupling",
+        "role": "diagnostic_context",
+        "observed_coupling": 0.9148507362136789,
+        "statistical_tail_p": 0.8148148148148148,
+        "context_support_p": null,
+        "decrease_vs_reference": null,
+        "normal_train_variation_margin": 0.05548070998109994,
+        "status": "uncertain_state",
+        "passes_train_use_conditions": false,
+        "event_decision": "undetermined",
+        "can_confirm_anomaly": false,
+        "can_reject_event": false,
+        "limitation": "Train rarity and normal-variation exceedance do not establish a practically abnormal relationship.",
+        "channel": 8,
+        "peer_channels": [
+          14,
+          12
+        ],
+        "peer_signs": [
+          1.0,
+          1.0
+        ],
+        "normal_calibration_median": 0.9002528917167445,
+        "normal_calibration_windows": 26,
+        "normal_audit_flag_rate": 0.0,
+        "window_start": 133,
+        "window_end": 357,
+        "core_overlap_ticks": 14,
+        "scope": "224-tick display context",
+        "initial_peer_support": true,
+        "normal_calibration_eligible": true
+      },
+      {
+        "source": "existing_signed_coupling",
+        "role": "diagnostic_context",
+        "observed_coupling": 0.9072770886119508,
+        "statistical_tail_p": 0.8148148148148148,
+        "context_support_p": null,
+        "decrease_vs_reference": null,
+        "normal_train_variation_margin": 0.09437252046190797,
+        "status": "uncertain_state",
+        "passes_train_use_conditions": false,
+        "event_decision": "undetermined",
+        "can_confirm_anomaly": false,
+        "can_reject_event": false,
+        "limitation": "Train rarity and normal-variation exceedance do not establish a practically abnormal relationship.",
+        "channel": 0,
+        "peer_channels": [
+          27,
+          19
+        ],
+        "peer_signs": [
+          1.0,
+          1.0
+        ],
+        "normal_calibration_median": 0.8182076416888184,
+        "normal_calibration_windows": 26,
+        "normal_audit_flag_rate": 0.0,
+        "window_start": 133,
+        "window_end": 357,
+        "core_overlap_ticks": 14,
+        "scope": "224-tick display context",
+        "initial_peer_support": true,
+        "normal_calibration_eligible": true
+      },
+      {
+        "source": "existing_signed_coupling",
+        "role": "diagnostic_context",
+        "observed_coupling": 0.9098918145502559,
+        "statistical_tail_p": 0.7407407407407407,
+        "context_support_p": null,
+        "decrease_vs_reference": null,
+        "normal_train_variation_margin": 0.06733700022483957,
+        "status": "uncertain_state",
+        "passes_train_use_conditions": false,
+        "event_decision": "undetermined",
+        "can_confirm_anomaly": false,
+        "can_reject_event": false,
+        "limitation": "Train rarity and normal-variation exceedance do not establish a practically abnormal relationship.",
+        "channel": 14,
+        "peer_channels": [
+          8,
+          11
+        ],
+        "peer_signs": [
+          1.0,
+          1.0
+        ],
+        "normal_calibration_median": 0.9001570047773115,
+        "normal_calibration_windows": 26,
+        "normal_audit_flag_rate": 0.07692307692307693,
+        "window_start": 133,
+        "window_end": 357,
+        "core_overlap_ticks": 14,
+        "scope": "224-tick display context",
+        "initial_peer_support": true,
+        "normal_calibration_eligible": true
+      },
+      {
+        "source": "existing_signed_coupling",
+        "role": "diagnostic_context",
+        "observed_coupling": 0.993755857303771,
+        "statistical_tail_p": 0.8888888888888888,
+        "context_support_p": null,
+        "decrease_vs_reference": null,
+        "normal_train_variation_margin": 0.010534332783200456,
+        "status": "uncertain_train",
+        "passes_train_use_conditions": false,
+        "event_decision": "undetermined",
+        "can_confirm_anomaly": false,
+        "can_reject_event": false,
+        "limitation": "Train rarity and normal-variation exceedance do not establish a practically abnormal relationship.",
+        "channel": 20,
+        "peer_channels": [
+          21,
+          27
+        ],
+        "peer_signs": [
+          1.0,
+          1.0
+        ],
+        "normal_calibration_median": 0.9881845363156823,
+        "normal_calibration_windows": 26,
+        "normal_audit_flag_rate": 0.11538461538461539,
+        "window_start": 133,
+        "window_end": 357,
+        "core_overlap_ticks": 14,
+        "scope": "224-tick display context",
+        "initial_peer_support": true,
+        "normal_calibration_eligible": true
+      },
+      {
+        "source": "existing_signed_coupling",
+        "role": "diagnostic_context",
+        "observed_coupling": 0.8376558811368642,
+        "statistical_tail_p": 0.2962962962962963,
+        "context_support_p": null,
+        "decrease_vs_reference": null,
+        "normal_train_variation_margin": 0.19003917884386098,
+        "status": "uncertain_state",
+        "passes_train_use_conditions": false,
+        "event_decision": "undetermined",
+        "can_confirm_anomaly": false,
+        "can_reject_event": false,
+        "limitation": "Train rarity and normal-variation exceedance do not establish a practically abnormal relationship.",
+        "channel": 31,
+        "peer_channels": [
+          20,
+          21
+        ],
+        "peer_signs": [
+          1.0,
+          1.0
+        ],
+        "normal_calibration_median": 0.8706434069417985,
+        "normal_calibration_windows": 26,
+        "normal_audit_flag_rate": 0.0,
+        "window_start": 133,
+        "window_end": 357,
+        "core_overlap_ticks": 14,
+        "scope": "224-tick display context",
+        "initial_peer_support": true,
+        "normal_calibration_eligible": true
+      }
+    ]
+  }
+}

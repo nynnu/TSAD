@@ -1,0 +1,23 @@
+{
+  "schema_version": "dino-hfz-integrated-v1",
+  "source_backend": "original_dino_stage1",
+  "entities": 1,
+  "parents": 49,
+  "cores": 50,
+  "planned_pages": 97,
+  "prepared_pages": 3,
+  "valid_response_pages": 3,
+  "executed_api": true,
+  "region_status_counts": {
+    "anomalous": 0,
+    "rejected_candidate": 0,
+    "uncertain": 50
+  },
+  "interventions": {
+    "scope_policy": "hold",
+    "coupling_context": false,
+    "coupling_window": null,
+    "coupling_authority": "diagnostic_context_only; no candidate or aggregation changes"
+  },
+  "warning": "Prepared/pending is not a VLM prediction. Uncertain regions are not normal. No performance claim without labelled evaluation."
+}

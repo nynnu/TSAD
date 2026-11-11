@@ -1,0 +1,46 @@
+{
+  "paired_pages": 3,
+  "candidate_plans_identical": true,
+  "all_pairs": [
+    {
+      "page_id": "machine-1-1.e00000.c0000.r0.p1",
+      "image_identical": true,
+      "reference_identical": true,
+      "primary_prompt_identical": true,
+      "relation_rows": 8,
+      "status_counts": {
+        "uncertain_reference": 8
+      }
+    },
+    {
+      "page_id": "machine-1-2.e00000.c0000.r0.p1",
+      "image_identical": true,
+      "reference_identical": true,
+      "primary_prompt_identical": true,
+      "relation_rows": 8,
+      "status_counts": {
+        "unavailable": 1,
+        "uncertain_state": 6,
+        "uncertain_train": 1
+      }
+    },
+    {
+      "page_id": "machine-1-6.e00000.c0000.r0.p1",
+      "image_identical": true,
+      "reference_identical": true,
+      "primary_prompt_identical": true,
+      "relation_rows": 8,
+      "status_counts": {
+        "unavailable": 2,
+        "uncertain_state": 5,
+        "uncertain_train": 1
+      }
+    }
+  ],
+  "historical_0978_counterexample_reproduced": true,
+  "automatic_event_vote": false,
+  "live_vlm_calls_during_verification": 0,
+  "cached_response_pages": 6,
+  "performance_evaluated": false,
+  "claim_scope": "Input intervention and provenance verified only; no detector or VLM performance improvement established."
+}
