@@ -1,0 +1,122 @@
+[
+  {
+    "channel": 16,
+    "focus_start": 11667,
+    "focus_end": 11727,
+    "context": 48,
+    "n_refs": 8,
+    "context_rmse": 0.0,
+    "reference_starts": [
+      48,
+      118,
+      188,
+      258,
+      328,
+      398,
+      468,
+      538
+    ],
+    "context_level_rmse": 0.0,
+    "context_change_rmse": 0.0,
+    "context_distance_definition": "sqrt(level_mse + 0.5 * first_difference_mse)",
+    "period": null,
+    "period_strength": 0.0,
+    "limited": false,
+    "reference_status": "context_supported",
+    "context_support_p": 1.0,
+    "validation_queries": 64,
+    "validation_focus_rmse_q90": 0.0,
+    "validation_outside_fraction": 0.00078125,
+    "bank_interval": [
+      0,
+      11848
+    ],
+    "validation_interval": [
+      11848,
+      17772
+    ],
+    "support_audit_failure_fraction": 0.0625,
+    "support_audit_warning": false,
+    "reliability_scope": "pre-focus context support only; does not establish focus normality"
+  },
+  {
+    "channel": 23,
+    "focus_start": 11667,
+    "focus_end": 11727,
+    "context": 48,
+    "n_refs": 8,
+    "context_rmse": 0.037501879405397454,
+    "reference_starts": [
+      2162,
+      3170,
+      2694,
+      2778,
+      3086,
+      454,
+      3016,
+      2064
+    ],
+    "context_level_rmse": 0.0327505121297043,
+    "context_change_rmse": 0.02583775973953878,
+    "context_distance_definition": "sqrt(level_mse + 0.5 * first_difference_mse)",
+    "period": null,
+    "period_strength": 0.0,
+    "limited": false,
+    "reference_status": "context_supported",
+    "context_support_p": 0.6153846153846154,
+    "validation_queries": 64,
+    "validation_focus_rmse_q90": 0.19708195003160192,
+    "validation_outside_fraction": 0.48307291666666663,
+    "bank_interval": [
+      0,
+      11848
+    ],
+    "validation_interval": [
+      11848,
+      17772
+    ],
+    "support_audit_failure_fraction": 0.03125,
+    "support_audit_warning": false,
+    "reliability_scope": "pre-focus context support only; does not establish focus normality"
+  },
+  {
+    "channel": 4,
+    "focus_start": 11660,
+    "focus_end": 11720,
+    "context": 48,
+    "n_refs": 8,
+    "context_rmse": 0.33333333333333337,
+    "reference_starts": [
+      9778,
+      9848,
+      9918,
+      9988,
+      10058,
+      10128,
+      10198,
+      10268
+    ],
+    "context_level_rmse": 0.33333333333333337,
+    "context_change_rmse": 0.0,
+    "context_distance_definition": "sqrt(level_mse + 0.5 * first_difference_mse)",
+    "period": null,
+    "period_strength": 0.0,
+    "limited": false,
+    "reference_status": "out_of_support",
+    "context_support_p": 0.015384615384615385,
+    "validation_queries": 64,
+    "validation_focus_rmse_q90": 0.11111111111111112,
+    "validation_outside_fraction": 0.953125,
+    "bank_interval": [
+      0,
+      11848
+    ],
+    "validation_interval": [
+      11848,
+      17772
+    ],
+    "support_audit_failure_fraction": 0.3125,
+    "support_audit_warning": true,
+    "reliability_scope": "pre-focus context support only; does not establish focus normality"
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "fingerprint": "74d6649f4a4e34c77cc5a830ae9d143a95dc05b326e5a524b03d320a0112d39d",
+  "prompt": "You review one candidate interval in multichannel machine telemetry (entity machine-1-1).\nThe candidate is ticks [105,119) of the current 224-tick window (end excluded). A detector flagged it because of a sharp change.\nMachines also make sharp changes routinely in normal operation, so a visible spike by itself is not an anomaly.\nPicture: top heatmap = all channels over the window. Each row = one channel: left the full 224-tick trace, right a zoom (orange = zoom range, not the candidate). Black = observed, dashed blue = median of similar normal training windows; that median smooths routine spikes away, so a gap to it is not evidence by itself.\nDecide the event validity of the candidate:\n- \"anomalous\": what happens in the candidate is not something these channels do routinely: a new size, a new shape, a new combination of channels, or an abnormal state that starts or continues here. The candidate may be a small part of a longer abnormal episode; if so it is anomalous.\n- \"normal_repeat\": the same kind of change recurs in these channels outside the candidate.\n- \"uncertain\": only when the plots really do not let you tell. If the evidence leans one way, commit.\nDetailed channels: [11, 9, 12, 14, 0, 29].\nReturn ONLY JSON:\n{\"event_validity\":\"anomalous\"|\"normal_repeat\"|\"uncertain\",\"anomalous_channels\":[subset of [11, 9, 12, 14, 0, 29], empty unless anomalous or uncertain],\"channel_ranking\":[ordered subset of [11, 9, 12, 14, 0, 29] that includes every anomalous channel],\"confidence\":\"low\"|\"medium\"|\"high\",\"additional_channels_to_review\":[]}",
+  "raw": "```json\n{\n  \"event_validity\": \"normal_repeat\",\n  \"anomalous_channels\": [],\n  \"channel_ranking\": [],\n  \"confidence\": \"high\",\n  \"additional_channels_to_review\": []\n}\n```",
+  "parsed": {
+    "event_validity": "normal_repeat",
+    "anomalous_channels": [],
+    "channel_ranking": [],
+    "confidence": "high",
+    "additional_channels_to_review": []
+  }
+}

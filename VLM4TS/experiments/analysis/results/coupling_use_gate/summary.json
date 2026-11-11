@@ -1,0 +1,250 @@
+[
+  {
+    "width": 224,
+    "entities": 25,
+    "normal": {
+      "all": {
+        "attempts": 41818,
+        "decided": 21754,
+        "uncertain": 20064,
+        "uncertain_fraction": 0.47979339040604524,
+        "arms": {
+          "tail_audit": {
+            "alarms": 1749,
+            "rate": 0.04182409488736907
+          },
+          "normal_margin": {
+            "alarms": 1450,
+            "rate": 0.03467406380027739
+          },
+          "context_supported": {
+            "alarms": 885,
+            "rate": 0.021163135491893442
+          },
+          "full_gate": {
+            "alarms": 616,
+            "rate": 0.014730498828255775
+          }
+        }
+      },
+      "shifted": {
+        "attempts": 16526,
+        "decided": 6240,
+        "uncertain": 10286,
+        "uncertain_fraction": 0.6224131671305821,
+        "arms": {
+          "tail_audit": {
+            "alarms": 1045,
+            "rate": 0.06323369236354835
+          },
+          "normal_margin": {
+            "alarms": 869,
+            "rate": 0.0525838073338981
+          },
+          "context_supported": {
+            "alarms": 432,
+            "rate": 0.0261406268909597
+          },
+          "full_gate": {
+            "alarms": 295,
+            "rate": 0.017850659566743313
+          }
+        }
+      },
+      "in_range": {
+        "attempts": 25292,
+        "decided": 15514,
+        "uncertain": 9778,
+        "uncertain_fraction": 0.3866044599082714,
+        "arms": {
+          "tail_audit": {
+            "alarms": 704,
+            "rate": 0.027834888502293216
+          },
+          "normal_margin": {
+            "alarms": 581,
+            "rate": 0.022971690653170965
+          },
+          "context_supported": {
+            "alarms": 453,
+            "rate": 0.017910801834572197
+          },
+          "full_gate": {
+            "alarms": 321,
+            "rate": 0.012691760240392218
+          }
+        }
+      },
+      "full_precontext_clean": {
+        "attempts": 39290,
+        "decided": 20618,
+        "uncertain": 18672,
+        "uncertain_fraction": 0.4752354288623059,
+        "arms": {
+          "tail_audit": {
+            "alarms": 1617,
+            "rate": 0.0411555103079664
+          },
+          "normal_margin": {
+            "alarms": 1348,
+            "rate": 0.034308984474420975
+          },
+          "context_supported": {
+            "alarms": 821,
+            "rate": 0.020895902265207433
+          },
+          "full_gate": {
+            "alarms": 566,
+            "rate": 0.014405701196233139
+          }
+        }
+      }
+    },
+    "centered_event_diagnosis": {
+      "total": 276,
+      "scorable": 197,
+      "events_with_evidence": {
+        "tail_audit": 59,
+        "normal_margin": 54,
+        "context_supported": 38,
+        "full_gate": 32
+      },
+      "full_retention_of_baseline": 0.5423728813559322,
+      "events_all_scorable_targets_uncertain": 52
+    },
+    "available_reference_channels": 531,
+    "useful_on_normal_audit": 348,
+    "counterexamples": [
+      {
+        "entity": "machine-1-3",
+        "start": 18032,
+        "end": 18256,
+        "channel": 20,
+        "coupling": 0.9779114308741261,
+        "tail_p": 0.037037037037037035,
+        "context_support_p": 0.5925925925925926,
+        "deficit": 0.013477526252935856,
+        "margin": 0.003145973990753337,
+        "audit_prediction_skill": 0.609832145218659,
+        "status": "coupling_change_evidence"
+      }
+    ]
+  },
+  {
+    "width": 60,
+    "entities": 25,
+    "normal": {
+      "all": {
+        "attempts": 170537,
+        "decided": 58999,
+        "uncertain": 111538,
+        "uncertain_fraction": 0.654039885772589,
+        "arms": {
+          "tail_audit": {
+            "alarms": 8969,
+            "rate": 0.05259269249488381
+          },
+          "normal_margin": {
+            "alarms": 6846,
+            "rate": 0.040143781114948665
+          },
+          "context_supported": {
+            "alarms": 4578,
+            "rate": 0.02684461436521107
+          },
+          "full_gate": {
+            "alarms": 2066,
+            "rate": 0.012114673062150735
+          }
+        }
+      },
+      "shifted": {
+        "attempts": 57259,
+        "decided": 14162,
+        "uncertain": 43097,
+        "uncertain_fraction": 0.7526677028938682,
+        "arms": {
+          "tail_audit": {
+            "alarms": 4491,
+            "rate": 0.07843308475523499
+          },
+          "normal_margin": {
+            "alarms": 3526,
+            "rate": 0.06157983897727868
+          },
+          "context_supported": {
+            "alarms": 1755,
+            "rate": 0.030650203461464572
+          },
+          "full_gate": {
+            "alarms": 853,
+            "rate": 0.014897221397509562
+          }
+        }
+      },
+      "in_range": {
+        "attempts": 113278,
+        "decided": 44837,
+        "uncertain": 68441,
+        "uncertain_fraction": 0.6041861614788396,
+        "arms": {
+          "tail_audit": {
+            "alarms": 4478,
+            "rate": 0.039531065167111
+          },
+          "normal_margin": {
+            "alarms": 3320,
+            "rate": 0.02930842705556242
+          },
+          "context_supported": {
+            "alarms": 2823,
+            "rate": 0.024920990836702624
+          },
+          "full_gate": {
+            "alarms": 1213,
+            "rate": 0.010708169282649765
+          }
+        }
+      },
+      "full_precontext_clean": {
+        "attempts": 167971,
+        "decided": 58304,
+        "uncertain": 109667,
+        "uncertain_fraction": 0.6528924635800227,
+        "arms": {
+          "tail_audit": {
+            "alarms": 8815,
+            "rate": 0.05247929702150966
+          },
+          "normal_margin": {
+            "alarms": 6732,
+            "rate": 0.04007834685749326
+          },
+          "context_supported": {
+            "alarms": 4527,
+            "rate": 0.026951080841335708
+          },
+          "full_gate": {
+            "alarms": 2039,
+            "rate": 0.012139000184555668
+          }
+        }
+      }
+    },
+    "centered_event_diagnosis": {
+      "total": 276,
+      "scorable": 206,
+      "events_with_evidence": {
+        "tail_audit": 62,
+        "normal_margin": 51,
+        "context_supported": 28,
+        "full_gate": 15
+      },
+      "full_retention_of_baseline": 0.24193548387096775,
+      "events_all_scorable_targets_uncertain": 118
+    },
+    "available_reference_channels": 511,
+    "useful_on_normal_audit": 239,
+    "counterexamples": []
+  }
+]

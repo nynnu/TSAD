@@ -1,0 +1,322 @@
+[
+  {
+    "channel": 0,
+    "focus_start": 4625,
+    "focus_end": 4685,
+    "context": 48,
+    "n_refs": 8,
+    "context_rmse": 0.16877107434090768,
+    "reference_starts": [
+      818,
+      10884,
+      10814,
+      7748,
+      7860,
+      748,
+      6684,
+      2190
+    ],
+    "context_level_rmse": 0.14533273645635286,
+    "context_change_rmse": 0.12134307766240703,
+    "context_distance_definition": "sqrt(level_mse + 0.5 * first_difference_mse)",
+    "period": null,
+    "period_strength": 0.0,
+    "limited": false,
+    "reference_status": "context_supported",
+    "context_support_p": 0.07692307692307693,
+    "validation_queries": 64,
+    "validation_focus_rmse_q90": 0.19998410950081175,
+    "validation_outside_fraction": 0.23828124999999997,
+    "bank_interval": [
+      0,
+      11844
+    ],
+    "validation_interval": [
+      11844,
+      17766
+    ],
+    "support_audit_failure_fraction": 0.03125,
+    "support_audit_warning": false,
+    "reliability_scope": "pre-focus context support only; does not establish focus normality"
+  },
+  {
+    "channel": 2,
+    "focus_start": 4614,
+    "focus_end": 4674,
+    "context": 48,
+    "n_refs": 8,
+    "context_rmse": 0.215644011019045,
+    "reference_starts": [
+      10856,
+      860,
+      11010,
+      9176,
+      7748,
+      2246,
+      6572,
+      762
+    ],
+    "context_level_rmse": 0.17820477222631279,
+    "context_change_rmse": 0.1717288481540011,
+    "context_distance_definition": "sqrt(level_mse + 0.5 * first_difference_mse)",
+    "period": null,
+    "period_strength": 0.0,
+    "limited": false,
+    "reference_status": "out_of_support",
+    "context_support_p": 0.015384615384615385,
+    "validation_queries": 64,
+    "validation_focus_rmse_q90": 0.24225091211704447,
+    "validation_outside_fraction": 0.3690104166666667,
+    "bank_interval": [
+      0,
+      11844
+    ],
+    "validation_interval": [
+      11844,
+      17766
+    ],
+    "support_audit_failure_fraction": 0.0625,
+    "support_audit_warning": false,
+    "reliability_scope": "pre-focus context support only; does not establish focus normality"
+  },
+  {
+    "channel": 4,
+    "focus_start": 4604,
+    "focus_end": 4664,
+    "context": 48,
+    "n_refs": 8,
+    "context_rmse": 0.386417999190575,
+    "reference_starts": [
+      8490,
+      8980,
+      8322,
+      9078,
+      426,
+      8560,
+      8630,
+      8700
+    ],
+    "context_level_rmse": 0.37099488940595,
+    "context_change_rmse": 0.1528506600124066,
+    "context_distance_definition": "sqrt(level_mse + 0.5 * first_difference_mse)",
+    "period": null,
+    "period_strength": 0.0,
+    "limited": false,
+    "reference_status": "out_of_support",
+    "context_support_p": 0.015384615384615385,
+    "validation_queries": 64,
+    "validation_focus_rmse_q90": 0.07142935374276325,
+    "validation_outside_fraction": 0.75,
+    "bank_interval": [
+      0,
+      11844
+    ],
+    "validation_interval": [
+      11844,
+      17766
+    ],
+    "support_audit_failure_fraction": 0.59375,
+    "support_audit_warning": true,
+    "reliability_scope": "pre-focus context support only; does not establish focus normality"
+  },
+  {
+    "channel": 5,
+    "focus_start": 4612,
+    "focus_end": 4672,
+    "context": 48,
+    "n_refs": 8,
+    "context_rmse": 0.025409362733364374,
+    "reference_starts": [
+      3940,
+      7930,
+      10464,
+      8574,
+      7720,
+      2274,
+      9400,
+      4570
+    ],
+    "context_level_rmse": 0.02249797486786,
+    "context_change_rmse": 0.016701906559481536,
+    "context_distance_definition": "sqrt(level_mse + 0.5 * first_difference_mse)",
+    "period": null,
+    "period_strength": 0.0,
+    "limited": false,
+    "reference_status": "context_supported",
+    "context_support_p": 0.5230769230769231,
+    "validation_queries": 64,
+    "validation_focus_rmse_q90": 0.22955960703140307,
+    "validation_outside_fraction": 0.4049479166666667,
+    "bank_interval": [
+      0,
+      11844
+    ],
+    "validation_interval": [
+      11844,
+      17766
+    ],
+    "support_audit_failure_fraction": 0.0625,
+    "support_audit_warning": false,
+    "reliability_scope": "pre-focus context support only; does not establish focus normality"
+  },
+  {
+    "channel": 7,
+    "focus_start": 4604,
+    "focus_end": 4664,
+    "context": 48,
+    "n_refs": 8,
+    "context_rmse": 0.0,
+    "reference_starts": [
+      48,
+      118,
+      188,
+      258,
+      328,
+      398,
+      468,
+      538
+    ],
+    "context_level_rmse": 0.0,
+    "context_change_rmse": 0.0,
+    "context_distance_definition": "sqrt(level_mse + 0.5 * first_difference_mse)",
+    "period": null,
+    "period_strength": 0.0,
+    "limited": false,
+    "reference_status": "context_supported",
+    "context_support_p": 1.0,
+    "validation_queries": 64,
+    "validation_focus_rmse_q90": 0.0,
+    "validation_outside_fraction": 0.0,
+    "bank_interval": [
+      0,
+      11844
+    ],
+    "validation_interval": [
+      11844,
+      17766
+    ],
+    "support_audit_failure_fraction": 0.0,
+    "support_audit_warning": false,
+    "reliability_scope": "pre-focus context support only; does not establish focus normality"
+  },
+  {
+    "channel": 8,
+    "focus_start": 4615,
+    "focus_end": 4675,
+    "context": 48,
+    "n_refs": 8,
+    "context_rmse": 4.78205865208769,
+    "reference_starts": [
+      7804,
+      5676,
+      874,
+      7720,
+      6474,
+      6614,
+      636,
+      11192
+    ],
+    "context_level_rmse": 4.574643559251671,
+    "context_change_rmse": 1.9701376895049465,
+    "context_distance_definition": "sqrt(level_mse + 0.5 * first_difference_mse)",
+    "period": null,
+    "period_strength": 0.0,
+    "limited": false,
+    "reference_status": "context_supported",
+    "context_support_p": 0.06153846153846154,
+    "validation_queries": 64,
+    "validation_focus_rmse_q90": 1.1507664784418676,
+    "validation_outside_fraction": 0.37786458333333334,
+    "bank_interval": [
+      0,
+      11844
+    ],
+    "validation_interval": [
+      11844,
+      17766
+    ],
+    "support_audit_failure_fraction": 0.03125,
+    "support_audit_warning": false,
+    "reliability_scope": "pre-focus context support only; does not establish focus normality"
+  },
+  {
+    "channel": 9,
+    "focus_start": 4627,
+    "focus_end": 4687,
+    "context": 48,
+    "n_refs": 8,
+    "context_rmse": 0.3327992212416893,
+    "reference_starts": [
+      10870,
+      3730,
+      11724,
+      8168,
+      8896,
+      7720,
+      5200,
+      9414
+    ],
+    "context_level_rmse": 0.24820895512392113,
+    "context_change_rmse": 0.3135207688666451,
+    "context_distance_definition": "sqrt(level_mse + 0.5 * first_difference_mse)",
+    "period": null,
+    "period_strength": 0.0,
+    "limited": false,
+    "reference_status": "context_supported",
+    "context_support_p": 0.26153846153846155,
+    "validation_queries": 64,
+    "validation_focus_rmse_q90": 4.555520619387248,
+    "validation_outside_fraction": 0.17890625,
+    "bank_interval": [
+      0,
+      11844
+    ],
+    "validation_interval": [
+      11844,
+      17766
+    ],
+    "support_audit_failure_fraction": 0.0625,
+    "support_audit_warning": false,
+    "reliability_scope": "pre-focus context support only; does not establish focus normality"
+  },
+  {
+    "channel": 10,
+    "focus_start": 4627,
+    "focus_end": 4687,
+    "context": 48,
+    "n_refs": 8,
+    "context_rmse": 0.16819302494594046,
+    "reference_starts": [
+      6250,
+      7762,
+      10044,
+      6908,
+      3758,
+      3142,
+      2904,
+      10618
+    ],
+    "context_level_rmse": 0.1142048574564103,
+    "context_change_rmse": 0.17462041217353,
+    "context_distance_definition": "sqrt(level_mse + 0.5 * first_difference_mse)",
+    "period": null,
+    "period_strength": 0.0,
+    "limited": false,
+    "reference_status": "context_supported",
+    "context_support_p": 0.3230769230769231,
+    "validation_queries": 64,
+    "validation_focus_rmse_q90": 7.2483403541478495,
+    "validation_outside_fraction": 0.11953125,
+    "bank_interval": [
+      0,
+      11844
+    ],
+    "validation_interval": [
+      11844,
+      17766
+    ],
+    "support_audit_failure_fraction": 0.0625,
+    "support_audit_warning": false,
+    "reliability_scope": "pre-focus context support only; does not establish focus normality"
+  }
+]

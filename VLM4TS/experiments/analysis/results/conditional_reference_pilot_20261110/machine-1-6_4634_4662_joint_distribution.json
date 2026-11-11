@@ -1,0 +1,171 @@
+{
+  "case": {
+    "machine": "machine-1-6",
+    "core_id": "machine-1-6.e00007.c0000",
+    "category": "gt_overlap",
+    "core": [
+      4634,
+      4662
+    ],
+    "channels": [
+      32,
+      33,
+      1,
+      3,
+      6,
+      13,
+      14,
+      15
+    ]
+  },
+  "variant": "distribution",
+  "image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\analysis\\results\\conditional_reference_pilot_20261110\\machine-1-6_4634_4662_joint.png",
+  "prompt": "Review one candidate time core [4634,4662) in entity machine-1-6.\nRoute reason: dino_proposal. dino_proposal uses the original DINO spike/height and seasonal evidence. dino_partial_tail_review covers a final partial window without DINO scores (seasonal scores may exist). unscored_tail_review covers samples beyond the saved Stage1 output. Both tail routes are forced reviews, NOT DINO anomaly claims. Percentile scores are NOT anomaly probabilities. The 224-tick display is [4536,4760); its axes show tile-relative ticks. The candidate is [98,126) on these axes, end excluded. No candidate boundary is drawn; orange marks each local zoom, not the candidate. Context outside the candidate is context only. Other proposals may appear anywhere in the display; a change outside the candidate is not a reason to accept this candidate. If location or association is unclear, respond uncertain.\nThe heatmap shows all 38 channels. Detailed channels on this page: [32, 33, 1, 3, 6, 13, 14, 15]. Round 0, page 1/1. Judge event validity IN THE CORE separately from which displayed channels react. A channel can visibly spike in a normal repeating state. Selecting a channel alone does not establish an anomalous event. Do not infer root causes or causal direction.\nBlack is observed, dashed blue the retrieved normal-train median. A blue band means pre-focus context is supported; a grey/LOW SUPPORT band means poor or unstable support. Neither is a calibrated normality boundary. A flat median may erase ordinary spikes. Inspect full traces, local changes and pre/post behavior. Display-local-change focus is only a viewer aid; Stage1 peak focus preserves the source detector's location.\nReference quality: [{\"channel\":32,\"status\":\"context_supported\",\"context_support_p\":1.0,\"validation_outside_fraction\":0.00026041666666666666,\"validation_focus_rmse_q90\":0.0,\"support_audit_warning\":false,\"support_audit_failure_fraction\":0.0},{\"channel\":33,\"status\":\"validation_unstable\",\"context_support_p\":0.06153846153846154,\"validation_outside_fraction\":0.28619791666666666,\"validation_focus_rmse_q90\":0.2147893026084652,\"support_audit_warning\":true,\"support_audit_failure_fraction\":0.125},{\"channel\":1,\"status\":\"out_of_support\",\"context_support_p\":0.03076923076923077,\"validation_outside_fraction\":0.3002604166666667,\"validation_focus_rmse_q90\":0.28231227952058946,\"support_audit_warning\":false,\"support_audit_failure_fraction\":0.0},{\"channel\":3,\"status\":\"out_of_support\",\"context_support_p\":0.015384615384615385,\"validation_outside_fraction\":0.3940104166666667,\"validation_focus_rmse_q90\":0.2365341856167877,\"support_audit_warning\":false,\"support_audit_failure_fraction\":0.09375},{\"channel\":6,\"status\":\"context_supported\",\"context_support_p\":0.9692307692307692,\"validation_outside_fraction\":0.9979166666666667,\"validation_focus_rmse_q90\":0.43684821009622593,\"support_audit_warning\":false,\"support_audit_failure_fraction\":0.0625},{\"channel\":13,\"status\":\"out_of_support\",\"context_support_p\":0.015384615384615385,\"validation_outside_fraction\":0.3841145833333333,\"validation_focus_rmse_q90\":0.23584045399499262,\"support_audit_warning\":false,\"support_audit_failure_fraction\":0.03125},{\"channel\":14,\"status\":\"out_of_support\",\"context_support_p\":0.015384615384615385,\"validation_outside_fraction\":0.36223958333333334,\"validation_focus_rmse_q90\":0.25943348903965857,\"support_audit_warning\":false,\"support_audit_failure_fraction\":0.0625},{\"channel\":15,\"status\":\"out_of_support\",\"context_support_p\":0.015384615384615385,\"validation_outside_fraction\":0.34062499999999996,\"validation_focus_rmse_q90\":0.12997684970547083,\"support_audit_warning\":true,\"support_audit_failure_fraction\":0.5}]. Supported context does not establish focus normality. A difference from normal reference, low support p or rare coupling alone cannot establish anomaly. Use uncertain when the evidence does not resolve normal state change versus anomaly. Confidence is descriptive and will not be used as a probability.\nIf another heatmap channel needs a detailed view, request its zero-based ID in additional_channels_to_review. At most one additional review round is available. Do not classify unseen channels as normal; normal_repeat applies only to the displayed candidate hypothesis, not proof that every channel is normal.\nReturn ONLY JSON, no prose:\n{\"event_validity\":\"anomalous\"|\"normal_repeat\"|\"uncertain\",\"anomalous_channels\":[subset of [32, 33, 1, 3, 6, 13, 14, 15]],\"channel_ranking\":[ordered subset of [32, 33, 1, 3, 6, 13, 14, 15]],\"confidence\":\"low\"|\"medium\"|\"high\",\"additional_channels_to_review\":[IDs needing detailed review]}\nThe bottom panel compares test to two historical train examples. Each column is one shared timestamp across all displayed channels; retrieval uses only the pre-core context. Orange is the candidate core. Compare joint timing, direction, width and recovery. A historical match alone does not establish normality; a mismatch alone does not establish anomaly.\nHistorical follow-ups matched using pre-core context only. Values are in train-normalized units; recovery is absolute offset after the core. Compare support, direction, width and pair timing. These are descriptive counts among the nearest non-overlapping windows, not probabilities or calibrated cutoffs. A poor or ambiguous context match or a zero count alone cannot establish anomaly.\n{\"n\":32,\"context_rmse_range\":[2.1102789285003394,2.2397248054955186],\"channel_summary\":[{\"channel\":32,\"amplitude\":1.0,\"historical_amplitude_q50_q90\":[0.0,0.0],\"historical_at_least_this_large\":0,\"width_ticks\":1,\"peak_tick\":14,\"historical_width_q50_q90\":[0.0,0.0],\"direction\":1,\"recovery_offset\":0.0,\"historical_recovery_q90\":0.0},{\"channel\":33,\"amplitude\":6.500107710083622,\"historical_amplitude_q50_q90\":[0.5000097918257839,0.7875124845778743],\"historical_at_least_this_large\":0,\"width_ticks\":1,\"peak_tick\":14,\"historical_width_q50_q90\":[6.0,10.0],\"direction\":1,\"recovery_offset\":0.1666764584924505,\"historical_recovery_q90\":0.083348021072009},{\"channel\":1,\"amplitude\":1.4118046635707935,\"historical_amplitude_q50_q90\":[0.48615008398379606,0.9622403912656856],\"historical_at_least_this_large\":0,\"width_ticks\":3,\"peak_tick\":10,\"historical_width_q50_q90\":[3.0,8.900000000000002],\"direction\":1,\"recovery_offset\":0.14358512004742624,\"historical_recovery_q90\":0.150730659025788},{\"channel\":3,\"amplitude\":0.3714375931615872,\"historical_amplitude_q50_q90\":[0.20207939737004688,0.28258740798531645],\"historical_at_least_this_large\":1,\"width_ticks\":16,\"peak_tick\":10,\"historical_width_q50_q90\":[13.0,20.900000000000002],\"direction\":1,\"recovery_offset\":0.21434896436937545,\"historical_recovery_q90\":0.21925820491728504},{\"channel\":6,\"amplitude\":0.020753689334110037,\"historical_amplitude_q50_q90\":[0.02240402215841117,0.09891379661005266],\"historical_at_least_this_large\":18,\"width_ticks\":3,\"peak_tick\":7,\"historical_width_q50_q90\":[5.0,10.700000000000006],\"direction\":1,\"recovery_offset\":0.000942801101715629,\"historical_recovery_q90\":0.05565973670512579},{\"channel\":13,\"amplitude\":3.771044909060546,\"historical_amplitude_q50_q90\":[0.3660839967234758,0.49163372911414577],\"historical_at_least_this_large\":0,\"width_ticks\":11,\"peak_tick\":25,\"historical_width_q50_q90\":[11.0,17.800000000000004],\"direction\":-1,\"recovery_offset\":0.8882204178363828,\"historical_recovery_q90\":0.311731070516848},{\"channel\":14,\"amplitude\":0.1726562939264491,\"historical_amplitude_q50_q90\":[0.4331257841038779,0.6614598377862639],\"historical_at_least_this_large\":32,\"width_ticks\":11,\"peak_tick\":7,\"historical_width_q50_q90\":[8.0,15.0],\"direction\":1,\"recovery_offset\":0.01984214698640141,\"historical_recovery_q90\":0.3461001790214041},{\"channel\":15,\"amplitude\":1.4428102817810284,\"historical_amplitude_q50_q90\":[0.6060174231017423,0.6804339642933964],\"historical_at_least_this_large\":0,\"width_ticks\":8,\"peak_tick\":21,\"historical_width_q50_q90\":[5.0,6.0],\"direction\":1,\"recovery_offset\":0.0821144332114434,\"historical_recovery_q90\":0.1216363734136374}],\"pair_summary\":[{\"channels\":[32,33],\"observed_lag\":0,\"train_count_same_direction_amplitude_and_lag\":0},{\"channels\":[32,1],\"observed_lag\":-4,\"train_count_same_direction_amplitude_and_lag\":0},{\"channels\":[32,3],\"observed_lag\":-4,\"train_count_same_direction_amplitude_and_lag\":0},{\"channels\":[32,13],\"observed_lag\":11,\"train_count_same_direction_amplitude_and_lag\":0},{\"channels\":[32,14],\"observed_lag\":-7,\"train_count_same_direction_amplitude_and_lag\":0},{\"channels\":[32,15],\"observed_lag\":7,\"train_count_same_direction_amplitude_and_lag\":0},{\"channels\":[33,1],\"observed_lag\":-4,\"train_count_same_direction_amplitude_and_lag\":0},{\"channels\":[33,3],\"observed_lag\":-4,\"train_count_same_direction_amplitude_and_lag\":0},{\"channels\":[33,13],\"observed_lag\":11,\"train_count_same_direction_amplitude_and_lag\":0},{\"channels\":[33,14],\"observed_lag\":-7,\"train_count_same_direction_amplitude_and_lag\":0},{\"channels\":[33,15],\"observed_lag\":7,\"train_count_same_direction_amplitude_and_lag\":0},{\"channels\":[1,3],\"observed_lag\":0,\"train_count_same_direction_amplitude_and_lag\":0},{\"channels\":[1,13],\"observed_lag\":15,\"train_count_same_direction_amplitude_and_lag\":0},{\"channels\":[1,14],\"observed_lag\":-3,\"train_count_same_direction_amplitude_and_lag\":0},{\"channels\":[1,15],\"observed_lag\":11,\"train_count_same_direction_amplitude_and_lag\":0},{\"channels\":[3,13],\"observed_lag\":15,\"train_count_same_direction_amplitude_and_lag\":0},{\"channels\":[3,14],\"observed_lag\":-3,\"train_count_same_direction_amplitude_and_lag\":0},{\"channels\":[3,15],\"observed_lag\":11,\"train_count_same_direction_amplitude_and_lag\":0},{\"channels\":[13,14],\"observed_lag\":-18,\"train_count_same_direction_amplitude_and_lag\":0},{\"channels\":[13,15],\"observed_lag\":-4,\"train_count_same_direction_amplitude_and_lag\":0},{\"channels\":[14,15],\"observed_lag\":14,\"train_count_same_direction_amplitude_and_lag\":0}]}",
+  "references": [
+    {
+      "train_start": 7803,
+      "pre_context_rmse": 2.1102789285003394
+    },
+    {
+      "train_start": 871,
+      "pre_context_rmse": 2.1355751092609356
+    }
+  ],
+  "raw": "```json\n{\n  \"event_validity\": \"anomalous\",\n  \"anomalous_channels\": [32, 33, 1, 13, 15],\n  \"channel_ranking\": [33, 13, 15, 1, 32],\n  \"confidence\": \"high\",\n  \"additional_channels_to_review\": []\n}\n```",
+  "parsed": {
+    "event_validity": "anomalous",
+    "anomalous_channels": [
+      32,
+      33,
+      1,
+      13,
+      15
+    ],
+    "channel_ranking": [
+      33,
+      13,
+      15,
+      1,
+      32
+    ],
+    "confidence": "high",
+    "additional_channels_to_review": []
+  },
+  "error": null,
+  "decision": {
+    "core_id": "machine-1-6.e00007.c0000",
+    "start": 4634,
+    "end": 4662,
+    "status": "uncertain",
+    "reason": "other_candidate_visible_attribution_unverified",
+    "anomalous_channels": [],
+    "provisional_channels": [
+      1,
+      13,
+      15,
+      32,
+      33
+    ],
+    "evidence_ranking": [
+      32,
+      33,
+      1,
+      13,
+      15
+    ],
+    "ranking_policy": "Stage1 order filtered by VLM selection; requested channels appended by ID",
+    "vlm_page_rankings": [
+      {
+        "page_id": "machine-1-6.e00007.c0000.r0.p1",
+        "event_validity": "anomalous",
+        "order": [
+          33,
+          13,
+          15,
+          1,
+          32
+        ]
+      }
+    ],
+    "reviewed_channels": [
+      1,
+      3,
+      6,
+      13,
+      14,
+      15,
+      32,
+      33
+    ],
+    "unreviewed_channels": [
+      0,
+      2,
+      4,
+      5,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      34,
+      35,
+      36,
+      37
+    ],
+    "retained_for_review_channels": [
+      1,
+      3,
+      6,
+      13,
+      14,
+      15,
+      32,
+      33
+    ],
+    "retained_for_review_note": "Pending candidates for further review; not confirmed anomaly channels",
+    "reference_limited_channels": [
+      1,
+      3,
+      13,
+      14,
+      15,
+      33
+    ],
+    "ranking_validity": "provisional",
+    "outstanding_requests": [],
+    "review_complete": true,
+    "expected_pages": 1,
+    "scope_ambiguous": true,
+    "visible_other_candidates": [
+      {
+        "start": 4718,
+        "end": 4732,
+        "route_reason": "dino_proposal"
+      },
+      {
+        "start": 4746,
+        "end": 4760,
+        "route_reason": "dino_proposal"
+      }
+    ],
+    "scope_policy": "hold",
+    "scope": "screened_and_requested_channels; anomaly evidence is not causal ranking"
+  }
+}

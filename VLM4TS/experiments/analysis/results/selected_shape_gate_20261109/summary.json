@@ -1,0 +1,59 @@
+{
+  "summaries": [
+    {
+      "machine": "machine-1-1",
+      "selected_cal_n": 13,
+      "calibration_status": "insufficient",
+      "minimum_possible_empirical_p": 0.07142857142857142,
+      "baseline": {
+        "predictions": 48,
+        "gt_events": 8,
+        "matches": 8,
+        "precision": 0.16666666666666666,
+        "recall": 1.0,
+        "f1": 0.2857142857142857
+      },
+      "filtered": null
+    },
+    {
+      "machine": "machine-1-2",
+      "selected_cal_n": 12,
+      "calibration_status": "insufficient",
+      "minimum_possible_empirical_p": 0.07692307692307693,
+      "baseline": {
+        "predictions": 50,
+        "gt_events": 10,
+        "matches": 8,
+        "precision": 0.16,
+        "recall": 0.8,
+        "f1": 0.26666666666666666
+      },
+      "filtered": null
+    },
+    {
+      "machine": "machine-1-6",
+      "selected_cal_n": 12,
+      "calibration_status": "insufficient",
+      "minimum_possible_empirical_p": 0.07692307692307693,
+      "baseline": {
+        "predictions": 63,
+        "gt_events": 30,
+        "matches": 28,
+        "precision": 0.4444444444444444,
+        "recall": 0.9333333333333333,
+        "f1": 0.6021505376344086
+      },
+      "filtered": null
+    }
+  ],
+  "rows": [],
+  "limitations": [
+    "Offline test-percentile Stage1; not online or train-only",
+    "Historical cached DINO train provenance and fit normalization not fully verifiable",
+    "Selected train and test candidate contexts may not be exchangeable",
+    "Channel identity and channel count vary in pooled calibration",
+    "Normal train may contain anomalies; temporal dependence invalidates exact guarantees",
+    "p threshold fixed in advance, no automatic deployment",
+    "Strict event overlap is one-to-one; no ground-truth used before scoring"
+  ]
+}

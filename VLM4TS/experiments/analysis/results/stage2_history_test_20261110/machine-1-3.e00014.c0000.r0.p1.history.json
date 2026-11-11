@@ -1,0 +1,24 @@
+{
+  "fingerprint": "813d573f5ff5995cd3172b55bf73702b048158b1429102df409efeb3c5a3ce47",
+  "prompt": "You review one candidate interval in multichannel machine telemetry (entity machine-1-3).\nThe candidate is ticks [105,119) of the current 224-tick window (end excluded). A detector flagged it because of a sharp change.\nMachines also make sharp changes routinely in normal operation, so a visible spike by itself is not an anomaly.\nPicture: each row = one channel. Left: the 2000 ticks before the current window followed by the window itself; the candidate is shaded orange at the right end. Right: zoom on the candidate (orange) with 40 ticks either side. Use the left panel to see what this channel routinely does.\nDecide the event validity of the candidate:\n- \"anomalous\": what happens in the candidate is not something these channels do routinely: a new size, a new shape, a new combination of channels, or an abnormal state that starts or continues here. The candidate may be a small part of a longer abnormal episode; if so it is anomalous.\n- \"normal_repeat\": the same kind of change recurs in these channels outside the candidate.\n- \"uncertain\": only when the plots really do not let you tell. If the evidence leans one way, commit.\nDetailed channels: [14, 11, 12, 8, 15, 33, 6, 29].\nHistory count (channel: n): {\"14\":0,\"11\":0,\"12\":2,\"8\":2,\"15\":2,\"33\":136,\"6\":407,\"29\":2000}. n = how many one-tick changes at least as large as the largest change inside the candidate occurred in that channel during the 2000 ticks before it. n = 0 means no change this large in the recent history.\nReturn ONLY JSON:\n{\"event_validity\":\"anomalous\"|\"normal_repeat\"|\"uncertain\",\"anomalous_channels\":[subset of [14, 11, 12, 8, 15, 33, 6, 29], empty unless anomalous or uncertain],\"channel_ranking\":[ordered subset of [14, 11, 12, 8, 15, 33, 6, 29] that includes every anomalous channel],\"confidence\":\"low\"|\"medium\"|\"high\",\"additional_channels_to_review\":[]}",
+  "raw": "```json\n{\n  \"event_validity\": \"anomalous\",\n  \"anomalous_channels\": [14, 11, 12, 8, 15],\n  \"channel_ranking\": [14, 11, 12, 8, 15],\n  \"confidence\": \"high\",\n  \"additional_channels_to_review\": []\n}\n```",
+  "parsed": {
+    "event_validity": "anomalous",
+    "anomalous_channels": [
+      14,
+      11,
+      12,
+      8,
+      15
+    ],
+    "channel_ranking": [
+      14,
+      11,
+      12,
+      8,
+      15
+    ],
+    "confidence": "high",
+    "additional_channels_to_review": []
+  }
+}

@@ -1,0 +1,215 @@
+[
+  {
+    "machine": "machine-1-1",
+    "common_ticks": 28448,
+    "warmup_excluded": 59,
+    "gt_events": 8,
+    "baseline": {
+      "high_events": 61,
+      "strict_matches": 1,
+      "strict_precision": 0.01639344262295082,
+      "strict_recall": 0.125,
+      "normal_tick_alarm": 0.5426347538431602,
+      "anomaly_tick_hit": 0.9922048997772829,
+      "high_gt_reached": 8,
+      "all_band_gt_reached": 8,
+      "gt_fully_displayed": 8,
+      "event_union_channel_recall": 0.9092021889400921,
+      "event_union_channel_precision": 0.5543026418026418,
+      "all_channels_kept": 5,
+      "tiles": 216,
+      "pages": 216
+    },
+    "variant": {
+      "high_events": 103,
+      "strict_matches": 8,
+      "strict_precision": 0.07766990291262135,
+      "strict_recall": 1.0,
+      "normal_tick_alarm": 0.06281377699941623,
+      "anomaly_tick_hit": 0.5927988121752041,
+      "high_gt_reached": 8,
+      "all_band_gt_reached": 8,
+      "gt_fully_displayed": 8,
+      "event_union_channel_recall": 0.9423243087557603,
+      "event_union_channel_precision": 0.4803106313975879,
+      "all_channels_kept": 5,
+      "tiles": 367,
+      "pages": 367
+    },
+    "point_average_precision": {
+      "baseline": 0.16342121897345604,
+      "dynamic_evidence": 0.5282823373743848,
+      "dynamic_calibrated_surprisal": 0.4835997511622516,
+      "state_evidence": 0.4104893148233825
+    },
+    "fixed_tile_routing": {
+      "dynamic": {
+        "event_union_channel_recall": 0.9221630184331797,
+        "event_union_channel_precision": 0.5639705882352941,
+        "tiles": 216,
+        "candidates_per_tile": "identical to baseline"
+      },
+      "state": {
+        "event_union_channel_recall": 0.8797523041474654,
+        "event_union_channel_precision": 0.5452993697478992,
+        "tiles": 216,
+        "candidates_per_tile": "identical to baseline"
+      },
+      "score_role": {
+        "event_union_channel_recall": 0.9221630184331797,
+        "event_union_channel_precision": 0.5639705882352941,
+        "tiles": 216,
+        "candidates_per_tile": "identical to baseline"
+      }
+    },
+    "train_audit": {
+      "dynamic_alpha": 0.01,
+      "state_review_alpha": 0.05,
+      "dynamic_alarm": 0.0014044943820224719,
+      "state_alarm": 0.03384831460674157,
+      "transfer_warning": false
+    }
+  },
+  {
+    "machine": "machine-1-2",
+    "common_ticks": 23520,
+    "warmup_excluded": 59,
+    "gt_events": 10,
+    "baseline": {
+      "high_events": 70,
+      "strict_matches": 9,
+      "strict_precision": 0.12857142857142856,
+      "strict_recall": 0.9,
+      "normal_tick_alarm": 0.09612112221301104,
+      "anomaly_tick_hit": 0.3726937269372694,
+      "high_gt_reached": 9,
+      "all_band_gt_reached": 10,
+      "gt_fully_displayed": 10,
+      "event_union_channel_recall": 0.806547619047619,
+      "event_union_channel_precision": 0.46767676767676764,
+      "all_channels_kept": 4,
+      "tiles": 220,
+      "pages": 220
+    },
+    "variant": {
+      "high_events": 0,
+      "strict_matches": 0,
+      "strict_precision": 0.0,
+      "strict_recall": 0.0,
+      "normal_tick_alarm": 0.0,
+      "anomaly_tick_hit": 0.0,
+      "high_gt_reached": 0,
+      "all_band_gt_reached": 10,
+      "gt_fully_displayed": 10,
+      "event_union_channel_recall": 0.9875,
+      "event_union_channel_precision": 0.2542182515423552,
+      "all_channels_kept": 9,
+      "tiles": 652,
+      "pages": 652
+    },
+    "point_average_precision": {
+      "baseline": 0.06804914750271185,
+      "dynamic_evidence": 0.19844683743631364,
+      "dynamic_calibrated_surprisal": 0.1981913206597705,
+      "state_evidence": 0.2723667287138925
+    },
+    "fixed_tile_routing": {
+      "dynamic": {
+        "event_union_channel_recall": 0.8010714285714287,
+        "event_union_channel_precision": 0.4517035742035741,
+        "tiles": 220,
+        "candidates_per_tile": "identical to baseline"
+      },
+      "state": {
+        "event_union_channel_recall": 0.6460714285714286,
+        "event_union_channel_precision": 0.3666550116550117,
+        "tiles": 220,
+        "candidates_per_tile": "identical to baseline"
+      },
+      "score_role": {
+        "event_union_channel_recall": 0.7939285714285714,
+        "event_union_channel_precision": 0.43392579642579643,
+        "tiles": 220,
+        "candidates_per_tile": "identical to baseline"
+      }
+    },
+    "train_audit": {
+      "dynamic_alpha": 0.01,
+      "state_review_alpha": 0.05,
+      "dynamic_alarm": 0.0,
+      "state_alarm": 0.037474679270763,
+      "transfer_warning": false
+    }
+  },
+  {
+    "machine": "machine-1-6",
+    "common_ticks": 23520,
+    "warmup_excluded": 59,
+    "gt_events": 30,
+    "baseline": {
+      "high_events": 11,
+      "strict_matches": 4,
+      "strict_precision": 0.36363636363636365,
+      "strict_recall": 0.13333333333333333,
+      "normal_tick_alarm": 0.8440236926036552,
+      "anomaly_tick_hit": 0.9978425026968716,
+      "high_gt_reached": 29,
+      "all_band_gt_reached": 29,
+      "gt_fully_displayed": 30,
+      "event_union_channel_recall": 0.2100513203686578,
+      "event_union_channel_precision": 0.22896885521885524,
+      "all_channels_kept": 1,
+      "tiles": 122,
+      "pages": 122
+    },
+    "variant": {
+      "high_events": 90,
+      "strict_matches": 17,
+      "strict_precision": 0.18888888888888888,
+      "strict_recall": 0.5666666666666667,
+      "normal_tick_alarm": 0.6619753961423581,
+      "anomaly_tick_hit": 0.9795037756202805,
+      "high_gt_reached": 29,
+      "all_band_gt_reached": 30,
+      "gt_fully_displayed": 30,
+      "event_union_channel_recall": 0.7434668165511819,
+      "event_union_channel_precision": 0.45542119508180445,
+      "all_channels_kept": 16,
+      "tiles": 317,
+      "pages": 317
+    },
+    "point_average_precision": {
+      "baseline": 0.18167523022299834,
+      "dynamic_evidence": 0.8157623256455787,
+      "dynamic_calibrated_surprisal": 0.8166954586154558,
+      "state_evidence": 0.6352070388631159
+    },
+    "fixed_tile_routing": {
+      "dynamic": {
+        "event_union_channel_recall": 0.667947177807859,
+        "event_union_channel_precision": 0.5219017094017093,
+        "tiles": 122,
+        "candidates_per_tile": "identical to baseline"
+      },
+      "state": {
+        "event_union_channel_recall": 0.6373968436391036,
+        "event_union_channel_precision": 0.5361111111111112,
+        "tiles": 122,
+        "candidates_per_tile": "identical to baseline"
+      },
+      "score_role": {
+        "event_union_channel_recall": 0.667947177807859,
+        "event_union_channel_precision": 0.5219017094017093,
+        "tiles": 122,
+        "candidates_per_tile": "identical to baseline"
+      }
+    },
+    "train_audit": {
+      "dynamic_alpha": 0.01,
+      "state_review_alpha": 0.05,
+      "dynamic_alarm": 0.04930766632894292,
+      "state_alarm": 0.09608240459304289,
+      "transfer_warning": true
+    }
+  }
+]

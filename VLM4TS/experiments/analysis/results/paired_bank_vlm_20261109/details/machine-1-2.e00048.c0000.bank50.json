@@ -1,0 +1,333 @@
+{
+  "case": {
+    "machine": "machine-1-2",
+    "core_id": "machine-1-2.e00048.c0000",
+    "category": "gt_overlap",
+    "core": [
+      22291,
+      22310
+    ],
+    "channels": [
+      1,
+      3,
+      14,
+      0,
+      2,
+      32,
+      8
+    ]
+  },
+  "variant": "bank50",
+  "image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\analysis\\results\\paired_bank_vlm_20261109\\images\\machine-1-2.e00048.c0000.bank50.png",
+  "image_sha256": "38664117c1e8c9176a11b3dcf9e47bc924feebb3af4d9212a881cf9e02ccc721",
+  "prompt": "Review one candidate time core [22291,22310) in entity machine-1-2.\nRoute reason: dino_proposal. dino_proposal uses the original DINO spike/height and seasonal evidence. dino_partial_tail_review covers a final partial window without DINO scores (seasonal scores may exist). unscored_tail_review covers samples beyond the saved Stage1 output. Both tail routes are forced reviews, NOT DINO anomaly claims. Percentile scores are NOT anomaly probabilities. The 224-tick display is [22188,22412); its axes show tile-relative ticks. The candidate is [103,122) on these axes, end excluded. No candidate boundary is drawn; orange marks each local zoom, not the candidate. Context outside the candidate is context only. Other proposals may appear anywhere in the display; a change outside the candidate is not a reason to accept this candidate. If location or association is unclear, respond uncertain.\nThe heatmap shows all 38 channels. Detailed channels on this page: [1, 3, 14, 0, 2, 32, 8]. Round 0, page 1/1. Judge event validity IN THE CORE separately from which displayed channels react. A channel can visibly spike in a normal repeating state. Selecting a channel alone does not establish an anomalous event. Do not infer root causes or causal direction.\nBlack is observed, blue the retrieved normal-train median. A blue band means pre-focus context is supported; a grey/LOW SUPPORT band means poor or unstable support. Neither is a calibrated normality boundary. A flat median may erase ordinary spikes. Inspect full traces, local changes and pre/post behavior. Display-local-change focus is only a viewer aid; Stage1 peak focus preserves the source detector's location.\nReference quality: [{\"channel\":1,\"status\":\"context_supported\",\"context_support_p\":0.2,\"validation_outside_fraction\":0.403125,\"validation_focus_rmse_q90\":0.2767526713574147,\"support_audit_warning\":false,\"support_audit_failure_fraction\":0.0},{\"channel\":3,\"status\":\"context_supported\",\"context_support_p\":0.26153846153846155,\"validation_outside_fraction\":0.47890625000000003,\"validation_focus_rmse_q90\":0.13659470201341986,\"support_audit_warning\":false,\"support_audit_failure_fraction\":0.09375},{\"channel\":14,\"status\":\"context_supported\",\"context_support_p\":0.13846153846153847,\"validation_outside_fraction\":0.3450520833333333,\"validation_focus_rmse_q90\":0.6184164279668046,\"support_audit_warning\":false,\"support_audit_failure_fraction\":0.03125},{\"channel\":0,\"status\":\"context_supported\",\"context_support_p\":0.24615384615384617,\"validation_outside_fraction\":0.47135416666666663,\"validation_focus_rmse_q90\":0.25981571603344356,\"support_audit_warning\":false,\"support_audit_failure_fraction\":0.0},{\"channel\":2,\"status\":\"context_supported\",\"context_support_p\":0.2923076923076923,\"validation_outside_fraction\":0.46796875000000004,\"validation_focus_rmse_q90\":0.20324706503456105,\"support_audit_warning\":false,\"support_audit_failure_fraction\":0.03125},{\"channel\":32,\"status\":\"context_supported\",\"context_support_p\":0.8,\"validation_outside_fraction\":0.08281250000000001,\"validation_focus_rmse_q90\":0.729439248766107,\"support_audit_warning\":false,\"support_audit_failure_fraction\":0.0},{\"channel\":8,\"status\":\"context_supported\",\"context_support_p\":0.676923076923077,\"validation_outside_fraction\":0.15598958333333335,\"validation_focus_rmse_q90\":2.0331880664523183,\"support_audit_warning\":false,\"support_audit_failure_fraction\":0.0625}]. Supported context does not establish focus normality. A difference from normal reference, low support p or rare coupling alone cannot establish anomaly. Use uncertain when the evidence does not resolve normal state change versus anomaly. Confidence is descriptive and will not be used as a probability.\nIf another heatmap channel needs a detailed view, request its zero-based ID in additional_channels_to_review. At most one additional review round is available. Do not classify unseen channels as normal; normal_repeat applies only to the displayed candidate hypothesis, not proof that every channel is normal.\nReturn ONLY JSON, no prose:\n{\"event_validity\":\"anomalous\"|\"normal_repeat\"|\"uncertain\",\"anomalous_channels\":[subset of [1, 3, 14, 0, 2, 32, 8]],\"channel_ranking\":[ordered subset of [1, 3, 14, 0, 2, 32, 8]],\"confidence\":\"low\"|\"medium\"|\"high\",\"additional_channels_to_review\":[IDs needing detailed review]}",
+  "quality": [
+    {
+      "channel": 1,
+      "status": "context_supported",
+      "context_support_p": 0.2,
+      "validation_outside_fraction": 0.403125,
+      "validation_focus_rmse_q90": 0.2767526713574147,
+      "support_audit_warning": false,
+      "support_audit_failure_fraction": 0.0
+    },
+    {
+      "channel": 3,
+      "status": "context_supported",
+      "context_support_p": 0.26153846153846155,
+      "validation_outside_fraction": 0.47890625000000003,
+      "validation_focus_rmse_q90": 0.13659470201341986,
+      "support_audit_warning": false,
+      "support_audit_failure_fraction": 0.09375
+    },
+    {
+      "channel": 14,
+      "status": "context_supported",
+      "context_support_p": 0.13846153846153847,
+      "validation_outside_fraction": 0.3450520833333333,
+      "validation_focus_rmse_q90": 0.6184164279668046,
+      "support_audit_warning": false,
+      "support_audit_failure_fraction": 0.03125
+    },
+    {
+      "channel": 0,
+      "status": "context_supported",
+      "context_support_p": 0.24615384615384617,
+      "validation_outside_fraction": 0.47135416666666663,
+      "validation_focus_rmse_q90": 0.25981571603344356,
+      "support_audit_warning": false,
+      "support_audit_failure_fraction": 0.0
+    },
+    {
+      "channel": 2,
+      "status": "context_supported",
+      "context_support_p": 0.2923076923076923,
+      "validation_outside_fraction": 0.46796875000000004,
+      "validation_focus_rmse_q90": 0.20324706503456105,
+      "support_audit_warning": false,
+      "support_audit_failure_fraction": 0.03125
+    },
+    {
+      "channel": 32,
+      "status": "context_supported",
+      "context_support_p": 0.8,
+      "validation_outside_fraction": 0.08281250000000001,
+      "validation_focus_rmse_q90": 0.729439248766107,
+      "support_audit_warning": false,
+      "support_audit_failure_fraction": 0.0
+    },
+    {
+      "channel": 8,
+      "status": "context_supported",
+      "context_support_p": 0.676923076923077,
+      "validation_outside_fraction": 0.15598958333333335,
+      "validation_focus_rmse_q90": 2.0331880664523183,
+      "support_audit_warning": false,
+      "support_audit_failure_fraction": 0.0625
+    }
+  ],
+  "record": {
+    "fingerprint": "ac7595df5ff9e1612e726f9cbce498d10268877856632e6eddc4d665613a60a5",
+    "raw": "```json\n{\n  \"event_validity\": \"anomalous\",\n  \"anomalous_channels\": [1, 3, 14, 0, 2, 8],\n  \"channel_ranking\": [8, 14, 1, 3, 0, 2],\n  \"confidence\": \"medium\",\n  \"additional_channels_to_review\": []\n}\n```",
+    "parsed": {
+      "event_validity": "anomalous",
+      "anomalous_channels": [
+        1,
+        3,
+        14,
+        0,
+        2,
+        8
+      ],
+      "channel_ranking": [
+        8,
+        14,
+        1,
+        3,
+        0,
+        2
+      ],
+      "confidence": "medium",
+      "additional_channels_to_review": []
+    },
+    "error": null
+  },
+  "decisions": {
+    "hold": {
+      "core_id": "machine-1-2.e00048.c0000",
+      "start": 22291,
+      "end": 22310,
+      "status": "uncertain",
+      "reason": "other_candidate_visible_attribution_unverified",
+      "anomalous_channels": [],
+      "provisional_channels": [
+        0,
+        1,
+        2,
+        3,
+        8,
+        14
+      ],
+      "evidence_ranking": [
+        1,
+        3,
+        14,
+        0,
+        2,
+        8
+      ],
+      "ranking_policy": "Stage1 order filtered by VLM selection; requested channels appended by ID",
+      "vlm_page_rankings": [
+        {
+          "page_id": "machine-1-2.e00048.c0000.r0.p1",
+          "event_validity": "anomalous",
+          "order": [
+            8,
+            14,
+            1,
+            3,
+            0,
+            2
+          ]
+        }
+      ],
+      "reviewed_channels": [
+        0,
+        1,
+        2,
+        3,
+        8,
+        14,
+        32
+      ],
+      "unreviewed_channels": [
+        4,
+        5,
+        6,
+        7,
+        9,
+        10,
+        11,
+        12,
+        13,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        33,
+        34,
+        35,
+        36,
+        37
+      ],
+      "retained_for_review_channels": [
+        0,
+        1,
+        2,
+        3,
+        8,
+        14,
+        32
+      ],
+      "retained_for_review_note": "Pending candidates for further review; not confirmed anomaly channels",
+      "reference_limited_channels": [],
+      "ranking_validity": "provisional",
+      "outstanding_requests": [],
+      "review_complete": true,
+      "expected_pages": 1,
+      "scope_ambiguous": true,
+      "visible_other_candidates": [
+        {
+          "start": 22260,
+          "end": 22274,
+          "route_reason": "dino_proposal"
+        },
+        {
+          "start": 22316,
+          "end": 22330,
+          "route_reason": "dino_proposal"
+        }
+      ],
+      "scope_policy": "hold",
+      "scope": "screened_and_requested_channels; anomaly evidence is not causal ranking"
+    },
+    "report": {
+      "core_id": "machine-1-2.e00048.c0000",
+      "start": 22291,
+      "end": 22310,
+      "status": "anomalous",
+      "reason": "explicit_core_event_validity_with_selected_channels",
+      "anomalous_channels": [
+        0,
+        1,
+        2,
+        3,
+        8,
+        14
+      ],
+      "provisional_channels": [],
+      "evidence_ranking": [
+        1,
+        3,
+        14,
+        0,
+        2,
+        8
+      ],
+      "ranking_policy": "Stage1 order filtered by VLM selection; requested channels appended by ID",
+      "vlm_page_rankings": [
+        {
+          "page_id": "machine-1-2.e00048.c0000.r0.p1",
+          "event_validity": "anomalous",
+          "order": [
+            8,
+            14,
+            1,
+            3,
+            0,
+            2
+          ]
+        }
+      ],
+      "reviewed_channels": [
+        0,
+        1,
+        2,
+        3,
+        8,
+        14,
+        32
+      ],
+      "unreviewed_channels": [
+        4,
+        5,
+        6,
+        7,
+        9,
+        10,
+        11,
+        12,
+        13,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        33,
+        34,
+        35,
+        36,
+        37
+      ],
+      "retained_for_review_channels": [
+        32
+      ],
+      "retained_for_review_note": "Pending candidates for further review; not confirmed anomaly channels",
+      "reference_limited_channels": [],
+      "ranking_validity": "model_prediction",
+      "outstanding_requests": [],
+      "review_complete": true,
+      "expected_pages": 1,
+      "scope_ambiguous": true,
+      "visible_other_candidates": [
+        {
+          "start": 22260,
+          "end": 22274,
+          "route_reason": "dino_proposal"
+        },
+        {
+          "start": 22316,
+          "end": 22330,
+          "route_reason": "dino_proposal"
+        }
+      ],
+      "scope_policy": "report",
+      "scope": "screened_and_requested_channels; anomaly evidence is not causal ranking"
+    }
+  }
+}

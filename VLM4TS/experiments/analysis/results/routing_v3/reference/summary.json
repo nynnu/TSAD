@@ -1,0 +1,182 @@
+[
+  {
+    "machine": "machine-1-1",
+    "case": "no_gt_overlap",
+    "start": 13761,
+    "end": 13985,
+    "channels": [
+      28,
+      33
+    ],
+    "quality": [
+      {
+        "channel": 28,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.0,
+        "validation_focus_rmse_q90": 0.0,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0
+      },
+      {
+        "channel": 33,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.23411458333333332,
+        "validation_focus_rmse_q90": 0.31185954924380677,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      }
+    ]
+  },
+  {
+    "machine": "machine-1-1",
+    "case": "gt_overlap",
+    "start": 17280,
+    "end": 17504,
+    "channels": [
+      26,
+      33
+    ],
+    "quality": [
+      {
+        "channel": 26,
+        "status": "context_supported",
+        "context_support_p": 1.0,
+        "validation_outside_fraction": 0.0,
+        "validation_focus_rmse_q90": 0.0,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0
+      },
+      {
+        "channel": 33,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.23411458333333332,
+        "validation_focus_rmse_q90": 0.31185954924380677,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      }
+    ]
+  },
+  {
+    "machine": "machine-1-2",
+    "case": "no_gt_overlap",
+    "start": 8822,
+    "end": 9046,
+    "channels": [
+      8,
+      14
+    ],
+    "quality": [
+      {
+        "channel": 8,
+        "status": "context_supported",
+        "context_support_p": 0.1076923076923077,
+        "validation_outside_fraction": 0.15598958333333335,
+        "validation_focus_rmse_q90": 2.0331880664523183,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 14,
+        "status": "out_of_support",
+        "context_support_p": 0.046153846153846156,
+        "validation_outside_fraction": 0.3450520833333333,
+        "validation_focus_rmse_q90": 0.6184164279668046,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      }
+    ]
+  },
+  {
+    "machine": "machine-1-2",
+    "case": "gt_overlap",
+    "start": 4578,
+    "end": 4802,
+    "channels": [
+      8,
+      14
+    ],
+    "quality": [
+      {
+        "channel": 8,
+        "status": "context_supported",
+        "context_support_p": 0.1076923076923077,
+        "validation_outside_fraction": 0.15598958333333335,
+        "validation_focus_rmse_q90": 2.0331880664523183,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 14,
+        "status": "context_supported",
+        "context_support_p": 0.26153846153846155,
+        "validation_outside_fraction": 0.3450520833333333,
+        "validation_focus_rmse_q90": 0.6184164279668046,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      }
+    ]
+  },
+  {
+    "machine": "machine-1-6",
+    "case": "no_gt_overlap",
+    "start": 2893,
+    "end": 3117,
+    "channels": [
+      4,
+      16
+    ],
+    "quality": [
+      {
+        "channel": 4,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.75,
+        "validation_focus_rmse_q90": 0.07142935374276325,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.59375
+      },
+      {
+        "channel": 16,
+        "status": "context_supported",
+        "context_support_p": 1.0,
+        "validation_outside_fraction": 0.00026041666666666666,
+        "validation_focus_rmse_q90": 0.0,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      }
+    ]
+  },
+  {
+    "machine": "machine-1-6",
+    "case": "gt_overlap",
+    "start": 14463,
+    "end": 14687,
+    "channels": [
+      36,
+      13
+    ],
+    "quality": [
+      {
+        "channel": 36,
+        "status": "context_supported",
+        "context_support_p": 1.0,
+        "validation_outside_fraction": 0.0,
+        "validation_focus_rmse_q90": 0.0,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0
+      },
+      {
+        "channel": 13,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.3841145833333333,
+        "validation_focus_rmse_q90": 0.23584045399499262,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      }
+    ]
+  }
+]

@@ -1,0 +1,320 @@
+[
+  {
+    "machine": "machine-1-1",
+    "train_split": {
+      "fit": [
+        0,
+        14239
+      ],
+      "jump_calibration": [
+        14239,
+        17799
+      ],
+      "event_calibration": [
+        17799,
+        21359
+      ],
+      "normal_audit": [
+        21359,
+        28479
+      ],
+      "jump_quantile": 0.99
+    },
+    "baseline": {
+      "predictions": 328,
+      "matches": 3,
+      "precision": 0.009146341463414634,
+      "recall": 0.375,
+      "f1": 0.017857142857142856,
+      "gt_reached": 8,
+      "false_intervals": 321,
+      "false_per_10k_normal_ticks": 124.77649070978777,
+      "normal_tick_alarm": 0.5085127886185182,
+      "duplicate_overlaps": 5,
+      "gt_with_multiple_predictions": 1,
+      "gt_ticks_covered": 2681,
+      "gt_ticks_total": 2694,
+      "longest_run": 11316
+    },
+    "anchors": {
+      "predictions": 1822,
+      "matches": 8,
+      "precision": 0.0043907793633369925,
+      "recall": 1.0,
+      "f1": 0.008743169398907104,
+      "gt_reached": 8,
+      "false_intervals": 1450,
+      "false_per_10k_normal_ticks": 563.6321231439011,
+      "normal_tick_alarm": 0.13142346264479515,
+      "duplicate_overlaps": 364,
+      "gt_with_multiple_predictions": 5,
+      "gt_ticks_covered": 1714,
+      "gt_ticks_total": 2694,
+      "longest_run": 145
+    },
+    "guarded_anchors": {
+      "predictions": 1819,
+      "matches": 8,
+      "precision": 0.0043980208905992305,
+      "recall": 1.0,
+      "f1": 0.00875752599890531,
+      "gt_reached": 8,
+      "false_intervals": 1444,
+      "false_per_10k_normal_ticks": 561.2998522895125,
+      "normal_tick_alarm": 0.12784731400139937,
+      "duplicate_overlaps": 367,
+      "gt_with_multiple_predictions": 5,
+      "gt_ticks_covered": 1705,
+      "gt_ticks_total": 2694,
+      "longest_run": 145
+    },
+    "driver_guarded_anchors": {
+      "predictions": 1488,
+      "matches": 8,
+      "precision": 0.005376344086021506,
+      "recall": 1.0,
+      "f1": 0.010695187165775402,
+      "gt_reached": 8,
+      "false_intervals": 1139,
+      "false_per_10k_normal_ticks": 442.74275052476094,
+      "normal_tick_alarm": 0.08648837751690897,
+      "duplicate_overlaps": 341,
+      "gt_with_multiple_predictions": 5,
+      "gt_ticks_covered": 1203,
+      "gt_ticks_total": 2694,
+      "longest_run": 71
+    },
+    "candidates": {
+      "original_parents": 758,
+      "with_anchor": 624,
+      "without_anchor": 134
+    },
+    "normal_audit": {
+      "ticks": 7120,
+      "baseline_alarm_fraction": 0.049297752808988765,
+      "anchor_fraction": 0.026404494382022473,
+      "guarded_anchor_fraction": 0.026123595505617977,
+      "driver_anchor_fraction": 0.021629213483146066,
+      "baseline_runs": 127,
+      "anchor_runs": 114,
+      "guarded_anchor_runs": 114,
+      "parents_without_anchor": 40,
+      "driver_anchor_runs": 107,
+      "parents_without_guarded_anchor": 41,
+      "parents_without_driver_anchor": 56
+    },
+    "warning": "Anchors are exploratory evidence, not event boundaries or final decisions. Original candidates are retained. Fit-prefix support reuses normalization data and is not independent calibration."
+  },
+  {
+    "machine": "machine-1-2",
+    "train_split": {
+      "fit": [
+        0,
+        11847
+      ],
+      "jump_calibration": [
+        11847,
+        14808
+      ],
+      "event_calibration": [
+        14808,
+        17770
+      ],
+      "normal_audit": [
+        17770,
+        23694
+      ],
+      "jump_quantile": 0.99
+    },
+    "baseline": {
+      "predictions": 610,
+      "matches": 10,
+      "precision": 0.01639344262295082,
+      "recall": 1.0,
+      "f1": 0.03225806451612903,
+      "gt_reached": 10,
+      "false_intervals": 558,
+      "false_per_10k_normal_ticks": 241.63166327458538,
+      "normal_tick_alarm": 0.04364959078508639,
+      "duplicate_overlaps": 42,
+      "gt_with_multiple_predictions": 8,
+      "gt_ticks_covered": 219,
+      "gt_ticks_total": 542,
+      "longest_run": 62
+    },
+    "anchors": {
+      "predictions": 484,
+      "matches": 10,
+      "precision": 0.02066115702479339,
+      "recall": 1.0,
+      "f1": 0.04048582995951417,
+      "gt_reached": 10,
+      "false_intervals": 430,
+      "false_per_10k_normal_ticks": 186.20361148399948,
+      "normal_tick_alarm": 0.026934568916987832,
+      "duplicate_overlaps": 44,
+      "gt_with_multiple_predictions": 10,
+      "gt_ticks_covered": 109,
+      "gt_ticks_total": 542,
+      "longest_run": 9
+    },
+    "guarded_anchors": {
+      "predictions": 484,
+      "matches": 10,
+      "precision": 0.02066115702479339,
+      "recall": 1.0,
+      "f1": 0.04048582995951417,
+      "gt_reached": 10,
+      "false_intervals": 430,
+      "false_per_10k_normal_ticks": 186.20361148399948,
+      "normal_tick_alarm": 0.02641493093145109,
+      "duplicate_overlaps": 44,
+      "gt_with_multiple_predictions": 10,
+      "gt_ticks_covered": 108,
+      "gt_ticks_total": 542,
+      "longest_run": 9
+    },
+    "driver_guarded_anchors": {
+      "predictions": 412,
+      "matches": 10,
+      "precision": 0.024271844660194174,
+      "recall": 1.0,
+      "f1": 0.04739336492890995,
+      "gt_reached": 10,
+      "false_intervals": 361,
+      "false_per_10k_normal_ticks": 156.32442731563677,
+      "normal_tick_alarm": 0.02069891309054692,
+      "duplicate_overlaps": 41,
+      "gt_with_multiple_predictions": 10,
+      "gt_ticks_covered": 72,
+      "gt_ticks_total": 542,
+      "longest_run": 9
+    },
+    "candidates": {
+      "original_parents": 610,
+      "with_anchor": 436,
+      "without_anchor": 174
+    },
+    "normal_audit": {
+      "ticks": 5924,
+      "baseline_alarm_fraction": 0.062457798784604994,
+      "anchor_fraction": 0.02599594868332208,
+      "guarded_anchor_fraction": 0.025658338960162053,
+      "driver_anchor_fraction": 0.022113436866981768,
+      "baseline_runs": 125,
+      "anchor_runs": 103,
+      "guarded_anchor_runs": 102,
+      "parents_without_anchor": 30,
+      "driver_anchor_runs": 92,
+      "parents_without_guarded_anchor": 30,
+      "parents_without_driver_anchor": 37
+    },
+    "warning": "Anchors are exploratory evidence, not event boundaries or final decisions. Original candidates are retained. Fit-prefix support reuses normalization data and is not independent calibration."
+  },
+  {
+    "machine": "machine-1-6",
+    "train_split": {
+      "fit": [
+        0,
+        11844
+      ],
+      "jump_calibration": [
+        11844,
+        14805
+      ],
+      "event_calibration": [
+        14805,
+        17766
+      ],
+      "normal_audit": [
+        17766,
+        23688
+      ],
+      "jump_quantile": 0.99
+    },
+    "baseline": {
+      "predictions": 57,
+      "matches": 4,
+      "precision": 0.07017543859649122,
+      "recall": 0.13333333333333333,
+      "f1": 0.09195402298850575,
+      "gt_reached": 29,
+      "false_intervals": 53,
+      "false_per_10k_normal_ticks": 26.60375464310812,
+      "normal_tick_alarm": 0.865425158116655,
+      "duplicate_overlaps": 0,
+      "gt_with_multiple_predictions": 0,
+      "gt_ticks_covered": 3702,
+      "gt_ticks_total": 3708,
+      "longest_run": 20714
+    },
+    "anchors": {
+      "predictions": 970,
+      "matches": 29,
+      "precision": 0.029896907216494847,
+      "recall": 0.9666666666666667,
+      "f1": 0.058,
+      "gt_reached": 29,
+      "false_intervals": 822,
+      "false_per_10k_normal_ticks": 412.6091757855637,
+      "normal_tick_alarm": 0.7149382592109226,
+      "duplicate_overlaps": 119,
+      "gt_with_multiple_predictions": 4,
+      "gt_ticks_covered": 3549,
+      "gt_ticks_total": 3708,
+      "longest_run": 481
+    },
+    "guarded_anchors": {
+      "predictions": 1468,
+      "matches": 29,
+      "precision": 0.019754768392370572,
+      "recall": 0.9666666666666667,
+      "f1": 0.03871829105473965,
+      "gt_reached": 29,
+      "false_intervals": 1272,
+      "false_per_10k_normal_ticks": 638.490111434595,
+      "normal_tick_alarm": 0.6799016163035839,
+      "duplicate_overlaps": 167,
+      "gt_with_multiple_predictions": 3,
+      "gt_ticks_covered": 3483,
+      "gt_ticks_total": 3708,
+      "longest_run": 440
+    },
+    "driver_guarded_anchors": {
+      "predictions": 2477,
+      "matches": 29,
+      "precision": 0.011707710940654016,
+      "recall": 0.9666666666666667,
+      "f1": 0.02313522138013562,
+      "gt_reached": 29,
+      "false_intervals": 2116,
+      "false_per_10k_normal_ticks": 1062.1423551852224,
+      "normal_tick_alarm": 0.5872904326874812,
+      "duplicate_overlaps": 332,
+      "gt_with_multiple_predictions": 9,
+      "gt_ticks_covered": 3125,
+      "gt_ticks_total": 3708,
+      "longest_run": 87
+    },
+    "candidates": {
+      "original_parents": 75,
+      "with_anchor": 73,
+      "without_anchor": 2
+    },
+    "normal_audit": {
+      "ticks": 5922,
+      "baseline_alarm_fraction": 0.43110435663627156,
+      "anchor_fraction": 0.13508949679162446,
+      "guarded_anchor_fraction": 0.11263086795001688,
+      "driver_anchor_fraction": 0.04964539007092199,
+      "baseline_runs": 79,
+      "anchor_runs": 352,
+      "guarded_anchor_runs": 308,
+      "parents_without_anchor": 4,
+      "driver_anchor_runs": 155,
+      "parents_without_guarded_anchor": 15,
+      "parents_without_driver_anchor": 20
+    },
+    "warning": "Anchors are exploratory evidence, not event boundaries or final decisions. Original candidates are retained. Fit-prefix support reuses normalization data and is not independent calibration."
+  }
+]

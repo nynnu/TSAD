@@ -1,0 +1,613 @@
+{
+  "cases": [
+    {
+      "machine": "machine-1-2",
+      "stratum": "gt_nonoverlap",
+      "core_id": "machine-1-2.e00000.c0000",
+      "channels": [
+        19,
+        30
+      ],
+      "image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\analysis\\results\\reference_bank_multientity_20261109\\machine-1-2_gt_nonoverlap.png"
+    },
+    {
+      "machine": "machine-1-2",
+      "stratum": "gt_overlap",
+      "core_id": "machine-1-2.e00011.c0000",
+      "channels": [
+        8,
+        12
+      ],
+      "image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\analysis\\results\\reference_bank_multientity_20261109\\machine-1-2_gt_overlap.png"
+    },
+    {
+      "machine": "machine-1-6",
+      "stratum": "gt_nonoverlap",
+      "core_id": "machine-1-6.e00003.c0000",
+      "channels": [
+        25,
+        4
+      ],
+      "image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\analysis\\results\\reference_bank_multientity_20261109\\machine-1-6_gt_nonoverlap.png"
+    },
+    {
+      "machine": "machine-1-6",
+      "stratum": "gt_overlap",
+      "core_id": "machine-1-6.e00000.c0000",
+      "channels": [
+        9,
+        10
+      ],
+      "image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\analysis\\results\\reference_bank_multientity_20261109\\machine-1-6_gt_overlap.png"
+    }
+  ],
+  "rows": [
+    {
+      "machine": "machine-1-2",
+      "stratum": "gt_nonoverlap",
+      "core_id": "machine-1-2.e00000.c0000",
+      "core": [
+        84,
+        98
+      ],
+      "tile": [
+        0,
+        224
+      ],
+      "channel": 19,
+      "focus": [
+        61,
+        121
+      ],
+      "variant": "bank50",
+      "status": "context_supported",
+      "context_support_p": 0.16923076923076924,
+      "context_level_rmse": 0.044565335248510904,
+      "context_change_rmse": 0.0525814627648009,
+      "normal_audit_failure_rate": 0.041666666666666664,
+      "normal_audit_n": 24,
+      "reference_starts": [
+        678,
+        5494,
+        6824,
+        7930,
+        5788,
+        8378,
+        7454,
+        6922
+      ]
+    },
+    {
+      "machine": "machine-1-2",
+      "stratum": "gt_nonoverlap",
+      "core_id": "machine-1-2.e00000.c0000",
+      "core": [
+        84,
+        98
+      ],
+      "tile": [
+        0,
+        224
+      ],
+      "channel": 19,
+      "focus": [
+        61,
+        121
+      ],
+      "variant": "bank75",
+      "status": "context_supported",
+      "context_support_p": 0.23076923076923078,
+      "context_level_rmse": 0.0442604355750754,
+      "context_change_rmse": 0.05222171968789262,
+      "normal_audit_failure_rate": 0.08333333333333333,
+      "normal_audit_n": 24,
+      "reference_starts": [
+        678,
+        13950,
+        5494,
+        14118,
+        13782,
+        6824,
+        7930,
+        5788
+      ]
+    },
+    {
+      "machine": "machine-1-2",
+      "stratum": "gt_nonoverlap",
+      "core_id": "machine-1-2.e00000.c0000",
+      "core": [
+        84,
+        98
+      ],
+      "tile": [
+        0,
+        224
+      ],
+      "channel": 30,
+      "focus": [
+        61,
+        121
+      ],
+      "variant": "bank50",
+      "status": "context_supported",
+      "context_support_p": 0.1076923076923077,
+      "context_level_rmse": 0.14958259795424794,
+      "context_change_rmse": 0.1607461634882444,
+      "normal_audit_failure_rate": 0.0,
+      "normal_audit_n": 24,
+      "reference_starts": [
+        5494,
+        566,
+        636,
+        3506,
+        4976,
+        8126,
+        8910,
+        6012
+      ]
+    },
+    {
+      "machine": "machine-1-2",
+      "stratum": "gt_nonoverlap",
+      "core_id": "machine-1-2.e00000.c0000",
+      "core": [
+        84,
+        98
+      ],
+      "tile": [
+        0,
+        224
+      ],
+      "channel": 30,
+      "focus": [
+        61,
+        121
+      ],
+      "variant": "bank75",
+      "status": "context_supported",
+      "context_support_p": 0.24615384615384617,
+      "context_level_rmse": 0.15343127310770885,
+      "context_change_rmse": 0.16488207083236342,
+      "normal_audit_failure_rate": 0.0,
+      "normal_audit_n": 24,
+      "reference_starts": [
+        5494,
+        15084,
+        13950,
+        566,
+        636,
+        14594,
+        3506,
+        4976
+      ]
+    },
+    {
+      "machine": "machine-1-2",
+      "stratum": "gt_overlap",
+      "core_id": "machine-1-2.e00011.c0000",
+      "core": [
+        4620,
+        4690
+      ],
+      "tile": [
+        4543,
+        4767
+      ],
+      "channel": 8,
+      "focus": [
+        4653,
+        4713
+      ],
+      "variant": "bank50",
+      "status": "context_supported",
+      "context_support_p": 0.1076923076923077,
+      "context_level_rmse": 0.5456904975553541,
+      "context_change_rmse": 0.4758315356999818,
+      "normal_audit_failure_rate": 0.041666666666666664,
+      "normal_audit_n": 24,
+      "reference_starts": [
+        6152,
+        5088,
+        3324,
+        7944,
+        1784,
+        3226,
+        10142,
+        4262
+      ]
+    },
+    {
+      "machine": "machine-1-2",
+      "stratum": "gt_overlap",
+      "core_id": "machine-1-2.e00011.c0000",
+      "core": [
+        4620,
+        4690
+      ],
+      "tile": [
+        4543,
+        4767
+      ],
+      "channel": 8,
+      "focus": [
+        4653,
+        4713
+      ],
+      "variant": "bank75",
+      "status": "context_supported",
+      "context_support_p": 0.13846153846153847,
+      "context_level_rmse": 0.47560082507233953,
+      "context_change_rmse": 0.41471469997769855,
+      "normal_audit_failure_rate": 0.0,
+      "normal_audit_n": 24,
+      "reference_starts": [
+        6152,
+        5088,
+        3324,
+        14748,
+        14468,
+        7944,
+        1784,
+        3226
+      ]
+    },
+    {
+      "machine": "machine-1-2",
+      "stratum": "gt_overlap",
+      "core_id": "machine-1-2.e00011.c0000",
+      "core": [
+        4620,
+        4690
+      ],
+      "tile": [
+        4543,
+        4767
+      ],
+      "channel": 12,
+      "focus": [
+        4653,
+        4713
+      ],
+      "variant": "bank50",
+      "status": "out_of_support",
+      "context_support_p": 0.03076923076923077,
+      "context_level_rmse": 4.059768181445195,
+      "context_change_rmse": 3.0018810140030316,
+      "normal_audit_failure_rate": 0.041666666666666664,
+      "normal_audit_n": 24,
+      "reference_starts": [
+        8728,
+        1924,
+        10142,
+        6432,
+        7286,
+        9120,
+        7706,
+        10590
+      ]
+    },
+    {
+      "machine": "machine-1-2",
+      "stratum": "gt_overlap",
+      "core_id": "machine-1-2.e00011.c0000",
+      "core": [
+        4620,
+        4690
+      ],
+      "tile": [
+        4543,
+        4767
+      ],
+      "channel": 12,
+      "focus": [
+        4653,
+        4713
+      ],
+      "variant": "bank75",
+      "status": "out_of_support",
+      "context_support_p": 0.015384615384615385,
+      "context_level_rmse": 2.494786229987117,
+      "context_change_rmse": 2.1832534769652496,
+      "normal_audit_failure_rate": 0.0,
+      "normal_audit_n": 24,
+      "reference_starts": [
+        14804,
+        8728,
+        13040,
+        15308,
+        16316,
+        1924,
+        14468,
+        10142
+      ]
+    },
+    {
+      "machine": "machine-1-6",
+      "stratum": "gt_nonoverlap",
+      "core_id": "machine-1-6.e00003.c0000",
+      "core": [
+        3038,
+        3052
+      ],
+      "tile": [
+        2933,
+        3157
+      ],
+      "channel": 25,
+      "focus": [
+        3015,
+        3075
+      ],
+      "variant": "bank50",
+      "status": "out_of_support",
+      "context_support_p": 0.015384615384615385,
+      "context_level_rmse": 0.5580011354559778,
+      "context_change_rmse": 0.36719083834422234,
+      "normal_audit_failure_rate": 0.0,
+      "normal_audit_n": 24,
+      "reference_starts": [
+        4220,
+        10268,
+        10100,
+        4346,
+        11724,
+        8770,
+        2736,
+        10184
+      ]
+    },
+    {
+      "machine": "machine-1-6",
+      "stratum": "gt_nonoverlap",
+      "core_id": "machine-1-6.e00003.c0000",
+      "core": [
+        3038,
+        3052
+      ],
+      "tile": [
+        2933,
+        3157
+      ],
+      "channel": 25,
+      "focus": [
+        3015,
+        3075
+      ],
+      "variant": "bank75",
+      "status": "out_of_support",
+      "context_support_p": 0.015384615384615385,
+      "context_level_rmse": 0.5665281730402927,
+      "context_change_rmse": 0.37280202778493676,
+      "normal_audit_failure_rate": 0.0,
+      "normal_audit_n": 24,
+      "reference_starts": [
+        4220,
+        10268,
+        10100,
+        4346,
+        11724,
+        16162,
+        14426,
+        14300
+      ]
+    },
+    {
+      "machine": "machine-1-6",
+      "stratum": "gt_nonoverlap",
+      "core_id": "machine-1-6.e00003.c0000",
+      "core": [
+        3038,
+        3052
+      ],
+      "tile": [
+        2933,
+        3157
+      ],
+      "channel": 4,
+      "focus": [
+        3015,
+        3075
+      ],
+      "variant": "bank50",
+      "status": "out_of_support",
+      "context_support_p": 0.015384615384615385,
+      "context_level_rmse": 0.46059554494497684,
+      "context_change_rmse": 0.15998346211417605,
+      "normal_audit_failure_rate": 0.2916666666666667,
+      "normal_audit_n": 24,
+      "reference_starts": [
+        2778,
+        2372,
+        2946,
+        6572,
+        6642,
+        2610,
+        6712,
+        6488
+      ]
+    },
+    {
+      "machine": "machine-1-6",
+      "stratum": "gt_nonoverlap",
+      "core_id": "machine-1-6.e00003.c0000",
+      "core": [
+        3038,
+        3052
+      ],
+      "tile": [
+        2933,
+        3157
+      ],
+      "channel": 4,
+      "focus": [
+        3015,
+        3075
+      ],
+      "variant": "bank75",
+      "status": "out_of_support",
+      "context_support_p": 0.015384615384615385,
+      "context_level_rmse": 0.4298888613943651,
+      "context_change_rmse": 0.1493177889473673,
+      "normal_audit_failure_rate": 0.0,
+      "normal_audit_n": 24,
+      "reference_starts": [
+        2778,
+        2372,
+        2946,
+        6572,
+        6642,
+        2610,
+        6712,
+        6488
+      ]
+    },
+    {
+      "machine": "machine-1-6",
+      "stratum": "gt_overlap",
+      "core_id": "machine-1-6.e00000.c0000",
+      "core": [
+        238,
+        252
+      ],
+      "tile": [
+        133,
+        357
+      ],
+      "channel": 9,
+      "focus": [
+        215,
+        275
+      ],
+      "variant": "bank50",
+      "status": "context_supported",
+      "context_support_p": 0.46153846153846156,
+      "context_level_rmse": 0.090087696358389,
+      "context_change_rmse": 0.12223508541732538,
+      "normal_audit_failure_rate": 0.041666666666666664,
+      "normal_audit_n": 24,
+      "reference_starts": [
+        5228,
+        6278,
+        6670,
+        5998,
+        2316,
+        3898,
+        7118,
+        11542
+      ]
+    },
+    {
+      "machine": "machine-1-6",
+      "stratum": "gt_overlap",
+      "core_id": "machine-1-6.e00000.c0000",
+      "core": [
+        238,
+        252
+      ],
+      "tile": [
+        133,
+        357
+      ],
+      "channel": 9,
+      "focus": [
+        215,
+        275
+      ],
+      "variant": "bank75",
+      "status": "context_supported",
+      "context_support_p": 0.49230769230769234,
+      "context_level_rmse": 0.073663109104811,
+      "context_change_rmse": 0.09994945811147779,
+      "normal_audit_failure_rate": 0.041666666666666664,
+      "normal_audit_n": 24,
+      "reference_starts": [
+        5228,
+        6278,
+        6670,
+        5998,
+        2316,
+        3898,
+        12802,
+        7118
+      ]
+    },
+    {
+      "machine": "machine-1-6",
+      "stratum": "gt_overlap",
+      "core_id": "machine-1-6.e00000.c0000",
+      "core": [
+        238,
+        252
+      ],
+      "tile": [
+        133,
+        357
+      ],
+      "channel": 10,
+      "focus": [
+        215,
+        275
+      ],
+      "variant": "bank50",
+      "status": "context_supported",
+      "context_support_p": 0.5230769230769231,
+      "context_level_rmse": 0.047408107173826555,
+      "context_change_rmse": 0.06401856711135827,
+      "normal_audit_failure_rate": 0.08333333333333333,
+      "normal_audit_n": 24,
+      "reference_starts": [
+        6586,
+        552,
+        8826,
+        7874,
+        2008,
+        8154,
+        5186,
+        7286
+      ]
+    },
+    {
+      "machine": "machine-1-6",
+      "stratum": "gt_overlap",
+      "core_id": "machine-1-6.e00000.c0000",
+      "core": [
+        238,
+        252
+      ],
+      "tile": [
+        133,
+        357
+      ],
+      "channel": 10,
+      "focus": [
+        215,
+        275
+      ],
+      "variant": "bank75",
+      "status": "context_supported",
+      "context_support_p": 0.5846153846153846,
+      "context_level_rmse": 0.04554793828223127,
+      "context_change_rmse": 0.061506647650232865,
+      "normal_audit_failure_rate": 0.041666666666666664,
+      "normal_audit_n": 24,
+      "reference_starts": [
+        6586,
+        552,
+        13600,
+        8826,
+        7874,
+        2008,
+        16904,
+        12774
+      ]
+    }
+  ],
+  "limitations": [
+    "Two entities; first event in each GT-selected stratum, two channels only",
+    "Saved original DINO Stage1 JSON, before recent zoom fix",
+    "No VLM inference; no F1",
+    "bank and calibration change together",
+    "common audit sampled 24 dependent nominal-normal contexts"
+  ]
+}

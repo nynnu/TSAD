@@ -1,0 +1,91 @@
+[
+  {
+    "kind": "replicated_direction",
+    "entity": "machine-3-6",
+    "selection": "representative matched pair nearest the chosen event median delta",
+    "pair": {
+      "event_index": 3,
+      "event": [
+        15633,
+        15863
+      ],
+      "annotation_interval": [
+        15633,
+        15863
+      ],
+      "channel": 14,
+      "normal_start": 14224,
+      "anomaly_start": 15633,
+      "mean_gap": 0.08531914044324365,
+      "std_ratio": 1.1855960485604338,
+      "normal_coupling": 0.8846225158783394,
+      "anomaly_coupling": 0.7577260296749588,
+      "delta": -0.12689648620338057,
+      "normal_p": 0.9090909090909091,
+      "anomaly_p": 0.09090909090909091,
+      "audit_passed": true,
+      "normal_state_shift": true
+    },
+    "event": {
+      "event_index": 3,
+      "start": 15633,
+      "end": 15863,
+      "pair_count": 2,
+      "matched_channels": 2,
+      "median_delta": -0.04556768081631246,
+      "guarded_median_delta": -0.04556768081631246,
+      "anomaly_alert_pair_rate": 0.0,
+      "normal_alert_pair_rate": 0.0
+    }
+  },
+  {
+    "kind": "counterexample",
+    "entity": "machine-2-1",
+    "selection": "representative matched pair nearest the chosen event median delta",
+    "pair": {
+      "event_index": 5,
+      "event": [
+        16136,
+        16588
+      ],
+      "annotation_interval": [
+        16136,
+        16588
+      ],
+      "channel": 8,
+      "normal_start": 4368,
+      "anomaly_start": 16136,
+      "mean_gap": 0.10786592684322678,
+      "std_ratio": 1.00866080150064,
+      "normal_coupling": 0.9044176815159899,
+      "anomaly_coupling": 0.9424410937199069,
+      "delta": 0.03802341220391703,
+      "normal_p": 1.0,
+      "anomaly_p": 1.0,
+      "audit_passed": true,
+      "normal_state_shift": false
+    },
+    "event": {
+      "event_index": 5,
+      "start": 16136,
+      "end": 16588,
+      "pair_count": 3,
+      "matched_channels": 2,
+      "median_delta": 0.03802341220391703,
+      "guarded_median_delta": 0.03802341220391703,
+      "anomaly_alert_pair_rate": 0.0,
+      "normal_alert_pair_rate": 0.0
+    }
+  },
+  {
+    "kind": "false_alarm",
+    "entity": "machine-1-3",
+    "channel": 20,
+    "start": 18032,
+    "end": 18256,
+    "coupling": 0.9779114308741261,
+    "p": 0.037037037037037035,
+    "audit_passed": true,
+    "selection": "median chronological qualifying channel-window in worst shifted-normal FPR entity; descriptive example"
+  }
+]

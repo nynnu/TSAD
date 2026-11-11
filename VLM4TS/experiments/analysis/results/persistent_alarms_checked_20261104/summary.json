@@ -1,0 +1,464 @@
+[
+  {
+    "machine": "machine-1-1",
+    "longest_run": {
+      "start": 16961,
+      "end": 28448,
+      "length": 11487,
+      "normal_ticks": 9339,
+      "anomaly_ticks": 2148
+    },
+    "top_channels": [
+      {
+        "channel": 29,
+        "train_q01_median_q99": [
+          0.002865,
+          0.004298,
+          0.014327
+        ],
+        "test_normal_median": 0.017192,
+        "normal_high_rate": 0.5518038309373654,
+        "below_train_median_when_high": 0.0
+      },
+      {
+        "channel": 24,
+        "train_q01_median_q99": [
+          0.001749,
+          0.014518,
+          0.089208
+        ],
+        "test_normal_median": 0.036907,
+        "normal_high_rate": 0.12060793607270164,
+        "below_train_median_when_high": 0.0
+      },
+      {
+        "channel": 27,
+        "train_q01_median_q99": [
+          0.0146474,
+          0.04155,
+          0.18937959999999998
+        ],
+        "test_normal_median": 0.087434,
+        "normal_high_rate": 0.11908026166320655,
+        "below_train_median_when_high": 0.0
+      },
+      {
+        "channel": 31,
+        "train_q01_median_q99": [
+          0.010808,
+          0.027792,
+          0.12455
+        ],
+        "test_normal_median": 0.056099,
+        "normal_high_rate": 0.11759175839241646,
+        "below_train_median_when_high": 0.0
+      },
+      {
+        "channel": 20,
+        "train_q01_median_q99": [
+          0.017126,
+          0.050004,
+          0.223878
+        ],
+        "test_normal_median": 0.104901,
+        "normal_high_rate": 0.11755258725371147,
+        "below_train_median_when_high": 0.0
+      },
+      {
+        "channel": 30,
+        "train_q01_median_q99": [
+          0.010771,
+          0.034842,
+          0.17387591999999993
+        ],
+        "test_normal_median": 0.077014,
+        "normal_high_rate": 0.11390967135414627,
+        "below_train_median_when_high": 0.004814305364511692
+      },
+      {
+        "channel": 21,
+        "train_q01_median_q99": [
+          0.011,
+          0.037555,
+          0.187476
+        ],
+        "test_normal_median": 0.083345,
+        "normal_high_rate": 0.11202945669630616,
+        "below_train_median_when_high": 0.0
+      },
+      {
+        "channel": 18,
+        "train_q01_median_q99": [
+          0.02526364,
+          0.068491,
+          0.20336971999999987
+        ],
+        "test_normal_median": 0.115926,
+        "normal_high_rate": 0.11171608758666614,
+        "below_train_median_when_high": 0.01332398316970547
+      }
+    ],
+    "variants": {
+      "baseline": {
+        "normal_tick_alarm": 0.546163186963845,
+        "anomaly_tick_hit": 0.9922048997772829,
+        "gt_events_reached": 8,
+        "long_gt_events_reached": 5,
+        "event_macro_tick_coverage": 0.9951923076923077,
+        "merged_events": 61,
+        "strict_matches": 1,
+        "strict_event_precision": 0.01639344262295082,
+        "strict_event_recall": 0.125,
+        "longest_high_run": 11487
+      },
+      "local_center_61": {
+        "normal_tick_alarm": 0.16075835324532883,
+        "anomaly_tick_hit": 0.9435783221974758,
+        "gt_events_reached": 8,
+        "long_gt_events_reached": 5,
+        "event_macro_tick_coverage": 0.9697665067402894,
+        "merged_events": 91,
+        "strict_matches": 8,
+        "strict_event_precision": 0.08791208791208792,
+        "strict_event_recall": 1.0,
+        "longest_high_run": 654
+      },
+      "local_center_225": {
+        "normal_tick_alarm": 0.21403110188413177,
+        "anomaly_tick_hit": 0.9703043801039347,
+        "gt_events_reached": 8,
+        "long_gt_events_reached": 5,
+        "event_macro_tick_coverage": 0.9809232325550258,
+        "merged_events": 89,
+        "strict_matches": 8,
+        "strict_event_precision": 0.0898876404494382,
+        "strict_event_recall": 1.0,
+        "longest_high_run": 697
+      }
+    },
+    "constant_offset_control": {
+      "unaltered_suffix": 0.4639175257731959,
+      "suffix_plus_one_train_std": 0.7894217839533841
+    },
+    "sustained_shift_control": {
+      "static": {
+        "first_60_high": 1.0,
+        "after_300_high": 1.0
+      },
+      "center225": {
+        "first_60_high": 1.0,
+        "after_300_high": 0.20333333333333334
+      }
+    },
+    "static_only_normal_fraction": 0.37502448196169064,
+    "static_only_anomaly_fraction": 0.02190051967334818
+  },
+  {
+    "machine": "machine-1-2",
+    "longest_run": {
+      "start": 6552,
+      "end": 6785,
+      "length": 233,
+      "normal_ticks": 233,
+      "anomaly_ticks": 0
+    },
+    "top_channels": [
+      {
+        "channel": 32,
+        "train_q01_median_q99": [
+          0.0,
+          0.25,
+          0.25
+        ],
+        "test_normal_median": 0.25,
+        "normal_high_rate": 0.2767986639124511,
+        "below_train_median_when_high": 0.42172118132740555
+      },
+      {
+        "channel": 23,
+        "train_q01_median_q99": [
+          0.014644,
+          0.064854,
+          0.20462352000000275
+        ],
+        "test_normal_median": 0.064854,
+        "normal_high_rate": 0.037094009581154136,
+        "below_train_median_when_high": 0.25118483412322273
+      },
+      {
+        "channel": 25,
+        "train_q01_median_q99": [
+          0.012821,
+          0.064103,
+          0.203098040000014
+        ],
+        "test_normal_median": 0.061966,
+        "normal_high_rate": 0.03630290511141388,
+        "below_train_median_when_high": 0.29418886198547217
+      },
+      {
+        "channel": 6,
+        "train_q01_median_q99": [
+          0.10239308,
+          0.162026,
+          0.5975232200000005
+        ],
+        "test_normal_median": 0.176319,
+        "normal_high_rate": 0.03269898474926383,
+        "below_train_median_when_high": 0.03763440860215054
+      },
+      {
+        "channel": 33,
+        "train_q01_median_q99": [
+          0.013889,
+          0.069444,
+          0.166667
+        ],
+        "test_normal_median": 0.0625,
+        "normal_high_rate": 0.03243528325935042,
+        "below_train_median_when_high": 0.38482384823848237
+      },
+      {
+        "channel": 31,
+        "train_q01_median_q99": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "test_normal_median": 0.0,
+        "normal_high_rate": 0.02971036786357843,
+        "below_train_median_when_high": 0.0
+      },
+      {
+        "channel": 34,
+        "train_q01_median_q99": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "test_normal_median": 0.0,
+        "normal_high_rate": 0.024919790796818,
+        "below_train_median_when_high": 0.0
+      },
+      {
+        "channel": 14,
+        "train_q01_median_q99": [
+          0.0,
+          0.003262,
+          0.08078709000000038
+        ],
+        "test_normal_median": 0.002973,
+        "normal_high_rate": 0.023645233595569814,
+        "below_train_median_when_high": 0.4070631970260223
+      }
+    ],
+    "variants": {
+      "baseline": {
+        "normal_tick_alarm": 0.0950204368654683,
+        "anomaly_tick_hit": 0.3726937269372694,
+        "gt_events_reached": 9,
+        "long_gt_events_reached": 0,
+        "event_macro_tick_coverage": 0.35321409386529806,
+        "merged_events": 70,
+        "strict_matches": 9,
+        "strict_event_precision": 0.12857142857142856,
+        "strict_event_recall": 0.9,
+        "longest_high_run": 233
+      },
+      "local_center_61": {
+        "normal_tick_alarm": 0.04724651694282073,
+        "anomaly_tick_hit": 0.35977859778597787,
+        "gt_events_reached": 8,
+        "long_gt_events_reached": 0,
+        "event_macro_tick_coverage": 0.3180752049764092,
+        "merged_events": 53,
+        "strict_matches": 8,
+        "strict_event_precision": 0.1509433962264151,
+        "strict_event_recall": 0.8,
+        "longest_high_run": 95
+      },
+      "local_center_225": {
+        "normal_tick_alarm": 0.0512899397881598,
+        "anomaly_tick_hit": 0.3210332103321033,
+        "gt_events_reached": 8,
+        "long_gt_events_reached": 0,
+        "event_macro_tick_coverage": 0.31754101694222114,
+        "merged_events": 52,
+        "strict_matches": 8,
+        "strict_event_precision": 0.15384615384615385,
+        "strict_event_recall": 0.8,
+        "longest_high_run": 113
+      }
+    },
+    "constant_offset_control": {
+      "unaltered_suffix": 0.43994337362517694,
+      "suffix_plus_one_train_std": 1.0
+    },
+    "sustained_shift_control": {
+      "static": {
+        "first_60_high": 1.0,
+        "after_300_high": 1.0
+      },
+      "center225": {
+        "first_60_high": 1.0,
+        "after_300_high": 0.5766666666666667
+      }
+    },
+    "static_only_normal_fraction": 0.05076253680833297,
+    "static_only_anomaly_fraction": 0.05166051660516605
+  },
+  {
+    "machine": "machine-1-6",
+    "longest_run": {
+      "start": 3315,
+      "end": 23520,
+      "length": 20205,
+      "normal_ticks": 16520,
+      "anomaly_ticks": 3685
+    },
+    "top_channels": [
+      {
+        "channel": 25,
+        "train_q01_median_q99": [
+          0.391731,
+          0.554522,
+          0.620672
+        ],
+        "test_normal_median": 0.221189,
+        "normal_high_rate": 0.8590902128963088,
+        "below_train_median_when_high": 0.9994651453021929
+      },
+      {
+        "channel": 22,
+        "train_q01_median_q99": [
+          0.07199814,
+          0.171457,
+          0.2873045300000003
+        ],
+        "test_normal_median": 0.315412,
+        "normal_high_rate": 0.7396742737529994,
+        "below_train_median_when_high": 0.18339315295416897
+      },
+      {
+        "channel": 15,
+        "train_q01_median_q99": [
+          0.002088,
+          0.006572,
+          0.026328
+        ],
+        "test_normal_median": 0.079255,
+        "normal_high_rate": 0.7193036197477919,
+        "below_train_median_when_high": 0.0058201433742636095
+      },
+      {
+        "channel": 14,
+        "train_q01_median_q99": [
+          0.00296328,
+          0.030107,
+          0.11465840000000045
+        ],
+        "test_normal_median": 0.143993,
+        "normal_high_rate": 0.7121049675805381,
+        "below_train_median_when_high": 0.0022225408660739893
+      },
+      {
+        "channel": 13,
+        "train_q01_median_q99": [
+          0.00273,
+          0.011992,
+          0.028624
+        ],
+        "test_normal_median": 0.113319,
+        "normal_high_rate": 0.7116965334150201,
+        "below_train_median_when_high": 0.0016499282639885222
+      },
+      {
+        "channel": 24,
+        "train_q01_median_q99": [
+          0.058547,
+          0.18139,
+          0.314689
+        ],
+        "test_normal_median": 0.347622,
+        "normal_high_rate": 0.710522285189156,
+        "below_train_median_when_high": 0.08615362506287275
+      },
+      {
+        "channel": 11,
+        "train_q01_median_q99": [
+          0.009058,
+          0.067029,
+          0.195652
+        ],
+        "test_normal_median": 0.146739,
+        "normal_high_rate": 0.6983713687649972,
+        "below_train_median_when_high": 0.005994590247825134
+      },
+      {
+        "channel": 12,
+        "train_q01_median_q99": [
+          0.0,
+          0.01,
+          0.07
+        ],
+        "test_normal_median": 0.16,
+        "normal_high_rate": 0.6764690866390973,
+        "below_train_median_when_high": 0.0011320754716981133
+      }
+    ],
+    "variants": {
+      "baseline": {
+        "normal_tick_alarm": 0.8511768009393986,
+        "anomaly_tick_hit": 0.9978425026968716,
+        "gt_events_reached": 29,
+        "long_gt_events_reached": 2,
+        "event_macro_tick_coverage": 0.9444444444444444,
+        "merged_events": 11,
+        "strict_matches": 4,
+        "strict_event_precision": 0.36363636363636365,
+        "strict_event_recall": 0.13333333333333333,
+        "longest_high_run": 20205
+      },
+      "local_center_61": {
+        "normal_tick_alarm": 0.18512278552100883,
+        "anomaly_tick_hit": 0.9163969795037756,
+        "gt_events_reached": 29,
+        "long_gt_events_reached": 2,
+        "event_macro_tick_coverage": 0.5809836312543976,
+        "merged_events": 26,
+        "strict_matches": 10,
+        "strict_event_precision": 0.38461538461538464,
+        "strict_event_recall": 0.3333333333333333,
+        "longest_high_run": 2042
+      },
+      "local_center_225": {
+        "normal_tick_alarm": 0.23495175371419819,
+        "anomaly_tick_hit": 0.8905070118662352,
+        "gt_events_reached": 29,
+        "long_gt_events_reached": 2,
+        "event_macro_tick_coverage": 0.5988525193519558,
+        "merged_events": 33,
+        "strict_matches": 10,
+        "strict_event_precision": 0.30303030303030304,
+        "strict_event_recall": 0.3333333333333333,
+        "longest_high_run": 2208
+      }
+    },
+    "constant_offset_control": {
+      "unaltered_suffix": 0.33649134269846454,
+      "suffix_plus_one_train_std": 1.0
+    },
+    "sustained_shift_control": {
+      "static": {
+        "first_60_high": 1.0,
+        "after_300_high": 1.0
+      },
+      "center225": {
+        "first_60_high": 1.0,
+        "after_300_high": 0.021111111111111112
+      }
+    },
+    "static_only_normal_fraction": 0.6304181344769489,
+    "static_only_anomaly_fraction": 0.10733549083063647
+  }
+]

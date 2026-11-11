@@ -1,0 +1,41 @@
+{
+  "gate": [
+    {
+      "tau": 0.0,
+      "point_precision": 0.3462746954762622,
+      "point_recall": 0.2732305393288955,
+      "point_f1": 0.3054463997570097,
+      "fp_ticks": 15188,
+      "gt_events_hit": 286,
+      "gt_events": 327,
+      "cores_kept": 1044,
+      "gt_cores_kept": 414,
+      "non_gt_cores_kept": 630
+    },
+    {
+      "tau": 1.0,
+      "point_precision": 0.3566683237673431,
+      "point_recall": 0.268034234479011,
+      "point_f1": 0.3060634852921215,
+      "fp_ticks": 14235,
+      "gt_events_hit": 282,
+      "gt_events": 327,
+      "cores_kept": 963,
+      "gt_cores_kept": 399,
+      "non_gt_cores_kept": 564
+    },
+    {
+      "tau": 2.0,
+      "point_precision": 0.4095515504581589,
+      "point_recall": 0.22921478060046188,
+      "point_f1": 0.2939267904971365,
+      "fp_ticks": 9730,
+      "gt_events_hit": 208,
+      "gt_events": 327,
+      "cores_kept": 654,
+      "gt_cores_kept": 302,
+      "non_gt_cores_kept": 352
+    }
+  ],
+  "limitation": "tau=0 keeps every Stage1 core (baseline). Core-level predictions, no boundary refinement."
+}

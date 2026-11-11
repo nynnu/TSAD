@@ -1,0 +1,410 @@
+{
+  "machine": "machine-1-6",
+  "components": {
+    "level": {
+      "normal_channel_time_high_rate": 0.24380226763152582,
+      "anomaly_channel_time_high_rate": 0.42535343212399934,
+      "normal_tick_any_high_rate": 0.8608419139915203,
+      "normal_high_max_share": 0.19181299314448325
+    },
+    "jump": {
+      "normal_channel_time_high_rate": 0.05393860180432911,
+      "anomaly_channel_time_high_rate": 0.110947879407256,
+      "normal_tick_any_high_rate": 0.6915001009489199,
+      "normal_high_max_share": 0.02373560988229207
+    },
+    "persistence": {
+      "normal_channel_time_high_rate": 0.2946141094711339,
+      "anomaly_channel_time_high_rate": 0.46509680349741667,
+      "normal_tick_any_high_rate": 0.8607409650716737,
+      "normal_high_max_share": 0.7844635234769112
+    },
+    "seasonal": {
+      "normal_channel_time_high_rate": 0.2944626860913641,
+      "anomaly_channel_time_high_rate": 0.4681840118094589,
+      "normal_tick_any_high_rate": 0.8963759337775086,
+      "normal_high_max_share": 0.6677337989910749
+    },
+    "dino_spike": {
+      "normal_channel_time_high_rate": 0.006814052089642641,
+      "anomaly_channel_time_high_rate": 0.020127178788394935,
+      "normal_tick_any_high_rate": 0.1575307894205532,
+      "normal_high_max_share": 0.009450588539645583
+    },
+    "dino_height": {
+      "normal_channel_time_high_rate": 0.019752781408396824,
+      "anomaly_channel_time_high_rate": 0.057010446829046726,
+      "normal_tick_any_high_rate": 0.46532404603270744,
+      "normal_high_max_share": 0.013642316647264261
+    }
+  },
+  "recalibrated_ablations": {
+    "all": {
+      "normal_tick_alarm_rate": 0.8415101958409045,
+      "anomaly_tick_hit_rate": 0.9978425026968716,
+      "normal_channel_time_high_rate": 0.2796842955359325
+    },
+    "without_level": {
+      "normal_tick_alarm_rate": 0.8406016555622855,
+      "anomaly_tick_hit_rate": 0.9978425026968716,
+      "normal_channel_time_high_rate": 0.27897233999596205
+    },
+    "without_persistence": {
+      "normal_tick_alarm_rate": 0.841611144760751,
+      "anomaly_tick_hit_rate": 0.9978425026968716,
+      "normal_channel_time_high_rate": 0.2743711944913768
+    },
+    "without_seasonal": {
+      "normal_tick_alarm_rate": 0.8390874217645872,
+      "anomaly_tick_hit_rate": 0.9948759439050702,
+      "normal_channel_time_high_rate": 0.27122716694826104
+    },
+    "without_level_persistence": {
+      "normal_tick_alarm_rate": 0.8406521300222087,
+      "anomaly_tick_hit_rate": 0.9978425026968716,
+      "normal_channel_time_high_rate": 0.27229908508400014
+    },
+    "without_all_three": {
+      "normal_tick_alarm_rate": 0.24066222491419342,
+      "anomaly_tick_hit_rate": 0.5693096008629989,
+      "normal_channel_time_high_rate": 0.03250820874111384
+    },
+    "train_validated_seasonal_gate": {
+      "rejected_channels": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        8,
+        9,
+        12,
+        22,
+        23,
+        25,
+        29,
+        31
+      ],
+      "normal_tick_alarm_rate": 0.8415101958409045,
+      "anomaly_tick_hit_rate": 0.9978425026968716,
+      "normal_channel_time_high_rate": 0.2784915043514298
+    }
+  },
+  "top_normal_channels": [
+    {
+      "channel": 25,
+      "normal_high_rate": 0.8493337371290127,
+      "components": {
+        "level": 0.8385826771653543,
+        "jump": 0.150615788411064,
+        "persistence": 0.8454472037149202,
+        "seasonal": 0.8517565112053301,
+        "dino_spike": 0.004239854633555421,
+        "dino_height": 0.006359781950333132
+      }
+    },
+    {
+      "channel": 22,
+      "normal_high_rate": 0.7312739753684635,
+      "components": {
+        "level": 0.7059357964869776,
+        "jump": 0.005602665051483949,
+        "persistence": 0.7655966081162932,
+        "seasonal": 0.7576721179083383,
+        "dino_spike": 0.036644457904300425,
+        "dino_height": 0.010902483343428226
+      }
+    },
+    {
+      "channel": 15,
+      "normal_high_rate": 0.7112356147789218,
+      "components": {
+        "level": 0.7027054310518878,
+        "jump": 0.21194225721784776,
+        "persistence": 0.7249646678780537,
+        "seasonal": 0.8142035130224107,
+        "dino_spike": 0.013022410660205935,
+        "dino_height": 0.12068443367655966
+      }
+    },
+    {
+      "channel": 14,
+      "normal_high_rate": 0.704017767009893,
+      "components": {
+        "level": 0.6852412679184333,
+        "jump": 0.005653139511407228,
+        "persistence": 0.7047748839087422,
+        "seasonal": 0.7048758328285888,
+        "dino_spike": 0.010145366444579043,
+        "dino_height": 0.007419745608721987
+      }
+    },
+    {
+      "channel": 13,
+      "normal_high_rate": 0.7036139713305067,
+      "components": {
+        "level": 0.6979103573591763,
+        "jump": 0.566071068039572,
+        "persistence": 0.7029073288915808,
+        "seasonal": 0.7034625479507369,
+        "dino_spike": 0.0030284675953967293,
+        "dino_height": 0.3332828588734101
+      }
+    },
+    {
+      "channel": 24,
+      "normal_high_rate": 0.7024530587522714,
+      "components": {
+        "level": 0.6229557843731072,
+        "jump": 0.0037351100343226327,
+        "persistence": 0.6982132041187159,
+        "seasonal": 0.7202200686452654,
+        "dino_spike": 0.01241671714112659,
+        "dino_height": 0.01458711891782758
+      }
+    },
+    {
+      "channel": 11,
+      "normal_high_rate": 0.6904906117504542,
+      "components": {
+        "level": 0.022562083585705633,
+        "jump": 0.00641025641025641,
+        "persistence": 0.7052291540480516,
+        "seasonal": 0.7050777306682818,
+        "dino_spike": 0.008227336967494447,
+        "dino_height": 0.01796890773268726
+      }
+    },
+    {
+      "channel": 12,
+      "normal_high_rate": 0.6687865939834444,
+      "components": {
+        "level": 0.67595396729255,
+        "jump": 0.26680799515445186,
+        "persistence": 0.6930648092065415,
+        "seasonal": 0.6901877649909146,
+        "dino_spike": 0.003987482333939027,
+        "dino_height": 0.0023722996163941046
+      }
+    }
+  ],
+  "train_forward_seasonal_checks": [
+    {
+      "channel": 0,
+      "prefix_period": 716,
+      "validation_mse": 0.003517490472289779,
+      "mean_baseline_mse": 0.003645518889518229,
+      "validation_gain": 0.03511939482649873
+    },
+    {
+      "channel": 1,
+      "prefix_period": 716,
+      "validation_mse": 0.0018070472040880561,
+      "mean_baseline_mse": 0.0017592864695746262,
+      "validation_gain": -0.027147787094035758
+    },
+    {
+      "channel": 2,
+      "prefix_period": 716,
+      "validation_mse": 0.0014837056249597576,
+      "mean_baseline_mse": 0.0014794962013744992,
+      "validation_gain": -0.0028451736350170176
+    },
+    {
+      "channel": 3,
+      "prefix_period": 716,
+      "validation_mse": 0.001310916126678602,
+      "mean_baseline_mse": 0.0013305484874548178,
+      "validation_gain": 0.014755088567850905
+    },
+    {
+      "channel": 4,
+      "prefix_period": 915,
+      "validation_mse": 0.03528041867110691,
+      "mean_baseline_mse": 0.03515873571635949,
+      "validation_gain": -0.0034609593396386362
+    },
+    {
+      "channel": 5,
+      "prefix_period": 588,
+      "validation_mse": 0.01500186380292686,
+      "mean_baseline_mse": 0.014501991273926476,
+      "validation_gain": -0.03446923388370249
+    },
+    {
+      "channel": 6,
+      "prefix_period": 686,
+      "validation_mse": 0.016247090492095974,
+      "mean_baseline_mse": 0.01616716143088302,
+      "validation_gain": -0.0049439143386216244
+    },
+    {
+      "channel": 8,
+      "prefix_period": 716,
+      "validation_mse": 0.0009349203329231106,
+      "mean_baseline_mse": 0.0008713342949284732,
+      "validation_gain": -0.0729754795200126
+    },
+    {
+      "channel": 9,
+      "prefix_period": 206,
+      "validation_mse": 0.0008517766799504144,
+      "mean_baseline_mse": 0.0008355438609858083,
+      "validation_gain": -0.01942784780376927
+    },
+    {
+      "channel": 10,
+      "prefix_period": 48,
+      "validation_mse": 0.00048402472081909983,
+      "mean_baseline_mse": 0.0004929737053256277,
+      "validation_gain": 0.018153066603454504
+    },
+    {
+      "channel": 11,
+      "prefix_period": 15,
+      "validation_mse": 0.0017073061273349826,
+      "mean_baseline_mse": 0.0017672093833814406,
+      "validation_gain": 0.03389709029941712
+    },
+    {
+      "channel": 12,
+      "prefix_period": 716,
+      "validation_mse": 0.00316997856795418,
+      "mean_baseline_mse": 0.0030315025176505888,
+      "validation_gain": -0.04567901543783326
+    },
+    {
+      "channel": 13,
+      "prefix_period": 120,
+      "validation_mse": 0.00016864521909790454,
+      "mean_baseline_mse": 0.00017179966069911438,
+      "validation_gain": 0.018361163161634275
+    },
+    {
+      "channel": 14,
+      "prefix_period": 120,
+      "validation_mse": 0.0007274352385695031,
+      "mean_baseline_mse": 0.0007405234195370253,
+      "validation_gain": 0.017674229635714855
+    },
+    {
+      "channel": 15,
+      "prefix_period": 10,
+      "validation_mse": 5.013692248691264e-05,
+      "mean_baseline_mse": 5.215582976021588e-05,
+      "validation_gain": 0.03870913918127805
+    },
+    {
+      "channel": 17,
+      "prefix_period": 15,
+      "validation_mse": 0.000693858918632453,
+      "mean_baseline_mse": 0.0007211535148463399,
+      "validation_gain": 0.03784852413803008
+    },
+    {
+      "channel": 18,
+      "prefix_period": 716,
+      "validation_mse": 0.02597303344057414,
+      "mean_baseline_mse": 0.026597127392252364,
+      "validation_gain": 0.023464712653894382
+    },
+    {
+      "channel": 19,
+      "prefix_period": 716,
+      "validation_mse": 0.025028467229313987,
+      "mean_baseline_mse": 0.025620426511262114,
+      "validation_gain": 0.023104973747721025
+    },
+    {
+      "channel": 20,
+      "prefix_period": 716,
+      "validation_mse": 0.02007943988108855,
+      "mean_baseline_mse": 0.02075068891610793,
+      "validation_gain": 0.0323482770973601
+    },
+    {
+      "channel": 21,
+      "prefix_period": 716,
+      "validation_mse": 0.01600002537703741,
+      "mean_baseline_mse": 0.016623672864608186,
+      "validation_gain": 0.03751562561715971
+    },
+    {
+      "channel": 22,
+      "prefix_period": 748,
+      "validation_mse": 0.0024368594799655152,
+      "mean_baseline_mse": 0.002131962897654835,
+      "validation_gain": -0.14301214277512408
+    },
+    {
+      "channel": 23,
+      "prefix_period": 823,
+      "validation_mse": 0.050503445351482656,
+      "mean_baseline_mse": 0.0499698438659589,
+      "validation_gain": -0.01067847013801182
+    },
+    {
+      "channel": 24,
+      "prefix_period": 716,
+      "validation_mse": 0.0031992423152914233,
+      "mean_baseline_mse": 0.003307989179673845,
+      "validation_gain": 0.03287400849151023
+    },
+    {
+      "channel": 25,
+      "prefix_period": 823,
+      "validation_mse": 0.001839096885967076,
+      "mean_baseline_mse": 0.0015941202274279596,
+      "validation_gain": -0.1536751459043808
+    },
+    {
+      "channel": 27,
+      "prefix_period": 716,
+      "validation_mse": 0.015242457244237173,
+      "mean_baseline_mse": 0.01580995413595155,
+      "validation_gain": 0.03589491068945605
+    },
+    {
+      "channel": 29,
+      "prefix_period": 716,
+      "validation_mse": 0.010935843420584568,
+      "mean_baseline_mse": 0.010654791249197996,
+      "validation_gain": -0.026378008241853435
+    },
+    {
+      "channel": 30,
+      "prefix_period": 716,
+      "validation_mse": 0.011951161284868046,
+      "mean_baseline_mse": 0.012451273793603546,
+      "validation_gain": 0.04016556996701959
+    },
+    {
+      "channel": 31,
+      "prefix_period": 748,
+      "validation_mse": 0.007947686638146604,
+      "mean_baseline_mse": 0.00754999254687263,
+      "validation_gain": -0.05267476607492916
+    },
+    {
+      "channel": 33,
+      "prefix_period": 8,
+      "validation_mse": 0.00011905935123984922,
+      "mean_baseline_mse": 0.00011947142985470231,
+      "validation_gain": 0.003449181242362709
+    },
+    {
+      "channel": 34,
+      "prefix_period": 716,
+      "validation_mse": 0.0064224861399366385,
+      "mean_baseline_mse": 0.006772592337829213,
+      "validation_gain": 0.051694562499651764
+    },
+    {
+      "channel": 35,
+      "prefix_period": 716,
+      "validation_mse": 0.00642822006477189,
+      "mean_baseline_mse": 0.006778833130010338,
+      "validation_gain": 0.05172174303660915
+    }
+  ]
+}

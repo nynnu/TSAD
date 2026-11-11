@@ -1,0 +1,291 @@
+{
+  "n": 32,
+  "train_anchors": [
+    7708,
+    4226,
+    7114,
+    10822,
+    9813,
+    655,
+    8122,
+    9560,
+    9140,
+    7002,
+    10006,
+    6607,
+    9675,
+    6491,
+    9295,
+    6820,
+    11447,
+    1354,
+    10965,
+    772,
+    4736,
+    6171,
+    10648,
+    7611,
+    2791,
+    7946,
+    4830,
+    519,
+    5090,
+    6035,
+    11240,
+    8396
+  ],
+  "context_rmse_range": [
+    0.9463141909707949,
+    1.4178426464567524
+  ],
+  "channel_summary": [
+    {
+      "channel": 1,
+      "amplitude": 0.30461867991851044,
+      "historical_amplitude_q50_q90": [
+        0.36431323920243963,
+        0.8550083328098688
+      ],
+      "historical_at_least_this_large": 17,
+      "width_ticks": 5,
+      "peak_tick": 12,
+      "historical_width_q50_q90": [
+        4.0,
+        16.60000000000001
+      ],
+      "direction": -1,
+      "recovery_offset": 0.16118758890850948,
+      "historical_recovery_q90": 0.7187615275706547
+    },
+    {
+      "channel": 3,
+      "amplitude": 0.47732447448116133,
+      "historical_amplitude_q50_q90": [
+        0.09052604769751485,
+        0.39286764050948625
+      ],
+      "historical_at_least_this_large": 2,
+      "width_ticks": 18,
+      "peak_tick": 18,
+      "historical_width_q50_q90": [
+        11.0,
+        15.900000000000002
+      ],
+      "direction": 1,
+      "recovery_offset": 0.4963439142246373,
+      "historical_recovery_q90": 0.5212133695555359
+    },
+    {
+      "channel": 14,
+      "amplitude": 1.4484019473370213,
+      "historical_amplitude_q50_q90": [
+        0.2802635116325798,
+        1.5161501168652634
+      ],
+      "historical_at_least_this_large": 4,
+      "width_ticks": 1,
+      "peak_tick": 18,
+      "historical_width_q50_q90": [
+        2.0,
+        5.0
+      ],
+      "direction": 1,
+      "recovery_offset": 0.06706861638807993,
+      "historical_recovery_q90": 0.07208479154111354
+    },
+    {
+      "channel": 0,
+      "amplitude": 0.016129032258064502,
+      "historical_amplitude_q50_q90": [
+        0.30645161290322576,
+        0.9032258064516131
+      ],
+      "historical_at_least_this_large": 32,
+      "width_ticks": 9,
+      "peak_tick": 2,
+      "historical_width_q50_q90": [
+        5.5,
+        17.0
+      ],
+      "direction": -1,
+      "recovery_offset": 0.016129032258064502,
+      "historical_recovery_q90": 0.787903225806452
+    },
+    {
+      "channel": 2,
+      "amplitude": 0.17589452053359267,
+      "historical_amplitude_q50_q90": [
+        0.13818105490298094,
+        0.575886290484591
+      ],
+      "historical_at_least_this_large": 14,
+      "width_ticks": 8,
+      "peak_tick": 3,
+      "historical_width_q50_q90": [
+        8.0,
+        14.900000000000002
+      ],
+      "direction": 1,
+      "recovery_offset": 0.010640603022675332,
+      "historical_recovery_q90": 0.785520468855668
+    },
+    {
+      "channel": 32,
+      "amplitude": 1.0,
+      "historical_amplitude_q50_q90": [
+        1.0,
+        1.0
+      ],
+      "historical_at_least_this_large": 23,
+      "width_ticks": 8,
+      "peak_tick": 1,
+      "historical_width_q50_q90": [
+        10.0,
+        19.0
+      ],
+      "direction": 1,
+      "recovery_offset": 1.0,
+      "historical_recovery_q90": 0.5
+    },
+    {
+      "channel": 8,
+      "amplitude": 0.8157865041751298,
+      "historical_amplitude_q50_q90": [
+        0.2421293161814489,
+        1.2426483863687656
+      ],
+      "historical_at_least_this_large": 10,
+      "width_ticks": 1,
+      "peak_tick": 18,
+      "historical_width_q50_q90": [
+        1.0,
+        10.800000000000004
+      ],
+      "direction": 1,
+      "recovery_offset": 0.01574136763710223,
+      "historical_recovery_q90": 0.06791356352967728
+    }
+  ],
+  "pair_summary": [
+    {
+      "channels": [
+        1,
+        3
+      ],
+      "observed_lag": 6,
+      "train_count_same_direction_amplitude_and_lag": 0
+    },
+    {
+      "channels": [
+        1,
+        14
+      ],
+      "observed_lag": 6,
+      "train_count_same_direction_amplitude_and_lag": 0
+    },
+    {
+      "channels": [
+        1,
+        2
+      ],
+      "observed_lag": -9,
+      "train_count_same_direction_amplitude_and_lag": 1
+    },
+    {
+      "channels": [
+        1,
+        32
+      ],
+      "observed_lag": -11,
+      "train_count_same_direction_amplitude_and_lag": 0
+    },
+    {
+      "channels": [
+        1,
+        8
+      ],
+      "observed_lag": 6,
+      "train_count_same_direction_amplitude_and_lag": 0
+    },
+    {
+      "channels": [
+        3,
+        14
+      ],
+      "observed_lag": 0,
+      "train_count_same_direction_amplitude_and_lag": 0
+    },
+    {
+      "channels": [
+        3,
+        2
+      ],
+      "observed_lag": -15,
+      "train_count_same_direction_amplitude_and_lag": 0
+    },
+    {
+      "channels": [
+        3,
+        32
+      ],
+      "observed_lag": -17,
+      "train_count_same_direction_amplitude_and_lag": 0
+    },
+    {
+      "channels": [
+        3,
+        8
+      ],
+      "observed_lag": 0,
+      "train_count_same_direction_amplitude_and_lag": 0
+    },
+    {
+      "channels": [
+        14,
+        2
+      ],
+      "observed_lag": -15,
+      "train_count_same_direction_amplitude_and_lag": 0
+    },
+    {
+      "channels": [
+        14,
+        32
+      ],
+      "observed_lag": -17,
+      "train_count_same_direction_amplitude_and_lag": 0
+    },
+    {
+      "channels": [
+        14,
+        8
+      ],
+      "observed_lag": 0,
+      "train_count_same_direction_amplitude_and_lag": 4
+    },
+    {
+      "channels": [
+        2,
+        32
+      ],
+      "observed_lag": -2,
+      "train_count_same_direction_amplitude_and_lag": 0
+    },
+    {
+      "channels": [
+        2,
+        8
+      ],
+      "observed_lag": 15,
+      "train_count_same_direction_amplitude_and_lag": 0
+    },
+    {
+      "channels": [
+        32,
+        8
+      ],
+      "observed_lag": 17,
+      "train_count_same_direction_amplitude_and_lag": 0
+    }
+  ]
+}

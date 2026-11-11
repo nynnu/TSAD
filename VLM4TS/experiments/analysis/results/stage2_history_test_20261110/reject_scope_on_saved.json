@@ -1,0 +1,665 @@
+{
+  "summary": {
+    "base": {
+      "all_channels": {
+        "gt": {
+          "anomalous": 2,
+          "rejected_candidate": 0,
+          "uncertain": 10
+        },
+        "non_gt": {
+          "anomalous": 3,
+          "rejected_candidate": 0,
+          "uncertain": 12
+        }
+      },
+      "screened": {
+        "gt": {
+          "anomalous": 2,
+          "rejected_candidate": 0,
+          "uncertain": 10
+        },
+        "non_gt": {
+          "anomalous": 3,
+          "rejected_candidate": 0,
+          "uncertain": 12
+        }
+      },
+      "normal_repeat_answers": {
+        "gt": 0,
+        "non_gt": 0
+      }
+    },
+    "prompt": {
+      "all_channels": {
+        "gt": {
+          "anomalous": 9,
+          "rejected_candidate": 0,
+          "uncertain": 3
+        },
+        "non_gt": {
+          "anomalous": 12,
+          "rejected_candidate": 0,
+          "uncertain": 3
+        }
+      },
+      "screened": {
+        "gt": {
+          "anomalous": 9,
+          "rejected_candidate": 1,
+          "uncertain": 2
+        },
+        "non_gt": {
+          "anomalous": 12,
+          "rejected_candidate": 1,
+          "uncertain": 2
+        }
+      },
+      "normal_repeat_answers": {
+        "gt": 3,
+        "non_gt": 3
+      }
+    },
+    "history": {
+      "all_channels": {
+        "gt": {
+          "anomalous": 8,
+          "rejected_candidate": 0,
+          "uncertain": 4
+        },
+        "non_gt": {
+          "anomalous": 9,
+          "rejected_candidate": 0,
+          "uncertain": 6
+        }
+      },
+      "screened": {
+        "gt": {
+          "anomalous": 8,
+          "rejected_candidate": 2,
+          "uncertain": 2
+        },
+        "non_gt": {
+          "anomalous": 9,
+          "rejected_candidate": 1,
+          "uncertain": 5
+        }
+      },
+      "normal_repeat_answers": {
+        "gt": 4,
+        "non_gt": 6
+      }
+    },
+    "pages_fully_supported": "3 of 27 (every shown channel context_supported)"
+  },
+  "cases": [
+    {
+      "core_id": "machine-1-1.e00012.c0000",
+      "gt_event": true,
+      "supported": 0,
+      "shown": 6,
+      "base": {
+        "verdict": "uncertain",
+        "all_channels": "uncertain",
+        "screened": "uncertain"
+      },
+      "prompt": {
+        "verdict": "normal_repeat",
+        "all_channels": "uncertain",
+        "screened": "uncertain"
+      },
+      "history": {
+        "verdict": "anomalous",
+        "all_channels": "anomalous",
+        "screened": "anomalous"
+      }
+    },
+    {
+      "core_id": "machine-1-1.e00027.c0000",
+      "gt_event": true,
+      "supported": 5,
+      "shown": 8,
+      "base": {
+        "verdict": "uncertain",
+        "all_channels": "uncertain",
+        "screened": "uncertain"
+      },
+      "prompt": {
+        "verdict": "anomalous",
+        "all_channels": "anomalous",
+        "screened": "anomalous"
+      },
+      "history": {
+        "verdict": "anomalous",
+        "all_channels": "anomalous",
+        "screened": "anomalous"
+      }
+    },
+    {
+      "core_id": "machine-1-1.e00046.c0000",
+      "gt_event": false,
+      "supported": 0,
+      "shown": 5,
+      "base": {
+        "verdict": "uncertain",
+        "all_channels": "uncertain",
+        "screened": "uncertain"
+      },
+      "prompt": {
+        "verdict": "anomalous",
+        "all_channels": "anomalous",
+        "screened": "anomalous"
+      },
+      "history": {
+        "verdict": "normal_repeat",
+        "all_channels": "uncertain",
+        "screened": "uncertain"
+      }
+    },
+    {
+      "core_id": "machine-1-1.e00002.c0000",
+      "gt_event": false,
+      "supported": 2,
+      "shown": 3,
+      "base": {
+        "verdict": "anomalous",
+        "all_channels": "anomalous",
+        "screened": "anomalous"
+      },
+      "prompt": {
+        "verdict": "anomalous",
+        "all_channels": "anomalous",
+        "screened": "anomalous"
+      },
+      "history": {
+        "verdict": "anomalous",
+        "all_channels": "anomalous",
+        "screened": "anomalous"
+      }
+    },
+    {
+      "core_id": "machine-1-2.e00049.c0000",
+      "gt_event": true,
+      "supported": 2,
+      "shown": 8,
+      "base": {
+        "verdict": "uncertain",
+        "all_channels": "uncertain",
+        "screened": "uncertain"
+      },
+      "prompt": {
+        "verdict": "normal_repeat",
+        "all_channels": "uncertain",
+        "screened": "uncertain"
+      },
+      "history": {
+        "verdict": "normal_repeat",
+        "all_channels": "uncertain",
+        "screened": "uncertain"
+      }
+    },
+    {
+      "core_id": "machine-1-2.e00048.c0000",
+      "gt_event": true,
+      "supported": 7,
+      "shown": 7,
+      "base": {
+        "verdict": "anomalous",
+        "all_channels": "anomalous",
+        "screened": "anomalous"
+      },
+      "prompt": {
+        "verdict": "anomalous",
+        "all_channels": "anomalous",
+        "screened": "anomalous"
+      },
+      "history": {
+        "verdict": "normal_repeat",
+        "all_channels": "uncertain",
+        "screened": "rejected_candidate"
+      }
+    },
+    {
+      "core_id": "machine-1-2.e00041.c0000",
+      "gt_event": false,
+      "supported": 5,
+      "shown": 5,
+      "base": {
+        "verdict": "uncertain",
+        "all_channels": "uncertain",
+        "screened": "uncertain"
+      },
+      "prompt": {
+        "verdict": "normal_repeat",
+        "all_channels": "uncertain",
+        "screened": "rejected_candidate"
+      },
+      "history": {
+        "verdict": "normal_repeat",
+        "all_channels": "uncertain",
+        "screened": "rejected_candidate"
+      }
+    },
+    {
+      "core_id": "machine-1-2.e00050.c0000",
+      "gt_event": false,
+      "supported": 5,
+      "shown": 6,
+      "base": {
+        "verdict": "uncertain",
+        "all_channels": "uncertain",
+        "screened": "uncertain"
+      },
+      "prompt": {
+        "verdict": "normal_repeat",
+        "all_channels": "uncertain",
+        "screened": "uncertain"
+      },
+      "history": {
+        "verdict": "anomalous",
+        "all_channels": "anomalous",
+        "screened": "anomalous"
+      }
+    },
+    {
+      "core_id": "machine-1-3.e00014.c0000",
+      "gt_event": true,
+      "supported": 5,
+      "shown": 8,
+      "base": {
+        "verdict": "uncertain",
+        "all_channels": "uncertain",
+        "screened": "uncertain"
+      },
+      "prompt": {
+        "verdict": "anomalous",
+        "all_channels": "anomalous",
+        "screened": "anomalous"
+      },
+      "history": {
+        "verdict": "anomalous",
+        "all_channels": "anomalous",
+        "screened": "anomalous"
+      }
+    },
+    {
+      "core_id": "machine-1-3.e00011.c0000",
+      "gt_event": false,
+      "supported": 3,
+      "shown": 6,
+      "base": {
+        "verdict": "uncertain",
+        "all_channels": "uncertain",
+        "screened": "uncertain"
+      },
+      "prompt": {
+        "verdict": "anomalous",
+        "all_channels": "anomalous",
+        "screened": "anomalous"
+      },
+      "history": {
+        "verdict": "anomalous",
+        "all_channels": "anomalous",
+        "screened": "anomalous"
+      }
+    },
+    {
+      "core_id": "machine-1-3.e00005.c0000",
+      "gt_event": false,
+      "supported": 1,
+      "shown": 3,
+      "base": {
+        "verdict": "uncertain",
+        "all_channels": "uncertain",
+        "screened": "uncertain"
+      },
+      "prompt": {
+        "verdict": "anomalous",
+        "all_channels": "anomalous",
+        "screened": "anomalous"
+      },
+      "history": {
+        "verdict": "normal_repeat",
+        "all_channels": "uncertain",
+        "screened": "uncertain"
+      }
+    },
+    {
+      "core_id": "machine-1-4.e00004.c0000",
+      "gt_event": true,
+      "supported": 2,
+      "shown": 7,
+      "base": {
+        "verdict": "uncertain",
+        "all_channels": "uncertain",
+        "screened": "uncertain"
+      },
+      "prompt": {
+        "verdict": "anomalous",
+        "all_channels": "anomalous",
+        "screened": "anomalous"
+      },
+      "history": {
+        "verdict": "normal_repeat",
+        "all_channels": "uncertain",
+        "screened": "uncertain"
+      }
+    },
+    {
+      "core_id": "machine-1-4.e00007.c0000",
+      "gt_event": false,
+      "supported": 4,
+      "shown": 7,
+      "base": {
+        "verdict": "uncertain",
+        "all_channels": "uncertain",
+        "screened": "uncertain"
+      },
+      "prompt": {
+        "verdict": "anomalous",
+        "all_channels": "anomalous",
+        "screened": "anomalous"
+      },
+      "history": {
+        "verdict": "normal_repeat",
+        "all_channels": "uncertain",
+        "screened": "uncertain"
+      }
+    },
+    {
+      "core_id": "machine-1-4.e00001.c0000",
+      "gt_event": false,
+      "supported": 1,
+      "shown": 5,
+      "base": {
+        "verdict": "uncertain",
+        "all_channels": "uncertain",
+        "screened": "uncertain"
+      },
+      "prompt": {
+        "verdict": "anomalous",
+        "all_channels": "anomalous",
+        "screened": "anomalous"
+      },
+      "history": {
+        "verdict": "anomalous",
+        "all_channels": "anomalous",
+        "screened": "anomalous"
+      }
+    },
+    {
+      "core_id": "machine-1-5.e00023.c0000",
+      "gt_event": false,
+      "supported": 1,
+      "shown": 7,
+      "base": {
+        "verdict": "uncertain",
+        "all_channels": "uncertain",
+        "screened": "uncertain"
+      },
+      "prompt": {
+        "verdict": "normal_repeat",
+        "all_channels": "uncertain",
+        "screened": "uncertain"
+      },
+      "history": {
+        "verdict": "anomalous",
+        "all_channels": "anomalous",
+        "screened": "anomalous"
+      }
+    },
+    {
+      "core_id": "machine-1-5.e00025.c0000",
+      "gt_event": false,
+      "supported": 2,
+      "shown": 4,
+      "base": {
+        "verdict": "anomalous",
+        "all_channels": "anomalous",
+        "screened": "anomalous"
+      },
+      "prompt": {
+        "verdict": "anomalous",
+        "all_channels": "anomalous",
+        "screened": "anomalous"
+      },
+      "history": {
+        "verdict": "anomalous",
+        "all_channels": "anomalous",
+        "screened": "anomalous"
+      }
+    },
+    {
+      "core_id": "machine-1-6.e00007.c0000",
+      "gt_event": true,
+      "supported": 2,
+      "shown": 8,
+      "base": {
+        "verdict": "uncertain",
+        "all_channels": "uncertain",
+        "screened": "uncertain"
+      },
+      "prompt": {
+        "verdict": "anomalous",
+        "all_channels": "anomalous",
+        "screened": "anomalous"
+      },
+      "history": {
+        "verdict": "anomalous",
+        "all_channels": "anomalous",
+        "screened": "anomalous"
+      }
+    },
+    {
+      "core_id": "machine-1-6.e00015.c0000",
+      "gt_event": true,
+      "supported": 1,
+      "shown": 8,
+      "base": {
+        "verdict": "uncertain",
+        "all_channels": "uncertain",
+        "screened": "uncertain"
+      },
+      "prompt": {
+        "verdict": "anomalous",
+        "all_channels": "anomalous",
+        "screened": "anomalous"
+      },
+      "history": {
+        "verdict": "anomalous",
+        "all_channels": "anomalous",
+        "screened": "anomalous"
+      }
+    },
+    {
+      "core_id": "machine-1-6.e00063.c0000",
+      "gt_event": false,
+      "supported": 3,
+      "shown": 5,
+      "base": {
+        "verdict": "uncertain",
+        "all_channels": "uncertain",
+        "screened": "uncertain"
+      },
+      "prompt": {
+        "verdict": "anomalous",
+        "all_channels": "anomalous",
+        "screened": "anomalous"
+      },
+      "history": {
+        "verdict": "normal_repeat",
+        "all_channels": "uncertain",
+        "screened": "uncertain"
+      }
+    },
+    {
+      "core_id": "machine-1-6.e00021.c0000",
+      "gt_event": false,
+      "supported": 1,
+      "shown": 5,
+      "base": {
+        "verdict": "anomalous",
+        "all_channels": "anomalous",
+        "screened": "anomalous"
+      },
+      "prompt": {
+        "verdict": "anomalous",
+        "all_channels": "anomalous",
+        "screened": "anomalous"
+      },
+      "history": {
+        "verdict": "normal_repeat",
+        "all_channels": "uncertain",
+        "screened": "uncertain"
+      }
+    },
+    {
+      "core_id": "machine-1-7.e00002.c0000",
+      "gt_event": true,
+      "supported": 4,
+      "shown": 6,
+      "base": {
+        "verdict": "uncertain",
+        "all_channels": "uncertain",
+        "screened": "uncertain"
+      },
+      "prompt": {
+        "verdict": "anomalous",
+        "all_channels": "anomalous",
+        "screened": "anomalous"
+      },
+      "history": {
+        "verdict": "anomalous",
+        "all_channels": "anomalous",
+        "screened": "anomalous"
+      }
+    },
+    {
+      "core_id": "machine-1-7.e00008.c0000",
+      "gt_event": true,
+      "supported": 6,
+      "shown": 6,
+      "base": {
+        "verdict": "anomalous",
+        "all_channels": "anomalous",
+        "screened": "anomalous"
+      },
+      "prompt": {
+        "verdict": "normal_repeat",
+        "all_channels": "uncertain",
+        "screened": "rejected_candidate"
+      },
+      "history": {
+        "verdict": "normal_repeat",
+        "all_channels": "uncertain",
+        "screened": "rejected_candidate"
+      }
+    },
+    {
+      "core_id": "machine-1-7.e00010.c0000",
+      "gt_event": false,
+      "supported": 3,
+      "shown": 4,
+      "base": {
+        "verdict": "uncertain",
+        "all_channels": "uncertain",
+        "screened": "uncertain"
+      },
+      "prompt": {
+        "verdict": "anomalous",
+        "all_channels": "anomalous",
+        "screened": "anomalous"
+      },
+      "history": {
+        "verdict": "anomalous",
+        "all_channels": "anomalous",
+        "screened": "anomalous"
+      }
+    },
+    {
+      "core_id": "machine-1-7.e00013.c0000",
+      "gt_event": false,
+      "supported": 2,
+      "shown": 3,
+      "base": {
+        "verdict": "uncertain",
+        "all_channels": "uncertain",
+        "screened": "uncertain"
+      },
+      "prompt": {
+        "verdict": "anomalous",
+        "all_channels": "anomalous",
+        "screened": "anomalous"
+      },
+      "history": {
+        "verdict": "anomalous",
+        "all_channels": "anomalous",
+        "screened": "anomalous"
+      }
+    },
+    {
+      "core_id": "machine-1-8.e00001.c0000",
+      "gt_event": true,
+      "supported": 5,
+      "shown": 8,
+      "base": {
+        "verdict": "uncertain",
+        "all_channels": "uncertain",
+        "screened": "uncertain"
+      },
+      "prompt": {
+        "verdict": "anomalous",
+        "all_channels": "anomalous",
+        "screened": "anomalous"
+      },
+      "history": {
+        "verdict": "anomalous",
+        "all_channels": "anomalous",
+        "screened": "anomalous"
+      }
+    },
+    {
+      "core_id": "machine-1-8.e00029.c0000",
+      "gt_event": true,
+      "supported": 4,
+      "shown": 7,
+      "base": {
+        "verdict": "uncertain",
+        "all_channels": "uncertain",
+        "screened": "uncertain"
+      },
+      "prompt": {
+        "verdict": "anomalous",
+        "all_channels": "anomalous",
+        "screened": "anomalous"
+      },
+      "history": {
+        "verdict": "anomalous",
+        "all_channels": "anomalous",
+        "screened": "anomalous"
+      }
+    },
+    {
+      "core_id": "machine-1-8.e00028.c0000",
+      "gt_event": false,
+      "supported": 4,
+      "shown": 8,
+      "base": {
+        "verdict": "uncertain",
+        "all_channels": "uncertain",
+        "screened": "uncertain"
+      },
+      "prompt": {
+        "verdict": "anomalous",
+        "all_channels": "anomalous",
+        "screened": "anomalous"
+      },
+      "history": {
+        "verdict": "anomalous",
+        "all_channels": "anomalous",
+        "screened": "anomalous"
+      }
+    }
+  ],
+  "limitation": "27 cases, one answer per arm."
+}

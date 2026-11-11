@@ -1,0 +1,20 @@
+{
+  "fingerprint": "3dd7245be68b555d6fe3b07137e923a63094b7edb066cd96042eedcc236140f0",
+  "prompt": "You review one candidate interval in multichannel machine telemetry (entity machine-1-1).\nThe candidate is ticks [105,119) of the current 224-tick window (end excluded). A detector flagged it because of a sharp change.\nMachines also make sharp changes routinely in normal operation, so a visible spike by itself is not an anomaly.\nPicture: top heatmap = all channels over the window. Each row = one channel: left the full 224-tick trace, right a zoom (orange = zoom range, not the candidate). Black = observed, dashed blue = median of similar normal training windows; that median smooths routine spikes away, so a gap to it is not evidence by itself.\nDecide the event validity of the candidate:\n- \"anomalous\": what happens in the candidate is not something these channels do routinely: a new size, a new shape, a new combination of channels, or an abnormal state that starts or continues here. The candidate may be a small part of a longer abnormal episode; if so it is anomalous.\n- \"normal_repeat\": the same kind of change recurs in these channels outside the candidate.\n- \"uncertain\": only when the plots really do not let you tell. If the evidence leans one way, commit.\nDetailed channels: [6, 5, 29].\nReturn ONLY JSON:\n{\"event_validity\":\"anomalous\"|\"normal_repeat\"|\"uncertain\",\"anomalous_channels\":[subset of [6, 5, 29], empty unless anomalous or uncertain],\"channel_ranking\":[ordered subset of [6, 5, 29] that includes every anomalous channel],\"confidence\":\"low\"|\"medium\"|\"high\",\"additional_channels_to_review\":[]}",
+  "raw": "```json\n{\n  \"event_validity\": \"anomalous\",\n  \"anomalous_channels\": [6, 5, 29],\n  \"channel_ranking\": [5, 6, 29],\n  \"confidence\": \"high\",\n  \"additional_channels_to_review\": []\n}\n```",
+  "parsed": {
+    "event_validity": "anomalous",
+    "anomalous_channels": [
+      6,
+      5,
+      29
+    ],
+    "channel_ranking": [
+      5,
+      6,
+      29
+    ],
+    "confidence": "high",
+    "additional_channels_to_review": []
+  }
+}

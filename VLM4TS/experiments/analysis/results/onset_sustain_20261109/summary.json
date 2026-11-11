@@ -1,0 +1,170 @@
+[
+  {
+    "machine": "machine-1-1",
+    "results": {
+      "baseline": {
+        "predictions": 328,
+        "matches": 3,
+        "precision": 0.009146341463414634,
+        "recall": 0.375,
+        "f1": 0.017857142857142856,
+        "gt_reached": 8,
+        "false_intervals": 321,
+        "false_per_10k_normal_ticks": 124.77649070978777,
+        "normal_tick_alarm": 0.5085127886185182,
+        "duplicate_overlaps": 5,
+        "gt_with_multiple_predictions": 1,
+        "gt_ticks_covered": 2681,
+        "gt_ticks_total": 2694,
+        "longest_run": 11316
+      },
+      "onset_trim": {
+        "predictions": 328,
+        "matches": 3,
+        "precision": 0.009146341463414634,
+        "recall": 0.375,
+        "f1": 0.017857142857142856,
+        "gt_reached": 8,
+        "false_intervals": 321,
+        "false_per_10k_normal_ticks": 124.77649070978777,
+        "normal_tick_alarm": 0.5083184327139858,
+        "duplicate_overlaps": 5,
+        "gt_with_multiple_predictions": 1,
+        "gt_ticks_covered": 2681,
+        "gt_ticks_total": 2694,
+        "longest_run": 11316
+      },
+      "onset_plus_level": {
+        "predictions": 341,
+        "matches": 3,
+        "precision": 0.008797653958944282,
+        "recall": 0.375,
+        "f1": 0.0171919770773639,
+        "gt_reached": 8,
+        "false_intervals": 334,
+        "false_per_10k_normal_ticks": 129.82974422762965,
+        "normal_tick_alarm": 0.5004275829899713,
+        "duplicate_overlaps": 5,
+        "gt_with_multiple_predictions": 1,
+        "gt_ticks_covered": 2681,
+        "gt_ticks_total": 2694,
+        "longest_run": 11316
+      },
+      "uncertain_retained_ticks": 130,
+      "level_threshold_rule": "max(train fit and first calibration q99)",
+      "gap_ticks": 2
+    }
+  },
+  {
+    "machine": "machine-1-2",
+    "results": {
+      "baseline": {
+        "predictions": 610,
+        "matches": 10,
+        "precision": 0.01639344262295082,
+        "recall": 1.0,
+        "f1": 0.03225806451612903,
+        "gt_reached": 10,
+        "false_intervals": 558,
+        "false_per_10k_normal_ticks": 241.63166327458538,
+        "normal_tick_alarm": 0.04364959078508639,
+        "duplicate_overlaps": 42,
+        "gt_with_multiple_predictions": 8,
+        "gt_ticks_covered": 219,
+        "gt_ticks_total": 542,
+        "longest_run": 62
+      },
+      "onset_trim": {
+        "predictions": 610,
+        "matches": 10,
+        "precision": 0.01639344262295082,
+        "recall": 1.0,
+        "f1": 0.03225806451612903,
+        "gt_reached": 10,
+        "false_intervals": 558,
+        "false_per_10k_normal_ticks": 241.63166327458538,
+        "normal_tick_alarm": 0.043303165461395225,
+        "duplicate_overlaps": 42,
+        "gt_with_multiple_predictions": 8,
+        "gt_ticks_covered": 216,
+        "gt_ticks_total": 542,
+        "longest_run": 62
+      },
+      "onset_plus_level": {
+        "predictions": 624,
+        "matches": 10,
+        "precision": 0.016025641025641024,
+        "recall": 1.0,
+        "f1": 0.031545741324921134,
+        "gt_reached": 10,
+        "false_intervals": 572,
+        "false_per_10k_normal_ticks": 247.6941064391807,
+        "normal_tick_alarm": 0.038539817260641755,
+        "duplicate_overlaps": 42,
+        "gt_with_multiple_predictions": 8,
+        "gt_ticks_covered": 216,
+        "gt_ticks_total": 542,
+        "longest_run": 60
+      },
+      "uncertain_retained_ticks": 223,
+      "level_threshold_rule": "max(train fit and first calibration q99)",
+      "gap_ticks": 2
+    }
+  },
+  {
+    "machine": "machine-1-6",
+    "results": {
+      "baseline": {
+        "predictions": 57,
+        "matches": 4,
+        "precision": 0.07017543859649122,
+        "recall": 0.13333333333333333,
+        "f1": 0.09195402298850575,
+        "gt_reached": 29,
+        "false_intervals": 53,
+        "false_per_10k_normal_ticks": 26.60375464310812,
+        "normal_tick_alarm": 0.865425158116655,
+        "duplicate_overlaps": 0,
+        "gt_with_multiple_predictions": 0,
+        "gt_ticks_covered": 3702,
+        "gt_ticks_total": 3708,
+        "longest_run": 20714
+      },
+      "onset_trim": {
+        "predictions": 57,
+        "matches": 4,
+        "precision": 0.07017543859649122,
+        "recall": 0.13333333333333333,
+        "f1": 0.09195402298850575,
+        "gt_reached": 29,
+        "false_intervals": 53,
+        "false_per_10k_normal_ticks": 26.60375464310812,
+        "normal_tick_alarm": 0.8644212428471038,
+        "duplicate_overlaps": 0,
+        "gt_with_multiple_predictions": 0,
+        "gt_ticks_covered": 3702,
+        "gt_ticks_total": 3708,
+        "longest_run": 20714
+      },
+      "onset_plus_level": {
+        "predictions": 79,
+        "matches": 4,
+        "precision": 0.05063291139240506,
+        "recall": 0.13333333333333333,
+        "f1": 0.07339449541284404,
+        "gt_reached": 29,
+        "false_intervals": 75,
+        "false_per_10k_normal_ticks": 37.64682260817187,
+        "normal_tick_alarm": 0.8582471639393635,
+        "duplicate_overlaps": 0,
+        "gt_with_multiple_predictions": 0,
+        "gt_ticks_covered": 3701,
+        "gt_ticks_total": 3708,
+        "longest_run": 20398
+      },
+      "uncertain_retained_ticks": 49,
+      "level_threshold_rule": "max(train fit and first calibration q99)",
+      "gap_ticks": 2
+    }
+  }
+]

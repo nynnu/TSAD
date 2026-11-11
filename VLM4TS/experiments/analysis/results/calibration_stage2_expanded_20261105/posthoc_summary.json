@@ -1,0 +1,1368 @@
+{
+  "groups": {
+    "lost_high_gt": {
+      "cases": 24,
+      "valid_responses": 24,
+      "source_bands": {
+        "review": 24
+      },
+      "raw_event_validity": {
+        "uncertain": 22,
+        "anomalous": 2
+      },
+      "contract_status": {
+        "uncertain": 22,
+        "anomalous": 2
+      },
+      "unresolved_requests": 0,
+      "median_candidate_gt_recall": 0.5681818181818181,
+      "candidate_covers_all_gt": 10,
+      "context_contains_any_gt": 24,
+      "reference_limited_channels": 97,
+      "reference_channels": 192
+    },
+    "gt_nonoverlap": {
+      "cases": 24,
+      "valid_responses": 24,
+      "source_bands": {
+        "high": 3,
+        "review": 21
+      },
+      "raw_event_validity": {
+        "uncertain": 23,
+        "anomalous": 1
+      },
+      "contract_status": {
+        "uncertain": 23,
+        "anomalous": 1
+      },
+      "unresolved_requests": 0,
+      "median_candidate_gt_recall": null,
+      "candidate_covers_all_gt": 0,
+      "context_contains_any_gt": 13,
+      "reference_limited_channels": 62,
+      "reference_channels": 192
+    }
+  },
+  "by_band": {
+    "lost_high_gt__review": {
+      "cases": 24,
+      "contract_status": {
+        "uncertain": 22,
+        "anomalous": 2
+      }
+    },
+    "gt_nonoverlap__high": {
+      "cases": 3,
+      "contract_status": {
+        "uncertain": 3
+      }
+    },
+    "gt_nonoverlap__review": {
+      "cases": 21,
+      "contract_status": {
+        "uncertain": 20,
+        "anomalous": 1
+      }
+    }
+  },
+  "details": [
+    {
+      "case": 0,
+      "category": "lost_high_gt",
+      "parent": [
+        247,
+        251
+      ],
+      "gt_event": [
+        246,
+        252
+      ],
+      "source_band": "review",
+      "context_gt_ticks": 6,
+      "core_gt_ticks": 4,
+      "raw_event_validity": "uncertain",
+      "contract_status": "uncertain",
+      "outstanding_requests": [],
+      "gt_channels": 11,
+      "gt_candidates": 7,
+      "gt_response_channels": 4,
+      "response_channels": [
+        8,
+        9,
+        10,
+        12
+      ],
+      "reference_limited": 0,
+      "reference_count": 8
+    },
+    {
+      "case": 1,
+      "category": "lost_high_gt",
+      "parent": [
+        652,
+        669
+      ],
+      "gt_event": [
+        653,
+        658
+      ],
+      "source_band": "review",
+      "context_gt_ticks": 5,
+      "core_gt_ticks": 5,
+      "raw_event_validity": "anomalous",
+      "contract_status": "anomalous",
+      "outstanding_requests": [],
+      "gt_channels": 20,
+      "gt_candidates": 7,
+      "gt_response_channels": 2,
+      "response_channels": [
+        9,
+        10
+      ],
+      "reference_limited": 0,
+      "reference_count": 8
+    },
+    {
+      "case": 2,
+      "category": "lost_high_gt",
+      "parent": [
+        2092,
+        2154
+      ],
+      "gt_event": [
+        2092,
+        2100
+      ],
+      "source_band": "review",
+      "context_gt_ticks": 8,
+      "core_gt_ticks": 8,
+      "raw_event_validity": "uncertain",
+      "contract_status": "uncertain",
+      "outstanding_requests": [],
+      "gt_channels": 20,
+      "gt_candidates": 8,
+      "gt_response_channels": 2,
+      "response_channels": [
+        9,
+        10
+      ],
+      "reference_limited": 0,
+      "reference_count": 8
+    },
+    {
+      "case": 3,
+      "category": "lost_high_gt",
+      "parent": [
+        2975,
+        4648
+      ],
+      "gt_event": [
+        3534,
+        3539
+      ],
+      "source_band": "review",
+      "context_gt_ticks": 5,
+      "core_gt_ticks": 5,
+      "raw_event_validity": "uncertain",
+      "contract_status": "uncertain",
+      "outstanding_requests": [],
+      "gt_channels": 15,
+      "gt_candidates": 6,
+      "gt_response_channels": 2,
+      "response_channels": [
+        9,
+        10,
+        17
+      ],
+      "reference_limited": 1,
+      "reference_count": 8
+    },
+    {
+      "case": 4,
+      "category": "lost_high_gt",
+      "parent": [
+        4723,
+        6023
+      ],
+      "gt_event": [
+        5167,
+        5172
+      ],
+      "source_band": "review",
+      "context_gt_ticks": 56,
+      "core_gt_ticks": 56,
+      "raw_event_validity": "uncertain",
+      "contract_status": "uncertain",
+      "outstanding_requests": [],
+      "gt_channels": 5,
+      "gt_candidates": 5,
+      "gt_response_channels": 2,
+      "response_channels": [
+        9,
+        10
+      ],
+      "reference_limited": 5,
+      "reference_count": 8
+    },
+    {
+      "case": 5,
+      "category": "lost_high_gt",
+      "parent": [
+        4723,
+        6023
+      ],
+      "gt_event": [
+        5708,
+        5713
+      ],
+      "source_band": "review",
+      "context_gt_ticks": 5,
+      "core_gt_ticks": 5,
+      "raw_event_validity": "uncertain",
+      "contract_status": "uncertain",
+      "outstanding_requests": [],
+      "gt_channels": 4,
+      "gt_candidates": 4,
+      "gt_response_channels": 2,
+      "response_channels": [
+        9,
+        10
+      ],
+      "reference_limited": 6,
+      "reference_count": 8
+    },
+    {
+      "case": 6,
+      "category": "lost_high_gt",
+      "parent": [
+        4723,
+        6023
+      ],
+      "gt_event": [
+        5873,
+        5885
+      ],
+      "source_band": "review",
+      "context_gt_ticks": 17,
+      "core_gt_ticks": 13,
+      "raw_event_validity": "uncertain",
+      "contract_status": "uncertain",
+      "outstanding_requests": [],
+      "gt_channels": 14,
+      "gt_candidates": 4,
+      "gt_response_channels": 2,
+      "response_channels": [
+        4,
+        8,
+        12,
+        13,
+        15
+      ],
+      "reference_limited": 5,
+      "reference_count": 8
+    },
+    {
+      "case": 7,
+      "category": "lost_high_gt",
+      "parent": [
+        6083,
+        12647
+      ],
+      "gt_event": [
+        6412,
+        6419
+      ],
+      "source_band": "review",
+      "context_gt_ticks": 7,
+      "core_gt_ticks": 7,
+      "raw_event_validity": "uncertain",
+      "contract_status": "uncertain",
+      "outstanding_requests": [],
+      "gt_channels": 19,
+      "gt_candidates": 5,
+      "gt_response_channels": 2,
+      "response_channels": [
+        9,
+        10
+      ],
+      "reference_limited": 3,
+      "reference_count": 8
+    },
+    {
+      "case": 8,
+      "category": "lost_high_gt",
+      "parent": [
+        6083,
+        12647
+      ],
+      "gt_event": [
+        7851,
+        7856
+      ],
+      "source_band": "review",
+      "context_gt_ticks": 5,
+      "core_gt_ticks": 5,
+      "raw_event_validity": "uncertain",
+      "contract_status": "uncertain",
+      "outstanding_requests": [],
+      "gt_channels": 15,
+      "gt_candidates": 4,
+      "gt_response_channels": 2,
+      "response_channels": [
+        9,
+        10
+      ],
+      "reference_limited": 5,
+      "reference_count": 8
+    },
+    {
+      "case": 9,
+      "category": "lost_high_gt",
+      "parent": [
+        6083,
+        12647
+      ],
+      "gt_event": [
+        9291,
+        9298
+      ],
+      "source_band": "review",
+      "context_gt_ticks": 7,
+      "core_gt_ticks": 7,
+      "raw_event_validity": "uncertain",
+      "contract_status": "uncertain",
+      "outstanding_requests": [],
+      "gt_channels": 16,
+      "gt_candidates": 5,
+      "gt_response_channels": 2,
+      "response_channels": [
+        9,
+        10
+      ],
+      "reference_limited": 4,
+      "reference_count": 8
+    },
+    {
+      "case": 10,
+      "category": "lost_high_gt",
+      "parent": [
+        6083,
+        12647
+      ],
+      "gt_event": [
+        10731,
+        10736
+      ],
+      "source_band": "review",
+      "context_gt_ticks": 5,
+      "core_gt_ticks": 5,
+      "raw_event_validity": "uncertain",
+      "contract_status": "uncertain",
+      "outstanding_requests": [],
+      "gt_channels": 16,
+      "gt_candidates": 5,
+      "gt_response_channels": 3,
+      "response_channels": [
+        8,
+        9,
+        10
+      ],
+      "reference_limited": 4,
+      "reference_count": 8
+    },
+    {
+      "case": 11,
+      "category": "lost_high_gt",
+      "parent": [
+        6083,
+        12647
+      ],
+      "gt_event": [
+        11467,
+        11471
+      ],
+      "source_band": "review",
+      "context_gt_ticks": 4,
+      "core_gt_ticks": 4,
+      "raw_event_validity": "uncertain",
+      "contract_status": "uncertain",
+      "outstanding_requests": [],
+      "gt_channels": 17,
+      "gt_candidates": 4,
+      "gt_response_channels": 2,
+      "response_channels": [
+        9,
+        10,
+        23
+      ],
+      "reference_limited": 5,
+      "reference_count": 8
+    },
+    {
+      "case": 12,
+      "category": "lost_high_gt",
+      "parent": [
+        6083,
+        12647
+      ],
+      "gt_event": [
+        12171,
+        12176
+      ],
+      "source_band": "review",
+      "context_gt_ticks": 5,
+      "core_gt_ticks": 5,
+      "raw_event_validity": "uncertain",
+      "contract_status": "uncertain",
+      "outstanding_requests": [],
+      "gt_channels": 17,
+      "gt_candidates": 5,
+      "gt_response_channels": 2,
+      "response_channels": [
+        9,
+        10
+      ],
+      "reference_limited": 3,
+      "reference_count": 8
+    },
+    {
+      "case": 13,
+      "category": "lost_high_gt",
+      "parent": [
+        13130,
+        14604
+      ],
+      "gt_event": [
+        13277,
+        13280
+      ],
+      "source_band": "review",
+      "context_gt_ticks": 5,
+      "core_gt_ticks": 3,
+      "raw_event_validity": "uncertain",
+      "contract_status": "uncertain",
+      "outstanding_requests": [],
+      "gt_channels": 1,
+      "gt_candidates": 1,
+      "gt_response_channels": 0,
+      "response_channels": [
+        6,
+        8,
+        12,
+        13,
+        15,
+        23,
+        25
+      ],
+      "reference_limited": 7,
+      "reference_count": 8
+    },
+    {
+      "case": 14,
+      "category": "lost_high_gt",
+      "parent": [
+        13130,
+        14604
+      ],
+      "gt_event": [
+        13613,
+        13619
+      ],
+      "source_band": "review",
+      "context_gt_ticks": 6,
+      "core_gt_ticks": 6,
+      "raw_event_validity": "uncertain",
+      "contract_status": "uncertain",
+      "outstanding_requests": [],
+      "gt_channels": 8,
+      "gt_candidates": 4,
+      "gt_response_channels": 2,
+      "response_channels": [
+        9,
+        10
+      ],
+      "reference_limited": 5,
+      "reference_count": 8
+    },
+    {
+      "case": 15,
+      "category": "lost_high_gt",
+      "parent": [
+        14942,
+        19460
+      ],
+      "gt_event": [
+        15052,
+        15055
+      ],
+      "source_band": "review",
+      "context_gt_ticks": 3,
+      "core_gt_ticks": 3,
+      "raw_event_validity": "uncertain",
+      "contract_status": "uncertain",
+      "outstanding_requests": [],
+      "gt_channels": 4,
+      "gt_candidates": 4,
+      "gt_response_channels": 2,
+      "response_channels": [
+        9,
+        10
+      ],
+      "reference_limited": 5,
+      "reference_count": 8
+    },
+    {
+      "case": 16,
+      "category": "lost_high_gt",
+      "parent": [
+        14942,
+        19460
+      ],
+      "gt_event": [
+        15397,
+        15401
+      ],
+      "source_band": "review",
+      "context_gt_ticks": 4,
+      "core_gt_ticks": 4,
+      "raw_event_validity": "uncertain",
+      "contract_status": "uncertain",
+      "outstanding_requests": [],
+      "gt_channels": 3,
+      "gt_candidates": 3,
+      "gt_response_channels": 2,
+      "response_channels": [
+        6,
+        8,
+        12
+      ],
+      "reference_limited": 6,
+      "reference_count": 8
+    },
+    {
+      "case": 17,
+      "category": "lost_high_gt",
+      "parent": [
+        14942,
+        19460
+      ],
+      "gt_event": [
+        15802,
+        15805
+      ],
+      "source_band": "review",
+      "context_gt_ticks": 3,
+      "core_gt_ticks": 3,
+      "raw_event_validity": "uncertain",
+      "contract_status": "uncertain",
+      "outstanding_requests": [],
+      "gt_channels": 4,
+      "gt_candidates": 4,
+      "gt_response_channels": 2,
+      "response_channels": [
+        9,
+        10
+      ],
+      "reference_limited": 6,
+      "reference_count": 8
+    },
+    {
+      "case": 18,
+      "category": "lost_high_gt",
+      "parent": [
+        14942,
+        19460
+      ],
+      "gt_event": [
+        16491,
+        16499
+      ],
+      "source_band": "review",
+      "context_gt_ticks": 8,
+      "core_gt_ticks": 8,
+      "raw_event_validity": "anomalous",
+      "contract_status": "anomalous",
+      "outstanding_requests": [],
+      "gt_channels": 8,
+      "gt_candidates": 6,
+      "gt_response_channels": 2,
+      "response_channels": [
+        9,
+        10
+      ],
+      "reference_limited": 5,
+      "reference_count": 8
+    },
+    {
+      "case": 19,
+      "category": "lost_high_gt",
+      "parent": [
+        14942,
+        19460
+      ],
+      "gt_event": [
+        16718,
+        16721
+      ],
+      "source_band": "review",
+      "context_gt_ticks": 3,
+      "core_gt_ticks": 3,
+      "raw_event_validity": "uncertain",
+      "contract_status": "uncertain",
+      "outstanding_requests": [],
+      "gt_channels": 4,
+      "gt_candidates": 4,
+      "gt_response_channels": 2,
+      "response_channels": [
+        9,
+        10
+      ],
+      "reference_limited": 6,
+      "reference_count": 8
+    },
+    {
+      "case": 20,
+      "category": "lost_high_gt",
+      "parent": [
+        14942,
+        19460
+      ],
+      "gt_event": [
+        16972,
+        16976
+      ],
+      "source_band": "review",
+      "context_gt_ticks": 4,
+      "core_gt_ticks": 4,
+      "raw_event_validity": "uncertain",
+      "contract_status": "uncertain",
+      "outstanding_requests": [],
+      "gt_channels": 4,
+      "gt_candidates": 4,
+      "gt_response_channels": 2,
+      "response_channels": [
+        6,
+        8,
+        12
+      ],
+      "reference_limited": 6,
+      "reference_count": 8
+    },
+    {
+      "case": 21,
+      "category": "lost_high_gt",
+      "parent": [
+        14942,
+        19460
+      ],
+      "gt_event": [
+        17931,
+        17939
+      ],
+      "source_band": "review",
+      "context_gt_ticks": 8,
+      "core_gt_ticks": 8,
+      "raw_event_validity": "uncertain",
+      "contract_status": "uncertain",
+      "outstanding_requests": [],
+      "gt_channels": 19,
+      "gt_candidates": 6,
+      "gt_response_channels": 2,
+      "response_channels": [
+        9,
+        10
+      ],
+      "reference_limited": 5,
+      "reference_count": 8
+    },
+    {
+      "case": 22,
+      "category": "lost_high_gt",
+      "parent": [
+        19474,
+        23689
+      ],
+      "gt_event": [
+        22252,
+        22260
+      ],
+      "source_band": "review",
+      "context_gt_ticks": 8,
+      "core_gt_ticks": 8,
+      "raw_event_validity": "uncertain",
+      "contract_status": "uncertain",
+      "outstanding_requests": [],
+      "gt_channels": 3,
+      "gt_candidates": 3,
+      "gt_response_channels": 0,
+      "response_channels": [
+        9,
+        10
+      ],
+      "reference_limited": 1,
+      "reference_count": 8
+    },
+    {
+      "case": 23,
+      "category": "lost_high_gt",
+      "parent": [
+        19474,
+        23689
+      ],
+      "gt_event": [
+        22417,
+        22420
+      ],
+      "source_band": "review",
+      "context_gt_ticks": 11,
+      "core_gt_ticks": 11,
+      "raw_event_validity": "uncertain",
+      "contract_status": "uncertain",
+      "outstanding_requests": [],
+      "gt_channels": 2,
+      "gt_candidates": 2,
+      "gt_response_channels": 2,
+      "response_channels": [
+        9,
+        10,
+        12
+      ],
+      "reference_limited": 4,
+      "reference_count": 8
+    },
+    {
+      "case": 24,
+      "category": "gt_nonoverlap",
+      "parent": [
+        12647,
+        12661
+      ],
+      "gt_event": null,
+      "source_band": "high",
+      "context_gt_ticks": 0,
+      "core_gt_ticks": 0,
+      "raw_event_validity": "uncertain",
+      "contract_status": "uncertain",
+      "outstanding_requests": [],
+      "gt_channels": 0,
+      "gt_candidates": 0,
+      "gt_response_channels": 0,
+      "response_channels": [
+        32,
+        33
+      ],
+      "reference_limited": 6,
+      "reference_count": 8
+    },
+    {
+      "case": 25,
+      "category": "gt_nonoverlap",
+      "parent": [
+        14724,
+        14738
+      ],
+      "gt_event": null,
+      "source_band": "high",
+      "context_gt_ticks": 0,
+      "core_gt_ticks": 0,
+      "raw_event_validity": "uncertain",
+      "contract_status": "uncertain",
+      "outstanding_requests": [],
+      "gt_channels": 0,
+      "gt_candidates": 0,
+      "gt_response_channels": 0,
+      "response_channels": [
+        8,
+        12,
+        32
+      ],
+      "reference_limited": 7,
+      "reference_count": 8
+    },
+    {
+      "case": 26,
+      "category": "gt_nonoverlap",
+      "parent": [
+        14928,
+        14942
+      ],
+      "gt_event": null,
+      "source_band": "high",
+      "context_gt_ticks": 0,
+      "core_gt_ticks": 0,
+      "raw_event_validity": "uncertain",
+      "contract_status": "uncertain",
+      "outstanding_requests": [],
+      "gt_channels": 0,
+      "gt_candidates": 0,
+      "gt_response_channels": 0,
+      "response_channels": [
+        13,
+        15,
+        23,
+        25,
+        33
+      ],
+      "reference_limited": 5,
+      "reference_count": 8
+    },
+    {
+      "case": 27,
+      "category": "gt_nonoverlap",
+      "parent": [
+        62,
+        64
+      ],
+      "gt_event": null,
+      "source_band": "review",
+      "context_gt_ticks": 0,
+      "core_gt_ticks": 0,
+      "raw_event_validity": "uncertain",
+      "contract_status": "uncertain",
+      "outstanding_requests": [],
+      "gt_channels": 0,
+      "gt_candidates": 0,
+      "gt_response_channels": 0,
+      "response_channels": [
+        5,
+        15,
+        33
+      ],
+      "reference_limited": 8,
+      "reference_count": 8
+    },
+    {
+      "case": 28,
+      "category": "gt_nonoverlap",
+      "parent": [
+        99,
+        101
+      ],
+      "gt_event": null,
+      "source_band": "review",
+      "context_gt_ticks": 0,
+      "core_gt_ticks": 0,
+      "raw_event_validity": "uncertain",
+      "contract_status": "uncertain",
+      "outstanding_requests": [],
+      "gt_channels": 0,
+      "gt_candidates": 0,
+      "gt_response_channels": 0,
+      "response_channels": [
+        15
+      ],
+      "reference_limited": 1,
+      "reference_count": 8
+    },
+    {
+      "case": 29,
+      "category": "gt_nonoverlap",
+      "parent": [
+        103,
+        104
+      ],
+      "gt_event": null,
+      "source_band": "review",
+      "context_gt_ticks": 0,
+      "core_gt_ticks": 0,
+      "raw_event_validity": "uncertain",
+      "contract_status": "uncertain",
+      "outstanding_requests": [],
+      "gt_channels": 0,
+      "gt_candidates": 0,
+      "gt_response_channels": 0,
+      "response_channels": [],
+      "reference_limited": 0,
+      "reference_count": 8
+    },
+    {
+      "case": 30,
+      "category": "gt_nonoverlap",
+      "parent": [
+        113,
+        130
+      ],
+      "gt_event": null,
+      "source_band": "review",
+      "context_gt_ticks": 0,
+      "core_gt_ticks": 0,
+      "raw_event_validity": "uncertain",
+      "contract_status": "uncertain",
+      "outstanding_requests": [],
+      "gt_channels": 0,
+      "gt_candidates": 0,
+      "gt_response_channels": 0,
+      "response_channels": [
+        4,
+        15,
+        17
+      ],
+      "reference_limited": 3,
+      "reference_count": 8
+    },
+    {
+      "case": 31,
+      "category": "gt_nonoverlap",
+      "parent": [
+        138,
+        142
+      ],
+      "gt_event": null,
+      "source_band": "review",
+      "context_gt_ticks": 6,
+      "core_gt_ticks": 0,
+      "raw_event_validity": "uncertain",
+      "contract_status": "uncertain",
+      "outstanding_requests": [],
+      "gt_channels": 0,
+      "gt_candidates": 0,
+      "gt_response_channels": 0,
+      "response_channels": [
+        15,
+        16
+      ],
+      "reference_limited": 2,
+      "reference_count": 8
+    },
+    {
+      "case": 32,
+      "category": "gt_nonoverlap",
+      "parent": [
+        143,
+        146
+      ],
+      "gt_event": null,
+      "source_band": "review",
+      "context_gt_ticks": 6,
+      "core_gt_ticks": 0,
+      "raw_event_validity": "uncertain",
+      "contract_status": "uncertain",
+      "outstanding_requests": [],
+      "gt_channels": 0,
+      "gt_candidates": 0,
+      "gt_response_channels": 0,
+      "response_channels": [
+        12,
+        15,
+        17
+      ],
+      "reference_limited": 2,
+      "reference_count": 8
+    },
+    {
+      "case": 33,
+      "category": "gt_nonoverlap",
+      "parent": [
+        156,
+        157
+      ],
+      "gt_event": null,
+      "source_band": "review",
+      "context_gt_ticks": 6,
+      "core_gt_ticks": 0,
+      "raw_event_validity": "uncertain",
+      "contract_status": "uncertain",
+      "outstanding_requests": [],
+      "gt_channels": 0,
+      "gt_candidates": 0,
+      "gt_response_channels": 0,
+      "response_channels": [],
+      "reference_limited": 0,
+      "reference_count": 8
+    },
+    {
+      "case": 34,
+      "category": "gt_nonoverlap",
+      "parent": [
+        158,
+        160
+      ],
+      "gt_event": null,
+      "source_band": "review",
+      "context_gt_ticks": 6,
+      "core_gt_ticks": 0,
+      "raw_event_validity": "uncertain",
+      "contract_status": "uncertain",
+      "outstanding_requests": [],
+      "gt_channels": 0,
+      "gt_candidates": 0,
+      "gt_response_channels": 0,
+      "response_channels": [
+        12
+      ],
+      "reference_limited": 1,
+      "reference_count": 8
+    },
+    {
+      "case": 35,
+      "category": "gt_nonoverlap",
+      "parent": [
+        161,
+        163
+      ],
+      "gt_event": null,
+      "source_band": "review",
+      "context_gt_ticks": 6,
+      "core_gt_ticks": 0,
+      "raw_event_validity": "uncertain",
+      "contract_status": "uncertain",
+      "outstanding_requests": [],
+      "gt_channels": 0,
+      "gt_candidates": 0,
+      "gt_response_channels": 0,
+      "response_channels": [
+        2,
+        3,
+        15
+      ],
+      "reference_limited": 2,
+      "reference_count": 8
+    },
+    {
+      "case": 36,
+      "category": "gt_nonoverlap",
+      "parent": [
+        184,
+        186
+      ],
+      "gt_event": null,
+      "source_band": "review",
+      "context_gt_ticks": 6,
+      "core_gt_ticks": 0,
+      "raw_event_validity": "uncertain",
+      "contract_status": "uncertain",
+      "outstanding_requests": [],
+      "gt_channels": 0,
+      "gt_candidates": 0,
+      "gt_response_channels": 0,
+      "response_channels": [
+        15
+      ],
+      "reference_limited": 1,
+      "reference_count": 8
+    },
+    {
+      "case": 37,
+      "category": "gt_nonoverlap",
+      "parent": [
+        188,
+        189
+      ],
+      "gt_event": null,
+      "source_band": "review",
+      "context_gt_ticks": 6,
+      "core_gt_ticks": 0,
+      "raw_event_validity": "uncertain",
+      "contract_status": "uncertain",
+      "outstanding_requests": [],
+      "gt_channels": 0,
+      "gt_candidates": 0,
+      "gt_response_channels": 0,
+      "response_channels": [
+        1,
+        2,
+        3,
+        11
+      ],
+      "reference_limited": 4,
+      "reference_count": 8
+    },
+    {
+      "case": 38,
+      "category": "gt_nonoverlap",
+      "parent": [
+        275,
+        280
+      ],
+      "gt_event": null,
+      "source_band": "review",
+      "context_gt_ticks": 6,
+      "core_gt_ticks": 0,
+      "raw_event_validity": "uncertain",
+      "contract_status": "uncertain",
+      "outstanding_requests": [],
+      "gt_channels": 0,
+      "gt_candidates": 0,
+      "gt_response_channels": 0,
+      "response_channels": [
+        9,
+        10,
+        17
+      ],
+      "reference_limited": 1,
+      "reference_count": 8
+    },
+    {
+      "case": 39,
+      "category": "gt_nonoverlap",
+      "parent": [
+        284,
+        285
+      ],
+      "gt_event": null,
+      "source_band": "review",
+      "context_gt_ticks": 6,
+      "core_gt_ticks": 0,
+      "raw_event_validity": "uncertain",
+      "contract_status": "uncertain",
+      "outstanding_requests": [],
+      "gt_channels": 0,
+      "gt_candidates": 0,
+      "gt_response_channels": 0,
+      "response_channels": [
+        4,
+        15
+      ],
+      "reference_limited": 2,
+      "reference_count": 8
+    },
+    {
+      "case": 40,
+      "category": "gt_nonoverlap",
+      "parent": [
+        383,
+        385
+      ],
+      "gt_event": null,
+      "source_band": "review",
+      "context_gt_ticks": 0,
+      "core_gt_ticks": 0,
+      "raw_event_validity": "uncertain",
+      "contract_status": "uncertain",
+      "outstanding_requests": [],
+      "gt_channels": 0,
+      "gt_candidates": 0,
+      "gt_response_channels": 0,
+      "response_channels": [
+        15,
+        17
+      ],
+      "reference_limited": 2,
+      "reference_count": 8
+    },
+    {
+      "case": 41,
+      "category": "gt_nonoverlap",
+      "parent": [
+        561,
+        562
+      ],
+      "gt_event": null,
+      "source_band": "review",
+      "context_gt_ticks": 5,
+      "core_gt_ticks": 0,
+      "raw_event_validity": "uncertain",
+      "contract_status": "uncertain",
+      "outstanding_requests": [],
+      "gt_channels": 0,
+      "gt_candidates": 0,
+      "gt_response_channels": 0,
+      "response_channels": [
+        4,
+        15
+      ],
+      "reference_limited": 2,
+      "reference_count": 8
+    },
+    {
+      "case": 42,
+      "category": "gt_nonoverlap",
+      "parent": [
+        591,
+        592
+      ],
+      "gt_event": null,
+      "source_band": "review",
+      "context_gt_ticks": 5,
+      "core_gt_ticks": 0,
+      "raw_event_validity": "uncertain",
+      "contract_status": "uncertain",
+      "outstanding_requests": [],
+      "gt_channels": 0,
+      "gt_candidates": 0,
+      "gt_response_channels": 0,
+      "response_channels": [
+        1,
+        2,
+        11,
+        13,
+        22
+      ],
+      "reference_limited": 1,
+      "reference_count": 8
+    },
+    {
+      "case": 43,
+      "category": "gt_nonoverlap",
+      "parent": [
+        637,
+        651
+      ],
+      "gt_event": null,
+      "source_band": "review",
+      "context_gt_ticks": 5,
+      "core_gt_ticks": 0,
+      "raw_event_validity": "anomalous",
+      "contract_status": "anomalous",
+      "outstanding_requests": [],
+      "gt_channels": 0,
+      "gt_candidates": 0,
+      "gt_response_channels": 0,
+      "response_channels": [
+        0,
+        14,
+        17
+      ],
+      "reference_limited": 2,
+      "reference_count": 8
+    },
+    {
+      "case": 44,
+      "category": "gt_nonoverlap",
+      "parent": [
+        727,
+        728
+      ],
+      "gt_event": null,
+      "source_band": "review",
+      "context_gt_ticks": 5,
+      "core_gt_ticks": 0,
+      "raw_event_validity": "uncertain",
+      "contract_status": "uncertain",
+      "outstanding_requests": [],
+      "gt_channels": 0,
+      "gt_candidates": 0,
+      "gt_response_channels": 0,
+      "response_channels": [
+        11,
+        12,
+        23
+      ],
+      "reference_limited": 6,
+      "reference_count": 8
+    },
+    {
+      "case": 45,
+      "category": "gt_nonoverlap",
+      "parent": [
+        891,
+        892
+      ],
+      "gt_event": null,
+      "source_band": "review",
+      "context_gt_ticks": 0,
+      "core_gt_ticks": 0,
+      "raw_event_validity": "uncertain",
+      "contract_status": "uncertain",
+      "outstanding_requests": [],
+      "gt_channels": 0,
+      "gt_candidates": 0,
+      "gt_response_channels": 0,
+      "response_channels": [
+        9,
+        10,
+        12
+      ],
+      "reference_limited": 0,
+      "reference_count": 8
+    },
+    {
+      "case": 46,
+      "category": "gt_nonoverlap",
+      "parent": [
+        1147,
+        1150
+      ],
+      "gt_event": null,
+      "source_band": "review",
+      "context_gt_ticks": 0,
+      "core_gt_ticks": 0,
+      "raw_event_validity": "uncertain",
+      "contract_status": "uncertain",
+      "outstanding_requests": [],
+      "gt_channels": 0,
+      "gt_candidates": 0,
+      "gt_response_channels": 0,
+      "response_channels": [
+        4,
+        11,
+        12,
+        15
+      ],
+      "reference_limited": 2,
+      "reference_count": 8
+    },
+    {
+      "case": 47,
+      "category": "gt_nonoverlap",
+      "parent": [
+        1177,
+        1179
+      ],
+      "gt_event": null,
+      "source_band": "review",
+      "context_gt_ticks": 0,
+      "core_gt_ticks": 0,
+      "raw_event_validity": "uncertain",
+      "contract_status": "uncertain",
+      "outstanding_requests": [],
+      "gt_channels": 0,
+      "gt_candidates": 0,
+      "gt_response_channels": 0,
+      "response_channels": [
+        15,
+        17
+      ],
+      "reference_limited": 2,
+      "reference_count": 8
+    }
+  ],
+  "repeated_pilot_cases": [
+    {
+      "pilot_case": 0,
+      "expanded_case": 0,
+      "identical_input": true,
+      "event_changed": false,
+      "selected_channels_changed": false
+    },
+    {
+      "pilot_case": 1,
+      "expanded_case": 1,
+      "identical_input": true,
+      "event_changed": false,
+      "selected_channels_changed": false
+    },
+    {
+      "pilot_case": 2,
+      "expanded_case": 2,
+      "identical_input": true,
+      "event_changed": false,
+      "selected_channels_changed": false
+    },
+    {
+      "pilot_case": 3,
+      "expanded_case": 24,
+      "identical_input": true,
+      "event_changed": false,
+      "selected_channels_changed": false
+    },
+    {
+      "pilot_case": 4,
+      "expanded_case": 25,
+      "identical_input": true,
+      "event_changed": false,
+      "selected_channels_changed": false
+    },
+    {
+      "pilot_case": 5,
+      "expanded_case": 26,
+      "identical_input": true,
+      "event_changed": false,
+      "selected_channels_changed": false
+    }
+  ],
+  "selection": "After a six-case pilot, the first 24 lost-high GT events and first 24 distinct GT-nonoverlap parents were fixed before expanded-run responses; six were rerun",
+  "label_use": "Retrospective case selection/evaluation only; GT not present in VLM image or prompt",
+  "limitation": "Single entity, selected cases, one VLM response per case. Not population event/channel F1, not paired calibration comparison."
+}

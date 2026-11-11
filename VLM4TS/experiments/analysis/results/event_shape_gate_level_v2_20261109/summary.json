@@ -1,0 +1,2932 @@
+{
+  "include_level": true,
+  "summaries": [
+    {
+      "machine": "machine-1-2",
+      "baseline": {
+        "predicted": 52,
+        "gt_events": 10,
+        "matched": 8,
+        "precision": 0.15384615384615385,
+        "recall": 0.8,
+        "f1": 0.25806451612903225
+      },
+      "filtered": {
+        "predicted": 33,
+        "gt_events": 10,
+        "matched": 8,
+        "precision": 0.24242424242424243,
+        "recall": 0.8,
+        "f1": 0.372093023255814
+      },
+      "candidate_count": 52,
+      "filtered_count": 33,
+      "unknown_retained": 0,
+      "audit_alarm_rate_mean": 0.03106508875739645
+    },
+    {
+      "machine": "machine-1-6",
+      "baseline": {
+        "predicted": 64,
+        "gt_events": 30,
+        "matched": 28,
+        "precision": 0.4375,
+        "recall": 0.9333333333333333,
+        "f1": 0.5957446808510638
+      },
+      "filtered": {
+        "predicted": 49,
+        "gt_events": 30,
+        "matched": 24,
+        "precision": 0.4897959183673469,
+        "recall": 0.8,
+        "f1": 0.6075949367088609
+      },
+      "candidate_count": 64,
+      "filtered_count": 49,
+      "unknown_retained": 0,
+      "audit_alarm_rate_mean": 0.025240384615384616
+    },
+    {
+      "machine": "machine-1-3",
+      "baseline": {
+        "predicted": 22,
+        "gt_events": 12,
+        "matched": 5,
+        "precision": 0.22727272727272727,
+        "recall": 0.4166666666666667,
+        "f1": 0.29411764705882354
+      },
+      "filtered": {
+        "predicted": 21,
+        "gt_events": 12,
+        "matched": 5,
+        "precision": 0.23809523809523808,
+        "recall": 0.4166666666666667,
+        "f1": 0.30303030303030304
+      },
+      "candidate_count": 22,
+      "filtered_count": 21,
+      "unknown_retained": 0,
+      "audit_alarm_rate_mean": 0.20979020979020976
+    },
+    {
+      "machine": "machine-1-4",
+      "baseline": {
+        "predicted": 19,
+        "gt_events": 12,
+        "matched": 8,
+        "precision": 0.42105263157894735,
+        "recall": 0.6666666666666666,
+        "f1": 0.5161290322580646
+      },
+      "filtered": {
+        "predicted": 18,
+        "gt_events": 12,
+        "matched": 8,
+        "precision": 0.4444444444444444,
+        "recall": 0.6666666666666666,
+        "f1": 0.5333333333333333
+      },
+      "candidate_count": 19,
+      "filtered_count": 18,
+      "unknown_retained": 0,
+      "audit_alarm_rate_mean": 0.23684210526315794
+    }
+  ],
+  "rows": [
+    {
+      "machine": "machine-1-2",
+      "core_id": "machine-1-2.e00000.c0000",
+      "start": 84,
+      "end": 98,
+      "channels": [
+        19,
+        30,
+        21
+      ],
+      "peak": 90,
+      "p": 0.037037037037037035,
+      "score": 1.1853505373001099,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.07692307692307693,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-2",
+      "core_id": "machine-1-2.e00001.c0000",
+      "start": 840,
+      "end": 854,
+      "channels": [
+        12,
+        9,
+        11
+      ],
+      "peak": 846,
+      "p": 0.18518518518518517,
+      "score": 0.2988472580909729,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-2",
+      "core_id": "machine-1-2.e00002.c0000",
+      "start": 1470,
+      "end": 1484,
+      "channels": [
+        19,
+        22,
+        21
+      ],
+      "peak": 1480,
+      "p": 0.037037037037037035,
+      "score": 2.414538860321045,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.11538461538461539,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-2",
+      "core_id": "machine-1-2.e00003.c0000",
+      "start": 1988,
+      "end": 2002,
+      "channels": [
+        17,
+        31,
+        13
+      ],
+      "peak": 1998,
+      "p": 0.07407407407407407,
+      "score": 0.26079338788986206,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-2",
+      "core_id": "machine-1-2.e00004.c0000",
+      "start": 2282,
+      "end": 2296,
+      "channels": [
+        12,
+        9,
+        11
+      ],
+      "peak": 2293,
+      "p": 0.037037037037037035,
+      "score": 1.2546422481536865,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-2",
+      "core_id": "machine-1-2.e00005.c0000",
+      "start": 2912,
+      "end": 2926,
+      "channels": [
+        19,
+        21,
+        30
+      ],
+      "peak": 2920,
+      "p": 0.037037037037037035,
+      "score": 1.3025250434875488,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.07692307692307693,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-2",
+      "core_id": "machine-1-2.e00006.c0000",
+      "start": 3062,
+      "end": 3114,
+      "channels": [
+        8,
+        12,
+        9
+      ],
+      "peak": 3090,
+      "p": 0.037037037037037035,
+      "score": 29.428939819335938,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-2",
+      "core_id": "machine-1-2.e00007.c0000",
+      "start": 3276,
+      "end": 3290,
+      "channels": [
+        14,
+        8,
+        12
+      ],
+      "peak": 3282,
+      "p": 0.037037037037037035,
+      "score": 6.5906805992126465,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-2",
+      "core_id": "machine-1-2.e00008.c0000",
+      "start": 3752,
+      "end": 3766,
+      "channels": [
+        12,
+        9,
+        11
+      ],
+      "peak": 3764,
+      "p": 0.4074074074074074,
+      "score": 0.14468953013420105,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-2",
+      "core_id": "machine-1-2.e00009.c0000",
+      "start": 4144,
+      "end": 4158,
+      "channels": [
+        14,
+        12,
+        8
+      ],
+      "peak": 4157,
+      "p": 0.037037037037037035,
+      "score": 2.4375250339508057,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-2",
+      "core_id": "machine-1-2.e00010.c0000",
+      "start": 4354,
+      "end": 4368,
+      "channels": [
+        19,
+        13,
+        21
+      ],
+      "peak": 4360,
+      "p": 0.037037037037037035,
+      "score": 1.1467056274414062,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.038461538461538464,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-2",
+      "core_id": "machine-1-2.e00011.c0000",
+      "start": 4620,
+      "end": 4690,
+      "channels": [
+        8,
+        12,
+        14
+      ],
+      "peak": 4684,
+      "p": 0.037037037037037035,
+      "score": 25.535799026489258,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-2",
+      "core_id": "machine-1-2.e00012.c0000",
+      "start": 5166,
+      "end": 5180,
+      "channels": [
+        12,
+        9,
+        11
+      ],
+      "peak": 5167,
+      "p": 0.1111111111111111,
+      "score": 0.6205284595489502,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-2",
+      "core_id": "machine-1-2.e00013.c0000",
+      "start": 5474,
+      "end": 5488,
+      "channels": [
+        17,
+        31,
+        35
+      ],
+      "peak": 5487,
+      "p": 0.037037037037037035,
+      "score": 0.3102912902832031,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.038461538461538464,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-2",
+      "core_id": "machine-1-2.e00014.c0000",
+      "start": 5796,
+      "end": 5810,
+      "channels": [
+        19,
+        9,
+        32
+      ],
+      "peak": 5800,
+      "p": 0.037037037037037035,
+      "score": 2.920731782913208,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.038461538461538464,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-2",
+      "core_id": "machine-1-2.e00015.c0000",
+      "start": 5880,
+      "end": 5978,
+      "channels": [
+        9,
+        31,
+        33
+      ],
+      "peak": 5920,
+      "p": 0.037037037037037035,
+      "score": 9.58469009399414,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-2",
+      "core_id": "machine-1-2.e00016.c0000",
+      "start": 6622,
+      "end": 6650,
+      "channels": [
+        12,
+        22,
+        9
+      ],
+      "peak": 6636,
+      "p": 0.037037037037037035,
+      "score": 2.828758955001831,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-2",
+      "core_id": "machine-1-2.e00017.c0000",
+      "start": 7210,
+      "end": 7224,
+      "channels": [
+        12,
+        11,
+        31
+      ],
+      "peak": 7221,
+      "p": 0.037037037037037035,
+      "score": 2.7666759490966797,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-2",
+      "core_id": "machine-1-2.e00018.c0000",
+      "start": 7238,
+      "end": 7252,
+      "channels": [
+        19,
+        34,
+        21
+      ],
+      "peak": 7240,
+      "p": 0.037037037037037035,
+      "score": 1.1739873886108398,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.038461538461538464,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-2",
+      "core_id": "machine-1-2.e00019.c0000",
+      "start": 7420,
+      "end": 7434,
+      "channels": [
+        18,
+        15,
+        20
+      ],
+      "peak": 7423,
+      "p": 0.037037037037037035,
+      "score": 2.037456750869751,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-2",
+      "core_id": "machine-1-2.e00020.c0000",
+      "start": 8050,
+      "end": 8064,
+      "channels": [
+        12,
+        9,
+        11
+      ],
+      "peak": 8062,
+      "p": 0.3333333333333333,
+      "score": 0.2074729949235916,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-2",
+      "core_id": "machine-1-2.e00021.c0000",
+      "start": 8694,
+      "end": 8708,
+      "channels": [
+        19,
+        21,
+        30
+      ],
+      "peak": 8701,
+      "p": 0.07407407407407407,
+      "score": 0.26233747601509094,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.07692307692307693,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-2",
+      "core_id": "machine-1-2.e00022.c0000",
+      "start": 8890,
+      "end": 8918,
+      "channels": [
+        8,
+        12,
+        14
+      ],
+      "peak": 8905,
+      "p": 0.037037037037037035,
+      "score": 47.77894973754883,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-2",
+      "core_id": "machine-1-2.e00023.c0000",
+      "start": 9506,
+      "end": 9520,
+      "channels": [
+        12,
+        9,
+        11
+      ],
+      "peak": 9516,
+      "p": 0.37037037037037035,
+      "score": 0.18040786683559418,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-2",
+      "core_id": "machine-1-2.e00024.c0000",
+      "start": 10136,
+      "end": 10150,
+      "channels": [
+        19,
+        30,
+        34
+      ],
+      "peak": 10141,
+      "p": 0.07407407407407407,
+      "score": 0.5102331042289734,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.038461538461538464,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-2",
+      "core_id": "machine-1-2.e00025.c0000",
+      "start": 10934,
+      "end": 10948,
+      "channels": [
+        12,
+        9,
+        11
+      ],
+      "peak": 10945,
+      "p": 0.4074074074074074,
+      "score": 0.13688606023788452,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-2",
+      "core_id": "machine-1-2.e00026.c0000",
+      "start": 11592,
+      "end": 11606,
+      "channels": [
+        19,
+        21,
+        30
+      ],
+      "peak": 11600,
+      "p": 0.037037037037037035,
+      "score": 1.3492348194122314,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.07692307692307693,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-2",
+      "core_id": "machine-1-2.e00027.c0000",
+      "start": 12362,
+      "end": 12376,
+      "channels": [
+        12,
+        9,
+        34
+      ],
+      "peak": 12369,
+      "p": 0.1111111111111111,
+      "score": 0.4058554172515869,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.07692307692307693,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-2",
+      "core_id": "machine-1-2.e00028.c0000",
+      "start": 13090,
+      "end": 13104,
+      "channels": [
+        19,
+        33,
+        30
+      ],
+      "peak": 13101,
+      "p": 0.07407407407407407,
+      "score": 0.4854448735713959,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.11538461538461539,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-2",
+      "core_id": "machine-1-2.e00029.c0000",
+      "start": 13370,
+      "end": 13384,
+      "channels": [
+        14,
+        8,
+        0
+      ],
+      "peak": 13373,
+      "p": 0.07407407407407407,
+      "score": 11.115625381469727,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-2",
+      "core_id": "machine-1-2.e00030.c0000",
+      "start": 13804,
+      "end": 13832,
+      "channels": [
+        12,
+        9,
+        11
+      ],
+      "peak": 13820,
+      "p": 0.3333333333333333,
+      "score": 0.2981571853160858,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-2",
+      "core_id": "machine-1-2.e00031.c0000",
+      "start": 14448,
+      "end": 14462,
+      "channels": [
+        19,
+        21,
+        30
+      ],
+      "peak": 14449,
+      "p": 0.037037037037037035,
+      "score": 1.165837287902832,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.07692307692307693,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-2",
+      "core_id": "machine-1-2.e00032.c0000",
+      "start": 15274,
+      "end": 15288,
+      "channels": [
+        12,
+        9,
+        11
+      ],
+      "peak": 15287,
+      "p": 0.14814814814814814,
+      "score": 0.5392181873321533,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-2",
+      "core_id": "machine-1-2.e00033.c0000",
+      "start": 15918,
+      "end": 15958,
+      "channels": [
+        12,
+        19,
+        29
+      ],
+      "peak": 15930,
+      "p": 0.037037037037037035,
+      "score": 7.519672393798828,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-2",
+      "core_id": "machine-1-2.e00034.c0000",
+      "start": 15960,
+      "end": 15974,
+      "channels": [
+        12,
+        19,
+        13
+      ],
+      "peak": 15960,
+      "p": 0.037037037037037035,
+      "score": 7.380831241607666,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-2",
+      "core_id": "machine-1-2.e00035.c0000",
+      "start": 16702,
+      "end": 16716,
+      "channels": [
+        12,
+        9,
+        11
+      ],
+      "peak": 16713,
+      "p": 0.14814814814814814,
+      "score": 0.38646218180656433,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-2",
+      "core_id": "machine-1-2.e00036.c0000",
+      "start": 17038,
+      "end": 17052,
+      "channels": [
+        22,
+        9,
+        35
+      ],
+      "peak": 17049,
+      "p": 0.037037037037037035,
+      "score": 2.4200353622436523,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-2",
+      "core_id": "machine-1-2.e00037.c0000",
+      "start": 17374,
+      "end": 17388,
+      "channels": [
+        19,
+        30,
+        21
+      ],
+      "peak": 17379,
+      "p": 0.037037037037037035,
+      "score": 1.1776776313781738,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.07692307692307693,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-2",
+      "core_id": "machine-1-2.e00038.c0000",
+      "start": 18144,
+      "end": 18158,
+      "channels": [
+        12,
+        9,
+        11
+      ],
+      "peak": 18145,
+      "p": 0.037037037037037035,
+      "score": 1.4048278331756592,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-2",
+      "core_id": "machine-1-2.e00039.c0000",
+      "start": 18662,
+      "end": 18704,
+      "channels": [
+        15,
+        22,
+        13
+      ],
+      "peak": 18701,
+      "p": 0.037037037037037035,
+      "score": 0.9180944561958313,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.038461538461538464,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-2",
+      "core_id": "machine-1-2.e00040.c0000",
+      "start": 18746,
+      "end": 18760,
+      "channels": [
+        19,
+        17,
+        31
+      ],
+      "peak": 18747,
+      "p": 0.037037037037037035,
+      "score": 1.139460563659668,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.07692307692307693,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-2",
+      "core_id": "machine-1-2.e00041.c0000",
+      "start": 19586,
+      "end": 19614,
+      "channels": [
+        12,
+        9,
+        11
+      ],
+      "peak": 19602,
+      "p": 0.4074074074074074,
+      "score": 0.2337556928396225,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-2",
+      "core_id": "machine-1-2.e00042.c0000",
+      "start": 20188,
+      "end": 20202,
+      "channels": [
+        22,
+        24,
+        20
+      ],
+      "peak": 20195,
+      "p": 0.037037037037037035,
+      "score": 0.9549852609634399,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.3076923076923077,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-2",
+      "core_id": "machine-1-2.e00043.c0000",
+      "start": 20230,
+      "end": 20244,
+      "channels": [
+        19,
+        12,
+        9
+      ],
+      "peak": 20236,
+      "p": 0.037037037037037035,
+      "score": 7.357869625091553,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.07692307692307693,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-2",
+      "core_id": "machine-1-2.e00044.c0000",
+      "start": 20247,
+      "end": 20272,
+      "channels": [
+        12,
+        11,
+        5
+      ],
+      "peak": 20269,
+      "p": 0.037037037037037035,
+      "score": 7.41765832901001,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-2",
+      "core_id": "machine-1-2.e00045.c0000",
+      "start": 21014,
+      "end": 21028,
+      "channels": [
+        12,
+        9,
+        11
+      ],
+      "peak": 21017,
+      "p": 0.14814814814814814,
+      "score": 0.46705421805381775,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-2",
+      "core_id": "machine-1-2.e00046.c0000",
+      "start": 21672,
+      "end": 21686,
+      "channels": [
+        19,
+        30,
+        13
+      ],
+      "peak": 21677,
+      "p": 0.037037037037037035,
+      "score": 1.2592310905456543,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.038461538461538464,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-2",
+      "core_id": "machine-1-2.e00047.c0000",
+      "start": 22260,
+      "end": 22274,
+      "channels": [
+        1,
+        2,
+        0
+      ],
+      "peak": 22266,
+      "p": 0.037037037037037035,
+      "score": 0.9199851155281067,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-2",
+      "core_id": "machine-1-2.e00048.c0000",
+      "start": 22291,
+      "end": 22310,
+      "channels": [
+        1,
+        3,
+        14
+      ],
+      "peak": 22309,
+      "p": 0.07407407407407407,
+      "score": 1.3152471780776978,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-2",
+      "core_id": "machine-1-2.e00049.c0000",
+      "start": 22316,
+      "end": 22330,
+      "channels": [
+        1,
+        2,
+        0
+      ],
+      "peak": 22325,
+      "p": 0.037037037037037035,
+      "score": 1.0871106386184692,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-2",
+      "core_id": "machine-1-2.e00050.c0000",
+      "start": 22442,
+      "end": 22456,
+      "channels": [
+        12,
+        9,
+        11
+      ],
+      "peak": 22444,
+      "p": 0.14814814814814814,
+      "score": 0.36474838852882385,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-2",
+      "core_id": "machine-1-2.e00051.c0000",
+      "start": 23100,
+      "end": 23114,
+      "channels": [
+        27,
+        21,
+        30
+      ],
+      "peak": 23106,
+      "p": 0.037037037037037035,
+      "score": 1.1379832029342651,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.11538461538461539,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-6",
+      "core_id": "machine-1-6.e00000.c0000",
+      "start": 238,
+      "end": 252,
+      "channels": [
+        9,
+        10,
+        12
+      ],
+      "peak": 249,
+      "p": 0.037037037037037035,
+      "score": 36.16981887817383,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-6",
+      "core_id": "machine-1-6.e00001.c0000",
+      "start": 644,
+      "end": 658,
+      "channels": [
+        8,
+        12,
+        14
+      ],
+      "peak": 654,
+      "p": 0.037037037037037035,
+      "score": 4.59195613861084,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-6",
+      "core_id": "machine-1-6.e00002.c0000",
+      "start": 2086,
+      "end": 2100,
+      "channels": [
+        12,
+        14,
+        8
+      ],
+      "peak": 2098,
+      "p": 0.037037037037037035,
+      "score": 2.9776182174682617,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-6",
+      "core_id": "machine-1-6.e00003.c0000",
+      "start": 3038,
+      "end": 3052,
+      "channels": [
+        25,
+        4,
+        15
+      ],
+      "peak": 3050,
+      "p": 0.037037037037037035,
+      "score": 1.98507559299469,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.2692307692307692,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-6",
+      "core_id": "machine-1-6.e00004.c0000",
+      "start": 3528,
+      "end": 3556,
+      "channels": [
+        9,
+        12,
+        8
+      ],
+      "peak": 3549,
+      "p": 0.037037037037037035,
+      "score": 29.234804153442383,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-6",
+      "core_id": "machine-1-6.e00005.c0000",
+      "start": 3766,
+      "end": 3780,
+      "channels": [
+        17,
+        10,
+        9
+      ],
+      "peak": 3773,
+      "p": 0.07407407407407407,
+      "score": 10.364075660705566,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.038461538461538464,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-6",
+      "core_id": "machine-1-6.e00006.c0000",
+      "start": 4200,
+      "end": 4214,
+      "channels": [
+        22,
+        24,
+        4
+      ],
+      "peak": 4211,
+      "p": 0.037037037037037035,
+      "score": 0.854353666305542,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.19230769230769232,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-6",
+      "core_id": "machine-1-6.e00007.c0000",
+      "start": 4634,
+      "end": 4662,
+      "channels": [
+        32,
+        33,
+        1
+      ],
+      "peak": 4648,
+      "p": 0.037037037037037035,
+      "score": 2.2757551670074463,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.07692307692307693,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-6",
+      "core_id": "machine-1-6.e00008.c0000",
+      "start": 4718,
+      "end": 4732,
+      "channels": [
+        4,
+        32,
+        10
+      ],
+      "peak": 4727,
+      "p": 0.1111111111111111,
+      "score": 2.189131736755371,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-6",
+      "core_id": "machine-1-6.e00009.c0000",
+      "start": 4746,
+      "end": 4760,
+      "channels": [
+        9,
+        10,
+        4
+      ],
+      "peak": 4747,
+      "p": 0.037037037037037035,
+      "score": 55.194366455078125,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-6",
+      "core_id": "machine-1-6.e00010.c0000",
+      "start": 4970,
+      "end": 4984,
+      "channels": [
+        9,
+        10,
+        12
+      ],
+      "peak": 4973,
+      "p": 0.037037037037037035,
+      "score": 19.260421752929688,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-6",
+      "core_id": "machine-1-6.e00011.c0000",
+      "start": 5026,
+      "end": 5040,
+      "channels": [
+        17,
+        25,
+        14
+      ],
+      "peak": 5033,
+      "p": 0.037037037037037035,
+      "score": 4.434662342071533,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.3076923076923077,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-6",
+      "core_id": "machine-1-6.e00012.c0000",
+      "start": 5166,
+      "end": 5180,
+      "channels": [
+        12,
+        10,
+        8
+      ],
+      "peak": 5169,
+      "p": 0.037037037037037035,
+      "score": 10.130158424377441,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-6",
+      "core_id": "machine-1-6.e00013.c0000",
+      "start": 5698,
+      "end": 5712,
+      "channels": [
+        9,
+        10,
+        12
+      ],
+      "peak": 5710,
+      "p": 0.037037037037037035,
+      "score": 33.42753982543945,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-6",
+      "core_id": "machine-1-6.e00014.c0000",
+      "start": 5866,
+      "end": 5894,
+      "channels": [
+        10,
+        9,
+        8
+      ],
+      "peak": 5873,
+      "p": 0.037037037037037035,
+      "score": 49.01956558227539,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-6",
+      "core_id": "machine-1-6.e00015.c0000",
+      "start": 6020,
+      "end": 6034,
+      "channels": [
+        32,
+        33,
+        4
+      ],
+      "peak": 6023,
+      "p": 0.037037037037037035,
+      "score": 3.341348886489868,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.11538461538461539,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-6",
+      "core_id": "machine-1-6.e00016.c0000",
+      "start": 6412,
+      "end": 6426,
+      "channels": [
+        9,
+        10,
+        8
+      ],
+      "peak": 6413,
+      "p": 0.037037037037037035,
+      "score": 13.605993270874023,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-6",
+      "core_id": "machine-1-6.e00017.c0000",
+      "start": 7840,
+      "end": 7868,
+      "channels": [
+        10,
+        9,
+        12
+      ],
+      "peak": 7851,
+      "p": 0.037037037037037035,
+      "score": 24.051559448242188,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-6",
+      "core_id": "machine-1-6.e00018.c0000",
+      "start": 8708,
+      "end": 8722,
+      "channels": [
+        9,
+        10,
+        0
+      ],
+      "peak": 8721,
+      "p": 0.1111111111111111,
+      "score": 12.192546844482422,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-6",
+      "core_id": "machine-1-6.e00019.c0000",
+      "start": 9100,
+      "end": 9128,
+      "channels": [
+        10,
+        9,
+        11
+      ],
+      "peak": 9114,
+      "p": 0.037037037037037035,
+      "score": 14.217015266418457,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-6",
+      "core_id": "machine-1-6.e00020.c0000",
+      "start": 9282,
+      "end": 9296,
+      "channels": [
+        9,
+        8,
+        12
+      ],
+      "peak": 9295,
+      "p": 0.037037037037037035,
+      "score": 13.08069133758545,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-6",
+      "core_id": "machine-1-6.e00021.c0000",
+      "start": 10038,
+      "end": 10052,
+      "channels": [
+        10,
+        29,
+        14
+      ],
+      "peak": 10041,
+      "p": 0.037037037037037035,
+      "score": 4.411289215087891,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-6",
+      "core_id": "machine-1-6.e00022.c0000",
+      "start": 10724,
+      "end": 10738,
+      "channels": [
+        10,
+        9,
+        12
+      ],
+      "peak": 10734,
+      "p": 0.037037037037037035,
+      "score": 13.857992172241211,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-6",
+      "core_id": "machine-1-6.e00023.c0000",
+      "start": 11466,
+      "end": 11480,
+      "channels": [
+        12,
+        10,
+        9
+      ],
+      "peak": 11469,
+      "p": 0.07407407407407407,
+      "score": 8.618826866149902,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-6",
+      "core_id": "machine-1-6.e00024.c0000",
+      "start": 12166,
+      "end": 12194,
+      "channels": [
+        9,
+        10,
+        8
+      ],
+      "peak": 12174,
+      "p": 0.037037037037037035,
+      "score": 34.78081512451172,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-6",
+      "core_id": "machine-1-6.e00025.c0000",
+      "start": 12404,
+      "end": 12418,
+      "channels": [
+        10,
+        9,
+        12
+      ],
+      "peak": 12411,
+      "p": 0.037037037037037035,
+      "score": 16.13190269470215,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-6",
+      "core_id": "machine-1-6.e00026.c0000",
+      "start": 12684,
+      "end": 12698,
+      "channels": [
+        10,
+        15,
+        14
+      ],
+      "peak": 12697,
+      "p": 0.07407407407407407,
+      "score": 2.7554986476898193,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.038461538461538464,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-6",
+      "core_id": "machine-1-6.e00027.c0000",
+      "start": 13062,
+      "end": 13076,
+      "channels": [
+        32,
+        33,
+        19
+      ],
+      "peak": 13071,
+      "p": 0.037037037037037035,
+      "score": 1.9699478149414062,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-6",
+      "core_id": "machine-1-6.e00028.c0000",
+      "start": 13608,
+      "end": 13622,
+      "channels": [
+        9,
+        10,
+        8
+      ],
+      "peak": 13616,
+      "p": 0.037037037037037035,
+      "score": 13.199787139892578,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-6",
+      "core_id": "machine-1-6.e00029.c0000",
+      "start": 14588,
+      "end": 14616,
+      "channels": [
+        36,
+        9,
+        10
+      ],
+      "peak": 14604,
+      "p": 0.1111111111111111,
+      "score": 4.524995803833008,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-6",
+      "core_id": "machine-1-6.e00030.c0000",
+      "start": 15050,
+      "end": 15064,
+      "channels": [
+        10,
+        9,
+        8
+      ],
+      "peak": 15052,
+      "p": 0.037037037037037035,
+      "score": 28.94050407409668,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-6",
+      "core_id": "machine-1-6.e00031.c0000",
+      "start": 15386,
+      "end": 15400,
+      "channels": [
+        11,
+        14,
+        12
+      ],
+      "peak": 15397,
+      "p": 0.037037037037037035,
+      "score": 3.9768013954162598,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-6",
+      "core_id": "machine-1-6.e00032.c0000",
+      "start": 15792,
+      "end": 15806,
+      "channels": [
+        9,
+        10,
+        8
+      ],
+      "peak": 15803,
+      "p": 0.037037037037037035,
+      "score": 38.950565338134766,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-6",
+      "core_id": "machine-1-6.e00033.c0000",
+      "start": 16492,
+      "end": 16506,
+      "channels": [
+        14,
+        8,
+        12
+      ],
+      "peak": 16496,
+      "p": 0.037037037037037035,
+      "score": 7.93149995803833,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-6",
+      "core_id": "machine-1-6.e00034.c0000",
+      "start": 16716,
+      "end": 16730,
+      "channels": [
+        9,
+        10,
+        8
+      ],
+      "peak": 16719,
+      "p": 0.037037037037037035,
+      "score": 15.849265098571777,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-6",
+      "core_id": "machine-1-6.e00035.c0000",
+      "start": 16968,
+      "end": 16982,
+      "channels": [
+        11,
+        14,
+        12
+      ],
+      "peak": 16972,
+      "p": 0.037037037037037035,
+      "score": 3.2439119815826416,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-6",
+      "core_id": "machine-1-6.e00036.c0000",
+      "start": 17934,
+      "end": 17948,
+      "channels": [
+        8,
+        12,
+        0
+      ],
+      "peak": 17937,
+      "p": 0.037037037037037035,
+      "score": 7.336216449737549,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-6",
+      "core_id": "machine-1-6.e00037.c0000",
+      "start": 18676,
+      "end": 18690,
+      "channels": [
+        22,
+        24,
+        31
+      ],
+      "peak": 18687,
+      "p": 0.037037037037037035,
+      "score": 1.9652312994003296,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-6",
+      "core_id": "machine-1-6.e00038.c0000",
+      "start": 19110,
+      "end": 19124,
+      "channels": [
+        10,
+        9,
+        1
+      ],
+      "peak": 19118,
+      "p": 0.037037037037037035,
+      "score": 19.346223831176758,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-6",
+      "core_id": "machine-1-6.e00039.c0000",
+      "start": 19362,
+      "end": 19376,
+      "channels": [
+        10,
+        9,
+        14
+      ],
+      "peak": 19371,
+      "p": 0.037037037037037035,
+      "score": 17.794124603271484,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-6",
+      "core_id": "machine-1-6.e00040.c0000",
+      "start": 20342,
+      "end": 20356,
+      "channels": [
+        9,
+        10,
+        12
+      ],
+      "peak": 20346,
+      "p": 0.07407407407407407,
+      "score": 12.703768730163574,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-6",
+      "core_id": "machine-1-6.e00041.c0000",
+      "start": 20622,
+      "end": 20636,
+      "channels": [
+        14,
+        11,
+        1
+      ],
+      "peak": 20632,
+      "p": 0.037037037037037035,
+      "score": 2.3135547637939453,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.07692307692307693,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-6",
+      "core_id": "machine-1-6.e00042.c0000",
+      "start": 20804,
+      "end": 20832,
+      "channels": [
+        10,
+        9,
+        8
+      ],
+      "peak": 20828,
+      "p": 0.037037037037037035,
+      "score": 27.01688575744629,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-6",
+      "core_id": "machine-1-6.e00043.c0000",
+      "start": 20895,
+      "end": 20936,
+      "channels": [
+        15,
+        9,
+        5
+      ],
+      "peak": 20907,
+      "p": 0.037037037037037035,
+      "score": 23.416545867919922,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-6",
+      "core_id": "machine-1-6.e00044.c0000",
+      "start": 20944,
+      "end": 20945,
+      "channels": [
+        14,
+        11,
+        12
+      ],
+      "peak": 20944,
+      "p": 0.037037037037037035,
+      "score": 4.525169372558594,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-6",
+      "core_id": "machine-1-6.e00045.c0000",
+      "start": 20946,
+      "end": 20964,
+      "channels": [
+        14,
+        11,
+        12
+      ],
+      "peak": 20947,
+      "p": 0.037037037037037035,
+      "score": 4.511523246765137,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-6",
+      "core_id": "machine-1-6.e00046.c0000",
+      "start": 20983,
+      "end": 20985,
+      "channels": [
+        10,
+        12,
+        8
+      ],
+      "peak": 20984,
+      "p": 0.037037037037037035,
+      "score": 8.487956047058105,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-6",
+      "core_id": "machine-1-6.e00047.c0000",
+      "start": 20986,
+      "end": 20990,
+      "channels": [
+        25,
+        0,
+        13
+      ],
+      "peak": 20989,
+      "p": 0.037037037037037035,
+      "score": 3.9478847980499268,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-6",
+      "core_id": "machine-1-6.e00048.c0000",
+      "start": 20991,
+      "end": 21001,
+      "channels": [
+        9,
+        10,
+        5
+      ],
+      "peak": 20996,
+      "p": 0.07407407407407407,
+      "score": 0.7470371127128601,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-6",
+      "core_id": "machine-1-6.e00049.c0000",
+      "start": 21014,
+      "end": 21028,
+      "channels": [
+        9,
+        10,
+        24
+      ],
+      "peak": 21015,
+      "p": 0.07407407407407407,
+      "score": 8.734360694885254,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-6",
+      "core_id": "machine-1-6.e00050.c0000",
+      "start": 21030,
+      "end": 21033,
+      "channels": [
+        5,
+        10,
+        15
+      ],
+      "peak": 21032,
+      "p": 0.037037037037037035,
+      "score": 19.578105926513672,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.038461538461538464,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-6",
+      "core_id": "machine-1-6.e00051.c0000",
+      "start": 21034,
+      "end": 21039,
+      "channels": [
+        5,
+        10,
+        15
+      ],
+      "peak": 21038,
+      "p": 0.037037037037037035,
+      "score": 20.655662536621094,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.038461538461538464,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-6",
+      "core_id": "machine-1-6.e00052.c0000",
+      "start": 21528,
+      "end": 21533,
+      "channels": [
+        9,
+        10,
+        12
+      ],
+      "peak": 21531,
+      "p": 0.1111111111111111,
+      "score": 4.863750457763672,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-6",
+      "core_id": "machine-1-6.e00053.c0000",
+      "start": 21546,
+      "end": 21581,
+      "channels": [
+        9,
+        10,
+        11
+      ],
+      "peak": 21547,
+      "p": 0.07407407407407407,
+      "score": 12.892168045043945,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-6",
+      "core_id": "machine-1-6.e00054.c0000",
+      "start": 21595,
+      "end": 21602,
+      "channels": [
+        14,
+        11,
+        15
+      ],
+      "peak": 21599,
+      "p": 0.037037037037037035,
+      "score": 15.412117958068848,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.3076923076923077,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-6",
+      "core_id": "machine-1-6.e00055.c0000",
+      "start": 21603,
+      "end": 21608,
+      "channels": [
+        14,
+        12,
+        11
+      ],
+      "peak": 21606,
+      "p": 0.037037037037037035,
+      "score": 2.859403133392334,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-6",
+      "core_id": "machine-1-6.e00056.c0000",
+      "start": 21609,
+      "end": 21612,
+      "channels": [
+        14,
+        12,
+        11
+      ],
+      "peak": 21611,
+      "p": 0.037037037037037035,
+      "score": 3.3571901321411133,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-6",
+      "core_id": "machine-1-6.e00057.c0000",
+      "start": 21616,
+      "end": 21618,
+      "channels": [
+        5,
+        11,
+        1
+      ],
+      "peak": 21617,
+      "p": 0.037037037037037035,
+      "score": 0.9872288703918457,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-6",
+      "core_id": "machine-1-6.e00058.c0000",
+      "start": 21621,
+      "end": 21720,
+      "channels": [
+        1,
+        4,
+        10
+      ],
+      "peak": 21713,
+      "p": 0.2222222222222222,
+      "score": 2.043890953063965,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-6",
+      "core_id": "machine-1-6.e00059.c0000",
+      "start": 21742,
+      "end": 21756,
+      "channels": [
+        0,
+        15,
+        2
+      ],
+      "peak": 21746,
+      "p": 0.037037037037037035,
+      "score": 16.568565368652344,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.11538461538461539,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-6",
+      "core_id": "machine-1-6.e00060.c0000",
+      "start": 22246,
+      "end": 22260,
+      "channels": [
+        14,
+        12,
+        0
+      ],
+      "peak": 22258,
+      "p": 0.07407407407407407,
+      "score": 1.0769283771514893,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-6",
+      "core_id": "machine-1-6.e00061.c0000",
+      "start": 22316,
+      "end": 22330,
+      "channels": [
+        11,
+        12,
+        6
+      ],
+      "peak": 22326,
+      "p": 0.037037037037037035,
+      "score": 1.898329496383667,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-6",
+      "core_id": "machine-1-6.e00062.c0000",
+      "start": 22414,
+      "end": 22428,
+      "channels": [
+        10,
+        9,
+        12
+      ],
+      "peak": 22417,
+      "p": 0.07407407407407407,
+      "score": 11.298506736755371,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-6",
+      "core_id": "machine-1-6.e00063.c0000",
+      "start": 23268,
+      "end": 23282,
+      "channels": [
+        11,
+        12,
+        9
+      ],
+      "peak": 23271,
+      "p": 0.07407407407407407,
+      "score": 5.7259602546691895,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-3",
+      "core_id": "machine-1-3.e00000.c0000",
+      "start": 252,
+      "end": 266,
+      "channels": [
+        6,
+        11,
+        15
+      ],
+      "peak": 262,
+      "p": 0.037037037037037035,
+      "score": 0.734306812286377,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.23076923076923078,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-3",
+      "core_id": "machine-1-3.e00001.c0000",
+      "start": 2758,
+      "end": 2772,
+      "channels": [
+        4,
+        29,
+        5
+      ],
+      "peak": 2771,
+      "p": 0.037037037037037035,
+      "score": 1.476915955543518,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.46153846153846156,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-3",
+      "core_id": "machine-1-3.e00002.c0000",
+      "start": 3976,
+      "end": 3990,
+      "channels": [
+        6,
+        35,
+        34
+      ],
+      "peak": 3987,
+      "p": 0.037037037037037035,
+      "score": 0.31121256947517395,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-3",
+      "core_id": "machine-1-3.e00003.c0000",
+      "start": 4564,
+      "end": 4592,
+      "channels": [
+        16,
+        3,
+        2
+      ],
+      "peak": 4577,
+      "p": 0.037037037037037035,
+      "score": 0.2979067862033844,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.038461538461538464,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-3",
+      "core_id": "machine-1-3.e00004.c0000",
+      "start": 4900,
+      "end": 4914,
+      "channels": [
+        6,
+        10,
+        5
+      ],
+      "peak": 4912,
+      "p": 0.037037037037037035,
+      "score": 1.3615782260894775,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.46153846153846156,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-3",
+      "core_id": "machine-1-3.e00005.c0000",
+      "start": 5964,
+      "end": 5978,
+      "channels": [
+        6,
+        2,
+        5
+      ],
+      "peak": 5972,
+      "p": 0.037037037037037035,
+      "score": 1.122935175895691,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.5,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-3",
+      "core_id": "machine-1-3.e00006.c0000",
+      "start": 6244,
+      "end": 6258,
+      "channels": [
+        6,
+        5
+      ],
+      "peak": 6256,
+      "p": 0.037037037037037035,
+      "score": 1.2853457927703857,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.5,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-3",
+      "core_id": "machine-1-3.e00007.c0000",
+      "start": 7154,
+      "end": 7168,
+      "channels": [
+        14,
+        11,
+        8
+      ],
+      "peak": 7161,
+      "p": 0.07407407407407407,
+      "score": 0.9530929923057556,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.038461538461538464,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-3",
+      "core_id": "machine-1-3.e00008.c0000",
+      "start": 7616,
+      "end": 7630,
+      "channels": [
+        6,
+        31,
+        25
+      ],
+      "peak": 7619,
+      "p": 0.037037037037037035,
+      "score": 0.4553578197956085,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.8461538461538461,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-3",
+      "core_id": "machine-1-3.e00009.c0000",
+      "start": 8372,
+      "end": 8400,
+      "channels": [
+        19,
+        20,
+        30
+      ],
+      "peak": 8389,
+      "p": 0.037037037037037035,
+      "score": 0.23087430000305176,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-3",
+      "core_id": "machine-1-3.e00010.c0000",
+      "start": 8918,
+      "end": 8932,
+      "channels": [
+        6,
+        19,
+        21
+      ],
+      "peak": 8928,
+      "p": 0.037037037037037035,
+      "score": 0.4120085537433624,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-3",
+      "core_id": "machine-1-3.e00011.c0000",
+      "start": 13160,
+      "end": 13174,
+      "channels": [
+        14,
+        11,
+        15
+      ],
+      "peak": 13171,
+      "p": 0.037037037037037035,
+      "score": 5.757992744445801,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.07692307692307693,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-3",
+      "core_id": "machine-1-3.e00012.c0000",
+      "start": 13188,
+      "end": 13202,
+      "channels": [
+        6,
+        29
+      ],
+      "peak": 13199,
+      "p": 0.037037037037037035,
+      "score": 0.7516743540763855,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-3",
+      "core_id": "machine-1-3.e00013.c0000",
+      "start": 13356,
+      "end": 13370,
+      "channels": [
+        19,
+        0,
+        21
+      ],
+      "peak": 13368,
+      "p": 0.037037037037037035,
+      "score": 0.601022481918335,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-3",
+      "core_id": "machine-1-3.e00014.c0000",
+      "start": 13860,
+      "end": 13874,
+      "channels": [
+        14,
+        11,
+        12
+      ],
+      "peak": 13871,
+      "p": 0.037037037037037035,
+      "score": 5.02438497543335,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.038461538461538464,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-3",
+      "core_id": "machine-1-3.e00015.c0000",
+      "start": 14546,
+      "end": 14560,
+      "channels": [
+        6,
+        29
+      ],
+      "peak": 14546,
+      "p": 0.037037037037037035,
+      "score": 0.7459827065467834,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-3",
+      "core_id": "machine-1-3.e00016.c0000",
+      "start": 17643,
+      "end": 17706,
+      "channels": [
+        33,
+        32,
+        29
+      ],
+      "peak": 17684,
+      "p": 0.037037037037037035,
+      "score": 13.39412784576416,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-3",
+      "core_id": "machine-1-3.e00017.c0000",
+      "start": 18452,
+      "end": 18480,
+      "channels": [
+        19,
+        0,
+        18
+      ],
+      "peak": 18469,
+      "p": 0.037037037037037035,
+      "score": 0.7882927060127258,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.038461538461538464,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-3",
+      "core_id": "machine-1-3.e00018.c0000",
+      "start": 19012,
+      "end": 19026,
+      "channels": [
+        6,
+        13,
+        22
+      ],
+      "peak": 19019,
+      "p": 0.037037037037037035,
+      "score": 0.3933310806751251,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.2692307692307692,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-3",
+      "core_id": "machine-1-3.e00019.c0000",
+      "start": 21462,
+      "end": 21476,
+      "channels": [
+        6,
+        5,
+        32
+      ],
+      "peak": 21462,
+      "p": 0.037037037037037035,
+      "score": 0.7310558557510376,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.46153846153846156,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-3",
+      "core_id": "machine-1-3.e00020.c0000",
+      "start": 22945,
+      "end": 23030,
+      "channels": [
+        10,
+        12,
+        1
+      ],
+      "peak": 23009,
+      "p": 0.037037037037037035,
+      "score": 965.0015258789062,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.46153846153846156,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-3",
+      "core_id": "machine-1-3.e00021.c0000",
+      "start": 23212,
+      "end": 23226,
+      "channels": [
+        16,
+        9,
+        11
+      ],
+      "peak": 23214,
+      "p": 0.037037037037037035,
+      "score": 4.906235694885254,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.19230769230769232,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-4",
+      "core_id": "machine-1-4.e00000.c0000",
+      "start": 378,
+      "end": 406,
+      "channels": [
+        14,
+        11,
+        12
+      ],
+      "peak": 403,
+      "p": 0.037037037037037035,
+      "score": 3.1540796756744385,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.15384615384615385,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-4",
+      "core_id": "machine-1-4.e00001.c0000",
+      "start": 868,
+      "end": 882,
+      "channels": [
+        10,
+        5,
+        14
+      ],
+      "peak": 868,
+      "p": 0.037037037037037035,
+      "score": 59.50808334350586,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.6153846153846154,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-4",
+      "core_id": "machine-1-4.e00002.c0000",
+      "start": 3080,
+      "end": 3094,
+      "channels": [
+        16,
+        11,
+        35
+      ],
+      "peak": 3085,
+      "p": 0.037037037037037035,
+      "score": 0.40254873037338257,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.19230769230769232,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-4",
+      "core_id": "machine-1-4.e00003.c0000",
+      "start": 5544,
+      "end": 5558,
+      "channels": [
+        19,
+        20,
+        27
+      ],
+      "peak": 5549,
+      "p": 0.037037037037037035,
+      "score": 0.3354712426662445,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.07692307692307693,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-4",
+      "core_id": "machine-1-4.e00004.c0000",
+      "start": 5614,
+      "end": 5642,
+      "channels": [
+        14,
+        11,
+        15
+      ],
+      "peak": 5627,
+      "p": 0.037037037037037035,
+      "score": 6.398289680480957,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.5,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-4",
+      "core_id": "machine-1-4.e00005.c0000",
+      "start": 7798,
+      "end": 7812,
+      "channels": [
+        11,
+        14,
+        21
+      ],
+      "peak": 7804,
+      "p": 0.037037037037037035,
+      "score": 0.643118143081665,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.15384615384615385,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-4",
+      "core_id": "machine-1-4.e00006.c0000",
+      "start": 9380,
+      "end": 9394,
+      "channels": [
+        16,
+        0,
+        33
+      ],
+      "peak": 9385,
+      "p": 0.037037037037037035,
+      "score": 0.35262036323547363,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-4",
+      "core_id": "machine-1-4.e00007.c0000",
+      "start": 10430,
+      "end": 10444,
+      "channels": [
+        14,
+        11,
+        32
+      ],
+      "peak": 10435,
+      "p": 0.037037037037037035,
+      "score": 0.47639235854148865,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.4230769230769231,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-4",
+      "core_id": "machine-1-4.e00008.c0000",
+      "start": 13356,
+      "end": 13384,
+      "channels": [
+        19,
+        18,
+        20
+      ],
+      "peak": 13372,
+      "p": 0.037037037037037035,
+      "score": 0.5705866813659668,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-4",
+      "core_id": "machine-1-4.e00009.c0000",
+      "start": 16240,
+      "end": 16268,
+      "channels": [
+        19,
+        21,
+        1
+      ],
+      "peak": 16257,
+      "p": 0.037037037037037035,
+      "score": 0.7591525316238403,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-4",
+      "core_id": "machine-1-4.e00010.c0000",
+      "start": 17654,
+      "end": 17698,
+      "channels": [
+        33,
+        32,
+        14
+      ],
+      "peak": 17688,
+      "p": 0.037037037037037035,
+      "score": 12.013060569763184,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.19230769230769232,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-4",
+      "core_id": "machine-1-4.e00011.c0000",
+      "start": 17724,
+      "end": 17738,
+      "channels": [
+        33,
+        32,
+        29
+      ],
+      "peak": 17736,
+      "p": 0.037037037037037035,
+      "score": 1.71364426612854,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.07692307692307693,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-4",
+      "core_id": "machine-1-4.e00012.c0000",
+      "start": 18452,
+      "end": 18480,
+      "channels": [
+        19,
+        18,
+        21
+      ],
+      "peak": 18473,
+      "p": 0.037037037037037035,
+      "score": 0.4824932813644409,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.0,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-4",
+      "core_id": "machine-1-4.e00013.c0000",
+      "start": 20034,
+      "end": 20048,
+      "channels": [
+        33,
+        23,
+        6
+      ],
+      "peak": 20042,
+      "p": 0.037037037037037035,
+      "score": 1.1070523262023926,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.038461538461538464,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-4",
+      "core_id": "machine-1-4.e00014.c0000",
+      "start": 20090,
+      "end": 20104,
+      "channels": [
+        14,
+        11,
+        8
+      ],
+      "peak": 20099,
+      "p": 0.5925925925925926,
+      "score": 0.1667378544807434,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.23076923076923078,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-4",
+      "core_id": "machine-1-4.e00015.c0000",
+      "start": 20622,
+      "end": 20636,
+      "channels": [
+        14,
+        11,
+        15
+      ],
+      "peak": 20625,
+      "p": 0.037037037037037035,
+      "score": 0.44611701369285583,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.46153846153846156,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-4",
+      "core_id": "machine-1-4.e00016.c0000",
+      "start": 22960,
+      "end": 23124,
+      "channels": [
+        10,
+        17,
+        12
+      ],
+      "peak": 23013,
+      "p": 0.037037037037037035,
+      "score": 1473.02734375,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.23076923076923078,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-4",
+      "core_id": "machine-1-4.e00016.c0001",
+      "start": 23124,
+      "end": 23211,
+      "channels": [
+        10,
+        17,
+        12
+      ],
+      "peak": 23135,
+      "p": 0.037037037037037035,
+      "score": 3.5717012882232666,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.6153846153846154,
+      "reason": "scored"
+    },
+    {
+      "machine": "machine-1-4",
+      "core_id": "machine-1-4.e00017.c0000",
+      "start": 23212,
+      "end": 23226,
+      "channels": [
+        16,
+        10,
+        9
+      ],
+      "peak": 23218,
+      "p": 0.037037037037037035,
+      "score": 70.47149658203125,
+      "cal_n": 26,
+      "audit_n": 26,
+      "audit_alarm_rate": 0.5384615384615384,
+      "reason": "scored"
+    }
+  ],
+  "limits": [
+    "Experimental offline full-focus gate; level term added after examining a GT-linked development failure",
+    "No GT in fitting/scoring; GT used post hoc only",
+    "Random block-selected train queries do not reproduce DINO selection",
+    "Historical saved DINO Stage1 uses test percentile and provenance may be incomplete",
+    "Core-level candidates and one-to-one event matching; overlapping cores can fragment events",
+    "Previously inspected entities; not external independent datasets",
+    "Small dependent normal audit and no calibration guarantee",
+    "Threshold .05 fixed in advance; no automatic deployment"
+  ]
+}

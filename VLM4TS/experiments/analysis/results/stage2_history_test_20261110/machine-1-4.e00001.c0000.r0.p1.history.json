@@ -1,0 +1,18 @@
+{
+  "fingerprint": "30ce76593f8e69d6bc3cf01aa86ddd5c8aefe675fae11e5be25ee8f1d9432823",
+  "prompt": "You review one candidate interval in multichannel machine telemetry (entity machine-1-4).\nThe candidate is ticks [105,119) of the current 224-tick window (end excluded). A detector flagged it because of a sharp change.\nMachines also make sharp changes routinely in normal operation, so a visible spike by itself is not an anomaly.\nPicture: each row = one channel. Left: the 2000 ticks before the current window followed by the window itself; the candidate is shaded orange at the right end. Right: zoom on the candidate (orange) with 40 ticks either side. Use the left panel to see what this channel routinely does.\nDecide the event validity of the candidate:\n- \"anomalous\": what happens in the candidate is not something these channels do routinely: a new size, a new shape, a new combination of channels, or an abnormal state that starts or continues here. The candidate may be a small part of a longer abnormal episode; if so it is anomalous.\n- \"normal_repeat\": the same kind of change recurs in these channels outside the candidate.\n- \"uncertain\": only when the plots really do not let you tell. If the evidence leans one way, commit.\nDetailed channels: [10, 5, 14, 4, 29].\nHistory count (channel: n): {\"10\":0,\"5\":519,\"14\":356,\"4\":2000,\"29\":2000}. n = how many one-tick changes at least as large as the largest change inside the candidate occurred in that channel during the 2000 ticks before it. n = 0 means no change this large in the recent history.\nReturn ONLY JSON:\n{\"event_validity\":\"anomalous\"|\"normal_repeat\"|\"uncertain\",\"anomalous_channels\":[subset of [10, 5, 14, 4, 29], empty unless anomalous or uncertain],\"channel_ranking\":[ordered subset of [10, 5, 14, 4, 29] that includes every anomalous channel],\"confidence\":\"low\"|\"medium\"|\"high\",\"additional_channels_to_review\":[]}",
+  "raw": "```json\n{\n  \"event_validity\": \"anomalous\",\n  \"anomalous_channels\": [10, 29],\n  \"channel_ranking\": [10, 29],\n  \"confidence\": \"high\",\n  \"additional_channels_to_review\": []\n}\n```",
+  "parsed": {
+    "event_validity": "anomalous",
+    "anomalous_channels": [
+      10,
+      29
+    ],
+    "channel_ranking": [
+      10,
+      29
+    ],
+    "confidence": "high",
+    "additional_channels_to_review": []
+  }
+}

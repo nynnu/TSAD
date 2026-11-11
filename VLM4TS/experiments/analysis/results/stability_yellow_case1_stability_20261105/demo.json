@@ -1,0 +1,99 @@
+{
+  "case": 1,
+  "image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\analysis\\results\\stability_yellow_case1_stability_20261105\\images\\case_01.png",
+  "target_scope": "orange per-channel zooms, not source parent",
+  "event_boundary_evaluation": false,
+  "reference_quality": [
+    {
+      "channel": 6,
+      "status": "context_supported",
+      "context_support_p": 1.0,
+      "validation_outside_fraction": 0.9979166666666667,
+      "validation_focus_rmse_q90": 0.43684821009622593,
+      "support_audit_warning": false,
+      "support_audit_failure_fraction": 0.0625
+    },
+    {
+      "channel": 8,
+      "status": "context_supported",
+      "context_support_p": 0.7692307692307693,
+      "validation_outside_fraction": 0.37786458333333334,
+      "validation_focus_rmse_q90": 1.1507664784418676,
+      "support_audit_warning": false,
+      "support_audit_failure_fraction": 0.03125
+    },
+    {
+      "channel": 0,
+      "status": "context_supported",
+      "context_support_p": 0.8,
+      "validation_outside_fraction": 0.23828124999999997,
+      "validation_focus_rmse_q90": 0.19998410950081175,
+      "support_audit_warning": false,
+      "support_audit_failure_fraction": 0.03125
+    },
+    {
+      "channel": 10,
+      "status": "context_supported",
+      "context_support_p": 0.5692307692307692,
+      "validation_outside_fraction": 0.11953125,
+      "validation_focus_rmse_q90": 7.2483403541478495,
+      "support_audit_warning": false,
+      "support_audit_failure_fraction": 0.0625
+    },
+    {
+      "channel": 14,
+      "status": "context_supported",
+      "context_support_p": 0.15384615384615385,
+      "validation_outside_fraction": 0.36223958333333334,
+      "validation_focus_rmse_q90": 0.25943348903965857,
+      "support_audit_warning": false,
+      "support_audit_failure_fraction": 0.0625
+    },
+    {
+      "channel": 12,
+      "status": "context_supported",
+      "context_support_p": 0.9846153846153847,
+      "validation_outside_fraction": 0.16927083333333334,
+      "validation_focus_rmse_q90": 1.0783460039564154,
+      "support_audit_warning": false,
+      "support_audit_failure_fraction": 0.0625
+    },
+    {
+      "channel": 9,
+      "status": "context_supported",
+      "context_support_p": 0.8153846153846154,
+      "validation_outside_fraction": 0.17890625,
+      "validation_focus_rmse_q90": 4.555520619387248,
+      "support_audit_warning": false,
+      "support_audit_failure_fraction": 0.0625
+    },
+    {
+      "channel": 11,
+      "status": "context_supported",
+      "context_support_p": 0.27692307692307694,
+      "validation_outside_fraction": 0.3544270833333333,
+      "validation_focus_rmse_q90": 0.23441896351529348,
+      "support_audit_warning": false,
+      "support_audit_failure_fraction": 0.09375
+    }
+  ],
+  "response": {
+    "event_validity": "uncertain",
+    "anomalous_channels": [
+      10,
+      9
+    ],
+    "channel_ranking": [
+      10,
+      9,
+      12,
+      8,
+      0,
+      11,
+      14,
+      6
+    ],
+    "confidence": "medium"
+  },
+  "error": null
+}

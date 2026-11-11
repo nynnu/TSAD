@@ -1,0 +1,104 @@
+{
+  "rows": [
+    {
+      "core_id": "machine-1-2.e00001.c0000",
+      "channels": [
+        12,
+        9,
+        11
+      ],
+      "joint_train_tile_start": 1398,
+      "joint_train_focus_starts": [
+        1480,
+        1480,
+        1480
+      ],
+      "independent_train_reference_starts": {
+        "12": [
+          147,
+          4379,
+          1480,
+          2946,
+          8697,
+          10107,
+          11571,
+          779
+        ],
+        "9": [
+          1480,
+          2946,
+          10107,
+          11571,
+          8697,
+          147,
+          4379,
+          6400
+        ],
+        "11": [
+          11571,
+          10107,
+          4379,
+          2946,
+          8697,
+          1480,
+          147,
+          7254
+        ]
+      },
+      "matching": "entire observed focus, first 3 Stage1 channels, common training tile"
+    },
+    {
+      "core_id": "machine-1-2.e00048.c0000",
+      "channels": [
+        1,
+        3,
+        14
+      ],
+      "joint_train_tile_start": 4124,
+      "joint_train_focus_starts": [
+        4204,
+        4204,
+        4204
+      ],
+      "independent_train_reference_starts": {
+        "1": [
+          4203,
+          9116,
+          9961,
+          1318,
+          7670,
+          11395,
+          7058,
+          2760
+        ],
+        "3": [
+          4209,
+          9960,
+          9120,
+          7670,
+          1321,
+          11402,
+          7075,
+          2759
+        ],
+        "14": [
+          6977,
+          1776,
+          8997,
+          4204,
+          9114,
+          10777,
+          7669,
+          6575
+        ]
+      },
+      "matching": "entire observed focus, first 3 Stage1 channels, common training tile"
+    }
+  ],
+  "limits": [
+    "GT-informed two cases, not representative",
+    "full focus used; offline only",
+    "joint reference from train assumed normal",
+    "not calibrated and never used for detection"
+  ]
+}

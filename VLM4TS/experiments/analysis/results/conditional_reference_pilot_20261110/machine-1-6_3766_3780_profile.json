@@ -1,0 +1,357 @@
+{
+  "n": 32,
+  "train_anchors": [
+    10263,
+    10173,
+    11712,
+    10087,
+    2736,
+    4327,
+    2871,
+    4180,
+    11618,
+    4649,
+    8638,
+    3231,
+    8788,
+    1766,
+    6068,
+    4977,
+    11530,
+    5063,
+    2646,
+    6170,
+    10372,
+    4738,
+    1420,
+    1852,
+    7119,
+    5149,
+    4026,
+    2482,
+    5253,
+    5723,
+    3486,
+    7543
+  ],
+  "context_rmse_range": [
+    0.6440866422888406,
+    0.8518591396209152
+  ],
+  "channel_summary": [
+    {
+      "channel": 17,
+      "amplitude": 26.999796001631985,
+      "historical_amplitude_q50_q90": [
+        0.0,
+        3.9999660002719977
+      ],
+      "historical_at_least_this_large": 0,
+      "width_ticks": 1,
+      "peak_tick": 7,
+      "historical_width_q50_q90": [
+        0.0,
+        1.0
+      ],
+      "direction": 1,
+      "recovery_offset": 0.0,
+      "historical_recovery_q90": 0.0
+    },
+    {
+      "channel": 10,
+      "amplitude": 26.23396606269773,
+      "historical_amplitude_q50_q90": [
+        0.17853034224906528,
+        29.610396893874096
+      ],
+      "historical_at_least_this_large": 4,
+      "width_ticks": 1,
+      "peak_tick": 6,
+      "historical_width_q50_q90": [
+        1.0,
+        4.800000000000004
+      ],
+      "direction": 1,
+      "recovery_offset": 0.0,
+      "historical_recovery_q90": 0.005104975553638194
+    },
+    {
+      "channel": 9,
+      "amplitude": 4.363525104624436,
+      "historical_amplitude_q50_q90": [
+        0.25137106728445935,
+        5.7843846071633065
+      ],
+      "historical_at_least_this_large": 4,
+      "width_ticks": 1,
+      "peak_tick": 6,
+      "historical_width_q50_q90": [
+        1.0,
+        3.0
+      ],
+      "direction": 1,
+      "recovery_offset": 0.0012573792444408136,
+      "historical_recovery_q90": 0.004966648015541215
+    },
+    {
+      "channel": 11,
+      "amplitude": 0.9320369358071533,
+      "historical_amplitude_q50_q90": [
+        0.32038811537348466,
+        1.178641328231347
+      ],
+      "historical_at_least_this_large": 5,
+      "width_ticks": 2,
+      "peak_tick": 6,
+      "historical_width_q50_q90": [
+        4.5,
+        7.900000000000002
+      ],
+      "direction": 1,
+      "recovery_offset": 0.02912473069873632,
+      "historical_recovery_q90": 0.16262366421213978
+    },
+    {
+      "channel": 12,
+      "amplitude": 1.1666666666666667,
+      "historical_amplitude_q50_q90": [
+        0.3333333333333333,
+        1.6666666666666667
+      ],
+      "historical_at_least_this_large": 6,
+      "width_ticks": 1,
+      "peak_tick": 6,
+      "historical_width_q50_q90": [
+        6.0,
+        10.900000000000002
+      ],
+      "direction": 1,
+      "recovery_offset": 0.0,
+      "historical_recovery_q90": 0.16666666666666669
+    },
+    {
+      "channel": 29,
+      "amplitude": 0.2852237039184423,
+      "historical_amplitude_q50_q90": [
+        0.14862600860028025,
+        0.4859105184326233
+      ],
+      "historical_at_least_this_large": 9,
+      "width_ticks": 6,
+      "peak_tick": 9,
+      "historical_width_q50_q90": [
+        6.5,
+        10.900000000000002
+      ],
+      "direction": 1,
+      "recovery_offset": 0.2164939363192733,
+      "historical_recovery_q90": 0.3658088128714306
+    },
+    {
+      "channel": 24,
+      "amplitude": 0.15274969317982584,
+      "historical_amplitude_q50_q90": [
+        0.22046928876161534,
+        0.36955291917479977
+      ],
+      "historical_at_least_this_large": 27,
+      "width_ticks": 7,
+      "peak_tick": 9,
+      "historical_width_q50_q90": [
+        5.5,
+        8.0
+      ],
+      "direction": 1,
+      "recovery_offset": 0.11201566243936649,
+      "historical_recovery_q90": 0.24592718134533348
+    },
+    {
+      "channel": 25,
+      "amplitude": 0.007527776621863769,
+      "historical_amplitude_q50_q90": [
+        0.0967760392825934,
+        0.42946194498772433
+      ],
+      "historical_at_least_this_large": 32,
+      "width_ticks": 5,
+      "peak_tick": 7,
+      "historical_width_q50_q90": [
+        6.0,
+        12.0
+      ],
+      "direction": 1,
+      "recovery_offset": 0.0010736132495527961,
+      "historical_recovery_q90": 0.19494694353127215
+    }
+  ],
+  "pair_summary": [
+    {
+      "channels": [
+        17,
+        10
+      ],
+      "observed_lag": -1,
+      "train_count_same_direction_amplitude_and_lag": 0
+    },
+    {
+      "channels": [
+        17,
+        9
+      ],
+      "observed_lag": -1,
+      "train_count_same_direction_amplitude_and_lag": 0
+    },
+    {
+      "channels": [
+        17,
+        11
+      ],
+      "observed_lag": -1,
+      "train_count_same_direction_amplitude_and_lag": 0
+    },
+    {
+      "channels": [
+        17,
+        12
+      ],
+      "observed_lag": -1,
+      "train_count_same_direction_amplitude_and_lag": 0
+    },
+    {
+      "channels": [
+        17,
+        29
+      ],
+      "observed_lag": 2,
+      "train_count_same_direction_amplitude_and_lag": 0
+    },
+    {
+      "channels": [
+        17,
+        24
+      ],
+      "observed_lag": 2,
+      "train_count_same_direction_amplitude_and_lag": 0
+    },
+    {
+      "channels": [
+        10,
+        9
+      ],
+      "observed_lag": 0,
+      "train_count_same_direction_amplitude_and_lag": 4
+    },
+    {
+      "channels": [
+        10,
+        11
+      ],
+      "observed_lag": 0,
+      "train_count_same_direction_amplitude_and_lag": 2
+    },
+    {
+      "channels": [
+        10,
+        12
+      ],
+      "observed_lag": 0,
+      "train_count_same_direction_amplitude_and_lag": 4
+    },
+    {
+      "channels": [
+        10,
+        29
+      ],
+      "observed_lag": 3,
+      "train_count_same_direction_amplitude_and_lag": 1
+    },
+    {
+      "channels": [
+        10,
+        24
+      ],
+      "observed_lag": 3,
+      "train_count_same_direction_amplitude_and_lag": 0
+    },
+    {
+      "channels": [
+        9,
+        11
+      ],
+      "observed_lag": 0,
+      "train_count_same_direction_amplitude_and_lag": 2
+    },
+    {
+      "channels": [
+        9,
+        12
+      ],
+      "observed_lag": 0,
+      "train_count_same_direction_amplitude_and_lag": 4
+    },
+    {
+      "channels": [
+        9,
+        29
+      ],
+      "observed_lag": 3,
+      "train_count_same_direction_amplitude_and_lag": 1
+    },
+    {
+      "channels": [
+        9,
+        24
+      ],
+      "observed_lag": 3,
+      "train_count_same_direction_amplitude_and_lag": 0
+    },
+    {
+      "channels": [
+        11,
+        12
+      ],
+      "observed_lag": 0,
+      "train_count_same_direction_amplitude_and_lag": 4
+    },
+    {
+      "channels": [
+        11,
+        29
+      ],
+      "observed_lag": 3,
+      "train_count_same_direction_amplitude_and_lag": 1
+    },
+    {
+      "channels": [
+        11,
+        24
+      ],
+      "observed_lag": 3,
+      "train_count_same_direction_amplitude_and_lag": 2
+    },
+    {
+      "channels": [
+        12,
+        29
+      ],
+      "observed_lag": 3,
+      "train_count_same_direction_amplitude_and_lag": 1
+    },
+    {
+      "channels": [
+        12,
+        24
+      ],
+      "observed_lag": 3,
+      "train_count_same_direction_amplitude_and_lag": 0
+    },
+    {
+      "channels": [
+        29,
+        24
+      ],
+      "observed_lag": 0,
+      "train_count_same_direction_amplitude_and_lag": 3
+    }
+  ]
+}

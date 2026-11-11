@@ -1,0 +1,141 @@
+{
+  "n": 32,
+  "train_anchors": [
+    5426,
+    7072,
+    5593,
+    5815,
+    9001,
+    8655,
+    6061,
+    4472,
+    7505,
+    5717,
+    8912,
+    5912,
+    6784,
+    7344,
+    8343,
+    4090,
+    8783,
+    5328,
+    3734,
+    7256,
+    4385,
+    5137,
+    3985,
+    5224,
+    4180,
+    6364,
+    4882,
+    6259,
+    8568,
+    3635,
+    5051,
+    6899
+  ],
+  "context_rmse_range": [
+    0.029057217056044582,
+    0.05597224852608457
+  ],
+  "channel_summary": [
+    {
+      "channel": 12,
+      "amplitude": 14.14285714285714,
+      "historical_amplitude_q50_q90": [
+        0.0,
+        0.5571428571428574
+      ],
+      "historical_at_least_this_large": 0,
+      "width_ticks": 1,
+      "peak_tick": 6,
+      "historical_width_q50_q90": [
+        0.0,
+        1.0
+      ],
+      "direction": 1,
+      "recovery_offset": 0.0,
+      "historical_recovery_q90": 0.0
+    },
+    {
+      "channel": 9,
+      "amplitude": 8.564826504532084,
+      "historical_amplitude_q50_q90": [
+        0.01125209046190459,
+        0.36110140070141
+      ],
+      "historical_at_least_this_large": 0,
+      "width_ticks": 2,
+      "peak_tick": 7,
+      "historical_width_q50_q90": [
+        1.0,
+        2.900000000000002
+      ],
+      "direction": 1,
+      "recovery_offset": 0.0,
+      "historical_recovery_q90": 0.0040080975828353
+    },
+    {
+      "channel": 11,
+      "amplitude": 1.9590921452889865,
+      "historical_amplitude_q50_q90": [
+        0.19772633413243618,
+        0.49545468280988736
+      ],
+      "historical_at_least_this_large": 1,
+      "width_ticks": 2,
+      "peak_tick": 5,
+      "historical_width_q50_q90": [
+        2.0,
+        4.900000000000002
+      ],
+      "direction": 1,
+      "recovery_offset": 0.013635951570337847,
+      "historical_recovery_q90": 0.04500115836338364
+    },
+    {
+      "channel": 3,
+      "amplitude": 0.01572798833170036,
+      "historical_amplitude_q50_q90": [
+        0.017739044268281795,
+        0.03533195644428616
+      ],
+      "historical_at_least_this_large": 21,
+      "width_ticks": 5,
+      "peak_tick": 13,
+      "historical_width_q50_q90": [
+        8.0,
+        11.0
+      ],
+      "direction": -1,
+      "recovery_offset": 0.02560234256702587,
+      "historical_recovery_q90": 0.07158064821412675
+    }
+  ],
+  "pair_summary": [
+    {
+      "channels": [
+        12,
+        9
+      ],
+      "observed_lag": 1,
+      "train_count_same_direction_amplitude_and_lag": 0
+    },
+    {
+      "channels": [
+        12,
+        11
+      ],
+      "observed_lag": -1,
+      "train_count_same_direction_amplitude_and_lag": 0
+    },
+    {
+      "channels": [
+        9,
+        11
+      ],
+      "observed_lag": -2,
+      "train_count_same_direction_amplitude_and_lag": 0
+    }
+  ]
+}

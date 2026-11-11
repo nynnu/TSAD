@@ -1,0 +1,482 @@
+[
+  {
+    "width": 224,
+    "entities": 25,
+    "gt_events": 276,
+    "matched_direction": {
+      "events": 22,
+      "entities": 14,
+      "lower_coupling_fraction": 0.7272727272727273,
+      "median_event_delta": -0.03446863627514807
+    },
+    "guarded_matched_direction": {
+      "events": 20,
+      "entities": 13,
+      "lower_coupling_fraction": 0.75,
+      "median_event_delta": -0.03446863627514807
+    },
+    "matched_pairs": 92,
+    "normal": {
+      "ungated": {
+        "all_normal": {
+          "cells": 45856,
+          "alarms": 3057,
+          "pooled_rate": 0.0666652128401954,
+          "entity_macro_rate": 0.0703032958762937
+        },
+        "shifted_normal": {
+          "cells": 18401,
+          "alarms": 1909,
+          "pooled_rate": 0.10374436171947177,
+          "entity_macro_rate": 0.12282311275206916
+        },
+        "in_range_normal": {
+          "cells": 27455,
+          "alarms": 1148,
+          "pooled_rate": 0.041813877253687855,
+          "entity_macro_rate": 0.042347793179046536
+        }
+      },
+      "audit_passed": {
+        "all_normal": {
+          "cells": 41818,
+          "alarms": 1749,
+          "pooled_rate": 0.04182409488736907,
+          "entity_macro_rate": 0.043163144625019696
+        },
+        "shifted_normal": {
+          "cells": 16526,
+          "alarms": 1045,
+          "pooled_rate": 0.06323369236354835,
+          "entity_macro_rate": 0.07740788149273492
+        },
+        "in_range_normal": {
+          "cells": 25292,
+          "alarms": 704,
+          "pooled_rate": 0.027834888502293216,
+          "entity_macro_rate": 0.029422069641972314
+        }
+      }
+    },
+    "eligible_channels": 531,
+    "audit_passed_channels": 479,
+    "entity_macro_lower_fraction": 0.75,
+    "entity_cluster_bootstrap_95": [
+      0.5357142857142857,
+      0.9642857142857143
+    ],
+    "gt_centered_by_length": [
+      {
+        "length_range": [
+          0,
+          14
+        ],
+        "events": 135,
+        "scorable_events": 87,
+        "events_with_any_target_alarm": 25,
+        "gt_channel_cells": 494,
+        "scorable_channel_cells": 257
+      },
+      {
+        "length_range": [
+          14,
+          60
+        ],
+        "events": 64,
+        "scorable_events": 58,
+        "events_with_any_target_alarm": 20,
+        "gt_channel_cells": 558,
+        "scorable_channel_cells": 448
+      },
+      {
+        "length_range": [
+          60,
+          224
+        ],
+        "events": 47,
+        "scorable_events": 45,
+        "events_with_any_target_alarm": 17,
+        "gt_channel_cells": 518,
+        "scorable_channel_cells": 384
+      },
+      {
+        "length_range": [
+          224,
+          1000000000
+        ],
+        "events": 30,
+        "scorable_events": 30,
+        "events_with_any_target_alarm": 9,
+        "gt_channel_cells": 302,
+        "scorable_channel_cells": 186
+      }
+    ],
+    "normal_any_channel_window_rates": [
+      {
+        "entity": "machine-1-3",
+        "ungated": 0.9210526315789473,
+        "guarded": 0.19736842105263158
+      },
+      {
+        "entity": "machine-1-4",
+        "ungated": 1.0,
+        "guarded": 0.20512820512820512
+      },
+      {
+        "entity": "machine-1-5",
+        "ungated": 1.0,
+        "guarded": 0.38202247191011235
+      },
+      {
+        "entity": "machine-1-7",
+        "ungated": 0.23943661971830985,
+        "guarded": 0.23943661971830985
+      },
+      {
+        "entity": "machine-1-8",
+        "ungated": 0.5507246376811594,
+        "guarded": 0.5072463768115942
+      },
+      {
+        "entity": "machine-2-1",
+        "ungated": 0.32,
+        "guarded": 0.10666666666666667
+      },
+      {
+        "entity": "machine-2-2",
+        "ungated": 1.0,
+        "guarded": 0.4166666666666667
+      },
+      {
+        "entity": "machine-2-3",
+        "ungated": 0.18604651162790697,
+        "guarded": 0.08139534883720931
+      },
+      {
+        "entity": "machine-2-4",
+        "ungated": 0.6,
+        "guarded": 0.43333333333333335
+      },
+      {
+        "entity": "machine-2-5",
+        "ungated": 0.23809523809523808,
+        "guarded": 0.19047619047619047
+      },
+      {
+        "entity": "machine-2-6",
+        "ungated": 0.4778761061946903,
+        "guarded": 0.4778761061946903
+      },
+      {
+        "entity": "machine-2-7",
+        "ungated": 0.3384615384615385,
+        "guarded": 0.27692307692307694
+      },
+      {
+        "entity": "machine-2-8",
+        "ungated": 0.5742574257425742,
+        "guarded": 0.5742574257425742
+      },
+      {
+        "entity": "machine-2-9",
+        "ungated": 0.15,
+        "guarded": 0.15
+      },
+      {
+        "entity": "machine-3-1",
+        "ungated": 0.3445378151260504,
+        "guarded": 0.3445378151260504
+      },
+      {
+        "entity": "machine-3-10",
+        "ungated": 0.4861111111111111,
+        "guarded": 0.4861111111111111
+      },
+      {
+        "entity": "machine-3-11",
+        "ungated": 0.10743801652892562,
+        "guarded": 0.10743801652892562
+      },
+      {
+        "entity": "machine-3-2",
+        "ungated": 0.34523809523809523,
+        "guarded": 0.16666666666666666
+      },
+      {
+        "entity": "machine-3-3",
+        "ungated": 0.3333333333333333,
+        "guarded": 0.3148148148148148
+      },
+      {
+        "entity": "machine-3-4",
+        "ungated": 0.25,
+        "guarded": 0.19047619047619047
+      },
+      {
+        "entity": "machine-3-5",
+        "ungated": 0.7738095238095238,
+        "guarded": 0.7738095238095238
+      },
+      {
+        "entity": "machine-3-6",
+        "ungated": 0.5247524752475248,
+        "guarded": 0.5247524752475248
+      },
+      {
+        "entity": "machine-3-7",
+        "ungated": 0.3508771929824561,
+        "guarded": 0.3508771929824561
+      },
+      {
+        "entity": "machine-3-8",
+        "ungated": 0.37962962962962965,
+        "guarded": 0.3333333333333333
+      },
+      {
+        "entity": "machine-3-9",
+        "ungated": 0.4915254237288136,
+        "guarded": 0.4915254237288136
+      }
+    ]
+  },
+  {
+    "width": 60,
+    "entities": 25,
+    "gt_events": 276,
+    "matched_direction": {
+      "events": 55,
+      "entities": 20,
+      "lower_coupling_fraction": 0.6727272727272727,
+      "median_event_delta": -0.002570845512918307
+    },
+    "guarded_matched_direction": {
+      "events": 51,
+      "entities": 19,
+      "lower_coupling_fraction": 0.7058823529411765,
+      "median_event_delta": -0.008649401228158549
+    },
+    "matched_pairs": 721,
+    "normal": {
+      "ungated": {
+        "all_normal": {
+          "cells": 194197,
+          "alarms": 14640,
+          "pooled_rate": 0.07538736437741057,
+          "entity_macro_rate": 0.07707457933082842
+        },
+        "shifted_normal": {
+          "cells": 69266,
+          "alarms": 8530,
+          "pooled_rate": 0.12314844223717264,
+          "entity_macro_rate": 0.13236946509153014
+        },
+        "in_range_normal": {
+          "cells": 124931,
+          "alarms": 6110,
+          "pooled_rate": 0.04890699666215751,
+          "entity_macro_rate": 0.04948638066727322
+        }
+      },
+      "audit_passed": {
+        "all_normal": {
+          "cells": 170537,
+          "alarms": 8969,
+          "pooled_rate": 0.05259269249488381,
+          "entity_macro_rate": 0.05250701182119443
+        },
+        "shifted_normal": {
+          "cells": 57259,
+          "alarms": 4491,
+          "pooled_rate": 0.07843308475523499,
+          "entity_macro_rate": 0.08177059043577703
+        },
+        "in_range_normal": {
+          "cells": 113278,
+          "alarms": 4478,
+          "pooled_rate": 0.039531065167111,
+          "entity_macro_rate": 0.03977125424900615
+        }
+      }
+    },
+    "eligible_channels": 511,
+    "audit_passed_channels": 448,
+    "entity_macro_lower_fraction": 0.6749999999999999,
+    "entity_cluster_bootstrap_95": [
+      0.5291666666666666,
+      0.8041666666666666
+    ],
+    "gt_centered_by_length": [
+      {
+        "length_range": [
+          0,
+          14
+        ],
+        "events": 135,
+        "scorable_events": 86,
+        "events_with_any_target_alarm": 20,
+        "gt_channel_cells": 494,
+        "scorable_channel_cells": 233
+      },
+      {
+        "length_range": [
+          14,
+          60
+        ],
+        "events": 64,
+        "scorable_events": 58,
+        "events_with_any_target_alarm": 17,
+        "gt_channel_cells": 558,
+        "scorable_channel_cells": 438
+      },
+      {
+        "length_range": [
+          60,
+          224
+        ],
+        "events": 47,
+        "scorable_events": 45,
+        "events_with_any_target_alarm": 20,
+        "gt_channel_cells": 518,
+        "scorable_channel_cells": 372
+      },
+      {
+        "length_range": [
+          224,
+          1000000000
+        ],
+        "events": 30,
+        "scorable_events": 30,
+        "events_with_any_target_alarm": 12,
+        "gt_channel_cells": 302,
+        "scorable_channel_cells": 177
+      }
+    ],
+    "normal_any_channel_window_rates": [
+      {
+        "entity": "machine-1-3",
+        "ungated": 0.8659217877094972,
+        "guarded": 0.3687150837988827
+      },
+      {
+        "entity": "machine-1-4",
+        "ungated": 0.8314606741573034,
+        "guarded": 0.29775280898876405
+      },
+      {
+        "entity": "machine-1-5",
+        "ungated": 1.0,
+        "guarded": 0.49604221635883905
+      },
+      {
+        "entity": "machine-1-7",
+        "ungated": 0.44785276073619634,
+        "guarded": 0.44785276073619634
+      },
+      {
+        "entity": "machine-1-8",
+        "ungated": 0.5584795321637427,
+        "guarded": 0.5555555555555556
+      },
+      {
+        "entity": "machine-2-1",
+        "ungated": 0.2543352601156069,
+        "guarded": 0.13872832369942195
+      },
+      {
+        "entity": "machine-2-2",
+        "ungated": 0.984472049689441,
+        "guarded": 0.43788819875776397
+      },
+      {
+        "entity": "machine-2-3",
+        "ungated": 0.3794037940379404,
+        "guarded": 0.24932249322493225
+      },
+      {
+        "entity": "machine-2-4",
+        "ungated": 0.5248447204968945,
+        "guarded": 0.37577639751552794
+      },
+      {
+        "entity": "machine-2-5",
+        "ungated": 0.39465875370919884,
+        "guarded": 0.37091988130563797
+      },
+      {
+        "entity": "machine-2-6",
+        "ungated": 0.5032967032967033,
+        "guarded": 0.5032967032967033
+      },
+      {
+        "entity": "machine-2-7",
+        "ungated": 0.521613832853026,
+        "guarded": 0.41786743515850144
+      },
+      {
+        "entity": "machine-2-8",
+        "ungated": 0.558974358974359,
+        "guarded": 0.4256410256410256
+      },
+      {
+        "entity": "machine-2-9",
+        "ungated": 0.2927400468384075,
+        "guarded": 0.2927400468384075
+      },
+      {
+        "entity": "machine-3-1",
+        "ungated": 0.4816414686825054,
+        "guarded": 0.46436285097192226
+      },
+      {
+        "entity": "machine-3-10",
+        "ungated": 0.6876790830945558,
+        "guarded": 0.5243553008595988
+      },
+      {
+        "entity": "machine-3-11",
+        "ungated": 0.22388059701492538,
+        "guarded": 0.22388059701492538
+      },
+      {
+        "entity": "machine-3-2",
+        "ungated": 0.5139664804469274,
+        "guarded": 0.4441340782122905
+      },
+      {
+        "entity": "machine-3-3",
+        "ungated": 0.46987951807228917,
+        "guarded": 0.4427710843373494
+      },
+      {
+        "entity": "machine-3-4",
+        "ungated": 0.32320441988950277,
+        "guarded": 0.32320441988950277
+      },
+      {
+        "entity": "machine-3-5",
+        "ungated": 0.6923076923076923,
+        "guarded": 0.6923076923076923
+      },
+      {
+        "entity": "machine-3-6",
+        "ungated": 0.6735632183908046,
+        "guarded": 0.6482758620689655
+      },
+      {
+        "entity": "machine-3-7",
+        "ungated": 0.45217391304347826,
+        "guarded": 0.391304347826087
+      },
+      {
+        "entity": "machine-3-8",
+        "ungated": 0.4036281179138322,
+        "guarded": 0.2811791383219955
+      },
+      {
+        "entity": "machine-3-9",
+        "ungated": 0.5517241379310345,
+        "guarded": 0.4224137931034483
+      }
+    ]
+  }
+]

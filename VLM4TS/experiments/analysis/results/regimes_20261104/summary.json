@@ -1,0 +1,77 @@
+[
+  {
+    "machine": "machine-1-1",
+    "train_prefix_ticks": 17040,
+    "calibration_windows": 190,
+    "normal_windows": 422,
+    "labeled_anomaly_channel_windows": 687,
+    "metrics": {
+      "absolute": {
+        "normal_channel_window_reject_rate": 0.04415066101272138,
+        "labeled_anomaly_channel_window_reject_rate": 0.39592430858806404,
+        "normal_any_channel_reject_rate": 0.5639810426540285,
+        "channel_window_auc": 0.8023572235396123
+      },
+      "shape": {
+        "normal_channel_window_reject_rate": 0.02132701421800948,
+        "labeled_anomaly_channel_window_reject_rate": 0.4017467248908297,
+        "normal_any_channel_reject_rate": 0.24170616113744076,
+        "channel_window_auc": 0.8119457748450266
+      }
+    },
+    "supported_normal_fraction": 0.8782738837615366,
+    "supported_anomaly_fraction": 0.3682678311499272,
+    "both_novel_normal_fraction": 0.01652531803442255,
+    "both_novel_anomaly_fraction": 0.3624454148471616
+  },
+  {
+    "machine": "machine-1-2",
+    "train_prefix_ticks": 14160,
+    "calibration_windows": 158,
+    "normal_windows": 374,
+    "labeled_anomaly_channel_windows": 166,
+    "metrics": {
+      "absolute": {
+        "normal_channel_window_reject_rate": 0.008162116521249648,
+        "labeled_anomaly_channel_window_reject_rate": 0.19879518072289157,
+        "normal_any_channel_reject_rate": 0.1711229946524064,
+        "channel_window_auc": 0.865503952200584
+      },
+      "shape": {
+        "normal_channel_window_reject_rate": 0.01780185758513932,
+        "labeled_anomaly_channel_window_reject_rate": 0.15060240963855423,
+        "normal_any_channel_reject_rate": 0.5080213903743316,
+        "channel_window_auc": 0.8537278864967328
+      }
+    },
+    "supported_normal_fraction": 0.924852237545736,
+    "supported_anomaly_fraction": 0.42771084337349397,
+    "both_novel_normal_fraction": 0.006754855052068675,
+    "both_novel_anomaly_fraction": 0.14457831325301204
+  },
+  {
+    "machine": "machine-1-6",
+    "train_prefix_ticks": 14160,
+    "calibration_windows": 158,
+    "normal_windows": 304,
+    "labeled_anomaly_channel_windows": 1463,
+    "metrics": {
+      "absolute": {
+        "normal_channel_window_reject_rate": 0.2219529085872576,
+        "labeled_anomaly_channel_window_reject_rate": 0.6021872863978127,
+        "normal_any_channel_reject_rate": 0.8618421052631579,
+        "channel_window_auc": 0.7765099544536234
+      },
+      "shape": {
+        "normal_channel_window_reject_rate": 0.014196675900277008,
+        "labeled_anomaly_channel_window_reject_rate": 0.29049897470950103,
+        "normal_any_channel_reject_rate": 0.33881578947368424,
+        "channel_window_auc": 0.8233326781288401
+      }
+    },
+    "supported_normal_fraction": 0.6750346260387812,
+    "supported_anomaly_fraction": 0.23718386876281614,
+    "both_novel_normal_fraction": 0.012725069252077562,
+    "both_novel_anomaly_fraction": 0.2836637047163363
+  }
+]

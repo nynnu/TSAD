@@ -1,0 +1,1772 @@
+[
+  {
+    "case": 31,
+    "parent": [
+      138,
+      142
+    ],
+    "tile": [
+      28,
+      252
+    ],
+    "baseline": {
+      "event_validity": "uncertain",
+      "anomalous_channels": [
+        16,
+        15
+      ],
+      "channel_ranking": [
+        16,
+        15,
+        11,
+        19,
+        18,
+        1,
+        20,
+        31
+      ],
+      "confidence": "medium",
+      "additional_channels_to_review": []
+    },
+    "masked": {
+      "event_validity": "uncertain",
+      "anomalous_channels": [
+        16,
+        11,
+        15
+      ],
+      "channel_ranking": [
+        16,
+        11,
+        15,
+        18,
+        19,
+        20,
+        31,
+        1
+      ],
+      "confidence": "medium",
+      "additional_channels_to_review": []
+    },
+    "error": null,
+    "image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\analysis\\results\\context_mask_audit_20261105\\images\\case_31.png",
+    "image_sha256": "144f425cbf7ab392e49b271073e4730c4d771490fb9f00605d9b80600aa59f7f",
+    "prompt_sha256": "a7f313fc299c8081e18bbd4275d1af97ead1d008b6e02391d0bfbca274893c67",
+    "reference_quality": [
+      {
+        "channel": 16,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.00026041666666666666,
+        "validation_focus_rmse_q90": 0.0,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 11,
+        "status": "context_supported",
+        "context_support_p": 0.26153846153846155,
+        "validation_outside_fraction": 0.3544270833333333,
+        "validation_focus_rmse_q90": 0.23441896351529348,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.09375
+      },
+      {
+        "channel": 19,
+        "status": "context_supported",
+        "context_support_p": 0.6,
+        "validation_outside_fraction": 0.26666666666666666,
+        "validation_focus_rmse_q90": 0.1579079666835424,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 15,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.34062499999999996,
+        "validation_focus_rmse_q90": 0.12997684970547083,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.5
+      },
+      {
+        "channel": 18,
+        "status": "context_supported",
+        "context_support_p": 0.6461538461538462,
+        "validation_outside_fraction": 0.28828125000000004,
+        "validation_focus_rmse_q90": 0.1541240945449514,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 1,
+        "status": "context_supported",
+        "context_support_p": 0.16923076923076924,
+        "validation_outside_fraction": 0.3002604166666667,
+        "validation_focus_rmse_q90": 0.28231227952058946,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0
+      },
+      {
+        "channel": 20,
+        "status": "context_supported",
+        "context_support_p": 0.5692307692307692,
+        "validation_outside_fraction": 0.3104166666666667,
+        "validation_focus_rmse_q90": 0.15846321142931705,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 31,
+        "status": "context_supported",
+        "context_support_p": 0.5076923076923077,
+        "validation_outside_fraction": 0.32838541666666665,
+        "validation_focus_rmse_q90": 0.16882653505923267,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      }
+    ],
+    "selected_channels": [
+      16,
+      11,
+      19,
+      15,
+      18,
+      1,
+      20,
+      31
+    ]
+  },
+  {
+    "case": 32,
+    "parent": [
+      143,
+      146
+    ],
+    "tile": [
+      32,
+      256
+    ],
+    "baseline": {
+      "event_validity": "uncertain",
+      "anomalous_channels": [
+        12,
+        15,
+        17
+      ],
+      "channel_ranking": [
+        12,
+        15,
+        17,
+        11,
+        2,
+        1,
+        3,
+        18
+      ],
+      "confidence": "medium",
+      "additional_channels_to_review": []
+    },
+    "masked": {
+      "event_validity": "uncertain",
+      "anomalous_channels": [
+        12,
+        15,
+        17
+      ],
+      "channel_ranking": [
+        12,
+        15,
+        17,
+        11,
+        2,
+        1,
+        3,
+        18
+      ],
+      "confidence": "low",
+      "additional_channels_to_review": []
+    },
+    "error": null,
+    "image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\analysis\\results\\context_mask_audit_20261105\\images\\case_32.png",
+    "image_sha256": "73ea3808d634ad06ae174fa699dc39d7af5ceef8c567563e4089526efe556596",
+    "prompt_sha256": "add59084fb9986a5d103bb3863c993a08609d22aeee79ba904454212db07c846",
+    "reference_quality": [
+      {
+        "channel": 11,
+        "status": "context_supported",
+        "context_support_p": 0.1076923076923077,
+        "validation_outside_fraction": 0.3544270833333333,
+        "validation_focus_rmse_q90": 0.23441896351529348,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.09375
+      },
+      {
+        "channel": 2,
+        "status": "context_supported",
+        "context_support_p": 0.5076923076923077,
+        "validation_outside_fraction": 0.3690104166666667,
+        "validation_focus_rmse_q90": 0.24225091211704447,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 1,
+        "status": "context_supported",
+        "context_support_p": 0.46153846153846156,
+        "validation_outside_fraction": 0.3002604166666667,
+        "validation_focus_rmse_q90": 0.28231227952058946,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0
+      },
+      {
+        "channel": 12,
+        "status": "context_supported",
+        "context_support_p": 0.3076923076923077,
+        "validation_outside_fraction": 0.16927083333333334,
+        "validation_focus_rmse_q90": 1.0783460039564154,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 15,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.34062499999999996,
+        "validation_focus_rmse_q90": 0.12997684970547083,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.5
+      },
+      {
+        "channel": 17,
+        "status": "validation_unstable",
+        "context_support_p": 1.0,
+        "validation_outside_fraction": 0.0010416666666666667,
+        "validation_focus_rmse_q90": 0.0,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.375
+      },
+      {
+        "channel": 3,
+        "status": "context_supported",
+        "context_support_p": 0.3384615384615385,
+        "validation_outside_fraction": 0.3940104166666667,
+        "validation_focus_rmse_q90": 0.2365341856167877,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.09375
+      },
+      {
+        "channel": 18,
+        "status": "context_supported",
+        "context_support_p": 0.38461538461538464,
+        "validation_outside_fraction": 0.28828125000000004,
+        "validation_focus_rmse_q90": 0.1541240945449514,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      }
+    ],
+    "selected_channels": [
+      11,
+      2,
+      1,
+      12,
+      15,
+      17,
+      3,
+      18
+    ]
+  },
+  {
+    "case": 33,
+    "parent": [
+      156,
+      157
+    ],
+    "tile": [
+      44,
+      268
+    ],
+    "baseline": {
+      "event_validity": "uncertain",
+      "anomalous_channels": [],
+      "channel_ranking": [
+        18,
+        19,
+        20,
+        21,
+        27,
+        1,
+        2,
+        3
+      ],
+      "confidence": "low",
+      "additional_channels_to_review": []
+    },
+    "masked": {
+      "event_validity": "uncertain",
+      "anomalous_channels": [],
+      "channel_ranking": [
+        1,
+        2,
+        3,
+        18,
+        19,
+        20,
+        21,
+        27
+      ],
+      "confidence": "low",
+      "additional_channels_to_review": []
+    },
+    "error": null,
+    "image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\analysis\\results\\context_mask_audit_20261105\\images\\case_33.png",
+    "image_sha256": "8c9c3fa45f2a01ecad024228a026e6e84bacd34ce1657a8f9145f1b17a93c06c",
+    "prompt_sha256": "5cf9147a7af8f3eb5c0040d545a03d23266e28cf93cf2567fbee79c1c609a2a2",
+    "reference_quality": [
+      {
+        "channel": 1,
+        "status": "context_supported",
+        "context_support_p": 0.2153846153846154,
+        "validation_outside_fraction": 0.3002604166666667,
+        "validation_focus_rmse_q90": 0.28231227952058946,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0
+      },
+      {
+        "channel": 2,
+        "status": "context_supported",
+        "context_support_p": 0.23076923076923078,
+        "validation_outside_fraction": 0.3690104166666667,
+        "validation_focus_rmse_q90": 0.24225091211704447,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 3,
+        "status": "context_supported",
+        "context_support_p": 0.2,
+        "validation_outside_fraction": 0.3940104166666667,
+        "validation_focus_rmse_q90": 0.2365341856167877,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.09375
+      },
+      {
+        "channel": 18,
+        "status": "context_supported",
+        "context_support_p": 0.3230769230769231,
+        "validation_outside_fraction": 0.28828125000000004,
+        "validation_focus_rmse_q90": 0.1541240945449514,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 19,
+        "status": "context_supported",
+        "context_support_p": 0.3076923076923077,
+        "validation_outside_fraction": 0.26666666666666666,
+        "validation_focus_rmse_q90": 0.1579079666835424,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 20,
+        "status": "context_supported",
+        "context_support_p": 0.4307692307692308,
+        "validation_outside_fraction": 0.3104166666666667,
+        "validation_focus_rmse_q90": 0.15846321142931705,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 21,
+        "status": "context_supported",
+        "context_support_p": 0.4307692307692308,
+        "validation_outside_fraction": 0.3481770833333333,
+        "validation_focus_rmse_q90": 0.1836229139654618,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 27,
+        "status": "context_supported",
+        "context_support_p": 0.47692307692307695,
+        "validation_outside_fraction": 0.32265625,
+        "validation_focus_rmse_q90": 0.16485267178663124,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      }
+    ],
+    "selected_channels": [
+      1,
+      2,
+      3,
+      18,
+      19,
+      20,
+      21,
+      27
+    ]
+  },
+  {
+    "case": 34,
+    "parent": [
+      158,
+      160
+    ],
+    "tile": [
+      47,
+      271
+    ],
+    "baseline": {
+      "event_validity": "uncertain",
+      "anomalous_channels": [
+        12
+      ],
+      "channel_ranking": [
+        12,
+        11,
+        1,
+        5,
+        19,
+        2,
+        3,
+        17
+      ],
+      "confidence": "medium",
+      "additional_channels_to_review": []
+    },
+    "masked": {
+      "event_validity": "uncertain",
+      "anomalous_channels": [
+        12,
+        17
+      ],
+      "channel_ranking": [
+        12,
+        17,
+        11,
+        1,
+        2,
+        5,
+        3,
+        19
+      ],
+      "confidence": "medium",
+      "additional_channels_to_review": []
+    },
+    "error": null,
+    "image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\analysis\\results\\context_mask_audit_20261105\\images\\case_34.png",
+    "image_sha256": "e87fbffba94085e682caeb9b6ea03d9e29ce6fd1e509cbe2bc28805a402e4b9c",
+    "prompt_sha256": "98b4cec89076d47252597b81999b0e0fcd85f6d1c0040546257b860b5d14ae0e",
+    "reference_quality": [
+      {
+        "channel": 11,
+        "status": "context_supported",
+        "context_support_p": 0.27692307692307694,
+        "validation_outside_fraction": 0.3544270833333333,
+        "validation_focus_rmse_q90": 0.23441896351529348,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.09375
+      },
+      {
+        "channel": 1,
+        "status": "context_supported",
+        "context_support_p": 0.2153846153846154,
+        "validation_outside_fraction": 0.3002604166666667,
+        "validation_focus_rmse_q90": 0.28231227952058946,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0
+      },
+      {
+        "channel": 17,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.0010416666666666667,
+        "validation_focus_rmse_q90": 0.0,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.375
+      },
+      {
+        "channel": 12,
+        "status": "context_supported",
+        "context_support_p": 0.26153846153846155,
+        "validation_outside_fraction": 0.16927083333333334,
+        "validation_focus_rmse_q90": 1.0783460039564154,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 2,
+        "status": "context_supported",
+        "context_support_p": 0.12307692307692308,
+        "validation_outside_fraction": 0.3690104166666667,
+        "validation_focus_rmse_q90": 0.24225091211704447,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 5,
+        "status": "context_supported",
+        "context_support_p": 0.49230769230769234,
+        "validation_outside_fraction": 0.4049479166666667,
+        "validation_focus_rmse_q90": 0.22955960703140307,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 3,
+        "status": "context_supported",
+        "context_support_p": 0.1076923076923077,
+        "validation_outside_fraction": 0.3940104166666667,
+        "validation_focus_rmse_q90": 0.2365341856167877,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.09375
+      },
+      {
+        "channel": 19,
+        "status": "context_supported",
+        "context_support_p": 0.3230769230769231,
+        "validation_outside_fraction": 0.26666666666666666,
+        "validation_focus_rmse_q90": 0.1579079666835424,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      }
+    ],
+    "selected_channels": [
+      11,
+      1,
+      17,
+      12,
+      2,
+      5,
+      3,
+      19
+    ]
+  },
+  {
+    "case": 35,
+    "parent": [
+      161,
+      163
+    ],
+    "tile": [
+      50,
+      274
+    ],
+    "baseline": {
+      "event_validity": "uncertain",
+      "anomalous_channels": [
+        15,
+        3,
+        2
+      ],
+      "channel_ranking": [
+        15,
+        3,
+        2,
+        11,
+        1,
+        19,
+        18,
+        16
+      ],
+      "confidence": "low",
+      "additional_channels_to_review": []
+    },
+    "masked": {
+      "event_validity": "uncertain",
+      "anomalous_channels": [
+        15,
+        3,
+        2
+      ],
+      "channel_ranking": [
+        3,
+        2,
+        15
+      ],
+      "confidence": "medium",
+      "additional_channels_to_review": []
+    },
+    "error": null,
+    "image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\analysis\\results\\context_mask_audit_20261105\\images\\case_35.png",
+    "image_sha256": "51a95e394d6186f015e772936c37bed9de7b7960b7f0a72cb626037cd20a899f",
+    "prompt_sha256": "dd840138edbb684d4a28897c0f35e5c87da1c49f395451acc53e485284a59134",
+    "reference_quality": [
+      {
+        "channel": 16,
+        "status": "out_of_support",
+        "context_support_p": 0.03076923076923077,
+        "validation_outside_fraction": 0.00026041666666666666,
+        "validation_focus_rmse_q90": 0.0,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 15,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.34062499999999996,
+        "validation_focus_rmse_q90": 0.12997684970547083,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.5
+      },
+      {
+        "channel": 3,
+        "status": "context_supported",
+        "context_support_p": 0.1076923076923077,
+        "validation_outside_fraction": 0.3940104166666667,
+        "validation_focus_rmse_q90": 0.2365341856167877,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.09375
+      },
+      {
+        "channel": 1,
+        "status": "context_supported",
+        "context_support_p": 0.2153846153846154,
+        "validation_outside_fraction": 0.3002604166666667,
+        "validation_focus_rmse_q90": 0.28231227952058946,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0
+      },
+      {
+        "channel": 19,
+        "status": "context_supported",
+        "context_support_p": 0.15384615384615385,
+        "validation_outside_fraction": 0.26666666666666666,
+        "validation_focus_rmse_q90": 0.1579079666835424,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 2,
+        "status": "context_supported",
+        "context_support_p": 0.15384615384615385,
+        "validation_outside_fraction": 0.3690104166666667,
+        "validation_focus_rmse_q90": 0.24225091211704447,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 18,
+        "status": "context_supported",
+        "context_support_p": 0.15384615384615385,
+        "validation_outside_fraction": 0.28828125000000004,
+        "validation_focus_rmse_q90": 0.1541240945449514,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 11,
+        "status": "context_supported",
+        "context_support_p": 0.27692307692307694,
+        "validation_outside_fraction": 0.3544270833333333,
+        "validation_focus_rmse_q90": 0.23441896351529348,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.09375
+      }
+    ],
+    "selected_channels": [
+      16,
+      15,
+      3,
+      1,
+      19,
+      2,
+      18,
+      11
+    ]
+  },
+  {
+    "case": 36,
+    "parent": [
+      184,
+      186
+    ],
+    "tile": [
+      73,
+      297
+    ],
+    "baseline": {
+      "event_validity": "uncertain",
+      "anomalous_channels": [
+        15
+      ],
+      "channel_ranking": [
+        15,
+        22,
+        31,
+        20,
+        21,
+        27,
+        18,
+        19
+      ],
+      "confidence": "medium",
+      "additional_channels_to_review": []
+    },
+    "masked": {
+      "event_validity": "uncertain",
+      "anomalous_channels": [
+        15
+      ],
+      "channel_ranking": [
+        15,
+        22,
+        31,
+        20,
+        21,
+        18,
+        19,
+        27
+      ],
+      "confidence": "medium",
+      "additional_channels_to_review": []
+    },
+    "error": null,
+    "image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\analysis\\results\\context_mask_audit_20261105\\images\\case_36.png",
+    "image_sha256": "0551ee0b01616c844ed8bff65572cdb6822251f832ff95ce9ff43c376c3cf767",
+    "prompt_sha256": "36692ad16f28668bd4fb2643e3419540ce4f7fef4483e1f14c210c33de66907a",
+    "reference_quality": [
+      {
+        "channel": 31,
+        "status": "context_supported",
+        "context_support_p": 0.23076923076923078,
+        "validation_outside_fraction": 0.32838541666666665,
+        "validation_focus_rmse_q90": 0.16882653505923267,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 15,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.34062499999999996,
+        "validation_focus_rmse_q90": 0.12997684970547083,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.5
+      },
+      {
+        "channel": 22,
+        "status": "context_supported",
+        "context_support_p": 0.7692307692307693,
+        "validation_outside_fraction": 0.41875000000000007,
+        "validation_focus_rmse_q90": 0.24398618175121825,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.09375
+      },
+      {
+        "channel": 20,
+        "status": "context_supported",
+        "context_support_p": 0.49230769230769234,
+        "validation_outside_fraction": 0.3104166666666667,
+        "validation_focus_rmse_q90": 0.15846321142931705,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 21,
+        "status": "context_supported",
+        "context_support_p": 0.5230769230769231,
+        "validation_outside_fraction": 0.3481770833333333,
+        "validation_focus_rmse_q90": 0.1836229139654618,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 18,
+        "status": "context_supported",
+        "context_support_p": 0.27692307692307694,
+        "validation_outside_fraction": 0.28828125000000004,
+        "validation_focus_rmse_q90": 0.1541240945449514,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 19,
+        "status": "context_supported",
+        "context_support_p": 0.3230769230769231,
+        "validation_outside_fraction": 0.26666666666666666,
+        "validation_focus_rmse_q90": 0.1579079666835424,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 27,
+        "status": "context_supported",
+        "context_support_p": 0.6615384615384615,
+        "validation_outside_fraction": 0.32265625,
+        "validation_focus_rmse_q90": 0.16485267178663124,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      }
+    ],
+    "selected_channels": [
+      31,
+      15,
+      22,
+      20,
+      21,
+      18,
+      19,
+      27
+    ]
+  },
+  {
+    "case": 37,
+    "parent": [
+      188,
+      189
+    ],
+    "tile": [
+      76,
+      300
+    ],
+    "baseline": {
+      "event_validity": "uncertain",
+      "anomalous_channels": [
+        11,
+        3,
+        2,
+        1
+      ],
+      "channel_ranking": [
+        11,
+        3,
+        2,
+        1,
+        29,
+        21,
+        20,
+        19
+      ],
+      "confidence": "medium",
+      "additional_channels_to_review": []
+    },
+    "masked": {
+      "event_validity": "uncertain",
+      "anomalous_channels": [
+        11,
+        3,
+        2,
+        1
+      ],
+      "channel_ranking": [
+        11,
+        3,
+        2,
+        1,
+        29,
+        21,
+        20,
+        19
+      ],
+      "confidence": "low",
+      "additional_channels_to_review": []
+    },
+    "error": null,
+    "image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\analysis\\results\\context_mask_audit_20261105\\images\\case_37.png",
+    "image_sha256": "8c9a676da03f3ea8d75525a9ab1c6774cbc9d2fe073adb77f46cfdeb7fec7cb7",
+    "prompt_sha256": "9ab1acaefe40bd029fea5e97a3b3a80af627ffc3cf1ad620bad73d49e8ecdac7",
+    "reference_quality": [
+      {
+        "channel": 11,
+        "status": "out_of_support",
+        "context_support_p": 0.046153846153846156,
+        "validation_outside_fraction": 0.3544270833333333,
+        "validation_focus_rmse_q90": 0.23441896351529348,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.09375
+      },
+      {
+        "channel": 29,
+        "status": "context_supported",
+        "context_support_p": 0.9692307692307692,
+        "validation_outside_fraction": 0.36848958333333337,
+        "validation_focus_rmse_q90": 0.2538222227413205,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 3,
+        "status": "out_of_support",
+        "context_support_p": 0.03076923076923077,
+        "validation_outside_fraction": 0.3940104166666667,
+        "validation_focus_rmse_q90": 0.2365341856167877,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.09375
+      },
+      {
+        "channel": 2,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.3690104166666667,
+        "validation_focus_rmse_q90": 0.24225091211704447,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 1,
+        "status": "out_of_support",
+        "context_support_p": 0.03076923076923077,
+        "validation_outside_fraction": 0.3002604166666667,
+        "validation_focus_rmse_q90": 0.28231227952058946,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0
+      },
+      {
+        "channel": 21,
+        "status": "context_supported",
+        "context_support_p": 0.5384615384615384,
+        "validation_outside_fraction": 0.3481770833333333,
+        "validation_focus_rmse_q90": 0.1836229139654618,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 20,
+        "status": "context_supported",
+        "context_support_p": 0.5538461538461539,
+        "validation_outside_fraction": 0.3104166666666667,
+        "validation_focus_rmse_q90": 0.15846321142931705,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 19,
+        "status": "context_supported",
+        "context_support_p": 0.46153846153846156,
+        "validation_outside_fraction": 0.26666666666666666,
+        "validation_focus_rmse_q90": 0.1579079666835424,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      }
+    ],
+    "selected_channels": [
+      11,
+      29,
+      3,
+      2,
+      1,
+      21,
+      20,
+      19
+    ]
+  },
+  {
+    "case": 38,
+    "parent": [
+      275,
+      280
+    ],
+    "tile": [
+      165,
+      389
+    ],
+    "baseline": {
+      "event_validity": "uncertain",
+      "anomalous_channels": [
+        9,
+        10,
+        17
+      ],
+      "channel_ranking": [
+        10,
+        9,
+        17,
+        12,
+        11,
+        14,
+        13,
+        0
+      ],
+      "confidence": "medium",
+      "additional_channels_to_review": []
+    },
+    "masked": {
+      "event_validity": "uncertain",
+      "anomalous_channels": [
+        9,
+        10,
+        17
+      ],
+      "channel_ranking": [
+        10,
+        9,
+        17,
+        12,
+        11,
+        14,
+        13,
+        0
+      ],
+      "confidence": "medium",
+      "additional_channels_to_review": []
+    },
+    "error": null,
+    "image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\analysis\\results\\context_mask_audit_20261105\\images\\case_38.png",
+    "image_sha256": "aebe9820f54b2d18532149457cab2bb2d15dbc58d929f375ea607aaa0e791d71",
+    "prompt_sha256": "81f70045c71378f88f497a484e2d94261d651af378ad914690e03ab8d412a06f",
+    "reference_quality": [
+      {
+        "channel": 11,
+        "status": "context_supported",
+        "context_support_p": 0.6461538461538462,
+        "validation_outside_fraction": 0.3544270833333333,
+        "validation_focus_rmse_q90": 0.23441896351529348,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.09375
+      },
+      {
+        "channel": 12,
+        "status": "context_supported",
+        "context_support_p": 0.47692307692307695,
+        "validation_outside_fraction": 0.16927083333333334,
+        "validation_focus_rmse_q90": 1.0783460039564154,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 14,
+        "status": "context_supported",
+        "context_support_p": 0.2,
+        "validation_outside_fraction": 0.36223958333333334,
+        "validation_focus_rmse_q90": 0.25943348903965857,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 9,
+        "status": "context_supported",
+        "context_support_p": 0.46153846153846156,
+        "validation_outside_fraction": 0.17890625,
+        "validation_focus_rmse_q90": 4.555520619387248,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 17,
+        "status": "validation_unstable",
+        "context_support_p": 1.0,
+        "validation_outside_fraction": 0.0010416666666666667,
+        "validation_focus_rmse_q90": 0.0,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.375
+      },
+      {
+        "channel": 10,
+        "status": "context_supported",
+        "context_support_p": 0.3230769230769231,
+        "validation_outside_fraction": 0.11953125,
+        "validation_focus_rmse_q90": 7.2483403541478495,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 13,
+        "status": "context_supported",
+        "context_support_p": 0.27692307692307694,
+        "validation_outside_fraction": 0.3841145833333333,
+        "validation_focus_rmse_q90": 0.23584045399499262,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 0,
+        "status": "context_supported",
+        "context_support_p": 0.16923076923076924,
+        "validation_outside_fraction": 0.23828124999999997,
+        "validation_focus_rmse_q90": 0.19998410950081175,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      }
+    ],
+    "selected_channels": [
+      11,
+      12,
+      14,
+      9,
+      17,
+      10,
+      13,
+      0
+    ]
+  },
+  {
+    "case": 39,
+    "parent": [
+      284,
+      285
+    ],
+    "tile": [
+      172,
+      396
+    ],
+    "baseline": {
+      "event_validity": "uncertain",
+      "anomalous_channels": [
+        4,
+        15
+      ],
+      "channel_ranking": [
+        4,
+        15,
+        9,
+        10,
+        11,
+        12,
+        18,
+        19
+      ],
+      "confidence": "medium",
+      "additional_channels_to_review": []
+    },
+    "masked": {
+      "event_validity": "uncertain",
+      "anomalous_channels": [
+        4,
+        15
+      ],
+      "channel_ranking": [
+        4,
+        15,
+        11,
+        9,
+        10,
+        18,
+        19,
+        12
+      ],
+      "confidence": "low",
+      "additional_channels_to_review": []
+    },
+    "error": null,
+    "image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\analysis\\results\\context_mask_audit_20261105\\images\\case_39.png",
+    "image_sha256": "b86b25b1af9e2f0cc2a8b269b172d5f5422efbf24ed55b44519ac6c4c91dfa81",
+    "prompt_sha256": "8004b4d9f738667ce0a75d42bcb97172e9af7c0c856ece54cc9339c12602e8a1",
+    "reference_quality": [
+      {
+        "channel": 11,
+        "status": "context_supported",
+        "context_support_p": 0.6461538461538462,
+        "validation_outside_fraction": 0.3544270833333333,
+        "validation_focus_rmse_q90": 0.23441896351529348,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.09375
+      },
+      {
+        "channel": 4,
+        "status": "validation_unstable",
+        "context_support_p": 1.0,
+        "validation_outside_fraction": 0.75,
+        "validation_focus_rmse_q90": 0.07142935374276325,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.59375
+      },
+      {
+        "channel": 9,
+        "status": "context_supported",
+        "context_support_p": 0.3384615384615385,
+        "validation_outside_fraction": 0.17890625,
+        "validation_focus_rmse_q90": 4.555520619387248,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 10,
+        "status": "context_supported",
+        "context_support_p": 0.3230769230769231,
+        "validation_outside_fraction": 0.11953125,
+        "validation_focus_rmse_q90": 7.2483403541478495,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 15,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.34062499999999996,
+        "validation_focus_rmse_q90": 0.12997684970547083,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.5
+      },
+      {
+        "channel": 18,
+        "status": "context_supported",
+        "context_support_p": 0.1076923076923077,
+        "validation_outside_fraction": 0.28828125000000004,
+        "validation_focus_rmse_q90": 0.1541240945449514,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 19,
+        "status": "context_supported",
+        "context_support_p": 0.13846153846153847,
+        "validation_outside_fraction": 0.26666666666666666,
+        "validation_focus_rmse_q90": 0.1579079666835424,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 12,
+        "status": "context_supported",
+        "context_support_p": 0.3076923076923077,
+        "validation_outside_fraction": 0.16927083333333334,
+        "validation_focus_rmse_q90": 1.0783460039564154,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      }
+    ],
+    "selected_channels": [
+      11,
+      4,
+      9,
+      10,
+      15,
+      18,
+      19,
+      12
+    ]
+  },
+  {
+    "case": 41,
+    "parent": [
+      561,
+      562
+    ],
+    "tile": [
+      449,
+      673
+    ],
+    "baseline": {
+      "event_validity": "uncertain",
+      "anomalous_channels": [
+        4,
+        15
+      ],
+      "channel_ranking": [
+        15,
+        4,
+        19,
+        18,
+        20,
+        27,
+        21,
+        30
+      ],
+      "confidence": "low",
+      "additional_channels_to_review": []
+    },
+    "masked": {
+      "event_validity": "uncertain",
+      "anomalous_channels": [],
+      "channel_ranking": [
+        30,
+        21,
+        27,
+        20,
+        18,
+        19,
+        15,
+        4
+      ],
+      "confidence": "low",
+      "additional_channels_to_review": []
+    },
+    "error": null,
+    "image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\analysis\\results\\context_mask_audit_20261105\\images\\case_41.png",
+    "image_sha256": "b22fba47db01b508d80a92099e2d2ebafb0a5da46aaf30e5b6208cd9b3fdf7bc",
+    "prompt_sha256": "abcdece3ddd05eb27cb6340dcea2be728c4a04087751ab66c99df5c43f06def9",
+    "reference_quality": [
+      {
+        "channel": 4,
+        "status": "validation_unstable",
+        "context_support_p": 1.0,
+        "validation_outside_fraction": 0.75,
+        "validation_focus_rmse_q90": 0.07142935374276325,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.59375
+      },
+      {
+        "channel": 15,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.34062499999999996,
+        "validation_focus_rmse_q90": 0.12997684970547083,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.5
+      },
+      {
+        "channel": 19,
+        "status": "context_supported",
+        "context_support_p": 0.38461538461538464,
+        "validation_outside_fraction": 0.26666666666666666,
+        "validation_focus_rmse_q90": 0.1579079666835424,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 18,
+        "status": "context_supported",
+        "context_support_p": 0.3076923076923077,
+        "validation_outside_fraction": 0.28828125000000004,
+        "validation_focus_rmse_q90": 0.1541240945449514,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 20,
+        "status": "context_supported",
+        "context_support_p": 0.49230769230769234,
+        "validation_outside_fraction": 0.3104166666666667,
+        "validation_focus_rmse_q90": 0.15846321142931705,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 27,
+        "status": "context_supported",
+        "context_support_p": 0.6615384615384615,
+        "validation_outside_fraction": 0.32265625,
+        "validation_focus_rmse_q90": 0.16485267178663124,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 21,
+        "status": "context_supported",
+        "context_support_p": 0.7076923076923077,
+        "validation_outside_fraction": 0.3481770833333333,
+        "validation_focus_rmse_q90": 0.1836229139654618,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 30,
+        "status": "context_supported",
+        "context_support_p": 0.8153846153846154,
+        "validation_outside_fraction": 0.35390625,
+        "validation_focus_rmse_q90": 0.207227458128695,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      }
+    ],
+    "selected_channels": [
+      4,
+      15,
+      19,
+      18,
+      20,
+      27,
+      21,
+      30
+    ]
+  },
+  {
+    "case": 42,
+    "parent": [
+      591,
+      592
+    ],
+    "tile": [
+      479,
+      703
+    ],
+    "baseline": {
+      "event_validity": "uncertain",
+      "anomalous_channels": [
+        1,
+        2,
+        22,
+        11,
+        13
+      ],
+      "channel_ranking": [
+        1,
+        2,
+        22,
+        11,
+        13
+      ],
+      "confidence": "medium",
+      "additional_channels_to_review": []
+    },
+    "masked": {
+      "event_validity": "uncertain",
+      "anomalous_channels": [],
+      "channel_ranking": [
+        4,
+        1,
+        2,
+        22,
+        11,
+        13,
+        35,
+        34
+      ],
+      "confidence": "low",
+      "additional_channels_to_review": []
+    },
+    "error": null,
+    "image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\analysis\\results\\context_mask_audit_20261105\\images\\case_42.png",
+    "image_sha256": "e1f793ce7e3798db50ddedccc05ebdd66e5992a7f28098636aa3ba1df104ce41",
+    "prompt_sha256": "545d192bb9837cf58ffeb6af1275918584926cc1e22bde9dfe940d7336732958",
+    "reference_quality": [
+      {
+        "channel": 1,
+        "status": "context_supported",
+        "context_support_p": 0.5846153846153846,
+        "validation_outside_fraction": 0.3002604166666667,
+        "validation_focus_rmse_q90": 0.28231227952058946,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0
+      },
+      {
+        "channel": 2,
+        "status": "context_supported",
+        "context_support_p": 0.5230769230769231,
+        "validation_outside_fraction": 0.3690104166666667,
+        "validation_focus_rmse_q90": 0.24225091211704447,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 22,
+        "status": "context_supported",
+        "context_support_p": 0.9230769230769231,
+        "validation_outside_fraction": 0.41875000000000007,
+        "validation_focus_rmse_q90": 0.24398618175121825,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.09375
+      },
+      {
+        "channel": 11,
+        "status": "context_supported",
+        "context_support_p": 0.8307692307692308,
+        "validation_outside_fraction": 0.3544270833333333,
+        "validation_focus_rmse_q90": 0.23441896351529348,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.09375
+      },
+      {
+        "channel": 13,
+        "status": "context_supported",
+        "context_support_p": 0.8615384615384616,
+        "validation_outside_fraction": 0.3841145833333333,
+        "validation_focus_rmse_q90": 0.23584045399499262,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 4,
+        "status": "validation_unstable",
+        "context_support_p": 1.0,
+        "validation_outside_fraction": 0.75,
+        "validation_focus_rmse_q90": 0.07142935374276325,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.59375
+      },
+      {
+        "channel": 35,
+        "status": "context_supported",
+        "context_support_p": 0.8923076923076924,
+        "validation_outside_fraction": 0.4236979166666667,
+        "validation_focus_rmse_q90": 0.23327736167479227,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 34,
+        "status": "context_supported",
+        "context_support_p": 0.8923076923076924,
+        "validation_outside_fraction": 0.4239583333333333,
+        "validation_focus_rmse_q90": 0.23313301615157925,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      }
+    ],
+    "selected_channels": [
+      1,
+      2,
+      22,
+      11,
+      13,
+      4,
+      35,
+      34
+    ]
+  },
+  {
+    "case": 43,
+    "parent": [
+      637,
+      651
+    ],
+    "tile": [
+      532,
+      756
+    ],
+    "baseline": {
+      "event_validity": "anomalous",
+      "anomalous_channels": [
+        17,
+        14,
+        0
+      ],
+      "channel_ranking": [
+        17,
+        14,
+        0,
+        15,
+        25,
+        22,
+        24,
+        35
+      ],
+      "confidence": "medium",
+      "additional_channels_to_review": []
+    },
+    "masked": {
+      "event_validity": "uncertain",
+      "anomalous_channels": [
+        15,
+        25
+      ],
+      "channel_ranking": [
+        15,
+        25,
+        22,
+        14,
+        24,
+        0,
+        35,
+        17
+      ],
+      "confidence": "medium",
+      "additional_channels_to_review": []
+    },
+    "error": null,
+    "image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\analysis\\results\\context_mask_audit_20261105\\images\\case_43.png",
+    "image_sha256": "0d0cbd8bad27da530d99644be864ceb875db9be144f765eea59f3eda9fcdd81d",
+    "prompt_sha256": "28329ec91dd73d6507d382704f7dcdd612b20af2dbc7e41edabac75f2605eb93",
+    "reference_quality": [
+      {
+        "channel": 17,
+        "status": "validation_unstable",
+        "context_support_p": 1.0,
+        "validation_outside_fraction": 0.0010416666666666667,
+        "validation_focus_rmse_q90": 0.0,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.375
+      },
+      {
+        "channel": 15,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.34062499999999996,
+        "validation_focus_rmse_q90": 0.12997684970547083,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.5
+      },
+      {
+        "channel": 25,
+        "status": "context_supported",
+        "context_support_p": 0.24615384615384617,
+        "validation_outside_fraction": 0.2911458333333333,
+        "validation_focus_rmse_q90": 0.20954082066423538,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0
+      },
+      {
+        "channel": 22,
+        "status": "context_supported",
+        "context_support_p": 0.46153846153846156,
+        "validation_outside_fraction": 0.41875000000000007,
+        "validation_focus_rmse_q90": 0.24398618175121825,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.09375
+      },
+      {
+        "channel": 14,
+        "status": "context_supported",
+        "context_support_p": 0.35384615384615387,
+        "validation_outside_fraction": 0.36223958333333334,
+        "validation_focus_rmse_q90": 0.25943348903965857,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 24,
+        "status": "context_supported",
+        "context_support_p": 0.6153846153846154,
+        "validation_outside_fraction": 0.38515625,
+        "validation_focus_rmse_q90": 0.24167885195609243,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 0,
+        "status": "context_supported",
+        "context_support_p": 0.7076923076923077,
+        "validation_outside_fraction": 0.23828124999999997,
+        "validation_focus_rmse_q90": 0.19998410950081175,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 35,
+        "status": "context_supported",
+        "context_support_p": 0.8153846153846154,
+        "validation_outside_fraction": 0.4236979166666667,
+        "validation_focus_rmse_q90": 0.23327736167479227,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      }
+    ],
+    "selected_channels": [
+      17,
+      15,
+      25,
+      22,
+      14,
+      24,
+      0,
+      35
+    ]
+  },
+  {
+    "case": 44,
+    "parent": [
+      727,
+      728
+    ],
+    "tile": [
+      615,
+      839
+    ],
+    "baseline": {
+      "event_validity": "uncertain",
+      "anomalous_channels": [
+        11,
+        12,
+        23
+      ],
+      "channel_ranking": [
+        12,
+        11,
+        23,
+        4,
+        6,
+        3,
+        2,
+        25
+      ],
+      "confidence": "low",
+      "additional_channels_to_review": []
+    },
+    "masked": {
+      "event_validity": "uncertain",
+      "anomalous_channels": [
+        4,
+        23,
+        6
+      ],
+      "channel_ranking": [
+        6,
+        4,
+        23
+      ],
+      "confidence": "low",
+      "additional_channels_to_review": []
+    },
+    "error": null,
+    "image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\analysis\\results\\context_mask_audit_20261105\\images\\case_44.png",
+    "image_sha256": "2c7aa44e0e411dc4d7c80ae2994b85a3c0c907f421286553202f10d3f90a6985",
+    "prompt_sha256": "99da540caccb656c1cc15886fb34cd0a0d1dcecdccca0061e32d663cbcfc5be9",
+    "reference_quality": [
+      {
+        "channel": 11,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.3544270833333333,
+        "validation_focus_rmse_q90": 0.23441896351529348,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.09375
+      },
+      {
+        "channel": 4,
+        "status": "validation_unstable",
+        "context_support_p": 0.7384615384615385,
+        "validation_outside_fraction": 0.75,
+        "validation_focus_rmse_q90": 0.07142935374276325,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.59375
+      },
+      {
+        "channel": 12,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.16927083333333334,
+        "validation_focus_rmse_q90": 1.0783460039564154,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 23,
+        "status": "validation_unstable",
+        "context_support_p": 0.46153846153846156,
+        "validation_outside_fraction": 0.34895833333333337,
+        "validation_focus_rmse_q90": 0.25996616668593714,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.21875
+      },
+      {
+        "channel": 3,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.3940104166666667,
+        "validation_focus_rmse_q90": 0.2365341856167877,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.09375
+      },
+      {
+        "channel": 2,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.3690104166666667,
+        "validation_focus_rmse_q90": 0.24225091211704447,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 25,
+        "status": "context_supported",
+        "context_support_p": 0.07692307692307693,
+        "validation_outside_fraction": 0.2911458333333333,
+        "validation_focus_rmse_q90": 0.20954082066423538,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0
+      },
+      {
+        "channel": 6,
+        "status": "context_supported",
+        "context_support_p": 0.9692307692307692,
+        "validation_outside_fraction": 0.9979166666666667,
+        "validation_focus_rmse_q90": 0.43684821009622593,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      }
+    ],
+    "selected_channels": [
+      11,
+      4,
+      12,
+      23,
+      3,
+      2,
+      25,
+      6
+    ]
+  }
+]

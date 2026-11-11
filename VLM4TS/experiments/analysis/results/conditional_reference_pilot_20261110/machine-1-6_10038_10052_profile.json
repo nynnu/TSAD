@@ -1,0 +1,215 @@
+{
+  "n": 32,
+  "train_anchors": [
+    7806,
+    866,
+    7716,
+    6626,
+    2306,
+    2056,
+    626,
+    5673,
+    3032,
+    11190,
+    6874,
+    6532,
+    970,
+    3664,
+    726,
+    1907,
+    3486,
+    6712,
+    3366,
+    7892,
+    3750,
+    8294,
+    5426,
+    11076,
+    2176,
+    1356,
+    10944,
+    9520,
+    11432,
+    3574,
+    6372,
+    9266
+  ],
+  "context_rmse_range": [
+    3.7168206040347154,
+    3.8785501644584883
+  ],
+  "channel_summary": [
+    {
+      "channel": 10,
+      "amplitude": 89.34440609721024,
+      "historical_amplitude_q50_q90": [
+        0.09699453551912568,
+        0.9157822835777975
+      ],
+      "historical_at_least_this_large": 0,
+      "width_ticks": 1,
+      "peak_tick": 3,
+      "historical_width_q50_q90": [
+        2.0,
+        3.0
+      ],
+      "direction": 1,
+      "recovery_offset": 0.0,
+      "historical_recovery_q90": 0.010209951107276388
+    },
+    {
+      "channel": 29,
+      "amplitude": 0.33677102961781924,
+      "historical_amplitude_q50_q90": [
+        0.17697492390201483,
+        0.3570457071073103
+      ],
+      "historical_at_least_this_large": 5,
+      "width_ticks": 5,
+      "peak_tick": 12,
+      "historical_width_q50_q90": [
+        5.0,
+        9.900000000000002
+      ],
+      "direction": -1,
+      "recovery_offset": 0.3213062279557426,
+      "historical_recovery_q90": 0.21804210755181905
+    },
+    {
+      "channel": 14,
+      "amplitude": 0.5242223985777865,
+      "historical_amplitude_q50_q90": [
+        0.36536504528756525,
+        0.5370427518220826
+      ],
+      "historical_at_least_this_large": 4,
+      "width_ticks": 1,
+      "peak_tick": 3,
+      "historical_width_q50_q90": [
+        4.5,
+        9.0
+      ],
+      "direction": 1,
+      "recovery_offset": 0.07552291117731347,
+      "historical_recovery_q90": 0.21680560747743788
+    },
+    {
+      "channel": 15,
+      "amplitude": 1.6080877608087762,
+      "historical_amplitude_q50_q90": [
+        0.5815901269090126,
+        0.6533528715852873
+      ],
+      "historical_at_least_this_large": 0,
+      "width_ticks": 4,
+      "peak_tick": 5,
+      "historical_width_q50_q90": [
+        3.0,
+        3.0
+      ],
+      "direction": 1,
+      "recovery_offset": 0.24217573671757364,
+      "historical_recovery_q90": 0.11404603140460318
+    },
+    {
+      "channel": 13,
+      "amplitude": 3.8575109548841713,
+      "historical_amplitude_q50_q90": [
+        0.31996810955679456,
+        0.4371953110709943
+      ],
+      "historical_at_least_this_large": 0,
+      "width_ticks": 6,
+      "peak_tick": 4,
+      "historical_width_q50_q90": [
+        5.0,
+        10.0
+      ],
+      "direction": -1,
+      "recovery_offset": 1.2903302768344966,
+      "historical_recovery_q90": 0.2562508449774544
+    }
+  ],
+  "pair_summary": [
+    {
+      "channels": [
+        10,
+        29
+      ],
+      "observed_lag": 9,
+      "train_count_same_direction_amplitude_and_lag": 0
+    },
+    {
+      "channels": [
+        10,
+        14
+      ],
+      "observed_lag": 0,
+      "train_count_same_direction_amplitude_and_lag": 0
+    },
+    {
+      "channels": [
+        10,
+        15
+      ],
+      "observed_lag": 2,
+      "train_count_same_direction_amplitude_and_lag": 0
+    },
+    {
+      "channels": [
+        10,
+        13
+      ],
+      "observed_lag": 1,
+      "train_count_same_direction_amplitude_and_lag": 0
+    },
+    {
+      "channels": [
+        29,
+        14
+      ],
+      "observed_lag": -9,
+      "train_count_same_direction_amplitude_and_lag": 0
+    },
+    {
+      "channels": [
+        29,
+        15
+      ],
+      "observed_lag": -7,
+      "train_count_same_direction_amplitude_and_lag": 0
+    },
+    {
+      "channels": [
+        29,
+        13
+      ],
+      "observed_lag": -8,
+      "train_count_same_direction_amplitude_and_lag": 0
+    },
+    {
+      "channels": [
+        14,
+        15
+      ],
+      "observed_lag": 2,
+      "train_count_same_direction_amplitude_and_lag": 0
+    },
+    {
+      "channels": [
+        14,
+        13
+      ],
+      "observed_lag": 1,
+      "train_count_same_direction_amplitude_and_lag": 0
+    },
+    {
+      "channels": [
+        15,
+        13
+      ],
+      "observed_lag": -1,
+      "train_count_same_direction_amplitude_and_lag": 0
+    }
+  ]
+}

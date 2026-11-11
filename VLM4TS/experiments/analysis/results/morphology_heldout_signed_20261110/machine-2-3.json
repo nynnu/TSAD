@@ -1,0 +1,244 @@
+{
+  "machine": "machine-2-3",
+  "baseline": {
+    "predicted": 17,
+    "gt_events": 10,
+    "matched": 8,
+    "precision": 0.47058823529411764,
+    "recall": 0.8,
+    "f1": 0.5925925925925927
+  },
+  "filtered": {
+    "predicted": 16,
+    "gt_events": 10,
+    "matched": 8,
+    "precision": 0.5,
+    "recall": 0.8,
+    "f1": 0.6153846153846154
+  },
+  "suppressed": 1,
+  "unscorable": 1,
+  "rows": [
+    {
+      "core_id": "machine-2-3.e00000.c0000",
+      "start": 832,
+      "end": 836,
+      "channels": [
+        12,
+        11
+      ],
+      "match_count": null,
+      "reason": "insufficient_active_channels",
+      "peak": 832
+    },
+    {
+      "core_id": "machine-2-3.e00001.c0000",
+      "start": 846,
+      "end": 850,
+      "channels": [
+        9,
+        12,
+        11
+      ],
+      "match_count": 0,
+      "reason": "descriptive",
+      "peak": 847
+    },
+    {
+      "core_id": "machine-2-3.e00002.c0000",
+      "start": 854,
+      "end": 868,
+      "channels": [
+        9,
+        12,
+        11
+      ],
+      "match_count": 0,
+      "reason": "descriptive",
+      "peak": 857
+    },
+    {
+      "core_id": "machine-2-3.e00003.c0000",
+      "start": 874,
+      "end": 878,
+      "channels": [
+        12,
+        34,
+        11
+      ],
+      "match_count": 0,
+      "reason": "descriptive",
+      "peak": 875
+    },
+    {
+      "core_id": "machine-2-3.e00004.c0000",
+      "start": 5376,
+      "end": 5390,
+      "channels": [
+        14,
+        8,
+        11
+      ],
+      "match_count": 0,
+      "reason": "descriptive",
+      "peak": 5377
+    },
+    {
+      "core_id": "machine-2-3.e00005.c0000",
+      "start": 5711,
+      "end": 5771,
+      "channels": [
+        9,
+        8,
+        12
+      ],
+      "match_count": 0,
+      "reason": "descriptive",
+      "peak": 5740
+    },
+    {
+      "core_id": "machine-2-3.e00006.c0000",
+      "start": 5979,
+      "end": 6041,
+      "channels": [
+        9,
+        12,
+        8
+      ],
+      "match_count": 0,
+      "reason": "descriptive",
+      "peak": 6008
+    },
+    {
+      "core_id": "machine-2-3.e00007.c0000",
+      "start": 7930,
+      "end": 7966,
+      "channels": [
+        23,
+        25,
+        0
+      ],
+      "match_count": 0,
+      "reason": "descriptive",
+      "peak": 7960
+    },
+    {
+      "core_id": "machine-2-3.e00008.c0000",
+      "start": 8106,
+      "end": 8120,
+      "channels": [
+        6,
+        5,
+        31
+      ],
+      "match_count": 0,
+      "reason": "descriptive",
+      "peak": 8112
+    },
+    {
+      "core_id": "machine-2-3.e00009.c0000",
+      "start": 10948,
+      "end": 10962,
+      "channels": [
+        14,
+        8,
+        12
+      ],
+      "match_count": 0,
+      "reason": "descriptive",
+      "peak": 10955
+    },
+    {
+      "core_id": "machine-2-3.e00010.c0000",
+      "start": 12194,
+      "end": 12222,
+      "channels": [
+        6,
+        13,
+        0
+      ],
+      "match_count": 0,
+      "reason": "descriptive",
+      "peak": 12211
+    },
+    {
+      "core_id": "machine-2-3.e00011.c0000",
+      "start": 15064,
+      "end": 15092,
+      "channels": [
+        13,
+        0,
+        22
+      ],
+      "match_count": 0,
+      "reason": "descriptive",
+      "peak": 15079
+    },
+    {
+      "core_id": "machine-2-3.e00012.c0000",
+      "start": 16688,
+      "end": 16702,
+      "channels": [
+        14,
+        8,
+        5
+      ],
+      "match_count": 0,
+      "reason": "descriptive",
+      "peak": 16691
+    },
+    {
+      "core_id": "machine-2-3.e00013.c0000",
+      "start": 18956,
+      "end": 18970,
+      "channels": [
+        13,
+        8,
+        14
+      ],
+      "match_count": 0,
+      "reason": "descriptive",
+      "peak": 18962
+    },
+    {
+      "core_id": "machine-2-3.e00014.c0000",
+      "start": 19367,
+      "end": 19436,
+      "channels": [
+        23,
+        26,
+        25
+      ],
+      "match_count": 0,
+      "reason": "descriptive",
+      "peak": 19400
+    },
+    {
+      "core_id": "machine-2-3.e00015.c0000",
+      "start": 20916,
+      "end": 20930,
+      "channels": [
+        14,
+        8,
+        11
+      ],
+      "match_count": 1,
+      "reason": "descriptive",
+      "peak": 20929
+    },
+    {
+      "core_id": "machine-2-3.e00016.c0000",
+      "start": 22204,
+      "end": 22218,
+      "channels": [
+        14,
+        8,
+        21
+      ],
+      "match_count": 0,
+      "reason": "descriptive",
+      "peak": 22210
+    }
+  ],
+  "warning": "Retrospective offline evaluation; cached legacy Stage1 uses test percentiles; no VLM; 10% tolerance was selected on four other development machines."
+}

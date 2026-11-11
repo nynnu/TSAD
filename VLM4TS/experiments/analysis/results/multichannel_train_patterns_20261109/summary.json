@@ -1,0 +1,84 @@
+{
+  "rows": [
+    {
+      "core_id": "machine-1-2.e00001.c0000",
+      "gt_overlap": false,
+      "channels": [
+        9,
+        11,
+        12
+      ],
+      "core": [
+        840,
+        854
+      ],
+      "test_interval": [
+        831,
+        862
+      ],
+      "matching": "entire test focus, retrospective oracle only",
+      "train_joint_start": 20236,
+      "joint_rmse": 0.047982385619441945,
+      "single_channel_matches": [
+        {
+          "channel": 9,
+          "start": 20236,
+          "rmse": 0.04788519399783364
+        },
+        {
+          "channel": 11,
+          "start": 18776,
+          "rmse": 0.053422096657907495
+        },
+        {
+          "channel": 12,
+          "start": 20236,
+          "rmse": 0.02309093218185284
+        }
+      ]
+    },
+    {
+      "core_id": "machine-1-2.e00048.c0000",
+      "gt_overlap": true,
+      "channels": [
+        0,
+        1,
+        2
+      ],
+      "core": [
+        22291,
+        22310
+      ],
+      "test_interval": [
+        22278,
+        22309
+      ],
+      "matching": "entire test focus, retrospective oracle only",
+      "train_joint_start": 17180,
+      "joint_rmse": 0.1600811550680398,
+      "single_channel_matches": [
+        {
+          "channel": 0,
+          "start": 17173,
+          "rmse": 0.08519308263305105
+        },
+        {
+          "channel": 1,
+          "start": 17163,
+          "rmse": 0.20063739918992857
+        },
+        {
+          "channel": 2,
+          "start": 17183,
+          "rmse": 0.1279006562084229
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Post-hoc full-focus search is an oracle diagnostic, not valid inference",
+    "Only first three VLM-selected channels and two GT-selected cases",
+    "Train nominal normal can be contaminated; data-dependent nearest match not causal proof",
+    "Different train modes and rare repetitions not calibrated"
+  ]
+}

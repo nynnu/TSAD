@@ -1,0 +1,595 @@
+{
+  "summary": {
+    "hfz_raw": {
+      "tp": 6,
+      "fp": 10,
+      "fn": 13,
+      "reciprocal_ranks": [
+        0.3333333333333333,
+        0,
+        0,
+        1.0
+      ],
+      "top1": [
+        false,
+        false,
+        false,
+        true
+      ],
+      "precision": 0.375,
+      "recall": 0.3157894736842105,
+      "f1": 0.34285714285714286,
+      "mrr": 0.3333333333333333,
+      "hit1": 0.25
+    },
+    "hfz_confirmed": {
+      "tp": 2,
+      "fp": 8,
+      "fn": 17,
+      "reciprocal_ranks": [
+        0.3333333333333333,
+        0,
+        0,
+        1.0
+      ],
+      "top1": [
+        false,
+        false,
+        false,
+        true
+      ],
+      "precision": 0.2,
+      "recall": 0.10526315789473684,
+      "f1": 0.13793103448275862,
+      "mrr": 0.3333333333333333,
+      "hit1": 0.25
+    },
+    "index_raw": {
+      "tp": 8,
+      "fp": 10,
+      "fn": 11,
+      "reciprocal_ranks": [
+        0.3333333333333333,
+        0,
+        0,
+        1.0
+      ],
+      "top1": [
+        false,
+        false,
+        false,
+        true
+      ],
+      "precision": 0.4444444444444444,
+      "recall": 0.42105263157894735,
+      "f1": 0.43243243243243246,
+      "mrr": 0.3333333333333333,
+      "hit1": 0.25
+    },
+    "index_confirmed": {
+      "tp": 4,
+      "fp": 8,
+      "fn": 15,
+      "reciprocal_ranks": [
+        0.3333333333333333,
+        0,
+        0,
+        1.0
+      ],
+      "top1": [
+        false,
+        false,
+        false,
+        true
+      ],
+      "precision": 0.3333333333333333,
+      "recall": 0.21052631578947367,
+      "f1": 0.25806451612903225,
+      "mrr": 0.3333333333333333,
+      "hit1": 0.25
+    }
+  },
+  "details": [
+    {
+      "case": {
+        "machine": "machine-1-2",
+        "core_id": "machine-1-2.e00001.c0000",
+        "category": "gt_nonoverlap",
+        "core": [
+          840,
+          854
+        ],
+        "channels": [
+          12,
+          9,
+          11,
+          3
+        ]
+      },
+      "variant": "hfz",
+      "gt": [],
+      "selected": [
+        12,
+        9,
+        11
+      ],
+      "ranking": [
+        12,
+        9,
+        11
+      ]
+    },
+    {
+      "case": {
+        "machine": "machine-1-2",
+        "core_id": "machine-1-2.e00001.c0000",
+        "category": "gt_nonoverlap",
+        "core": [
+          840,
+          854
+        ],
+        "channels": [
+          12,
+          9,
+          11,
+          3
+        ]
+      },
+      "variant": "index",
+      "gt": [],
+      "selected": [
+        12,
+        9,
+        11
+      ],
+      "ranking": [
+        12,
+        9,
+        11
+      ]
+    },
+    {
+      "case": {
+        "machine": "machine-1-2",
+        "core_id": "machine-1-2.e00004.c0000",
+        "category": "gt_nonoverlap",
+        "core": [
+          2282,
+          2296
+        ],
+        "channels": [
+          12,
+          9,
+          11,
+          8
+        ]
+      },
+      "variant": "hfz",
+      "gt": [],
+      "selected": [
+        12,
+        9,
+        8
+      ],
+      "ranking": [
+        12,
+        9,
+        8
+      ]
+    },
+    {
+      "case": {
+        "machine": "machine-1-2",
+        "core_id": "machine-1-2.e00004.c0000",
+        "category": "gt_nonoverlap",
+        "core": [
+          2282,
+          2296
+        ],
+        "channels": [
+          12,
+          9,
+          11,
+          8
+        ]
+      },
+      "variant": "index",
+      "gt": [],
+      "selected": [
+        12,
+        9,
+        8
+      ],
+      "ranking": [
+        12,
+        9,
+        8,
+        11
+      ]
+    },
+    {
+      "case": {
+        "machine": "machine-1-2",
+        "core_id": "machine-1-2.e00048.c0000",
+        "category": "gt_overlap",
+        "core": [
+          22291,
+          22310
+        ],
+        "channels": [
+          1,
+          3,
+          14,
+          0,
+          2,
+          32,
+          8
+        ]
+      },
+      "variant": "hfz",
+      "gt": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "selected": [
+        1,
+        3,
+        14,
+        0,
+        2,
+        8
+      ],
+      "ranking": [
+        8,
+        14,
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "case": {
+        "machine": "machine-1-2",
+        "core_id": "machine-1-2.e00048.c0000",
+        "category": "gt_overlap",
+        "core": [
+          22291,
+          22310
+        ],
+        "channels": [
+          1,
+          3,
+          14,
+          0,
+          2,
+          32,
+          8
+        ]
+      },
+      "variant": "index",
+      "gt": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "selected": [
+        1,
+        3,
+        14,
+        0,
+        2,
+        8
+      ],
+      "ranking": [
+        8,
+        14,
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "case": {
+        "machine": "machine-1-6",
+        "core_id": "machine-1-6.e00005.c0000",
+        "category": "gt_nonoverlap",
+        "core": [
+          3766,
+          3780
+        ],
+        "channels": [
+          17,
+          10,
+          9,
+          11,
+          12,
+          29,
+          24,
+          25
+        ]
+      },
+      "variant": "hfz",
+      "gt": [],
+      "selected": [],
+      "ranking": []
+    },
+    {
+      "case": {
+        "machine": "machine-1-6",
+        "core_id": "machine-1-6.e00005.c0000",
+        "category": "gt_nonoverlap",
+        "core": [
+          3766,
+          3780
+        ],
+        "channels": [
+          17,
+          10,
+          9,
+          11,
+          12,
+          29,
+          24,
+          25
+        ]
+      },
+      "variant": "index",
+      "gt": [],
+      "selected": [],
+      "ranking": []
+    },
+    {
+      "case": {
+        "machine": "machine-1-6",
+        "core_id": "machine-1-6.e00021.c0000",
+        "category": "gt_nonoverlap",
+        "core": [
+          10038,
+          10052
+        ],
+        "channels": [
+          10,
+          29,
+          14,
+          15,
+          13
+        ]
+      },
+      "variant": "hfz",
+      "gt": [],
+      "selected": [
+        10
+      ],
+      "ranking": [
+        10,
+        29,
+        14,
+        15,
+        13
+      ]
+    },
+    {
+      "case": {
+        "machine": "machine-1-6",
+        "core_id": "machine-1-6.e00021.c0000",
+        "category": "gt_nonoverlap",
+        "core": [
+          10038,
+          10052
+        ],
+        "channels": [
+          10,
+          29,
+          14,
+          15,
+          13
+        ]
+      },
+      "variant": "index",
+      "gt": [],
+      "selected": [
+        10
+      ],
+      "ranking": [
+        10,
+        29,
+        14,
+        15,
+        13
+      ]
+    },
+    {
+      "case": {
+        "machine": "machine-1-6",
+        "core_id": "machine-1-6.e00007.c0000",
+        "category": "gt_overlap",
+        "core": [
+          4634,
+          4662
+        ],
+        "channels": [
+          32,
+          33,
+          1,
+          3,
+          6,
+          13,
+          14,
+          15
+        ]
+      },
+      "variant": "hfz",
+      "gt": [
+        4,
+        5,
+        8,
+        9,
+        10,
+        12,
+        16,
+        32,
+        33
+      ],
+      "selected": [],
+      "ranking": []
+    },
+    {
+      "case": {
+        "machine": "machine-1-6",
+        "core_id": "machine-1-6.e00007.c0000",
+        "category": "gt_overlap",
+        "core": [
+          4634,
+          4662
+        ],
+        "channels": [
+          32,
+          33,
+          1,
+          3,
+          6,
+          13,
+          14,
+          15
+        ]
+      },
+      "variant": "index",
+      "gt": [
+        4,
+        5,
+        8,
+        9,
+        10,
+        12,
+        16,
+        32,
+        33
+      ],
+      "selected": [],
+      "ranking": []
+    },
+    {
+      "case": {
+        "machine": "machine-1-6",
+        "core_id": "machine-1-6.e00015.c0000",
+        "category": "gt_overlap",
+        "core": [
+          6020,
+          6034
+        ],
+        "channels": [
+          32,
+          33,
+          4,
+          8,
+          12,
+          13,
+          15,
+          14
+        ]
+      },
+      "variant": "hfz",
+      "gt": [
+        32,
+        33
+      ],
+      "selected": [],
+      "ranking": []
+    },
+    {
+      "case": {
+        "machine": "machine-1-6",
+        "core_id": "machine-1-6.e00015.c0000",
+        "category": "gt_overlap",
+        "core": [
+          6020,
+          6034
+        ],
+        "channels": [
+          32,
+          33,
+          4,
+          8,
+          12,
+          13,
+          15,
+          14
+        ]
+      },
+      "variant": "index",
+      "gt": [
+        32,
+        33
+      ],
+      "selected": [],
+      "ranking": []
+    },
+    {
+      "case": {
+        "machine": "machine-3-3",
+        "core": [
+          2170,
+          2184
+        ],
+        "category": "gt_overlap"
+      },
+      "variant": "hfz",
+      "gt": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "selected": [
+        10,
+        12,
+        29
+      ],
+      "ranking": [
+        10,
+        12,
+        29,
+        11,
+        9,
+        3
+      ]
+    },
+    {
+      "case": {
+        "machine": "machine-3-3",
+        "core": [
+          2170,
+          2184
+        ],
+        "category": "gt_overlap"
+      },
+      "variant": "index",
+      "gt": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "selected": [
+        9,
+        10,
+        12,
+        11,
+        29
+      ],
+      "ranking": [
+        9,
+        10,
+        12,
+        11,
+        29
+      ]
+    }
+  ],
+  "limitation": "Eight selected cases, channel GT is event-level union, not pointwise or causal labels. Raw uncertain selections included separately."
+}

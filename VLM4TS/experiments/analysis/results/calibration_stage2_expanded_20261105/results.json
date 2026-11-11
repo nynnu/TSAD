@@ -1,0 +1,4907 @@
+[
+  {
+    "case": 0,
+    "parsed": {
+      "event_validity": "uncertain",
+      "anomalous_channels": [
+        9,
+        10,
+        12,
+        8
+      ],
+      "channel_ranking": [
+        9,
+        10,
+        12,
+        8,
+        0,
+        14,
+        11,
+        13
+      ],
+      "confidence": "medium",
+      "additional_channels_to_review": []
+    },
+    "error": null,
+    "outstanding_requests": [],
+    "diagnostic_status": "uncertain",
+    "image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\analysis\\results\\calibration_stage2_expanded_20261105\\images\\case_00.png",
+    "image_sha256": "281e57ee960609f2aa9a6c74c8c54a79949301a7fdeff1e722025864ba22b78c",
+    "prompt_sha256": "6eb0b2d4e4ac81186c2b3a35e40def3916866b344325879241d0019cd6c24ecd",
+    "reference_quality": [
+      {
+        "channel": 9,
+        "status": "context_supported",
+        "context_support_p": 0.46153846153846156,
+        "validation_outside_fraction": 0.17890625,
+        "validation_focus_rmse_q90": 4.555520619387248,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 10,
+        "status": "context_supported",
+        "context_support_p": 0.3230769230769231,
+        "validation_outside_fraction": 0.11953125,
+        "validation_focus_rmse_q90": 7.2483403541478495,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 12,
+        "status": "context_supported",
+        "context_support_p": 0.26153846153846155,
+        "validation_outside_fraction": 0.16927083333333334,
+        "validation_focus_rmse_q90": 1.0783460039564154,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 8,
+        "status": "context_supported",
+        "context_support_p": 0.3384615384615385,
+        "validation_outside_fraction": 0.37786458333333334,
+        "validation_focus_rmse_q90": 1.1507664784418676,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 0,
+        "status": "context_supported",
+        "context_support_p": 0.15384615384615385,
+        "validation_outside_fraction": 0.23828124999999997,
+        "validation_focus_rmse_q90": 0.19998410950081175,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 14,
+        "status": "context_supported",
+        "context_support_p": 0.3230769230769231,
+        "validation_outside_fraction": 0.36223958333333334,
+        "validation_focus_rmse_q90": 0.25943348903965857,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 11,
+        "status": "context_supported",
+        "context_support_p": 0.2,
+        "validation_outside_fraction": 0.3544270833333333,
+        "validation_focus_rmse_q90": 0.23441896351529348,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.09375
+      },
+      {
+        "channel": 13,
+        "status": "context_supported",
+        "context_support_p": 0.2,
+        "validation_outside_fraction": 0.3841145833333333,
+        "validation_focus_rmse_q90": 0.23584045399499262,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      }
+    ]
+  },
+  {
+    "case": 1,
+    "parsed": {
+      "event_validity": "anomalous",
+      "anomalous_channels": [
+        10,
+        9
+      ],
+      "channel_ranking": [
+        10,
+        9,
+        8,
+        12,
+        6,
+        14,
+        11,
+        0
+      ],
+      "confidence": "medium",
+      "additional_channels_to_review": []
+    },
+    "error": null,
+    "outstanding_requests": [],
+    "diagnostic_status": "anomalous",
+    "image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\analysis\\results\\calibration_stage2_expanded_20261105\\images\\case_01.png",
+    "image_sha256": "f92476f03aa7722a09303a681eafe74c81f6e77e5d13b8e2c55b69fe82a357d3",
+    "prompt_sha256": "3f3d35e13ee3beb621ffdf70860b52980988534903853c9c9283704ad158127b",
+    "reference_quality": [
+      {
+        "channel": 6,
+        "status": "context_supported",
+        "context_support_p": 1.0,
+        "validation_outside_fraction": 0.9979166666666667,
+        "validation_focus_rmse_q90": 0.43684821009622593,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 8,
+        "status": "context_supported",
+        "context_support_p": 0.7692307692307693,
+        "validation_outside_fraction": 0.37786458333333334,
+        "validation_focus_rmse_q90": 1.1507664784418676,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 0,
+        "status": "context_supported",
+        "context_support_p": 0.8,
+        "validation_outside_fraction": 0.23828124999999997,
+        "validation_focus_rmse_q90": 0.19998410950081175,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 10,
+        "status": "context_supported",
+        "context_support_p": 0.5692307692307692,
+        "validation_outside_fraction": 0.11953125,
+        "validation_focus_rmse_q90": 7.2483403541478495,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 14,
+        "status": "context_supported",
+        "context_support_p": 0.15384615384615385,
+        "validation_outside_fraction": 0.36223958333333334,
+        "validation_focus_rmse_q90": 0.25943348903965857,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 12,
+        "status": "context_supported",
+        "context_support_p": 0.9846153846153847,
+        "validation_outside_fraction": 0.16927083333333334,
+        "validation_focus_rmse_q90": 1.0783460039564154,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 9,
+        "status": "context_supported",
+        "context_support_p": 0.8153846153846154,
+        "validation_outside_fraction": 0.17890625,
+        "validation_focus_rmse_q90": 4.555520619387248,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 11,
+        "status": "context_supported",
+        "context_support_p": 0.27692307692307694,
+        "validation_outside_fraction": 0.3544270833333333,
+        "validation_focus_rmse_q90": 0.23441896351529348,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.09375
+      }
+    ]
+  },
+  {
+    "case": 2,
+    "parsed": {
+      "event_validity": "uncertain",
+      "anomalous_channels": [
+        10,
+        9
+      ],
+      "channel_ranking": [
+        10,
+        9,
+        12,
+        8,
+        14,
+        2,
+        3,
+        0
+      ],
+      "confidence": "medium",
+      "additional_channels_to_review": []
+    },
+    "error": null,
+    "outstanding_requests": [],
+    "diagnostic_status": "uncertain",
+    "image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\analysis\\results\\calibration_stage2_expanded_20261105\\images\\case_02.png",
+    "image_sha256": "7d79435107c7f67ad64cd10b14da2bda0494f5ff54d7e4d1129509df306fc0a1",
+    "prompt_sha256": "52d2b4ecebe912077616487412369dff5f64a6f1cbfa0a20d3f3e30bce8564c7",
+    "reference_quality": [
+      {
+        "channel": 14,
+        "status": "context_supported",
+        "context_support_p": 0.5538461538461539,
+        "validation_outside_fraction": 0.36223958333333334,
+        "validation_focus_rmse_q90": 0.25943348903965857,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 8,
+        "status": "context_supported",
+        "context_support_p": 0.7384615384615385,
+        "validation_outside_fraction": 0.37786458333333334,
+        "validation_focus_rmse_q90": 1.1507664784418676,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 2,
+        "status": "context_supported",
+        "context_support_p": 0.7076923076923077,
+        "validation_outside_fraction": 0.3690104166666667,
+        "validation_focus_rmse_q90": 0.24225091211704447,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 10,
+        "status": "context_supported",
+        "context_support_p": 0.8307692307692308,
+        "validation_outside_fraction": 0.11953125,
+        "validation_focus_rmse_q90": 7.2483403541478495,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 3,
+        "status": "context_supported",
+        "context_support_p": 0.7384615384615385,
+        "validation_outside_fraction": 0.3940104166666667,
+        "validation_focus_rmse_q90": 0.2365341856167877,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.09375
+      },
+      {
+        "channel": 12,
+        "status": "context_supported",
+        "context_support_p": 0.8769230769230769,
+        "validation_outside_fraction": 0.16927083333333334,
+        "validation_focus_rmse_q90": 1.0783460039564154,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 9,
+        "status": "context_supported",
+        "context_support_p": 0.8153846153846154,
+        "validation_outside_fraction": 0.17890625,
+        "validation_focus_rmse_q90": 4.555520619387248,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 0,
+        "status": "context_supported",
+        "context_support_p": 0.8307692307692308,
+        "validation_outside_fraction": 0.23828124999999997,
+        "validation_focus_rmse_q90": 0.19998410950081175,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      }
+    ]
+  },
+  {
+    "case": 3,
+    "parsed": {
+      "event_validity": "uncertain",
+      "anomalous_channels": [
+        9,
+        10,
+        17
+      ],
+      "channel_ranking": [
+        9,
+        10,
+        17,
+        8,
+        14,
+        12,
+        13,
+        0
+      ],
+      "confidence": "medium",
+      "additional_channels_to_review": []
+    },
+    "error": null,
+    "outstanding_requests": [],
+    "diagnostic_status": "uncertain",
+    "image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\analysis\\results\\calibration_stage2_expanded_20261105\\images\\case_03.png",
+    "image_sha256": "5fad8065d2916e84a8fbaf6a67efaa9572c17423e80e3d12dbb1adc15488d42c",
+    "prompt_sha256": "d64975a0acded3869a6e953635ab2ae5648ec18bf524bce5898470c2b1e7fe7c",
+    "reference_quality": [
+      {
+        "channel": 9,
+        "status": "context_supported",
+        "context_support_p": 0.8153846153846154,
+        "validation_outside_fraction": 0.17890625,
+        "validation_focus_rmse_q90": 4.555520619387248,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 8,
+        "status": "context_supported",
+        "context_support_p": 1.0,
+        "validation_outside_fraction": 0.37786458333333334,
+        "validation_focus_rmse_q90": 1.1507664784418676,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 10,
+        "status": "context_supported",
+        "context_support_p": 0.8307692307692308,
+        "validation_outside_fraction": 0.11953125,
+        "validation_focus_rmse_q90": 7.2483403541478495,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 0,
+        "status": "context_supported",
+        "context_support_p": 0.6,
+        "validation_outside_fraction": 0.23828124999999997,
+        "validation_focus_rmse_q90": 0.19998410950081175,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 17,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.0010416666666666667,
+        "validation_focus_rmse_q90": 0.0,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.375
+      },
+      {
+        "channel": 14,
+        "status": "context_supported",
+        "context_support_p": 0.9230769230769231,
+        "validation_outside_fraction": 0.36223958333333334,
+        "validation_focus_rmse_q90": 0.25943348903965857,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 12,
+        "status": "context_supported",
+        "context_support_p": 0.9846153846153847,
+        "validation_outside_fraction": 0.16927083333333334,
+        "validation_focus_rmse_q90": 1.0783460039564154,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 13,
+        "status": "context_supported",
+        "context_support_p": 0.6,
+        "validation_outside_fraction": 0.3841145833333333,
+        "validation_focus_rmse_q90": 0.23584045399499262,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      }
+    ]
+  },
+  {
+    "case": 4,
+    "parsed": {
+      "event_validity": "uncertain",
+      "anomalous_channels": [
+        10,
+        9
+      ],
+      "channel_ranking": [
+        10,
+        9,
+        8,
+        13,
+        25,
+        15,
+        12,
+        17
+      ],
+      "confidence": "medium",
+      "additional_channels_to_review": []
+    },
+    "error": null,
+    "outstanding_requests": [],
+    "diagnostic_status": "uncertain",
+    "image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\analysis\\results\\calibration_stage2_expanded_20261105\\images\\case_04.png",
+    "image_sha256": "b3ded0f66bf77928103c865e11d87798ddc259ce4f66d314ce092699f80a90ef",
+    "prompt_sha256": "a1045ffaa1eaf75022a4a8150966650654305dc3d72f4f60b69af55e4b993df3",
+    "reference_quality": [
+      {
+        "channel": 17,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.0010416666666666667,
+        "validation_focus_rmse_q90": 0.0,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.375
+      },
+      {
+        "channel": 13,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.3841145833333333,
+        "validation_focus_rmse_q90": 0.23584045399499262,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 25,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.2911458333333333,
+        "validation_focus_rmse_q90": 0.20954082066423538,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0
+      },
+      {
+        "channel": 10,
+        "status": "context_supported",
+        "context_support_p": 0.7230769230769231,
+        "validation_outside_fraction": 0.11953125,
+        "validation_focus_rmse_q90": 7.2483403541478495,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 15,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.34062499999999996,
+        "validation_focus_rmse_q90": 0.12997684970547083,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.5
+      },
+      {
+        "channel": 9,
+        "status": "context_supported",
+        "context_support_p": 0.6923076923076923,
+        "validation_outside_fraction": 0.17890625,
+        "validation_focus_rmse_q90": 4.555520619387248,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 8,
+        "status": "context_supported",
+        "context_support_p": 0.06153846153846154,
+        "validation_outside_fraction": 0.37786458333333334,
+        "validation_focus_rmse_q90": 1.1507664784418676,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 12,
+        "status": "out_of_support",
+        "context_support_p": 0.03076923076923077,
+        "validation_outside_fraction": 0.16927083333333334,
+        "validation_focus_rmse_q90": 1.0783460039564154,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      }
+    ]
+  },
+  {
+    "case": 5,
+    "parsed": {
+      "event_validity": "uncertain",
+      "anomalous_channels": [
+        9,
+        10
+      ],
+      "channel_ranking": [
+        9,
+        10,
+        8,
+        12,
+        25,
+        13,
+        15,
+        17
+      ],
+      "confidence": "medium",
+      "additional_channels_to_review": []
+    },
+    "error": null,
+    "outstanding_requests": [],
+    "diagnostic_status": "uncertain",
+    "image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\analysis\\results\\calibration_stage2_expanded_20261105\\images\\case_05.png",
+    "image_sha256": "7bffe8babdf7a7aa717e406e6ee7527e7deafa265faa0d82884f812ad71e3751",
+    "prompt_sha256": "c307100127e8002c134480fe67ffc5025429c21307f9546c5cfdc7a6e8482a24",
+    "reference_quality": [
+      {
+        "channel": 9,
+        "status": "context_supported",
+        "context_support_p": 0.6153846153846154,
+        "validation_outside_fraction": 0.17890625,
+        "validation_focus_rmse_q90": 4.555520619387248,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 17,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.0010416666666666667,
+        "validation_focus_rmse_q90": 0.0,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.375
+      },
+      {
+        "channel": 10,
+        "status": "context_supported",
+        "context_support_p": 0.6461538461538462,
+        "validation_outside_fraction": 0.11953125,
+        "validation_focus_rmse_q90": 7.2483403541478495,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 13,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.3841145833333333,
+        "validation_focus_rmse_q90": 0.23584045399499262,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 8,
+        "status": "out_of_support",
+        "context_support_p": 0.046153846153846156,
+        "validation_outside_fraction": 0.37786458333333334,
+        "validation_focus_rmse_q90": 1.1507664784418676,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 12,
+        "status": "out_of_support",
+        "context_support_p": 0.03076923076923077,
+        "validation_outside_fraction": 0.16927083333333334,
+        "validation_focus_rmse_q90": 1.0783460039564154,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 25,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.2911458333333333,
+        "validation_focus_rmse_q90": 0.20954082066423538,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0
+      },
+      {
+        "channel": 15,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.34062499999999996,
+        "validation_focus_rmse_q90": 0.12997684970547083,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.5
+      }
+    ]
+  },
+  {
+    "case": 6,
+    "parsed": {
+      "event_validity": "uncertain",
+      "anomalous_channels": [
+        4,
+        13,
+        15,
+        12,
+        8
+      ],
+      "channel_ranking": [
+        4,
+        15,
+        13,
+        12,
+        8
+      ],
+      "confidence": "low",
+      "additional_channels_to_review": []
+    },
+    "error": null,
+    "outstanding_requests": [],
+    "diagnostic_status": "uncertain",
+    "image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\analysis\\results\\calibration_stage2_expanded_20261105\\images\\case_06.png",
+    "image_sha256": "bc5d044bf50ba4dbd67a13a83a3cc17edd320f086f9bc7cb243dd666005e23eb",
+    "prompt_sha256": "b0f078d9a77e1bd477468fdd1c370fae5b113402ce66abcfc5f31255e8f0d94e",
+    "reference_quality": [
+      {
+        "channel": 10,
+        "status": "context_supported",
+        "context_support_p": 0.3076923076923077,
+        "validation_outside_fraction": 0.11953125,
+        "validation_focus_rmse_q90": 7.2483403541478495,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 4,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.75,
+        "validation_focus_rmse_q90": 0.07142935374276325,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.59375
+      },
+      {
+        "channel": 13,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.3841145833333333,
+        "validation_focus_rmse_q90": 0.23584045399499262,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 15,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.34062499999999996,
+        "validation_focus_rmse_q90": 0.12997684970547083,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.5
+      },
+      {
+        "channel": 12,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.16927083333333334,
+        "validation_focus_rmse_q90": 1.0783460039564154,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 6,
+        "status": "context_supported",
+        "context_support_p": 0.9692307692307692,
+        "validation_outside_fraction": 0.9979166666666667,
+        "validation_focus_rmse_q90": 0.43684821009622593,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 8,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.37786458333333334,
+        "validation_focus_rmse_q90": 1.1507664784418676,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 5,
+        "status": "context_supported",
+        "context_support_p": 0.8461538461538461,
+        "validation_outside_fraction": 0.4049479166666667,
+        "validation_focus_rmse_q90": 0.22955960703140307,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      }
+    ]
+  },
+  {
+    "case": 7,
+    "parsed": {
+      "event_validity": "uncertain",
+      "anomalous_channels": [
+        9,
+        10
+      ],
+      "channel_ranking": [
+        10,
+        9,
+        6,
+        3,
+        2,
+        13,
+        8,
+        12
+      ],
+      "confidence": "medium",
+      "additional_channels_to_review": []
+    },
+    "error": null,
+    "outstanding_requests": [],
+    "diagnostic_status": "uncertain",
+    "image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\analysis\\results\\calibration_stage2_expanded_20261105\\images\\case_07.png",
+    "image_sha256": "401d99dc6a99541fcb949f51e6d79963853c702f11164148e13a274ec5820c44",
+    "prompt_sha256": "374b08ed7964ef5711d9acb38ed1f69e2e46b0aaaad93b30dba1d194dc1c8968",
+    "reference_quality": [
+      {
+        "channel": 13,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.3841145833333333,
+        "validation_focus_rmse_q90": 0.23584045399499262,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 3,
+        "status": "context_supported",
+        "context_support_p": 0.47692307692307695,
+        "validation_outside_fraction": 0.3940104166666667,
+        "validation_focus_rmse_q90": 0.2365341856167877,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.09375
+      },
+      {
+        "channel": 8,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.37786458333333334,
+        "validation_focus_rmse_q90": 1.1507664784418676,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 2,
+        "status": "context_supported",
+        "context_support_p": 0.5076923076923077,
+        "validation_outside_fraction": 0.3690104166666667,
+        "validation_focus_rmse_q90": 0.24225091211704447,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 9,
+        "status": "context_supported",
+        "context_support_p": 0.8153846153846154,
+        "validation_outside_fraction": 0.17890625,
+        "validation_focus_rmse_q90": 4.555520619387248,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 6,
+        "status": "context_supported",
+        "context_support_p": 0.9692307692307692,
+        "validation_outside_fraction": 0.9979166666666667,
+        "validation_focus_rmse_q90": 0.43684821009622593,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 10,
+        "status": "context_supported",
+        "context_support_p": 0.8307692307692308,
+        "validation_outside_fraction": 0.11953125,
+        "validation_focus_rmse_q90": 7.2483403541478495,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 12,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.16927083333333334,
+        "validation_focus_rmse_q90": 1.0783460039564154,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      }
+    ]
+  },
+  {
+    "case": 8,
+    "parsed": {
+      "event_validity": "uncertain",
+      "anomalous_channels": [
+        9,
+        10
+      ],
+      "channel_ranking": [
+        10,
+        9,
+        8,
+        12,
+        15,
+        14,
+        25,
+        13
+      ],
+      "confidence": "medium",
+      "additional_channels_to_review": []
+    },
+    "error": null,
+    "outstanding_requests": [],
+    "diagnostic_status": "uncertain",
+    "image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\analysis\\results\\calibration_stage2_expanded_20261105\\images\\case_08.png",
+    "image_sha256": "8fc35ee71e59a53958c9923febeb7599e3e6e550ae29f7eb4dc60ab363150a52",
+    "prompt_sha256": "b66ba0b021dc926b0e296150d4766533f9fea7b408e0a0eabf45af7d890e7ff2",
+    "reference_quality": [
+      {
+        "channel": 13,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.3841145833333333,
+        "validation_focus_rmse_q90": 0.23584045399499262,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 9,
+        "status": "context_supported",
+        "context_support_p": 0.6923076923076923,
+        "validation_outside_fraction": 0.17890625,
+        "validation_focus_rmse_q90": 4.555520619387248,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 10,
+        "status": "context_supported",
+        "context_support_p": 0.3384615384615385,
+        "validation_outside_fraction": 0.11953125,
+        "validation_focus_rmse_q90": 7.2483403541478495,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 15,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.34062499999999996,
+        "validation_focus_rmse_q90": 0.12997684970547083,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.5
+      },
+      {
+        "channel": 8,
+        "status": "context_supported",
+        "context_support_p": 0.06153846153846154,
+        "validation_outside_fraction": 0.37786458333333334,
+        "validation_focus_rmse_q90": 1.1507664784418676,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 12,
+        "status": "out_of_support",
+        "context_support_p": 0.03076923076923077,
+        "validation_outside_fraction": 0.16927083333333334,
+        "validation_focus_rmse_q90": 1.0783460039564154,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 25,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.2911458333333333,
+        "validation_focus_rmse_q90": 0.20954082066423538,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0
+      },
+      {
+        "channel": 14,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.36223958333333334,
+        "validation_focus_rmse_q90": 0.25943348903965857,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      }
+    ]
+  },
+  {
+    "case": 9,
+    "parsed": {
+      "event_validity": "uncertain",
+      "anomalous_channels": [
+        9,
+        10
+      ],
+      "channel_ranking": [
+        10,
+        9,
+        8,
+        12,
+        15,
+        0,
+        13,
+        25
+      ],
+      "confidence": "medium",
+      "additional_channels_to_review": []
+    },
+    "error": null,
+    "outstanding_requests": [],
+    "diagnostic_status": "uncertain",
+    "image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\analysis\\results\\calibration_stage2_expanded_20261105\\images\\case_09.png",
+    "image_sha256": "c673050f0dc4c9e53c23630e8c74fc3b886431b563b5af979cb91360314536bb",
+    "prompt_sha256": "7cee53d16c3ff593a3fffe78b00985d71c0ccafa6ccf8840c9e3f2802e5e07e2",
+    "reference_quality": [
+      {
+        "channel": 13,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.3841145833333333,
+        "validation_focus_rmse_q90": 0.23584045399499262,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 0,
+        "status": "context_supported",
+        "context_support_p": 0.15384615384615385,
+        "validation_outside_fraction": 0.23828124999999997,
+        "validation_focus_rmse_q90": 0.19998410950081175,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 9,
+        "status": "context_supported",
+        "context_support_p": 0.6923076923076923,
+        "validation_outside_fraction": 0.17890625,
+        "validation_focus_rmse_q90": 4.555520619387248,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 15,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.34062499999999996,
+        "validation_focus_rmse_q90": 0.12997684970547083,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.5
+      },
+      {
+        "channel": 8,
+        "status": "context_supported",
+        "context_support_p": 0.06153846153846154,
+        "validation_outside_fraction": 0.37786458333333334,
+        "validation_focus_rmse_q90": 1.1507664784418676,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 10,
+        "status": "context_supported",
+        "context_support_p": 0.6307692307692307,
+        "validation_outside_fraction": 0.11953125,
+        "validation_focus_rmse_q90": 7.2483403541478495,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 25,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.2911458333333333,
+        "validation_focus_rmse_q90": 0.20954082066423538,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0
+      },
+      {
+        "channel": 12,
+        "status": "out_of_support",
+        "context_support_p": 0.03076923076923077,
+        "validation_outside_fraction": 0.16927083333333334,
+        "validation_focus_rmse_q90": 1.0783460039564154,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      }
+    ]
+  },
+  {
+    "case": 10,
+    "parsed": {
+      "event_validity": "uncertain",
+      "anomalous_channels": [
+        9,
+        10,
+        8
+      ],
+      "channel_ranking": [
+        10,
+        9,
+        8
+      ],
+      "confidence": "medium",
+      "additional_channels_to_review": []
+    },
+    "error": null,
+    "outstanding_requests": [],
+    "diagnostic_status": "uncertain",
+    "image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\analysis\\results\\calibration_stage2_expanded_20261105\\images\\case_10.png",
+    "image_sha256": "95e772fb8d65a80dc67b5396c3066cd7b5bc9d74206b5303bc11a9f73fdaf59c",
+    "prompt_sha256": "23b61974c263ad74b6a959d6e36c98a55df18ebc4fcd3f6bb8c4657e14918433",
+    "reference_quality": [
+      {
+        "channel": 13,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.3841145833333333,
+        "validation_focus_rmse_q90": 0.23584045399499262,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 9,
+        "status": "context_supported",
+        "context_support_p": 0.26153846153846155,
+        "validation_outside_fraction": 0.17890625,
+        "validation_focus_rmse_q90": 4.555520619387248,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 10,
+        "status": "context_supported",
+        "context_support_p": 0.18461538461538463,
+        "validation_outside_fraction": 0.11953125,
+        "validation_focus_rmse_q90": 7.2483403541478495,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 8,
+        "status": "context_supported",
+        "context_support_p": 0.06153846153846154,
+        "validation_outside_fraction": 0.37786458333333334,
+        "validation_focus_rmse_q90": 1.1507664784418676,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 12,
+        "status": "out_of_support",
+        "context_support_p": 0.03076923076923077,
+        "validation_outside_fraction": 0.16927083333333334,
+        "validation_focus_rmse_q90": 1.0783460039564154,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 15,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.34062499999999996,
+        "validation_focus_rmse_q90": 0.12997684970547083,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.5
+      },
+      {
+        "channel": 0,
+        "status": "context_supported",
+        "context_support_p": 0.15384615384615385,
+        "validation_outside_fraction": 0.23828124999999997,
+        "validation_focus_rmse_q90": 0.19998410950081175,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 25,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.2911458333333333,
+        "validation_focus_rmse_q90": 0.20954082066423538,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0
+      }
+    ]
+  },
+  {
+    "case": 11,
+    "parsed": {
+      "event_validity": "uncertain",
+      "anomalous_channels": [
+        23,
+        10,
+        9
+      ],
+      "channel_ranking": [
+        10,
+        9,
+        23
+      ],
+      "confidence": "medium",
+      "additional_channels_to_review": []
+    },
+    "error": null,
+    "outstanding_requests": [],
+    "diagnostic_status": "uncertain",
+    "image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\analysis\\results\\calibration_stage2_expanded_20261105\\images\\case_11.png",
+    "image_sha256": "0d1b9c85f40a2205ae280800ea063a5ac50291515f93005430ce80e6aa1fbf6b",
+    "prompt_sha256": "f7b2b3a92401f8aee1450fade1621c01fc7decf4d6870506bd1431b54e9795aa",
+    "reference_quality": [
+      {
+        "channel": 13,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.3841145833333333,
+        "validation_focus_rmse_q90": 0.23584045399499262,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 23,
+        "status": "validation_unstable",
+        "context_support_p": 0.46153846153846156,
+        "validation_outside_fraction": 0.34895833333333337,
+        "validation_focus_rmse_q90": 0.25996616668593714,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.21875
+      },
+      {
+        "channel": 10,
+        "status": "context_supported",
+        "context_support_p": 0.6923076923076923,
+        "validation_outside_fraction": 0.11953125,
+        "validation_focus_rmse_q90": 7.2483403541478495,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 2,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.3690104166666667,
+        "validation_focus_rmse_q90": 0.24225091211704447,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 8,
+        "status": "context_supported",
+        "context_support_p": 0.06153846153846154,
+        "validation_outside_fraction": 0.37786458333333334,
+        "validation_focus_rmse_q90": 1.1507664784418676,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 3,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.3940104166666667,
+        "validation_focus_rmse_q90": 0.2365341856167877,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.09375
+      },
+      {
+        "channel": 9,
+        "status": "context_supported",
+        "context_support_p": 0.6461538461538462,
+        "validation_outside_fraction": 0.17890625,
+        "validation_focus_rmse_q90": 4.555520619387248,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 15,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.34062499999999996,
+        "validation_focus_rmse_q90": 0.12997684970547083,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.5
+      }
+    ]
+  },
+  {
+    "case": 12,
+    "parsed": {
+      "event_validity": "uncertain",
+      "anomalous_channels": [
+        9,
+        10
+      ],
+      "channel_ranking": [
+        10,
+        9,
+        8,
+        2,
+        3,
+        13,
+        15,
+        12
+      ],
+      "confidence": "medium",
+      "additional_channels_to_review": []
+    },
+    "error": null,
+    "outstanding_requests": [],
+    "diagnostic_status": "uncertain",
+    "image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\analysis\\results\\calibration_stage2_expanded_20261105\\images\\case_12.png",
+    "image_sha256": "680f2ca55bec40a6611da9809c524a5ef7a54241e56679a598d4c01056743b19",
+    "prompt_sha256": "eaba5dfd6d69a471f30b42129b370e03e3769934dab5b1d7a9fd2f0fcd7aae1d",
+    "reference_quality": [
+      {
+        "channel": 13,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.3841145833333333,
+        "validation_focus_rmse_q90": 0.23584045399499262,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 9,
+        "status": "context_supported",
+        "context_support_p": 0.3384615384615385,
+        "validation_outside_fraction": 0.17890625,
+        "validation_focus_rmse_q90": 4.555520619387248,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 10,
+        "status": "context_supported",
+        "context_support_p": 0.49230769230769234,
+        "validation_outside_fraction": 0.11953125,
+        "validation_focus_rmse_q90": 7.2483403541478495,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 15,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.34062499999999996,
+        "validation_focus_rmse_q90": 0.12997684970547083,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.5
+      },
+      {
+        "channel": 8,
+        "status": "context_supported",
+        "context_support_p": 0.06153846153846154,
+        "validation_outside_fraction": 0.37786458333333334,
+        "validation_focus_rmse_q90": 1.1507664784418676,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 12,
+        "status": "out_of_support",
+        "context_support_p": 0.03076923076923077,
+        "validation_outside_fraction": 0.16927083333333334,
+        "validation_focus_rmse_q90": 1.0783460039564154,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 2,
+        "status": "context_supported",
+        "context_support_p": 0.12307692307692308,
+        "validation_outside_fraction": 0.3690104166666667,
+        "validation_focus_rmse_q90": 0.24225091211704447,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 3,
+        "status": "context_supported",
+        "context_support_p": 0.1076923076923077,
+        "validation_outside_fraction": 0.3940104166666667,
+        "validation_focus_rmse_q90": 0.2365341856167877,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.09375
+      }
+    ]
+  },
+  {
+    "case": 13,
+    "parsed": {
+      "event_validity": "uncertain",
+      "anomalous_channels": [
+        23,
+        13,
+        15,
+        6,
+        12,
+        25,
+        8
+      ],
+      "channel_ranking": [
+        23,
+        6,
+        8,
+        12,
+        13,
+        15,
+        25
+      ],
+      "confidence": "low",
+      "additional_channels_to_review": []
+    },
+    "error": null,
+    "outstanding_requests": [],
+    "diagnostic_status": "uncertain",
+    "image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\analysis\\results\\calibration_stage2_expanded_20261105\\images\\case_13.png",
+    "image_sha256": "b617264770a8c9be81fbca961e56f89aa51d477402352af0620809e406a5b384",
+    "prompt_sha256": "a0ec366728b804ccd5e719bfecd7450256f92a222929a37372ea9f0c40a8866c",
+    "reference_quality": [
+      {
+        "channel": 16,
+        "status": "context_supported",
+        "context_support_p": 1.0,
+        "validation_outside_fraction": 0.00026041666666666666,
+        "validation_focus_rmse_q90": 0.0,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 23,
+        "status": "validation_unstable",
+        "context_support_p": 0.4307692307692308,
+        "validation_outside_fraction": 0.34895833333333337,
+        "validation_focus_rmse_q90": 0.25996616668593714,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.21875
+      },
+      {
+        "channel": 13,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.3841145833333333,
+        "validation_focus_rmse_q90": 0.23584045399499262,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 15,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.34062499999999996,
+        "validation_focus_rmse_q90": 0.12997684970547083,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.5
+      },
+      {
+        "channel": 6,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.9979166666666667,
+        "validation_focus_rmse_q90": 0.43684821009622593,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 12,
+        "status": "out_of_support",
+        "context_support_p": 0.03076923076923077,
+        "validation_outside_fraction": 0.16927083333333334,
+        "validation_focus_rmse_q90": 1.0783460039564154,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 25,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.2911458333333333,
+        "validation_focus_rmse_q90": 0.20954082066423538,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0
+      },
+      {
+        "channel": 8,
+        "status": "out_of_support",
+        "context_support_p": 0.03076923076923077,
+        "validation_outside_fraction": 0.37786458333333334,
+        "validation_focus_rmse_q90": 1.1507664784418676,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      }
+    ]
+  },
+  {
+    "case": 14,
+    "parsed": {
+      "event_validity": "uncertain",
+      "anomalous_channels": [
+        9,
+        10
+      ],
+      "channel_ranking": [
+        10,
+        9,
+        8,
+        23,
+        12,
+        13,
+        15,
+        17
+      ],
+      "confidence": "medium",
+      "additional_channels_to_review": []
+    },
+    "error": null,
+    "outstanding_requests": [],
+    "diagnostic_status": "uncertain",
+    "image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\analysis\\results\\calibration_stage2_expanded_20261105\\images\\case_14.png",
+    "image_sha256": "6c367ac3713c1bf43a1ff2204f6c503ba5bf058483244d8d985fe444ae200bed",
+    "prompt_sha256": "baa014fabdb7e808d7a1dcf02837106cd94f64c07239119d8225b3f7183ece9d",
+    "reference_quality": [
+      {
+        "channel": 13,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.3841145833333333,
+        "validation_focus_rmse_q90": 0.23584045399499262,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 17,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.0010416666666666667,
+        "validation_focus_rmse_q90": 0.0,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.375
+      },
+      {
+        "channel": 23,
+        "status": "validation_unstable",
+        "context_support_p": 0.47692307692307695,
+        "validation_outside_fraction": 0.34895833333333337,
+        "validation_focus_rmse_q90": 0.25996616668593714,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.21875
+      },
+      {
+        "channel": 8,
+        "status": "context_supported",
+        "context_support_p": 0.06153846153846154,
+        "validation_outside_fraction": 0.37786458333333334,
+        "validation_focus_rmse_q90": 1.1507664784418676,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 9,
+        "status": "context_supported",
+        "context_support_p": 0.7230769230769231,
+        "validation_outside_fraction": 0.17890625,
+        "validation_focus_rmse_q90": 4.555520619387248,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 10,
+        "status": "context_supported",
+        "context_support_p": 0.7230769230769231,
+        "validation_outside_fraction": 0.11953125,
+        "validation_focus_rmse_q90": 7.2483403541478495,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 12,
+        "status": "out_of_support",
+        "context_support_p": 0.03076923076923077,
+        "validation_outside_fraction": 0.16927083333333334,
+        "validation_focus_rmse_q90": 1.0783460039564154,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 15,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.34062499999999996,
+        "validation_focus_rmse_q90": 0.12997684970547083,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.5
+      }
+    ]
+  },
+  {
+    "case": 15,
+    "parsed": {
+      "event_validity": "uncertain",
+      "anomalous_channels": [
+        10,
+        9
+      ],
+      "channel_ranking": [
+        10,
+        9,
+        11,
+        12,
+        8,
+        14,
+        13,
+        15
+      ],
+      "confidence": "medium",
+      "additional_channels_to_review": []
+    },
+    "error": null,
+    "outstanding_requests": [],
+    "diagnostic_status": "uncertain",
+    "image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\analysis\\results\\calibration_stage2_expanded_20261105\\images\\case_15.png",
+    "image_sha256": "589ab670c9125ffe5c1f31ab1c5aa9c4cfddb86e20f405d18233295216661aec",
+    "prompt_sha256": "825fa6888d2a9c2c59e4225d9f192e59cb54802b2c2847045aaf10ce65cc7dd6",
+    "reference_quality": [
+      {
+        "channel": 13,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.3841145833333333,
+        "validation_focus_rmse_q90": 0.23584045399499262,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 10,
+        "status": "context_supported",
+        "context_support_p": 0.6923076923076923,
+        "validation_outside_fraction": 0.11953125,
+        "validation_focus_rmse_q90": 7.2483403541478495,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 9,
+        "status": "context_supported",
+        "context_support_p": 0.5692307692307692,
+        "validation_outside_fraction": 0.17890625,
+        "validation_focus_rmse_q90": 4.555520619387248,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 15,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.34062499999999996,
+        "validation_focus_rmse_q90": 0.12997684970547083,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.5
+      },
+      {
+        "channel": 8,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.37786458333333334,
+        "validation_focus_rmse_q90": 1.1507664784418676,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 12,
+        "status": "out_of_support",
+        "context_support_p": 0.03076923076923077,
+        "validation_outside_fraction": 0.16927083333333334,
+        "validation_focus_rmse_q90": 1.0783460039564154,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 11,
+        "status": "context_supported",
+        "context_support_p": 0.16923076923076924,
+        "validation_outside_fraction": 0.3544270833333333,
+        "validation_focus_rmse_q90": 0.23441896351529348,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.09375
+      },
+      {
+        "channel": 14,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.36223958333333334,
+        "validation_focus_rmse_q90": 0.25943348903965857,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      }
+    ]
+  },
+  {
+    "case": 16,
+    "parsed": {
+      "event_validity": "uncertain",
+      "anomalous_channels": [
+        6,
+        12,
+        8
+      ],
+      "channel_ranking": [
+        6,
+        12,
+        8,
+        11,
+        10,
+        14,
+        13,
+        15
+      ],
+      "confidence": "medium",
+      "additional_channels_to_review": []
+    },
+    "error": null,
+    "outstanding_requests": [],
+    "diagnostic_status": "uncertain",
+    "image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\analysis\\results\\calibration_stage2_expanded_20261105\\images\\case_16.png",
+    "image_sha256": "8d248c0016dc44c894d11691f6a900ed7ca20018ee7453d728f6165adb52f2b8",
+    "prompt_sha256": "c22227524c934024558e16bf5f0ba0d78af60f6912c42b02a5f4a64cfb33c79a",
+    "reference_quality": [
+      {
+        "channel": 13,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.3841145833333333,
+        "validation_focus_rmse_q90": 0.23584045399499262,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 6,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.9979166666666667,
+        "validation_focus_rmse_q90": 0.43684821009622593,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 12,
+        "status": "out_of_support",
+        "context_support_p": 0.03076923076923077,
+        "validation_outside_fraction": 0.16927083333333334,
+        "validation_focus_rmse_q90": 1.0783460039564154,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 11,
+        "status": "context_supported",
+        "context_support_p": 0.26153846153846155,
+        "validation_outside_fraction": 0.3544270833333333,
+        "validation_focus_rmse_q90": 0.23441896351529348,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.09375
+      },
+      {
+        "channel": 10,
+        "status": "context_supported",
+        "context_support_p": 0.35384615384615387,
+        "validation_outside_fraction": 0.11953125,
+        "validation_focus_rmse_q90": 7.2483403541478495,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 14,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.36223958333333334,
+        "validation_focus_rmse_q90": 0.25943348903965857,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 8,
+        "status": "out_of_support",
+        "context_support_p": 0.046153846153846156,
+        "validation_outside_fraction": 0.37786458333333334,
+        "validation_focus_rmse_q90": 1.1507664784418676,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 15,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.34062499999999996,
+        "validation_focus_rmse_q90": 0.12997684970547083,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.5
+      }
+    ]
+  },
+  {
+    "case": 17,
+    "parsed": {
+      "event_validity": "uncertain",
+      "anomalous_channels": [
+        9,
+        10
+      ],
+      "channel_ranking": [
+        9,
+        10,
+        8,
+        12,
+        25,
+        0,
+        13,
+        15
+      ],
+      "confidence": "low",
+      "additional_channels_to_review": []
+    },
+    "error": null,
+    "outstanding_requests": [],
+    "diagnostic_status": "uncertain",
+    "image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\analysis\\results\\calibration_stage2_expanded_20261105\\images\\case_17.png",
+    "image_sha256": "41c65e0d9c52f818cfa214f53740dc2949be67deb0bd73c008f07aaf000218e4",
+    "prompt_sha256": "a73e5db26e023e9045bfacfb66dfa4a12ee1e2fa7f0f0c0e4ce041cce45705da",
+    "reference_quality": [
+      {
+        "channel": 9,
+        "status": "context_supported",
+        "context_support_p": 0.12307692307692308,
+        "validation_outside_fraction": 0.17890625,
+        "validation_focus_rmse_q90": 4.555520619387248,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 13,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.3841145833333333,
+        "validation_focus_rmse_q90": 0.23584045399499262,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 10,
+        "status": "context_supported",
+        "context_support_p": 0.13846153846153847,
+        "validation_outside_fraction": 0.11953125,
+        "validation_focus_rmse_q90": 7.2483403541478495,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 8,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.37786458333333334,
+        "validation_focus_rmse_q90": 1.1507664784418676,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 12,
+        "status": "out_of_support",
+        "context_support_p": 0.03076923076923077,
+        "validation_outside_fraction": 0.16927083333333334,
+        "validation_focus_rmse_q90": 1.0783460039564154,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 0,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.23828124999999997,
+        "validation_focus_rmse_q90": 0.19998410950081175,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 15,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.34062499999999996,
+        "validation_focus_rmse_q90": 0.12997684970547083,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.5
+      },
+      {
+        "channel": 25,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.2911458333333333,
+        "validation_focus_rmse_q90": 0.20954082066423538,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0
+      }
+    ]
+  },
+  {
+    "case": 18,
+    "parsed": {
+      "event_validity": "anomalous",
+      "anomalous_channels": [
+        9,
+        10
+      ],
+      "channel_ranking": [
+        10,
+        9,
+        8,
+        12,
+        0,
+        14,
+        13,
+        15
+      ],
+      "confidence": "medium",
+      "additional_channels_to_review": []
+    },
+    "error": null,
+    "outstanding_requests": [],
+    "diagnostic_status": "anomalous",
+    "image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\analysis\\results\\calibration_stage2_expanded_20261105\\images\\case_18.png",
+    "image_sha256": "dae35d126134b9a1f3556671769a80acb17b64be862ce2cf2be803dd3b36d9b8",
+    "prompt_sha256": "b8c17f74d5b48bf4ed1fe226de6fac5e8357e9a8575b77750e496ff4f53680c4",
+    "reference_quality": [
+      {
+        "channel": 13,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.3841145833333333,
+        "validation_focus_rmse_q90": 0.23584045399499262,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 15,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.34062499999999996,
+        "validation_focus_rmse_q90": 0.12997684970547083,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.5
+      },
+      {
+        "channel": 8,
+        "status": "out_of_support",
+        "context_support_p": 0.03076923076923077,
+        "validation_outside_fraction": 0.37786458333333334,
+        "validation_focus_rmse_q90": 1.1507664784418676,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 9,
+        "status": "context_supported",
+        "context_support_p": 0.5384615384615384,
+        "validation_outside_fraction": 0.17890625,
+        "validation_focus_rmse_q90": 4.555520619387248,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 14,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.36223958333333334,
+        "validation_focus_rmse_q90": 0.25943348903965857,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 12,
+        "status": "out_of_support",
+        "context_support_p": 0.03076923076923077,
+        "validation_outside_fraction": 0.16927083333333334,
+        "validation_focus_rmse_q90": 1.0783460039564154,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 10,
+        "status": "context_supported",
+        "context_support_p": 0.4153846153846154,
+        "validation_outside_fraction": 0.11953125,
+        "validation_focus_rmse_q90": 7.2483403541478495,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 0,
+        "status": "context_supported",
+        "context_support_p": 0.15384615384615385,
+        "validation_outside_fraction": 0.23828124999999997,
+        "validation_focus_rmse_q90": 0.19998410950081175,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      }
+    ]
+  },
+  {
+    "case": 19,
+    "parsed": {
+      "event_validity": "uncertain",
+      "anomalous_channels": [
+        9,
+        10
+      ],
+      "channel_ranking": [
+        10,
+        9,
+        12,
+        8,
+        13,
+        15,
+        25,
+        6
+      ],
+      "confidence": "medium",
+      "additional_channels_to_review": []
+    },
+    "error": null,
+    "outstanding_requests": [],
+    "diagnostic_status": "uncertain",
+    "image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\analysis\\results\\calibration_stage2_expanded_20261105\\images\\case_19.png",
+    "image_sha256": "d23f2c6e9338550a93e6b29bbe369681c4749e9994e184e2bade61e6769d03cf",
+    "prompt_sha256": "09f41b55243e298ae6e408fce67941deceda1813d4830832fd806b5856c568b2",
+    "reference_quality": [
+      {
+        "channel": 13,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.3841145833333333,
+        "validation_focus_rmse_q90": 0.23584045399499262,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 9,
+        "status": "context_supported",
+        "context_support_p": 0.38461538461538464,
+        "validation_outside_fraction": 0.17890625,
+        "validation_focus_rmse_q90": 4.555520619387248,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 10,
+        "status": "context_supported",
+        "context_support_p": 0.6923076923076923,
+        "validation_outside_fraction": 0.11953125,
+        "validation_focus_rmse_q90": 7.2483403541478495,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 6,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.9979166666666667,
+        "validation_focus_rmse_q90": 0.43684821009622593,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 15,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.34062499999999996,
+        "validation_focus_rmse_q90": 0.12997684970547083,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.5
+      },
+      {
+        "channel": 12,
+        "status": "out_of_support",
+        "context_support_p": 0.03076923076923077,
+        "validation_outside_fraction": 0.16927083333333334,
+        "validation_focus_rmse_q90": 1.0783460039564154,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 8,
+        "status": "out_of_support",
+        "context_support_p": 0.03076923076923077,
+        "validation_outside_fraction": 0.37786458333333334,
+        "validation_focus_rmse_q90": 1.1507664784418676,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 25,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.2911458333333333,
+        "validation_focus_rmse_q90": 0.20954082066423538,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0
+      }
+    ]
+  },
+  {
+    "case": 20,
+    "parsed": {
+      "event_validity": "uncertain",
+      "anomalous_channels": [
+        12,
+        8,
+        6
+      ],
+      "channel_ranking": [
+        8,
+        12,
+        6,
+        13,
+        14,
+        15,
+        11,
+        0
+      ],
+      "confidence": "medium",
+      "additional_channels_to_review": []
+    },
+    "error": null,
+    "outstanding_requests": [],
+    "diagnostic_status": "uncertain",
+    "image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\analysis\\results\\calibration_stage2_expanded_20261105\\images\\case_20.png",
+    "image_sha256": "b72f6f307083370f9e4eab3fde93b74a37a105922a677bcc41d0c04c9eaafaad",
+    "prompt_sha256": "8ae568b39584004155c347bf2455eca98943b4669742124ef52eb80d68fdd5e9",
+    "reference_quality": [
+      {
+        "channel": 13,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.3841145833333333,
+        "validation_focus_rmse_q90": 0.23584045399499262,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 11,
+        "status": "context_supported",
+        "context_support_p": 0.16923076923076924,
+        "validation_outside_fraction": 0.3544270833333333,
+        "validation_focus_rmse_q90": 0.23441896351529348,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.09375
+      },
+      {
+        "channel": 12,
+        "status": "out_of_support",
+        "context_support_p": 0.03076923076923077,
+        "validation_outside_fraction": 0.16927083333333334,
+        "validation_focus_rmse_q90": 1.0783460039564154,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 14,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.36223958333333334,
+        "validation_focus_rmse_q90": 0.25943348903965857,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 8,
+        "status": "out_of_support",
+        "context_support_p": 0.03076923076923077,
+        "validation_outside_fraction": 0.37786458333333334,
+        "validation_focus_rmse_q90": 1.1507664784418676,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 6,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.9979166666666667,
+        "validation_focus_rmse_q90": 0.43684821009622593,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 15,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.34062499999999996,
+        "validation_focus_rmse_q90": 0.12997684970547083,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.5
+      },
+      {
+        "channel": 0,
+        "status": "context_supported",
+        "context_support_p": 0.24615384615384617,
+        "validation_outside_fraction": 0.23828124999999997,
+        "validation_focus_rmse_q90": 0.19998410950081175,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      }
+    ]
+  },
+  {
+    "case": 21,
+    "parsed": {
+      "event_validity": "uncertain",
+      "anomalous_channels": [
+        10,
+        9
+      ],
+      "channel_ranking": [
+        10,
+        9,
+        8,
+        12,
+        2,
+        13,
+        15,
+        14
+      ],
+      "confidence": "medium",
+      "additional_channels_to_review": []
+    },
+    "error": null,
+    "outstanding_requests": [],
+    "diagnostic_status": "uncertain",
+    "image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\analysis\\results\\calibration_stage2_expanded_20261105\\images\\case_21.png",
+    "image_sha256": "e6a6efaa46b26c83d5ef3370519401e4bca7df8a9408d3d92e9d70a21130085f",
+    "prompt_sha256": "c9285f7dbaf2e20a51146d0456dbe3ecfe4e3bc9925dcf7c2a12fc51e81751c8",
+    "reference_quality": [
+      {
+        "channel": 13,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.3841145833333333,
+        "validation_focus_rmse_q90": 0.23584045399499262,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 15,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.34062499999999996,
+        "validation_focus_rmse_q90": 0.12997684970547083,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.5
+      },
+      {
+        "channel": 8,
+        "status": "out_of_support",
+        "context_support_p": 0.03076923076923077,
+        "validation_outside_fraction": 0.37786458333333334,
+        "validation_focus_rmse_q90": 1.1507664784418676,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 14,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.36223958333333334,
+        "validation_focus_rmse_q90": 0.25943348903965857,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 10,
+        "status": "context_supported",
+        "context_support_p": 0.18461538461538463,
+        "validation_outside_fraction": 0.11953125,
+        "validation_focus_rmse_q90": 7.2483403541478495,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 9,
+        "status": "context_supported",
+        "context_support_p": 0.12307692307692308,
+        "validation_outside_fraction": 0.17890625,
+        "validation_focus_rmse_q90": 4.555520619387248,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 2,
+        "status": "context_supported",
+        "context_support_p": 0.2,
+        "validation_outside_fraction": 0.3690104166666667,
+        "validation_focus_rmse_q90": 0.24225091211704447,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 12,
+        "status": "out_of_support",
+        "context_support_p": 0.03076923076923077,
+        "validation_outside_fraction": 0.16927083333333334,
+        "validation_focus_rmse_q90": 1.0783460039564154,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      }
+    ]
+  },
+  {
+    "case": 22,
+    "parsed": {
+      "event_validity": "uncertain",
+      "anomalous_channels": [
+        9,
+        10
+      ],
+      "channel_ranking": [
+        9,
+        10,
+        8,
+        12,
+        14,
+        0,
+        11,
+        6
+      ],
+      "confidence": "medium",
+      "additional_channels_to_review": []
+    },
+    "error": null,
+    "outstanding_requests": [],
+    "diagnostic_status": "uncertain",
+    "image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\analysis\\results\\calibration_stage2_expanded_20261105\\images\\case_22.png",
+    "image_sha256": "a779706eef6572f88f5a74f1f173c35b405f0a8db4be925a40d974db85bfde11",
+    "prompt_sha256": "4b8a5c9350c2947639db743eb84ec2ad1250959af36c8e28c4361eb02842c7f8",
+    "reference_quality": [
+      {
+        "channel": 14,
+        "status": "context_supported",
+        "context_support_p": 0.9230769230769231,
+        "validation_outside_fraction": 0.36223958333333334,
+        "validation_focus_rmse_q90": 0.25943348903965857,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 8,
+        "status": "context_supported",
+        "context_support_p": 0.9538461538461539,
+        "validation_outside_fraction": 0.37786458333333334,
+        "validation_focus_rmse_q90": 1.1507664784418676,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 12,
+        "status": "context_supported",
+        "context_support_p": 0.9384615384615385,
+        "validation_outside_fraction": 0.16927083333333334,
+        "validation_focus_rmse_q90": 1.0783460039564154,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 9,
+        "status": "context_supported",
+        "context_support_p": 0.8769230769230769,
+        "validation_outside_fraction": 0.17890625,
+        "validation_focus_rmse_q90": 4.555520619387248,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 11,
+        "status": "context_supported",
+        "context_support_p": 0.3384615384615385,
+        "validation_outside_fraction": 0.3544270833333333,
+        "validation_focus_rmse_q90": 0.23441896351529348,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.09375
+      },
+      {
+        "channel": 6,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.9979166666666667,
+        "validation_focus_rmse_q90": 0.43684821009622593,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 10,
+        "status": "context_supported",
+        "context_support_p": 0.8769230769230769,
+        "validation_outside_fraction": 0.11953125,
+        "validation_focus_rmse_q90": 7.2483403541478495,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 0,
+        "status": "context_supported",
+        "context_support_p": 0.5692307692307692,
+        "validation_outside_fraction": 0.23828124999999997,
+        "validation_focus_rmse_q90": 0.19998410950081175,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      }
+    ]
+  },
+  {
+    "case": 23,
+    "parsed": {
+      "event_validity": "uncertain",
+      "anomalous_channels": [
+        10,
+        9,
+        12
+      ],
+      "channel_ranking": [
+        10,
+        9,
+        12,
+        11,
+        15,
+        0,
+        25,
+        6
+      ],
+      "confidence": "medium",
+      "additional_channels_to_review": []
+    },
+    "error": null,
+    "outstanding_requests": [],
+    "diagnostic_status": "uncertain",
+    "image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\analysis\\results\\calibration_stage2_expanded_20261105\\images\\case_23.png",
+    "image_sha256": "382811e89fddeb05c687c0426d7c58ae043c51a0810aee467f66092f7459c70c",
+    "prompt_sha256": "da6d99a8f9b3902542d194ddd5ea804f2aa0092934357cc463a6590996242b5b",
+    "reference_quality": [
+      {
+        "channel": 11,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.3544270833333333,
+        "validation_focus_rmse_q90": 0.23441896351529348,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.09375
+      },
+      {
+        "channel": 10,
+        "status": "context_supported",
+        "context_support_p": 0.38461538461538464,
+        "validation_outside_fraction": 0.11953125,
+        "validation_focus_rmse_q90": 7.2483403541478495,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 9,
+        "status": "context_supported",
+        "context_support_p": 0.26153846153846155,
+        "validation_outside_fraction": 0.17890625,
+        "validation_focus_rmse_q90": 4.555520619387248,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 15,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.34062499999999996,
+        "validation_focus_rmse_q90": 0.12997684970547083,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.5
+      },
+      {
+        "channel": 12,
+        "status": "context_supported",
+        "context_support_p": 0.12307692307692308,
+        "validation_outside_fraction": 0.16927083333333334,
+        "validation_focus_rmse_q90": 1.0783460039564154,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 6,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.9979166666666667,
+        "validation_focus_rmse_q90": 0.43684821009622593,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 25,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.2911458333333333,
+        "validation_focus_rmse_q90": 0.20954082066423538,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0
+      },
+      {
+        "channel": 0,
+        "status": "context_supported",
+        "context_support_p": 0.8461538461538461,
+        "validation_outside_fraction": 0.23828124999999997,
+        "validation_focus_rmse_q90": 0.19998410950081175,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      }
+    ]
+  },
+  {
+    "case": 24,
+    "parsed": {
+      "event_validity": "uncertain",
+      "anomalous_channels": [
+        32,
+        33
+      ],
+      "channel_ranking": [
+        32,
+        33,
+        15,
+        23,
+        25,
+        13,
+        12,
+        8
+      ],
+      "confidence": "medium",
+      "additional_channels_to_review": []
+    },
+    "error": null,
+    "outstanding_requests": [],
+    "diagnostic_status": "uncertain",
+    "image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\analysis\\results\\calibration_stage2_expanded_20261105\\images\\case_24.png",
+    "image_sha256": "ef03a1fa5d9d1a43b9d90cb160abdb7a81fea4e3b35644fc7fe6fef2e24117ac",
+    "prompt_sha256": "343c885dba356d03d199a1fafda6ea21d25070877ee4d376804ead3fca66a056",
+    "reference_quality": [
+      {
+        "channel": 13,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.3841145833333333,
+        "validation_focus_rmse_q90": 0.23584045399499262,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 32,
+        "status": "context_supported",
+        "context_support_p": 1.0,
+        "validation_outside_fraction": 0.00026041666666666666,
+        "validation_focus_rmse_q90": 0.0,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0
+      },
+      {
+        "channel": 15,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.34062499999999996,
+        "validation_focus_rmse_q90": 0.12997684970547083,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.5
+      },
+      {
+        "channel": 33,
+        "status": "validation_unstable",
+        "context_support_p": 0.2153846153846154,
+        "validation_outside_fraction": 0.28619791666666666,
+        "validation_focus_rmse_q90": 0.2147893026084652,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.125
+      },
+      {
+        "channel": 25,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.2911458333333333,
+        "validation_focus_rmse_q90": 0.20954082066423538,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0
+      },
+      {
+        "channel": 8,
+        "status": "context_supported",
+        "context_support_p": 0.06153846153846154,
+        "validation_outside_fraction": 0.37786458333333334,
+        "validation_focus_rmse_q90": 1.1507664784418676,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 12,
+        "status": "out_of_support",
+        "context_support_p": 0.03076923076923077,
+        "validation_outside_fraction": 0.16927083333333334,
+        "validation_focus_rmse_q90": 1.0783460039564154,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 23,
+        "status": "validation_unstable",
+        "context_support_p": 0.23076923076923078,
+        "validation_outside_fraction": 0.34895833333333337,
+        "validation_focus_rmse_q90": 0.25996616668593714,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.21875
+      }
+    ]
+  },
+  {
+    "case": 25,
+    "parsed": {
+      "event_validity": "uncertain",
+      "anomalous_channels": [
+        32,
+        8,
+        12
+      ],
+      "channel_ranking": [
+        32,
+        8,
+        12,
+        23,
+        33,
+        25,
+        15,
+        13
+      ],
+      "confidence": "medium",
+      "additional_channels_to_review": []
+    },
+    "error": null,
+    "outstanding_requests": [],
+    "diagnostic_status": "uncertain",
+    "image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\analysis\\results\\calibration_stage2_expanded_20261105\\images\\case_25.png",
+    "image_sha256": "9bb3c258c644592b29ee9abd5ed5a55c1d082c14bb16782ded54b714d3bee30f",
+    "prompt_sha256": "2321c10d1aa0da40547a10eb9bf9ccc7e31336b160dfd65743cf36197a3353aa",
+    "reference_quality": [
+      {
+        "channel": 13,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.3841145833333333,
+        "validation_focus_rmse_q90": 0.23584045399499262,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 32,
+        "status": "context_supported",
+        "context_support_p": 1.0,
+        "validation_outside_fraction": 0.00026041666666666666,
+        "validation_focus_rmse_q90": 0.0,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0
+      },
+      {
+        "channel": 25,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.2911458333333333,
+        "validation_focus_rmse_q90": 0.20954082066423538,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0
+      },
+      {
+        "channel": 8,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.37786458333333334,
+        "validation_focus_rmse_q90": 1.1507664784418676,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 15,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.34062499999999996,
+        "validation_focus_rmse_q90": 0.12997684970547083,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.5
+      },
+      {
+        "channel": 33,
+        "status": "validation_unstable",
+        "context_support_p": 0.2923076923076923,
+        "validation_outside_fraction": 0.28619791666666666,
+        "validation_focus_rmse_q90": 0.2147893026084652,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.125
+      },
+      {
+        "channel": 12,
+        "status": "out_of_support",
+        "context_support_p": 0.03076923076923077,
+        "validation_outside_fraction": 0.16927083333333334,
+        "validation_focus_rmse_q90": 1.0783460039564154,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 23,
+        "status": "validation_unstable",
+        "context_support_p": 0.13846153846153847,
+        "validation_outside_fraction": 0.34895833333333337,
+        "validation_focus_rmse_q90": 0.25996616668593714,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.21875
+      }
+    ]
+  },
+  {
+    "case": 26,
+    "parsed": {
+      "event_validity": "uncertain",
+      "anomalous_channels": [
+        13,
+        33,
+        25,
+        15,
+        23
+      ],
+      "channel_ranking": [
+        13,
+        33,
+        25,
+        15,
+        23,
+        2,
+        8,
+        32
+      ],
+      "confidence": "low",
+      "additional_channels_to_review": []
+    },
+    "error": null,
+    "outstanding_requests": [],
+    "diagnostic_status": "uncertain",
+    "image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\analysis\\results\\calibration_stage2_expanded_20261105\\images\\case_26.png",
+    "image_sha256": "7e6543e97487de0452c948dfa5f220ad96edac1f598db298638d4b4663561930",
+    "prompt_sha256": "c204b72d743ce96cc4283d2818f9fbe190c8867dd4fd2d025ed348121e014cfd",
+    "reference_quality": [
+      {
+        "channel": 13,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.3841145833333333,
+        "validation_focus_rmse_q90": 0.23584045399499262,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 32,
+        "status": "context_supported",
+        "context_support_p": 1.0,
+        "validation_outside_fraction": 0.00026041666666666666,
+        "validation_focus_rmse_q90": 0.0,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0
+      },
+      {
+        "channel": 33,
+        "status": "validation_unstable",
+        "context_support_p": 0.2923076923076923,
+        "validation_outside_fraction": 0.28619791666666666,
+        "validation_focus_rmse_q90": 0.2147893026084652,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.125
+      },
+      {
+        "channel": 25,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.2911458333333333,
+        "validation_focus_rmse_q90": 0.20954082066423538,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0
+      },
+      {
+        "channel": 15,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.34062499999999996,
+        "validation_focus_rmse_q90": 0.12997684970547083,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.5
+      },
+      {
+        "channel": 23,
+        "status": "validation_unstable",
+        "context_support_p": 0.06153846153846154,
+        "validation_outside_fraction": 0.34895833333333337,
+        "validation_focus_rmse_q90": 0.25996616668593714,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.21875
+      },
+      {
+        "channel": 8,
+        "status": "context_supported",
+        "context_support_p": 0.06153846153846154,
+        "validation_outside_fraction": 0.37786458333333334,
+        "validation_focus_rmse_q90": 1.1507664784418676,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 2,
+        "status": "context_supported",
+        "context_support_p": 0.6153846153846154,
+        "validation_outside_fraction": 0.3690104166666667,
+        "validation_focus_rmse_q90": 0.24225091211704447,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      }
+    ]
+  },
+  {
+    "case": 27,
+    "parsed": {
+      "event_validity": "uncertain",
+      "anomalous_channels": [
+        15,
+        33,
+        5
+      ],
+      "channel_ranking": [
+        15,
+        33,
+        5,
+        19,
+        20,
+        1,
+        18,
+        16
+      ],
+      "confidence": "low",
+      "additional_channels_to_review": []
+    },
+    "error": null,
+    "outstanding_requests": [],
+    "diagnostic_status": "uncertain",
+    "image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\analysis\\results\\calibration_stage2_expanded_20261105\\images\\case_27.png",
+    "image_sha256": "713c2f3ee0e65fc1500c26534c2e4ea5862031d459b81205a97e245c62250cba",
+    "prompt_sha256": "b148f4f1e816fc46380a8ecbedb94cdd7c9fdb832540c8d679e40f6befe3e40c",
+    "reference_quality": [
+      {
+        "channel": 16,
+        "status": "insufficient_support",
+        "context_support_p": 1.0,
+        "validation_outside_fraction": 0.00026041666666666666,
+        "validation_focus_rmse_q90": 0.0,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 15,
+        "status": "insufficient_support",
+        "context_support_p": 1.0,
+        "validation_outside_fraction": 0.34062499999999996,
+        "validation_focus_rmse_q90": 0.12997684970547083,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.5
+      },
+      {
+        "channel": 19,
+        "status": "insufficient_support",
+        "context_support_p": 0.7076923076923077,
+        "validation_outside_fraction": 0.26666666666666666,
+        "validation_focus_rmse_q90": 0.1579079666835424,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 33,
+        "status": "insufficient_support",
+        "context_support_p": 0.9538461538461539,
+        "validation_outside_fraction": 0.28619791666666666,
+        "validation_focus_rmse_q90": 0.2147893026084652,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.125
+      },
+      {
+        "channel": 18,
+        "status": "insufficient_support",
+        "context_support_p": 0.676923076923077,
+        "validation_outside_fraction": 0.28828125000000004,
+        "validation_focus_rmse_q90": 0.1541240945449514,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 5,
+        "status": "insufficient_support",
+        "context_support_p": 0.9846153846153847,
+        "validation_outside_fraction": 0.4049479166666667,
+        "validation_focus_rmse_q90": 0.22955960703140307,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 20,
+        "status": "insufficient_support",
+        "context_support_p": 0.7384615384615385,
+        "validation_outside_fraction": 0.3104166666666667,
+        "validation_focus_rmse_q90": 0.15846321142931705,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 1,
+        "status": "insufficient_support",
+        "context_support_p": 0.8923076923076924,
+        "validation_outside_fraction": 0.3002604166666667,
+        "validation_focus_rmse_q90": 0.28231227952058946,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0
+      }
+    ]
+  },
+  {
+    "case": 28,
+    "parsed": {
+      "event_validity": "uncertain",
+      "anomalous_channels": [
+        15
+      ],
+      "channel_ranking": [
+        15,
+        14,
+        11,
+        0,
+        18,
+        19,
+        13,
+        16
+      ],
+      "confidence": "medium",
+      "additional_channels_to_review": []
+    },
+    "error": null,
+    "outstanding_requests": [],
+    "diagnostic_status": "uncertain",
+    "image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\analysis\\results\\calibration_stage2_expanded_20261105\\images\\case_28.png",
+    "image_sha256": "0d866a0243283af7d17be4cbd828f116e27a504d6291b35c6c98c4a7367bd6e9",
+    "prompt_sha256": "2ecdc142990540bdf9bfa3995d92787989fbdd803be6c2a76554b915fe7d5766",
+    "reference_quality": [
+      {
+        "channel": 16,
+        "status": "context_supported",
+        "context_support_p": 1.0,
+        "validation_outside_fraction": 0.00026041666666666666,
+        "validation_focus_rmse_q90": 0.0,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 15,
+        "status": "insufficient_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.34062499999999996,
+        "validation_focus_rmse_q90": 0.12997684970547083,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.5
+      },
+      {
+        "channel": 14,
+        "status": "context_supported",
+        "context_support_p": 0.27692307692307694,
+        "validation_outside_fraction": 0.36223958333333334,
+        "validation_focus_rmse_q90": 0.25943348903965857,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 11,
+        "status": "context_supported",
+        "context_support_p": 0.9538461538461539,
+        "validation_outside_fraction": 0.3544270833333333,
+        "validation_focus_rmse_q90": 0.23441896351529348,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.09375
+      },
+      {
+        "channel": 0,
+        "status": "context_supported",
+        "context_support_p": 0.5846153846153846,
+        "validation_outside_fraction": 0.23828124999999997,
+        "validation_focus_rmse_q90": 0.19998410950081175,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 18,
+        "status": "context_supported",
+        "context_support_p": 0.6,
+        "validation_outside_fraction": 0.28828125000000004,
+        "validation_focus_rmse_q90": 0.1541240945449514,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 19,
+        "status": "context_supported",
+        "context_support_p": 0.6,
+        "validation_outside_fraction": 0.26666666666666666,
+        "validation_focus_rmse_q90": 0.1579079666835424,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 13,
+        "status": "context_supported",
+        "context_support_p": 0.27692307692307694,
+        "validation_outside_fraction": 0.3841145833333333,
+        "validation_focus_rmse_q90": 0.23584045399499262,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      }
+    ]
+  },
+  {
+    "case": 29,
+    "parsed": {
+      "event_validity": "uncertain",
+      "anomalous_channels": [],
+      "channel_ranking": [
+        14,
+        11,
+        19,
+        18,
+        20,
+        0,
+        21,
+        27
+      ],
+      "confidence": "low",
+      "additional_channels_to_review": []
+    },
+    "error": null,
+    "outstanding_requests": [],
+    "diagnostic_status": "uncertain",
+    "image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\analysis\\results\\calibration_stage2_expanded_20261105\\images\\case_29.png",
+    "image_sha256": "1b32826d132397b452a0ac7486ddaa6b495a4bdcaa497e974533a95f4b1b4a87",
+    "prompt_sha256": "4b135f40e1d64b85e006b8cd8d1ba54e522156415d02b6df9562e83c7ec2fb2a",
+    "reference_quality": [
+      {
+        "channel": 14,
+        "status": "context_supported",
+        "context_support_p": 0.27692307692307694,
+        "validation_outside_fraction": 0.36223958333333334,
+        "validation_focus_rmse_q90": 0.25943348903965857,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 11,
+        "status": "context_supported",
+        "context_support_p": 0.6153846153846154,
+        "validation_outside_fraction": 0.3544270833333333,
+        "validation_focus_rmse_q90": 0.23441896351529348,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.09375
+      },
+      {
+        "channel": 19,
+        "status": "context_supported",
+        "context_support_p": 0.6,
+        "validation_outside_fraction": 0.26666666666666666,
+        "validation_focus_rmse_q90": 0.1579079666835424,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 18,
+        "status": "context_supported",
+        "context_support_p": 0.6,
+        "validation_outside_fraction": 0.28828125000000004,
+        "validation_focus_rmse_q90": 0.1541240945449514,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 20,
+        "status": "context_supported",
+        "context_support_p": 0.676923076923077,
+        "validation_outside_fraction": 0.3104166666666667,
+        "validation_focus_rmse_q90": 0.15846321142931705,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 0,
+        "status": "context_supported",
+        "context_support_p": 0.5692307692307692,
+        "validation_outside_fraction": 0.23828124999999997,
+        "validation_focus_rmse_q90": 0.19998410950081175,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 21,
+        "status": "context_supported",
+        "context_support_p": 0.8615384615384616,
+        "validation_outside_fraction": 0.3481770833333333,
+        "validation_focus_rmse_q90": 0.1836229139654618,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 27,
+        "status": "context_supported",
+        "context_support_p": 0.9076923076923077,
+        "validation_outside_fraction": 0.32265625,
+        "validation_focus_rmse_q90": 0.16485267178663124,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      }
+    ]
+  },
+  {
+    "case": 30,
+    "parsed": {
+      "event_validity": "uncertain",
+      "anomalous_channels": [
+        17,
+        4,
+        15
+      ],
+      "channel_ranking": [
+        17,
+        4,
+        15,
+        2,
+        1,
+        3,
+        13,
+        0
+      ],
+      "confidence": "medium",
+      "additional_channels_to_review": []
+    },
+    "error": null,
+    "outstanding_requests": [],
+    "diagnostic_status": "uncertain",
+    "image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\analysis\\results\\calibration_stage2_expanded_20261105\\images\\case_30.png",
+    "image_sha256": "ac7eda48ac400a932db3ede4e5189f2522303e3053902827d520c7957ceea56a",
+    "prompt_sha256": "f75d0251f6f7a374e71e3320c7bdca5d5f5b491ed1eb8ce00f454284caa3ad05",
+    "reference_quality": [
+      {
+        "channel": 17,
+        "status": "validation_unstable",
+        "context_support_p": 1.0,
+        "validation_outside_fraction": 0.0010416666666666667,
+        "validation_focus_rmse_q90": 0.0,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.375
+      },
+      {
+        "channel": 2,
+        "status": "context_supported",
+        "context_support_p": 0.2,
+        "validation_outside_fraction": 0.3690104166666667,
+        "validation_focus_rmse_q90": 0.24225091211704447,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 1,
+        "status": "context_supported",
+        "context_support_p": 0.16923076923076924,
+        "validation_outside_fraction": 0.3002604166666667,
+        "validation_focus_rmse_q90": 0.28231227952058946,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0
+      },
+      {
+        "channel": 3,
+        "status": "context_supported",
+        "context_support_p": 0.26153846153846155,
+        "validation_outside_fraction": 0.3940104166666667,
+        "validation_focus_rmse_q90": 0.2365341856167877,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.09375
+      },
+      {
+        "channel": 4,
+        "status": "validation_unstable",
+        "context_support_p": 1.0,
+        "validation_outside_fraction": 0.75,
+        "validation_focus_rmse_q90": 0.07142935374276325,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.59375
+      },
+      {
+        "channel": 15,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.34062499999999996,
+        "validation_focus_rmse_q90": 0.12997684970547083,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.5
+      },
+      {
+        "channel": 13,
+        "status": "context_supported",
+        "context_support_p": 0.49230769230769234,
+        "validation_outside_fraction": 0.3841145833333333,
+        "validation_focus_rmse_q90": 0.23584045399499262,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 0,
+        "status": "context_supported",
+        "context_support_p": 0.23076923076923078,
+        "validation_outside_fraction": 0.23828124999999997,
+        "validation_focus_rmse_q90": 0.19998410950081175,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      }
+    ]
+  },
+  {
+    "case": 31,
+    "parsed": {
+      "event_validity": "uncertain",
+      "anomalous_channels": [
+        16,
+        15
+      ],
+      "channel_ranking": [
+        16,
+        15,
+        11,
+        19,
+        18,
+        1,
+        20,
+        31
+      ],
+      "confidence": "medium",
+      "additional_channels_to_review": []
+    },
+    "error": null,
+    "outstanding_requests": [],
+    "diagnostic_status": "uncertain",
+    "image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\analysis\\results\\calibration_stage2_expanded_20261105\\images\\case_31.png",
+    "image_sha256": "fb7933b0a47a164b0e78ece148e11cd2a41df4c93eb382d6e64653d71703b025",
+    "prompt_sha256": "a7f313fc299c8081e18bbd4275d1af97ead1d008b6e02391d0bfbca274893c67",
+    "reference_quality": [
+      {
+        "channel": 16,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.00026041666666666666,
+        "validation_focus_rmse_q90": 0.0,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 11,
+        "status": "context_supported",
+        "context_support_p": 0.26153846153846155,
+        "validation_outside_fraction": 0.3544270833333333,
+        "validation_focus_rmse_q90": 0.23441896351529348,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.09375
+      },
+      {
+        "channel": 19,
+        "status": "context_supported",
+        "context_support_p": 0.6,
+        "validation_outside_fraction": 0.26666666666666666,
+        "validation_focus_rmse_q90": 0.1579079666835424,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 15,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.34062499999999996,
+        "validation_focus_rmse_q90": 0.12997684970547083,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.5
+      },
+      {
+        "channel": 18,
+        "status": "context_supported",
+        "context_support_p": 0.6461538461538462,
+        "validation_outside_fraction": 0.28828125000000004,
+        "validation_focus_rmse_q90": 0.1541240945449514,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 1,
+        "status": "context_supported",
+        "context_support_p": 0.16923076923076924,
+        "validation_outside_fraction": 0.3002604166666667,
+        "validation_focus_rmse_q90": 0.28231227952058946,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0
+      },
+      {
+        "channel": 20,
+        "status": "context_supported",
+        "context_support_p": 0.5692307692307692,
+        "validation_outside_fraction": 0.3104166666666667,
+        "validation_focus_rmse_q90": 0.15846321142931705,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 31,
+        "status": "context_supported",
+        "context_support_p": 0.5076923076923077,
+        "validation_outside_fraction": 0.32838541666666665,
+        "validation_focus_rmse_q90": 0.16882653505923267,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      }
+    ]
+  },
+  {
+    "case": 32,
+    "parsed": {
+      "event_validity": "uncertain",
+      "anomalous_channels": [
+        12,
+        15,
+        17
+      ],
+      "channel_ranking": [
+        12,
+        15,
+        17,
+        11,
+        2,
+        1,
+        3,
+        18
+      ],
+      "confidence": "medium",
+      "additional_channels_to_review": []
+    },
+    "error": null,
+    "outstanding_requests": [],
+    "diagnostic_status": "uncertain",
+    "image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\analysis\\results\\calibration_stage2_expanded_20261105\\images\\case_32.png",
+    "image_sha256": "a01ae8798cc629fb192eaa4158041bd07f0f4a1d8a174d177dcc99c27d9475b7",
+    "prompt_sha256": "add59084fb9986a5d103bb3863c993a08609d22aeee79ba904454212db07c846",
+    "reference_quality": [
+      {
+        "channel": 11,
+        "status": "context_supported",
+        "context_support_p": 0.1076923076923077,
+        "validation_outside_fraction": 0.3544270833333333,
+        "validation_focus_rmse_q90": 0.23441896351529348,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.09375
+      },
+      {
+        "channel": 2,
+        "status": "context_supported",
+        "context_support_p": 0.5076923076923077,
+        "validation_outside_fraction": 0.3690104166666667,
+        "validation_focus_rmse_q90": 0.24225091211704447,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 1,
+        "status": "context_supported",
+        "context_support_p": 0.46153846153846156,
+        "validation_outside_fraction": 0.3002604166666667,
+        "validation_focus_rmse_q90": 0.28231227952058946,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0
+      },
+      {
+        "channel": 12,
+        "status": "context_supported",
+        "context_support_p": 0.3076923076923077,
+        "validation_outside_fraction": 0.16927083333333334,
+        "validation_focus_rmse_q90": 1.0783460039564154,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 15,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.34062499999999996,
+        "validation_focus_rmse_q90": 0.12997684970547083,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.5
+      },
+      {
+        "channel": 17,
+        "status": "validation_unstable",
+        "context_support_p": 1.0,
+        "validation_outside_fraction": 0.0010416666666666667,
+        "validation_focus_rmse_q90": 0.0,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.375
+      },
+      {
+        "channel": 3,
+        "status": "context_supported",
+        "context_support_p": 0.3384615384615385,
+        "validation_outside_fraction": 0.3940104166666667,
+        "validation_focus_rmse_q90": 0.2365341856167877,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.09375
+      },
+      {
+        "channel": 18,
+        "status": "context_supported",
+        "context_support_p": 0.38461538461538464,
+        "validation_outside_fraction": 0.28828125000000004,
+        "validation_focus_rmse_q90": 0.1541240945449514,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      }
+    ]
+  },
+  {
+    "case": 33,
+    "parsed": {
+      "event_validity": "uncertain",
+      "anomalous_channels": [],
+      "channel_ranking": [
+        18,
+        19,
+        20,
+        21,
+        27,
+        1,
+        2,
+        3
+      ],
+      "confidence": "low",
+      "additional_channels_to_review": []
+    },
+    "error": null,
+    "outstanding_requests": [],
+    "diagnostic_status": "uncertain",
+    "image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\analysis\\results\\calibration_stage2_expanded_20261105\\images\\case_33.png",
+    "image_sha256": "bcf44f20d849fc86c3ab19c97b5515242ea8acf636e18fca0f85a59cf75db07b",
+    "prompt_sha256": "5cf9147a7af8f3eb5c0040d545a03d23266e28cf93cf2567fbee79c1c609a2a2",
+    "reference_quality": [
+      {
+        "channel": 1,
+        "status": "context_supported",
+        "context_support_p": 0.2153846153846154,
+        "validation_outside_fraction": 0.3002604166666667,
+        "validation_focus_rmse_q90": 0.28231227952058946,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0
+      },
+      {
+        "channel": 2,
+        "status": "context_supported",
+        "context_support_p": 0.23076923076923078,
+        "validation_outside_fraction": 0.3690104166666667,
+        "validation_focus_rmse_q90": 0.24225091211704447,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 3,
+        "status": "context_supported",
+        "context_support_p": 0.2,
+        "validation_outside_fraction": 0.3940104166666667,
+        "validation_focus_rmse_q90": 0.2365341856167877,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.09375
+      },
+      {
+        "channel": 18,
+        "status": "context_supported",
+        "context_support_p": 0.3230769230769231,
+        "validation_outside_fraction": 0.28828125000000004,
+        "validation_focus_rmse_q90": 0.1541240945449514,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 19,
+        "status": "context_supported",
+        "context_support_p": 0.3076923076923077,
+        "validation_outside_fraction": 0.26666666666666666,
+        "validation_focus_rmse_q90": 0.1579079666835424,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 20,
+        "status": "context_supported",
+        "context_support_p": 0.4307692307692308,
+        "validation_outside_fraction": 0.3104166666666667,
+        "validation_focus_rmse_q90": 0.15846321142931705,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 21,
+        "status": "context_supported",
+        "context_support_p": 0.4307692307692308,
+        "validation_outside_fraction": 0.3481770833333333,
+        "validation_focus_rmse_q90": 0.1836229139654618,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 27,
+        "status": "context_supported",
+        "context_support_p": 0.47692307692307695,
+        "validation_outside_fraction": 0.32265625,
+        "validation_focus_rmse_q90": 0.16485267178663124,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      }
+    ]
+  },
+  {
+    "case": 34,
+    "parsed": {
+      "event_validity": "uncertain",
+      "anomalous_channels": [
+        12
+      ],
+      "channel_ranking": [
+        12,
+        11,
+        1,
+        5,
+        19,
+        2,
+        3,
+        17
+      ],
+      "confidence": "medium",
+      "additional_channels_to_review": []
+    },
+    "error": null,
+    "outstanding_requests": [],
+    "diagnostic_status": "uncertain",
+    "image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\analysis\\results\\calibration_stage2_expanded_20261105\\images\\case_34.png",
+    "image_sha256": "b4f903f6704d01a9bd8df3754d0c7f8359d9b6cf5af08debfe701d9ef0fa6644",
+    "prompt_sha256": "98b4cec89076d47252597b81999b0e0fcd85f6d1c0040546257b860b5d14ae0e",
+    "reference_quality": [
+      {
+        "channel": 11,
+        "status": "context_supported",
+        "context_support_p": 0.27692307692307694,
+        "validation_outside_fraction": 0.3544270833333333,
+        "validation_focus_rmse_q90": 0.23441896351529348,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.09375
+      },
+      {
+        "channel": 1,
+        "status": "context_supported",
+        "context_support_p": 0.2153846153846154,
+        "validation_outside_fraction": 0.3002604166666667,
+        "validation_focus_rmse_q90": 0.28231227952058946,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0
+      },
+      {
+        "channel": 17,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.0010416666666666667,
+        "validation_focus_rmse_q90": 0.0,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.375
+      },
+      {
+        "channel": 12,
+        "status": "context_supported",
+        "context_support_p": 0.26153846153846155,
+        "validation_outside_fraction": 0.16927083333333334,
+        "validation_focus_rmse_q90": 1.0783460039564154,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 2,
+        "status": "context_supported",
+        "context_support_p": 0.12307692307692308,
+        "validation_outside_fraction": 0.3690104166666667,
+        "validation_focus_rmse_q90": 0.24225091211704447,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 5,
+        "status": "context_supported",
+        "context_support_p": 0.49230769230769234,
+        "validation_outside_fraction": 0.4049479166666667,
+        "validation_focus_rmse_q90": 0.22955960703140307,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 3,
+        "status": "context_supported",
+        "context_support_p": 0.1076923076923077,
+        "validation_outside_fraction": 0.3940104166666667,
+        "validation_focus_rmse_q90": 0.2365341856167877,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.09375
+      },
+      {
+        "channel": 19,
+        "status": "context_supported",
+        "context_support_p": 0.3230769230769231,
+        "validation_outside_fraction": 0.26666666666666666,
+        "validation_focus_rmse_q90": 0.1579079666835424,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      }
+    ]
+  },
+  {
+    "case": 35,
+    "parsed": {
+      "event_validity": "uncertain",
+      "anomalous_channels": [
+        15,
+        3,
+        2
+      ],
+      "channel_ranking": [
+        15,
+        3,
+        2,
+        11,
+        1,
+        19,
+        18,
+        16
+      ],
+      "confidence": "low",
+      "additional_channels_to_review": []
+    },
+    "error": null,
+    "outstanding_requests": [],
+    "diagnostic_status": "uncertain",
+    "image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\analysis\\results\\calibration_stage2_expanded_20261105\\images\\case_35.png",
+    "image_sha256": "c710c1545dbabd75373a1360ac2178693b91f12852183ff9b2b247d32ae332b9",
+    "prompt_sha256": "dd840138edbb684d4a28897c0f35e5c87da1c49f395451acc53e485284a59134",
+    "reference_quality": [
+      {
+        "channel": 16,
+        "status": "out_of_support",
+        "context_support_p": 0.03076923076923077,
+        "validation_outside_fraction": 0.00026041666666666666,
+        "validation_focus_rmse_q90": 0.0,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 15,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.34062499999999996,
+        "validation_focus_rmse_q90": 0.12997684970547083,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.5
+      },
+      {
+        "channel": 3,
+        "status": "context_supported",
+        "context_support_p": 0.1076923076923077,
+        "validation_outside_fraction": 0.3940104166666667,
+        "validation_focus_rmse_q90": 0.2365341856167877,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.09375
+      },
+      {
+        "channel": 1,
+        "status": "context_supported",
+        "context_support_p": 0.2153846153846154,
+        "validation_outside_fraction": 0.3002604166666667,
+        "validation_focus_rmse_q90": 0.28231227952058946,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0
+      },
+      {
+        "channel": 19,
+        "status": "context_supported",
+        "context_support_p": 0.15384615384615385,
+        "validation_outside_fraction": 0.26666666666666666,
+        "validation_focus_rmse_q90": 0.1579079666835424,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 2,
+        "status": "context_supported",
+        "context_support_p": 0.15384615384615385,
+        "validation_outside_fraction": 0.3690104166666667,
+        "validation_focus_rmse_q90": 0.24225091211704447,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 18,
+        "status": "context_supported",
+        "context_support_p": 0.15384615384615385,
+        "validation_outside_fraction": 0.28828125000000004,
+        "validation_focus_rmse_q90": 0.1541240945449514,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 11,
+        "status": "context_supported",
+        "context_support_p": 0.27692307692307694,
+        "validation_outside_fraction": 0.3544270833333333,
+        "validation_focus_rmse_q90": 0.23441896351529348,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.09375
+      }
+    ]
+  },
+  {
+    "case": 36,
+    "parsed": {
+      "event_validity": "uncertain",
+      "anomalous_channels": [
+        15
+      ],
+      "channel_ranking": [
+        15,
+        22,
+        31,
+        20,
+        21,
+        27,
+        18,
+        19
+      ],
+      "confidence": "medium",
+      "additional_channels_to_review": []
+    },
+    "error": null,
+    "outstanding_requests": [],
+    "diagnostic_status": "uncertain",
+    "image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\analysis\\results\\calibration_stage2_expanded_20261105\\images\\case_36.png",
+    "image_sha256": "80471681b68835aab3d6149b46487682d5f7848834320ba5ebff2af5384504cf",
+    "prompt_sha256": "36692ad16f28668bd4fb2643e3419540ce4f7fef4483e1f14c210c33de66907a",
+    "reference_quality": [
+      {
+        "channel": 31,
+        "status": "context_supported",
+        "context_support_p": 0.23076923076923078,
+        "validation_outside_fraction": 0.32838541666666665,
+        "validation_focus_rmse_q90": 0.16882653505923267,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 15,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.34062499999999996,
+        "validation_focus_rmse_q90": 0.12997684970547083,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.5
+      },
+      {
+        "channel": 22,
+        "status": "context_supported",
+        "context_support_p": 0.7692307692307693,
+        "validation_outside_fraction": 0.41875000000000007,
+        "validation_focus_rmse_q90": 0.24398618175121825,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.09375
+      },
+      {
+        "channel": 20,
+        "status": "context_supported",
+        "context_support_p": 0.49230769230769234,
+        "validation_outside_fraction": 0.3104166666666667,
+        "validation_focus_rmse_q90": 0.15846321142931705,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 21,
+        "status": "context_supported",
+        "context_support_p": 0.5230769230769231,
+        "validation_outside_fraction": 0.3481770833333333,
+        "validation_focus_rmse_q90": 0.1836229139654618,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 18,
+        "status": "context_supported",
+        "context_support_p": 0.27692307692307694,
+        "validation_outside_fraction": 0.28828125000000004,
+        "validation_focus_rmse_q90": 0.1541240945449514,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 19,
+        "status": "context_supported",
+        "context_support_p": 0.3230769230769231,
+        "validation_outside_fraction": 0.26666666666666666,
+        "validation_focus_rmse_q90": 0.1579079666835424,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 27,
+        "status": "context_supported",
+        "context_support_p": 0.6615384615384615,
+        "validation_outside_fraction": 0.32265625,
+        "validation_focus_rmse_q90": 0.16485267178663124,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      }
+    ]
+  },
+  {
+    "case": 37,
+    "parsed": {
+      "event_validity": "uncertain",
+      "anomalous_channels": [
+        11,
+        3,
+        2,
+        1
+      ],
+      "channel_ranking": [
+        11,
+        3,
+        2,
+        1,
+        29,
+        21,
+        20,
+        19
+      ],
+      "confidence": "medium",
+      "additional_channels_to_review": []
+    },
+    "error": null,
+    "outstanding_requests": [],
+    "diagnostic_status": "uncertain",
+    "image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\analysis\\results\\calibration_stage2_expanded_20261105\\images\\case_37.png",
+    "image_sha256": "09c9ac3d4f668ff42390cbec184b8e4a548d42739069b34ec545d5ac1bae33b9",
+    "prompt_sha256": "9ab1acaefe40bd029fea5e97a3b3a80af627ffc3cf1ad620bad73d49e8ecdac7",
+    "reference_quality": [
+      {
+        "channel": 11,
+        "status": "out_of_support",
+        "context_support_p": 0.046153846153846156,
+        "validation_outside_fraction": 0.3544270833333333,
+        "validation_focus_rmse_q90": 0.23441896351529348,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.09375
+      },
+      {
+        "channel": 29,
+        "status": "context_supported",
+        "context_support_p": 0.9692307692307692,
+        "validation_outside_fraction": 0.36848958333333337,
+        "validation_focus_rmse_q90": 0.2538222227413205,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 3,
+        "status": "out_of_support",
+        "context_support_p": 0.03076923076923077,
+        "validation_outside_fraction": 0.3940104166666667,
+        "validation_focus_rmse_q90": 0.2365341856167877,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.09375
+      },
+      {
+        "channel": 2,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.3690104166666667,
+        "validation_focus_rmse_q90": 0.24225091211704447,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 1,
+        "status": "out_of_support",
+        "context_support_p": 0.03076923076923077,
+        "validation_outside_fraction": 0.3002604166666667,
+        "validation_focus_rmse_q90": 0.28231227952058946,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0
+      },
+      {
+        "channel": 21,
+        "status": "context_supported",
+        "context_support_p": 0.5384615384615384,
+        "validation_outside_fraction": 0.3481770833333333,
+        "validation_focus_rmse_q90": 0.1836229139654618,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 20,
+        "status": "context_supported",
+        "context_support_p": 0.5538461538461539,
+        "validation_outside_fraction": 0.3104166666666667,
+        "validation_focus_rmse_q90": 0.15846321142931705,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 19,
+        "status": "context_supported",
+        "context_support_p": 0.46153846153846156,
+        "validation_outside_fraction": 0.26666666666666666,
+        "validation_focus_rmse_q90": 0.1579079666835424,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      }
+    ]
+  },
+  {
+    "case": 38,
+    "parsed": {
+      "event_validity": "uncertain",
+      "anomalous_channels": [
+        9,
+        10,
+        17
+      ],
+      "channel_ranking": [
+        10,
+        9,
+        17,
+        12,
+        11,
+        14,
+        13,
+        0
+      ],
+      "confidence": "medium",
+      "additional_channels_to_review": []
+    },
+    "error": null,
+    "outstanding_requests": [],
+    "diagnostic_status": "uncertain",
+    "image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\analysis\\results\\calibration_stage2_expanded_20261105\\images\\case_38.png",
+    "image_sha256": "ca41cf6cea86a1e5070a31b297c4eb80ecca262c676c348813d4dcdb79e76548",
+    "prompt_sha256": "81f70045c71378f88f497a484e2d94261d651af378ad914690e03ab8d412a06f",
+    "reference_quality": [
+      {
+        "channel": 11,
+        "status": "context_supported",
+        "context_support_p": 0.6461538461538462,
+        "validation_outside_fraction": 0.3544270833333333,
+        "validation_focus_rmse_q90": 0.23441896351529348,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.09375
+      },
+      {
+        "channel": 12,
+        "status": "context_supported",
+        "context_support_p": 0.47692307692307695,
+        "validation_outside_fraction": 0.16927083333333334,
+        "validation_focus_rmse_q90": 1.0783460039564154,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 14,
+        "status": "context_supported",
+        "context_support_p": 0.2,
+        "validation_outside_fraction": 0.36223958333333334,
+        "validation_focus_rmse_q90": 0.25943348903965857,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 9,
+        "status": "context_supported",
+        "context_support_p": 0.46153846153846156,
+        "validation_outside_fraction": 0.17890625,
+        "validation_focus_rmse_q90": 4.555520619387248,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 17,
+        "status": "validation_unstable",
+        "context_support_p": 1.0,
+        "validation_outside_fraction": 0.0010416666666666667,
+        "validation_focus_rmse_q90": 0.0,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.375
+      },
+      {
+        "channel": 10,
+        "status": "context_supported",
+        "context_support_p": 0.3230769230769231,
+        "validation_outside_fraction": 0.11953125,
+        "validation_focus_rmse_q90": 7.2483403541478495,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 13,
+        "status": "context_supported",
+        "context_support_p": 0.27692307692307694,
+        "validation_outside_fraction": 0.3841145833333333,
+        "validation_focus_rmse_q90": 0.23584045399499262,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 0,
+        "status": "context_supported",
+        "context_support_p": 0.16923076923076924,
+        "validation_outside_fraction": 0.23828124999999997,
+        "validation_focus_rmse_q90": 0.19998410950081175,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      }
+    ]
+  },
+  {
+    "case": 39,
+    "parsed": {
+      "event_validity": "uncertain",
+      "anomalous_channels": [
+        4,
+        15
+      ],
+      "channel_ranking": [
+        4,
+        15,
+        9,
+        10,
+        11,
+        12,
+        18,
+        19
+      ],
+      "confidence": "medium",
+      "additional_channels_to_review": []
+    },
+    "error": null,
+    "outstanding_requests": [],
+    "diagnostic_status": "uncertain",
+    "image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\analysis\\results\\calibration_stage2_expanded_20261105\\images\\case_39.png",
+    "image_sha256": "c7246d701d52d40da90591a8c092557b828bc3277fa82e5bdfc7dd3b74f698fb",
+    "prompt_sha256": "8004b4d9f738667ce0a75d42bcb97172e9af7c0c856ece54cc9339c12602e8a1",
+    "reference_quality": [
+      {
+        "channel": 11,
+        "status": "context_supported",
+        "context_support_p": 0.6461538461538462,
+        "validation_outside_fraction": 0.3544270833333333,
+        "validation_focus_rmse_q90": 0.23441896351529348,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.09375
+      },
+      {
+        "channel": 4,
+        "status": "validation_unstable",
+        "context_support_p": 1.0,
+        "validation_outside_fraction": 0.75,
+        "validation_focus_rmse_q90": 0.07142935374276325,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.59375
+      },
+      {
+        "channel": 9,
+        "status": "context_supported",
+        "context_support_p": 0.3384615384615385,
+        "validation_outside_fraction": 0.17890625,
+        "validation_focus_rmse_q90": 4.555520619387248,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 10,
+        "status": "context_supported",
+        "context_support_p": 0.3230769230769231,
+        "validation_outside_fraction": 0.11953125,
+        "validation_focus_rmse_q90": 7.2483403541478495,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 15,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.34062499999999996,
+        "validation_focus_rmse_q90": 0.12997684970547083,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.5
+      },
+      {
+        "channel": 18,
+        "status": "context_supported",
+        "context_support_p": 0.1076923076923077,
+        "validation_outside_fraction": 0.28828125000000004,
+        "validation_focus_rmse_q90": 0.1541240945449514,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 19,
+        "status": "context_supported",
+        "context_support_p": 0.13846153846153847,
+        "validation_outside_fraction": 0.26666666666666666,
+        "validation_focus_rmse_q90": 0.1579079666835424,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 12,
+        "status": "context_supported",
+        "context_support_p": 0.3076923076923077,
+        "validation_outside_fraction": 0.16927083333333334,
+        "validation_focus_rmse_q90": 1.0783460039564154,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      }
+    ]
+  },
+  {
+    "case": 40,
+    "parsed": {
+      "event_validity": "uncertain",
+      "anomalous_channels": [
+        15,
+        17
+      ],
+      "channel_ranking": [
+        17,
+        15,
+        29,
+        24,
+        3,
+        13,
+        2,
+        34
+      ],
+      "confidence": "medium",
+      "additional_channels_to_review": []
+    },
+    "error": null,
+    "outstanding_requests": [],
+    "diagnostic_status": "uncertain",
+    "image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\analysis\\results\\calibration_stage2_expanded_20261105\\images\\case_40.png",
+    "image_sha256": "dfed01875bf48d41482b8c8e67da2d3dd452d9ab90debec0220afa283bfcad8c",
+    "prompt_sha256": "9e0f87c4c905ae2d234bf1a94fd0eae25e1a785ecab971dc252b597dfbe8cea6",
+    "reference_quality": [
+      {
+        "channel": 29,
+        "status": "context_supported",
+        "context_support_p": 0.16923076923076924,
+        "validation_outside_fraction": 0.36848958333333337,
+        "validation_focus_rmse_q90": 0.2538222227413205,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 15,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.34062499999999996,
+        "validation_focus_rmse_q90": 0.12997684970547083,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.5
+      },
+      {
+        "channel": 24,
+        "status": "context_supported",
+        "context_support_p": 0.6153846153846154,
+        "validation_outside_fraction": 0.38515625,
+        "validation_focus_rmse_q90": 0.24167885195609243,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 17,
+        "status": "validation_unstable",
+        "context_support_p": 1.0,
+        "validation_outside_fraction": 0.0010416666666666667,
+        "validation_focus_rmse_q90": 0.0,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.375
+      },
+      {
+        "channel": 3,
+        "status": "context_supported",
+        "context_support_p": 0.47692307692307695,
+        "validation_outside_fraction": 0.3940104166666667,
+        "validation_focus_rmse_q90": 0.2365341856167877,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.09375
+      },
+      {
+        "channel": 13,
+        "status": "context_supported",
+        "context_support_p": 0.2,
+        "validation_outside_fraction": 0.3841145833333333,
+        "validation_focus_rmse_q90": 0.23584045399499262,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 2,
+        "status": "context_supported",
+        "context_support_p": 0.49230769230769234,
+        "validation_outside_fraction": 0.3690104166666667,
+        "validation_focus_rmse_q90": 0.24225091211704447,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 34,
+        "status": "context_supported",
+        "context_support_p": 0.23076923076923078,
+        "validation_outside_fraction": 0.4239583333333333,
+        "validation_focus_rmse_q90": 0.23313301615157925,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      }
+    ]
+  },
+  {
+    "case": 41,
+    "parsed": {
+      "event_validity": "uncertain",
+      "anomalous_channels": [
+        4,
+        15
+      ],
+      "channel_ranking": [
+        15,
+        4,
+        19,
+        18,
+        20,
+        27,
+        21,
+        30
+      ],
+      "confidence": "low",
+      "additional_channels_to_review": []
+    },
+    "error": null,
+    "outstanding_requests": [],
+    "diagnostic_status": "uncertain",
+    "image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\analysis\\results\\calibration_stage2_expanded_20261105\\images\\case_41.png",
+    "image_sha256": "d21df08e06c0e0e85d2bd0586f633f04a5fa722bc03416c16ae1c16320cf6ec6",
+    "prompt_sha256": "abcdece3ddd05eb27cb6340dcea2be728c4a04087751ab66c99df5c43f06def9",
+    "reference_quality": [
+      {
+        "channel": 4,
+        "status": "validation_unstable",
+        "context_support_p": 1.0,
+        "validation_outside_fraction": 0.75,
+        "validation_focus_rmse_q90": 0.07142935374276325,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.59375
+      },
+      {
+        "channel": 15,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.34062499999999996,
+        "validation_focus_rmse_q90": 0.12997684970547083,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.5
+      },
+      {
+        "channel": 19,
+        "status": "context_supported",
+        "context_support_p": 0.38461538461538464,
+        "validation_outside_fraction": 0.26666666666666666,
+        "validation_focus_rmse_q90": 0.1579079666835424,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 18,
+        "status": "context_supported",
+        "context_support_p": 0.3076923076923077,
+        "validation_outside_fraction": 0.28828125000000004,
+        "validation_focus_rmse_q90": 0.1541240945449514,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 20,
+        "status": "context_supported",
+        "context_support_p": 0.49230769230769234,
+        "validation_outside_fraction": 0.3104166666666667,
+        "validation_focus_rmse_q90": 0.15846321142931705,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 27,
+        "status": "context_supported",
+        "context_support_p": 0.6615384615384615,
+        "validation_outside_fraction": 0.32265625,
+        "validation_focus_rmse_q90": 0.16485267178663124,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 21,
+        "status": "context_supported",
+        "context_support_p": 0.7076923076923077,
+        "validation_outside_fraction": 0.3481770833333333,
+        "validation_focus_rmse_q90": 0.1836229139654618,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 30,
+        "status": "context_supported",
+        "context_support_p": 0.8153846153846154,
+        "validation_outside_fraction": 0.35390625,
+        "validation_focus_rmse_q90": 0.207227458128695,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      }
+    ]
+  },
+  {
+    "case": 42,
+    "parsed": {
+      "event_validity": "uncertain",
+      "anomalous_channels": [
+        1,
+        2,
+        22,
+        11,
+        13
+      ],
+      "channel_ranking": [
+        1,
+        2,
+        22,
+        11,
+        13
+      ],
+      "confidence": "medium",
+      "additional_channels_to_review": []
+    },
+    "error": null,
+    "outstanding_requests": [],
+    "diagnostic_status": "uncertain",
+    "image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\analysis\\results\\calibration_stage2_expanded_20261105\\images\\case_42.png",
+    "image_sha256": "50be5ee4dd83a2753648c075733b2d1291cfd16af1c551809e2f5ade9b12e85c",
+    "prompt_sha256": "545d192bb9837cf58ffeb6af1275918584926cc1e22bde9dfe940d7336732958",
+    "reference_quality": [
+      {
+        "channel": 1,
+        "status": "context_supported",
+        "context_support_p": 0.5846153846153846,
+        "validation_outside_fraction": 0.3002604166666667,
+        "validation_focus_rmse_q90": 0.28231227952058946,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0
+      },
+      {
+        "channel": 2,
+        "status": "context_supported",
+        "context_support_p": 0.5230769230769231,
+        "validation_outside_fraction": 0.3690104166666667,
+        "validation_focus_rmse_q90": 0.24225091211704447,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 22,
+        "status": "context_supported",
+        "context_support_p": 0.9230769230769231,
+        "validation_outside_fraction": 0.41875000000000007,
+        "validation_focus_rmse_q90": 0.24398618175121825,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.09375
+      },
+      {
+        "channel": 11,
+        "status": "context_supported",
+        "context_support_p": 0.8307692307692308,
+        "validation_outside_fraction": 0.3544270833333333,
+        "validation_focus_rmse_q90": 0.23441896351529348,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.09375
+      },
+      {
+        "channel": 13,
+        "status": "context_supported",
+        "context_support_p": 0.8615384615384616,
+        "validation_outside_fraction": 0.3841145833333333,
+        "validation_focus_rmse_q90": 0.23584045399499262,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 4,
+        "status": "validation_unstable",
+        "context_support_p": 1.0,
+        "validation_outside_fraction": 0.75,
+        "validation_focus_rmse_q90": 0.07142935374276325,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.59375
+      },
+      {
+        "channel": 35,
+        "status": "context_supported",
+        "context_support_p": 0.8923076923076924,
+        "validation_outside_fraction": 0.4236979166666667,
+        "validation_focus_rmse_q90": 0.23327736167479227,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 34,
+        "status": "context_supported",
+        "context_support_p": 0.8923076923076924,
+        "validation_outside_fraction": 0.4239583333333333,
+        "validation_focus_rmse_q90": 0.23313301615157925,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      }
+    ]
+  },
+  {
+    "case": 43,
+    "parsed": {
+      "event_validity": "anomalous",
+      "anomalous_channels": [
+        17,
+        14,
+        0
+      ],
+      "channel_ranking": [
+        17,
+        14,
+        0,
+        15,
+        25,
+        22,
+        24,
+        35
+      ],
+      "confidence": "medium",
+      "additional_channels_to_review": []
+    },
+    "error": null,
+    "outstanding_requests": [],
+    "diagnostic_status": "anomalous",
+    "image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\analysis\\results\\calibration_stage2_expanded_20261105\\images\\case_43.png",
+    "image_sha256": "371ea0392bd35ba76314a326ca2073c9e55848deda77d5111450efa9329fa215",
+    "prompt_sha256": "28329ec91dd73d6507d382704f7dcdd612b20af2dbc7e41edabac75f2605eb93",
+    "reference_quality": [
+      {
+        "channel": 17,
+        "status": "validation_unstable",
+        "context_support_p": 1.0,
+        "validation_outside_fraction": 0.0010416666666666667,
+        "validation_focus_rmse_q90": 0.0,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.375
+      },
+      {
+        "channel": 15,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.34062499999999996,
+        "validation_focus_rmse_q90": 0.12997684970547083,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.5
+      },
+      {
+        "channel": 25,
+        "status": "context_supported",
+        "context_support_p": 0.24615384615384617,
+        "validation_outside_fraction": 0.2911458333333333,
+        "validation_focus_rmse_q90": 0.20954082066423538,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0
+      },
+      {
+        "channel": 22,
+        "status": "context_supported",
+        "context_support_p": 0.46153846153846156,
+        "validation_outside_fraction": 0.41875000000000007,
+        "validation_focus_rmse_q90": 0.24398618175121825,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.09375
+      },
+      {
+        "channel": 14,
+        "status": "context_supported",
+        "context_support_p": 0.35384615384615387,
+        "validation_outside_fraction": 0.36223958333333334,
+        "validation_focus_rmse_q90": 0.25943348903965857,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 24,
+        "status": "context_supported",
+        "context_support_p": 0.6153846153846154,
+        "validation_outside_fraction": 0.38515625,
+        "validation_focus_rmse_q90": 0.24167885195609243,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 0,
+        "status": "context_supported",
+        "context_support_p": 0.7076923076923077,
+        "validation_outside_fraction": 0.23828124999999997,
+        "validation_focus_rmse_q90": 0.19998410950081175,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 35,
+        "status": "context_supported",
+        "context_support_p": 0.8153846153846154,
+        "validation_outside_fraction": 0.4236979166666667,
+        "validation_focus_rmse_q90": 0.23327736167479227,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      }
+    ]
+  },
+  {
+    "case": 44,
+    "parsed": {
+      "event_validity": "uncertain",
+      "anomalous_channels": [
+        11,
+        12,
+        23
+      ],
+      "channel_ranking": [
+        12,
+        11,
+        23,
+        4,
+        6,
+        3,
+        2,
+        25
+      ],
+      "confidence": "low",
+      "additional_channels_to_review": []
+    },
+    "error": null,
+    "outstanding_requests": [],
+    "diagnostic_status": "uncertain",
+    "image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\analysis\\results\\calibration_stage2_expanded_20261105\\images\\case_44.png",
+    "image_sha256": "a5a8b5724553d96c326b9d41a8b2528291cc59885b8a5373ba770e2bdc035455",
+    "prompt_sha256": "99da540caccb656c1cc15886fb34cd0a0d1dcecdccca0061e32d663cbcfc5be9",
+    "reference_quality": [
+      {
+        "channel": 11,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.3544270833333333,
+        "validation_focus_rmse_q90": 0.23441896351529348,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.09375
+      },
+      {
+        "channel": 4,
+        "status": "validation_unstable",
+        "context_support_p": 0.7384615384615385,
+        "validation_outside_fraction": 0.75,
+        "validation_focus_rmse_q90": 0.07142935374276325,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.59375
+      },
+      {
+        "channel": 12,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.16927083333333334,
+        "validation_focus_rmse_q90": 1.0783460039564154,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 23,
+        "status": "validation_unstable",
+        "context_support_p": 0.46153846153846156,
+        "validation_outside_fraction": 0.34895833333333337,
+        "validation_focus_rmse_q90": 0.25996616668593714,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.21875
+      },
+      {
+        "channel": 3,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.3940104166666667,
+        "validation_focus_rmse_q90": 0.2365341856167877,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.09375
+      },
+      {
+        "channel": 2,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.3690104166666667,
+        "validation_focus_rmse_q90": 0.24225091211704447,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 25,
+        "status": "context_supported",
+        "context_support_p": 0.07692307692307693,
+        "validation_outside_fraction": 0.2911458333333333,
+        "validation_focus_rmse_q90": 0.20954082066423538,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0
+      },
+      {
+        "channel": 6,
+        "status": "context_supported",
+        "context_support_p": 0.9692307692307692,
+        "validation_outside_fraction": 0.9979166666666667,
+        "validation_focus_rmse_q90": 0.43684821009622593,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      }
+    ]
+  },
+  {
+    "case": 45,
+    "parsed": {
+      "event_validity": "uncertain",
+      "anomalous_channels": [
+        10,
+        12,
+        9
+      ],
+      "channel_ranking": [
+        10,
+        12,
+        9,
+        11,
+        24,
+        34,
+        35,
+        30
+      ],
+      "confidence": "medium",
+      "additional_channels_to_review": []
+    },
+    "error": null,
+    "outstanding_requests": [],
+    "diagnostic_status": "uncertain",
+    "image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\analysis\\results\\calibration_stage2_expanded_20261105\\images\\case_45.png",
+    "image_sha256": "9b73d2482b11f034581a37c097a8c6860ab942e45ac0c7f737047ab1771669eb",
+    "prompt_sha256": "409f707efe81fcbb2013ae27c66c92f3450e4cb048e1b6840fee1aa9151c4eed",
+    "reference_quality": [
+      {
+        "channel": 10,
+        "status": "context_supported",
+        "context_support_p": 0.8307692307692308,
+        "validation_outside_fraction": 0.11953125,
+        "validation_focus_rmse_q90": 7.2483403541478495,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 11,
+        "status": "context_supported",
+        "context_support_p": 0.9538461538461539,
+        "validation_outside_fraction": 0.3544270833333333,
+        "validation_focus_rmse_q90": 0.23441896351529348,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.09375
+      },
+      {
+        "channel": 12,
+        "status": "context_supported",
+        "context_support_p": 0.5692307692307692,
+        "validation_outside_fraction": 0.16927083333333334,
+        "validation_focus_rmse_q90": 1.0783460039564154,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 9,
+        "status": "context_supported",
+        "context_support_p": 0.7076923076923077,
+        "validation_outside_fraction": 0.17890625,
+        "validation_focus_rmse_q90": 4.555520619387248,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 24,
+        "status": "context_supported",
+        "context_support_p": 0.09230769230769231,
+        "validation_outside_fraction": 0.38515625,
+        "validation_focus_rmse_q90": 0.24167885195609243,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 34,
+        "status": "context_supported",
+        "context_support_p": 0.26153846153846155,
+        "validation_outside_fraction": 0.4239583333333333,
+        "validation_focus_rmse_q90": 0.23313301615157925,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 35,
+        "status": "context_supported",
+        "context_support_p": 0.26153846153846155,
+        "validation_outside_fraction": 0.4236979166666667,
+        "validation_focus_rmse_q90": 0.23327736167479227,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 30,
+        "status": "context_supported",
+        "context_support_p": 0.23076923076923078,
+        "validation_outside_fraction": 0.35390625,
+        "validation_focus_rmse_q90": 0.207227458128695,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      }
+    ]
+  },
+  {
+    "case": 46,
+    "parsed": {
+      "event_validity": "uncertain",
+      "anomalous_channels": [
+        11,
+        12,
+        4,
+        15
+      ],
+      "channel_ranking": [
+        12,
+        11,
+        4,
+        15,
+        5,
+        0,
+        14,
+        25
+      ],
+      "confidence": "medium",
+      "additional_channels_to_review": []
+    },
+    "error": null,
+    "outstanding_requests": [],
+    "diagnostic_status": "uncertain",
+    "image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\analysis\\results\\calibration_stage2_expanded_20261105\\images\\case_46.png",
+    "image_sha256": "1a6f2d0c4decbcc1d12ee149e059628cbd97674932a3df048c3576673f97ec2d",
+    "prompt_sha256": "100f8042726b44d39190f7992462c2c45cc37f0e7b7570d9275fb0dd3595ac0b",
+    "reference_quality": [
+      {
+        "channel": 11,
+        "status": "context_supported",
+        "context_support_p": 0.3384615384615385,
+        "validation_outside_fraction": 0.3544270833333333,
+        "validation_focus_rmse_q90": 0.23441896351529348,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.09375
+      },
+      {
+        "channel": 12,
+        "status": "context_supported",
+        "context_support_p": 0.9692307692307692,
+        "validation_outside_fraction": 0.16927083333333334,
+        "validation_focus_rmse_q90": 1.0783460039564154,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 4,
+        "status": "validation_unstable",
+        "context_support_p": 0.7384615384615385,
+        "validation_outside_fraction": 0.75,
+        "validation_focus_rmse_q90": 0.07142935374276325,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.59375
+      },
+      {
+        "channel": 25,
+        "status": "context_supported",
+        "context_support_p": 0.13846153846153847,
+        "validation_outside_fraction": 0.2911458333333333,
+        "validation_focus_rmse_q90": 0.20954082066423538,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0
+      },
+      {
+        "channel": 5,
+        "status": "context_supported",
+        "context_support_p": 0.9538461538461539,
+        "validation_outside_fraction": 0.4049479166666667,
+        "validation_focus_rmse_q90": 0.22955960703140307,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 14,
+        "status": "context_supported",
+        "context_support_p": 0.6615384615384615,
+        "validation_outside_fraction": 0.36223958333333334,
+        "validation_focus_rmse_q90": 0.25943348903965857,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 0,
+        "status": "context_supported",
+        "context_support_p": 0.8769230769230769,
+        "validation_outside_fraction": 0.23828124999999997,
+        "validation_focus_rmse_q90": 0.19998410950081175,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 15,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.34062499999999996,
+        "validation_focus_rmse_q90": 0.12997684970547083,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.5
+      }
+    ]
+  },
+  {
+    "case": 47,
+    "parsed": {
+      "event_validity": "uncertain",
+      "anomalous_channels": [
+        17,
+        15
+      ],
+      "channel_ranking": [
+        17,
+        15,
+        11,
+        31,
+        27,
+        30,
+        34,
+        35
+      ],
+      "confidence": "medium",
+      "additional_channels_to_review": []
+    },
+    "error": null,
+    "outstanding_requests": [],
+    "diagnostic_status": "uncertain",
+    "image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\analysis\\results\\calibration_stage2_expanded_20261105\\images\\case_47.png",
+    "image_sha256": "338fedb75edf330116c24541497489b7ff5a4c1f8079f39be101c979106d8cf5",
+    "prompt_sha256": "8e115f749d50c4a705698746302222f5ffee3467a16607605e0a2c654ec8a78a",
+    "reference_quality": [
+      {
+        "channel": 34,
+        "status": "context_supported",
+        "context_support_p": 0.8153846153846154,
+        "validation_outside_fraction": 0.4239583333333333,
+        "validation_focus_rmse_q90": 0.23313301615157925,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 35,
+        "status": "context_supported",
+        "context_support_p": 0.8153846153846154,
+        "validation_outside_fraction": 0.4236979166666667,
+        "validation_focus_rmse_q90": 0.23327736167479227,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      },
+      {
+        "channel": 11,
+        "status": "context_supported",
+        "context_support_p": 0.49230769230769234,
+        "validation_outside_fraction": 0.3544270833333333,
+        "validation_focus_rmse_q90": 0.23441896351529348,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.09375
+      },
+      {
+        "channel": 17,
+        "status": "validation_unstable",
+        "context_support_p": 1.0,
+        "validation_outside_fraction": 0.0010416666666666667,
+        "validation_focus_rmse_q90": 0.0,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.375
+      },
+      {
+        "channel": 27,
+        "status": "context_supported",
+        "context_support_p": 1.0,
+        "validation_outside_fraction": 0.32265625,
+        "validation_focus_rmse_q90": 0.16485267178663124,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 15,
+        "status": "out_of_support",
+        "context_support_p": 0.015384615384615385,
+        "validation_outside_fraction": 0.34062499999999996,
+        "validation_focus_rmse_q90": 0.12997684970547083,
+        "support_audit_warning": true,
+        "support_audit_failure_fraction": 0.5
+      },
+      {
+        "channel": 30,
+        "status": "context_supported",
+        "context_support_p": 0.9846153846153847,
+        "validation_outside_fraction": 0.35390625,
+        "validation_focus_rmse_q90": 0.207227458128695,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.0625
+      },
+      {
+        "channel": 31,
+        "status": "context_supported",
+        "context_support_p": 0.6923076923076923,
+        "validation_outside_fraction": 0.32838541666666665,
+        "validation_focus_rmse_q90": 0.16882653505923267,
+        "support_audit_warning": false,
+        "support_audit_failure_fraction": 0.03125
+      }
+    ]
+  }
+]

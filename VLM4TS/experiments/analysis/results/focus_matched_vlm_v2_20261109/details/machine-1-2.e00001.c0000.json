@@ -1,0 +1,224 @@
+{
+  "case": {
+    "machine": "machine-1-2",
+    "core_id": "machine-1-2.e00001.c0000",
+    "category": "gt_nonoverlap",
+    "core": [
+      840,
+      854
+    ],
+    "channels": [
+      12,
+      9,
+      11,
+      3
+    ]
+  },
+  "variant": "full_focus",
+  "image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\analysis\\results\\focus_matched_vlm_v2_20261109\\images\\machine-1-2.e00001.c0000.png",
+  "image_sha256": "e4cbf2c272396ba432882d93630a17bf0ede0787a6fe1a858e0ab92f66c3eeb7",
+  "prompt": "Review one candidate time core [840,854) in entity machine-1-2.\nRoute reason: dino_proposal. dino_proposal uses the original DINO spike/height and seasonal evidence. dino_partial_tail_review covers a final partial window without DINO scores (seasonal scores may exist). unscored_tail_review covers samples beyond the saved Stage1 output. Both tail routes are forced reviews, NOT DINO anomaly claims. Percentile scores are NOT anomaly probabilities. The 224-tick display is [735,959); its axes show tile-relative ticks. The candidate is [105,119) on these axes, end excluded. No candidate boundary is drawn; orange marks each local zoom, not the candidate. Context outside the candidate is context only. Other proposals may appear anywhere in the display; a change outside the candidate is not a reason to accept this candidate. If location or association is unclear, respond uncertain.\nThe heatmap shows all 38 channels. Detailed channels on this page: [12, 9, 11, 3]. Round 0, page 1/1. Judge event validity IN THE CORE separately from which displayed channels react. A channel can visibly spike in a normal repeating state. Selecting a channel alone does not establish an anomalous event. Do not infer root causes or causal direction.\nBlack is observed, dashed blue the retrieved normal-train median. The light-blue band is a descriptive range only. No reference-support quality claim is provided. Neither is a calibrated normality boundary. A flat median may erase ordinary spikes. Inspect full traces, local changes and pre/post behavior. Display-local-change focus is only a viewer aid; Stage1 peak focus preserves the source detector's location.\nReference quality: []. Supported context does not establish focus normality. A difference from normal reference, low support p or rare coupling alone cannot establish anomaly. Use uncertain when the evidence does not resolve normal state change versus anomaly. Confidence is descriptive and will not be used as a probability.\nIf another heatmap channel needs a detailed view, request its zero-based ID in additional_channels_to_review. At most one additional review round is available. Do not classify unseen channels as normal; normal_repeat applies only to the displayed candidate hypothesis, not proof that every channel is normal.\nReturn ONLY JSON, no prose:\n{\"event_validity\":\"anomalous\"|\"normal_repeat\"|\"uncertain\",\"anomalous_channels\":[subset of [12, 9, 11, 3]],\"channel_ranking\":[ordered subset of [12, 9, 11, 3]],\"confidence\":\"low\"|\"medium\"|\"high\",\"additional_channels_to_review\":[IDs needing detailed review]}\n\nREFERENCE RETRIEVAL NOTE: The normal-train curves in this image were selected using the entire already-observed 60-tick candidate focus, rather than pre-focus context alone. A close match can occur by chance or because training data contain unusual events; it does not prove normality. No pre-focus or full-focus reference-quality claim is provided for this image. Judge event validity conservatively; do not treat focus matching as a calibrated anomaly score.",
+  "quality": [],
+  "record": {
+    "fingerprint": "bb8f101413d424f2a54a6b86f4eec9e16f7dca439c11d866f707cb10a233ea7d",
+    "raw": "```json\n{\n  \"event_validity\": \"anomalous\",\n  \"anomalous_channels\": [12, 9, 11],\n  \"channel_ranking\": [12, 9, 11],\n  \"confidence\": \"medium\",\n  \"additional_channels_to_review\": []\n}\n```",
+    "parsed": {
+      "event_validity": "anomalous",
+      "anomalous_channels": [
+        12,
+        9,
+        11
+      ],
+      "channel_ranking": [
+        12,
+        9,
+        11
+      ],
+      "confidence": "medium",
+      "additional_channels_to_review": []
+    },
+    "error": null
+  },
+  "decisions": {
+    "hold": {
+      "core_id": "machine-1-2.e00001.c0000",
+      "start": 840,
+      "end": 854,
+      "status": "anomalous",
+      "reason": "explicit_core_event_validity_with_selected_channels",
+      "anomalous_channels": [
+        9,
+        11,
+        12
+      ],
+      "provisional_channels": [],
+      "evidence_ranking": [
+        12,
+        9,
+        11
+      ],
+      "ranking_policy": "Stage1 order filtered by VLM selection; requested channels appended by ID",
+      "vlm_page_rankings": [
+        {
+          "page_id": "machine-1-2.e00001.c0000.r0.p1",
+          "event_validity": "anomalous",
+          "order": [
+            12,
+            9,
+            11
+          ]
+        }
+      ],
+      "reviewed_channels": [
+        3,
+        9,
+        11,
+        12
+      ],
+      "unreviewed_channels": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        10,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37
+      ],
+      "retained_for_review_channels": [
+        3
+      ],
+      "retained_for_review_note": "Pending candidates for further review; not confirmed anomaly channels",
+      "reference_limited_channels": [
+        3,
+        9,
+        11,
+        12
+      ],
+      "ranking_validity": "model_prediction",
+      "outstanding_requests": [],
+      "review_complete": true,
+      "expected_pages": 1,
+      "scope_ambiguous": false,
+      "visible_other_candidates": [],
+      "scope_policy": "hold",
+      "scope": "screened_and_requested_channels; anomaly evidence is not causal ranking"
+    },
+    "report": {
+      "core_id": "machine-1-2.e00001.c0000",
+      "start": 840,
+      "end": 854,
+      "status": "anomalous",
+      "reason": "explicit_core_event_validity_with_selected_channels",
+      "anomalous_channels": [
+        9,
+        11,
+        12
+      ],
+      "provisional_channels": [],
+      "evidence_ranking": [
+        12,
+        9,
+        11
+      ],
+      "ranking_policy": "Stage1 order filtered by VLM selection; requested channels appended by ID",
+      "vlm_page_rankings": [
+        {
+          "page_id": "machine-1-2.e00001.c0000.r0.p1",
+          "event_validity": "anomalous",
+          "order": [
+            12,
+            9,
+            11
+          ]
+        }
+      ],
+      "reviewed_channels": [
+        3,
+        9,
+        11,
+        12
+      ],
+      "unreviewed_channels": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        10,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37
+      ],
+      "retained_for_review_channels": [
+        3
+      ],
+      "retained_for_review_note": "Pending candidates for further review; not confirmed anomaly channels",
+      "reference_limited_channels": [
+        3,
+        9,
+        11,
+        12
+      ],
+      "ranking_validity": "model_prediction",
+      "outstanding_requests": [],
+      "review_complete": true,
+      "expected_pages": 1,
+      "scope_ambiguous": false,
+      "visible_other_candidates": [],
+      "scope_policy": "report",
+      "scope": "screened_and_requested_channels; anomaly evidence is not causal ranking"
+    }
+  }
+}

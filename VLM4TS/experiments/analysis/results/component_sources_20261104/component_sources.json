@@ -1,0 +1,171 @@
+{
+  "machine": "machine-1-6",
+  "components": {
+    "level": {
+      "normal_channel_time_high_rate": 0.24380226763152582,
+      "anomaly_channel_time_high_rate": 0.42535343212399934,
+      "normal_tick_any_high_rate": 0.8608419139915203,
+      "normal_high_max_share": 0.19181299314448325
+    },
+    "jump": {
+      "normal_channel_time_high_rate": 0.05393860180432911,
+      "anomaly_channel_time_high_rate": 0.110947879407256,
+      "normal_tick_any_high_rate": 0.6915001009489199,
+      "normal_high_max_share": 0.02373560988229207
+    },
+    "persistence": {
+      "normal_channel_time_high_rate": 0.2946141094711339,
+      "anomaly_channel_time_high_rate": 0.46509680349741667,
+      "normal_tick_any_high_rate": 0.8607409650716737,
+      "normal_high_max_share": 0.7844635234769112
+    },
+    "seasonal": {
+      "normal_channel_time_high_rate": 0.2944626860913641,
+      "anomaly_channel_time_high_rate": 0.4681840118094589,
+      "normal_tick_any_high_rate": 0.8963759337775086,
+      "normal_high_max_share": 0.6677337989910749
+    },
+    "dino_spike": {
+      "normal_channel_time_high_rate": 0.006814052089642641,
+      "anomaly_channel_time_high_rate": 0.020127178788394935,
+      "normal_tick_any_high_rate": 0.1575307894205532,
+      "normal_high_max_share": 0.009450588539645583
+    },
+    "dino_height": {
+      "normal_channel_time_high_rate": 0.019752781408396824,
+      "anomaly_channel_time_high_rate": 0.057010446829046726,
+      "normal_tick_any_high_rate": 0.46532404603270744,
+      "normal_high_max_share": 0.013642316647264261
+    }
+  },
+  "recalibrated_ablations": {
+    "all": {
+      "normal_tick_alarm_rate": 0.8415101958409045,
+      "anomaly_tick_hit_rate": 0.9978425026968716,
+      "normal_channel_time_high_rate": 0.2796842955359325
+    },
+    "without_level": {
+      "normal_tick_alarm_rate": 0.8406016555622855,
+      "anomaly_tick_hit_rate": 0.9978425026968716,
+      "normal_channel_time_high_rate": 0.27897233999596205
+    },
+    "without_persistence": {
+      "normal_tick_alarm_rate": 0.841611144760751,
+      "anomaly_tick_hit_rate": 0.9978425026968716,
+      "normal_channel_time_high_rate": 0.2743711944913768
+    },
+    "without_seasonal": {
+      "normal_tick_alarm_rate": 0.8390874217645872,
+      "anomaly_tick_hit_rate": 0.9948759439050702,
+      "normal_channel_time_high_rate": 0.27122716694826104
+    },
+    "without_level_persistence": {
+      "normal_tick_alarm_rate": 0.8406521300222087,
+      "anomaly_tick_hit_rate": 0.9978425026968716,
+      "normal_channel_time_high_rate": 0.27229908508400014
+    },
+    "without_all_three": {
+      "normal_tick_alarm_rate": 0.24066222491419342,
+      "anomaly_tick_hit_rate": 0.5693096008629989,
+      "normal_channel_time_high_rate": 0.03250820874111384
+    }
+  },
+  "top_normal_channels": [
+    {
+      "channel": 25,
+      "normal_high_rate": 0.8493337371290127,
+      "components": {
+        "level": 0.8385826771653543,
+        "jump": 0.150615788411064,
+        "persistence": 0.8454472037149202,
+        "seasonal": 0.8517565112053301,
+        "dino_spike": 0.004239854633555421,
+        "dino_height": 0.006359781950333132
+      }
+    },
+    {
+      "channel": 22,
+      "normal_high_rate": 0.7312739753684635,
+      "components": {
+        "level": 0.7059357964869776,
+        "jump": 0.005602665051483949,
+        "persistence": 0.7655966081162932,
+        "seasonal": 0.7576721179083383,
+        "dino_spike": 0.036644457904300425,
+        "dino_height": 0.010902483343428226
+      }
+    },
+    {
+      "channel": 15,
+      "normal_high_rate": 0.7112356147789218,
+      "components": {
+        "level": 0.7027054310518878,
+        "jump": 0.21194225721784776,
+        "persistence": 0.7249646678780537,
+        "seasonal": 0.8142035130224107,
+        "dino_spike": 0.013022410660205935,
+        "dino_height": 0.12068443367655966
+      }
+    },
+    {
+      "channel": 14,
+      "normal_high_rate": 0.704017767009893,
+      "components": {
+        "level": 0.6852412679184333,
+        "jump": 0.005653139511407228,
+        "persistence": 0.7047748839087422,
+        "seasonal": 0.7048758328285888,
+        "dino_spike": 0.010145366444579043,
+        "dino_height": 0.007419745608721987
+      }
+    },
+    {
+      "channel": 13,
+      "normal_high_rate": 0.7036139713305067,
+      "components": {
+        "level": 0.6979103573591763,
+        "jump": 0.566071068039572,
+        "persistence": 0.7029073288915808,
+        "seasonal": 0.7034625479507369,
+        "dino_spike": 0.0030284675953967293,
+        "dino_height": 0.3332828588734101
+      }
+    },
+    {
+      "channel": 24,
+      "normal_high_rate": 0.7024530587522714,
+      "components": {
+        "level": 0.6229557843731072,
+        "jump": 0.0037351100343226327,
+        "persistence": 0.6982132041187159,
+        "seasonal": 0.7202200686452654,
+        "dino_spike": 0.01241671714112659,
+        "dino_height": 0.01458711891782758
+      }
+    },
+    {
+      "channel": 11,
+      "normal_high_rate": 0.6904906117504542,
+      "components": {
+        "level": 0.022562083585705633,
+        "jump": 0.00641025641025641,
+        "persistence": 0.7052291540480516,
+        "seasonal": 0.7050777306682818,
+        "dino_spike": 0.008227336967494447,
+        "dino_height": 0.01796890773268726
+      }
+    },
+    {
+      "channel": 12,
+      "normal_high_rate": 0.6687865939834444,
+      "components": {
+        "level": 0.67595396729255,
+        "jump": 0.26680799515445186,
+        "persistence": 0.6930648092065415,
+        "seasonal": 0.6901877649909146,
+        "dino_spike": 0.003987482333939027,
+        "dino_height": 0.0023722996163941046
+      }
+    }
+  ]
+}

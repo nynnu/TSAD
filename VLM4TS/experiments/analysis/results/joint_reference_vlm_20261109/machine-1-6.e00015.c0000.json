@@ -1,0 +1,20 @@
+{
+  "core_id": "machine-1-6.e00015.c0000",
+  "channels": [
+    32,
+    33,
+    4
+  ],
+  "reference_train_tile_start": 88,
+  "image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\analysis\\results\\joint_reference_vlm_20261109\\images\\machine-1-6.e00015.c0000.png",
+  "prompt": "Review the same candidate interval [105,119) on all x-axes (end excluded); the 224-tick plots show context and orange indicates zoom, not the candidate boundary. The three displayed channels are [32, 33, 4]. Black is the observed test series. Dashed blue is an actual train series from the SAME single training time window for all three channels, selected after seeing the complete zooms. A close train match is evidence of a similar recorded pattern, not proof of normality: training may contain abnormalities and matching can overfit. Conversely, a mismatch is not proof of anomaly. Consider joint timing, magnitude and shapes in the candidate interval, and report uncertain if evidence is insufficient. This is an offline diagnostic. Return only JSON: {\"pattern_relation\":\"similar\"|\"different\"|\"uncertain\",\"event_validity\":\"normal_repeat\"|\"anomalous\"|\"uncertain\",\"anomalous_channels\":[subset of [32, 33, 4]],\"evidence\":\"brief visual observation\"}",
+  "raw": "```json\n{\n  \"pattern_relation\": \"similar\",\n  \"event_validity\": \"normal_repeat\",\n  \"anomalous_channels\": [],\n  \"evidence\": \"brief visual observation\"\n}\n```",
+  "parsed": {
+    "pattern_relation": "similar",
+    "event_validity": "normal_repeat",
+    "anomalous_channels": [],
+    "evidence": "brief visual observation"
+  },
+  "error": null,
+  "warning": "GT-informed two-case diagnostic, not a detector or calibrated outcome"
+}

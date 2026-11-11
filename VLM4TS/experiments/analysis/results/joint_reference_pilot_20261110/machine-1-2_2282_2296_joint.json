@@ -1,0 +1,135 @@
+{
+  "case": {
+    "machine": "machine-1-2",
+    "core_id": "machine-1-2.e00004.c0000",
+    "category": "gt_nonoverlap",
+    "core": [
+      2282,
+      2296
+    ],
+    "channels": [
+      12,
+      9,
+      11,
+      8
+    ]
+  },
+  "variant": "joint",
+  "image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\analysis\\results\\joint_reference_pilot_20261110\\machine-1-2_2282_2296_joint.png",
+  "prompt": "Review one candidate time core [2282,2296) in entity machine-1-2.\nRoute reason: dino_proposal. dino_proposal uses the original DINO spike/height and seasonal evidence. dino_partial_tail_review covers a final partial window without DINO scores (seasonal scores may exist). unscored_tail_review covers samples beyond the saved Stage1 output. Both tail routes are forced reviews, NOT DINO anomaly claims. Percentile scores are NOT anomaly probabilities. The 224-tick display is [2177,2401); its axes show tile-relative ticks. The candidate is [105,119) on these axes, end excluded. No candidate boundary is drawn; orange marks each local zoom, not the candidate. Context outside the candidate is context only. Other proposals may appear anywhere in the display; a change outside the candidate is not a reason to accept this candidate. If location or association is unclear, respond uncertain.\nThe heatmap shows all 38 channels. Detailed channels on this page: [12, 9, 11, 8]. Round 0, page 1/1. Judge event validity IN THE CORE separately from which displayed channels react. A channel can visibly spike in a normal repeating state. Selecting a channel alone does not establish an anomalous event. Do not infer root causes or causal direction.\nBlack is observed, dashed blue the retrieved normal-train median. A blue band means pre-focus context is supported; a grey/LOW SUPPORT band means poor or unstable support. Neither is a calibrated normality boundary. A flat median may erase ordinary spikes. Inspect full traces, local changes and pre/post behavior. Display-local-change focus is only a viewer aid; Stage1 peak focus preserves the source detector's location.\nReference quality: [{\"channel\":12,\"status\":\"context_supported\",\"context_support_p\":1.0,\"validation_outside_fraction\":0.06302083333333333,\"validation_focus_rmse_q90\":1.2991412779246816,\"support_audit_warning\":false,\"support_audit_failure_fraction\":0.03125},{\"channel\":9,\"status\":\"context_supported\",\"context_support_p\":0.8769230769230769,\"validation_outside_fraction\":0.21276041666666667,\"validation_focus_rmse_q90\":1.0712972060963253,\"support_audit_warning\":false,\"support_audit_failure_fraction\":0.0625},{\"channel\":11,\"status\":\"context_supported\",\"context_support_p\":0.5538461538461539,\"validation_outside_fraction\":0.4057291666666667,\"validation_focus_rmse_q90\":0.3340006242019145,\"support_audit_warning\":false,\"support_audit_failure_fraction\":0.03125},{\"channel\":8,\"status\":\"context_supported\",\"context_support_p\":0.5076923076923077,\"validation_outside_fraction\":0.15598958333333335,\"validation_focus_rmse_q90\":2.0331880664523183,\"support_audit_warning\":false,\"support_audit_failure_fraction\":0.0625}]. Supported context does not establish focus normality. A difference from normal reference, low support p or rare coupling alone cannot establish anomaly. Use uncertain when the evidence does not resolve normal state change versus anomaly. Confidence is descriptive and will not be used as a probability.\nIf another heatmap channel needs a detailed view, request its zero-based ID in additional_channels_to_review. At most one additional review round is available. Do not classify unseen channels as normal; normal_repeat applies only to the displayed candidate hypothesis, not proof that every channel is normal.\nReturn ONLY JSON, no prose:\n{\"event_validity\":\"anomalous\"|\"normal_repeat\"|\"uncertain\",\"anomalous_channels\":[subset of [12, 9, 11, 8]],\"channel_ranking\":[ordered subset of [12, 9, 11, 8]],\"confidence\":\"low\"|\"medium\"|\"high\",\"additional_channels_to_review\":[IDs needing detailed review]}\nThe bottom panel compares test to two historical train examples. Each column is one shared timestamp across all displayed channels; retrieval uses only the pre-core context. Orange is the candidate core. Compare joint timing, direction, width and recovery. A historical match alone does not establish normality; a mismatch alone does not establish anomaly.",
+  "references": [
+    {
+      "train_start": 6075,
+      "pre_context_rmse": 0.03663768704389817
+    },
+    {
+      "train_start": 8526,
+      "pre_context_rmse": 0.03744732460213263
+    }
+  ],
+  "raw": "```json\n{\n  \"event_validity\": \"anomalous\",\n  \"anomalous_channels\": [12, 9, 11, 8],\n  \"channel_ranking\": [12, 9, 11, 8],\n  \"confidence\": \"medium\",\n  \"additional_channels_to_review\": []\n}\n```",
+  "parsed": {
+    "event_validity": "anomalous",
+    "anomalous_channels": [
+      12,
+      9,
+      11,
+      8
+    ],
+    "channel_ranking": [
+      12,
+      9,
+      11,
+      8
+    ],
+    "confidence": "medium",
+    "additional_channels_to_review": []
+  },
+  "error": null,
+  "decision": {
+    "core_id": "machine-1-2.e00004.c0000",
+    "start": 2282,
+    "end": 2296,
+    "status": "anomalous",
+    "reason": "explicit_core_event_validity_with_selected_channels",
+    "anomalous_channels": [
+      8,
+      9,
+      11,
+      12
+    ],
+    "provisional_channels": [],
+    "evidence_ranking": [
+      12,
+      9,
+      11,
+      8
+    ],
+    "ranking_policy": "Stage1 order filtered by VLM selection; requested channels appended by ID",
+    "vlm_page_rankings": [
+      {
+        "page_id": "machine-1-2.e00004.c0000.r0.p1",
+        "event_validity": "anomalous",
+        "order": [
+          12,
+          9,
+          11,
+          8
+        ]
+      }
+    ],
+    "reviewed_channels": [
+      8,
+      9,
+      11,
+      12
+    ],
+    "unreviewed_channels": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      10,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37
+    ],
+    "retained_for_review_channels": [],
+    "retained_for_review_note": "Pending candidates for further review; not confirmed anomaly channels",
+    "reference_limited_channels": [],
+    "ranking_validity": "model_prediction",
+    "outstanding_requests": [],
+    "review_complete": true,
+    "expected_pages": 1,
+    "scope_ambiguous": false,
+    "visible_other_candidates": [],
+    "scope_policy": "hold",
+    "scope": "screened_and_requested_channels; anomaly evidence is not causal ranking"
+  }
+}

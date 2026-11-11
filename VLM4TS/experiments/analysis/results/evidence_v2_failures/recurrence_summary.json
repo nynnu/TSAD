@@ -1,0 +1,4820 @@
+[
+  {
+    "machine": "machine-1-1",
+    "library": "fit-prefix bank plus full-train retrospective control; 60-tick focus, preceding 48-tick context, stride 14",
+    "scaling": "frozen fit-prefix scale; absolute distances not comparable across different channels",
+    "caveat": "Single-channel and selection-biased; no causal or normality conclusion. Full-focus nearest match is diagnostic only.",
+    "summary": {
+      "GT-normal_high": {
+        "n": 57,
+        "min_level_rmse": [
+          4.652599763396717,
+          13.913950814828342,
+          26.889569273158585
+        ],
+        "min_centered_shape_rmse": [
+          1.421621790532516,
+          3.136287035487228,
+          4.8199561458993605
+        ],
+        "min_difference_rmse": [
+          0.6793319257903321,
+          1.3881823779331388,
+          2.3858310742228976
+        ],
+        "full_train_min_level_rmse": [
+          1.47666830360088,
+          3.2124583271679237,
+          10.776912391283023
+        ],
+        "full_train_min_shape_rmse": [
+          1.2239377832952736,
+          2.3264890965484866,
+          3.374228478877378
+        ],
+        "context_selected_median_focus_rmse": [
+          5.313453574389903,
+          14.629527593546195,
+          27.59740105544309
+        ]
+      },
+      "GT_high": {
+        "n": 8,
+        "min_level_rmse": [
+          0.0020408687144620775,
+          5.691018360045409,
+          11.500694445648186
+        ],
+        "min_centered_shape_rmse": [
+          0.001998408219110193,
+          5.667819411286176,
+          11.488915789140686
+        ],
+        "min_difference_rmse": [
+          0.001494545129201936,
+          5.347225875837358,
+          12.369785275053662
+        ],
+        "full_train_min_level_rmse": [
+          0.0020408687144620775,
+          5.337927478906743,
+          11.19728789542414
+        ],
+        "full_train_min_shape_rmse": [
+          0.001998408219110193,
+          5.1464954586416685,
+          10.977693488814841
+        ],
+        "context_selected_median_focus_rmse": [
+          0.0020408687144620775,
+          5.989664843541109,
+          11.942961343072813
+        ]
+      }
+    },
+    "queries": [
+      {
+        "group": "GT-normal_high",
+        "tick": 244,
+        "channel": 24,
+        "focus": [
+          185,
+          245
+        ],
+        "min_level_rmse": 6.981570242323349,
+        "min_centered_shape_rmse": 1.8180577110111251,
+        "min_difference_rmse": 1.0691699233710532,
+        "full_train_min_level_rmse": 2.0477389464364624,
+        "full_train_min_shape_rmse": 1.4492283560050805,
+        "context_selected_median_focus_rmse": 7.656192114831534,
+        "best_focus_train_end": 5694,
+        "best_shape_train_end": 11294,
+        "context_selected_train_ends": [
+          5722,
+          5736,
+          5750,
+          5708,
+          5764,
+          5778,
+          7164,
+          7178
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 246,
+        "channel": 24,
+        "focus": [
+          187,
+          247
+        ],
+        "min_level_rmse": 7.811512737190315,
+        "min_centered_shape_rmse": 2.663449559226999,
+        "min_difference_rmse": 1.1432224033250007,
+        "full_train_min_level_rmse": 3.065145589740984,
+        "full_train_min_shape_rmse": 1.9619343010201917,
+        "context_selected_median_focus_rmse": 8.492722392720326,
+        "best_focus_train_end": 5694,
+        "best_shape_train_end": 11294,
+        "context_selected_train_ends": [
+          5722,
+          5736,
+          5750,
+          5708,
+          5764,
+          5778,
+          7164,
+          7178
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 257,
+        "channel": 24,
+        "focus": [
+          198,
+          258
+        ],
+        "min_level_rmse": 8.52808826952865,
+        "min_centered_shape_rmse": 2.9731481531180717,
+        "min_difference_rmse": 1.715778767003698,
+        "full_train_min_level_rmse": 2.4428123237403363,
+        "full_train_min_shape_rmse": 2.4003132536901877,
+        "context_selected_median_focus_rmse": 9.135106422193251,
+        "best_focus_train_end": 5694,
+        "best_shape_train_end": 5526,
+        "context_selected_train_ends": [
+          5736,
+          5722,
+          5750,
+          5708,
+          5764,
+          5778,
+          7164,
+          5792
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 1098,
+        "channel": 24,
+        "focus": [
+          1039,
+          1099
+        ],
+        "min_level_rmse": 7.68407653540493,
+        "min_centered_shape_rmse": 1.147275404336009,
+        "min_difference_rmse": 1.057685474805842,
+        "full_train_min_level_rmse": 1.2021248972210643,
+        "full_train_min_shape_rmse": 0.9671536244064362,
+        "context_selected_median_focus_rmse": 8.383611456380287,
+        "best_focus_train_end": 5694,
+        "best_shape_train_end": 5736,
+        "context_selected_train_ends": [
+          5722,
+          5736,
+          5750,
+          5708,
+          5764,
+          5778,
+          7164,
+          7178
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 2192,
+        "channel": 24,
+        "focus": [
+          2133,
+          2193
+        ],
+        "min_level_rmse": 5.999370413205342,
+        "min_centered_shape_rmse": 3.149508341049419,
+        "min_difference_rmse": 1.3881823779331388,
+        "full_train_min_level_rmse": 2.1065312629514437,
+        "full_train_min_shape_rmse": 1.8598180540616052,
+        "context_selected_median_focus_rmse": 6.55107298682773,
+        "best_focus_train_end": 5666,
+        "best_shape_train_end": 7010,
+        "context_selected_train_ends": [
+          5694,
+          7080,
+          7066,
+          5680,
+          5596,
+          5582,
+          7122,
+          5666
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 2294,
+        "channel": 24,
+        "focus": [
+          2235,
+          2295
+        ],
+        "min_level_rmse": 7.757473916809337,
+        "min_centered_shape_rmse": 1.3498556075615253,
+        "min_difference_rmse": 1.2101575149285186,
+        "full_train_min_level_rmse": 1.47666830360088,
+        "full_train_min_shape_rmse": 1.2239377832952736,
+        "context_selected_median_focus_rmse": 8.454558050115052,
+        "best_focus_train_end": 5694,
+        "best_shape_train_end": 11350,
+        "context_selected_train_ends": [
+          5736,
+          5722,
+          5750,
+          5708,
+          5764,
+          5778,
+          5792,
+          7164
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 3761,
+        "channel": 24,
+        "focus": [
+          3702,
+          3762
+        ],
+        "min_level_rmse": 9.907262646602065,
+        "min_centered_shape_rmse": 3.997664566629025,
+        "min_difference_rmse": 2.4013394153102414,
+        "full_train_min_level_rmse": 3.179962866370162,
+        "full_train_min_shape_rmse": 2.663678295488443,
+        "context_selected_median_focus_rmse": 10.559989147800124,
+        "best_focus_train_end": 5694,
+        "best_shape_train_end": 7010,
+        "context_selected_train_ends": [
+          5722,
+          5736,
+          5750,
+          5708,
+          5764,
+          5778,
+          7164,
+          7178
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 3919,
+        "channel": 24,
+        "focus": [
+          3860,
+          3920
+        ],
+        "min_level_rmse": 19.783862914021267,
+        "min_centered_shape_rmse": 3.75594419262372,
+        "min_difference_rmse": 2.607413675096819,
+        "full_train_min_level_rmse": 3.5417205418372943,
+        "full_train_min_shape_rmse": 3.300148340808464,
+        "context_selected_median_focus_rmse": 20.488831535841424,
+        "best_focus_train_end": 5694,
+        "best_shape_train_end": 5806,
+        "context_selected_train_ends": [
+          5736,
+          5722,
+          5750,
+          5708,
+          5764,
+          5778,
+          7164,
+          5792
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 3964,
+        "channel": 24,
+        "focus": [
+          3905,
+          3965
+        ],
+        "min_level_rmse": 12.447819885274818,
+        "min_centered_shape_rmse": 6.020980765423596,
+        "min_difference_rmse": 3.38021980019191,
+        "full_train_min_level_rmse": 4.486076162541072,
+        "full_train_min_shape_rmse": 3.853038045616043,
+        "context_selected_median_focus_rmse": 13.098259911636363,
+        "best_focus_train_end": 5694,
+        "best_shape_train_end": 5806,
+        "context_selected_train_ends": [
+          5736,
+          5722,
+          5750,
+          5708,
+          5764,
+          5778,
+          5792,
+          7164
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 6259,
+        "channel": 14,
+        "focus": [
+          6200,
+          6260
+        ],
+        "min_level_rmse": 3.3488361456311275,
+        "min_centered_shape_rmse": 3.136287035487228,
+        "min_difference_rmse": 4.530889061823426,
+        "full_train_min_level_rmse": 1.5542317816237305,
+        "full_train_min_shape_rmse": 1.5303503898421456,
+        "context_selected_median_focus_rmse": 3.49561738753821,
+        "best_focus_train_end": 4686,
+        "best_shape_train_end": 850,
+        "context_selected_train_ends": [
+          3104,
+          8858,
+          3090,
+          1662,
+          234,
+          11742,
+          8886,
+          7444
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 6633,
+        "channel": 24,
+        "focus": [
+          6574,
+          6634
+        ],
+        "min_level_rmse": 12.572843571433557,
+        "min_centered_shape_rmse": 1.8612415608586774,
+        "min_difference_rmse": 1.3969351221421644,
+        "full_train_min_level_rmse": 2.274426324817012,
+        "full_train_min_shape_rmse": 1.5860459417592858,
+        "context_selected_median_focus_rmse": 13.284144431189887,
+        "best_focus_train_end": 5694,
+        "best_shape_train_end": 11294,
+        "context_selected_train_ends": [
+          5722,
+          5736,
+          5750,
+          5708,
+          5764,
+          5778,
+          7164,
+          5792
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 6646,
+        "channel": 24,
+        "focus": [
+          6587,
+          6647
+        ],
+        "min_level_rmse": 14.676121892245988,
+        "min_centered_shape_rmse": 3.465309797061273,
+        "min_difference_rmse": 2.0537277286850864,
+        "full_train_min_level_rmse": 3.342883752846442,
+        "full_train_min_shape_rmse": 2.3228499235595312,
+        "context_selected_median_focus_rmse": 15.355571070808175,
+        "best_focus_train_end": 5694,
+        "best_shape_train_end": 7010,
+        "context_selected_train_ends": [
+          5736,
+          5722,
+          5750,
+          5708,
+          5764,
+          5778,
+          7164,
+          5792
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 6799,
+        "channel": 24,
+        "focus": [
+          6740,
+          6800
+        ],
+        "min_level_rmse": 13.913950814828342,
+        "min_centered_shape_rmse": 2.4081637602419064,
+        "min_difference_rmse": 1.8664511904857377,
+        "full_train_min_level_rmse": 2.92812141680733,
+        "full_train_min_shape_rmse": 2.3700201364701234,
+        "context_selected_median_focus_rmse": 14.629527593546195,
+        "best_focus_train_end": 5694,
+        "best_shape_train_end": 10006,
+        "context_selected_train_ends": [
+          5736,
+          5722,
+          5750,
+          5708,
+          5764,
+          5778,
+          7164,
+          5792
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 7983,
+        "channel": 24,
+        "focus": [
+          7924,
+          7984
+        ],
+        "min_level_rmse": 3.0609244010606016,
+        "min_centered_shape_rmse": 1.1523604212460368,
+        "min_difference_rmse": 1.2460531139502775,
+        "full_train_min_level_rmse": 1.2895515997129297,
+        "full_train_min_shape_rmse": 1.0554290844280454,
+        "context_selected_median_focus_rmse": 3.582207652472429,
+        "best_focus_train_end": 5694,
+        "best_shape_train_end": 7640,
+        "context_selected_train_ends": [
+          5708,
+          5722,
+          7164,
+          5764,
+          5694,
+          7136,
+          7122,
+          7178
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 8097,
+        "channel": 29,
+        "focus": [
+          8038,
+          8098
+        ],
+        "min_level_rmse": 9.185984894944452,
+        "min_centered_shape_rmse": 3.9632479661194244,
+        "min_difference_rmse": 3.7959751381338314,
+        "full_train_min_level_rmse": 4.047990764045667,
+        "full_train_min_shape_rmse": 3.846586929874899,
+        "context_selected_median_focus_rmse": 9.988173844134403,
+        "best_focus_train_end": 5652,
+        "best_shape_train_end": 3384,
+        "context_selected_train_ends": [
+          5736,
+          5722,
+          5708,
+          5750,
+          5596,
+          5694,
+          5764,
+          5610
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 12276,
+        "channel": 34,
+        "focus": [
+          12217,
+          12277
+        ],
+        "min_level_rmse": 14.100878538854069,
+        "min_centered_shape_rmse": 7.825216853345241,
+        "min_difference_rmse": 0.659811671359914,
+        "full_train_min_level_rmse": 3.2124583271679237,
+        "full_train_min_shape_rmse": 2.9356761125735575,
+        "context_selected_median_focus_rmse": 16.01038924363036,
+        "best_focus_train_end": 5680,
+        "best_shape_train_end": 14234,
+        "context_selected_train_ends": [
+          7080,
+          11336,
+          9992,
+          5694,
+          5708,
+          10048,
+          11350,
+          5582
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 12314,
+        "channel": 34,
+        "focus": [
+          12255,
+          12315
+        ],
+        "min_level_rmse": 21.54698912233431,
+        "min_centered_shape_rmse": 2.9538300444433414,
+        "min_difference_rmse": 0.8581817927650943,
+        "full_train_min_level_rmse": 5.333933031260883,
+        "full_train_min_shape_rmse": 2.335869119979331,
+        "context_selected_median_focus_rmse": 23.005606180743747,
+        "best_focus_train_end": 5694,
+        "best_shape_train_end": 5764,
+        "context_selected_train_ends": [
+          5736,
+          5750,
+          5722,
+          5806,
+          5792,
+          5820,
+          7164,
+          5778
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 12388,
+        "channel": 24,
+        "focus": [
+          12329,
+          12389
+        ],
+        "min_level_rmse": 25.988255584404072,
+        "min_centered_shape_rmse": 3.2910645519821964,
+        "min_difference_rmse": 1.5733867943301985,
+        "full_train_min_level_rmse": 8.180742330015198,
+        "full_train_min_shape_rmse": 2.606903809350396,
+        "context_selected_median_focus_rmse": 26.69399758072417,
+        "best_focus_train_end": 5694,
+        "best_shape_train_end": 11294,
+        "context_selected_train_ends": [
+          5736,
+          5722,
+          5750,
+          5708,
+          5764,
+          5778,
+          7164,
+          5792
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 12417,
+        "channel": 24,
+        "focus": [
+          12358,
+          12418
+        ],
+        "min_level_rmse": 32.79462148115893,
+        "min_centered_shape_rmse": 5.646932763050077,
+        "min_difference_rmse": 2.2190937490990885,
+        "full_train_min_level_rmse": 14.378797262206746,
+        "full_train_min_shape_rmse": 3.3628259727711862,
+        "context_selected_median_focus_rmse": 33.47280178454367,
+        "best_focus_train_end": 5694,
+        "best_shape_train_end": 7024,
+        "context_selected_train_ends": [
+          5736,
+          5722,
+          5750,
+          5708,
+          5764,
+          5778,
+          7164,
+          5792
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 12495,
+        "channel": 34,
+        "focus": [
+          12436,
+          12496
+        ],
+        "min_level_rmse": 28.984859938662936,
+        "min_centered_shape_rmse": 3.9387805988778655,
+        "min_difference_rmse": 1.1580938928898803,
+        "full_train_min_level_rmse": 12.034275010749468,
+        "full_train_min_shape_rmse": 2.5501334712144472,
+        "context_selected_median_focus_rmse": 30.01109764826315,
+        "best_focus_train_end": 5694,
+        "best_shape_train_end": 5778,
+        "context_selected_train_ends": [
+          5750,
+          5736,
+          5764,
+          5820,
+          5806,
+          5778,
+          5792,
+          5722
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 12551,
+        "channel": 28,
+        "focus": [
+          12492,
+          12552
+        ],
+        "min_level_rmse": 1.0586154479633607e-05,
+        "min_centered_shape_rmse": 1.0497565855420432e-05,
+        "min_difference_rmse": 1.0675490700427557e-05,
+        "full_train_min_level_rmse": 1.0586154479633607e-05,
+        "full_train_min_shape_rmse": 1.0497565855420432e-05,
+        "context_selected_median_focus_rmse": 1.0586154479633607e-05,
+        "best_focus_train_end": 108,
+        "best_shape_train_end": 108,
+        "context_selected_train_ends": [
+          108,
+          9418,
+          9432,
+          9446,
+          9460,
+          9474,
+          9488,
+          9502
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 12604,
+        "channel": 34,
+        "focus": [
+          12545,
+          12605
+        ],
+        "min_level_rmse": 23.468776047608937,
+        "min_centered_shape_rmse": 12.22740280491529,
+        "min_difference_rmse": 1.2713092542316133,
+        "full_train_min_level_rmse": 12.297073960341486,
+        "full_train_min_shape_rmse": 10.593203632434303,
+        "context_selected_median_focus_rmse": 24.161341185530958,
+        "best_focus_train_end": 5708,
+        "best_shape_train_end": 5792,
+        "context_selected_train_ends": [
+          5750,
+          5736,
+          5764,
+          5820,
+          5806,
+          5778,
+          5722,
+          5792
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 13718,
+        "channel": 34,
+        "focus": [
+          13659,
+          13719
+        ],
+        "min_level_rmse": 21.814161669516057,
+        "min_centered_shape_rmse": 8.628260533164761,
+        "min_difference_rmse": 0.6793319257903321,
+        "full_train_min_level_rmse": 7.385460802613721,
+        "full_train_min_shape_rmse": 4.006894373897792,
+        "context_selected_median_focus_rmse": 23.11343410124083,
+        "best_focus_train_end": 5694,
+        "best_shape_train_end": 14234,
+        "context_selected_train_ends": [
+          5722,
+          5736,
+          5806,
+          5708,
+          5750,
+          5792,
+          11350,
+          7164
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 13760,
+        "channel": 24,
+        "focus": [
+          13701,
+          13761
+        ],
+        "min_level_rmse": 37.04794308996352,
+        "min_centered_shape_rmse": 2.89349299327655,
+        "min_difference_rmse": 1.548657653559849,
+        "full_train_min_level_rmse": 17.74252130850647,
+        "full_train_min_shape_rmse": 2.3264890965484866,
+        "context_selected_median_focus_rmse": 37.765777088681766,
+        "best_focus_train_end": 5694,
+        "best_shape_train_end": 1886,
+        "context_selected_train_ends": [
+          5722,
+          5708,
+          5736,
+          5750,
+          5764,
+          7164,
+          5778,
+          7178
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 13768,
+        "channel": 34,
+        "focus": [
+          13709,
+          13769
+        ],
+        "min_level_rmse": 34.634578357521264,
+        "min_centered_shape_rmse": 2.8675794050540566,
+        "min_difference_rmse": 1.0734844933889016,
+        "full_train_min_level_rmse": 17.439159828022163,
+        "full_train_min_shape_rmse": 2.174308524432903,
+        "context_selected_median_focus_rmse": 35.77656702249536,
+        "best_focus_train_end": 5694,
+        "best_shape_train_end": 5764,
+        "context_selected_train_ends": [
+          5750,
+          5736,
+          5806,
+          5820,
+          5722,
+          5764,
+          5792,
+          5778
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 13794,
+        "channel": 28,
+        "focus": [
+          13735,
+          13795
+        ],
+        "min_level_rmse": 6.1967733539318674e-06,
+        "min_centered_shape_rmse": 6.1449165982948866e-06,
+        "min_difference_rmse": 6.249067727079546e-06,
+        "full_train_min_level_rmse": 6.1967733539318674e-06,
+        "full_train_min_shape_rmse": 6.1449165982948866e-06,
+        "context_selected_median_focus_rmse": 6.1967733539318674e-06,
+        "best_focus_train_end": 108,
+        "best_shape_train_end": 108,
+        "context_selected_train_ends": [
+          108,
+          9418,
+          9432,
+          9446,
+          9460,
+          9474,
+          9488,
+          9502
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 13811,
+        "channel": 28,
+        "focus": [
+          13752,
+          13812
+        ],
+        "min_level_rmse": 1.6326359055221098e-05,
+        "min_centered_shape_rmse": 1.6093088578641455e-05,
+        "min_difference_rmse": 1.7610185804465454e-05,
+        "full_train_min_level_rmse": 1.6326359055221098e-05,
+        "full_train_min_shape_rmse": 1.6093088578641455e-05,
+        "context_selected_median_focus_rmse": 1.6326359055221098e-05,
+        "best_focus_train_end": 108,
+        "best_shape_train_end": 108,
+        "context_selected_train_ends": [
+          108,
+          9418,
+          9432,
+          9446,
+          9460,
+          9474,
+          9488,
+          9502
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 13822,
+        "channel": 28,
+        "focus": [
+          13763,
+          13823
+        ],
+        "min_level_rmse": 1.9574643462057403e-05,
+        "min_centered_shape_rmse": 1.901838291992484e-05,
+        "min_difference_rmse": 2.745072627238405e-05,
+        "full_train_min_level_rmse": 1.9574643462057403e-05,
+        "full_train_min_shape_rmse": 1.901838291992484e-05,
+        "context_selected_median_focus_rmse": 1.9574643462057403e-05,
+        "best_focus_train_end": 108,
+        "best_shape_train_end": 108,
+        "context_selected_train_ends": [
+          108,
+          9418,
+          9432,
+          9446,
+          9460,
+          9474,
+          9488,
+          9502
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 13827,
+        "channel": 24,
+        "focus": [
+          13768,
+          13828
+        ],
+        "min_level_rmse": 41.55422248492088,
+        "min_centered_shape_rmse": 3.054958487238735,
+        "min_difference_rmse": 1.9960087918064497,
+        "full_train_min_level_rmse": 22.210301834965275,
+        "full_train_min_shape_rmse": 2.521997205431228,
+        "context_selected_median_focus_rmse": 42.2652822477353,
+        "best_focus_train_end": 5694,
+        "best_shape_train_end": 7010,
+        "context_selected_train_ends": [
+          5736,
+          5722,
+          5750,
+          5708,
+          5764,
+          5778,
+          7164,
+          5792
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 13844,
+        "channel": 28,
+        "focus": [
+          13785,
+          13845
+        ],
+        "min_level_rmse": 0.0014750910423880056,
+        "min_centered_shape_rmse": 0.0014621385299735908,
+        "min_difference_rmse": 0.0014876702580243276,
+        "full_train_min_level_rmse": 0.0014750910423880056,
+        "full_train_min_shape_rmse": 0.0014621385299735908,
+        "context_selected_median_focus_rmse": 0.0014750910423880056,
+        "best_focus_train_end": 108,
+        "best_shape_train_end": 108,
+        "context_selected_train_ends": [
+          108,
+          9418,
+          9432,
+          9446,
+          9460,
+          9474,
+          9488,
+          9502
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 14036,
+        "channel": 24,
+        "focus": [
+          13977,
+          14037
+        ],
+        "min_level_rmse": 13.974077161218032,
+        "min_centered_shape_rmse": 5.616616235432157,
+        "min_difference_rmse": 1.0645404083720602,
+        "full_train_min_level_rmse": 4.858807851358221,
+        "full_train_min_shape_rmse": 3.774277067212804,
+        "context_selected_median_focus_rmse": 14.689697170456736,
+        "best_focus_train_end": 5694,
+        "best_shape_train_end": 5806,
+        "context_selected_train_ends": [
+          5736,
+          5722,
+          5750,
+          5708,
+          5764,
+          5778,
+          5792,
+          7164
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 15058,
+        "channel": 34,
+        "focus": [
+          14999,
+          15059
+        ],
+        "min_level_rmse": 8.231927277173396,
+        "min_centered_shape_rmse": 4.358456890859412,
+        "min_difference_rmse": 0.48576391500797106,
+        "full_train_min_level_rmse": 2.628299011036521,
+        "full_train_min_shape_rmse": 1.18367132022866,
+        "context_selected_median_focus_rmse": 9.84375484013077,
+        "best_focus_train_end": 5680,
+        "best_shape_train_end": 14234,
+        "context_selected_train_ends": [
+          7080,
+          7066,
+          9978,
+          11336,
+          5694,
+          9992,
+          5568,
+          11280
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 15157,
+        "channel": 28,
+        "focus": [
+          15098,
+          15158
+        ],
+        "min_level_rmse": 2.4657993970853888e-05,
+        "min_centered_shape_rmse": 2.445164729738174e-05,
+        "min_difference_rmse": 2.486608199733736e-05,
+        "full_train_min_level_rmse": 2.4657993970853888e-05,
+        "full_train_min_shape_rmse": 2.445164729738174e-05,
+        "context_selected_median_focus_rmse": 2.4657993970853888e-05,
+        "best_focus_train_end": 108,
+        "best_shape_train_end": 108,
+        "context_selected_train_ends": [
+          108,
+          9418,
+          9432,
+          9446,
+          9460,
+          9474,
+          9488,
+          9502
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 15259,
+        "channel": 28,
+        "focus": [
+          15200,
+          15260
+        ],
+        "min_level_rmse": 8.673715082554495e-06,
+        "min_centered_shape_rmse": 8.565369551604621e-06,
+        "min_difference_rmse": 9.022570568358938e-06,
+        "full_train_min_level_rmse": 8.673715082554495e-06,
+        "full_train_min_shape_rmse": 8.565369551604621e-06,
+        "context_selected_median_focus_rmse": 8.673715082554495e-06,
+        "best_focus_train_end": 108,
+        "best_shape_train_end": 108,
+        "context_selected_train_ends": [
+          108,
+          9418,
+          9432,
+          9446,
+          9460,
+          9474,
+          9488,
+          9502
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 15278,
+        "channel": 28,
+        "focus": [
+          15219,
+          15279
+        ],
+        "min_level_rmse": 9.300537618869137e-06,
+        "min_centered_shape_rmse": 9.124691775616311e-06,
+        "min_difference_rmse": 1.2824764179944456e-05,
+        "full_train_min_level_rmse": 9.300537618869137e-06,
+        "full_train_min_shape_rmse": 9.124691775616311e-06,
+        "context_selected_median_focus_rmse": 9.300537618869137e-06,
+        "best_focus_train_end": 108,
+        "best_shape_train_end": 108,
+        "context_selected_train_ends": [
+          108,
+          9418,
+          9432,
+          9446,
+          9460,
+          9474,
+          9488,
+          9502
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 15487,
+        "channel": 24,
+        "focus": [
+          15428,
+          15488
+        ],
+        "min_level_rmse": 8.160664342625969,
+        "min_centered_shape_rmse": 2.252331501538158,
+        "min_difference_rmse": 1.477063515008636,
+        "full_train_min_level_rmse": 2.5212532668343197,
+        "full_train_min_shape_rmse": 1.8989726133517075,
+        "context_selected_median_focus_rmse": 8.823235336560804,
+        "best_focus_train_end": 5694,
+        "best_shape_train_end": 7010,
+        "context_selected_train_ends": [
+          5736,
+          5722,
+          5750,
+          5708,
+          5764,
+          5778,
+          7164,
+          5792
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 21703,
+        "channel": 24,
+        "focus": [
+          21644,
+          21704
+        ],
+        "min_level_rmse": 4.652599763396717,
+        "min_centered_shape_rmse": 1.421621790532516,
+        "min_difference_rmse": 1.1311568930934157,
+        "full_train_min_level_rmse": 1.3247366654109871,
+        "full_train_min_shape_rmse": 1.3044950037904501,
+        "context_selected_median_focus_rmse": 5.313453574389903,
+        "best_focus_train_end": 5694,
+        "best_shape_train_end": 11294,
+        "context_selected_train_ends": [
+          5736,
+          5722,
+          5750,
+          5708,
+          5764,
+          5778,
+          7164,
+          7178
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 22223,
+        "channel": 34,
+        "focus": [
+          22164,
+          22224
+        ],
+        "min_level_rmse": 13.918088513419457,
+        "min_centered_shape_rmse": 7.849106718216789,
+        "min_difference_rmse": 0.941348316252071,
+        "full_train_min_level_rmse": 3.196587442923553,
+        "full_train_min_shape_rmse": 3.070988356009313,
+        "context_selected_median_focus_rmse": 15.712714805514013,
+        "best_focus_train_end": 5680,
+        "best_shape_train_end": 14234,
+        "context_selected_train_ends": [
+          7066,
+          9964,
+          11280,
+          11266,
+          9978,
+          5554,
+          5568,
+          9950
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 22263,
+        "channel": 34,
+        "focus": [
+          22204,
+          22264
+        ],
+        "min_level_rmse": 22.266608888995886,
+        "min_centered_shape_rmse": 3.040914166819651,
+        "min_difference_rmse": 1.14749859216641,
+        "full_train_min_level_rmse": 5.7985247256654135,
+        "full_train_min_shape_rmse": 2.4863288901350646,
+        "context_selected_median_focus_rmse": 23.73384338536393,
+        "best_focus_train_end": 5694,
+        "best_shape_train_end": 5764,
+        "context_selected_train_ends": [
+          5736,
+          5750,
+          5722,
+          5806,
+          5792,
+          5820,
+          7164,
+          5778
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 22305,
+        "channel": 28,
+        "focus": [
+          22246,
+          22306
+        ],
+        "min_level_rmse": 2.6336286754210434e-05,
+        "min_centered_shape_rmse": 2.6115895542753266e-05,
+        "min_difference_rmse": 2.6558537840088068e-05,
+        "full_train_min_level_rmse": 2.6336286754210434e-05,
+        "full_train_min_shape_rmse": 2.6115895542753266e-05,
+        "context_selected_median_focus_rmse": 2.6336286754210434e-05,
+        "best_focus_train_end": 108,
+        "best_shape_train_end": 108,
+        "context_selected_train_ends": [
+          108,
+          9418,
+          9432,
+          9446,
+          9460,
+          9474,
+          9488,
+          9502
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 22330,
+        "channel": 28,
+        "focus": [
+          22271,
+          22331
+        ],
+        "min_level_rmse": 2.7178422814186013e-05,
+        "min_centered_shape_rmse": 2.6841427350687264e-05,
+        "min_difference_rmse": 3.8164674410786686e-05,
+        "full_train_min_level_rmse": 2.7178422814186013e-05,
+        "full_train_min_shape_rmse": 2.6841427350687264e-05,
+        "context_selected_median_focus_rmse": 2.7178422814186013e-05,
+        "best_focus_train_end": 108,
+        "best_shape_train_end": 108,
+        "context_selected_train_ends": [
+          108,
+          9418,
+          9432,
+          9446,
+          9460,
+          9474,
+          9488,
+          9502
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 22394,
+        "channel": 29,
+        "focus": [
+          22335,
+          22395
+        ],
+        "min_level_rmse": 57.951762867818275,
+        "min_centered_shape_rmse": 3.4632730135573557,
+        "min_difference_rmse": 3.1559696497423975,
+        "full_train_min_level_rmse": 42.01182062729353,
+        "full_train_min_shape_rmse": 3.374228478877378,
+        "context_selected_median_focus_rmse": 58.716411423643514,
+        "best_focus_train_end": 5666,
+        "best_shape_train_end": 4616,
+        "context_selected_train_ends": [
+          5722,
+          5736,
+          5708,
+          5750,
+          5694,
+          5596,
+          5582,
+          5680
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 22400,
+        "channel": 29,
+        "focus": [
+          22341,
+          22401
+        ],
+        "min_level_rmse": 55.94314211956215,
+        "min_centered_shape_rmse": 7.119722815656047,
+        "min_difference_rmse": 3.3297043166535354,
+        "full_train_min_level_rmse": 40.11421434273304,
+        "full_train_min_shape_rmse": 6.465455688361444,
+        "context_selected_median_focus_rmse": 56.966516082761935,
+        "best_focus_train_end": 5666,
+        "best_shape_train_end": 6562,
+        "context_selected_train_ends": [
+          5722,
+          5736,
+          5708,
+          5750,
+          5596,
+          5694,
+          5582,
+          5764
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 22419,
+        "channel": 29,
+        "focus": [
+          22360,
+          22420
+        ],
+        "min_level_rmse": 49.68459593487928,
+        "min_centered_shape_rmse": 10.738801446672557,
+        "min_difference_rmse": 3.3858031777255935,
+        "full_train_min_level_rmse": 34.06193175618811,
+        "full_train_min_shape_rmse": 9.441303880946586,
+        "context_selected_median_focus_rmse": 50.64028807123593,
+        "best_focus_train_end": 5680,
+        "best_shape_train_end": 6576,
+        "context_selected_train_ends": [
+          5736,
+          5722,
+          5708,
+          5750,
+          5596,
+          5694,
+          5764,
+          5610
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 22438,
+        "channel": 24,
+        "focus": [
+          22379,
+          22439
+        ],
+        "min_level_rmse": 29.488889785600204,
+        "min_centered_shape_rmse": 2.2117373590183758,
+        "min_difference_rmse": 1.7921286305395712,
+        "full_train_min_level_rmse": 10.776912391283023,
+        "full_train_min_shape_rmse": 2.0472875679912823,
+        "context_selected_median_focus_rmse": 30.192940471512706,
+        "best_focus_train_end": 5694,
+        "best_shape_train_end": 7010,
+        "context_selected_train_ends": [
+          5722,
+          5736,
+          5750,
+          5708,
+          5764,
+          5778,
+          7164,
+          5792
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 22442,
+        "channel": 24,
+        "focus": [
+          22383,
+          22443
+        ],
+        "min_level_rmse": 30.221407673680087,
+        "min_centered_shape_rmse": 3.201106496176095,
+        "min_difference_rmse": 1.594067237422473,
+        "full_train_min_level_rmse": 11.758743615760464,
+        "full_train_min_shape_rmse": 2.4605306407768732,
+        "context_selected_median_focus_rmse": 30.93980064562747,
+        "best_focus_train_end": 5694,
+        "best_shape_train_end": 11294,
+        "context_selected_train_ends": [
+          5722,
+          5736,
+          5750,
+          5708,
+          5764,
+          5778,
+          7164,
+          5792
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 22444,
+        "channel": 24,
+        "focus": [
+          22385,
+          22445
+        ],
+        "min_level_rmse": 30.58755553697843,
+        "min_centered_shape_rmse": 3.570508119859816,
+        "min_difference_rmse": 1.6135988753062742,
+        "full_train_min_level_rmse": 12.050118259957445,
+        "full_train_min_shape_rmse": 2.313167050324645,
+        "context_selected_median_focus_rmse": 31.305938013090742,
+        "best_focus_train_end": 5694,
+        "best_shape_train_end": 6996,
+        "context_selected_train_ends": [
+          5722,
+          5736,
+          5750,
+          5708,
+          5764,
+          5778,
+          7164,
+          5792
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 22464,
+        "channel": 24,
+        "focus": [
+          22405,
+          22465
+        ],
+        "min_level_rmse": 31.604335684070218,
+        "min_centered_shape_rmse": 3.8666037581068062,
+        "min_difference_rmse": 2.3914235194422884,
+        "full_train_min_level_rmse": 12.561687812191254,
+        "full_train_min_shape_rmse": 3.4732515336564527,
+        "context_selected_median_focus_rmse": 32.28554846114325,
+        "best_focus_train_end": 5694,
+        "best_shape_train_end": 5778,
+        "context_selected_train_ends": [
+          5736,
+          5722,
+          5750,
+          5708,
+          5764,
+          5778,
+          7164,
+          5792
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 22477,
+        "channel": 24,
+        "focus": [
+          22418,
+          22478
+        ],
+        "min_level_rmse": 30.717102196006792,
+        "min_centered_shape_rmse": 4.8199561458993605,
+        "min_difference_rmse": 2.3858310742228976,
+        "full_train_min_level_rmse": 11.542277899397389,
+        "full_train_min_shape_rmse": 3.897293591732445,
+        "context_selected_median_focus_rmse": 31.39851923918464,
+        "best_focus_train_end": 5694,
+        "best_shape_train_end": 5792,
+        "context_selected_train_ends": [
+          5736,
+          5722,
+          5750,
+          5708,
+          5764,
+          5778,
+          7164,
+          5792
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 22497,
+        "channel": 24,
+        "focus": [
+          22438,
+          22498
+        ],
+        "min_level_rmse": 26.408728770495628,
+        "min_centered_shape_rmse": 8.20297610656769,
+        "min_difference_rmse": 2.0917332952875705,
+        "full_train_min_level_rmse": 8.849127057211861,
+        "full_train_min_shape_rmse": 5.996483025779091,
+        "context_selected_median_focus_rmse": 27.10948188320947,
+        "best_focus_train_end": 5694,
+        "best_shape_train_end": 5806,
+        "context_selected_train_ends": [
+          5722,
+          5736,
+          5750,
+          5708,
+          5764,
+          5778,
+          7164,
+          5792
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 23790,
+        "channel": 24,
+        "focus": [
+          23731,
+          23791
+        ],
+        "min_level_rmse": 22.850283827640798,
+        "min_centered_shape_rmse": 8.466997954976042,
+        "min_difference_rmse": 2.555654857261283,
+        "full_train_min_level_rmse": 9.040798238738171,
+        "full_train_min_shape_rmse": 4.9537119037238355,
+        "context_selected_median_focus_rmse": 23.555521834130737,
+        "best_focus_train_end": 5694,
+        "best_shape_train_end": 6996,
+        "context_selected_train_ends": [
+          5736,
+          5722,
+          5750,
+          5708,
+          5764,
+          5778,
+          7164,
+          5792
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 23944,
+        "channel": 24,
+        "focus": [
+          23885,
+          23945
+        ],
+        "min_level_rmse": 25.650637841944434,
+        "min_centered_shape_rmse": 5.087984784644036,
+        "min_difference_rmse": 2.800528513438435,
+        "full_train_min_level_rmse": 8.078106278344,
+        "full_train_min_shape_rmse": 4.218653181024686,
+        "context_selected_median_focus_rmse": 26.307243377985813,
+        "best_focus_train_end": 5694,
+        "best_shape_train_end": 10020,
+        "context_selected_train_ends": [
+          5722,
+          5736,
+          5750,
+          5708,
+          5764,
+          5778,
+          7164,
+          5792
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 25091,
+        "channel": 34,
+        "focus": [
+          25032,
+          25092
+        ],
+        "min_level_rmse": 10.61396734408075,
+        "min_centered_shape_rmse": 4.441390637897915,
+        "min_difference_rmse": 0.484675870774362,
+        "full_train_min_level_rmse": 1.7879162782812692,
+        "full_train_min_shape_rmse": 1.6297170499510027,
+        "context_selected_median_focus_rmse": 12.452735113527032,
+        "best_focus_train_end": 5694,
+        "best_shape_train_end": 14234,
+        "context_selected_train_ends": [
+          7066,
+          9978,
+          7080,
+          11280,
+          5568,
+          9992,
+          11336,
+          5582
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 25175,
+        "channel": 28,
+        "focus": [
+          25116,
+          25176
+        ],
+        "min_level_rmse": 0.00021830716128122473,
+        "min_centered_shape_rmse": 0.00021648029099409694,
+        "min_difference_rmse": 0.00022014944846857315,
+        "full_train_min_level_rmse": 0.00021830716128122473,
+        "full_train_min_shape_rmse": 0.00021648029099409694,
+        "context_selected_median_focus_rmse": 0.00021830716128122473,
+        "best_focus_train_end": 108,
+        "best_shape_train_end": 108,
+        "context_selected_train_ends": [
+          108,
+          9418,
+          9432,
+          9446,
+          9460,
+          9474,
+          9488,
+          9502
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 25230,
+        "channel": 24,
+        "focus": [
+          25171,
+          25231
+        ],
+        "min_level_rmse": 26.889569273158585,
+        "min_centered_shape_rmse": 7.343682845827334,
+        "min_difference_rmse": 2.6245113300437124,
+        "full_train_min_level_rmse": 8.9739056516504,
+        "full_train_min_shape_rmse": 4.487153078303124,
+        "context_selected_median_focus_rmse": 27.59740105544309,
+        "best_focus_train_end": 5694,
+        "best_shape_train_end": 10062,
+        "context_selected_train_ends": [
+          5736,
+          5722,
+          5750,
+          5708,
+          5764,
+          5778,
+          7164,
+          5792
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 26244,
+        "channel": 8,
+        "focus": [
+          26185,
+          26245
+        ],
+        "min_level_rmse": 2.4108670016722664,
+        "min_centered_shape_rmse": 2.356402535342056,
+        "min_difference_rmse": 3.0906601819476145,
+        "full_train_min_level_rmse": 2.408224156928958,
+        "full_train_min_shape_rmse": 1.9681951790799943,
+        "context_selected_median_focus_rmse": 2.5746398447973946,
+        "best_focus_train_end": 2530,
+        "best_shape_train_end": 2530,
+        "context_selected_train_ends": [
+          2572,
+          2530,
+          11504,
+          5806,
+          5666,
+          2544,
+          6758,
+          2866
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 26692,
+        "channel": 24,
+        "focus": [
+          26633,
+          26693
+        ],
+        "min_level_rmse": 29.850814758162713,
+        "min_centered_shape_rmse": 5.755530453615791,
+        "min_difference_rmse": 2.752597540296352,
+        "full_train_min_level_rmse": 11.434823951283242,
+        "full_train_min_shape_rmse": 5.095904567696062,
+        "context_selected_median_focus_rmse": 30.50886904890876,
+        "best_focus_train_end": 5694,
+        "best_shape_train_end": 10020,
+        "context_selected_train_ends": [
+          5736,
+          5722,
+          5750,
+          5708,
+          5764,
+          5778,
+          7164,
+          5792
+        ]
+      },
+      {
+        "group": "GT_high",
+        "tick": 16260,
+        "channel": 28,
+        "focus": [
+          16201,
+          16261
+        ],
+        "min_level_rmse": 4.168652859937688e-05,
+        "min_centered_shape_rmse": 4.126211606573544e-05,
+        "min_difference_rmse": 4.2284548606405364e-05,
+        "full_train_min_level_rmse": 4.168652859937688e-05,
+        "full_train_min_shape_rmse": 4.126211606573544e-05,
+        "context_selected_median_focus_rmse": 4.168652859937688e-05,
+        "best_focus_train_end": 108,
+        "best_shape_train_end": 108,
+        "context_selected_train_ends": [
+          108,
+          9418,
+          9432,
+          9446,
+          9460,
+          9474,
+          9488,
+          9502
+        ]
+      },
+      {
+        "group": "GT_high",
+        "tick": 17479,
+        "channel": 26,
+        "focus": [
+          17420,
+          17480
+        ],
+        "min_level_rmse": 0.18050931180796,
+        "min_centered_shape_rmse": 0.17099058935351044,
+        "min_difference_rmse": 0.12156962231194023,
+        "full_train_min_level_rmse": 0.18050931180796,
+        "full_train_min_shape_rmse": 0.17099058935351044,
+        "context_selected_median_focus_rmse": 0.18050931180796,
+        "best_focus_train_end": 108,
+        "best_shape_train_end": 108,
+        "context_selected_train_ends": [
+          108,
+          9418,
+          9432,
+          9446,
+          9460,
+          9474,
+          9488,
+          9502
+        ]
+      },
+      {
+        "group": "GT_high",
+        "tick": 18473,
+        "channel": 28,
+        "focus": [
+          18414,
+          18474
+        ],
+        "min_level_rmse": 0.002405542295062245,
+        "min_centered_shape_rmse": 0.002365120641508354,
+        "min_difference_rmse": 0.0016165611754271178,
+        "full_train_min_level_rmse": 0.002405542295062245,
+        "full_train_min_shape_rmse": 0.002365120641508354,
+        "context_selected_median_focus_rmse": 0.002405542295062245,
+        "best_focus_train_end": 108,
+        "best_shape_train_end": 108,
+        "context_selected_train_ends": [
+          108,
+          9418,
+          9432,
+          9446,
+          9460,
+          9474,
+          9488,
+          9502
+        ]
+      },
+      {
+        "group": "GT_high",
+        "tick": 20056,
+        "channel": 28,
+        "focus": [
+          19997,
+          20057
+        ],
+        "min_level_rmse": 0.0009468479726615743,
+        "min_centered_shape_rmse": 0.0008982709519157098,
+        "min_difference_rmse": 0.00112849699052639,
+        "full_train_min_level_rmse": 0.0009468479726615743,
+        "full_train_min_shape_rmse": 0.0008982709519157098,
+        "context_selected_median_focus_rmse": 0.0009468479726615743,
+        "best_focus_train_end": 108,
+        "best_shape_train_end": 108,
+        "context_selected_train_ends": [
+          108,
+          9418,
+          9432,
+          9446,
+          9460,
+          9474,
+          9488,
+          9502
+        ]
+      },
+      {
+        "group": "GT_high",
+        "tick": 20788,
+        "channel": 8,
+        "focus": [
+          20729,
+          20789
+        ],
+        "min_level_rmse": 11.328793482800952,
+        "min_centered_shape_rmse": 11.3274046636415,
+        "min_difference_rmse": 12.770356550201111,
+        "full_train_min_level_rmse": 10.495345646005527,
+        "full_train_min_shape_rmse": 10.122000327929827,
+        "context_selected_median_focus_rmse": 11.798820375274259,
+        "best_focus_train_end": 12008,
+        "best_shape_train_end": 12008,
+        "context_selected_train_ends": [
+          7276,
+          4392,
+          1508,
+          4406,
+          13030,
+          1522,
+          13016,
+          13044
+        ]
+      },
+      {
+        "group": "GT_high",
+        "tick": 24681,
+        "channel": 8,
+        "focus": [
+          24622,
+          24682
+        ],
+        "min_level_rmse": 13.673349784833313,
+        "min_centered_shape_rmse": 13.572226916371553,
+        "min_difference_rmse": 13.484733873581607,
+        "full_train_min_level_rmse": 13.395626861026152,
+        "full_train_min_shape_rmse": 13.355073859542236,
+        "context_selected_median_focus_rmse": 13.945488523570427,
+        "best_focus_train_end": 3356,
+        "best_shape_train_end": 3356,
+        "context_selected_train_ends": [
+          2978,
+          9124,
+          486,
+          3370,
+          13436,
+          10566,
+          7696,
+          4798
+        ]
+      },
+      {
+        "group": "GT_high",
+        "tick": 26115,
+        "channel": 8,
+        "focus": [
+          26056,
+          26116
+        ],
+        "min_level_rmse": 11.201527408282859,
+        "min_centered_shape_rmse": 11.164648233218843,
+        "min_difference_rmse": 10.572882129362776,
+        "full_train_min_level_rmse": 10.993260864949601,
+        "full_train_min_shape_rmse": 10.75570248492995,
+        "context_selected_median_focus_rmse": 11.821210443823134,
+        "best_focus_train_end": 3356,
+        "best_shape_train_end": 3356,
+        "context_selected_train_ends": [
+          7304,
+          5862,
+          13044,
+          4406,
+          4420,
+          13058,
+          1536,
+          1522
+        ]
+      },
+      {
+        "group": "GT_high",
+        "tick": 27555,
+        "channel": 8,
+        "focus": [
+          27496,
+          27556
+        ],
+        "min_level_rmse": 12.01639733418989,
+        "min_centered_shape_rmse": 11.973449165638243,
+        "min_difference_rmse": 12.236261516671178,
+        "full_train_min_level_rmse": 11.809368986847755,
+        "full_train_min_shape_rmse": 11.643666500469516,
+        "context_selected_median_focus_rmse": 12.308214040821852,
+        "best_focus_train_end": 3356,
+        "best_shape_train_end": 3356,
+        "context_selected_train_ends": [
+          8718,
+          10174,
+          11616,
+          3370,
+          10566,
+          6254,
+          472,
+          9124
+        ]
+      }
+    ]
+  },
+  {
+    "machine": "machine-1-2",
+    "library": "fit-prefix bank plus full-train retrospective control; 60-tick focus, preceding 48-tick context, stride 14",
+    "scaling": "frozen fit-prefix scale; absolute distances not comparable across different channels",
+    "caveat": "Single-channel and selection-biased; no causal or normality conclusion. Full-focus nearest match is diagnostic only.",
+    "summary": {
+      "GT_review_or_miss": {
+        "n": 10,
+        "min_level_rmse": [
+          3.5235097925462613,
+          6.027167894339408,
+          11.795762098458306
+        ],
+        "min_centered_shape_rmse": [
+          3.5002668973576974,
+          5.8528396871628345,
+          11.558513771339223
+        ],
+        "min_difference_rmse": [
+          3.1863870132874816,
+          6.703197355443624,
+          13.663403531331053
+        ],
+        "full_train_min_level_rmse": [
+          1.1722362403930209,
+          5.466934158898043,
+          10.078117351884206
+        ],
+        "full_train_min_shape_rmse": [
+          0.8488876963496721,
+          5.299399629552983,
+          9.995662924613923
+        ],
+        "context_selected_median_focus_rmse": [
+          4.652949997482021,
+          7.308692710814103,
+          12.2516846723801
+        ]
+      }
+    },
+    "queries": [
+      {
+        "group": "GT_review_or_miss",
+        "tick": 4685,
+        "channel": 8,
+        "focus": [
+          4626,
+          4686
+        ],
+        "min_level_rmse": 12.760324352566036,
+        "min_centered_shape_rmse": 12.476021459302528,
+        "min_difference_rmse": 17.620192857479367,
+        "full_train_min_level_rmse": 10.71680981835324,
+        "full_train_min_shape_rmse": 10.62248027453563,
+        "context_selected_median_focus_rmse": 13.110147612055952,
+        "best_focus_train_end": 4714,
+        "best_shape_train_end": 4714,
+        "context_selected_train_ends": [
+          346,
+          1130,
+          5260,
+          108,
+          8214,
+          8746,
+          4350,
+          2264
+        ]
+      },
+      {
+        "group": "GT_review_or_miss",
+        "tick": 5488,
+        "channel": 17,
+        "focus": [
+          5429,
+          5489
+        ],
+        "min_level_rmse": 8.902075336135116,
+        "min_centered_shape_rmse": 8.805990707449308,
+        "min_difference_rmse": 12.14100368118215,
+        "full_train_min_level_rmse": 8.162039952477105,
+        "full_train_min_shape_rmse": 8.115210874848803,
+        "context_selected_median_focus_rmse": 9.06227054555125,
+        "best_focus_train_end": 10482,
+        "best_shape_train_end": 10482,
+        "context_selected_train_ends": [
+          108,
+          7738,
+          7752,
+          7766,
+          7780,
+          7794,
+          7808,
+          7822
+        ]
+      },
+      {
+        "group": "GT_review_or_miss",
+        "tick": 5922,
+        "channel": 9,
+        "focus": [
+          5863,
+          5923
+        ],
+        "min_level_rmse": 6.660234826328032,
+        "min_centered_shape_rmse": 6.3567181257435585,
+        "min_difference_rmse": 7.966773102159679,
+        "full_train_min_level_rmse": 6.456914499837716,
+        "full_train_min_shape_rmse": 6.29819823055188,
+        "context_selected_median_focus_rmse": 9.676295853352539,
+        "best_focus_train_end": 2978,
+        "best_shape_train_end": 2978,
+        "context_selected_train_ends": [
+          10678,
+          2334,
+          8214,
+          724,
+          6254,
+          920,
+          9586,
+          5232
+        ]
+      },
+      {
+        "group": "GT_review_or_miss",
+        "tick": 15415,
+        "channel": 17,
+        "focus": [
+          15356,
+          15416
+        ],
+        "min_level_rmse": 5.394100962350784,
+        "min_centered_shape_rmse": 5.3489612485821105,
+        "min_difference_rmse": 5.43962160872757,
+        "full_train_min_level_rmse": 0.08050695686308447,
+        "full_train_min_shape_rmse": 0.07983324663508776,
+        "context_selected_median_focus_rmse": 5.5551148760769555,
+        "best_focus_train_end": 3090,
+        "best_shape_train_end": 3090,
+        "context_selected_train_ends": [
+          108,
+          7738,
+          7752,
+          7766,
+          7780,
+          7794,
+          7808,
+          7822
+        ]
+      },
+      {
+        "group": "GT_review_or_miss",
+        "tick": 15586,
+        "channel": 4,
+        "focus": [
+          15527,
+          15587
+        ],
+        "min_level_rmse": 0.09913209550115949,
+        "min_centered_shape_rmse": 0.07544421268092427,
+        "min_difference_rmse": 0.06401254247967146,
+        "full_train_min_level_rmse": 0.09913209550115949,
+        "full_train_min_shape_rmse": 0.03658172013900262,
+        "context_selected_median_focus_rmse": 0.09931582573532592,
+        "best_focus_train_end": 4420,
+        "best_shape_train_end": 1844,
+        "context_selected_train_ends": [
+          5428,
+          5456,
+          5442,
+          5414,
+          5400,
+          5316,
+          5134,
+          5148
+        ]
+      },
+      {
+        "group": "GT_review_or_miss",
+        "tick": 15925,
+        "channel": 29,
+        "focus": [
+          15866,
+          15926
+        ],
+        "min_level_rmse": 14.052283375793627,
+        "min_centered_shape_rmse": 13.93468897891323,
+        "min_difference_rmse": 14.170870148047353,
+        "full_train_min_level_rmse": 14.052283375793627,
+        "full_train_min_shape_rmse": 13.93468897891323,
+        "context_selected_median_focus_rmse": 14.052283375793627,
+        "best_focus_train_end": 108,
+        "best_shape_train_end": 108,
+        "context_selected_train_ends": [
+          108,
+          7822,
+          7836,
+          7850,
+          7864,
+          7878,
+          7892,
+          7906
+        ]
+      },
+      {
+        "group": "GT_review_or_miss",
+        "tick": 18677,
+        "channel": 15,
+        "focus": [
+          18618,
+          18678
+        ],
+        "min_level_rmse": 4.539034475262479,
+        "min_centered_shape_rmse": 4.480043917132967,
+        "min_difference_rmse": 4.049874519921466,
+        "full_train_min_level_rmse": 4.476953817958371,
+        "full_train_min_shape_rmse": 4.300601028554087,
+        "context_selected_median_focus_rmse": 5.398098689055136,
+        "best_focus_train_end": 3216,
+        "best_shape_train_end": 3216,
+        "context_selected_train_ends": [
+          8536,
+          7934,
+          7206,
+          9250,
+          8326,
+          8340,
+          7318,
+          7948
+        ]
+      },
+      {
+        "group": "GT_review_or_miss",
+        "tick": 20235,
+        "channel": 29,
+        "focus": [
+          20176,
+          20236
+        ],
+        "min_level_rmse": 14.052283375793627,
+        "min_centered_shape_rmse": 13.93468897891323,
+        "min_difference_rmse": 14.170870148047353,
+        "full_train_min_level_rmse": 14.052283375793627,
+        "full_train_min_shape_rmse": 13.93468897891323,
+        "context_selected_median_focus_rmse": 14.052283375793627,
+        "best_focus_train_end": 108,
+        "best_shape_train_end": 108,
+        "context_selected_train_ends": [
+          108,
+          7822,
+          7836,
+          7850,
+          7864,
+          7878,
+          7892,
+          7906
+        ]
+      },
+      {
+        "group": "GT_review_or_miss",
+        "tick": 22277,
+        "channel": 3,
+        "focus": [
+          22218,
+          22278
+        ],
+        "min_level_rmse": 1.013296280186133,
+        "min_centered_shape_rmse": 0.6835198489552204,
+        "min_difference_rmse": 0.1919358412909781,
+        "full_train_min_level_rmse": 0.7674825068539928,
+        "full_train_min_shape_rmse": 0.36944801571154956,
+        "context_selected_median_focus_rmse": 1.8044764175838055,
+        "best_focus_train_end": 4224,
+        "best_shape_train_end": 9978,
+        "context_selected_train_ends": [
+          5904,
+          6464,
+          7136,
+          6828,
+          5932,
+          5876,
+          4504,
+          5890
+        ]
+      },
+      {
+        "group": "GT_review_or_miss",
+        "tick": 23107,
+        "channel": 27,
+        "focus": [
+          23048,
+          23108
+        ],
+        "min_level_rmse": 3.185001564974189,
+        "min_centered_shape_rmse": 3.1736745574326073,
+        "min_difference_rmse": 2.898557844409487,
+        "full_train_min_level_rmse": 2.3864974410101047,
+        "full_train_min_shape_rmse": 2.28720673826404,
+        "context_selected_median_focus_rmse": 4.404567100290983,
+        "best_focus_train_end": 4714,
+        "best_shape_train_end": 4714,
+        "context_selected_train_ends": [
+          8368,
+          9670,
+          9712,
+          9684,
+          9698,
+          8354,
+          7318,
+          10902
+        ]
+      }
+    ]
+  },
+  {
+    "machine": "machine-1-6",
+    "library": "fit-prefix bank plus full-train retrospective control; 60-tick focus, preceding 48-tick context, stride 14",
+    "scaling": "frozen fit-prefix scale; absolute distances not comparable across different channels",
+    "caveat": "Single-channel and selection-biased; no causal or normality conclusion. Full-focus nearest match is diagnostic only.",
+    "summary": {
+      "GT-normal_high": {
+        "n": 65,
+        "min_level_rmse": [
+          1.6007957617326023,
+          4.648856842726439,
+          18.61988627506048
+        ],
+        "min_centered_shape_rmse": [
+          1.4023289329340765,
+          4.487615267988015,
+          5.790001808282962
+        ],
+        "min_difference_rmse": [
+          1.597464599330478,
+          5.155291044486935,
+          7.7724816439483915
+        ],
+        "full_train_min_level_rmse": [
+          1.4758850854930392,
+          4.03092563171496,
+          13.447108137780091
+        ],
+        "full_train_min_shape_rmse": [
+          1.2557993124023432,
+          3.8027067884130346,
+          5.776557856393245
+        ],
+        "context_selected_median_focus_rmse": [
+          2.198477718566909,
+          6.047476713388247,
+          19.559953216713776
+        ]
+      },
+      "GT_high": {
+        "n": 29,
+        "min_level_rmse": [
+          2.9005150725510327,
+          8.112747431621315,
+          20.878044816020882
+        ],
+        "min_centered_shape_rmse": [
+          2.7911253492669807,
+          7.345602611137162,
+          9.159280244329413
+        ],
+        "min_difference_rmse": [
+          2.658681866269873,
+          9.002118632010095,
+          11.041848383311358
+        ],
+        "full_train_min_level_rmse": [
+          1.9978241527044314,
+          8.112747431621315,
+          15.79668324760388
+        ],
+        "full_train_min_shape_rmse": [
+          1.7342556770441921,
+          7.2862242373436406,
+          9.149958668688718
+        ],
+        "context_selected_median_focus_rmse": [
+          4.026696292101128,
+          8.271120596238134,
+          21.704982394618458
+        ]
+      },
+      "GT_review_or_miss": {
+        "n": 1,
+        "min_level_rmse": [
+          0.07505962342462169,
+          0.07505962342462169,
+          0.07505962342462169
+        ],
+        "min_centered_shape_rmse": [
+          0.034471472603686375,
+          0.034471472603686375,
+          0.034471472603686375
+        ],
+        "min_difference_rmse": [
+          0.009892073807307188,
+          0.009892073807307188,
+          0.009892073807307188
+        ],
+        "full_train_min_level_rmse": [
+          0.07486626709427983,
+          0.07486626709427983,
+          0.07486626709427983
+        ],
+        "full_train_min_shape_rmse": [
+          0.024371093344765872,
+          0.024371093344765872,
+          0.024371093344765872
+        ],
+        "context_selected_median_focus_rmse": [
+          0.16372459171668066,
+          0.16372459171668066,
+          0.16372459171668066
+        ]
+      }
+    },
+    "queries": [
+      {
+        "group": "GT-normal_high",
+        "tick": 1149,
+        "channel": 11,
+        "focus": [
+          1090,
+          1150
+        ],
+        "min_level_rmse": 1.5809962866411118,
+        "min_centered_shape_rmse": 1.5304885114445355,
+        "min_difference_rmse": 1.6068975932362548,
+        "full_train_min_level_rmse": 1.4697992746415112,
+        "full_train_min_shape_rmse": 1.2557993124023432,
+        "context_selected_median_focus_rmse": 1.6720926185496359,
+        "best_focus_train_end": 8998,
+        "best_shape_train_end": 5204,
+        "context_selected_train_ends": [
+          10398,
+          10412,
+          6142,
+          10426,
+          8984,
+          6128,
+          8998,
+          10118
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 1542,
+        "channel": 25,
+        "focus": [
+          1483,
+          1543
+        ],
+        "min_level_rmse": 1.0312124458497192,
+        "min_centered_shape_rmse": 0.9650292242475742,
+        "min_difference_rmse": 1.3838597808482682,
+        "full_train_min_level_rmse": 0.8822968298600594,
+        "full_train_min_shape_rmse": 0.5973392627758509,
+        "context_selected_median_focus_rmse": 1.121765573492137,
+        "best_focus_train_end": 2152,
+        "best_shape_train_end": 6422,
+        "context_selected_train_ends": [
+          5428,
+          4910,
+          4924,
+          5834,
+          3006,
+          3412,
+          5358,
+          2194
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 2213,
+        "channel": 11,
+        "focus": [
+          2154,
+          2214
+        ],
+        "min_level_rmse": 1.163852808552102,
+        "min_centered_shape_rmse": 1.1274009650950174,
+        "min_difference_rmse": 1.3244565723514368,
+        "full_train_min_level_rmse": 1.144905098972763,
+        "full_train_min_shape_rmse": 0.9124021280452339,
+        "context_selected_median_focus_rmse": 1.7255609174712538,
+        "best_focus_train_end": 1060,
+        "best_shape_train_end": 1060,
+        "context_selected_train_ends": [
+          878,
+          7892,
+          752,
+          6590,
+          11252,
+          2138,
+          5806,
+          8298
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 2857,
+        "channel": 11,
+        "focus": [
+          2798,
+          2858
+        ],
+        "min_level_rmse": 1.6746609136251032,
+        "min_centered_shape_rmse": 1.5032160208904415,
+        "min_difference_rmse": 1.8553840545813276,
+        "full_train_min_level_rmse": 1.5813833181075272,
+        "full_train_min_shape_rmse": 1.3138750354603044,
+        "context_selected_median_focus_rmse": 2.315937365614152,
+        "best_focus_train_end": 1060,
+        "best_shape_train_end": 1060,
+        "context_selected_train_ends": [
+          11266,
+          6590,
+          752,
+          808,
+          5792,
+          962,
+          11252,
+          8452
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 2976,
+        "channel": 4,
+        "focus": [
+          2917,
+          2977
+        ],
+        "min_level_rmse": 0.7008756039993709,
+        "min_centered_shape_rmse": 0.6283845237798117,
+        "min_difference_rmse": 0.41856418025977726,
+        "full_train_min_level_rmse": 0.6453691658912905,
+        "full_train_min_shape_rmse": 0.6283845237798117,
+        "context_selected_median_focus_rmse": 0.7008756039993709,
+        "best_focus_train_end": 11672,
+        "best_shape_train_end": 2250,
+        "context_selected_train_ends": [
+          11840,
+          11714,
+          11728,
+          11742,
+          11756,
+          11826,
+          11784,
+          11798
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 3050,
+        "channel": 4,
+        "focus": [
+          2991,
+          3051
+        ],
+        "min_level_rmse": 0.6692025920079722,
+        "min_centered_shape_rmse": 0.5793917594538719,
+        "min_difference_rmse": 0.36251763877243476,
+        "full_train_min_level_rmse": 0.6692025920079722,
+        "full_train_min_shape_rmse": 0.5793917594538719,
+        "context_selected_median_focus_rmse": 0.8529914865656678,
+        "best_focus_train_end": 2124,
+        "best_shape_train_end": 2082,
+        "context_selected_train_ends": [
+          2054,
+          2222,
+          2278,
+          2208,
+          2236,
+          2264,
+          8522,
+          8508
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 3190,
+        "channel": 4,
+        "focus": [
+          3131,
+          3191
+        ],
+        "min_level_rmse": 0.6837644349637614,
+        "min_centered_shape_rmse": 0.6332138175781893,
+        "min_difference_rmse": 0.4193015553770941,
+        "full_train_min_level_rmse": 0.6345880716755012,
+        "full_train_min_shape_rmse": 0.6332138175781893,
+        "context_selected_median_focus_rmse": 1.100243522175903,
+        "best_focus_train_end": 11672,
+        "best_shape_train_end": 2208,
+        "context_selected_train_ends": [
+          9152,
+          500,
+          9208,
+          1116,
+          1102,
+          9138,
+          9054,
+          9194
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 3292,
+        "channel": 4,
+        "focus": [
+          3233,
+          3293
+        ],
+        "min_level_rmse": 0.6298515940904562,
+        "min_centered_shape_rmse": 0.608114302265282,
+        "min_difference_rmse": 0.4001297902528494,
+        "full_train_min_level_rmse": 0.6295077890522005,
+        "full_train_min_shape_rmse": 0.608114302265282,
+        "context_selected_median_focus_rmse": 1.716561587421818,
+        "best_focus_train_end": 9670,
+        "best_shape_train_end": 2138,
+        "context_selected_train_ends": [
+          6898,
+          6786,
+          7038,
+          6884,
+          6772,
+          6716,
+          7024,
+          7304
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 3321,
+        "channel": 15,
+        "focus": [
+          3262,
+          3322
+        ],
+        "min_level_rmse": 4.670123290962941,
+        "min_centered_shape_rmse": 4.6277282161215885,
+        "min_difference_rmse": 5.23063942976952,
+        "full_train_min_level_rmse": 4.670123290962941,
+        "full_train_min_shape_rmse": 4.6277282161215885,
+        "context_selected_median_focus_rmse": 5.373272053354654,
+        "best_focus_train_end": 1998,
+        "best_shape_train_end": 1998,
+        "context_selected_train_ends": [
+          500,
+          136,
+          444,
+          290,
+          164,
+          318,
+          332,
+          486
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 3550,
+        "channel": 9,
+        "focus": [
+          3491,
+          3551
+        ],
+        "min_level_rmse": 5.000239864723013,
+        "min_centered_shape_rmse": 4.981347865452391,
+        "min_difference_rmse": 6.239603489659361,
+        "full_train_min_level_rmse": 4.755164554318778,
+        "full_train_min_shape_rmse": 4.612175509718528,
+        "context_selected_median_focus_rmse": 6.104199695661408,
+        "best_focus_train_end": 5638,
+        "best_shape_train_end": 5638,
+        "context_selected_train_ends": [
+          2796,
+          6198,
+          5428,
+          5036,
+          9166,
+          164,
+          5484,
+          4700
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 3773,
+        "channel": 17,
+        "focus": [
+          3714,
+          3774
+        ],
+        "min_level_rmse": 5.013484381075745,
+        "min_centered_shape_rmse": 4.971000902108808,
+        "min_difference_rmse": 5.247820838560628,
+        "full_train_min_level_rmse": 4.68267501788248,
+        "full_train_min_shape_rmse": 4.671338253402064,
+        "context_selected_median_focus_rmse": 6.25898691826753,
+        "best_focus_train_end": 2936,
+        "best_shape_train_end": 2936,
+        "context_selected_train_ends": [
+          2922,
+          3552,
+          2068,
+          6702,
+          2894,
+          4392,
+          3328,
+          8368
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 4013,
+        "channel": 17,
+        "focus": [
+          3954,
+          4014
+        ],
+        "min_level_rmse": 3.1189752546764407,
+        "min_centered_shape_rmse": 3.07810450056948,
+        "min_difference_rmse": 4.716525995382125,
+        "full_train_min_level_rmse": 2.7325639493313907,
+        "full_train_min_shape_rmse": 2.6801030313384904,
+        "context_selected_median_focus_rmse": 4.76063179093373,
+        "best_focus_train_end": 3972,
+        "best_shape_train_end": 3972,
+        "context_selected_train_ends": [
+          3958,
+          2712,
+          3552,
+          2922,
+          2502,
+          4378,
+          3762,
+          6702
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 4202,
+        "channel": 23,
+        "focus": [
+          4143,
+          4203
+        ],
+        "min_level_rmse": 0.4965503311471246,
+        "min_centered_shape_rmse": 0.4308507516188108,
+        "min_difference_rmse": 0.3272305565905206,
+        "full_train_min_level_rmse": 0.44550547206939733,
+        "full_train_min_shape_rmse": 0.31863924537398175,
+        "context_selected_median_focus_rmse": 1.518563012660296,
+        "best_focus_train_end": 7990,
+        "best_shape_train_end": 10468,
+        "context_selected_train_ends": [
+          7808,
+          8312,
+          8298,
+          8284,
+          8270,
+          7458,
+          8060,
+          7472
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 4205,
+        "channel": 4,
+        "focus": [
+          4146,
+          4206
+        ],
+        "min_level_rmse": 0.6131643754665651,
+        "min_centered_shape_rmse": 0.3029857537660323,
+        "min_difference_rmse": 0.12812633840155738,
+        "full_train_min_level_rmse": 0.6131643754665651,
+        "full_train_min_shape_rmse": 0.3029857537660323,
+        "context_selected_median_focus_rmse": 0.7708755279931563,
+        "best_focus_train_end": 2040,
+        "best_shape_train_end": 2110,
+        "context_selected_train_ends": [
+          2096,
+          4070,
+          4084,
+          4098,
+          4112,
+          4056,
+          4042,
+          4770
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 4271,
+        "channel": 13,
+        "focus": [
+          4212,
+          4272
+        ],
+        "min_level_rmse": 19.09778950722863,
+        "min_centered_shape_rmse": 11.005848930060662,
+        "min_difference_rmse": 10.888518395893046,
+        "full_train_min_level_rmse": 11.522426098840524,
+        "full_train_min_shape_rmse": 10.687290886798507,
+        "context_selected_median_focus_rmse": 19.89407495946589,
+        "best_focus_train_end": 11182,
+        "best_shape_train_end": 7122,
+        "context_selected_train_ends": [
+          7864,
+          920,
+          7850,
+          906,
+          6674,
+          2362,
+          6688,
+          934
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 4392,
+        "channel": 13,
+        "focus": [
+          4333,
+          4393
+        ],
+        "min_level_rmse": 12.4466693918532,
+        "min_centered_shape_rmse": 5.175188013425841,
+        "min_difference_rmse": 6.7703131760603865,
+        "full_train_min_level_rmse": 11.870756428197904,
+        "full_train_min_shape_rmse": 5.100474362544186,
+        "context_selected_median_focus_rmse": 13.320677685278064,
+        "best_focus_train_end": 7808,
+        "best_shape_train_end": 6828,
+        "context_selected_train_ends": [
+          7878,
+          7864,
+          920,
+          6688,
+          7850,
+          5708,
+          934,
+          6674
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 4567,
+        "channel": 4,
+        "focus": [
+          4508,
+          4568
+        ],
+        "min_level_rmse": 0.7351433621631889,
+        "min_centered_shape_rmse": 0.5916239584807726,
+        "min_difference_rmse": 0.39199571333607575,
+        "full_train_min_level_rmse": 0.6082611356280458,
+        "full_train_min_shape_rmse": 0.5916239584807726,
+        "context_selected_median_focus_rmse": 0.7351433621631889,
+        "best_focus_train_end": 11672,
+        "best_shape_train_end": 2250,
+        "context_selected_train_ends": [
+          11840,
+          11714,
+          11728,
+          11742,
+          11756,
+          11826,
+          11784,
+          11798
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 5062,
+        "channel": 17,
+        "focus": [
+          5003,
+          5063
+        ],
+        "min_level_rmse": 6.329991078492235,
+        "min_centered_shape_rmse": 6.256459116969736,
+        "min_difference_rmse": 7.146229217361555,
+        "full_train_min_level_rmse": 6.329991078492235,
+        "full_train_min_shape_rmse": 6.256459116969736,
+        "context_selected_median_focus_rmse": 7.946887534073005,
+        "best_focus_train_end": 2306,
+        "best_shape_train_end": 2936,
+        "context_selected_train_ends": [
+          108,
+          7556,
+          7570,
+          7584,
+          7598,
+          7612,
+          7626,
+          7640
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 5149,
+        "channel": 25,
+        "focus": [
+          5090,
+          5150
+        ],
+        "min_level_rmse": 4.742554601332637,
+        "min_centered_shape_rmse": 1.1230981336297858,
+        "min_difference_rmse": 1.597464599330478,
+        "full_train_min_level_rmse": 4.742554601332637,
+        "full_train_min_shape_rmse": 0.8767856366066551,
+        "context_selected_median_focus_rmse": 6.957808553846196,
+        "best_focus_train_end": 10244,
+        "best_shape_train_end": 6422,
+        "context_selected_train_ends": [
+          10300,
+          10314,
+          4266,
+          11770,
+          10286,
+          10328,
+          10258,
+          11784
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 5542,
+        "channel": 17,
+        "focus": [
+          5483,
+          5543
+        ],
+        "min_level_rmse": 4.648856842726439,
+        "min_centered_shape_rmse": 4.579626298173306,
+        "min_difference_rmse": 5.155291044486935,
+        "full_train_min_level_rmse": 4.03092563171496,
+        "full_train_min_shape_rmse": 3.982696459799892,
+        "context_selected_median_focus_rmse": 5.760236931174247,
+        "best_focus_train_end": 3566,
+        "best_shape_train_end": 3566,
+        "context_selected_train_ends": [
+          2950,
+          3342,
+          6296,
+          2726,
+          2516,
+          8396,
+          6940,
+          7598
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 5587,
+        "channel": 17,
+        "focus": [
+          5528,
+          5588
+        ],
+        "min_level_rmse": 3.850795765103884,
+        "min_centered_shape_rmse": 3.773086860952295,
+        "min_difference_rmse": 4.867178348505308,
+        "full_train_min_level_rmse": 3.850795765103884,
+        "full_train_min_shape_rmse": 3.773086860952295,
+        "context_selected_median_focus_rmse": 6.047476713388247,
+        "best_focus_train_end": 3146,
+        "best_shape_train_end": 3146,
+        "context_selected_train_ends": [
+          4420,
+          3580,
+          2110,
+          3160,
+          3146,
+          3356,
+          2950,
+          8396
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 5602,
+        "channel": 17,
+        "focus": [
+          5543,
+          5603
+        ],
+        "min_level_rmse": 4.52272817164856,
+        "min_centered_shape_rmse": 4.487615267988015,
+        "min_difference_rmse": 5.437986585407691,
+        "full_train_min_level_rmse": 3.8915443704100734,
+        "full_train_min_shape_rmse": 3.8027067884130346,
+        "context_selected_median_focus_rmse": 5.744243359051479,
+        "best_focus_train_end": 2096,
+        "best_shape_train_end": 2096,
+        "context_selected_train_ends": [
+          3986,
+          2936,
+          3972,
+          3790,
+          2950,
+          2516,
+          3146,
+          3328
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 5803,
+        "channel": 25,
+        "focus": [
+          5744,
+          5804
+        ],
+        "min_level_rmse": 3.9963610043479316,
+        "min_centered_shape_rmse": 1.0183395921850484,
+        "min_difference_rmse": 1.2301954904086478,
+        "full_train_min_level_rmse": 3.9768311809945573,
+        "full_train_min_shape_rmse": 1.0183395921850484,
+        "context_selected_median_focus_rmse": 6.151427520869297,
+        "best_focus_train_end": 10244,
+        "best_shape_train_end": 1424,
+        "context_selected_train_ends": [
+          10300,
+          10314,
+          4266,
+          11770,
+          10286,
+          10258,
+          10328,
+          11784
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 5826,
+        "channel": 25,
+        "focus": [
+          5767,
+          5827
+        ],
+        "min_level_rmse": 3.853915208818542,
+        "min_centered_shape_rmse": 1.4023289329340765,
+        "min_difference_rmse": 1.86216981796091,
+        "full_train_min_level_rmse": 3.853915208818542,
+        "full_train_min_shape_rmse": 1.4023289329340765,
+        "context_selected_median_focus_rmse": 5.995020586377378,
+        "best_focus_train_end": 10244,
+        "best_shape_train_end": 5078,
+        "context_selected_train_ends": [
+          10300,
+          10314,
+          4266,
+          11770,
+          10286,
+          10258,
+          10328,
+          11784
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 5921,
+        "channel": 4,
+        "focus": [
+          5862,
+          5922
+        ],
+        "min_level_rmse": 0.707775644293953,
+        "min_centered_shape_rmse": 0.5550214198325325,
+        "min_difference_rmse": 0.36590993453750764,
+        "full_train_min_level_rmse": 0.5710978257590015,
+        "full_train_min_shape_rmse": 0.5550214198325325,
+        "context_selected_median_focus_rmse": 0.707775644293953,
+        "best_focus_train_end": 11672,
+        "best_shape_train_end": 2250,
+        "context_selected_train_ends": [
+          11840,
+          11714,
+          11728,
+          11742,
+          11756,
+          11826,
+          11784,
+          11798
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 6128,
+        "channel": 13,
+        "focus": [
+          6069,
+          6129
+        ],
+        "min_level_rmse": 35.661038898949975,
+        "min_centered_shape_rmse": 5.127210738913892,
+        "min_difference_rmse": 6.524355871857605,
+        "full_train_min_level_rmse": 24.56855228477441,
+        "full_train_min_shape_rmse": 5.127210738913892,
+        "context_selected_median_focus_rmse": 36.760761499127796,
+        "best_focus_train_end": 7808,
+        "best_shape_train_end": 7080,
+        "context_selected_train_ends": [
+          7864,
+          934,
+          7878,
+          920,
+          11238,
+          5722,
+          7850,
+          6688
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 6161,
+        "channel": 13,
+        "focus": [
+          6102,
+          6162
+        ],
+        "min_level_rmse": 35.258556348764266,
+        "min_centered_shape_rmse": 5.8665717134217115,
+        "min_difference_rmse": 7.289320052337016,
+        "full_train_min_level_rmse": 23.222187315020005,
+        "full_train_min_shape_rmse": 5.818113203158172,
+        "context_selected_median_focus_rmse": 36.31065527871279,
+        "best_focus_train_end": 7808,
+        "best_shape_train_end": 2558,
+        "context_selected_train_ends": [
+          7864,
+          920,
+          7878,
+          934,
+          11224,
+          5708,
+          906,
+          7850
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 6304,
+        "channel": 13,
+        "focus": [
+          6245,
+          6305
+        ],
+        "min_level_rmse": 32.93055737046177,
+        "min_centered_shape_rmse": 4.64574515098264,
+        "min_difference_rmse": 6.405037297758144,
+        "full_train_min_level_rmse": 21.724853669567224,
+        "full_train_min_shape_rmse": 4.488181109804388,
+        "context_selected_median_focus_rmse": 34.00824201232582,
+        "best_focus_train_end": 7808,
+        "best_shape_train_end": 8046,
+        "context_selected_train_ends": [
+          7864,
+          934,
+          7878,
+          920,
+          11238,
+          6688,
+          7850,
+          5722
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 6320,
+        "channel": 13,
+        "focus": [
+          6261,
+          6321
+        ],
+        "min_level_rmse": 31.881608586508893,
+        "min_centered_shape_rmse": 7.643548461130956,
+        "min_difference_rmse": 8.632241578080261,
+        "full_train_min_level_rmse": 19.719123646079883,
+        "full_train_min_shape_rmse": 7.6277419824391,
+        "context_selected_median_focus_rmse": 32.885088218603116,
+        "best_focus_train_end": 7808,
+        "best_shape_train_end": 7122,
+        "context_selected_train_ends": [
+          7864,
+          11238,
+          934,
+          7878,
+          920,
+          7850,
+          6688,
+          5722
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 6388,
+        "channel": 13,
+        "focus": [
+          6329,
+          6389
+        ],
+        "min_level_rmse": 29.960831895223272,
+        "min_centered_shape_rmse": 5.851940797203966,
+        "min_difference_rmse": 8.080351799881628,
+        "full_train_min_level_rmse": 19.910048243213314,
+        "full_train_min_shape_rmse": 5.798644504061108,
+        "context_selected_median_focus_rmse": 31.03966180990704,
+        "best_focus_train_end": 7808,
+        "best_shape_train_end": 1312,
+        "context_selected_train_ends": [
+          7864,
+          934,
+          920,
+          7878,
+          6688,
+          7850,
+          11238,
+          5708
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 7091,
+        "channel": 13,
+        "focus": [
+          7032,
+          7092
+        ],
+        "min_level_rmse": 24.75959914535023,
+        "min_centered_shape_rmse": 9.124584803046217,
+        "min_difference_rmse": 12.066301267638964,
+        "full_train_min_level_rmse": 16.272660048085577,
+        "full_train_min_shape_rmse": 9.059163174031351,
+        "context_selected_median_focus_rmse": 25.765003528391393,
+        "best_focus_train_end": 7808,
+        "best_shape_train_end": 5680,
+        "context_selected_train_ends": [
+          11238,
+          7864,
+          934,
+          920,
+          7878,
+          6688,
+          7850,
+          5722
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 7573,
+        "channel": 13,
+        "focus": [
+          7514,
+          7574
+        ],
+        "min_level_rmse": 10.887195227314283,
+        "min_centered_shape_rmse": 5.790001808282962,
+        "min_difference_rmse": 7.148337449971178,
+        "full_train_min_level_rmse": 10.887195227314283,
+        "full_train_min_shape_rmse": 5.769752698928311,
+        "context_selected_median_focus_rmse": 11.711104164383048,
+        "best_focus_train_end": 7808,
+        "best_shape_train_end": 2530,
+        "context_selected_train_ends": [
+          7864,
+          934,
+          7878,
+          7892,
+          6688,
+          920,
+          7850,
+          5708
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 7591,
+        "channel": 13,
+        "focus": [
+          7532,
+          7592
+        ],
+        "min_level_rmse": 11.504796673021124,
+        "min_centered_shape_rmse": 5.51245968970817,
+        "min_difference_rmse": 7.671006633611749,
+        "full_train_min_level_rmse": 11.504796673021124,
+        "full_train_min_shape_rmse": 5.481169556562543,
+        "context_selected_median_focus_rmse": 12.56423514331227,
+        "best_focus_train_end": 7808,
+        "best_shape_train_end": 11840,
+        "context_selected_train_ends": [
+          934,
+          5722,
+          7864,
+          7892,
+          920,
+          11238,
+          5708,
+          7878
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 7596,
+        "channel": 13,
+        "focus": [
+          7537,
+          7597
+        ],
+        "min_level_rmse": 11.805951979411237,
+        "min_centered_shape_rmse": 5.650534078085773,
+        "min_difference_rmse": 8.081367743717841,
+        "full_train_min_level_rmse": 11.805951979411237,
+        "full_train_min_shape_rmse": 5.510223957365064,
+        "context_selected_median_focus_rmse": 12.65253519681661,
+        "best_focus_train_end": 7808,
+        "best_shape_train_end": 7178,
+        "context_selected_train_ends": [
+          7864,
+          934,
+          7892,
+          7878,
+          6688,
+          920,
+          7850,
+          6702
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 7599,
+        "channel": 13,
+        "focus": [
+          7540,
+          7600
+        ],
+        "min_level_rmse": 12.468631551471058,
+        "min_centered_shape_rmse": 5.80630547498989,
+        "min_difference_rmse": 8.277380054751308,
+        "full_train_min_level_rmse": 12.468631551471058,
+        "full_train_min_shape_rmse": 5.80630547498989,
+        "context_selected_median_focus_rmse": 13.36518234090745,
+        "best_focus_train_end": 7808,
+        "best_shape_train_end": 9236,
+        "context_selected_train_ends": [
+          7878,
+          934,
+          7864,
+          6688,
+          7892,
+          920,
+          6702,
+          7850
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 9663,
+        "channel": 13,
+        "focus": [
+          9604,
+          9664
+        ],
+        "min_level_rmse": 21.877363969758242,
+        "min_centered_shape_rmse": 8.421254055418693,
+        "min_difference_rmse": 9.564037468545196,
+        "full_train_min_level_rmse": 14.65875551919969,
+        "full_train_min_shape_rmse": 8.28749881934752,
+        "context_selected_median_focus_rmse": 22.911931385602315,
+        "best_focus_train_end": 7808,
+        "best_shape_train_end": 5680,
+        "context_selected_train_ends": [
+          11238,
+          7864,
+          7878,
+          934,
+          920,
+          6688,
+          7850,
+          7892
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 9748,
+        "channel": 13,
+        "focus": [
+          9689,
+          9749
+        ],
+        "min_level_rmse": 21.23804279393066,
+        "min_centered_shape_rmse": 5.946797724201596,
+        "min_difference_rmse": 7.756467824812225,
+        "full_train_min_level_rmse": 14.16362419666989,
+        "full_train_min_shape_rmse": 5.939564860448416,
+        "context_selected_median_focus_rmse": 22.138959407869216,
+        "best_focus_train_end": 7808,
+        "best_shape_train_end": 6324,
+        "context_selected_train_ends": [
+          7864,
+          7878,
+          934,
+          920,
+          6688,
+          7850,
+          7892,
+          5722
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 9751,
+        "channel": 13,
+        "focus": [
+          9692,
+          9752
+        ],
+        "min_level_rmse": 21.448075965932887,
+        "min_centered_shape_rmse": 5.713347151069454,
+        "min_difference_rmse": 7.550170501154399,
+        "full_train_min_level_rmse": 14.108602417145399,
+        "full_train_min_shape_rmse": 5.713347151069454,
+        "context_selected_median_focus_rmse": 22.43833876010595,
+        "best_focus_train_end": 7808,
+        "best_shape_train_end": 2782,
+        "context_selected_train_ends": [
+          7864,
+          11224,
+          934,
+          7878,
+          920,
+          6688,
+          7850,
+          7892
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 10320,
+        "channel": 13,
+        "focus": [
+          10261,
+          10321
+        ],
+        "min_level_rmse": 20.345207061655522,
+        "min_centered_shape_rmse": 10.284968782794513,
+        "min_difference_rmse": 10.584200737899405,
+        "full_train_min_level_rmse": 15.844073310094888,
+        "full_train_min_shape_rmse": 10.284968782794513,
+        "context_selected_median_focus_rmse": 21.325301089653514,
+        "best_focus_train_end": 7808,
+        "best_shape_train_end": 9950,
+        "context_selected_train_ends": [
+          7864,
+          920,
+          934,
+          7878,
+          7850,
+          5708,
+          906,
+          5722
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 10484,
+        "channel": 13,
+        "focus": [
+          10425,
+          10485
+        ],
+        "min_level_rmse": 18.035760297246213,
+        "min_centered_shape_rmse": 5.838536313179553,
+        "min_difference_rmse": 7.7724816439483915,
+        "full_train_min_level_rmse": 13.308111854682357,
+        "full_train_min_shape_rmse": 5.838536313179553,
+        "context_selected_median_focus_rmse": 19.008229892492896,
+        "best_focus_train_end": 7808,
+        "best_shape_train_end": 6352,
+        "context_selected_train_ends": [
+          7864,
+          7878,
+          934,
+          920,
+          7850,
+          5708,
+          6688,
+          6674
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 10491,
+        "channel": 13,
+        "focus": [
+          10432,
+          10492
+        ],
+        "min_level_rmse": 17.69975582703282,
+        "min_centered_shape_rmse": 5.8607343595212384,
+        "min_difference_rmse": 7.655464728609848,
+        "full_train_min_level_rmse": 13.282661854384994,
+        "full_train_min_shape_rmse": 5.8607343595212384,
+        "context_selected_median_focus_rmse": 18.746945906023694,
+        "best_focus_train_end": 7808,
+        "best_shape_train_end": 2754,
+        "context_selected_train_ends": [
+          7864,
+          11238,
+          920,
+          7878,
+          934,
+          6688,
+          7850,
+          5722
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 15225,
+        "channel": 13,
+        "focus": [
+          15166,
+          15226
+        ],
+        "min_level_rmse": 22.874582815322594,
+        "min_centered_shape_rmse": 5.778420587038124,
+        "min_difference_rmse": 7.139879048305544,
+        "full_train_min_level_rmse": 15.175592090612707,
+        "full_train_min_shape_rmse": 5.562656388589141,
+        "context_selected_median_focus_rmse": 23.836797313650877,
+        "best_focus_train_end": 7808,
+        "best_shape_train_end": 7108,
+        "context_selected_train_ends": [
+          7864,
+          934,
+          7878,
+          6688,
+          7850,
+          920,
+          7892,
+          5708
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 18182,
+        "channel": 13,
+        "focus": [
+          18123,
+          18183
+        ],
+        "min_level_rmse": 18.61988627506048,
+        "min_centered_shape_rmse": 5.932476713935147,
+        "min_difference_rmse": 8.80376700365807,
+        "full_train_min_level_rmse": 13.39469199029069,
+        "full_train_min_shape_rmse": 5.932476713935147,
+        "context_selected_median_focus_rmse": 19.57955332227271,
+        "best_focus_train_end": 7808,
+        "best_shape_train_end": 1312,
+        "context_selected_train_ends": [
+          7864,
+          7878,
+          934,
+          11238,
+          920,
+          7892,
+          6688,
+          7850
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 18200,
+        "channel": 13,
+        "focus": [
+          18141,
+          18201
+        ],
+        "min_level_rmse": 18.440825792576707,
+        "min_centered_shape_rmse": 5.436062609664636,
+        "min_difference_rmse": 8.11235360724944,
+        "full_train_min_level_rmse": 13.447108137780091,
+        "full_train_min_shape_rmse": 5.395303342067718,
+        "context_selected_median_focus_rmse": 19.311056492152197,
+        "best_focus_train_end": 7808,
+        "best_shape_train_end": 1620,
+        "context_selected_train_ends": [
+          7864,
+          934,
+          7878,
+          6688,
+          920,
+          7850,
+          7892,
+          6702
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 18207,
+        "channel": 13,
+        "focus": [
+          18148,
+          18208
+        ],
+        "min_level_rmse": 18.512479944020757,
+        "min_centered_shape_rmse": 5.747732495761864,
+        "min_difference_rmse": 8.302233219442689,
+        "full_train_min_level_rmse": 13.432126057835154,
+        "full_train_min_shape_rmse": 5.731776814356304,
+        "context_selected_median_focus_rmse": 19.51589920582394,
+        "best_focus_train_end": 7808,
+        "best_shape_train_end": 8032,
+        "context_selected_train_ends": [
+          7864,
+          920,
+          11224,
+          934,
+          7850,
+          906,
+          7878,
+          5708
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 18213,
+        "channel": 13,
+        "focus": [
+          18154,
+          18214
+        ],
+        "min_level_rmse": 18.575228235476963,
+        "min_centered_shape_rmse": 5.78337333194402,
+        "min_difference_rmse": 8.527432296933531,
+        "full_train_min_level_rmse": 13.672440492933724,
+        "full_train_min_shape_rmse": 5.776557856393245,
+        "context_selected_median_focus_rmse": 19.452113929345806,
+        "best_focus_train_end": 7808,
+        "best_shape_train_end": 2950,
+        "context_selected_train_ends": [
+          7864,
+          934,
+          7878,
+          6688,
+          7850,
+          920,
+          6674,
+          906
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 18217,
+        "channel": 13,
+        "focus": [
+          18158,
+          18218
+        ],
+        "min_level_rmse": 18.634092922780628,
+        "min_centered_shape_rmse": 5.787442225842,
+        "min_difference_rmse": 8.70847257595258,
+        "full_train_min_level_rmse": 13.825005709974663,
+        "full_train_min_shape_rmse": 5.781522437666003,
+        "context_selected_median_focus_rmse": 19.559953216713776,
+        "best_focus_train_end": 7808,
+        "best_shape_train_end": 2530,
+        "context_selected_train_ends": [
+          7864,
+          7878,
+          920,
+          934,
+          7850,
+          6688,
+          906,
+          5708
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 18226,
+        "channel": 13,
+        "focus": [
+          18167,
+          18227
+        ],
+        "min_level_rmse": 19.075071834877612,
+        "min_centered_shape_rmse": 5.911790976744604,
+        "min_difference_rmse": 8.91511914215694,
+        "full_train_min_level_rmse": 13.814967060501596,
+        "full_train_min_shape_rmse": 5.712241900455213,
+        "context_selected_median_focus_rmse": 20.046755873069447,
+        "best_focus_train_end": 7808,
+        "best_shape_train_end": 2950,
+        "context_selected_train_ends": [
+          7864,
+          7878,
+          934,
+          920,
+          6688,
+          7850,
+          5708,
+          6674
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 18235,
+        "channel": 13,
+        "focus": [
+          18176,
+          18236
+        ],
+        "min_level_rmse": 19.917652525899648,
+        "min_centered_shape_rmse": 5.834666262398333,
+        "min_difference_rmse": 8.117145298891693,
+        "full_train_min_level_rmse": 13.45366877068663,
+        "full_train_min_shape_rmse": 5.793387528928473,
+        "context_selected_median_focus_rmse": 20.943382109807565,
+        "best_focus_train_end": 7808,
+        "best_shape_train_end": 7416,
+        "context_selected_train_ends": [
+          7864,
+          920,
+          934,
+          7878,
+          7850,
+          6688,
+          5708,
+          5722
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 18239,
+        "channel": 13,
+        "focus": [
+          18180,
+          18240
+        ],
+        "min_level_rmse": 20.081407134435356,
+        "min_centered_shape_rmse": 5.868538717816062,
+        "min_difference_rmse": 8.165526850520529,
+        "full_train_min_level_rmse": 13.918105651310704,
+        "full_train_min_shape_rmse": 5.868538717816062,
+        "context_selected_median_focus_rmse": 21.148259185528453,
+        "best_focus_train_end": 7808,
+        "best_shape_train_end": 3482,
+        "context_selected_train_ends": [
+          7864,
+          11238,
+          934,
+          7878,
+          920,
+          7850,
+          6688,
+          5722
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 22314,
+        "channel": 11,
+        "focus": [
+          22255,
+          22315
+        ],
+        "min_level_rmse": 2.246760933850261,
+        "min_centered_shape_rmse": 2.2298313507622014,
+        "min_difference_rmse": 2.1582924951218803,
+        "full_train_min_level_rmse": 1.8529883394550086,
+        "full_train_min_shape_rmse": 1.852865323024631,
+        "context_selected_median_focus_rmse": 2.601558673120579,
+        "best_focus_train_end": 5470,
+        "best_shape_train_end": 9348,
+        "context_selected_train_ends": [
+          10006,
+          8564,
+          6282,
+          4504,
+          8368,
+          9054,
+          10958,
+          8732
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 22326,
+        "channel": 11,
+        "focus": [
+          22267,
+          22327
+        ],
+        "min_level_rmse": 2.5541912955119166,
+        "min_centered_shape_rmse": 2.5261480932289295,
+        "min_difference_rmse": 2.876167011534539,
+        "full_train_min_level_rmse": 2.398869015102603,
+        "full_train_min_shape_rmse": 2.2684951008502234,
+        "context_selected_median_focus_rmse": 3.339759239723711,
+        "best_focus_train_end": 1060,
+        "best_shape_train_end": 1060,
+        "context_selected_train_ends": [
+          5694,
+          7136,
+          9068,
+          7206,
+          3342,
+          7780,
+          906,
+          9474
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 22358,
+        "channel": 11,
+        "focus": [
+          22299,
+          22359
+        ],
+        "min_level_rmse": 2.9726636908707054,
+        "min_centered_shape_rmse": 2.8834316378719436,
+        "min_difference_rmse": 3.929174503544079,
+        "full_train_min_level_rmse": 2.9726636908707054,
+        "full_train_min_shape_rmse": 2.8834316378719436,
+        "context_selected_median_focus_rmse": 3.507320191746488,
+        "best_focus_train_end": 11042,
+        "best_shape_train_end": 11042,
+        "context_selected_train_ends": [
+          108,
+          1410,
+          10048,
+          598,
+          6576,
+          1438,
+          542,
+          5792
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 22491,
+        "channel": 11,
+        "focus": [
+          22432,
+          22492
+        ],
+        "min_level_rmse": 1.1416854655551598,
+        "min_centered_shape_rmse": 0.9601861110857972,
+        "min_difference_rmse": 1.0500640936824863,
+        "full_train_min_level_rmse": 0.9550310183925538,
+        "full_train_min_shape_rmse": 0.9305081084686974,
+        "context_selected_median_focus_rmse": 1.6570727886454903,
+        "best_focus_train_end": 1060,
+        "best_shape_train_end": 1060,
+        "context_selected_train_ends": [
+          10090,
+          8984,
+          5316,
+          2684,
+          1690,
+          8998,
+          11770,
+          2754
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 22493,
+        "channel": 11,
+        "focus": [
+          22434,
+          22494
+        ],
+        "min_level_rmse": 1.8875295956419316,
+        "min_centered_shape_rmse": 1.6613260997987107,
+        "min_difference_rmse": 1.799581991267371,
+        "full_train_min_level_rmse": 1.7316695285812367,
+        "full_train_min_shape_rmse": 1.4197174913274622,
+        "context_selected_median_focus_rmse": 2.198477718566909,
+        "best_focus_train_end": 5624,
+        "best_shape_train_end": 5624,
+        "context_selected_train_ends": [
+          10090,
+          11840,
+          10104,
+          248,
+          192,
+          10412,
+          9026,
+          6086
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 22612,
+        "channel": 11,
+        "focus": [
+          22553,
+          22613
+        ],
+        "min_level_rmse": 1.521385086095072,
+        "min_centered_shape_rmse": 1.313803505619591,
+        "min_difference_rmse": 1.5027512427944185,
+        "full_train_min_level_rmse": 1.2330486548535122,
+        "full_train_min_shape_rmse": 1.231859532141257,
+        "context_selected_median_focus_rmse": 1.852711261701419,
+        "best_focus_train_end": 6282,
+        "best_shape_train_end": 8186,
+        "context_selected_train_ends": [
+          8032,
+          2656,
+          4420,
+          11742,
+          206,
+          3482,
+          3972,
+          10692
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 22701,
+        "channel": 11,
+        "focus": [
+          22642,
+          22702
+        ],
+        "min_level_rmse": 1.1055299232173252,
+        "min_centered_shape_rmse": 1.0649933936630198,
+        "min_difference_rmse": 1.382610294396354,
+        "full_train_min_level_rmse": 0.8444681337785115,
+        "full_train_min_shape_rmse": 0.837790073407217,
+        "context_selected_median_focus_rmse": 1.8599867353086388,
+        "best_focus_train_end": 1060,
+        "best_shape_train_end": 1060,
+        "context_selected_train_ends": [
+          8214,
+          4462,
+          4126,
+          4574,
+          4658,
+          10832,
+          8942,
+          11742
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 22974,
+        "channel": 11,
+        "focus": [
+          22915,
+          22975
+        ],
+        "min_level_rmse": 1.50434248003424,
+        "min_centered_shape_rmse": 1.4901839352396176,
+        "min_difference_rmse": 1.4873264572332892,
+        "full_train_min_level_rmse": 1.3528380593269838,
+        "full_train_min_shape_rmse": 1.2883762939728935,
+        "context_selected_median_focus_rmse": 1.7884212849346883,
+        "best_focus_train_end": 1508,
+        "best_shape_train_end": 5204,
+        "context_selected_train_ends": [
+          11812,
+          8858,
+          11322,
+          150,
+          4714,
+          2586,
+          1298,
+          5064
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 23002,
+        "channel": 11,
+        "focus": [
+          22943,
+          23003
+        ],
+        "min_level_rmse": 2.066236224876972,
+        "min_centered_shape_rmse": 1.7653969553063467,
+        "min_difference_rmse": 2.0919478452585043,
+        "full_train_min_level_rmse": 2.066236224876972,
+        "full_train_min_shape_rmse": 1.7653969553063467,
+        "context_selected_median_focus_rmse": 2.7610742913457154,
+        "best_focus_train_end": 10272,
+        "best_shape_train_end": 10272,
+        "context_selected_train_ends": [
+          122,
+          1214,
+          2572,
+          3482,
+          11672,
+          11322,
+          11840,
+          11336
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 23195,
+        "channel": 23,
+        "focus": [
+          23136,
+          23196
+        ],
+        "min_level_rmse": 2.4027965140795473,
+        "min_centered_shape_rmse": 0.5079650787820975,
+        "min_difference_rmse": 0.5263687276601163,
+        "full_train_min_level_rmse": 1.4758850854930392,
+        "full_train_min_shape_rmse": 0.3944665240360079,
+        "context_selected_median_focus_rmse": 3.7790515662216952,
+        "best_focus_train_end": 7542,
+        "best_shape_train_end": 5624,
+        "context_selected_train_ends": [
+          7598,
+          7584,
+          7570,
+          7612,
+          7556,
+          7542,
+          7528,
+          7780
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 23271,
+        "channel": 11,
+        "focus": [
+          23212,
+          23272
+        ],
+        "min_level_rmse": 2.188560981478729,
+        "min_centered_shape_rmse": 2.1143640873493816,
+        "min_difference_rmse": 2.3405863558987354,
+        "full_train_min_level_rmse": 2.0514160354291784,
+        "full_train_min_shape_rmse": 1.8088567022274114,
+        "context_selected_median_focus_rmse": 3.0223780840068404,
+        "best_focus_train_end": 1060,
+        "best_shape_train_end": 1060,
+        "context_selected_train_ends": [
+          8214,
+          5246,
+          2068,
+          4126,
+          7388,
+          11546,
+          878,
+          2320
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 23286,
+        "channel": 11,
+        "focus": [
+          23227,
+          23287
+        ],
+        "min_level_rmse": 3.1462501005358767,
+        "min_centered_shape_rmse": 2.819870847631644,
+        "min_difference_rmse": 3.0384910636153153,
+        "full_train_min_level_rmse": 3.1462501005358767,
+        "full_train_min_shape_rmse": 2.819870847631644,
+        "context_selected_median_focus_rmse": 3.8772901446017136,
+        "best_focus_train_end": 10286,
+        "best_shape_train_end": 10286,
+        "context_selected_train_ends": [
+          738,
+          8410,
+          8606,
+          2306,
+          8046,
+          11560,
+          10706,
+          2670
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 23467,
+        "channel": 11,
+        "focus": [
+          23408,
+          23468
+        ],
+        "min_level_rmse": 1.6007957617326023,
+        "min_centered_shape_rmse": 1.5870018980727154,
+        "min_difference_rmse": 1.7442044173017763,
+        "full_train_min_level_rmse": 1.5815027796273302,
+        "full_train_min_shape_rmse": 1.458158856353445,
+        "context_selected_median_focus_rmse": 2.349406431576845,
+        "best_focus_train_end": 1060,
+        "best_shape_train_end": 1060,
+        "context_selected_train_ends": [
+          3692,
+          5204,
+          6016,
+          7696,
+          1074,
+          6058,
+          11336,
+          6492
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 23621,
+        "channel": 11,
+        "focus": [
+          23562,
+          23622
+        ],
+        "min_level_rmse": 1.491614732657708,
+        "min_centered_shape_rmse": 1.4285004730282396,
+        "min_difference_rmse": 1.885713077050758,
+        "full_train_min_level_rmse": 1.4038520728579664,
+        "full_train_min_shape_rmse": 1.3385443623248847,
+        "context_selected_median_focus_rmse": 1.7658426263562779,
+        "best_focus_train_end": 5204,
+        "best_shape_train_end": 5204,
+        "context_selected_train_ends": [
+          7668,
+          1214,
+          150,
+          2572,
+          1494,
+          11308,
+          1228,
+          4168
+        ]
+      },
+      {
+        "group": "GT-normal_high",
+        "tick": 23661,
+        "channel": 11,
+        "focus": [
+          23602,
+          23662
+        ],
+        "min_level_rmse": 2.453644512886928,
+        "min_centered_shape_rmse": 2.4353695367664536,
+        "min_difference_rmse": 3.1816547897020686,
+        "full_train_min_level_rmse": 2.4186586265173102,
+        "full_train_min_shape_rmse": 2.3146864704510475,
+        "context_selected_median_focus_rmse": 3.2376094251457057,
+        "best_focus_train_end": 1060,
+        "best_shape_train_end": 1060,
+        "context_selected_train_ends": [
+          1690,
+          1060,
+          9460,
+          5008,
+          1270,
+          1074,
+          5316,
+          9992
+        ]
+      },
+      {
+        "group": "GT_high",
+        "tick": 250,
+        "channel": 9,
+        "focus": [
+          191,
+          251
+        ],
+        "min_level_rmse": 3.40068019056656,
+        "min_centered_shape_rmse": 3.3891437909898166,
+        "min_difference_rmse": 4.615503597058056,
+        "full_train_min_level_rmse": 2.170581543334376,
+        "full_train_min_shape_rmse": 2.145483630421498,
+        "context_selected_median_focus_rmse": 4.275389096899645,
+        "best_focus_train_end": 5624,
+        "best_shape_train_end": 5624,
+        "context_selected_train_ends": [
+          10888,
+          9824,
+          7094,
+          1746,
+          10272,
+          374,
+          5778,
+          8144
+        ]
+      },
+      {
+        "group": "GT_high",
+        "tick": 656,
+        "channel": 6,
+        "focus": [
+          597,
+          657
+        ],
+        "min_level_rmse": 0.18755088921460034,
+        "min_centered_shape_rmse": 0.11523111693118651,
+        "min_difference_rmse": 0.12036949634464782,
+        "full_train_min_level_rmse": 0.18755088921460034,
+        "full_train_min_shape_rmse": 0.11523111693118651,
+        "context_selected_median_focus_rmse": 0.21532528231167458,
+        "best_focus_train_end": 7318,
+        "best_shape_train_end": 8788,
+        "context_selected_train_ends": [
+          9166,
+          9180,
+          9194,
+          6226,
+          9152,
+          6212,
+          7360,
+          6884
+        ]
+      },
+      {
+        "group": "GT_high",
+        "tick": 2093,
+        "channel": 14,
+        "focus": [
+          2034,
+          2094
+        ],
+        "min_level_rmse": 1.390620122645115,
+        "min_centered_shape_rmse": 1.385418352371746,
+        "min_difference_rmse": 1.2826232514482412,
+        "full_train_min_level_rmse": 1.390620122645115,
+        "full_train_min_shape_rmse": 1.2966710980322376,
+        "context_selected_median_focus_rmse": 2.285917595187536,
+        "best_focus_train_end": 4182,
+        "best_shape_train_end": 4182,
+        "context_selected_train_ends": [
+          10356,
+          10412,
+          402,
+          10454,
+          10188,
+          8998,
+          416,
+          8970
+        ]
+      },
+      {
+        "group": "GT_review_or_miss",
+        "tick": 2887,
+        "channel": 6,
+        "focus": [
+          2828,
+          2888
+        ],
+        "min_level_rmse": 0.07505962342462169,
+        "min_centered_shape_rmse": 0.034471472603686375,
+        "min_difference_rmse": 0.009892073807307188,
+        "full_train_min_level_rmse": 0.07486626709427983,
+        "full_train_min_shape_rmse": 0.024371093344765872,
+        "context_selected_median_focus_rmse": 0.16372459171668066,
+        "best_focus_train_end": 10440,
+        "best_shape_train_end": 2306,
+        "context_selected_train_ends": [
+          8284,
+          10076,
+          8298,
+          10062,
+          10090,
+          10034,
+          10048,
+          8270
+        ]
+      },
+      {
+        "group": "GT_high",
+        "tick": 3538,
+        "channel": 9,
+        "focus": [
+          3479,
+          3539
+        ],
+        "min_level_rmse": 2.9005150725510327,
+        "min_centered_shape_rmse": 2.899516915584924,
+        "min_difference_rmse": 3.4045705680140794,
+        "full_train_min_level_rmse": 1.7603978878992816,
+        "full_train_min_shape_rmse": 1.7342556770441921,
+        "context_selected_median_focus_rmse": 4.335437333076958,
+        "best_focus_train_end": 7066,
+        "best_shape_train_end": 7066,
+        "context_selected_train_ends": [
+          4784,
+          6562,
+          8438,
+          3286,
+          5428,
+          6548,
+          7024,
+          8242
+        ]
+      },
+      {
+        "group": "GT_high",
+        "tick": 4648,
+        "channel": 32,
+        "focus": [
+          4589,
+          4649
+        ],
+        "min_level_rmse": 20.281868579053288,
+        "min_centered_shape_rmse": 20.112142845563618,
+        "min_difference_rmse": 20.45302662260707,
+        "full_train_min_level_rmse": 20.281868579053288,
+        "full_train_min_shape_rmse": 20.112142845563618,
+        "context_selected_median_focus_rmse": 20.281868579053288,
+        "best_focus_train_end": 108,
+        "best_shape_train_end": 108,
+        "context_selected_train_ends": [
+          108,
+          7836,
+          7850,
+          7864,
+          7878,
+          7892,
+          7906,
+          7920
+        ]
+      },
+      {
+        "group": "GT_high",
+        "tick": 5167,
+        "channel": 17,
+        "focus": [
+          5108,
+          5168
+        ],
+        "min_level_rmse": 7.067850315391621,
+        "min_centered_shape_rmse": 6.977750018839584,
+        "min_difference_rmse": 7.997256559922774,
+        "full_train_min_level_rmse": 6.309190002623977,
+        "full_train_min_shape_rmse": 6.258353392469009,
+        "context_selected_median_focus_rmse": 8.271120596238134,
+        "best_focus_train_end": 2936,
+        "best_shape_train_end": 2936,
+        "context_selected_train_ends": [
+          3972,
+          3762,
+          2726,
+          3566,
+          3776,
+          2306,
+          6940,
+          6282
+        ]
+      },
+      {
+        "group": "GT_high",
+        "tick": 5711,
+        "channel": 9,
+        "focus": [
+          5652,
+          5712
+        ],
+        "min_level_rmse": 3.477428941357275,
+        "min_centered_shape_rmse": 3.4555961009892497,
+        "min_difference_rmse": 4.868471928577716,
+        "full_train_min_level_rmse": 1.9978241527044314,
+        "full_train_min_shape_rmse": 1.9856804837787585,
+        "context_selected_median_focus_rmse": 4.026696292101128,
+        "best_focus_train_end": 5624,
+        "best_shape_train_end": 5624,
+        "context_selected_train_ends": [
+          2474,
+          10118,
+          416,
+          4154,
+          4980,
+          2866,
+          3692,
+          6226
+        ]
+      },
+      {
+        "group": "GT_high",
+        "tick": 5884,
+        "channel": 10,
+        "focus": [
+          5825,
+          5885
+        ],
+        "min_level_rmse": 6.878344040019076,
+        "min_centered_shape_rmse": 6.805354538583416,
+        "min_difference_rmse": 10.012107792644494,
+        "full_train_min_level_rmse": 4.657765312121166,
+        "full_train_min_shape_rmse": 4.528033988604027,
+        "context_selected_median_focus_rmse": 7.660967376911889,
+        "best_focus_train_end": 5624,
+        "best_shape_train_end": 5624,
+        "context_selected_train_ends": [
+          9656,
+          6716,
+          2362,
+          11308,
+          4000,
+          5274,
+          4546,
+          11546
+        ]
+      },
+      {
+        "group": "GT_high",
+        "tick": 6023,
+        "channel": 32,
+        "focus": [
+          5964,
+          6024
+        ],
+        "min_level_rmse": 16.22549486324263,
+        "min_centered_shape_rmse": 16.089714276450895,
+        "min_difference_rmse": 16.362421298085657,
+        "full_train_min_level_rmse": 16.22549486324263,
+        "full_train_min_shape_rmse": 16.089714276450895,
+        "context_selected_median_focus_rmse": 16.22549486324263,
+        "best_focus_train_end": 108,
+        "best_shape_train_end": 108,
+        "context_selected_train_ends": [
+          108,
+          7836,
+          7850,
+          7864,
+          7878,
+          7892,
+          7906,
+          7920
+        ]
+      },
+      {
+        "group": "GT_high",
+        "tick": 6417,
+        "channel": 13,
+        "focus": [
+          6358,
+          6418
+        ],
+        "min_level_rmse": 30.44550984406894,
+        "min_centered_shape_rmse": 9.159280244329413,
+        "min_difference_rmse": 9.389211416975007,
+        "full_train_min_level_rmse": 19.29493797861456,
+        "full_train_min_shape_rmse": 9.149958668688718,
+        "context_selected_median_focus_rmse": 31.553894132311846,
+        "best_focus_train_end": 7808,
+        "best_shape_train_end": 5652,
+        "context_selected_train_ends": [
+          11238,
+          7864,
+          920,
+          934,
+          11224,
+          7878,
+          7850,
+          906
+        ]
+      },
+      {
+        "group": "GT_high",
+        "tick": 7851,
+        "channel": 13,
+        "focus": [
+          7792,
+          7852
+        ],
+        "min_level_rmse": 14.545262340066103,
+        "min_centered_shape_rmse": 10.01418569599183,
+        "min_difference_rmse": 11.358379455901998,
+        "full_train_min_level_rmse": 12.787817885504833,
+        "full_train_min_shape_rmse": 9.881441777513949,
+        "context_selected_median_focus_rmse": 15.172348547416869,
+        "best_focus_train_end": 5680,
+        "best_shape_train_end": 4238,
+        "context_selected_train_ends": [
+          7864,
+          7850,
+          556,
+          6674,
+          920,
+          906,
+          934,
+          2362
+        ]
+      },
+      {
+        "group": "GT_high",
+        "tick": 9295,
+        "channel": 13,
+        "focus": [
+          9236,
+          9296
+        ],
+        "min_level_rmse": 20.878044816020882,
+        "min_centered_shape_rmse": 9.518283575967462,
+        "min_difference_rmse": 11.067649768561173,
+        "full_train_min_level_rmse": 14.978457537326278,
+        "full_train_min_shape_rmse": 9.518283575967462,
+        "context_selected_median_focus_rmse": 21.704982394618458,
+        "best_focus_train_end": 7808,
+        "best_shape_train_end": 514,
+        "context_selected_train_ends": [
+          7864,
+          934,
+          7878,
+          920,
+          5708,
+          906,
+          6674,
+          7850
+        ]
+      },
+      {
+        "group": "GT_high",
+        "tick": 10734,
+        "channel": 13,
+        "focus": [
+          10675,
+          10735
+        ],
+        "min_level_rmse": 21.596505222584344,
+        "min_centered_shape_rmse": 8.153912398506556,
+        "min_difference_rmse": 9.680212648361264,
+        "full_train_min_level_rmse": 13.810488708485316,
+        "full_train_min_shape_rmse": 7.817237157449327,
+        "context_selected_median_focus_rmse": 22.641752341098105,
+        "best_focus_train_end": 7808,
+        "best_shape_train_end": 11070,
+        "context_selected_train_ends": [
+          11238,
+          7864,
+          934,
+          920,
+          7850,
+          7878,
+          5722,
+          6688
+        ]
+      },
+      {
+        "group": "GT_high",
+        "tick": 11469,
+        "channel": 13,
+        "focus": [
+          11410,
+          11470
+        ],
+        "min_level_rmse": 21.473514708076763,
+        "min_centered_shape_rmse": 8.819495934567604,
+        "min_difference_rmse": 10.538853029800288,
+        "full_train_min_level_rmse": 15.79668324760388,
+        "full_train_min_shape_rmse": 8.819495934567604,
+        "context_selected_median_focus_rmse": 22.596940191336948,
+        "best_focus_train_end": 7808,
+        "best_shape_train_end": 2782,
+        "context_selected_train_ends": [
+          11238,
+          7878,
+          598,
+          934,
+          5722,
+          7864,
+          7892,
+          920
+        ]
+      },
+      {
+        "group": "GT_high",
+        "tick": 12174,
+        "channel": 13,
+        "focus": [
+          12115,
+          12175
+        ],
+        "min_level_rmse": 15.430567199234591,
+        "min_centered_shape_rmse": 7.345602611137162,
+        "min_difference_rmse": 9.002118632010095,
+        "full_train_min_level_rmse": 12.374232973961986,
+        "full_train_min_shape_rmse": 7.2862242373436406,
+        "context_selected_median_focus_rmse": 16.36165562389154,
+        "best_focus_train_end": 7822,
+        "best_shape_train_end": 2796,
+        "context_selected_train_ends": [
+          7864,
+          934,
+          584,
+          7878,
+          920,
+          7892,
+          5722,
+          6702
+        ]
+      },
+      {
+        "group": "GT_high",
+        "tick": 13069,
+        "channel": 32,
+        "focus": [
+          13010,
+          13070
+        ],
+        "min_level_rmse": 8.112747431621315,
+        "min_centered_shape_rmse": 8.044857138225447,
+        "min_difference_rmse": 8.181210649042828,
+        "full_train_min_level_rmse": 8.112747431621315,
+        "full_train_min_shape_rmse": 8.044857138225447,
+        "context_selected_median_focus_rmse": 8.112747431621315,
+        "best_focus_train_end": 108,
+        "best_shape_train_end": 108,
+        "context_selected_train_ends": [
+          108,
+          7836,
+          7850,
+          7864,
+          7878,
+          7892,
+          7906,
+          7920
+        ]
+      },
+      {
+        "group": "GT_high",
+        "tick": 13277,
+        "channel": 16,
+        "focus": [
+          13218,
+          13278
+        ],
+        "min_level_rmse": 20.053235977966,
+        "min_centered_shape_rmse": 19.885423521636564,
+        "min_difference_rmse": 20.222464598274474,
+        "full_train_min_level_rmse": 20.053235977966,
+        "full_train_min_shape_rmse": 19.885423521636564,
+        "context_selected_median_focus_rmse": 20.888823510318918,
+        "best_focus_train_end": 3594,
+        "best_shape_train_end": 3594,
+        "context_selected_train_ends": [
+          108,
+          7738,
+          7752,
+          7766,
+          7780,
+          7794,
+          7808,
+          7822
+        ]
+      },
+      {
+        "group": "GT_high",
+        "tick": 13618,
+        "channel": 13,
+        "focus": [
+          13559,
+          13619
+        ],
+        "min_level_rmse": 18.27226104461862,
+        "min_centered_shape_rmse": 8.97934093483203,
+        "min_difference_rmse": 11.041848383311358,
+        "full_train_min_level_rmse": 12.66328872653682,
+        "full_train_min_shape_rmse": 8.882771806432416,
+        "context_selected_median_focus_rmse": 19.06055707677814,
+        "best_focus_train_end": 11182,
+        "best_shape_train_end": 2572,
+        "context_selected_train_ends": [
+          7864,
+          7878,
+          934,
+          6688,
+          920,
+          5708,
+          7850,
+          906
+        ]
+      },
+      {
+        "group": "GT_high",
+        "tick": 14604,
+        "channel": 36,
+        "focus": [
+          14545,
+          14605
+        ],
+        "min_level_rmse": 0.12909944487358055,
+        "min_centered_shape_rmse": 0.12801909579781012,
+        "min_difference_rmse": 0.13018891098082386,
+        "full_train_min_level_rmse": 0.12909944487358055,
+        "full_train_min_shape_rmse": 0.12801909579781012,
+        "context_selected_median_focus_rmse": 0.12909944487358055,
+        "best_focus_train_end": 108,
+        "best_shape_train_end": 108,
+        "context_selected_train_ends": [
+          108,
+          7836,
+          7850,
+          7864,
+          7878,
+          7892,
+          7906,
+          7920
+        ]
+      },
+      {
+        "group": "GT_high",
+        "tick": 15054,
+        "channel": 13,
+        "focus": [
+          14995,
+          15055
+        ],
+        "min_level_rmse": 24.25707596113209,
+        "min_centered_shape_rmse": 8.960964740948347,
+        "min_difference_rmse": 11.33660407385353,
+        "full_train_min_level_rmse": 17.334278933390536,
+        "full_train_min_shape_rmse": 8.91943204405527,
+        "context_selected_median_focus_rmse": 25.18488262797551,
+        "best_focus_train_end": 7808,
+        "best_shape_train_end": 8998,
+        "context_selected_train_ends": [
+          7864,
+          920,
+          7850,
+          934,
+          7878,
+          906,
+          5708,
+          6688
+        ]
+      },
+      {
+        "group": "GT_high",
+        "tick": 15400,
+        "channel": 6,
+        "focus": [
+          15341,
+          15401
+        ],
+        "min_level_rmse": 3.696867481369421,
+        "min_centered_shape_rmse": 0.19626588172143025,
+        "min_difference_rmse": 0.15211960346610884,
+        "full_train_min_level_rmse": 1.0251481687419075,
+        "full_train_min_shape_rmse": 0.19626588172143025,
+        "context_selected_median_focus_rmse": 3.7128418309779523,
+        "best_focus_train_end": 11812,
+        "best_shape_train_end": 6044,
+        "context_selected_train_ends": [
+          11840,
+          11826,
+          11742,
+          11728,
+          11756,
+          11812,
+          11770,
+          11798
+        ]
+      },
+      {
+        "group": "GT_high",
+        "tick": 15804,
+        "channel": 9,
+        "focus": [
+          15745,
+          15805
+        ],
+        "min_level_rmse": 3.431526133423781,
+        "min_centered_shape_rmse": 3.4253654747976525,
+        "min_difference_rmse": 4.504121398672527,
+        "full_train_min_level_rmse": 2.3419433810061703,
+        "full_train_min_shape_rmse": 2.306926567107698,
+        "context_selected_median_focus_rmse": 4.458870045897062,
+        "best_focus_train_end": 5624,
+        "best_shape_train_end": 5624,
+        "context_selected_train_ends": [
+          1634,
+          11714,
+          9810,
+          3426,
+          8676,
+          4644,
+          10370,
+          6268
+        ]
+      },
+      {
+        "group": "GT_high",
+        "tick": 16497,
+        "channel": 13,
+        "focus": [
+          16438,
+          16498
+        ],
+        "min_level_rmse": 26.09901686833089,
+        "min_centered_shape_rmse": 10.1465119535838,
+        "min_difference_rmse": 10.267107454795925,
+        "full_train_min_level_rmse": 16.43771588666523,
+        "full_train_min_shape_rmse": 10.085334034931073,
+        "context_selected_median_focus_rmse": 27.162254100845907,
+        "best_focus_train_end": 7808,
+        "best_shape_train_end": 9012,
+        "context_selected_train_ends": [
+          7864,
+          11238,
+          920,
+          934,
+          7878,
+          5708,
+          6688,
+          7850
+        ]
+      },
+      {
+        "group": "GT_high",
+        "tick": 16720,
+        "channel": 9,
+        "focus": [
+          16661,
+          16721
+        ],
+        "min_level_rmse": 2.8107269464237,
+        "min_centered_shape_rmse": 2.7911253492669807,
+        "min_difference_rmse": 2.658681866269873,
+        "full_train_min_level_rmse": 1.5031796687760246,
+        "full_train_min_shape_rmse": 1.4773182090913284,
+        "context_selected_median_focus_rmse": 3.4757461771022333,
+        "best_focus_train_end": 5624,
+        "best_shape_train_end": 5624,
+        "context_selected_train_ends": [
+          9768,
+          3594,
+          4854,
+          2404,
+          11168,
+          10062,
+          8704,
+          3874
+        ]
+      },
+      {
+        "group": "GT_high",
+        "tick": 16972,
+        "channel": 11,
+        "focus": [
+          16913,
+          16973
+        ],
+        "min_level_rmse": 2.4151226884388657,
+        "min_centered_shape_rmse": 1.306931551631251,
+        "min_difference_rmse": 1.5687984916256517,
+        "full_train_min_level_rmse": 2.4151226884388657,
+        "full_train_min_shape_rmse": 1.0318499785979542,
+        "context_selected_median_focus_rmse": 2.8081438396990217,
+        "best_focus_train_end": 6828,
+        "best_shape_train_end": 1060,
+        "context_selected_train_ends": [
+          5736,
+          7864,
+          934,
+          7836,
+          7850,
+          7514,
+          6548,
+          6884
+        ]
+      },
+      {
+        "group": "GT_high",
+        "tick": 17932,
+        "channel": 13,
+        "focus": [
+          17873,
+          17933
+        ],
+        "min_level_rmse": 22.306104807010403,
+        "min_centered_shape_rmse": 7.761568646527571,
+        "min_difference_rmse": 10.621393663934507,
+        "full_train_min_level_rmse": 15.311175968998544,
+        "full_train_min_shape_rmse": 7.655032818432483,
+        "context_selected_median_focus_rmse": 23.332871175907194,
+        "best_focus_train_end": 7808,
+        "best_shape_train_end": 7808,
+        "context_selected_train_ends": [
+          7864,
+          934,
+          920,
+          7878,
+          7850,
+          6688,
+          5722,
+          7892
+        ]
+      },
+      {
+        "group": "GT_high",
+        "tick": 21447,
+        "channel": 15,
+        "focus": [
+          21388,
+          21448
+        ],
+        "min_level_rmse": 57.01540858265824,
+        "min_centered_shape_rmse": 34.000770129655734,
+        "min_difference_rmse": 43.198168026167366,
+        "full_train_min_level_rmse": 51.726586583838,
+        "full_train_min_shape_rmse": 34.000770129655734,
+        "context_selected_median_focus_rmse": 57.84851652358643,
+        "best_focus_train_end": 2026,
+        "best_shape_train_end": 3874,
+        "context_selected_train_ends": [
+          11210,
+          584,
+          2068,
+          2054,
+          570,
+          2096,
+          2082,
+          7864
+        ]
+      },
+      {
+        "group": "GT_high",
+        "tick": 22256,
+        "channel": 14,
+        "focus": [
+          22197,
+          22257
+        ],
+        "min_level_rmse": 2.2711037988429514,
+        "min_centered_shape_rmse": 1.8070202208245674,
+        "min_difference_rmse": 1.4345662926238432,
+        "full_train_min_level_rmse": 2.2711037988429514,
+        "full_train_min_shape_rmse": 1.8070202208245674,
+        "context_selected_median_focus_rmse": 3.1586596872852106,
+        "best_focus_train_end": 5624,
+        "best_shape_train_end": 7066,
+        "context_selected_train_ends": [
+          416,
+          5330,
+          248,
+          10202,
+          4700,
+          6030,
+          10440,
+          234
+        ]
+      },
+      {
+        "group": "GT_high",
+        "tick": 22417,
+        "channel": 10,
+        "focus": [
+          22358,
+          22418
+        ],
+        "min_level_rmse": 1.5659333888817517,
+        "min_centered_shape_rmse": 1.5515846753071716,
+        "min_difference_rmse": 1.5796745265540615,
+        "full_train_min_level_rmse": 1.2693492987462294,
+        "full_train_min_shape_rmse": 1.2668890087775784,
+        "context_selected_median_focus_rmse": 4.237536523730282,
+        "best_focus_train_end": 2936,
+        "best_shape_train_end": 2936,
+        "context_selected_train_ends": [
+          7206,
+          3440,
+          6688,
+          10384,
+          9810,
+          10986,
+          4182,
+          6618
+        ]
+      }
+    ]
+  }
+]

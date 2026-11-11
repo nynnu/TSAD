@@ -1,0 +1,41 @@
+{
+  "case": 43,
+  "target_relative": [
+    105,
+    119
+  ],
+  "source_image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\analysis\\results\\yellow_only_case43_20261105\\images\\case_43.png",
+  "image_sha256": "6cfaa6fe5a5329a108abf52210d667f83e72f556169b4f004bf084fee5461e40",
+  "scope": "one retrospectively selected page; no GT in prompt",
+  "response": {
+    "event_validity": "uncertain",
+    "anomalous_channels": [
+      15,
+      25,
+      14,
+      0
+    ],
+    "channel_ranking": [
+      15,
+      14,
+      0,
+      25
+    ],
+    "confidence": "medium",
+    "evidence_interval": [
+      105,
+      119
+    ]
+  },
+  "guard": {
+    "status": "uncertain",
+    "reason": "copied_target_bounds"
+  },
+  "raw": "```json\n{\n  \"event_validity\": \"uncertain\",\n  \"anomalous_channels\": [15, 25, 14, 0],\n  \"channel_ranking\": [15, 14, 0, 25],\n  \"confidence\": \"medium\",\n  \"evidence_interval\": [105, 119]\n}\n```",
+  "error": null,
+  "guard_before_copy_check": {
+    "status": "uncertain",
+    "reason": "evidence_outside_crosses_missing_or_not_anomalous"
+  },
+  "guard_note": "Recomputed after exact target-bound copying was observed; this rule is exploratory and not independent validation."
+}

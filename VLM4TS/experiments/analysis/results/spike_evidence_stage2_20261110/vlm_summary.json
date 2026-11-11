@@ -1,0 +1,682 @@
+{
+  "summary": {
+    "vlm_before": {
+      "gt": {
+        "anomalous": 4,
+        "uncertain": 8,
+        "normal_repeat": 0,
+        "invalid": 0
+      },
+      "non_gt": {
+        "anomalous": 4,
+        "uncertain": 8,
+        "normal_repeat": 0,
+        "invalid": 0
+      },
+      "channel_tp": 8,
+      "channel_fp": 19
+    },
+    "vlm_with_ratio_text": {
+      "gt": {
+        "anomalous": 5,
+        "uncertain": 7,
+        "normal_repeat": 0,
+        "invalid": 0
+      },
+      "non_gt": {
+        "anomalous": 5,
+        "uncertain": 7,
+        "normal_repeat": 0,
+        "invalid": 0
+      },
+      "channel_tp": 20,
+      "channel_fp": 18
+    },
+    "gate_on_sample": {
+      "1.0": {
+        "gt_kept": 10,
+        "non_gt_kept": 11
+      },
+      "2.0": {
+        "gt_kept": 9,
+        "non_gt_kept": 6
+      }
+    }
+  },
+  "cases": [
+    {
+      "core_id": "machine-3-2.e00029.c0000",
+      "gt_event": true,
+      "gt": [
+        11,
+        13,
+        14,
+        31
+      ],
+      "score": 1.24,
+      "ratios": {
+        "8": 0.43,
+        "12": 0.36,
+        "13": 1.24,
+        "27": 0.7,
+        "34": 0.12,
+        "35": 0.12
+      },
+      "before": "anomalous",
+      "before_channels": [
+        8,
+        12,
+        13,
+        27
+      ],
+      "after": "anomalous",
+      "after_channels": [
+        13,
+        8,
+        27,
+        12
+      ]
+    },
+    {
+      "core_id": "machine-3-2.e00020.c0000",
+      "gt_event": true,
+      "gt": [
+        8,
+        12,
+        13
+      ],
+      "score": 0.12,
+      "ratios": {
+        "13": 0.0,
+        "19": 0.04,
+        "34": 0.12,
+        "35": 0.12
+      },
+      "before": "uncertain",
+      "before_channels": [],
+      "after": "uncertain",
+      "after_channels": []
+    },
+    {
+      "core_id": "machine-3-2.e00058.c0000",
+      "gt_event": false,
+      "gt": [],
+      "score": 1.39,
+      "ratios": {
+        "0": 0.85,
+        "1": 1.04,
+        "2": 1.24,
+        "3": 1.39,
+        "34": 0.12,
+        "35": 0.12
+      },
+      "before": "uncertain",
+      "before_channels": [],
+      "after": "uncertain",
+      "after_channels": []
+    },
+    {
+      "core_id": "machine-3-2.e00031.c0000",
+      "gt_event": false,
+      "gt": [],
+      "score": 0.71,
+      "ratios": {
+        "12": 0.23,
+        "13": 0.71,
+        "15": 0.58,
+        "32": 0.5,
+        "33": 0.11,
+        "34": 0.12,
+        "35": 0.12
+      },
+      "before": "anomalous",
+      "before_channels": [
+        12,
+        13,
+        15,
+        32,
+        33
+      ],
+      "after": "anomalous",
+      "after_channels": [
+        13,
+        15,
+        32
+      ]
+    },
+    {
+      "core_id": "machine-3-8.e00015.c0000",
+      "gt_event": true,
+      "gt": [
+        8,
+        9,
+        11,
+        12
+      ],
+      "score": 8.52,
+      "ratios": {
+        "0": 0.48,
+        "5": 0.24,
+        "6": 0.25,
+        "9": 8.52,
+        "10": 0.53,
+        "12": 2.32,
+        "13": 0.74,
+        "15": 0.53
+      },
+      "before": "uncertain",
+      "before_channels": [],
+      "after": "uncertain",
+      "after_channels": [
+        9,
+        12,
+        15,
+        10
+      ]
+    },
+    {
+      "core_id": "machine-3-8.e00014.c0000",
+      "gt_event": true,
+      "gt": [
+        8,
+        9,
+        11,
+        12
+      ],
+      "score": 9.05,
+      "ratios": {
+        "5": 0.12,
+        "6": 0.12,
+        "8": 1.44,
+        "9": 9.05,
+        "12": 2.99,
+        "13": 1.6
+      },
+      "before": "uncertain",
+      "before_channels": [],
+      "after": "uncertain",
+      "after_channels": []
+    },
+    {
+      "core_id": "machine-3-8.e00059.c0000",
+      "gt_event": false,
+      "gt": [],
+      "score": 1.49,
+      "ratios": {
+        "1": 0.06,
+        "5": 0.12,
+        "6": 0.12,
+        "9": 0.0,
+        "12": 1.33,
+        "13": 1.49,
+        "33": 0.33
+      },
+      "before": "uncertain",
+      "before_channels": [],
+      "after": "uncertain",
+      "after_channels": []
+    },
+    {
+      "core_id": "machine-3-8.e00029.c0000",
+      "gt_event": false,
+      "gt": [],
+      "score": 3.94,
+      "ratios": {
+        "5": 0.18,
+        "6": 0.19,
+        "9": 3.94,
+        "12": 0.95,
+        "13": 1.03
+      },
+      "before": "uncertain",
+      "before_channels": [],
+      "after": "uncertain",
+      "after_channels": []
+    },
+    {
+      "core_id": "machine-2-5.e00021.c0000",
+      "gt_event": true,
+      "gt": [
+        0,
+        8,
+        11,
+        12,
+        13,
+        14
+      ],
+      "score": 12.05,
+      "ratios": {
+        "8": 6.64,
+        "11": 0.47,
+        "12": 2.97,
+        "13": 12.05,
+        "14": 1.45,
+        "29": 0.0,
+        "31": 0.78
+      },
+      "before": "uncertain",
+      "before_channels": [],
+      "after": "uncertain",
+      "after_channels": []
+    },
+    {
+      "core_id": "machine-2-5.e00005.c0000",
+      "gt_event": true,
+      "gt": [
+        8,
+        12,
+        13,
+        14
+      ],
+      "score": 12.12,
+      "ratios": {
+        "8": 12.12,
+        "11": 0.43,
+        "12": 4.46,
+        "13": 11.18,
+        "14": 2.3,
+        "32": 0.24
+      },
+      "before": "anomalous",
+      "before_channels": [
+        8,
+        11,
+        13,
+        14
+      ],
+      "after": "anomalous",
+      "after_channels": [
+        8,
+        13,
+        14
+      ]
+    },
+    {
+      "core_id": "machine-2-5.e00016.c0000",
+      "gt_event": false,
+      "gt": [],
+      "score": 2.37,
+      "ratios": {
+        "29": 0.0,
+        "31": 0.39,
+        "33": 2.37,
+        "34": 0.46,
+        "35": 0.46
+      },
+      "before": "anomalous",
+      "before_channels": [
+        33
+      ],
+      "after": "anomalous",
+      "after_channels": [
+        33
+      ]
+    },
+    {
+      "core_id": "machine-2-5.e00006.c0000",
+      "gt_event": false,
+      "gt": [],
+      "score": 1.29,
+      "ratios": {
+        "23": 0.44,
+        "25": 0.49,
+        "31": 0.78,
+        "33": 1.29
+      },
+      "before": "anomalous",
+      "before_channels": [
+        33
+      ],
+      "after": "anomalous",
+      "after_channels": [
+        33
+      ]
+    },
+    {
+      "core_id": "machine-1-1.e00047.c0000",
+      "gt_event": true,
+      "gt": [
+        8,
+        12,
+        13,
+        14
+      ],
+      "score": 27.76,
+      "ratios": {
+        "0": 0.89,
+        "8": 27.76,
+        "11": 1.05,
+        "12": 8.67,
+        "13": 14.04,
+        "14": 4.81,
+        "29": 0.27
+      },
+      "before": "anomalous",
+      "before_channels": [
+        11,
+        12,
+        29
+      ],
+      "after": "anomalous",
+      "after_channels": [
+        8,
+        12,
+        14,
+        13,
+        11
+      ]
+    },
+    {
+      "core_id": "machine-1-1.e00011.c0000",
+      "gt_event": true,
+      "gt": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        18,
+        19,
+        20,
+        21,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35
+      ],
+      "score": 44.88,
+      "ratios": {
+        "0": 1.31,
+        "8": 33.15,
+        "9": 44.88,
+        "11": 3.87,
+        "12": 14.19,
+        "13": 14.69,
+        "14": 3.93,
+        "29": 0.27
+      },
+      "before": "anomalous",
+      "before_channels": [
+        9,
+        11,
+        12
+      ],
+      "after": "anomalous",
+      "after_channels": [
+        9,
+        12,
+        11
+      ]
+    },
+    {
+      "core_id": "machine-1-1.e00042.c0000",
+      "gt_event": false,
+      "gt": [],
+      "score": 4.61,
+      "ratios": {
+        "0": 1.99,
+        "9": 4.61,
+        "11": 1.7,
+        "12": 2.17,
+        "29": 0.27
+      },
+      "before": "uncertain",
+      "before_channels": [],
+      "after": "uncertain",
+      "after_channels": []
+    },
+    {
+      "core_id": "machine-1-1.e00034.c0000",
+      "gt_event": false,
+      "gt": [],
+      "score": 1.99,
+      "ratios": {
+        "0": 1.99,
+        "10": 0.31,
+        "11": 1.0,
+        "14": 1.75,
+        "15": 0.32,
+        "19": 0.15,
+        "24": 0.08,
+        "29": 0.27
+      },
+      "before": "uncertain",
+      "before_channels": [],
+      "after": "uncertain",
+      "after_channels": []
+    },
+    {
+      "core_id": "machine-2-2.e00028.c0000",
+      "gt_event": true,
+      "gt": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "score": 11.82,
+      "ratios": {
+        "0": 0.95,
+        "9": 7.07,
+        "10": 3.69,
+        "11": 3.15,
+        "12": 11.82
+      },
+      "before": "uncertain",
+      "before_channels": [],
+      "after": "anomalous",
+      "after_channels": [
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "core_id": "machine-2-2.e00029.c0000",
+      "gt_event": true,
+      "gt": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "score": 14.78,
+      "ratios": {
+        "0": 1.43,
+        "1": 0.39,
+        "9": 8.05,
+        "10": 4.2,
+        "11": 3.35,
+        "12": 14.78,
+        "23": 0.08,
+        "25": 0.13
+      },
+      "before": "uncertain",
+      "before_channels": [],
+      "after": "uncertain",
+      "after_channels": [
+        10,
+        9,
+        11,
+        12
+      ]
+    },
+    {
+      "core_id": "machine-2-2.e00038.c0000",
+      "gt_event": false,
+      "gt": [],
+      "score": 2.23,
+      "ratios": {
+        "9": 2.23,
+        "10": 1.19,
+        "11": 1.2,
+        "12": 1.97,
+        "19": 0.47,
+        "20": 0.61
+      },
+      "before": "uncertain",
+      "before_channels": [],
+      "after": "uncertain",
+      "after_channels": []
+    },
+    {
+      "core_id": "machine-2-2.e00004.c0000",
+      "gt_event": false,
+      "gt": [],
+      "score": 2.93,
+      "ratios": {
+        "5": 0.0,
+        "9": 0.6,
+        "10": 2.93,
+        "12": 0.99,
+        "23": 0.1,
+        "25": 0.09,
+        "31": 0.0
+      },
+      "before": "anomalous",
+      "before_channels": [
+        9,
+        10,
+        12,
+        23,
+        25,
+        31
+      ],
+      "after": "anomalous",
+      "after_channels": [
+        10,
+        9,
+        12,
+        25,
+        23
+      ]
+    },
+    {
+      "core_id": "machine-2-9.e00014.c0000",
+      "gt_event": true,
+      "gt": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "score": 346.0,
+      "ratios": {
+        "5": 0.46,
+        "6": 0.12,
+        "8": 2.95,
+        "9": 346.0,
+        "11": 3.28,
+        "12": 12.13,
+        "14": 2.11,
+        "33": 0.27
+      },
+      "before": "uncertain",
+      "before_channels": [],
+      "after": "uncertain",
+      "after_channels": []
+    },
+    {
+      "core_id": "machine-2-9.e00009.c0000",
+      "gt_event": true,
+      "gt": [
+        0,
+        1,
+        2,
+        3,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        18,
+        19,
+        20,
+        21,
+        27,
+        30,
+        34,
+        35
+      ],
+      "score": 0.61,
+      "ratios": {
+        "1": 0.06,
+        "2": 0.17,
+        "6": 0.06,
+        "8": 0.31,
+        "9": 0.61,
+        "11": 0.18,
+        "12": 0.16,
+        "14": 0.46
+      },
+      "before": "uncertain",
+      "before_channels": [],
+      "after": "uncertain",
+      "after_channels": []
+    },
+    {
+      "core_id": "machine-2-9.e00002.c0000",
+      "gt_event": false,
+      "gt": [],
+      "score": 1.23,
+      "ratios": {
+        "11": 0.42,
+        "19": 0.02,
+        "22": 1.21,
+        "23": 0.91,
+        "25": 0.91,
+        "34": 1.23,
+        "35": 0.98
+      },
+      "before": "uncertain",
+      "before_channels": [],
+      "after": "anomalous",
+      "after_channels": [
+        22,
+        34
+      ]
+    },
+    {
+      "core_id": "machine-2-9.e00006.c0000",
+      "gt_event": false,
+      "gt": [],
+      "score": 12.65,
+      "ratios": {
+        "6": 0.12,
+        "9": 12.65,
+        "10": 0.15,
+        "11": 0.6,
+        "12": 0.66,
+        "15": 0.15
+      },
+      "before": "uncertain",
+      "before_channels": [],
+      "after": "uncertain",
+      "after_channels": []
+    }
+  ],
+  "limitation": "24 cases, one gpt-4o call each, raw page verdicts (scope hold not applied)."
+}

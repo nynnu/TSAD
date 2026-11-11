@@ -1,0 +1,2277 @@
+[
+  {
+    "machine": "machine-1-1",
+    "forward_stable_channels": 23,
+    "normal": {
+      "total": 16036,
+      "eligible_fraction": 0.5108505861810926,
+      "uncertain_fraction": 0.5194562234971315,
+      "supported_fraction": 0.4766151159890247,
+      "deviation_fraction": 0.003928660513843852,
+      "deviation_conditional_on_eligible": 0.0076904296875,
+      "uncertainty_reasons": {
+        "evidence_available": 7706,
+        "forward_skill_unstable": 844,
+        "model_unavailable": 5908,
+        "predictor_state_unsupported": 1092,
+        "residual_ambiguous": 486
+      }
+    },
+    "anomaly": {
+      "total": 687,
+      "eligible_fraction": 0.1965065502183406,
+      "uncertain_fraction": 0.8122270742358079,
+      "supported_fraction": 0.18631732168850074,
+      "deviation_fraction": 0.001455604075691412,
+      "deviation_conditional_on_eligible": 0.007407407407407408,
+      "uncertainty_reasons": {
+        "evidence_available": 129,
+        "forward_skill_unstable": 10,
+        "model_unavailable": 156,
+        "predictor_state_unsupported": 386,
+        "residual_ambiguous": 6
+      }
+    },
+    "mismatch_normal": {
+      "total": 181,
+      "eligible_fraction": 0.0,
+      "uncertain_fraction": 1.0,
+      "supported_fraction": 0.0,
+      "deviation_fraction": 0.0,
+      "deviation_conditional_on_eligible": null,
+      "uncertainty_reasons": {
+        "forward_skill_unstable": 139,
+        "model_unavailable": 9,
+        "predictor_state_unsupported": 33
+      }
+    },
+    "mismatch_anomaly": {
+      "total": 4,
+      "eligible_fraction": 0.0,
+      "uncertain_fraction": 1.0,
+      "supported_fraction": 0.0,
+      "deviation_fraction": 0.0,
+      "deviation_conditional_on_eligible": null,
+      "uncertainty_reasons": {
+        "model_unavailable": 1,
+        "predictor_state_unsupported": 3
+      }
+    },
+    "validation": {
+      "folds": [
+        {
+          "history_end": 17040,
+          "audit_start": 17040,
+          "audit_end": 20820,
+          "gain": [
+            null,
+            0.9094522449696164,
+            0.9847569568609923,
+            0.9725245779776203,
+            null,
+            null,
+            null,
+            null,
+            0.9931737385470243,
+            null,
+            0.9972434718948345,
+            0.8675642660972473,
+            0.9304715529961224,
+            0.8866748633005846,
+            0.9430456453470538,
+            0.9983944014760046,
+            null,
+            null,
+            0.9046046111730313,
+            0.9731079930413448,
+            0.9981879495669491,
+            0.9996149281062402,
+            -3.6610156102956175,
+            0.999408422848792,
+            0.9010607830067966,
+            0.9997192913640706,
+            null,
+            0.9997960972511101,
+            null,
+            null,
+            0.9984257251402495,
+            0.8993939414124009,
+            0.12092904656454995,
+            null,
+            0.9992156069655225,
+            0.9992151767929258,
+            null,
+            null
+          ]
+        },
+        {
+          "history_end": 20820,
+          "audit_start": 20820,
+          "audit_end": 24600,
+          "gain": [
+            null,
+            0.9244156064503084,
+            0.9883202747273233,
+            0.9787418689919145,
+            null,
+            null,
+            null,
+            null,
+            0.9898191389971385,
+            null,
+            0.9956522983547724,
+            0.9079277111998341,
+            0.9389676760723564,
+            0.9020262900495486,
+            0.9009499607196726,
+            0.9964822926113893,
+            null,
+            null,
+            0.9288517195191751,
+            0.9808495541609366,
+            0.9984108621740023,
+            0.9995565700393172,
+            -7.254404005166503,
+            0.9987732519563884,
+            0.8903371447618369,
+            0.9993816449461426,
+            null,
+            0.999447766405634,
+            null,
+            null,
+            0.9989954213211664,
+            0.9364454737855278,
+            -0.29446659134280706,
+            null,
+            0.9997307156573463,
+            0.9997293957157136,
+            null,
+            null
+          ]
+        },
+        {
+          "history_end": 24600,
+          "audit_start": 24600,
+          "audit_end": 28440,
+          "gain": [
+            null,
+            0.8926546841967373,
+            0.9835741711806314,
+            0.9711485952855717,
+            null,
+            null,
+            null,
+            null,
+            0.9929349671879567,
+            null,
+            0.9960506285228617,
+            0.7502696654531646,
+            0.9421684053633816,
+            0.8916500426248567,
+            0.9152840610888048,
+            0.9965687556989766,
+            null,
+            null,
+            0.9667127166542473,
+            0.9579869664235039,
+            0.9997274291418538,
+            0.9992760812013223,
+            -3.2312563070971247,
+            0.9968376829868326,
+            0.8958948286279295,
+            0.9975255736241081,
+            null,
+            0.9999092677331816,
+            null,
+            0.5287498501517015,
+            0.99901433057461,
+            0.9034365996906045,
+            0.23082892929720167,
+            null,
+            0.9998683455501535,
+            0.9998681677540149,
+            null,
+            null
+          ]
+        }
+      ],
+      "models": [
+        {
+          "channel": 0,
+          "neighbors": [],
+          "available": false
+        },
+        {
+          "channel": 1,
+          "neighbors": [
+            2,
+            3,
+            19,
+            30,
+            21
+          ],
+          "available": true,
+          "inner_validation_gain": 0.8185316960934139,
+          "penalty": 0.01,
+          "coefficients": [
+            1.4454447364029688,
+            -0.7404756401463021,
+            0.0374897498563226,
+            0.018307884697220517,
+            0.00970746648778962
+          ]
+        },
+        {
+          "channel": 2,
+          "neighbors": [
+            3,
+            1,
+            19,
+            30,
+            21
+          ],
+          "available": true,
+          "inner_validation_gain": 0.9706386435302485,
+          "penalty": 0.1,
+          "coefficients": [
+            0.5574685306722353,
+            0.34351958751846995,
+            0.032502691596183506,
+            0.038561507861603776,
+            0.03878200611088557
+          ]
+        },
+        {
+          "channel": 3,
+          "neighbors": [
+            2,
+            19,
+            30,
+            21,
+            27
+          ],
+          "available": true,
+          "inner_validation_gain": 0.9527100376814148,
+          "penalty": 0.01,
+          "coefficients": [
+            0.6161952501839186,
+            0.25814671993681965,
+            0.07358935516417599,
+            0.035566004747060585,
+            0.02968595154616674
+          ]
+        },
+        {
+          "channel": 4,
+          "neighbors": [],
+          "available": false
+        },
+        {
+          "channel": 5,
+          "neighbors": [],
+          "available": false
+        },
+        {
+          "channel": 6,
+          "neighbors": [],
+          "available": false
+        },
+        {
+          "channel": 7,
+          "neighbors": [],
+          "available": false
+        },
+        {
+          "channel": 8,
+          "neighbors": [
+            14,
+            13,
+            22,
+            12,
+            24
+          ],
+          "available": true,
+          "inner_validation_gain": 0.9936251072397735,
+          "penalty": 0.01,
+          "coefficients": [
+            0.8229501030334269,
+            0.2407282415711015,
+            -0.020033253803923883,
+            0.004916523961564586,
+            0.011996998560171042
+          ]
+        },
+        {
+          "channel": 9,
+          "neighbors": [],
+          "available": false
+        },
+        {
+          "channel": 10,
+          "neighbors": [
+            15
+          ],
+          "available": true,
+          "inner_validation_gain": 0.9932618656495463,
+          "penalty": 0.01,
+          "coefficients": [
+            0.9845107971482533
+          ]
+        },
+        {
+          "channel": 11,
+          "neighbors": [
+            12,
+            22,
+            14,
+            24,
+            18
+          ],
+          "available": true,
+          "inner_validation_gain": 0.9020576297963239,
+          "penalty": 0.01,
+          "coefficients": [
+            0.914870643626193,
+            0.14424162503141358,
+            -0.095032415564823,
+            -0.06511076525690697,
+            0.03752294567286938
+          ]
+        },
+        {
+          "channel": 12,
+          "neighbors": [
+            11,
+            14,
+            8,
+            22,
+            24
+          ],
+          "available": true,
+          "inner_validation_gain": 0.9300179151764523,
+          "penalty": 0.01,
+          "coefficients": [
+            0.8355128679116484,
+            -0.30533429837044723,
+            0.4925697314775928,
+            -0.00795692869809584,
+            0.013417367730873132
+          ]
+        },
+        {
+          "channel": 13,
+          "neighbors": [
+            8,
+            14,
+            12,
+            22,
+            24
+          ],
+          "available": true,
+          "inner_validation_gain": 0.8735330231522764,
+          "penalty": 0.01,
+          "coefficients": [
+            2.494251478148645,
+            -1.7998596713233548,
+            0.03274316850827619,
+            -0.049619579963215185,
+            0.03293708429214766
+          ]
+        },
+        {
+          "channel": 14,
+          "neighbors": [
+            8,
+            22,
+            12,
+            24,
+            21
+          ],
+          "available": true,
+          "inner_validation_gain": 0.9404950027631273,
+          "penalty": 0.01,
+          "coefficients": [
+            0.9030988354624404,
+            0.13363938817735027,
+            0.023585116829460833,
+            -0.019238631985229963,
+            -0.04843062465741668
+          ]
+        },
+        {
+          "channel": 15,
+          "neighbors": [
+            10
+          ],
+          "available": true,
+          "inner_validation_gain": 0.9938059827270435,
+          "penalty": 0.01,
+          "coefficients": [
+            0.9845107971482586
+          ]
+        },
+        {
+          "channel": 16,
+          "neighbors": [],
+          "available": false
+        },
+        {
+          "channel": 17,
+          "neighbors": [],
+          "available": false
+        },
+        {
+          "channel": 18,
+          "neighbors": [
+            20,
+            21,
+            27,
+            19,
+            30
+          ],
+          "available": true,
+          "inner_validation_gain": 0.9375753270114846,
+          "penalty": 1.0,
+          "coefficients": [
+            0.16290782526200376,
+            0.1567192337959852,
+            0.15734309889763495,
+            0.16940961125526308,
+            0.15247377924140987
+          ]
+        },
+        {
+          "channel": 19,
+          "neighbors": [
+            30,
+            21,
+            20,
+            27,
+            35
+          ],
+          "available": true,
+          "inner_validation_gain": 0.9834131809001803,
+          "penalty": 1.0,
+          "coefficients": [
+            0.1654682013782146,
+            0.16623578900234426,
+            0.166288406835199,
+            0.16543525926483008,
+            0.16107390442201708
+          ]
+        },
+        {
+          "channel": 20,
+          "neighbors": [
+            27,
+            21,
+            30,
+            19,
+            24
+          ],
+          "available": true,
+          "inner_validation_gain": 0.9995252679233236,
+          "penalty": 0.01,
+          "coefficients": [
+            0.3197337713965725,
+            0.24235733651489738,
+            0.22759596314439245,
+            0.10607751904774244,
+            0.1042260354588414
+          ]
+        },
+        {
+          "channel": 21,
+          "neighbors": [
+            30,
+            20,
+            27,
+            19,
+            24
+          ],
+          "available": true,
+          "inner_validation_gain": 0.9992189734316183,
+          "penalty": 0.01,
+          "coefficients": [
+            0.24494828953490258,
+            0.22577440306488067,
+            0.21422476603840782,
+            0.11155612525991512,
+            0.20524867361446422
+          ]
+        },
+        {
+          "channel": 22,
+          "neighbors": [
+            24,
+            21,
+            30,
+            20,
+            27
+          ],
+          "available": true,
+          "inner_validation_gain": 0.5014954234799869,
+          "penalty": 1.0,
+          "coefficients": [
+            0.15718502255059266,
+            0.14259815951453997,
+            0.1366487591343814,
+            0.14283952645769563,
+            0.13629167429960737
+          ]
+        },
+        {
+          "channel": 23,
+          "neighbors": [
+            25,
+            22,
+            24,
+            30,
+            21
+          ],
+          "available": true,
+          "inner_validation_gain": 0.9950580963196459,
+          "penalty": 0.01,
+          "coefficients": [
+            0.975144265191273,
+            0.014364556374666123,
+            0.017355027187325293,
+            -0.00486579991827259,
+            -0.009268462698532418
+          ]
+        },
+        {
+          "channel": 24,
+          "neighbors": [
+            21,
+            30,
+            20,
+            27,
+            22
+          ],
+          "available": true,
+          "inner_validation_gain": 0.9528275578855124,
+          "penalty": 0.1,
+          "coefficients": [
+            0.24666158481973963,
+            0.2219114438289474,
+            0.2113166603206843,
+            0.18890317165153928,
+            0.11281449281526006
+          ]
+        },
+        {
+          "channel": 25,
+          "neighbors": [
+            23,
+            22,
+            24,
+            30,
+            21
+          ],
+          "available": true,
+          "inner_validation_gain": 0.9948664696654378,
+          "penalty": 0.01,
+          "coefficients": [
+            0.9606100689951269,
+            0.014721951322705061,
+            -0.014634901630225619,
+            0.022696819294308057,
+            0.013782399979083803
+          ]
+        },
+        {
+          "channel": 26,
+          "neighbors": [],
+          "available": false
+        },
+        {
+          "channel": 27,
+          "neighbors": [
+            30,
+            20,
+            21,
+            19,
+            24
+          ],
+          "available": true,
+          "inner_validation_gain": 0.9995525911711063,
+          "penalty": 0.01,
+          "coefficients": [
+            0.32540790897456323,
+            0.33443634127379346,
+            0.2405337924173579,
+            0.0946647368226532,
+            0.0029025076896811433
+          ]
+        },
+        {
+          "channel": 28,
+          "neighbors": [],
+          "available": false
+        },
+        {
+          "channel": 29,
+          "neighbors": [
+            34,
+            35,
+            30,
+            27,
+            24
+          ],
+          "available": true,
+          "inner_validation_gain": 0.6509273726876775,
+          "penalty": 0.01,
+          "coefficients": [
+            0.16513879891911443,
+            0.16532800689662625,
+            -0.10214275491647667,
+            -0.17788825882836365,
+            0.6454364311888182
+          ]
+        },
+        {
+          "channel": 30,
+          "neighbors": [
+            21,
+            27,
+            20,
+            19,
+            24
+          ],
+          "available": true,
+          "inner_validation_gain": 0.998776689369474,
+          "penalty": 0.01,
+          "coefficients": [
+            0.25848993995097763,
+            0.3058376282993158,
+            0.2237444755267603,
+            0.10085858291958522,
+            0.11121770545563531
+          ]
+        },
+        {
+          "channel": 31,
+          "neighbors": [
+            27,
+            20,
+            30,
+            21,
+            24
+          ],
+          "available": true,
+          "inner_validation_gain": 0.8795680185018199,
+          "penalty": 0.01,
+          "coefficients": [
+            0.3626772435527864,
+            0.10072174272361865,
+            0.1651651246770447,
+            -0.10341191730854576,
+            0.413805416055847
+          ]
+        },
+        {
+          "channel": 32,
+          "neighbors": [
+            19,
+            22,
+            24,
+            18,
+            21
+          ],
+          "available": false,
+          "inner_validation_gain": 0.07029355390578451,
+          "penalty": 0.01
+        },
+        {
+          "channel": 33,
+          "neighbors": [],
+          "available": false
+        },
+        {
+          "channel": 34,
+          "neighbors": [
+            35,
+            27,
+            30,
+            19,
+            20
+          ],
+          "available": true,
+          "inner_validation_gain": 0.9995233327523684,
+          "penalty": 0.01,
+          "coefficients": [
+            0.8186274122738959,
+            0.08847435832659117,
+            0.059184281754601,
+            0.04009920670263342,
+            -0.010452739746380698
+          ]
+        },
+        {
+          "channel": 35,
+          "neighbors": [
+            34,
+            27,
+            30,
+            19,
+            20
+          ],
+          "available": true,
+          "inner_validation_gain": 0.9995255480460605,
+          "penalty": 0.01,
+          "coefficients": [
+            0.8185677986778889,
+            0.08847616602424861,
+            0.05912168419744407,
+            0.04022952602736946,
+            -0.010459236318755442
+          ]
+        },
+        {
+          "channel": 36,
+          "neighbors": [],
+          "available": false
+        },
+        {
+          "channel": 37,
+          "neighbors": [],
+          "available": false
+        }
+      ]
+    }
+  },
+  {
+    "machine": "machine-1-2",
+    "forward_stable_channels": 24,
+    "normal": {
+      "total": 14212,
+      "eligible_fraction": 0.618561778778497,
+      "uncertain_fraction": 0.39649591894173936,
+      "supported_fraction": 0.602589361103293,
+      "deviation_fraction": 0.000914719954967633,
+      "deviation_conditional_on_eligible": 0.0014787851211466273,
+      "uncertainty_reasons": {
+        "evidence_available": 8577,
+        "forward_skill_unstable": 1122,
+        "model_unavailable": 4114,
+        "predictor_state_unsupported": 185,
+        "residual_ambiguous": 214
+      }
+    },
+    "anomaly": {
+      "total": 166,
+      "eligible_fraction": 0.40963855421686746,
+      "uncertain_fraction": 0.6867469879518072,
+      "supported_fraction": 0.28313253012048195,
+      "deviation_fraction": 0.030120481927710843,
+      "deviation_conditional_on_eligible": 0.07352941176470588,
+      "uncertainty_reasons": {
+        "evidence_available": 52,
+        "forward_skill_unstable": 9,
+        "model_unavailable": 21,
+        "predictor_state_unsupported": 68,
+        "residual_ambiguous": 16
+      }
+    },
+    "mismatch_normal": {
+      "total": 1,
+      "eligible_fraction": 1.0,
+      "uncertain_fraction": 0.0,
+      "supported_fraction": 0.0,
+      "deviation_fraction": 1.0,
+      "deviation_conditional_on_eligible": 1.0,
+      "uncertainty_reasons": {
+        "evidence_available": 1
+      }
+    },
+    "mismatch_anomaly": {
+      "total": 0,
+      "eligible_fraction": 0.0,
+      "uncertain_fraction": null,
+      "supported_fraction": null,
+      "deviation_fraction": null,
+      "deviation_conditional_on_eligible": null,
+      "uncertainty_reasons": {}
+    },
+    "validation": {
+      "folds": [
+        {
+          "history_end": 14160,
+          "audit_start": 14160,
+          "audit_end": 17280,
+          "gain": [
+            0.7594447685202161,
+            0.9356267395625951,
+            0.9700990637376063,
+            0.9252585033630057,
+            0.11351516520869842,
+            -0.030451955991965374,
+            0.1919757611185371,
+            null,
+            0.42718365059788477,
+            0.15288131377513292,
+            0.1205477752136328,
+            0.6179682741380133,
+            0.5701001338054172,
+            0.4706183958351413,
+            0.6568665477860973,
+            0.5083516952656599,
+            null,
+            null,
+            0.9989141495606162,
+            0.26886693382681026,
+            0.9990035989905274,
+            0.9995139272389227,
+            null,
+            0.9951829286827534,
+            0.1097120014760834,
+            0.9952395092543359,
+            null,
+            0.961011778969844,
+            null,
+            null,
+            0.9994259194750307,
+            null,
+            0.40801046472878877,
+            0.44681425448567247,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "history_end": 17280,
+          "audit_start": 17280,
+          "audit_end": 20460,
+          "gain": [
+            0.9349653535515963,
+            0.9604485625478237,
+            0.9837194447853539,
+            0.9617737887448552,
+            null,
+            0.3144285015388636,
+            0.2802495502906295,
+            null,
+            0.5698434568980958,
+            0.9206625050653593,
+            0.8405782039417022,
+            0.3152433702417218,
+            0.8894291664388542,
+            0.29841516259371414,
+            0.33316701923761005,
+            0.5555829014700673,
+            null,
+            null,
+            0.9967993652940914,
+            0.24020960104823008,
+            0.9982259853860139,
+            0.999046324922064,
+            null,
+            0.9931379517413911,
+            0.006930941866769791,
+            0.9932072390827731,
+            null,
+            0.9000449702360318,
+            null,
+            null,
+            0.9991488471116233,
+            null,
+            0.40173493424061735,
+            -0.17198660867903826,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "history_end": 20460,
+          "audit_start": 20460,
+          "audit_end": 23640,
+          "gain": [
+            0.9405751981336241,
+            0.9744602622825124,
+            0.9825709142396971,
+            0.9579017777047154,
+            null,
+            0.194277611023826,
+            0.5224250145378919,
+            null,
+            0.009925461936128643,
+            0.0002135175404137657,
+            0.6693811714167133,
+            0.490247538951592,
+            0.5620130375633021,
+            0.4872185596263071,
+            0.5630061049597925,
+            0.6164593526580685,
+            null,
+            null,
+            0.9989182108341557,
+            0.26731704772724596,
+            0.9990966111632712,
+            0.9994527472253882,
+            null,
+            0.9953170472056441,
+            0.05801844712400284,
+            0.9955069891206813,
+            null,
+            0.9515260247446619,
+            null,
+            null,
+            0.999472465332462,
+            null,
+            0.3991109438123728,
+            0.2878410662544968,
+            0.4857656575004622,
+            0.5180263430038513,
+            null,
+            null
+          ]
+        }
+      ],
+      "models": [
+        {
+          "channel": 0,
+          "neighbors": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "available": true,
+          "inner_validation_gain": 0.897344539430261,
+          "penalty": 0.01,
+          "coefficients": [
+            0.8443004788683185,
+            -0.10396584350347636,
+            0.22634537641406954,
+            0.00582142538456671
+          ]
+        },
+        {
+          "channel": 1,
+          "neighbors": [
+            0,
+            2,
+            3,
+            4,
+            11
+          ],
+          "available": true,
+          "inner_validation_gain": 0.9393306453748249,
+          "penalty": 0.01,
+          "coefficients": [
+            0.563004793277032,
+            0.731924603781185,
+            -0.3529392858787187,
+            0.001071890091639709,
+            0.04710151821113174
+          ]
+        },
+        {
+          "channel": 2,
+          "neighbors": [
+            3,
+            1,
+            0,
+            4
+          ],
+          "available": true,
+          "inner_validation_gain": 0.9582815316253669,
+          "penalty": 0.01,
+          "coefficients": [
+            0.6097312017866804,
+            0.46090382310051037,
+            -0.04392614137765125,
+            -0.005313521476945815
+          ]
+        },
+        {
+          "channel": 3,
+          "neighbors": [
+            2,
+            0,
+            1,
+            4
+          ],
+          "available": true,
+          "inner_validation_gain": 0.9141544928241753,
+          "penalty": 0.01,
+          "coefficients": [
+            1.1629975401026087,
+            0.18240820828467152,
+            -0.43160049440833215,
+            0.02686268891515241
+          ]
+        },
+        {
+          "channel": 4,
+          "neighbors": [
+            3,
+            2,
+            0,
+            1
+          ],
+          "available": false,
+          "inner_validation_gain": -0.4955482867048031,
+          "penalty": 1.0
+        },
+        {
+          "channel": 5,
+          "neighbors": [
+            6
+          ],
+          "available": true,
+          "inner_validation_gain": 0.2596897471093135,
+          "penalty": 0.1,
+          "coefficients": [
+            0.431509786987181
+          ]
+        },
+        {
+          "channel": 6,
+          "neighbors": [
+            23,
+            25,
+            5,
+            24
+          ],
+          "available": true,
+          "inner_validation_gain": 0.43367772208652466,
+          "penalty": 0.01,
+          "coefficients": [
+            0.5476736873887444,
+            -0.057472141879099,
+            0.31253377335638605,
+            0.21063101396279643
+          ]
+        },
+        {
+          "channel": 7,
+          "neighbors": [],
+          "available": false
+        },
+        {
+          "channel": 8,
+          "neighbors": [
+            10,
+            14,
+            9,
+            12
+          ],
+          "available": true,
+          "inner_validation_gain": 0.5846561068887624,
+          "penalty": 0.01,
+          "coefficients": [
+            0.5013131787806412,
+            0.42972842423208296,
+            -0.23049372848896985,
+            0.24133317570939386
+          ]
+        },
+        {
+          "channel": 9,
+          "neighbors": [
+            12,
+            10,
+            8,
+            11,
+            14
+          ],
+          "available": true,
+          "inner_validation_gain": 0.8638630236519093,
+          "penalty": 0.01,
+          "coefficients": [
+            0.7872142478753199,
+            0.38918009521578667,
+            -0.1496704323148943,
+            -0.09074659608766515,
+            0.0014627787015006127
+          ]
+        },
+        {
+          "channel": 10,
+          "neighbors": [
+            8,
+            9,
+            12,
+            14,
+            11
+          ],
+          "available": true,
+          "inner_validation_gain": 0.5907856916660315,
+          "penalty": 1.0,
+          "coefficients": [
+            0.23869371415665183,
+            0.214875907910782,
+            0.07473060493417115,
+            0.11426157535216924,
+            0.05064820250510714
+          ]
+        },
+        {
+          "channel": 11,
+          "neighbors": [
+            14,
+            12,
+            9,
+            10,
+            1
+          ],
+          "available": true,
+          "inner_validation_gain": 0.364364920978543,
+          "penalty": 1.0,
+          "coefficients": [
+            0.18745576211589388,
+            0.16269847479850327,
+            0.07041459338208411,
+            0.04405888643051614,
+            0.09827198205354687
+          ]
+        },
+        {
+          "channel": 12,
+          "neighbors": [
+            9,
+            10,
+            11,
+            8,
+            14
+          ],
+          "available": true,
+          "inner_validation_gain": 0.8538271802138143,
+          "penalty": 0.01,
+          "coefficients": [
+            0.8906250116676833,
+            -0.27049867871056266,
+            0.2115808459082788,
+            0.22978158368708756,
+            -0.07069236875437346
+          ]
+        },
+        {
+          "channel": 13,
+          "neighbors": [
+            15,
+            30,
+            21,
+            19,
+            27
+          ],
+          "available": true,
+          "inner_validation_gain": 0.44929117422352316,
+          "penalty": 0.01,
+          "coefficients": [
+            0.6134892674739842,
+            0.10535148614235672,
+            -0.15889222916120696,
+            0.3249097670607872,
+            -0.07044448687581767
+          ]
+        },
+        {
+          "channel": 14,
+          "neighbors": [
+            8,
+            11,
+            10,
+            12,
+            9
+          ],
+          "available": true,
+          "inner_validation_gain": 0.6658723723288746,
+          "penalty": 0.1,
+          "coefficients": [
+            0.5714154322934277,
+            0.36692790392734426,
+            0.054966533090026935,
+            -0.0636270225067583,
+            -0.050605568063739226
+          ]
+        },
+        {
+          "channel": 15,
+          "neighbors": [
+            27,
+            21,
+            30,
+            20,
+            18
+          ],
+          "available": true,
+          "inner_validation_gain": 0.6305068291390874,
+          "penalty": 0.01,
+          "coefficients": [
+            0.09523218479932008,
+            0.23436751213060153,
+            0.2177792041716402,
+            0.49163737182179723,
+            -0.22123683242790934
+          ]
+        },
+        {
+          "channel": 16,
+          "neighbors": [
+            17
+          ],
+          "available": false,
+          "inner_validation_gain": -0.1830093201993639,
+          "penalty": 1.0
+        },
+        {
+          "channel": 17,
+          "neighbors": [
+            16
+          ],
+          "available": false,
+          "inner_validation_gain": -0.005573794774964114,
+          "penalty": 1.0
+        },
+        {
+          "channel": 18,
+          "neighbors": [
+            20,
+            27,
+            21,
+            30,
+            15
+          ],
+          "available": true,
+          "inner_validation_gain": 0.9974663987412435,
+          "penalty": 0.01,
+          "coefficients": [
+            0.9719378702267949,
+            0.08111865579098175,
+            -0.034350728262589045,
+            -0.032079464040134884,
+            -0.01136176317337325
+          ]
+        },
+        {
+          "channel": 19,
+          "neighbors": [
+            30,
+            21,
+            13
+          ],
+          "available": true,
+          "inner_validation_gain": 0.3259449435506404,
+          "penalty": 0.1,
+          "coefficients": [
+            0.18283411657456022,
+            0.1718934111944529,
+            0.2328886216099883
+          ]
+        },
+        {
+          "channel": 20,
+          "neighbors": [
+            18,
+            27,
+            21,
+            30,
+            15
+          ],
+          "available": true,
+          "inner_validation_gain": 0.9984321986474138,
+          "penalty": 0.01,
+          "coefficients": [
+            0.90445789128235,
+            0.06130590257155208,
+            0.009901399765505296,
+            0.010079237208508639,
+            0.023495410501415744
+          ]
+        },
+        {
+          "channel": 21,
+          "neighbors": [
+            30,
+            27,
+            20,
+            15,
+            18
+          ],
+          "available": true,
+          "inner_validation_gain": 0.9995550001960504,
+          "penalty": 0.01,
+          "coefficients": [
+            0.9414689247205055,
+            0.0633269364629614,
+            0.009823123050182438,
+            0.011111905714430501,
+            -0.031713106496994485
+          ]
+        },
+        {
+          "channel": 22,
+          "neighbors": [],
+          "available": false
+        },
+        {
+          "channel": 23,
+          "neighbors": [
+            25,
+            6,
+            24
+          ],
+          "available": true,
+          "inner_validation_gain": 0.9947338122882059,
+          "penalty": 0.01,
+          "coefficients": [
+            0.9698921683034305,
+            0.030830243465800895,
+            -0.005463093514344952
+          ]
+        },
+        {
+          "channel": 24,
+          "neighbors": [
+            33,
+            6,
+            13,
+            23
+          ],
+          "available": true,
+          "inner_validation_gain": 0.16295161904990962,
+          "penalty": 0.01,
+          "coefficients": [
+            0.3393866709533795,
+            0.25067601359883834,
+            0.11358755234761046,
+            0.002575491801211774
+          ]
+        },
+        {
+          "channel": 25,
+          "neighbors": [
+            23,
+            6
+          ],
+          "available": true,
+          "inner_validation_gain": 0.9954346219899577,
+          "penalty": 0.01,
+          "coefficients": [
+            0.9903796845219308,
+            -0.0047389851089343635
+          ]
+        },
+        {
+          "channel": 26,
+          "neighbors": [],
+          "available": false
+        },
+        {
+          "channel": 27,
+          "neighbors": [
+            20,
+            18,
+            21,
+            30,
+            15
+          ],
+          "available": true,
+          "inner_validation_gain": 0.9443910436593232,
+          "penalty": 0.1,
+          "coefficients": [
+            0.2567082164594115,
+            0.26332618712479056,
+            0.22737250894881972,
+            0.22383191176257697,
+            0.04979280735297799
+          ]
+        },
+        {
+          "channel": 28,
+          "neighbors": [],
+          "available": false
+        },
+        {
+          "channel": 29,
+          "neighbors": [],
+          "available": false
+        },
+        {
+          "channel": 30,
+          "neighbors": [
+            21,
+            27,
+            20,
+            15,
+            18
+          ],
+          "available": true,
+          "inner_validation_gain": 0.9994747006645374,
+          "penalty": 0.01,
+          "coefficients": [
+            0.9476967250341485,
+            0.055075034096363266,
+            0.010065701454657516,
+            0.010393718116750045,
+            -0.029812152284101275
+          ]
+        },
+        {
+          "channel": 31,
+          "neighbors": [],
+          "available": false
+        },
+        {
+          "channel": 32,
+          "neighbors": [
+            33
+          ],
+          "available": true,
+          "inner_validation_gain": 0.43104498301582694,
+          "penalty": 0.01,
+          "coefficients": [
+            0.644557409998531
+          ]
+        },
+        {
+          "channel": 33,
+          "neighbors": [
+            32,
+            24
+          ],
+          "available": true,
+          "inner_validation_gain": 0.4413867350554552,
+          "penalty": 0.1,
+          "coefficients": [
+            0.5401442124623905,
+            0.2629511587761262
+          ]
+        },
+        {
+          "channel": 34,
+          "neighbors": [
+            35
+          ],
+          "available": true,
+          "inner_validation_gain": 0.6060127798629507,
+          "penalty": 0.1,
+          "coefficients": [
+            0.7576698605209914
+          ]
+        },
+        {
+          "channel": 35,
+          "neighbors": [
+            34
+          ],
+          "available": true,
+          "inner_validation_gain": 0.6291329788590796,
+          "penalty": 0.01,
+          "coefficients": [
+            0.8251849966070052
+          ]
+        },
+        {
+          "channel": 36,
+          "neighbors": [],
+          "available": false
+        },
+        {
+          "channel": 37,
+          "neighbors": [],
+          "available": false
+        }
+      ]
+    }
+  },
+  {
+    "machine": "machine-1-6",
+    "forward_stable_channels": 24,
+    "normal": {
+      "total": 11552,
+      "eligible_fraction": 0.3297264542936288,
+      "uncertain_fraction": 0.7460180055401662,
+      "supported_fraction": 0.21814404432132964,
+      "deviation_fraction": 0.03583795013850415,
+      "deviation_conditional_on_eligible": 0.10868994486741927,
+      "uncertainty_reasons": {
+        "evidence_available": 2934,
+        "forward_skill_unstable": 912,
+        "model_unavailable": 3344,
+        "predictor_state_unsupported": 3487,
+        "residual_ambiguous": 875
+      }
+    },
+    "anomaly": {
+      "total": 1463,
+      "eligible_fraction": 0.19480519480519481,
+      "uncertain_fraction": 0.8742310321257689,
+      "supported_fraction": 0.05673274094326726,
+      "deviation_fraction": 0.06903622693096377,
+      "deviation_conditional_on_eligible": 0.3543859649122807,
+      "uncertainty_reasons": {
+        "evidence_available": 184,
+        "forward_skill_unstable": 2,
+        "model_unavailable": 111,
+        "predictor_state_unsupported": 1065,
+        "residual_ambiguous": 101
+      }
+    },
+    "mismatch_normal": {
+      "total": 1674,
+      "eligible_fraction": 0.07945041816009558,
+      "uncertain_fraction": 0.972520908004779,
+      "supported_fraction": 0.005973715651135006,
+      "deviation_fraction": 0.021505376344086023,
+      "deviation_conditional_on_eligible": 0.2706766917293233,
+      "uncertainty_reasons": {
+        "evidence_available": 46,
+        "forward_skill_unstable": 159,
+        "model_unavailable": 200,
+        "predictor_state_unsupported": 1182,
+        "residual_ambiguous": 87
+      }
+    },
+    "mismatch_anomaly": {
+      "total": 222,
+      "eligible_fraction": 0.18468468468468469,
+      "uncertain_fraction": 0.8558558558558559,
+      "supported_fraction": 0.0045045045045045045,
+      "deviation_fraction": 0.13963963963963963,
+      "deviation_conditional_on_eligible": 0.7560975609756098,
+      "uncertainty_reasons": {
+        "evidence_available": 32,
+        "model_unavailable": 2,
+        "predictor_state_unsupported": 179,
+        "residual_ambiguous": 9
+      }
+    },
+    "validation": {
+      "folds": [
+        {
+          "history_end": 14160,
+          "audit_start": 14160,
+          "audit_end": 17280,
+          "gain": [
+            0.8779181852089304,
+            0.7321097264330074,
+            0.9401375823222179,
+            0.9198612514393092,
+            null,
+            null,
+            0.11878033613318328,
+            null,
+            0.7941634055932656,
+            0.8540161949489778,
+            0.6819934355740264,
+            0.7311044931049715,
+            0.8718592695693634,
+            0.6108162234329253,
+            0.7968334443444898,
+            0.39580883288541646,
+            null,
+            null,
+            0.9966143626036922,
+            0.9941263400894351,
+            0.9996969574104816,
+            0.9991273648679424,
+            0.8270244739790612,
+            -0.5684339728904091,
+            0.9615490654459695,
+            null,
+            null,
+            0.9987602378156789,
+            null,
+            0.8140951206028113,
+            0.9984997294210952,
+            0.8767945933550989,
+            null,
+            null,
+            0.9996468765039284,
+            0.999646963023628,
+            null,
+            null
+          ]
+        },
+        {
+          "history_end": 17280,
+          "audit_start": 17280,
+          "audit_end": 20460,
+          "gain": [
+            0.8646210402956374,
+            0.7278570071170117,
+            0.9368946571913986,
+            0.9221422195141215,
+            null,
+            null,
+            null,
+            null,
+            0.7953323087399856,
+            0.8720898343475807,
+            0.7675555591354383,
+            0.6203496417430177,
+            0.9148717207746893,
+            0.2812568521353067,
+            0.44939221366798976,
+            0.22036351953546063,
+            null,
+            null,
+            0.9848257546530782,
+            0.9848904283699874,
+            0.9996521211895346,
+            0.9990095410744528,
+            0.7554392951632993,
+            -0.4521220874432763,
+            0.8732974223141136,
+            0.3597005661272793,
+            null,
+            0.9983114232617767,
+            null,
+            0.7281562556386139,
+            0.9981007810236983,
+            0.8787653507320243,
+            null,
+            null,
+            0.9994842936072375,
+            0.9996136930831918,
+            null,
+            null
+          ]
+        },
+        {
+          "history_end": 20460,
+          "audit_start": 20460,
+          "audit_end": 23640,
+          "gain": [
+            0.9310159578347329,
+            0.7472674888418761,
+            0.9561796831985502,
+            0.9433607009239481,
+            null,
+            null,
+            -1.677123731005386,
+            null,
+            0.6435544754493895,
+            0.8945280375558456,
+            0.8004835685032426,
+            0.7126030844098098,
+            0.9125397575924914,
+            0.5118879729168055,
+            0.7776555210873293,
+            0.31530545399445153,
+            null,
+            null,
+            0.9979673476752559,
+            0.9954469903333364,
+            0.9997094952550221,
+            0.9992234167703586,
+            0.8156898090394537,
+            -0.19388949170978464,
+            0.9076857110444997,
+            0.0870780490777131,
+            null,
+            0.9989321224820059,
+            null,
+            0.8229561090713098,
+            0.9979842452083518,
+            0.9229313123779264,
+            null,
+            null,
+            0.9996450609557641,
+            0.9996522605991759,
+            null,
+            null
+          ]
+        }
+      ],
+      "models": [
+        {
+          "channel": 0,
+          "neighbors": [
+            27,
+            20,
+            21,
+            19,
+            30
+          ],
+          "available": true,
+          "inner_validation_gain": 0.9154791528480525,
+          "penalty": 0.01,
+          "coefficients": [
+            0.30473597880195746,
+            0.06202417497986526,
+            0.02188591383126859,
+            0.3328825025435459,
+            0.21202985876848976
+          ]
+        },
+        {
+          "channel": 1,
+          "neighbors": [
+            2,
+            3,
+            0,
+            20,
+            27
+          ],
+          "available": true,
+          "inner_validation_gain": 0.7335165324385662,
+          "penalty": 0.01,
+          "coefficients": [
+            1.354108946885461,
+            -0.7495806981862732,
+            0.2332878604404437,
+            0.00580716355063872,
+            -0.09115947926061808
+          ]
+        },
+        {
+          "channel": 2,
+          "neighbors": [
+            3,
+            1,
+            0,
+            27,
+            20
+          ],
+          "available": true,
+          "inner_validation_gain": 0.9516904574659368,
+          "penalty": 0.01,
+          "coefficients": [
+            0.7963756858587443,
+            0.3558918855402022,
+            0.04544045318814927,
+            -0.09808338635264972,
+            -0.06890386217005338
+          ]
+        },
+        {
+          "channel": 3,
+          "neighbors": [
+            2,
+            27,
+            20,
+            21,
+            0
+          ],
+          "available": true,
+          "inner_validation_gain": 0.939730050887058,
+          "penalty": 0.01,
+          "coefficients": [
+            0.6448230252236796,
+            0.23647866842642065,
+            0.1644565893617252,
+            0.015773200098134352,
+            -0.03631758579230684
+          ]
+        },
+        {
+          "channel": 4,
+          "neighbors": [
+            23,
+            25
+          ],
+          "available": false,
+          "inner_validation_gain": -0.5301783686571007,
+          "penalty": 1.0
+        },
+        {
+          "channel": 5,
+          "neighbors": [],
+          "available": false
+        },
+        {
+          "channel": 6,
+          "neighbors": [
+            23
+          ],
+          "available": true,
+          "inner_validation_gain": 0.6233776617045657,
+          "penalty": 0.01,
+          "coefficients": [
+            0.8155576421606033
+          ]
+        },
+        {
+          "channel": 7,
+          "neighbors": [],
+          "available": false
+        },
+        {
+          "channel": 8,
+          "neighbors": [
+            12,
+            9,
+            14,
+            10,
+            1
+          ],
+          "available": true,
+          "inner_validation_gain": 0.8165140665164775,
+          "penalty": 0.01,
+          "coefficients": [
+            0.8587767346778051,
+            0.06885021862612319,
+            0.12083363052920892,
+            -0.136167563095249,
+            0.04773257944567338
+          ]
+        },
+        {
+          "channel": 9,
+          "neighbors": [
+            12,
+            10,
+            8,
+            14,
+            11
+          ],
+          "available": true,
+          "inner_validation_gain": 0.8893741880100853,
+          "penalty": 0.01,
+          "coefficients": [
+            0.7239979170967569,
+            0.38343480976122857,
+            -0.03209616029192106,
+            -0.06617192179583303,
+            -0.09265854019551915
+          ]
+        },
+        {
+          "channel": 10,
+          "neighbors": [
+            9,
+            12,
+            8,
+            14
+          ],
+          "available": true,
+          "inner_validation_gain": 0.7678845804212882,
+          "penalty": 0.01,
+          "coefficients": [
+            0.9588338387629056,
+            0.08205121367177634,
+            -0.19149871079172096,
+            -0.008967897274225188
+          ]
+        },
+        {
+          "channel": 11,
+          "neighbors": [
+            14,
+            13,
+            12,
+            8,
+            0
+          ],
+          "available": true,
+          "inner_validation_gain": 0.6923626238945191,
+          "penalty": 0.01,
+          "coefficients": [
+            0.9721507112149882,
+            -0.06475334682703483,
+            0.5584717377315573,
+            -0.7652018890394229,
+            0.06191786879249087
+          ]
+        },
+        {
+          "channel": 12,
+          "neighbors": [
+            9,
+            8,
+            10,
+            14,
+            11
+          ],
+          "available": true,
+          "inner_validation_gain": 0.9286028394214962,
+          "penalty": 0.1,
+          "coefficients": [
+            0.40411173841093523,
+            0.39832928549197066,
+            0.10656536994064826,
+            0.06491457815755387,
+            0.11620215440955643
+          ]
+        },
+        {
+          "channel": 13,
+          "neighbors": [
+            15,
+            14,
+            29,
+            11,
+            24
+          ],
+          "available": true,
+          "inner_validation_gain": 0.6156212433985665,
+          "penalty": 0.01,
+          "coefficients": [
+            0.4110019217324266,
+            0.3950613294108666,
+            0.19637030927725913,
+            -0.018966435025409914,
+            0.09203069105494871
+          ]
+        },
+        {
+          "channel": 14,
+          "neighbors": [
+            11,
+            8,
+            12,
+            13,
+            9
+          ],
+          "available": true,
+          "inner_validation_gain": 0.7688241577613111,
+          "penalty": 0.1,
+          "coefficients": [
+            0.49514387875304827,
+            0.45430596926304717,
+            0.06298205973333795,
+            0.20876357689516306,
+            -0.17510803173052208
+          ]
+        },
+        {
+          "channel": 15,
+          "neighbors": [
+            13,
+            11,
+            29
+          ],
+          "available": true,
+          "inner_validation_gain": 0.4613883868708195,
+          "penalty": 0.01,
+          "coefficients": [
+            0.6098719810163338,
+            0.00885036624322018,
+            -0.003602720805022281
+          ]
+        },
+        {
+          "channel": 16,
+          "neighbors": [],
+          "available": false
+        },
+        {
+          "channel": 17,
+          "neighbors": [],
+          "available": false
+        },
+        {
+          "channel": 18,
+          "neighbors": [
+            19,
+            20,
+            21,
+            27,
+            30
+          ],
+          "available": true,
+          "inner_validation_gain": 0.9981536986070726,
+          "penalty": 0.01,
+          "coefficients": [
+            0.5907378841629547,
+            0.46346432439730545,
+            0.13937929849586286,
+            0.006191752082091904,
+            -0.20914137406273017
+          ]
+        },
+        {
+          "channel": 19,
+          "neighbors": [
+            18,
+            20,
+            27,
+            21,
+            30
+          ],
+          "available": true,
+          "inner_validation_gain": 0.9955183310372157,
+          "penalty": 0.01,
+          "coefficients": [
+            0.6038854104028719,
+            0.21141529005594856,
+            0.18351910500427157,
+            0.05509393552228947,
+            -0.05911922908386635
+          ]
+        },
+        {
+          "channel": 20,
+          "neighbors": [
+            21,
+            27,
+            18,
+            19,
+            30
+          ],
+          "available": true,
+          "inner_validation_gain": 0.99970719788144,
+          "penalty": 0.01,
+          "coefficients": [
+            0.23228744591815068,
+            0.20047795585841582,
+            0.28995967183795435,
+            0.12938918255607706,
+            0.15100207835341695
+          ]
+        },
+        {
+          "channel": 21,
+          "neighbors": [
+            27,
+            20,
+            30,
+            19,
+            18
+          ],
+          "available": true,
+          "inner_validation_gain": 0.9992303250781983,
+          "penalty": 0.01,
+          "coefficients": [
+            0.24445599463417517,
+            0.24536813244797614,
+            0.38301539820953706,
+            0.03561703727913845,
+            0.09211110302961252
+          ]
+        },
+        {
+          "channel": 22,
+          "neighbors": [
+            24,
+            31,
+            35,
+            34,
+            30
+          ],
+          "available": true,
+          "inner_validation_gain": 0.8295861068078807,
+          "penalty": 0.01,
+          "coefficients": [
+            0.997660823053877,
+            0.4850294426267715,
+            0.04374946642104858,
+            0.043584367406730384,
+            -0.7407778842946869
+          ]
+        },
+        {
+          "channel": 23,
+          "neighbors": [
+            6,
+            4
+          ],
+          "available": true,
+          "inner_validation_gain": 0.8253420042855217,
+          "penalty": 0.01,
+          "coefficients": [
+            0.9751417117552701,
+            -0.31161674686747604
+          ]
+        },
+        {
+          "channel": 24,
+          "neighbors": [
+            22,
+            30,
+            35,
+            34,
+            31
+          ],
+          "available": true,
+          "inner_validation_gain": 0.9112231823573916,
+          "penalty": 0.01,
+          "coefficients": [
+            0.5550976977235679,
+            0.5922689526435947,
+            0.031632206126095457,
+            0.031246835890497107,
+            -0.17378881259997184
+          ]
+        },
+        {
+          "channel": 25,
+          "neighbors": [
+            22,
+            24,
+            31,
+            4,
+            35
+          ],
+          "available": true,
+          "inner_validation_gain": 0.15197183457394892,
+          "penalty": 1.0,
+          "coefficients": [
+            0.18151005328521364,
+            0.10432522457726807,
+            0.10603263260287721,
+            0.0319653337354386,
+            0.08705837014116212
+          ]
+        },
+        {
+          "channel": 26,
+          "neighbors": [],
+          "available": false
+        },
+        {
+          "channel": 27,
+          "neighbors": [
+            21,
+            30,
+            20,
+            19,
+            18
+          ],
+          "available": true,
+          "inner_validation_gain": 0.9989415081911633,
+          "penalty": 0.01,
+          "coefficients": [
+            0.25306621922027667,
+            0.40063740835147876,
+            0.21922623697941113,
+            0.12281990642917275,
+            0.004236046830446831
+          ]
+        },
+        {
+          "channel": 28,
+          "neighbors": [],
+          "available": false
+        },
+        {
+          "channel": 29,
+          "neighbors": [
+            30,
+            21,
+            27,
+            20,
+            24
+          ],
+          "available": true,
+          "inner_validation_gain": 0.8143916888618469,
+          "penalty": 0.01,
+          "coefficients": [
+            0.48793640014992795,
+            0.341787024591832,
+            -0.06149122376236259,
+            -0.15588590194685217,
+            0.2896241943550414
+          ]
+        },
+        {
+          "channel": 30,
+          "neighbors": [
+            27,
+            21,
+            20,
+            19,
+            18
+          ],
+          "available": true,
+          "inner_validation_gain": 0.9987763905337431,
+          "penalty": 0.01,
+          "coefficients": [
+            0.5083708591124017,
+            0.5031284426119594,
+            0.20952602733302306,
+            -0.0502048174073622,
+            -0.18155838081039244
+          ]
+        },
+        {
+          "channel": 31,
+          "neighbors": [
+            20,
+            21,
+            27,
+            30,
+            18
+          ],
+          "available": true,
+          "inner_validation_gain": 0.9111388362949291,
+          "penalty": 0.01,
+          "coefficients": [
+            0.48867971277672084,
+            0.47105980922040364,
+            -0.043849998392712454,
+            0.0460756640731646,
+            -0.026221961190143212
+          ]
+        },
+        {
+          "channel": 32,
+          "neighbors": [
+            33
+          ],
+          "available": false,
+          "inner_validation_gain": -181.8835527091263,
+          "penalty": 1.0
+        },
+        {
+          "channel": 33,
+          "neighbors": [
+            32
+          ],
+          "available": false,
+          "inner_validation_gain": 0.001337251463313649,
+          "penalty": 0.01
+        },
+        {
+          "channel": 34,
+          "neighbors": [
+            35,
+            27,
+            30,
+            21,
+            20
+          ],
+          "available": true,
+          "inner_validation_gain": 0.9997195516813242,
+          "penalty": 0.01,
+          "coefficients": [
+            0.9290674943887169,
+            0.0338843413964222,
+            0.03637569904528396,
+            -0.0024129490082568017,
+            -0.0018951099651772015
+          ]
+        },
+        {
+          "channel": 35,
+          "neighbors": [
+            34,
+            27,
+            30,
+            21,
+            20
+          ],
+          "available": true,
+          "inner_validation_gain": 0.9997196402988877,
+          "penalty": 0.01,
+          "coefficients": [
+            0.9288125393635268,
+            0.03370360528808069,
+            0.036372566994460266,
+            -0.0020740045901907578,
+            -0.0017693873489260537
+          ]
+        },
+        {
+          "channel": 36,
+          "neighbors": [],
+          "available": false
+        },
+        {
+          "channel": 37,
+          "neighbors": [],
+          "available": false
+        }
+      ]
+    }
+  }
+]

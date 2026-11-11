@@ -1,0 +1,40 @@
+[
+  {
+    "machine": "machine-1-1",
+    "gt_events": 8,
+    "status_counts": {
+      "high_crossing": 8
+    },
+    "strict_high_matches": 1,
+    "high_parent_covered": 8,
+    "fully_displayed": 8,
+    "all_channels_retained": 5,
+    "channel_recall_macro": 0.9092021889400921
+  },
+  {
+    "machine": "machine-1-2",
+    "gt_events": 10,
+    "status_counts": {
+      "high_crossing": 9,
+      "review_only_crossing": 1
+    },
+    "strict_high_matches": 9,
+    "high_parent_covered": 9,
+    "fully_displayed": 10,
+    "all_channels_retained": 4,
+    "channel_recall_macro": 0.806547619047619
+  },
+  {
+    "machine": "machine-1-6",
+    "gt_events": 30,
+    "status_counts": {
+      "below_both_thresholds": 1,
+      "high_crossing": 29
+    },
+    "strict_high_matches": 4,
+    "high_parent_covered": 29,
+    "fully_displayed": 30,
+    "all_channels_retained": 1,
+    "channel_recall_macro": 0.2100513203686578
+  }
+]

@@ -1,0 +1,41 @@
+{
+  "case": 1,
+  "target_relative": [
+    104,
+    121
+  ],
+  "source_image": "C:\\Users\\김나영\\Desktop\\TSAD\\VLM4TS\\experiments\\analysis\\results\\stability_yellow_case1_baseline_20261105\\images\\case_01.png",
+  "image_sha256": "e1e4e6e41297bbd78c0aaef74dae799dffc673f62e38da3028c55f93508e6f87",
+  "scope": "one retrospectively selected page; no GT in prompt",
+  "response": {
+    "event_validity": "anomalous",
+    "anomalous_channels": [
+      6,
+      8,
+      10,
+      14
+    ],
+    "channel_ranking": [
+      6,
+      10,
+      8,
+      14
+    ],
+    "confidence": "medium",
+    "evidence_interval": [
+      104,
+      121
+    ]
+  },
+  "guard": {
+    "status": "uncertain",
+    "reason": "copied_target_bounds"
+  },
+  "raw": "```json\n{\n  \"event_validity\": \"anomalous\",\n  \"anomalous_channels\": [6, 8, 10, 14],\n  \"channel_ranking\": [6, 10, 8, 14],\n  \"confidence\": \"medium\",\n  \"evidence_interval\": [104, 121]\n}\n```",
+  "error": null,
+  "guard_before_copy_check": {
+    "status": "anomalous_provisional",
+    "reason": "reported_evidence_inside_candidate_only"
+  },
+  "guard_note": "Recomputed after exact target-bound copying was observed; this rule is exploratory and not independent validation."
+}

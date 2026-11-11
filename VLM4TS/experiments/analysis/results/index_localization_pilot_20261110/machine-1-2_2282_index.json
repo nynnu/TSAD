@@ -1,0 +1,116 @@
+{
+  "case": {
+    "machine": "machine-1-2",
+    "core_id": "machine-1-2.e00004.c0000",
+    "category": "gt_nonoverlap",
+    "core": [
+      2282,
+      2296
+    ],
+    "channels": [
+      12,
+      9,
+      11,
+      8
+    ]
+  },
+  "variant": "index",
+  "fingerprint": "214686d64d95f3152054a0a306bcdbe1838ef4ac3f36deed065d023ad0cd489b",
+  "prompt": "Review one candidate time core [2282,2296) in entity machine-1-2.\nRoute reason: dino_proposal. dino_proposal uses the original DINO spike/height and seasonal evidence. dino_partial_tail_review covers a final partial window without DINO scores (seasonal scores may exist). unscored_tail_review covers samples beyond the saved Stage1 output. Both tail routes are forced reviews, NOT DINO anomaly claims. Percentile scores are NOT anomaly probabilities. The 224-tick display is [2177,2401); its axes show tile-relative ticks. The candidate is [105,119) on these axes, end excluded. No candidate boundary is drawn; orange marks each local zoom, not the candidate. Context outside the candidate is context only. Other proposals may appear anywhere in the display; a change outside the candidate is not a reason to accept this candidate. If location or association is unclear, respond uncertain.\nThe heatmap shows all 38 channels. Detailed channels on this page: [12, 9, 11, 8]. Round 0, page 1/1. Judge event validity IN THE CORE separately from which displayed channels react. A channel can visibly spike in a normal repeating state. Selecting a channel alone does not establish an anomalous event. Do not infer root causes or causal direction.\nBlack is observed, dashed blue the retrieved normal-train median. A blue band means pre-focus context is supported; a grey/LOW SUPPORT band means poor or unstable support. Neither is a calibrated normality boundary. A flat median may erase ordinary spikes. Inspect full traces, local changes and pre/post behavior. Display-local-change focus is only a viewer aid; Stage1 peak focus preserves the source detector's location.\nReference quality: [{\"channel\":12,\"status\":\"context_supported\",\"context_support_p\":1.0,\"validation_outside_fraction\":0.06302083333333333,\"validation_focus_rmse_q90\":1.2991412779246816,\"support_audit_warning\":false,\"support_audit_failure_fraction\":0.03125},{\"channel\":9,\"status\":\"context_supported\",\"context_support_p\":0.8769230769230769,\"validation_outside_fraction\":0.21276041666666667,\"validation_focus_rmse_q90\":1.0712972060963253,\"support_audit_warning\":false,\"support_audit_failure_fraction\":0.0625},{\"channel\":11,\"status\":\"context_supported\",\"context_support_p\":0.5538461538461539,\"validation_outside_fraction\":0.4057291666666667,\"validation_focus_rmse_q90\":0.3340006242019145,\"support_audit_warning\":false,\"support_audit_failure_fraction\":0.03125},{\"channel\":8,\"status\":\"context_supported\",\"context_support_p\":0.5076923076923077,\"validation_outside_fraction\":0.15598958333333335,\"validation_focus_rmse_q90\":2.0331880664523183,\"support_audit_warning\":false,\"support_audit_failure_fraction\":0.0625}]. Supported context does not establish focus normality. A difference from normal reference, low support p or rare coupling alone cannot establish anomaly. Use uncertain when the evidence does not resolve normal state change versus anomaly. Confidence is descriptive and will not be used as a probability.\nIf another heatmap channel needs a detailed view, request its zero-based ID in additional_channels_to_review. At most one additional review round is available. Do not classify unseen channels as normal; normal_repeat applies only to the displayed candidate hypothesis, not proof that every channel is normal.\nReturn ONLY JSON, no prose:\n{\"event_validity\":\"anomalous\"|\"normal_repeat\"|\"uncertain\",\"anomalous_channels\":[subset of [12, 9, 11, 8]],\"channel_ranking\":[ordered subset of [12, 9, 11, 8]],\"confidence\":\"low\"|\"medium\"|\"high\",\"additional_channels_to_review\":[IDs needing detailed review]}\nIndex alignment guide: {\"coordinate\":\"tile-relative ticks, zero based; interval ends excluded\",\"core\":[105,119],\"channels\":[{\"channel\":12,\"zoom_ticks\":[82,142],\"displayed_peak_tick\":112,\"largest_core_change_tick\":116},{\"channel\":9,\"zoom_ticks\":[82,142],\"displayed_peak_tick\":112,\"largest_core_change_tick\":118},{\"channel\":11,\"zoom_ticks\":[82,142],\"displayed_peak_tick\":112,\"largest_core_change_tick\":115},{\"channel\":8,\"zoom_ticks\":[82,142],\"displayed_peak_tick\":112,\"largest_core_change_tick\":118}]}\nThese indices locate the existing plots only. Peak locations do not establish anomaly. Use the full trace and zoom to judge direction, persistence and recovery within the core. Do not assign an outside-core spike to this core.\nAlso return \"evidence_intervals\":[{\"channel\":integer,\"start\":integer,\"end\":integer}]. Give the visually supported time span of each selected anomalous channel, using the 224-tick tile-relative axis, zero based, end excluded. Use 0 <= start < end <= 224. Describe visible evidence rather than copying the full candidate or zoom boundaries. Each selected channel needs at least one evidence interval. Empty selection requires an empty list. These are evidence spans, not causal claims. Keep the other JSON fields.",
+  "raw": "```json\n{\n  \"event_validity\": \"anomalous\",\n  \"anomalous_channels\": [12, 9, 8],\n  \"channel_ranking\": [12, 9, 8],\n  \"confidence\": \"medium\",\n  \"additional_channels_to_review\": [],\n  \"evidence_intervals\": [\n    {\"channel\": 12, \"start\": 105, \"end\": 119},\n    {\"channel\": 9, \"start\": 105, \"end\": 119},\n    {\"channel\": 8, \"start\": 105, \"end\": 119}\n  ]\n}\n```",
+  "parsed": {
+    "event_validity": "anomalous",
+    "anomalous_channels": [
+      12,
+      9,
+      8
+    ],
+    "channel_ranking": [
+      12,
+      9,
+      8
+    ],
+    "confidence": "medium",
+    "additional_channels_to_review": [],
+    "evidence_intervals": [
+      {
+        "channel": 12,
+        "start": 105,
+        "end": 119
+      },
+      {
+        "channel": 9,
+        "start": 105,
+        "end": 119
+      },
+      {
+        "channel": 8,
+        "start": 105,
+        "end": 119
+      }
+    ]
+  },
+  "evidence": [
+    {
+      "channel": 12,
+      "start": 105,
+      "end": 119
+    },
+    {
+      "channel": 9,
+      "start": 105,
+      "end": 119
+    },
+    {
+      "channel": 8,
+      "start": 105,
+      "end": 119
+    }
+  ],
+  "error": null,
+  "index_evidence": {
+    "coordinate": "tile-relative ticks, zero based; interval ends excluded",
+    "core": [
+      105,
+      119
+    ],
+    "channels": [
+      {
+        "channel": 12,
+        "zoom_ticks": [
+          82,
+          142
+        ],
+        "displayed_peak_tick": 112,
+        "largest_core_change_tick": 116
+      },
+      {
+        "channel": 9,
+        "zoom_ticks": [
+          82,
+          142
+        ],
+        "displayed_peak_tick": 112,
+        "largest_core_change_tick": 118
+      },
+      {
+        "channel": 11,
+        "zoom_ticks": [
+          82,
+          142
+        ],
+        "displayed_peak_tick": 112,
+        "largest_core_change_tick": 115
+      },
+      {
+        "channel": 8,
+        "zoom_ticks": [
+          82,
+          142
+        ],
+        "displayed_peak_tick": 112,
+        "largest_core_change_tick": 118
+      }
+    ]
+  }
+}
