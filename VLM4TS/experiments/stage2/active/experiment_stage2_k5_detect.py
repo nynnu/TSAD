@@ -97,13 +97,22 @@ def _ov(a, b):
 
 
 def eval_f1(gt_ivs, pred_ivs):
+    """BUGFIX (2026-09-17 감사에서 발견): precision과 recall이 서로 다른 기준의
+    TP를 섞어 썼었다 -- 원래 코드는 recall = TP_pred/(TP_pred+FN)로, "예측 개수
+    기준 적중 수"를 GT 개수 기준 분모에 나눠서 recall을 부풀렸다(하나의 넓은
+    GT를 후보 여러 개가 쪼개서 맞히면 recall이 실제보다 커짐 -- machine-1-1
+    실측: TP_pred=5인데 실제 고유 GT 적중은 3개뿐이라 recall 0.500(틀림) vs
+    0.375(올바름), F1 0.588(틀림) vs 0.492(올바름)).
+    precision=예측 기준(TP_pred/(TP_pred+FP)), recall=GT 기준(TP_gt/len(gt_ivs))
+    으로 분리."""
     if not gt_ivs:
         return 0.0
-    TP = sum(1 for d in pred_ivs if any(_ov(d, a) for a in gt_ivs))
+    TP_pred = sum(1 for d in pred_ivs if any(_ov(d, a) for a in gt_ivs))
     FP = sum(1 for d in pred_ivs if not any(_ov(d, a) for a in gt_ivs))
-    FN = sum(1 for a in gt_ivs if not any(_ov(a, d) for d in pred_ivs))
-    p = TP / (TP + FP) if (TP + FP) else 0
-    r = TP / (TP + FN) if (TP + FN) else 0
+    TP_gt = sum(1 for a in gt_ivs if any(_ov(a, d) for d in pred_ivs))
+    FN = len(gt_ivs) - TP_gt
+    p = TP_pred / (TP_pred + FP) if (TP_pred + FP) else 0
+    r = TP_gt / (TP_gt + FN) if (TP_gt + FN) else 0
     return 2 * p * r / (p + r) if (p + r) else 0
 
 
