@@ -9,14 +9,21 @@ import numpy as np
 
 HERE=Path(__file__).resolve().parent;EXPERIMENTS=HERE.parent
 sys.path.insert(0,str(EXPERIMENTS/'stage2'));sys.path.insert(0,str(EXPERIMENTS/'stage1_final'))
-from contracts import SCHEMA,digest,build_plan,make_pages,display_candidate,parse_response,final_prompt,aggregate_plan,summarize_core
+from contracts import SCHEMA,digest,build_plan,group_episodes,make_pages,display_candidate,parse_response,final_prompt,aggregate_plan,summarize_core
 from run_stage2_review_hfz_v2 import render,estimate_reference_period,call
 from reference_quality_v3 import ReferenceQuality
+from stage1 import period as validated_period
 
 
 # Measured on 51 saved gpt-4o cases (analysis/scope_policy_on_saved_responses.py): hold forced 41% of cores
 # (46% of GT cores) to uncertain whatever the VLM said. contracts.summarize_core keeps 'hold' as its own default.
 DEFAULT_SCOPE_POLICY='report'
+
+
+def shared_period(values):
+    """One period estimator for both stages: Stage1's seasonal term and Stage2's reference context must agree. Validated on"""
+    """held-out train (beats a random period 78% of the time on untouched data; the old Stage2 ACF rule 55%, Stage1 FFT rule 35%)."""
+    return validated_period(values),0.0
 
 
 def file_sha(path):return hashlib.sha256(path.read_bytes()).hexdigest()
@@ -68,9 +75,9 @@ def prepare(args):
     provenance=dict(schema_version=SCHEMA,inputs=inputs,code={str(p.relative_to(EXPERIMENTS)):code_sha(p) for p in dependencies},
         detector='original DINO spike+height+seasonal; legacy percentile proposals',tile=224,core=164,page=8,rescue_rounds=1,
         reference='fit-bank with disjoint validation/audit; quality is not an anomaly score',
-        display='v2: grey train min-max band, every heatmap row numbered' if getattr(args,'display_v2',False) else 'v1',vlm_model='gpt-4o',vlm_max_tokens=700,
+        period='validated held-out period test shared by Stage1 and Stage2',display='v2: grey train min-max band, every heatmap row numbered' if getattr(args,'display_v2',False) else 'v1',vlm_model='gpt-4o',vlm_max_tokens=700,
         cached_stage1_provenance='Input JSON is authoritative; historical generating model hashes may be unavailable',
-        interventions=dict(scope_policy=getattr(args,'scope_policy',DEFAULT_SCOPE_POLICY),reject_scope=getattr(args,'reject_scope','all_channels'),expand_uncertain_channels=getattr(args,'expand_uncertain_channels',False),coupling_context=coupling_enabled,coupling_window=getattr(args,'coupling_window',224) if coupling_enabled else None,
+        interventions=dict(episodes=getattr(args,'episodes',False),scope_policy=getattr(args,'scope_policy',DEFAULT_SCOPE_POLICY),reject_scope=getattr(args,'reject_scope','all_channels'),expand_uncertain_channels=getattr(args,'expand_uncertain_channels',False),coupling_context=coupling_enabled,coupling_window=getattr(args,'coupling_window',224) if coupling_enabled else None,
                            coupling_authority='diagnostic_context_only; no candidate or aggregation changes'))
     fingerprint=digest(provenance);manifest_path=args.out/'manifest.json'
     if manifest_path.exists():
@@ -82,7 +89,7 @@ def prepare(args):
         doc=rebuilt[entity] if args.rebuild_stage1 else json.loads(paths[entity].read_text(encoding='utf-8'))
         if doc.get('machine')!=entity:raise ValueError('Stage1 entity ID must match the selected data file')
         test=np.loadtxt(args.data/'test'/(entity+'.txt'),delimiter=',')
-        plan=build_plan(doc,test);plans.append(plan);save(args.out/'stage1_snapshots'/(entity+'.json'),doc)
+        plan=build_plan(group_episodes(doc) if getattr(args,'episodes',False) else doc,test);plans.append(plan);save(args.out/'stage1_snapshots'/(entity+'.json'),doc)
     manifest=dict(fingerprint=fingerprint,provenance=provenance,plans=plans)
     save(manifest_path,manifest);return manifest
 
@@ -114,7 +121,7 @@ def run(args):
     def context(entity):
         if entity not in contexts:
             train=np.loadtxt(args.data/'train'/(entity+'.txt'),delimiter=',');test=np.loadtxt(args.data/'test'/(entity+'.txt'),delimiter=',')
-            contexts[entity]=(train,test,ReferenceQuality(train,estimate_reference_period))
+            contexts[entity]=(train,test,ReferenceQuality(train,shared_period))
         return contexts[entity]
     def process(page):
         nonlocal rendered
@@ -195,6 +202,7 @@ if __name__=='__main__':
     p.add_argument('--coupling-context',action='store_true',help='Append train-only relation facts to Stage2 prompt; never change proposals or event rules')
     p.add_argument('--scope-policy',choices=('hold','report'),default=DEFAULT_SCOPE_POLICY,help='report (default): keep the ambiguity flag and neighbours in the output but let the VLM verdict stand; hold: force candidates with another proposal visible to uncertain. On 51 saved cases hold blocked 3 of 6 anomalous GT cores that report kept (non-GT anomalous 5 -> 7); small sample')
     p.add_argument('--reject-scope',choices=('all_channels','screened'),default='all_channels',help="all_channels (default): a core may be rejected only after all entity channels were reviewed with supported references (almost unreachable). screened: only the Stage1 candidate channels. On 27 saved cases screened rejected 2 GT and 1 non-GT cores in the history arm: the VLM's normal answers do not separate them, so the default stays strict")
+    p.add_argument('--episodes',action=argparse.BooleanOptionalAction,default=True,help='Default on: judge episodes (neighbouring Stage1 intervals whose union fits one 164-tick core) instead of single 14-tick fragments. --no-episodes restores fragments. 28 machines: units 1044 -> 802, other-proposal-in-view 41% -> 7.5%; 24-episode pilot: anomalous GT 6/12 vs non-GT 2/12')
     p.add_argument('--display-v2',action='store_true',help='Experimental screen: grey train min-max band + every heatmap row numbered. On 51 saved cases it raised non-GT anomalous verdicts 7 -> 13 (GT 6 -> 8), so it is off by default')
     p.add_argument('--expand-uncertain-channels',action='store_true',help='Experimental: review unscreened channels when the initial core remains uncertain; may add many paid VLM calls')
     p.add_argument('--coupling-window',type=int,choices=(60,224),default=224,help='One predeclared diagnostic window per comparison arm')

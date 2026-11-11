@@ -4,7 +4,7 @@ from pathlib import Path
 from types import SimpleNamespace
 from unittest.mock import patch
 import numpy as np
-from contracts import build_plan,parse_response,summarize_core,make_pages,display_candidate,aggregate_plan,final_prompt
+from contracts import stage1_confidence,group_episodes,build_plan,parse_response,summarize_core,make_pages,display_candidate,aggregate_plan,final_prompt
 
 
 def fixture(length=1120,channels=18,end=850):
@@ -186,6 +186,56 @@ class ContractTests(unittest.TestCase):
         rescue=make_pages(core,[display_candidate(test,17,100,264,core['start'])],1)
         r,a=reviewed(rescue);records.update(r);artifacts.update(a)
         self.assertEqual(summarize_core(core,pages+rescue,records,artifacts)['status'],'uncertain')
+
+
+class ConfidenceTests(unittest.TestCase):
+    def test_confidence_follows_strength_and_agreement_inside_the_machine(self):
+        ch=lambda n,spike:[dict(channel=c,source='spike',spike_score=spike,deseason_score=0.,zoom_center=0) for c in range(n)]
+        iv=[dict(channels=ch(2,3.)),dict(channels=ch(9,3.)),dict(channels=ch(2,8.)),dict(channels=ch(9,8.))]
+        c=stage1_confidence(iv)
+        self.assertGreater(c[3],max(c[0],c[1],c[2]));self.assertLess(c[0],min(c[1],c[2],c[3]))   # weakest and strongest are unambiguous
+        self.assertTrue(all(0<x<=1 for x in c));self.assertEqual(stage1_confidence([]),[])
+
+    def test_priority_puts_vlm_status_first_and_stage1_confidence_within_a_status(self):
+        doc,test=fixture(channels=3,end=150)
+        for row in doc['intervals'][0]['channels']:row['zoom_center']=120
+        plan=build_plan(doc,test);core=plan['events'][0]['cores'][0]
+        pages=[p for p in plan['pages'] if p['core_id']==core['core_id']]
+        self.assertGreater(core['stage1_confidence'],0)
+        records,artifacts=reviewed(pages)
+        weak=summarize_core(dict(core,stage1_confidence=.1),pages,records,artifacts,reject_scope='screened')
+        strong=summarize_core(dict(core,stage1_confidence=.9),pages,records,artifacts,reject_scope='screened')
+        self.assertEqual(weak['status'],strong['status'])
+        self.assertGreater(strong['priority'],weak['priority'])
+        pending=summarize_core(dict(core,stage1_confidence=.1),pages,{},artifacts)
+        self.assertEqual(pending['status'],'uncertain');self.assertGreater(pending['priority'],strong['priority'])   # uncertain outranks rejected whatever the confidence
+
+
+class EpisodeTests(unittest.TestCase):
+    def doc(self):
+        ch=lambda c,spike,center:dict(channel=c,source='spike',spike_score=spike,deseason_score=0.,zoom_center=center)
+        return dict(machine='machine-test',length=1120,n_channels=6,config=dict(interval='(spike+height) OR deseason'),intervals=[
+            dict(start=100,end=114,channels=[ch(0,5.,105),ch(1,9.,106)]),
+            dict(start=140,end=154,channels=[ch(0,8.,145),ch(2,3.,146)]),
+            dict(start=400,end=414,channels=[ch(3,4.,405)])])
+
+    def test_neighbours_merge_only_while_the_union_fits_one_core(self):
+        out=group_episodes(self.doc())['intervals']
+        self.assertEqual([(e['start'],e['end']) for e in out],[(100,154),(400,414)])
+        self.assertEqual(out[0]['members'],[[100,114],[140,154]])
+        self.assertEqual(group_episodes(self.doc(),span=30)['intervals'][0]['end'],114)   # a smaller span merges nothing
+
+    def test_channel_keeps_its_strongest_member_and_union_is_ordered_by_evidence(self):
+        e=group_episodes(self.doc())['intervals'][0]
+        self.assertEqual([c['channel'] for c in e['channels']],[1,0,2])
+        self.assertEqual({c['channel']:c['zoom_center'] for c in e['channels']},{0:145,1:106,2:146})   # channel 0 comes from the 2nd member
+        self.assertTrue(all(e['start']<=c['zoom_center']<e['end'] for c in e['channels']))
+
+    def test_episode_doc_builds_a_plan_with_one_core_and_leaves_the_input_alone(self):
+        doc=self.doc();before=copy.deepcopy(doc);test=np.zeros((1120,6))
+        plan=build_plan(group_episodes(doc),test)
+        self.assertEqual(len(plan['events']),2);self.assertEqual(len(plan['events'][0]['cores']),1)
+        self.assertEqual(doc,before)
 
 
 class RunnerTests(unittest.TestCase):

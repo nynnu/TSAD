@@ -117,14 +117,38 @@ def calib(raw):
 
 
 # ── 탈주기 ─────────────────────────────────────────────────────────
-def period(x, lo=5, hi=1000):
-    xc = x - x.mean()
+def _season_skill(a, seg, p, offset):
+    """1 - SSE(seasonal profile of `a` with period p) / SSE(constant mean of `a`) on `seg`, which starts `offset` ticks after a began."""
+    prof = np.array([a[k::p].mean() for k in range(p)])
+    return 1 - ((seg - prof[(offset + np.arange(len(seg))) % p]) ** 2).sum() / max(((seg - a.mean()) ** 2).sum(), 1e-12)
+
+
+def period(x, lo=5, hi=1000, draws=100, level=0.99):
+    """Dominant period of x that also predicts held-out data, else None.
+
+    Candidate = FFT peak of the first two thirds (>= 3x the band median), refined to the integer period within 4% that
+    best fits that same part (the FFT grid is too coarse for long periods: 691 instead of 700 drifts 240 ticks over 27
+    cycles). The old rule stopped at the FFT peak, which exists in white noise once the series has more than ~500
+    frequency bins (100% of white noise at 28,000 ticks); on SMD train its periods predicted the later half no better
+    than random periods (median skill -0.011 vs null -0.009; 35% beat a random-period 95% bar). Here the candidate must
+    also beat a constant and the `level` quantile of `draws` random periods in [lo, hi] on the last third, with the
+    profile built from the first two thirds. Pure noise passes in 3-10% of series, a real period in 12 of 12 trials."""
+    x = np.asarray(x, float)
+    cut = 2 * len(x) // 3
+    a, b = x[:cut], x[cut:]
+    xc = a - a.mean()
     if xc.std() < 1e-9:
         return None
     f = np.abs(np.fft.rfft(xc)); fr = np.fft.rfftfreq(len(xc)); m = (fr > 1 / hi) & (fr < 1 / lo)
     if not m.any() or f[m].max() < 3 * np.median(f[m]):
-        return None                            # 뚜렷한 주기 없음
-    return int(np.clip(round(1 / fr[m][np.argmax(f[m])]), lo, hi))
+        return None                            # no peak at all
+    p = int(np.clip(round(1 / fr[m][np.argmax(f[m])]), lo, hi))
+    p = max((q for q in range(int(p * .96), int(p * 1.04) + 1) if lo <= q <= hi), key=lambda q: _season_skill(a, a, q, 0))
+    if len(a) < 2 * p or len(b) < p:
+        return None                            # too short to validate
+    rng = np.random.default_rng(0)
+    bar = max(0.0, np.quantile([_season_skill(a, b, int(q), cut) for q in rng.integers(lo, hi + 1, draws)], level))
+    return p if _season_skill(a, b, p, cut) > bar else None
 
 
 def deseason(tr, te):
