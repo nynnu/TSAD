@@ -1,0 +1,51 @@
+{
+  "channel_rows": {
+    "rows": 12676,
+    "mode_stage1_peak": 12524,
+    "source_DINO spike+height": 9170,
+    "source_seasonal residual": 3506,
+    "mode_display_change_only": 152
+  },
+  "pages_per_core": {
+    "3": 179,
+    "1": 380,
+    "2": 418,
+    "4": 62,
+    "5": 5
+  },
+  "share_cores_with_more_than_one_page": 0.6360153256704981,
+  "interval_length_ticks": {
+    "median": 14.0,
+    "p90": 36.40000000000009,
+    "share_exactly_14": 0.6592877767083735
+  },
+  "gap_between_consecutive_intervals": {
+    "median": 336.0,
+    "share_under_224": 0.41740850642927796
+  },
+  "cores_with_other_proposal_in_view": {
+    "no": 615,
+    "yes": 429
+  },
+  "gt_channels_in_exact_events": {
+    "count": 2021,
+    "on_page_2_or_later": 0.32953983176645224,
+    "median_position": 4.0
+  },
+  "stage1_channel_score_auroc_for_gt_channels": 0.7952356708906335,
+  "gt_channel_source": {
+    "both": 1049,
+    "spike": 757,
+    "deseason": 215
+  },
+  "non_gt_channel_source": {
+    "deseason": 504,
+    "spike": 924,
+    "both": 403
+  },
+  "gt_core_parent_event_length": {
+    "median": 56.0,
+    "share_over_100": 0.427536231884058,
+    "n": 414
+  }
+}

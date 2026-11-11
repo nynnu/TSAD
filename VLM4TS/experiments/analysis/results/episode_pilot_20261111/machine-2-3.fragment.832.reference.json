@@ -1,0 +1,82 @@
+[
+  {
+    "channel": 12,
+    "focus_start": 802,
+    "focus_end": 862,
+    "context": 48,
+    "n_refs": 8,
+    "context_rmse": 0.0,
+    "reference_starts": [
+      48,
+      118,
+      188,
+      258,
+      328,
+      398,
+      468,
+      538
+    ],
+    "context_level_rmse": 0.0,
+    "context_change_rmse": 0.0,
+    "context_distance_definition": "sqrt(level_mse + 0.5 * first_difference_mse)",
+    "period": null,
+    "period_strength": 0.0,
+    "limited": false,
+    "reference_status": "context_supported",
+    "context_support_p": 1.0,
+    "validation_queries": 64,
+    "validation_focus_rmse_q90": 0.0,
+    "validation_outside_fraction": 0.00078125,
+    "bank_interval": [
+      0,
+      11844
+    ],
+    "validation_interval": [
+      11844,
+      17766
+    ],
+    "support_audit_failure_fraction": 0.0,
+    "support_audit_warning": false,
+    "reliability_scope": "pre-focus context support only; does not establish focus normality"
+  },
+  {
+    "channel": 11,
+    "focus_start": 804,
+    "focus_end": 864,
+    "context": 48,
+    "n_refs": 8,
+    "context_rmse": 0.22757587776793037,
+    "reference_starts": [
+      2148,
+      10520,
+      3226,
+      5788,
+      10142,
+      888,
+      972,
+      2736
+    ],
+    "context_level_rmse": 0.16072751268321592,
+    "context_change_rmse": 0.22784840051451163,
+    "context_distance_definition": "sqrt(level_mse + 0.5 * first_difference_mse)",
+    "period": null,
+    "period_strength": 0.0,
+    "limited": false,
+    "reference_status": "context_supported",
+    "context_support_p": 0.38461538461538464,
+    "validation_queries": 64,
+    "validation_focus_rmse_q90": 0.23454669248306192,
+    "validation_outside_fraction": 0.21197916666666666,
+    "bank_interval": [
+      0,
+      11844
+    ],
+    "validation_interval": [
+      11844,
+      17766
+    ],
+    "support_audit_failure_fraction": 0.03125,
+    "support_audit_warning": false,
+    "reliability_scope": "pre-focus context support only; does not establish focus normality"
+  }
+]

@@ -1,0 +1,30 @@
+{
+  "fingerprint": "6f46560688453cefa5f80c41ef676324b1100d7f8132d624a6df9ef8a8f65cef",
+  "prompt": "Review one candidate time core [21196,21330) in entity machine-3-7.\nRoute reason: dino_proposal. dino_proposal uses the original DINO spike/height and seasonal evidence. dino_partial_tail_review covers a final partial window without DINO scores (seasonal scores may exist). unscored_tail_review covers samples beyond the saved Stage1 output. Both tail routes are forced reviews, NOT DINO anomaly claims. Percentile scores are NOT anomaly probabilities. The 224-tick display is [21151,21375); its axes show tile-relative ticks. The candidate is [45,179) on these axes, end excluded. No candidate boundary is drawn; orange marks each local zoom, not the candidate. Context outside the candidate is context only. Other proposals may appear anywhere in the display; a change outside the candidate is not a reason to accept this candidate. If location or association is unclear, respond uncertain.\nThe heatmap shows all 38 channels. Detailed channels on this page: [9, 16, 17, 12, 8, 11, 5, 6]. Round 0, page 1/5. Judge event validity IN THE CORE separately from which displayed channels react. A channel can visibly spike in a normal repeating state. Selecting a channel alone does not establish an anomalous event. Do not infer root causes or causal direction.\nBlack is observed, dashed blue the retrieved normal-train median. A blue band means pre-focus context is supported; a grey/LOW SUPPORT band means poor or unstable support. Neither is a calibrated normality boundary. A flat median may erase ordinary spikes. Inspect full traces, local changes and pre/post behavior. Display-local-change focus is only a viewer aid; Stage1 peak focus preserves the source detector's location.\nReference quality: [{\"channel\":9,\"status\":\"context_supported\",\"context_support_p\":0.1076923076923077,\"validation_outside_fraction\":0.03984375,\"validation_focus_rmse_q90\":1.5961347437597169,\"support_audit_warning\":false,\"support_audit_failure_fraction\":0.0},{\"channel\":16,\"status\":\"out_of_support\",\"context_support_p\":0.03076923076923077,\"validation_outside_fraction\":0.0010416666666666667,\"validation_focus_rmse_q90\":0.0,\"support_audit_warning\":false,\"support_audit_failure_fraction\":0.0},{\"channel\":17,\"status\":\"context_supported\",\"context_support_p\":1.0,\"validation_outside_fraction\":0.0033854166666666668,\"validation_focus_rmse_q90\":6.985570962109473e-05,\"support_audit_warning\":false,\"support_audit_failure_fraction\":0.0625},{\"channel\":12,\"status\":\"context_supported\",\"context_support_p\":1.0,\"validation_outside_fraction\":0.005989583333333333,\"validation_focus_rmse_q90\":0.0,\"support_audit_warning\":false,\"support_audit_failure_fraction\":0.0},{\"channel\":8,\"status\":\"out_of_support\",\"context_support_p\":0.046153846153846156,\"validation_outside_fraction\":0.12291666666666667,\"validation_focus_rmse_q90\":0.17119834243925056,\"support_audit_warning\":false,\"support_audit_failure_fraction\":0.0},{\"channel\":11,\"status\":\"context_supported\",\"context_support_p\":0.07692307692307693,\"validation_outside_fraction\":0.3895833333333333,\"validation_focus_rmse_q90\":0.19876932823947616,\"support_audit_warning\":false,\"support_audit_failure_fraction\":0.0},{\"channel\":5,\"status\":\"context_supported\",\"context_support_p\":0.3230769230769231,\"validation_outside_fraction\":0.5658854166666667,\"validation_focus_rmse_q90\":0.8517913851155637,\"support_audit_warning\":false,\"support_audit_failure_fraction\":0.0},{\"channel\":6,\"status\":\"context_supported\",\"context_support_p\":0.36923076923076925,\"validation_outside_fraction\":0.57421875,\"validation_focus_rmse_q90\":1.0972707201779035,\"support_audit_warning\":false,\"support_audit_failure_fraction\":0.0}]. Supported context does not establish focus normality. A difference from normal reference, low support p or rare coupling alone cannot establish anomaly. Use uncertain when the evidence does not resolve normal state change versus anomaly. Confidence is descriptive and will not be used as a probability.\nIf another heatmap channel needs a detailed view, request its zero-based ID in additional_channels_to_review. At most one additional review round is available. Do not classify unseen channels as normal; normal_repeat applies only to the displayed candidate hypothesis, not proof that every channel is normal.\nReturn ONLY JSON, no prose:\n{\"event_validity\":\"anomalous\"|\"normal_repeat\"|\"uncertain\",\"anomalous_channels\":[subset of [9, 16, 17, 12, 8, 11, 5, 6]],\"channel_ranking\":[ordered subset of [9, 16, 17, 12, 8, 11, 5, 6]],\"confidence\":\"low\"|\"medium\"|\"high\",\"additional_channels_to_review\":[IDs needing detailed review]}",
+  "raw": "```json\n{\n  \"event_validity\": \"anomalous\",\n  \"anomalous_channels\": [9, 16, 17, 12, 8, 11, 5, 6],\n  \"channel_ranking\": [9, 16, 17, 12, 8, 11, 5, 6],\n  \"confidence\": \"medium\",\n  \"additional_channels_to_review\": []\n}\n```",
+  "parsed": {
+    "event_validity": "anomalous",
+    "anomalous_channels": [
+      9,
+      16,
+      17,
+      12,
+      8,
+      11,
+      5,
+      6
+    ],
+    "channel_ranking": [
+      9,
+      16,
+      17,
+      12,
+      8,
+      11,
+      5,
+      6
+    ],
+    "confidence": "medium",
+    "additional_channels_to_review": []
+  }
+}

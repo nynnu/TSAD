@@ -1,0 +1,6054 @@
+{
+  "summary": {
+    "stage2_acf": {
+      "supported": 0.49842271293375395,
+      "supported_gt": 0.47619047619047616,
+      "supported_non_gt": 0.5234899328859061,
+      "supported_seasonal_source": 0.35555555555555557,
+      "channels_with_period": 0.2082018927444795,
+      "statuses": {
+        "context_supported": 158,
+        "out_of_support": 127,
+        "validation_unstable": 32
+      }
+    },
+    "validated": {
+      "supported": 0.4921135646687697,
+      "supported_gt": 0.4642857142857143,
+      "supported_non_gt": 0.5234899328859061,
+      "supported_seasonal_source": 0.3333333333333333,
+      "channels_with_period": 0.29652996845425866,
+      "statuses": {
+        "context_supported": 156,
+        "validation_unstable": 39,
+        "out_of_support": 122
+      }
+    },
+    "rows": 317
+  },
+  "rows": [
+    {
+      "machine": "machine-3-2",
+      "core": "machine-3-2.e00029.c0000",
+      "gt": true,
+      "channel": 13,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.5076923076923077,
+        "period": 60,
+        "context": 120
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.6615384615384615,
+        "period": 20,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-3-2",
+      "core": "machine-3-2.e00029.c0000",
+      "gt": true,
+      "channel": 8,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.676923076923077,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.6615384615384615,
+        "period": 20,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-3-2",
+      "core": "machine-3-2.e00029.c0000",
+      "gt": true,
+      "channel": 27,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.8,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "validation_unstable",
+        "p": 0.6307692307692307,
+        "period": 720,
+        "context": 512
+      }
+    },
+    {
+      "machine": "machine-3-2",
+      "core": "machine-3-2.e00029.c0000",
+      "gt": true,
+      "channel": 12,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 1.0,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 1.0,
+        "period": 20,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-3-2",
+      "core": "machine-3-2.e00029.c0000",
+      "gt": true,
+      "channel": 34,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.09230769230769231,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.09230769230769231,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-3-2",
+      "core": "machine-3-2.e00029.c0000",
+      "gt": true,
+      "channel": 35,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.09230769230769231,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.09230769230769231,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-3-2",
+      "core": "machine-3-2.e00020.c0000",
+      "gt": true,
+      "channel": 34,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.09230769230769231,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.09230769230769231,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-3-2",
+      "core": "machine-3-2.e00020.c0000",
+      "gt": true,
+      "channel": 13,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.09230769230769231,
+        "period": 60,
+        "context": 120
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.7384615384615385,
+        "period": 20,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-3-2",
+      "core": "machine-3-2.e00020.c0000",
+      "gt": true,
+      "channel": 35,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.09230769230769231,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.09230769230769231,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-3-2",
+      "core": "machine-3-2.e00020.c0000",
+      "gt": true,
+      "channel": 19,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": 60,
+        "context": 120
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.2,
+        "period": 720,
+        "context": 512
+      }
+    },
+    {
+      "machine": "machine-3-2",
+      "core": "machine-3-2.e00058.c0000",
+      "gt": false,
+      "channel": 2,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": 104,
+        "context": 208
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-3-2",
+      "core": "machine-3-2.e00058.c0000",
+      "gt": false,
+      "channel": 1,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": 102,
+        "context": 204
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-3-2",
+      "core": "machine-3-2.e00058.c0000",
+      "gt": false,
+      "channel": 3,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": 102,
+        "context": 204
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-3-2",
+      "core": "machine-3-2.e00058.c0000",
+      "gt": false,
+      "channel": 0,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": 60,
+        "context": 120
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": 720,
+        "context": 512
+      }
+    },
+    {
+      "machine": "machine-3-2",
+      "core": "machine-3-2.e00058.c0000",
+      "gt": false,
+      "channel": 34,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.09230769230769231,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.09230769230769231,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-3-2",
+      "core": "machine-3-2.e00058.c0000",
+      "gt": false,
+      "channel": 35,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.09230769230769231,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.09230769230769231,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-3-2",
+      "core": "machine-3-2.e00031.c0000",
+      "gt": false,
+      "channel": 13,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.16923076923076924,
+        "period": 60,
+        "context": 120
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.03076923076923077,
+        "period": 20,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-3-2",
+      "core": "machine-3-2.e00031.c0000",
+      "gt": false,
+      "channel": 33,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.46153846153846156,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.46153846153846156,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-3-2",
+      "core": "machine-3-2.e00031.c0000",
+      "gt": false,
+      "channel": 15,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.15384615384615385,
+        "period": 60,
+        "context": 120
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.2,
+        "period": 20,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-3-2",
+      "core": "machine-3-2.e00031.c0000",
+      "gt": false,
+      "channel": 32,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.47692307692307695,
+        "period": 60,
+        "context": 120
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.7384615384615385,
+        "period": 20,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-3-2",
+      "core": "machine-3-2.e00031.c0000",
+      "gt": false,
+      "channel": 12,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.5384615384615384,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.6153846153846154,
+        "period": 20,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-3-2",
+      "core": "machine-3-2.e00031.c0000",
+      "gt": false,
+      "channel": 34,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.09230769230769231,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.09230769230769231,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-3-2",
+      "core": "machine-3-2.e00031.c0000",
+      "gt": false,
+      "channel": 35,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.09230769230769231,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.09230769230769231,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-3-8",
+      "core": "machine-3-8.e00015.c0000",
+      "gt": true,
+      "channel": 9,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.5384615384615384,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.5384615384615384,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-3-8",
+      "core": "machine-3-8.e00015.c0000",
+      "gt": true,
+      "channel": 12,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": 10,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-3-8",
+      "core": "machine-3-8.e00015.c0000",
+      "gt": true,
+      "channel": 15,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.16923076923076924,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.16923076923076924,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-3-8",
+      "core": "machine-3-8.e00015.c0000",
+      "gt": true,
+      "channel": 10,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.2,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.2,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-3-8",
+      "core": "machine-3-8.e00015.c0000",
+      "gt": true,
+      "channel": 0,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.18461538461538463,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.18461538461538463,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-3-8",
+      "core": "machine-3-8.e00015.c0000",
+      "gt": true,
+      "channel": 5,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-3-8",
+      "core": "machine-3-8.e00015.c0000",
+      "gt": true,
+      "channel": 13,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": 10,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-3-8",
+      "core": "machine-3-8.e00015.c0000",
+      "gt": true,
+      "channel": 6,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-3-8",
+      "core": "machine-3-8.e00014.c0000",
+      "gt": true,
+      "channel": 9,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-3-8",
+      "core": "machine-3-8.e00014.c0000",
+      "gt": true,
+      "channel": 12,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": 10,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-3-8",
+      "core": "machine-3-8.e00014.c0000",
+      "gt": true,
+      "channel": 13,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": 10,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-3-8",
+      "core": "machine-3-8.e00014.c0000",
+      "gt": true,
+      "channel": 8,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": 10,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-3-8",
+      "core": "machine-3-8.e00014.c0000",
+      "gt": true,
+      "channel": 6,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-3-8",
+      "core": "machine-3-8.e00014.c0000",
+      "gt": true,
+      "channel": 5,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-3-8",
+      "core": "machine-3-8.e00059.c0000",
+      "gt": false,
+      "channel": 9,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.5538461538461539,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.5538461538461539,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-3-8",
+      "core": "machine-3-8.e00059.c0000",
+      "gt": false,
+      "channel": 12,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": 10,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-3-8",
+      "core": "machine-3-8.e00059.c0000",
+      "gt": false,
+      "channel": 1,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "validation_unstable",
+        "p": 0.2,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "validation_unstable",
+        "p": 0.2,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-3-8",
+      "core": "machine-3-8.e00059.c0000",
+      "gt": false,
+      "channel": 33,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.046153846153846156,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.046153846153846156,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-3-8",
+      "core": "machine-3-8.e00059.c0000",
+      "gt": false,
+      "channel": 13,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": 10,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.03076923076923077,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-3-8",
+      "core": "machine-3-8.e00059.c0000",
+      "gt": false,
+      "channel": 5,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-3-8",
+      "core": "machine-3-8.e00059.c0000",
+      "gt": false,
+      "channel": 6,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-3-8",
+      "core": "machine-3-8.e00029.c0000",
+      "gt": false,
+      "channel": 9,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.16923076923076924,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.16923076923076924,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-3-8",
+      "core": "machine-3-8.e00029.c0000",
+      "gt": false,
+      "channel": 6,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-3-8",
+      "core": "machine-3-8.e00029.c0000",
+      "gt": false,
+      "channel": 12,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": 10,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-3-8",
+      "core": "machine-3-8.e00029.c0000",
+      "gt": false,
+      "channel": 5,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-3-8",
+      "core": "machine-3-8.e00029.c0000",
+      "gt": false,
+      "channel": 13,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": 10,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.06153846153846154,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-2-5",
+      "core": "machine-2-5.e00021.c0000",
+      "gt": true,
+      "channel": 13,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "validation_unstable",
+        "p": 0.7846153846153846,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "validation_unstable",
+        "p": 0.7846153846153846,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-2-5",
+      "core": "machine-2-5.e00021.c0000",
+      "gt": true,
+      "channel": 8,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "validation_unstable",
+        "p": 0.8461538461538461,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "validation_unstable",
+        "p": 0.8461538461538461,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-2-5",
+      "core": "machine-2-5.e00021.c0000",
+      "gt": true,
+      "channel": 12,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 1.0,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 1.0,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-2-5",
+      "core": "machine-2-5.e00021.c0000",
+      "gt": true,
+      "channel": 14,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "validation_unstable",
+        "p": 0.8153846153846154,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "validation_unstable",
+        "p": 0.8153846153846154,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-2-5",
+      "core": "machine-2-5.e00021.c0000",
+      "gt": true,
+      "channel": 31,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.26153846153846155,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "validation_unstable",
+        "p": 0.4461538461538462,
+        "period": 720,
+        "context": 512
+      }
+    },
+    {
+      "machine": "machine-2-5",
+      "core": "machine-2-5.e00021.c0000",
+      "gt": true,
+      "channel": 29,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-2-5",
+      "core": "machine-2-5.e00021.c0000",
+      "gt": true,
+      "channel": 11,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "validation_unstable",
+        "p": 0.4461538461538462,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "validation_unstable",
+        "p": 0.4461538461538462,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-2-5",
+      "core": "machine-2-5.e00005.c0000",
+      "gt": true,
+      "channel": 13,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "validation_unstable",
+        "p": 0.9538461538461539,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "validation_unstable",
+        "p": 0.9538461538461539,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-2-5",
+      "core": "machine-2-5.e00005.c0000",
+      "gt": true,
+      "channel": 8,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "validation_unstable",
+        "p": 0.26153846153846155,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "validation_unstable",
+        "p": 0.26153846153846155,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-2-5",
+      "core": "machine-2-5.e00005.c0000",
+      "gt": true,
+      "channel": 12,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 1.0,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 1.0,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-2-5",
+      "core": "machine-2-5.e00005.c0000",
+      "gt": true,
+      "channel": 14,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "validation_unstable",
+        "p": 0.16923076923076924,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "validation_unstable",
+        "p": 0.16923076923076924,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-2-5",
+      "core": "machine-2-5.e00005.c0000",
+      "gt": true,
+      "channel": 11,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "validation_unstable",
+        "p": 0.4,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "validation_unstable",
+        "p": 0.4,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-2-5",
+      "core": "machine-2-5.e00005.c0000",
+      "gt": true,
+      "channel": 32,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.27692307692307694,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.27692307692307694,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-2-5",
+      "core": "machine-2-5.e00016.c0000",
+      "gt": false,
+      "channel": 33,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.9846153846153847,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.9846153846153847,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-2-5",
+      "core": "machine-2-5.e00016.c0000",
+      "gt": false,
+      "channel": 35,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "validation_unstable",
+        "p": 0.8307692307692308,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.7692307692307693,
+        "period": 719,
+        "context": 512
+      }
+    },
+    {
+      "machine": "machine-2-5",
+      "core": "machine-2-5.e00016.c0000",
+      "gt": false,
+      "channel": 34,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "validation_unstable",
+        "p": 0.8461538461538461,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.7692307692307693,
+        "period": 719,
+        "context": 512
+      }
+    },
+    {
+      "machine": "machine-2-5",
+      "core": "machine-2-5.e00016.c0000",
+      "gt": false,
+      "channel": 31,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.5076923076923077,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "validation_unstable",
+        "p": 0.46153846153846156,
+        "period": 720,
+        "context": 512
+      }
+    },
+    {
+      "machine": "machine-2-5",
+      "core": "machine-2-5.e00016.c0000",
+      "gt": false,
+      "channel": 29,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-2-5",
+      "core": "machine-2-5.e00006.c0000",
+      "gt": false,
+      "channel": 33,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.47692307692307695,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.47692307692307695,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-2-5",
+      "core": "machine-2-5.e00006.c0000",
+      "gt": false,
+      "channel": 25,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.16923076923076924,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.16923076923076924,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-2-5",
+      "core": "machine-2-5.e00006.c0000",
+      "gt": false,
+      "channel": 31,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.49230769230769234,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "validation_unstable",
+        "p": 1.0,
+        "period": 720,
+        "context": 512
+      }
+    },
+    {
+      "machine": "machine-2-5",
+      "core": "machine-2-5.e00006.c0000",
+      "gt": false,
+      "channel": 23,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.16923076923076924,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.16923076923076924,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-1",
+      "core": "machine-1-1.e00047.c0000",
+      "gt": true,
+      "channel": 8,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.7692307692307693,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.7692307692307693,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-1",
+      "core": "machine-1-1.e00047.c0000",
+      "gt": true,
+      "channel": 12,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "validation_unstable",
+        "p": 0.9692307692307692,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "validation_unstable",
+        "p": 0.9692307692307692,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-1",
+      "core": "machine-1-1.e00047.c0000",
+      "gt": true,
+      "channel": 14,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.9230769230769231,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.9230769230769231,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-1",
+      "core": "machine-1-1.e00047.c0000",
+      "gt": true,
+      "channel": 13,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.7692307692307693,
+        "period": 10,
+        "context": 48
+      },
+      "validated": {
+        "status": "validation_unstable",
+        "p": 0.2,
+        "period": 720,
+        "context": 512
+      }
+    },
+    {
+      "machine": "machine-1-1",
+      "core": "machine-1-1.e00047.c0000",
+      "gt": true,
+      "channel": 11,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "validation_unstable",
+        "p": 0.8769230769230769,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "validation_unstable",
+        "p": 0.8769230769230769,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-1",
+      "core": "machine-1-1.e00047.c0000",
+      "gt": true,
+      "channel": 0,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.4,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.4,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-1",
+      "core": "machine-1-1.e00047.c0000",
+      "gt": true,
+      "channel": 29,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": 716,
+        "context": 512
+      }
+    },
+    {
+      "machine": "machine-1-1",
+      "core": "machine-1-1.e00011.c0000",
+      "gt": true,
+      "channel": 9,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.7846153846153846,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.7846153846153846,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-1",
+      "core": "machine-1-1.e00011.c0000",
+      "gt": true,
+      "channel": 8,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.7846153846153846,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.7846153846153846,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-1",
+      "core": "machine-1-1.e00011.c0000",
+      "gt": true,
+      "channel": 14,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.8307692307692308,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.8307692307692308,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-1",
+      "core": "machine-1-1.e00011.c0000",
+      "gt": true,
+      "channel": 0,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.12307692307692308,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.12307692307692308,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-1",
+      "core": "machine-1-1.e00011.c0000",
+      "gt": true,
+      "channel": 12,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "validation_unstable",
+        "p": 1.0,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "validation_unstable",
+        "p": 1.0,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-1",
+      "core": "machine-1-1.e00011.c0000",
+      "gt": true,
+      "channel": 11,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "validation_unstable",
+        "p": 0.8769230769230769,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "validation_unstable",
+        "p": 0.8769230769230769,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-1",
+      "core": "machine-1-1.e00011.c0000",
+      "gt": true,
+      "channel": 13,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.3384615384615385,
+        "period": 10,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": 720,
+        "context": 512
+      }
+    },
+    {
+      "machine": "machine-1-1",
+      "core": "machine-1-1.e00011.c0000",
+      "gt": true,
+      "channel": 29,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": 716,
+        "context": 512
+      }
+    },
+    {
+      "machine": "machine-1-1",
+      "core": "machine-1-1.e00042.c0000",
+      "gt": false,
+      "channel": 0,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.03076923076923077,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.03076923076923077,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-1",
+      "core": "machine-1-1.e00042.c0000",
+      "gt": false,
+      "channel": 9,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.13846153846153847,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.13846153846153847,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-1",
+      "core": "machine-1-1.e00042.c0000",
+      "gt": false,
+      "channel": 11,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.03076923076923077,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.03076923076923077,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-1",
+      "core": "machine-1-1.e00042.c0000",
+      "gt": false,
+      "channel": 12,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-1",
+      "core": "machine-1-1.e00042.c0000",
+      "gt": false,
+      "channel": 29,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": 716,
+        "context": 512
+      }
+    },
+    {
+      "machine": "machine-1-1",
+      "core": "machine-1-1.e00034.c0000",
+      "gt": false,
+      "channel": 0,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-1",
+      "core": "machine-1-1.e00034.c0000",
+      "gt": false,
+      "channel": 29,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": 716,
+        "context": 512
+      }
+    },
+    {
+      "machine": "machine-1-1",
+      "core": "machine-1-1.e00034.c0000",
+      "gt": false,
+      "channel": 14,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.03076923076923077,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.03076923076923077,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-1",
+      "core": "machine-1-1.e00034.c0000",
+      "gt": false,
+      "channel": 11,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.03076923076923077,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.03076923076923077,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-1",
+      "core": "machine-1-1.e00034.c0000",
+      "gt": false,
+      "channel": 24,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.8,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.8,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-1",
+      "core": "machine-1-1.e00034.c0000",
+      "gt": false,
+      "channel": 15,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.7230769230769231,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.7230769230769231,
+        "period": 15,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-1",
+      "core": "machine-1-1.e00034.c0000",
+      "gt": false,
+      "channel": 10,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.6923076923076923,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.6923076923076923,
+        "period": 15,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-1",
+      "core": "machine-1-1.e00034.c0000",
+      "gt": false,
+      "channel": 19,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.8769230769230769,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.8769230769230769,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-2-2",
+      "core": "machine-2-2.e00028.c0000",
+      "gt": true,
+      "channel": 9,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.07692307692307693,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.07692307692307693,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-2-2",
+      "core": "machine-2-2.e00028.c0000",
+      "gt": true,
+      "channel": 10,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.06153846153846154,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.06153846153846154,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-2-2",
+      "core": "machine-2-2.e00028.c0000",
+      "gt": true,
+      "channel": 11,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.06153846153846154,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.06153846153846154,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-2-2",
+      "core": "machine-2-2.e00028.c0000",
+      "gt": true,
+      "channel": 12,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 1.0,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 1.0,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-2-2",
+      "core": "machine-2-2.e00028.c0000",
+      "gt": true,
+      "channel": 0,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.49230769230769234,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.24615384615384617,
+        "period": 720,
+        "context": 512
+      }
+    },
+    {
+      "machine": "machine-2-2",
+      "core": "machine-2-2.e00029.c0000",
+      "gt": true,
+      "channel": 10,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.03076923076923077,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.03076923076923077,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-2-2",
+      "core": "machine-2-2.e00029.c0000",
+      "gt": true,
+      "channel": 9,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-2-2",
+      "core": "machine-2-2.e00029.c0000",
+      "gt": true,
+      "channel": 11,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.03076923076923077,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.03076923076923077,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-2-2",
+      "core": "machine-2-2.e00029.c0000",
+      "gt": true,
+      "channel": 12,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.03076923076923077,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.03076923076923077,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-2-2",
+      "core": "machine-2-2.e00029.c0000",
+      "gt": true,
+      "channel": 0,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.09230769230769231,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.3384615384615385,
+        "period": 720,
+        "context": 512
+      }
+    },
+    {
+      "machine": "machine-2-2",
+      "core": "machine-2-2.e00029.c0000",
+      "gt": true,
+      "channel": 1,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.5538461538461539,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.5538461538461539,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-2-2",
+      "core": "machine-2-2.e00029.c0000",
+      "gt": true,
+      "channel": 25,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.1076923076923077,
+        "period": 30,
+        "context": 60
+      },
+      "validated": {
+        "status": "validation_unstable",
+        "p": 0.27692307692307694,
+        "period": 720,
+        "context": 512
+      }
+    },
+    {
+      "machine": "machine-2-2",
+      "core": "machine-2-2.e00029.c0000",
+      "gt": true,
+      "channel": 23,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.5230769230769231,
+        "period": 30,
+        "context": 60
+      },
+      "validated": {
+        "status": "validation_unstable",
+        "p": 0.5076923076923077,
+        "period": 720,
+        "context": 512
+      }
+    },
+    {
+      "machine": "machine-2-2",
+      "core": "machine-2-2.e00038.c0000",
+      "gt": false,
+      "channel": 9,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-2-2",
+      "core": "machine-2-2.e00038.c0000",
+      "gt": false,
+      "channel": 10,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-2-2",
+      "core": "machine-2-2.e00038.c0000",
+      "gt": false,
+      "channel": 12,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.03076923076923077,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.03076923076923077,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-2-2",
+      "core": "machine-2-2.e00038.c0000",
+      "gt": false,
+      "channel": 11,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.046153846153846156,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.046153846153846156,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-2-2",
+      "core": "machine-2-2.e00038.c0000",
+      "gt": false,
+      "channel": 20,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.23076923076923078,
+        "period": 5,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.2153846153846154,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-2-2",
+      "core": "machine-2-2.e00038.c0000",
+      "gt": false,
+      "channel": 19,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.12307692307692308,
+        "period": 5,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.24615384615384617,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-2-2",
+      "core": "machine-2-2.e00004.c0000",
+      "gt": false,
+      "channel": 10,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 1.0,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 1.0,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-2-2",
+      "core": "machine-2-2.e00004.c0000",
+      "gt": false,
+      "channel": 9,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.26153846153846155,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.26153846153846155,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-2-2",
+      "core": "machine-2-2.e00004.c0000",
+      "gt": false,
+      "channel": 12,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 1.0,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 1.0,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-2-2",
+      "core": "machine-2-2.e00004.c0000",
+      "gt": false,
+      "channel": 5,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.8307692307692308,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.3230769230769231,
+        "period": 720,
+        "context": 512
+      }
+    },
+    {
+      "machine": "machine-2-2",
+      "core": "machine-2-2.e00004.c0000",
+      "gt": false,
+      "channel": 25,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.38461538461538464,
+        "period": 30,
+        "context": 60
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": 720,
+        "context": 512
+      }
+    },
+    {
+      "machine": "machine-2-2",
+      "core": "machine-2-2.e00004.c0000",
+      "gt": false,
+      "channel": 23,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.9076923076923077,
+        "period": 30,
+        "context": 60
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": 720,
+        "context": 512
+      }
+    },
+    {
+      "machine": "machine-2-2",
+      "core": "machine-2-2.e00004.c0000",
+      "gt": false,
+      "channel": 31,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "validation_unstable",
+        "p": 0.5384615384615384,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": 720,
+        "context": 512
+      }
+    },
+    {
+      "machine": "machine-2-9",
+      "core": "machine-2-9.e00014.c0000",
+      "gt": true,
+      "channel": 12,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-2-9",
+      "core": "machine-2-9.e00014.c0000",
+      "gt": true,
+      "channel": 11,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-2-9",
+      "core": "machine-2-9.e00014.c0000",
+      "gt": true,
+      "channel": 9,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-2-9",
+      "core": "machine-2-9.e00014.c0000",
+      "gt": true,
+      "channel": 8,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-2-9",
+      "core": "machine-2-9.e00014.c0000",
+      "gt": true,
+      "channel": 14,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-2-9",
+      "core": "machine-2-9.e00014.c0000",
+      "gt": true,
+      "channel": 33,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "validation_unstable",
+        "p": 0.7538461538461538,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "validation_unstable",
+        "p": 0.7538461538461538,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-2-9",
+      "core": "machine-2-9.e00014.c0000",
+      "gt": true,
+      "channel": 6,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": 45,
+        "context": 90
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": 15,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-2-9",
+      "core": "machine-2-9.e00014.c0000",
+      "gt": true,
+      "channel": 5,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-2-9",
+      "core": "machine-2-9.e00009.c0000",
+      "gt": true,
+      "channel": 11,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-2-9",
+      "core": "machine-2-9.e00009.c0000",
+      "gt": true,
+      "channel": 1,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.7692307692307693,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.7692307692307693,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-2-9",
+      "core": "machine-2-9.e00009.c0000",
+      "gt": true,
+      "channel": 9,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-2-9",
+      "core": "machine-2-9.e00009.c0000",
+      "gt": true,
+      "channel": 12,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-2-9",
+      "core": "machine-2-9.e00009.c0000",
+      "gt": true,
+      "channel": 2,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.6923076923076923,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.6923076923076923,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-2-9",
+      "core": "machine-2-9.e00009.c0000",
+      "gt": true,
+      "channel": 14,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-2-9",
+      "core": "machine-2-9.e00009.c0000",
+      "gt": true,
+      "channel": 8,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-2-9",
+      "core": "machine-2-9.e00009.c0000",
+      "gt": true,
+      "channel": 6,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": 45,
+        "context": 90
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": 15,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-2-9",
+      "core": "machine-2-9.e00002.c0000",
+      "gt": false,
+      "channel": 22,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.15384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.15384615384615385,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-2-9",
+      "core": "machine-2-9.e00002.c0000",
+      "gt": false,
+      "channel": 25,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.1076923076923077,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.1076923076923077,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-2-9",
+      "core": "machine-2-9.e00002.c0000",
+      "gt": false,
+      "channel": 23,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.1076923076923077,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.1076923076923077,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-2-9",
+      "core": "machine-2-9.e00002.c0000",
+      "gt": false,
+      "channel": 35,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.5384615384615384,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.9692307692307692,
+        "period": 724,
+        "context": 512
+      }
+    },
+    {
+      "machine": "machine-2-9",
+      "core": "machine-2-9.e00002.c0000",
+      "gt": false,
+      "channel": 34,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.4307692307692308,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.9692307692307692,
+        "period": 724,
+        "context": 512
+      }
+    },
+    {
+      "machine": "machine-2-9",
+      "core": "machine-2-9.e00002.c0000",
+      "gt": false,
+      "channel": 11,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.35384615384615387,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.35384615384615387,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-2-9",
+      "core": "machine-2-9.e00002.c0000",
+      "gt": false,
+      "channel": 19,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.7076923076923077,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.7076923076923077,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-2-9",
+      "core": "machine-2-9.e00006.c0000",
+      "gt": false,
+      "channel": 9,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-2-9",
+      "core": "machine-2-9.e00006.c0000",
+      "gt": false,
+      "channel": 11,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.7076923076923077,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.7076923076923077,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-2-9",
+      "core": "machine-2-9.e00006.c0000",
+      "gt": false,
+      "channel": 12,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.8769230769230769,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.8769230769230769,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-2-9",
+      "core": "machine-2-9.e00006.c0000",
+      "gt": false,
+      "channel": 15,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.15384615384615385,
+        "period": 15,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.13846153846153847,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-2-9",
+      "core": "machine-2-9.e00006.c0000",
+      "gt": false,
+      "channel": 10,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.15384615384615385,
+        "period": 15,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.15384615384615385,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-2-9",
+      "core": "machine-2-9.e00006.c0000",
+      "gt": false,
+      "channel": 6,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": 45,
+        "context": 90
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": 15,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-1",
+      "core": "machine-1-1.e00012.c0000",
+      "gt": true,
+      "channel": 11,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-1",
+      "core": "machine-1-1.e00012.c0000",
+      "gt": true,
+      "channel": 9,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-1",
+      "core": "machine-1-1.e00012.c0000",
+      "gt": true,
+      "channel": 12,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-1",
+      "core": "machine-1-1.e00012.c0000",
+      "gt": true,
+      "channel": 14,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-1",
+      "core": "machine-1-1.e00012.c0000",
+      "gt": true,
+      "channel": 0,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.03076923076923077,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.03076923076923077,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-1",
+      "core": "machine-1-1.e00012.c0000",
+      "gt": true,
+      "channel": 29,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": 716,
+        "context": 512
+      }
+    },
+    {
+      "machine": "machine-1-1",
+      "core": "machine-1-1.e00027.c0000",
+      "gt": true,
+      "channel": 0,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.47692307692307695,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.47692307692307695,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-1",
+      "core": "machine-1-1.e00027.c0000",
+      "gt": true,
+      "channel": 8,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.676923076923077,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.676923076923077,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-1",
+      "core": "machine-1-1.e00027.c0000",
+      "gt": true,
+      "channel": 12,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "validation_unstable",
+        "p": 0.8615384615384616,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "validation_unstable",
+        "p": 0.8615384615384616,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-1",
+      "core": "machine-1-1.e00027.c0000",
+      "gt": true,
+      "channel": 14,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.5230769230769231,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.5230769230769231,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-1",
+      "core": "machine-1-1.e00027.c0000",
+      "gt": true,
+      "channel": 13,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.2,
+        "period": 10,
+        "context": 48
+      },
+      "validated": {
+        "status": "validation_unstable",
+        "p": 0.15384615384615385,
+        "period": 720,
+        "context": 512
+      }
+    },
+    {
+      "machine": "machine-1-1",
+      "core": "machine-1-1.e00027.c0000",
+      "gt": true,
+      "channel": 11,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "validation_unstable",
+        "p": 0.6,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "validation_unstable",
+        "p": 0.6,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-1",
+      "core": "machine-1-1.e00027.c0000",
+      "gt": true,
+      "channel": 9,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.7076923076923077,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.7076923076923077,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-1",
+      "core": "machine-1-1.e00027.c0000",
+      "gt": true,
+      "channel": 29,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": 716,
+        "context": 512
+      }
+    },
+    {
+      "machine": "machine-1-1",
+      "core": "machine-1-1.e00046.c0000",
+      "gt": false,
+      "channel": 0,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-1",
+      "core": "machine-1-1.e00046.c0000",
+      "gt": false,
+      "channel": 14,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.03076923076923077,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.03076923076923077,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-1",
+      "core": "machine-1-1.e00046.c0000",
+      "gt": false,
+      "channel": 8,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-1",
+      "core": "machine-1-1.e00046.c0000",
+      "gt": false,
+      "channel": 13,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": 10,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": 720,
+        "context": 512
+      }
+    },
+    {
+      "machine": "machine-1-1",
+      "core": "machine-1-1.e00046.c0000",
+      "gt": false,
+      "channel": 29,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": 716,
+        "context": 512
+      }
+    },
+    {
+      "machine": "machine-1-1",
+      "core": "machine-1-1.e00002.c0000",
+      "gt": false,
+      "channel": 6,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.27692307692307694,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.35384615384615387,
+        "period": 911,
+        "context": 512
+      }
+    },
+    {
+      "machine": "machine-1-1",
+      "core": "machine-1-1.e00002.c0000",
+      "gt": false,
+      "channel": 5,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.5846153846153846,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.5846153846153846,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-1",
+      "core": "machine-1-1.e00002.c0000",
+      "gt": false,
+      "channel": 29,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "validation_unstable",
+        "p": 0.09230769230769231,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": 716,
+        "context": 512
+      }
+    },
+    {
+      "machine": "machine-1-2",
+      "core": "machine-1-2.e00049.c0000",
+      "gt": true,
+      "channel": 1,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.03076923076923077,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.13846153846153847,
+        "period": 720,
+        "context": 512
+      }
+    },
+    {
+      "machine": "machine-1-2",
+      "core": "machine-1-2.e00049.c0000",
+      "gt": true,
+      "channel": 2,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.03076923076923077,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.1076923076923077,
+        "period": 720,
+        "context": 512
+      }
+    },
+    {
+      "machine": "machine-1-2",
+      "core": "machine-1-2.e00049.c0000",
+      "gt": true,
+      "channel": 0,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.6153846153846154,
+        "period": 720,
+        "context": 512
+      }
+    },
+    {
+      "machine": "machine-1-2",
+      "core": "machine-1-2.e00049.c0000",
+      "gt": true,
+      "channel": 14,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-2",
+      "core": "machine-1-2.e00049.c0000",
+      "gt": true,
+      "channel": 3,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.03076923076923077,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.18461538461538463,
+        "period": 720,
+        "context": 512
+      }
+    },
+    {
+      "machine": "machine-1-2",
+      "core": "machine-1-2.e00049.c0000",
+      "gt": true,
+      "channel": 23,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "validation_unstable",
+        "p": 0.7538461538461538,
+        "period": 60,
+        "context": 120
+      },
+      "validated": {
+        "status": "validation_unstable",
+        "p": 0.5384615384615384,
+        "period": 30,
+        "context": 60
+      }
+    },
+    {
+      "machine": "machine-1-2",
+      "core": "machine-1-2.e00049.c0000",
+      "gt": true,
+      "channel": 25,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.7538461538461538,
+        "period": 60,
+        "context": 120
+      },
+      "validated": {
+        "status": "validation_unstable",
+        "p": 0.5692307692307692,
+        "period": 30,
+        "context": 60
+      }
+    },
+    {
+      "machine": "machine-1-2",
+      "core": "machine-1-2.e00049.c0000",
+      "gt": true,
+      "channel": 32,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.12307692307692308,
+        "period": 30,
+        "context": 60
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.3230769230769231,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-2",
+      "core": "machine-1-2.e00048.c0000",
+      "gt": true,
+      "channel": 1,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.2,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.8153846153846154,
+        "period": 720,
+        "context": 512
+      }
+    },
+    {
+      "machine": "machine-1-2",
+      "core": "machine-1-2.e00048.c0000",
+      "gt": true,
+      "channel": 3,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.26153846153846155,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.9384615384615385,
+        "period": 720,
+        "context": 512
+      }
+    },
+    {
+      "machine": "machine-1-2",
+      "core": "machine-1-2.e00048.c0000",
+      "gt": true,
+      "channel": 14,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.13846153846153847,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.13846153846153847,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-2",
+      "core": "machine-1-2.e00048.c0000",
+      "gt": true,
+      "channel": 0,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.24615384615384617,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.8769230769230769,
+        "period": 720,
+        "context": 512
+      }
+    },
+    {
+      "machine": "machine-1-2",
+      "core": "machine-1-2.e00048.c0000",
+      "gt": true,
+      "channel": 2,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.2923076923076923,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.8769230769230769,
+        "period": 720,
+        "context": 512
+      }
+    },
+    {
+      "machine": "machine-1-2",
+      "core": "machine-1-2.e00048.c0000",
+      "gt": true,
+      "channel": 32,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.8,
+        "period": 30,
+        "context": 60
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.8615384615384616,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-2",
+      "core": "machine-1-2.e00048.c0000",
+      "gt": true,
+      "channel": 8,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.676923076923077,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.676923076923077,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-2",
+      "core": "machine-1-2.e00041.c0000",
+      "gt": false,
+      "channel": 12,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 1.0,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 1.0,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-2",
+      "core": "machine-1-2.e00041.c0000",
+      "gt": false,
+      "channel": 9,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.8153846153846154,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.8153846153846154,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-2",
+      "core": "machine-1-2.e00041.c0000",
+      "gt": false,
+      "channel": 11,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.5538461538461539,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.9692307692307692,
+        "period": 720,
+        "context": 512
+      }
+    },
+    {
+      "machine": "machine-1-2",
+      "core": "machine-1-2.e00041.c0000",
+      "gt": false,
+      "channel": 32,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.6153846153846154,
+        "period": 30,
+        "context": 60
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.6153846153846154,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-2",
+      "core": "machine-1-2.e00041.c0000",
+      "gt": false,
+      "channel": 34,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 1.0,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 1.0,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-2",
+      "core": "machine-1-2.e00050.c0000",
+      "gt": false,
+      "channel": 12,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 1.0,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 1.0,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-2",
+      "core": "machine-1-2.e00050.c0000",
+      "gt": false,
+      "channel": 9,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.9692307692307692,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.9692307692307692,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-2",
+      "core": "machine-1-2.e00050.c0000",
+      "gt": false,
+      "channel": 11,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.47692307692307695,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.7538461538461538,
+        "period": 720,
+        "context": 512
+      }
+    },
+    {
+      "machine": "machine-1-2",
+      "core": "machine-1-2.e00050.c0000",
+      "gt": false,
+      "channel": 25,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.7846153846153846,
+        "period": 60,
+        "context": 120
+      },
+      "validated": {
+        "status": "validation_unstable",
+        "p": 0.5692307692307692,
+        "period": 30,
+        "context": 60
+      }
+    },
+    {
+      "machine": "machine-1-2",
+      "core": "machine-1-2.e00050.c0000",
+      "gt": false,
+      "channel": 23,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "validation_unstable",
+        "p": 0.7692307692307693,
+        "period": 60,
+        "context": 120
+      },
+      "validated": {
+        "status": "validation_unstable",
+        "p": 0.5692307692307692,
+        "period": 30,
+        "context": 60
+      }
+    },
+    {
+      "machine": "machine-1-2",
+      "core": "machine-1-2.e00050.c0000",
+      "gt": false,
+      "channel": 32,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.8923076923076924,
+        "period": 30,
+        "context": 60
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.9538461538461539,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-3",
+      "core": "machine-1-3.e00014.c0000",
+      "gt": true,
+      "channel": 14,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "validation_unstable",
+        "p": 0.3384615384615385,
+        "period": 10,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.5076923076923077,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-3",
+      "core": "machine-1-3.e00014.c0000",
+      "gt": true,
+      "channel": 11,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.3384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "validation_unstable",
+        "p": 0.35384615384615387,
+        "period": 15,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-3",
+      "core": "machine-1-3.e00014.c0000",
+      "gt": true,
+      "channel": 12,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 1.0,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 1.0,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-3",
+      "core": "machine-1-3.e00014.c0000",
+      "gt": true,
+      "channel": 8,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.35384615384615387,
+        "period": 10,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.2153846153846154,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-3",
+      "core": "machine-1-3.e00014.c0000",
+      "gt": true,
+      "channel": 15,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.046153846153846156,
+        "period": 10,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.06153846153846154,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-3",
+      "core": "machine-1-3.e00014.c0000",
+      "gt": true,
+      "channel": 33,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.13846153846153847,
+        "period": 24,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.15384615384615385,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-3",
+      "core": "machine-1-3.e00014.c0000",
+      "gt": true,
+      "channel": 6,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.09230769230769231,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.09230769230769231,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-3",
+      "core": "machine-1-3.e00014.c0000",
+      "gt": true,
+      "channel": 29,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-3",
+      "core": "machine-1-3.e00011.c0000",
+      "gt": false,
+      "channel": 14,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "validation_unstable",
+        "p": 0.7846153846153846,
+        "period": 10,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.7692307692307693,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-3",
+      "core": "machine-1-3.e00011.c0000",
+      "gt": false,
+      "channel": 11,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.5538461538461539,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "validation_unstable",
+        "p": 0.4307692307692308,
+        "period": 15,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-3",
+      "core": "machine-1-3.e00011.c0000",
+      "gt": false,
+      "channel": 15,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.046153846153846156,
+        "period": 10,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.06153846153846154,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-3",
+      "core": "machine-1-3.e00011.c0000",
+      "gt": false,
+      "channel": 12,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 1.0,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 1.0,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-3",
+      "core": "machine-1-3.e00011.c0000",
+      "gt": false,
+      "channel": 8,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.49230769230769234,
+        "period": 10,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.5230769230769231,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-3",
+      "core": "machine-1-3.e00011.c0000",
+      "gt": false,
+      "channel": 29,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-3",
+      "core": "machine-1-3.e00005.c0000",
+      "gt": false,
+      "channel": 6,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.5846153846153846,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.5846153846153846,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-3",
+      "core": "machine-1-3.e00005.c0000",
+      "gt": false,
+      "channel": 2,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "validation_unstable",
+        "p": 0.6923076923076923,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": 719,
+        "context": 512
+      }
+    },
+    {
+      "machine": "machine-1-3",
+      "core": "machine-1-3.e00005.c0000",
+      "gt": false,
+      "channel": 5,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-4",
+      "core": "machine-1-4.e00004.c0000",
+      "gt": true,
+      "channel": 14,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.18461538461538463,
+        "period": 10,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.18461538461538463,
+        "period": 10,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-4",
+      "core": "machine-1-4.e00004.c0000",
+      "gt": true,
+      "channel": 11,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.046153846153846156,
+        "period": 10,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.046153846153846156,
+        "period": 10,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-4",
+      "core": "machine-1-4.e00004.c0000",
+      "gt": true,
+      "channel": 15,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.046153846153846156,
+        "period": 10,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.046153846153846156,
+        "period": 10,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-4",
+      "core": "machine-1-4.e00004.c0000",
+      "gt": true,
+      "channel": 12,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "validation_unstable",
+        "p": 0.1076923076923077,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "validation_unstable",
+        "p": 1.0,
+        "period": 10,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-4",
+      "core": "machine-1-4.e00004.c0000",
+      "gt": true,
+      "channel": 6,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-4",
+      "core": "machine-1-4.e00004.c0000",
+      "gt": true,
+      "channel": 29,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-4",
+      "core": "machine-1-4.e00004.c0000",
+      "gt": true,
+      "channel": 33,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.16923076923076924,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.16923076923076924,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-4",
+      "core": "machine-1-4.e00007.c0000",
+      "gt": false,
+      "channel": 14,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.12307692307692308,
+        "period": 10,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.12307692307692308,
+        "period": 10,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-4",
+      "core": "machine-1-4.e00007.c0000",
+      "gt": false,
+      "channel": 11,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.046153846153846156,
+        "period": 10,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.046153846153846156,
+        "period": 10,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-4",
+      "core": "machine-1-4.e00007.c0000",
+      "gt": false,
+      "channel": 32,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.7846153846153846,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.7846153846153846,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-4",
+      "core": "machine-1-4.e00007.c0000",
+      "gt": false,
+      "channel": 25,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.23076923076923078,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.23076923076923078,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-4",
+      "core": "machine-1-4.e00007.c0000",
+      "gt": false,
+      "channel": 23,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.2,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.2,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-4",
+      "core": "machine-1-4.e00007.c0000",
+      "gt": false,
+      "channel": 6,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "validation_unstable",
+        "p": 0.1076923076923077,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "validation_unstable",
+        "p": 0.1076923076923077,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-4",
+      "core": "machine-1-4.e00007.c0000",
+      "gt": false,
+      "channel": 29,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-4",
+      "core": "machine-1-4.e00001.c0000",
+      "gt": false,
+      "channel": 10,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.03076923076923077,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.03076923076923077,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-4",
+      "core": "machine-1-4.e00001.c0000",
+      "gt": false,
+      "channel": 5,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-4",
+      "core": "machine-1-4.e00001.c0000",
+      "gt": false,
+      "channel": 14,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.1076923076923077,
+        "period": 10,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.1076923076923077,
+        "period": 10,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-4",
+      "core": "machine-1-4.e00001.c0000",
+      "gt": false,
+      "channel": 4,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-4",
+      "core": "machine-1-4.e00001.c0000",
+      "gt": false,
+      "channel": 29,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-5",
+      "core": "machine-1-5.e00023.c0000",
+      "gt": false,
+      "channel": 11,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "validation_unstable",
+        "p": 0.06153846153846154,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.16923076923076924,
+        "period": 5,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-5",
+      "core": "machine-1-5.e00023.c0000",
+      "gt": false,
+      "channel": 9,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.046153846153846156,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.046153846153846156,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-5",
+      "core": "machine-1-5.e00023.c0000",
+      "gt": false,
+      "channel": 10,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.046153846153846156,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.046153846153846156,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-5",
+      "core": "machine-1-5.e00023.c0000",
+      "gt": false,
+      "channel": 12,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "validation_unstable",
+        "p": 1.0,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "validation_unstable",
+        "p": 1.0,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-5",
+      "core": "machine-1-5.e00023.c0000",
+      "gt": false,
+      "channel": 5,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.9384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 1.0,
+        "period": 720,
+        "context": 512
+      }
+    },
+    {
+      "machine": "machine-1-5",
+      "core": "machine-1-5.e00023.c0000",
+      "gt": false,
+      "channel": 31,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-5",
+      "core": "machine-1-5.e00023.c0000",
+      "gt": false,
+      "channel": 8,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "validation_unstable",
+        "p": 0.06153846153846154,
+        "period": 20,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-5",
+      "core": "machine-1-5.e00025.c0000",
+      "gt": false,
+      "channel": 10,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 1.0,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 1.0,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-5",
+      "core": "machine-1-5.e00025.c0000",
+      "gt": false,
+      "channel": 9,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 1.0,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 1.0,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-5",
+      "core": "machine-1-5.e00025.c0000",
+      "gt": false,
+      "channel": 31,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-5",
+      "core": "machine-1-5.e00025.c0000",
+      "gt": false,
+      "channel": 6,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.046153846153846156,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.046153846153846156,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-6",
+      "core": "machine-1-6.e00007.c0000",
+      "gt": true,
+      "channel": 32,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 1.0,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 1.0,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-6",
+      "core": "machine-1-6.e00007.c0000",
+      "gt": true,
+      "channel": 33,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "validation_unstable",
+        "p": 0.06153846153846154,
+        "period": 32,
+        "context": 64
+      },
+      "validated": {
+        "status": "validation_unstable",
+        "p": 0.12307692307692308,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-6",
+      "core": "machine-1-6.e00007.c0000",
+      "gt": true,
+      "channel": 1,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.03076923076923077,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.03076923076923077,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-6",
+      "core": "machine-1-6.e00007.c0000",
+      "gt": true,
+      "channel": 3,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-6",
+      "core": "machine-1-6.e00007.c0000",
+      "gt": true,
+      "channel": 6,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.9692307692307692,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.9692307692307692,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-6",
+      "core": "machine-1-6.e00007.c0000",
+      "gt": true,
+      "channel": 13,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": 10,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": 960,
+        "context": 512
+      }
+    },
+    {
+      "machine": "machine-1-6",
+      "core": "machine-1-6.e00007.c0000",
+      "gt": true,
+      "channel": 14,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-6",
+      "core": "machine-1-6.e00007.c0000",
+      "gt": true,
+      "channel": 15,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": 10,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": 10,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-6",
+      "core": "machine-1-6.e00015.c0000",
+      "gt": true,
+      "channel": 32,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 1.0,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 1.0,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-6",
+      "core": "machine-1-6.e00015.c0000",
+      "gt": true,
+      "channel": 33,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "validation_unstable",
+        "p": 0.1076923076923077,
+        "period": 32,
+        "context": 64
+      },
+      "validated": {
+        "status": "validation_unstable",
+        "p": 0.12307692307692308,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-6",
+      "core": "machine-1-6.e00015.c0000",
+      "gt": true,
+      "channel": 4,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-6",
+      "core": "machine-1-6.e00015.c0000",
+      "gt": true,
+      "channel": 8,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": 720,
+        "context": 512
+      }
+    },
+    {
+      "machine": "machine-1-6",
+      "core": "machine-1-6.e00015.c0000",
+      "gt": true,
+      "channel": 12,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": 720,
+        "context": 512
+      }
+    },
+    {
+      "machine": "machine-1-6",
+      "core": "machine-1-6.e00015.c0000",
+      "gt": true,
+      "channel": 13,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": 10,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": 960,
+        "context": 512
+      }
+    },
+    {
+      "machine": "machine-1-6",
+      "core": "machine-1-6.e00015.c0000",
+      "gt": true,
+      "channel": 15,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": 10,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": 10,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-6",
+      "core": "machine-1-6.e00015.c0000",
+      "gt": true,
+      "channel": 14,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-6",
+      "core": "machine-1-6.e00063.c0000",
+      "gt": false,
+      "channel": 11,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.9538461538461539,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "validation_unstable",
+        "p": 0.12307692307692308,
+        "period": 120,
+        "context": 240
+      }
+    },
+    {
+      "machine": "machine-1-6",
+      "core": "machine-1-6.e00063.c0000",
+      "gt": false,
+      "channel": 12,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.4307692307692308,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "validation_unstable",
+        "p": 0.5230769230769231,
+        "period": 720,
+        "context": 512
+      }
+    },
+    {
+      "machine": "machine-1-6",
+      "core": "machine-1-6.e00063.c0000",
+      "gt": false,
+      "channel": 9,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.6923076923076923,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.6923076923076923,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-6",
+      "core": "machine-1-6.e00063.c0000",
+      "gt": false,
+      "channel": 0,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.046153846153846156,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.1076923076923077,
+        "period": 720,
+        "context": 512
+      }
+    },
+    {
+      "machine": "machine-1-6",
+      "core": "machine-1-6.e00063.c0000",
+      "gt": false,
+      "channel": 25,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-6",
+      "core": "machine-1-6.e00021.c0000",
+      "gt": false,
+      "channel": 10,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.16923076923076924,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.16923076923076924,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-6",
+      "core": "machine-1-6.e00021.c0000",
+      "gt": false,
+      "channel": 29,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": 720,
+        "context": 512
+      }
+    },
+    {
+      "machine": "machine-1-6",
+      "core": "machine-1-6.e00021.c0000",
+      "gt": false,
+      "channel": 14,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-6",
+      "core": "machine-1-6.e00021.c0000",
+      "gt": false,
+      "channel": 15,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": 10,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": 10,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-6",
+      "core": "machine-1-6.e00021.c0000",
+      "gt": false,
+      "channel": 13,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": 10,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": 960,
+        "context": 512
+      }
+    },
+    {
+      "machine": "machine-1-7",
+      "core": "machine-1-7.e00002.c0000",
+      "gt": true,
+      "channel": 9,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.5692307692307692,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.5692307692307692,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-7",
+      "core": "machine-1-7.e00002.c0000",
+      "gt": true,
+      "channel": 23,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.4,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.4,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-7",
+      "core": "machine-1-7.e00002.c0000",
+      "gt": true,
+      "channel": 19,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.06153846153846154,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.09230769230769231,
+        "period": 720,
+        "context": 512
+      }
+    },
+    {
+      "machine": "machine-1-7",
+      "core": "machine-1-7.e00002.c0000",
+      "gt": true,
+      "channel": 33,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.03076923076923077,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.03076923076923077,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-7",
+      "core": "machine-1-7.e00002.c0000",
+      "gt": true,
+      "channel": 6,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.16923076923076924,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.16923076923076924,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-7",
+      "core": "machine-1-7.e00002.c0000",
+      "gt": true,
+      "channel": 32,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.03076923076923077,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.03076923076923077,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-7",
+      "core": "machine-1-7.e00008.c0000",
+      "gt": true,
+      "channel": 8,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.16923076923076924,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.2,
+        "period": 720,
+        "context": 512
+      }
+    },
+    {
+      "machine": "machine-1-7",
+      "core": "machine-1-7.e00008.c0000",
+      "gt": true,
+      "channel": 12,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.15384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.2,
+        "period": 720,
+        "context": 512
+      }
+    },
+    {
+      "machine": "machine-1-7",
+      "core": "machine-1-7.e00008.c0000",
+      "gt": true,
+      "channel": 13,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.1076923076923077,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.1076923076923077,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-7",
+      "core": "machine-1-7.e00008.c0000",
+      "gt": true,
+      "channel": 0,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.15384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.15384615384615385,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-7",
+      "core": "machine-1-7.e00008.c0000",
+      "gt": true,
+      "channel": 11,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.8769230769230769,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.8769230769230769,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-7",
+      "core": "machine-1-7.e00008.c0000",
+      "gt": true,
+      "channel": 14,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.49230769230769234,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.49230769230769234,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-7",
+      "core": "machine-1-7.e00010.c0000",
+      "gt": false,
+      "channel": 16,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 1.0,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 1.0,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-7",
+      "core": "machine-1-7.e00010.c0000",
+      "gt": false,
+      "channel": 4,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.07692307692307693,
+        "period": 987,
+        "context": 512
+      }
+    },
+    {
+      "machine": "machine-1-7",
+      "core": "machine-1-7.e00010.c0000",
+      "gt": false,
+      "channel": 17,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 1.0,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 1.0,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-7",
+      "core": "machine-1-7.e00010.c0000",
+      "gt": false,
+      "channel": 0,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.8769230769230769,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.8769230769230769,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-7",
+      "core": "machine-1-7.e00013.c0000",
+      "gt": false,
+      "channel": 16,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 1.0,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 1.0,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-7",
+      "core": "machine-1-7.e00013.c0000",
+      "gt": false,
+      "channel": 23,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.6153846153846154,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.6153846153846154,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-7",
+      "core": "machine-1-7.e00013.c0000",
+      "gt": false,
+      "channel": 4,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.07692307692307693,
+        "period": 987,
+        "context": 512
+      }
+    },
+    {
+      "machine": "machine-1-8",
+      "core": "machine-1-8.e00001.c0000",
+      "gt": true,
+      "channel": 11,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.06153846153846154,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.06153846153846154,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-8",
+      "core": "machine-1-8.e00001.c0000",
+      "gt": true,
+      "channel": 0,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.03076923076923077,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.03076923076923077,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-8",
+      "core": "machine-1-8.e00001.c0000",
+      "gt": true,
+      "channel": 8,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.03076923076923077,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.03076923076923077,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-8",
+      "core": "machine-1-8.e00001.c0000",
+      "gt": true,
+      "channel": 19,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.8153846153846154,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.6923076923076923,
+        "period": 720,
+        "context": 512
+      }
+    },
+    {
+      "machine": "machine-1-8",
+      "core": "machine-1-8.e00001.c0000",
+      "gt": true,
+      "channel": 29,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 1.0,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.8461538461538461,
+        "period": 720,
+        "context": 512
+      }
+    },
+    {
+      "machine": "machine-1-8",
+      "core": "machine-1-8.e00001.c0000",
+      "gt": true,
+      "channel": 14,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-8",
+      "core": "machine-1-8.e00001.c0000",
+      "gt": true,
+      "channel": 12,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.12307692307692308,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.12307692307692308,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-8",
+      "core": "machine-1-8.e00001.c0000",
+      "gt": true,
+      "channel": 18,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.9076923076923077,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.49230769230769234,
+        "period": 720,
+        "context": 512
+      }
+    },
+    {
+      "machine": "machine-1-8",
+      "core": "machine-1-8.e00029.c0000",
+      "gt": true,
+      "channel": 14,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.6461538461538462,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.6461538461538462,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-8",
+      "core": "machine-1-8.e00029.c0000",
+      "gt": true,
+      "channel": 11,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.15384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.15384615384615385,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-8",
+      "core": "machine-1-8.e00029.c0000",
+      "gt": true,
+      "channel": 8,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.9384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.9384615384615385,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-8",
+      "core": "machine-1-8.e00029.c0000",
+      "gt": true,
+      "channel": 12,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.5230769230769231,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.5230769230769231,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-8",
+      "core": "machine-1-8.e00029.c0000",
+      "gt": true,
+      "channel": 6,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.046153846153846156,
+        "period": 120,
+        "context": 240
+      },
+      "validated": {
+        "status": "validation_unstable",
+        "p": 0.4153846153846154,
+        "period": 20,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-8",
+      "core": "machine-1-8.e00029.c0000",
+      "gt": true,
+      "channel": 5,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.046153846153846156,
+        "period": 120,
+        "context": 240
+      },
+      "validated": {
+        "status": "validation_unstable",
+        "p": 0.47692307692307695,
+        "period": 20,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-8",
+      "core": "machine-1-8.e00029.c0000",
+      "gt": true,
+      "channel": 13,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-8",
+      "core": "machine-1-8.e00028.c0000",
+      "gt": false,
+      "channel": 13,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-8",
+      "core": "machine-1-8.e00028.c0000",
+      "gt": false,
+      "channel": 8,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.9230769230769231,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.9230769230769231,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-8",
+      "core": "machine-1-8.e00028.c0000",
+      "gt": false,
+      "channel": 12,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.5230769230769231,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.5230769230769231,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-8",
+      "core": "machine-1-8.e00028.c0000",
+      "gt": false,
+      "channel": 9,
+      "source": "DINO spike+height",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.8307692307692308,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.8307692307692308,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-8",
+      "core": "machine-1-8.e00028.c0000",
+      "gt": false,
+      "channel": 14,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "context_supported",
+        "p": 0.1076923076923077,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "context_supported",
+        "p": 0.1076923076923077,
+        "period": null,
+        "context": 48
+      }
+    },
+    {
+      "machine": "machine-1-8",
+      "core": "machine-1-8.e00028.c0000",
+      "gt": false,
+      "channel": 23,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": 718,
+        "context": 512
+      }
+    },
+    {
+      "machine": "machine-1-8",
+      "core": "machine-1-8.e00028.c0000",
+      "gt": false,
+      "channel": 25,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": 718,
+        "context": 512
+      }
+    },
+    {
+      "machine": "machine-1-8",
+      "core": "machine-1-8.e00028.c0000",
+      "gt": false,
+      "channel": 22,
+      "source": "seasonal residual",
+      "stage2_acf": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      },
+      "validated": {
+        "status": "out_of_support",
+        "p": 0.015384615384615385,
+        "period": null,
+        "context": 48
+      }
+    }
+  ]
+}

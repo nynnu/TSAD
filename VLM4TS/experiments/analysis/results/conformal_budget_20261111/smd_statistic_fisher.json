@@ -1,0 +1,177 @@
+{
+  "summary": {
+    "0.003": {
+      "static": {
+        "alarm_fraction": 0.029866972386392836,
+        "segment_precision": 0.17591499409681227,
+        "event_recall": 0.2966360856269113,
+        "event_f1": 0.22085542702587063,
+        "point_f1": 0.1948693624253923,
+        "far_on_normal": 0.02318148801494241,
+        "segments": 847,
+        "events": 327
+      },
+      "sliding": {
+        "alarm_fraction": 0.038445573323318376,
+        "segment_precision": 0.17371737173717372,
+        "event_recall": 0.3425076452599388,
+        "event_f1": 0.23051780125091312,
+        "point_f1": 0.20499700038818508,
+        "far_on_normal": 0.030756459479091003,
+        "segments": 1111,
+        "events": 327
+      },
+      "sliding_all": {
+        "alarm_fraction": 0.0061868711826214146,
+        "segment_precision": 0.403921568627451,
+        "event_recall": 0.22629969418960244,
+        "event_f1": 0.29008011265247097,
+        "point_f1": 0.1151185478625909,
+        "far_on_normal": 0.003237522050430632,
+        "segments": 255,
+        "events": 327
+      },
+      "uniform_quota": {
+        "alarm_fraction": 0.03000533691763357,
+        "segment_precision": 0.24928639391056137,
+        "event_recall": 0.4801223241590214,
+        "event_f1": 0.32817804301083847,
+        "point_f1": 0.2735127031718479,
+        "far_on_normal": 0.019798692539171943,
+        "segments": 1051,
+        "events": 327
+      },
+      "audit_far": 0.0048984751520897525
+    },
+    "0.01": {
+      "static": {
+        "alarm_fraction": 0.06578245142416636,
+        "segment_precision": 0.1498868778280543,
+        "event_recall": 0.45565749235474007,
+        "event_f1": 0.2255725005498633,
+        "point_f1": 0.2012467778420748,
+        "far_on_normal": 0.05620006226003943,
+        "segments": 1768,
+        "events": 327
+      },
+      "sliding": {
+        "alarm_fraction": 0.08817773912355953,
+        "segment_precision": 0.14089935760171307,
+        "event_recall": 0.5412844036697247,
+        "event_f1": 0.2235955444461083,
+        "point_f1": 0.2138675488041089,
+        "far_on_normal": 0.07608176818511984,
+        "segments": 2335,
+        "events": 327
+      },
+      "sliding_all": {
+        "alarm_fraction": 0.019133838034433002,
+        "segment_precision": 0.2681564245810056,
+        "event_recall": 0.3761467889908257,
+        "event_f1": 0.31310158300851165,
+        "point_f1": 0.20532142524886035,
+        "far_on_normal": 0.012576527965134377,
+        "segments": 716,
+        "events": 327
+      },
+      "uniform_quota": {
+        "alarm_fraction": 0.06568361961613725,
+        "segment_precision": 0.1636532220676866,
+        "event_recall": 0.6299694189602446,
+        "event_f1": 0.2598124596934829,
+        "point_f1": 0.25924755811810546,
+        "far_on_normal": 0.052028639618138424,
+        "segments": 2157,
+        "events": 327
+      },
+      "audit_far": 0.017144663032314135
+    },
+    "0.03": {
+      "static": {
+        "alarm_fraction": 0.12059457215710304,
+        "segment_precision": 0.12140902872777018,
+        "event_recall": 0.5749235474006116,
+        "event_f1": 0.2004815281534762,
+        "point_f1": 0.20799596022915254,
+        "far_on_normal": 0.10660994085296253,
+        "segments": 2924,
+        "events": 327
+      },
+      "sliding": {
+        "alarm_fraction": 0.1610760807258208,
+        "segment_precision": 0.1153184165232358,
+        "event_recall": 0.6850152905198776,
+        "event_f1": 0.19740485225546353,
+        "point_f1": 0.20342785480387376,
+        "far_on_normal": 0.14444329148075127,
+        "segments": 3486,
+        "events": 327
+      },
+      "sliding_all": {
+        "alarm_fraction": 0.04892174497440256,
+        "segment_precision": 0.16047904191616766,
+        "event_recall": 0.5198776758409785,
+        "event_f1": 0.2452521424572585,
+        "point_f1": 0.22217368240396917,
+        "far_on_normal": 0.039057798069938775,
+        "segments": 1670,
+        "events": 327
+      },
+      "uniform_quota": {
+        "alarm_fraction": 0.12053527307228558,
+        "segment_precision": 0.1267454350161117,
+        "event_recall": 0.8042813455657493,
+        "event_f1": 0.2189818620585029,
+        "point_f1": 0.22385381828316614,
+        "far_on_normal": 0.10399501919684549,
+        "segments": 3724,
+        "events": 327
+      },
+      "audit_far": 0.04787864422849016
+    },
+    "0.1": {
+      "static": {
+        "alarm_fraction": 0.22893400011859816,
+        "segment_precision": 0.0946866485013624,
+        "event_recall": 0.7889908256880734,
+        "event_f1": 0.16908181811752557,
+        "point_f1": 0.19006012777151446,
+        "far_on_normal": 0.20958804607242917,
+        "segments": 4404,
+        "events": 327
+      },
+      "sliding": {
+        "alarm_fraction": 0.3060425767428989,
+        "segment_precision": 0.07929598788796366,
+        "event_recall": 0.8654434250764526,
+        "event_f1": 0.14528067827136365,
+        "point_f1": 0.17066196599595462,
+        "far_on_normal": 0.2858150876828889,
+        "segments": 5284,
+        "events": 327
+      },
+      "sliding_all": {
+        "alarm_fraction": 0.13676345595066317,
+        "segment_precision": 0.10562310030395136,
+        "event_recall": 0.7400611620795107,
+        "event_f1": 0.1848622655766985,
+        "point_f1": 0.19670651571530362,
+        "far_on_normal": 0.12202967728546228,
+        "segments": 3948,
+        "events": 327
+      },
+      "uniform_quota": {
+        "alarm_fraction": 0.22889446739538652,
+        "segment_precision": 0.09104781281790437,
+        "event_recall": 0.9113149847094801,
+        "event_f1": 0.16555529864168428,
+        "point_f1": 0.18555678519972438,
+        "far_on_normal": 0.20952578603299782,
+        "segments": 5898,
+        "events": 327
+      },
+      "audit_far": 0.12159279450106661
+    }
+  },
+  "limitation": "Pooled over 28 machines; far_on_normal = alarm share among test blocks with no GT tick. Statistic = largest one-tick change per channel in a 14-tick block, aggregated by the smallest channel tail probability."
+}

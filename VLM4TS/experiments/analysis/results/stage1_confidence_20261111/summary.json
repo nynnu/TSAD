@@ -1,0 +1,56 @@
+{
+  "dev": {
+    "channel_order": {
+      "spike_score (current)": {
+        "auroc": 0.7803212527015362,
+        "gt_channels_in_first_page": 0.6165354330708661
+      },
+      "source tier, then spike_score": {
+        "auroc": 0.7540648070913848,
+        "gt_channels_in_first_page": 0.6015748031496063
+      },
+      "rank(spike)+rank(seasonal)": {
+        "auroc": 0.7537008983090393,
+        "gt_channels_in_first_page": 0.6
+      },
+      "seasonal_score": {
+        "auroc": 0.6020960527421686,
+        "gt_channels_in_first_page": 0.5464566929133858
+      }
+    },
+    "interval_score_auroc_within_machine": {
+      "max_spike": 0.6930054612794054,
+      "n_both": 0.7968650993160797,
+      "frac_both": 0.728500368000038,
+      "n_channels": 0.7318674661953319,
+      "length": 0.698515445105283
+    }
+  },
+  "held": {
+    "channel_order": {
+      "spike_score (current)": {
+        "auroc": 0.9138493464659305,
+        "gt_channels_in_first_page": 0.7833333333333333
+      },
+      "source tier, then spike_score": {
+        "auroc": 0.9073456438696217,
+        "gt_channels_in_first_page": 0.7736111111111111
+      },
+      "rank(spike)+rank(seasonal)": {
+        "auroc": 0.8761827788596326,
+        "gt_channels_in_first_page": 0.7694444444444445
+      },
+      "seasonal_score": {
+        "auroc": 0.7324010193338589,
+        "gt_channels_in_first_page": 0.7152777777777778
+      }
+    },
+    "interval_score_auroc_within_machine": {
+      "max_spike": 0.7367795329880643,
+      "n_both": 0.7421514233922323,
+      "frac_both": 0.7010261984926649,
+      "n_channels": 0.7157596248353236,
+      "length": 0.6995614194279932
+    }
+  }
+}

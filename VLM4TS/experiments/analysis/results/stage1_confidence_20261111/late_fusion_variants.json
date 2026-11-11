@@ -1,0 +1,65 @@
+{
+  "results": {
+    "51 cores, base screen": {
+      "status tier only": {
+        "auroc": 0.49537037037037035,
+        "top_half_gt_share": 0.48
+      },
+      "Stage1 confidence only": {
+        "auroc": 0.6705246913580247,
+        "top_half_gt_share": 0.64
+      },
+      "priority (tier first)": {
+        "auroc": 0.5825617283950617,
+        "top_half_gt_share": 0.56
+      },
+      "equal-weight rank average": {
+        "auroc": 0.6257716049382716,
+        "top_half_gt_share": 0.56
+      },
+      "n": 51,
+      "gt_share": 0.47058823529411764
+    },
+    "51 cores, display v2": {
+      "status tier only": {
+        "auroc": 0.42592592592592593,
+        "top_half_gt_share": 0.44
+      },
+      "Stage1 confidence only": {
+        "auroc": 0.6705246913580247,
+        "top_half_gt_share": 0.64
+      },
+      "priority (tier first)": {
+        "auroc": 0.49691358024691357,
+        "top_half_gt_share": 0.48
+      },
+      "equal-weight rank average": {
+        "auroc": 0.5686728395061729,
+        "top_half_gt_share": 0.52
+      },
+      "n": 51,
+      "gt_share": 0.47058823529411764
+    },
+    "24 episodes (new machines)": {
+      "status tier only": {
+        "auroc": 0.6666666666666666,
+        "top_half_gt_share": 0.8333333333333334
+      },
+      "Stage1 confidence only": {
+        "auroc": 0.5694444444444444,
+        "top_half_gt_share": 0.5
+      },
+      "priority (tier first)": {
+        "auroc": 0.75,
+        "top_half_gt_share": 0.75
+      },
+      "equal-weight rank average": {
+        "auroc": 0.7326388888888888,
+        "top_half_gt_share": 0.6666666666666666
+      },
+      "n": 24,
+      "gt_share": 0.5
+    }
+  },
+  "limitation": "Small saved samples (51 cores, 24 episodes), one gpt-4o answer per page, report policy; the same cores were used in earlier design steps."
+}

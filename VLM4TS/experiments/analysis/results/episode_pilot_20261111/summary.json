@@ -1,0 +1,701 @@
+{
+  "summary": {
+    "gt": {
+      "n": 12,
+      "episode_anomalous": 0.5,
+      "episode_normal_repeat": 0.0,
+      "fragments_any_anomalous": 0.6666666666666666,
+      "fragments_majority_anomalous": 0.16666666666666666,
+      "fragments_disagree": 0.5,
+      "episode_status_anomalous": 0.5,
+      "fragment_status_anomalous_any": 0.6666666666666666
+    },
+    "non_gt": {
+      "n": 12,
+      "episode_anomalous": 0.16666666666666666,
+      "episode_normal_repeat": 0.0,
+      "fragments_any_anomalous": 0.4166666666666667,
+      "fragments_majority_anomalous": 0.0,
+      "fragments_disagree": 0.4166666666666667,
+      "episode_status_anomalous": 0.16666666666666666,
+      "fragment_status_anomalous_any": 0.4166666666666667
+    },
+    "calls": 77
+  },
+  "rows": [
+    {
+      "machine": "machine-3-11",
+      "span": [
+        21224,
+        21368
+      ],
+      "gt": true,
+      "gt_members": [
+        true,
+        true
+      ],
+      "members": 2,
+      "episode": {
+        "verdict": "uncertain",
+        "status": "uncertain"
+      },
+      "fragments": [
+        {
+          "verdict": "anomalous",
+          "status": "anomalous"
+        },
+        {
+          "verdict": "uncertain",
+          "status": "uncertain"
+        }
+      ]
+    },
+    {
+      "machine": "machine-3-4",
+      "span": [
+        6006,
+        6160
+      ],
+      "gt": true,
+      "gt_members": [
+        true,
+        false
+      ],
+      "members": 2,
+      "episode": {
+        "verdict": "uncertain",
+        "status": "uncertain"
+      },
+      "fragments": [
+        {
+          "verdict": "anomalous",
+          "status": "anomalous"
+        },
+        {
+          "verdict": "uncertain",
+          "status": "uncertain"
+        }
+      ]
+    },
+    {
+      "machine": "machine-3-4",
+      "span": [
+        4466,
+        4550
+      ],
+      "gt": true,
+      "gt_members": [
+        true,
+        true
+      ],
+      "members": 2,
+      "episode": {
+        "verdict": "uncertain",
+        "status": "uncertain"
+      },
+      "fragments": [
+        {
+          "verdict": "uncertain",
+          "status": "uncertain"
+        },
+        {
+          "verdict": "uncertain",
+          "status": "uncertain"
+        }
+      ]
+    },
+    {
+      "machine": "machine-2-3",
+      "span": [
+        832,
+        878
+      ],
+      "gt": true,
+      "gt_members": [
+        false,
+        false,
+        true,
+        false
+      ],
+      "members": 4,
+      "episode": {
+        "verdict": "anomalous",
+        "status": "anomalous"
+      },
+      "fragments": [
+        {
+          "verdict": "anomalous",
+          "status": "anomalous"
+        },
+        {
+          "verdict": "anomalous",
+          "status": "anomalous"
+        },
+        {
+          "verdict": "anomalous",
+          "status": "anomalous"
+        },
+        {
+          "verdict": "anomalous",
+          "status": "anomalous"
+        }
+      ]
+    },
+    {
+      "machine": "machine-2-7",
+      "span": [
+        14924,
+        15078
+      ],
+      "gt": true,
+      "gt_members": [
+        true,
+        true
+      ],
+      "members": 2,
+      "episode": {
+        "verdict": "anomalous",
+        "status": "anomalous"
+      },
+      "fragments": [
+        {
+          "verdict": "anomalous",
+          "status": "anomalous"
+        },
+        {
+          "verdict": "anomalous",
+          "status": "anomalous"
+        }
+      ]
+    },
+    {
+      "machine": "machine-3-4",
+      "span": [
+        18788,
+        18886
+      ],
+      "gt": true,
+      "gt_members": [
+        true,
+        true,
+        false
+      ],
+      "members": 3,
+      "episode": {
+        "verdict": "uncertain",
+        "status": "uncertain"
+      },
+      "fragments": [
+        {
+          "verdict": "anomalous",
+          "status": "anomalous"
+        },
+        {
+          "verdict": "uncertain",
+          "status": "uncertain"
+        },
+        {
+          "verdict": "uncertain",
+          "status": "uncertain"
+        }
+      ]
+    },
+    {
+      "machine": "machine-3-7",
+      "span": [
+        21196,
+        21330
+      ],
+      "gt": true,
+      "gt_members": [
+        true,
+        true
+      ],
+      "members": 2,
+      "episode": {
+        "verdict": "anomalous",
+        "status": "anomalous"
+      },
+      "fragments": [
+        {
+          "verdict": "uncertain",
+          "status": "uncertain"
+        },
+        {
+          "verdict": "uncertain",
+          "status": "uncertain"
+        }
+      ]
+    },
+    {
+      "machine": "machine-3-5",
+      "span": [
+        1302,
+        1456
+      ],
+      "gt": true,
+      "gt_members": [
+        true,
+        false
+      ],
+      "members": 2,
+      "episode": {
+        "verdict": "anomalous",
+        "status": "anomalous"
+      },
+      "fragments": [
+        {
+          "verdict": "anomalous",
+          "status": "anomalous"
+        },
+        {
+          "verdict": "uncertain",
+          "status": "uncertain"
+        }
+      ]
+    },
+    {
+      "machine": "machine-3-7",
+      "span": [
+        14784,
+        14938
+      ],
+      "gt": true,
+      "gt_members": [
+        true,
+        false
+      ],
+      "members": 2,
+      "episode": {
+        "verdict": "uncertain",
+        "status": "uncertain"
+      },
+      "fragments": [
+        {
+          "verdict": "anomalous",
+          "status": "anomalous"
+        },
+        {
+          "verdict": "uncertain",
+          "status": "uncertain"
+        }
+      ]
+    },
+    {
+      "machine": "machine-2-1",
+      "span": [
+        12166,
+        12278
+      ],
+      "gt": true,
+      "gt_members": [
+        true,
+        false
+      ],
+      "members": 2,
+      "episode": {
+        "verdict": "anomalous",
+        "status": "anomalous"
+      },
+      "fragments": [
+        {
+          "verdict": "anomalous",
+          "status": "anomalous"
+        },
+        {
+          "verdict": "uncertain",
+          "status": "uncertain"
+        }
+      ]
+    },
+    {
+      "machine": "machine-3-6",
+      "span": [
+        15832,
+        15853
+      ],
+      "gt": true,
+      "gt_members": [
+        true,
+        true,
+        true
+      ],
+      "members": 3,
+      "episode": {
+        "verdict": "uncertain",
+        "status": "uncertain"
+      },
+      "fragments": [
+        {
+          "verdict": "uncertain",
+          "status": "uncertain"
+        },
+        {
+          "verdict": "uncertain",
+          "status": "uncertain"
+        },
+        {
+          "verdict": "uncertain",
+          "status": "uncertain"
+        }
+      ]
+    },
+    {
+      "machine": "machine-2-1",
+      "span": [
+        7896,
+        7952
+      ],
+      "gt": true,
+      "gt_members": [
+        true,
+        true
+      ],
+      "members": 2,
+      "episode": {
+        "verdict": "anomalous",
+        "status": "anomalous"
+      },
+      "fragments": [
+        {
+          "verdict": "uncertain",
+          "status": "uncertain"
+        },
+        {
+          "verdict": "uncertain",
+          "status": "uncertain"
+        }
+      ]
+    },
+    {
+      "machine": "machine-3-5",
+      "span": [
+        21056,
+        21210
+      ],
+      "gt": false,
+      "gt_members": [
+        false,
+        false
+      ],
+      "members": 2,
+      "episode": {
+        "verdict": "uncertain",
+        "status": "uncertain"
+      },
+      "fragments": [
+        {
+          "verdict": "uncertain",
+          "status": "uncertain"
+        },
+        {
+          "verdict": "uncertain",
+          "status": "uncertain"
+        }
+      ]
+    },
+    {
+      "machine": "machine-3-11",
+      "span": [
+        21756,
+        21798
+      ],
+      "gt": false,
+      "gt_members": [
+        false,
+        false
+      ],
+      "members": 2,
+      "episode": {
+        "verdict": "uncertain",
+        "status": "uncertain"
+      },
+      "fragments": [
+        {
+          "verdict": "uncertain",
+          "status": "uncertain"
+        },
+        {
+          "verdict": "uncertain",
+          "status": "uncertain"
+        }
+      ]
+    },
+    {
+      "machine": "machine-3-6",
+      "span": [
+        10108,
+        10248
+      ],
+      "gt": false,
+      "gt_members": [
+        false,
+        false
+      ],
+      "members": 2,
+      "episode": {
+        "verdict": "uncertain",
+        "status": "uncertain"
+      },
+      "fragments": [
+        {
+          "verdict": "uncertain",
+          "status": "uncertain"
+        },
+        {
+          "verdict": "uncertain",
+          "status": "uncertain"
+        }
+      ]
+    },
+    {
+      "machine": "machine-3-1",
+      "span": [
+        28224,
+        28350
+      ],
+      "gt": false,
+      "gt_members": [
+        false,
+        false
+      ],
+      "members": 2,
+      "episode": {
+        "verdict": "anomalous",
+        "status": "anomalous"
+      },
+      "fragments": [
+        {
+          "verdict": "uncertain",
+          "status": "uncertain"
+        },
+        {
+          "verdict": "uncertain",
+          "status": "uncertain"
+        }
+      ]
+    },
+    {
+      "machine": "machine-3-1",
+      "span": [
+        21392,
+        21434
+      ],
+      "gt": false,
+      "gt_members": [
+        false,
+        false
+      ],
+      "members": 2,
+      "episode": {
+        "verdict": "uncertain",
+        "status": "uncertain"
+      },
+      "fragments": [
+        {
+          "verdict": "uncertain",
+          "status": "uncertain"
+        },
+        {
+          "verdict": "anomalous",
+          "status": "anomalous"
+        }
+      ]
+    },
+    {
+      "machine": "machine-3-9",
+      "span": [
+        28238,
+        28364
+      ],
+      "gt": false,
+      "gt_members": [
+        false,
+        false
+      ],
+      "members": 2,
+      "episode": {
+        "verdict": "uncertain",
+        "status": "uncertain"
+      },
+      "fragments": [
+        {
+          "verdict": "uncertain",
+          "status": "uncertain"
+        },
+        {
+          "verdict": "uncertain",
+          "status": "uncertain"
+        }
+      ]
+    },
+    {
+      "machine": "machine-3-6",
+      "span": [
+        5376,
+        5516
+      ],
+      "gt": false,
+      "gt_members": [
+        false,
+        false
+      ],
+      "members": 2,
+      "episode": {
+        "verdict": "anomalous",
+        "status": "anomalous"
+      },
+      "fragments": [
+        {
+          "verdict": "anomalous",
+          "status": "anomalous"
+        },
+        {
+          "verdict": "uncertain",
+          "status": "uncertain"
+        }
+      ]
+    },
+    {
+      "machine": "machine-3-9",
+      "span": [
+        20902,
+        21042
+      ],
+      "gt": false,
+      "gt_members": [
+        false,
+        false
+      ],
+      "members": 2,
+      "episode": {
+        "verdict": "uncertain",
+        "status": "uncertain"
+      },
+      "fragments": [
+        {
+          "verdict": "uncertain",
+          "status": "uncertain"
+        },
+        {
+          "verdict": "uncertain",
+          "status": "uncertain"
+        }
+      ]
+    },
+    {
+      "machine": "machine-3-7",
+      "span": [
+        560,
+        700
+      ],
+      "gt": false,
+      "gt_members": [
+        false,
+        false,
+        false
+      ],
+      "members": 3,
+      "episode": {
+        "verdict": "uncertain",
+        "status": "uncertain"
+      },
+      "fragments": [
+        {
+          "verdict": "uncertain",
+          "status": "uncertain"
+        },
+        {
+          "verdict": "uncertain",
+          "status": "uncertain"
+        },
+        {
+          "verdict": "anomalous",
+          "status": "anomalous"
+        }
+      ]
+    },
+    {
+      "machine": "machine-3-4",
+      "span": [
+        19544,
+        19656
+      ],
+      "gt": false,
+      "gt_members": [
+        false,
+        false
+      ],
+      "members": 2,
+      "episode": {
+        "verdict": "uncertain",
+        "status": "uncertain"
+      },
+      "fragments": [
+        {
+          "verdict": "anomalous",
+          "status": "anomalous"
+        },
+        {
+          "verdict": "uncertain",
+          "status": "uncertain"
+        }
+      ]
+    },
+    {
+      "machine": "machine-2-8",
+      "span": [
+        9170,
+        9310
+      ],
+      "gt": false,
+      "gt_members": [
+        false,
+        false
+      ],
+      "members": 2,
+      "episode": {
+        "verdict": "uncertain",
+        "status": "uncertain"
+      },
+      "fragments": [
+        {
+          "verdict": "uncertain",
+          "status": "uncertain"
+        },
+        {
+          "verdict": "uncertain",
+          "status": "uncertain"
+        }
+      ]
+    },
+    {
+      "machine": "machine-3-9",
+      "span": [
+        17029,
+        17066
+      ],
+      "gt": false,
+      "gt_members": [
+        false,
+        false
+      ],
+      "members": 2,
+      "episode": {
+        "verdict": "uncertain",
+        "status": "uncertain"
+      },
+      "fragments": [
+        {
+          "verdict": "anomalous",
+          "status": "anomalous"
+        },
+        {
+          "verdict": "uncertain",
+          "status": "uncertain"
+        }
+      ]
+    }
+  ],
+  "limitation": "24 episodes from 14 machines not used in earlier VLM pilots; one gpt-4o call per page; page 1 only; report scope policy."
+}
