@@ -4,6 +4,7 @@
 
 ```
 이상 구간  = (spike 점수 + 높이 점수) 상위 0.2%   OR   탈주기 점수 상위 1%
+             ※ 0.2%는 채널×틱 전체를 모은 분위수라 실제로는 채널 하나라도 넘긴 틱이 3.4~3.8%(SMD 3개 장비). 채널별 분위수로 바꾸면 구간 정밀도·사건 재현율이 모두 떨어져 유지함
 채널 후보  = 그 구간 안에서 (spike 점수 + 높이 점수) 또는 탈주기 점수가 machine 상위 10%인 채널
 ```
 
@@ -106,3 +107,37 @@ python evaluate.py --data ../../mv_data/SMD --out output          # 성능 확�
 - `../10월_분석/BEST_MODEL.md`: 모델 버전별 정리 ("2026-10-21 저장" 부분이 이 모델)
 - `../10월_분석/체크리스트.md`: 모든 실험과 결과, 실패한 방법(POT, Telemanom, knee 등)과 그 이유를 시간 순서로 기록
 - 이 폴더의 코드는 `../10월_분석/`의 `run_spike_height.py`(점수), `eval_flat_fix.py`(보정), `24주차_원인분석/exp_J_phase_deseason.py`(탈주기), `eval_channel_handoff2.py`(구간·채널)를 하나로 합친 것
+
+## Stage1→Stage2 통합 실험 계약 (`stage1_statistical.py`)
+
+위의 `stage1.py`는 기존 최종 결과를 재현하기 위해 유지한다. 새 연결 실험은
+`stage1_statistical.py`와 `../stage2/run_stage2_review_hfz_v2.py`를 **항상 한 쌍**으로 사용한다.
+
+```text
+train-calibrated event score
+  ├─ high band   : 자동 이상 후보
+  └─ review band : Stage2가 정상 반복인지 다시 판단할 약한 후보
+          ↓
+각 event를 score peak 중심의 고정 224-tick tile로 분할 (긴 event는 최대 3개)
+          ↓
+tile 안에서 시간 보정 + BH-FDR을 통과한 후보 채널 및 channel peak
+          ↓
+HFZ + retrieved train-normal reference overlay
+          ↓
+VLM: event validity + anomalous-channel ranking
+```
+
+`intervals`의 각 항목은 이제 항상 Stage2가 바로 렌더링할 수 있는 고정 길이 tile이다.
+
+```json
+{
+  "start": 15859, "end": 16083, "band": "high",
+  "parent_start": 15970, "parent_end": 15972,
+  "tile_peak": 15971,
+  "channels": [{"channel": 30, "zoom_center": 15971, "selection": "fdr"}]
+}
+```
+
+`band`는 `high` 또는 `review`이고, `selection`은 FDR 통과 채널 또는 FDR 후보가 없을 때의
+`event_winner`임. 후자는 Stage2가 비어 있는 proposal을 받지 않게 하기 위한 명시적 fallback이며,
+FDR 근거가 있다는 뜻은 아님.

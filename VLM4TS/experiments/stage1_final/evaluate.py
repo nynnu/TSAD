@@ -23,7 +23,7 @@ def gt_channels(data, e, a, b):
     if f.exists():
         for line in open(f):
             rg, cs = line.strip().split(":"); x, y = map(int, rg.split("-"))
-            if x <= b and y >= a:
+            if x < b and y > a:     # half-open like segs() and annotation_contract: touching events must not share channels
                 chs |= {int(c) - 1 for c in cs.split(",")}
     return chs
 

@@ -2,6 +2,8 @@
 Stage1 최종 모델 (나연, 2026-10-21 저장 설정) — Stage2에 넘길 이상 구간 + 채널 후보 + 채널별 확대 위치를 machine별 JSON으로 저장
 
   이상 구간 = (spike 점수 + 높이 점수) 상위 0.2%  OR  탈주기 점수(채널 최댓값) 상위 1%
+             (0.2%는 38채널×전 틱을 한데 모은 분위수. 채널 하나라도 넘긴 틱은 SMD 3개 장비에서 3.4~3.8%이고, 경보의 절반 이상을
+              채널 3개가 차지함. 채널별 분위수로 같은 경보량을 맞추면 구간 정밀도 0.53→0.41, 사건 재현율 0.92→0.71로 나빠져 유지함)
   채널 후보 = 그 구간 안에서 (spike 점수 + 높이 점수) > machine 상위 10%  OR  채널 탈주기 점수 > machine 상위 10%
   정답 라벨은 쓰지 않음.
 
@@ -11,7 +13,10 @@ Stage1 최종 모델 (나연, 2026-10-21 저장 설정) — Stage2에 넘길 이
   캐시:  cache/{machine}_dino.npz  — DINOv2 점수(spike, height). 가장 오래 걸리는 부분이라 한 번 계산하면 다시 씀
 """
 import argparse
+from concurrent.futures import ThreadPoolExecutor
+import hashlib
 import json
+import os
 import pickle
 from pathlib import Path
 
@@ -25,6 +30,7 @@ P = WIN // GRID                # 열 하나 = 14틱
 ROLL_WIN = 60                  # 탈주기 이동평균 길이
 INTERVAL_SPIKE, INTERVAL_DESEASON, CHANNEL_PCT = 0.2, 1.0, 10.0   # 상위 %
 ZOOM_HALF = 30                 # 확대 위치 ±30틱 (Stage2 확대 그림 60틱)
+DINO_BATCH = int(os.environ.get("VLM4TS_DINO_BATCH", "256"))
 
 
 # ── 그림 만들기 ─────────────────────────────────────────────────────
@@ -56,7 +62,7 @@ def patches(dino, imgs):
         return m.forward_features(torch.stack([tf(im) for im in imgs]).to(dev))["x_norm_patchtokens"].cpu().numpy()   # (N, 256, 768)
 
 
-def dino_scores(dino, tr, te):
+def dino_scores(dino, tr, te, window_stride=1):
     """채널 × 틱 spike 점수, 높이 점수 (열 14틱마다 같은 값). 그림을 못 그리는 채널은 NaN"""
     sc0, clf = pickle.load(open(HERE / "models" / "spike_direction.pkl", "rb"))
     sc1, reg = pickle.load(open(HERE / "models" / "height_v3.pkl", "rb"))
@@ -68,14 +74,25 @@ def dino_scores(dino, tr, te):
             if np.ptp(te[:, c]) < 1e-6:
                 continue                       # test도 상수면 건너뜀
             g0, g1 = 0.0, 1.0                  # test에서 움직이면 0~1 눈금
-        imgs = [ts_to_image(te[w * WIN:(w + 1) * WIN, c], min(g0, te[w * WIN:(w + 1) * WIN, c].min()),
-                            max(g1, te[w * WIN:(w + 1) * WIN, c].max())) for w in range(nwin)]   # train 범위 넘으면 눈금 넓힘
-        for s0 in range(0, nwin, 64):
-            for j, V in enumerate(patches(dino, imgs[s0:s0 + 64])):
-                w = s0 + j; sl = slice(w * WIN, (w + 1) * WIN)
-                spike[c, sl] = np.repeat(clf.decision_function(sc0.transform(V)).reshape(GRID, GRID).max(0), P)   # 열마다 16행 최댓값
-                v = V.reshape(GRID, GRID, -1); F = np.concatenate([v.max(0), v.mean(0)], 1)                       # 열 특징 [최댓값, 평균]
-                height[c, sl] = np.repeat(reg.predict(sc1.transform(F)), P)
+        windows = list(range(0, nwin, window_stride))
+
+        def render(w):
+            x = te[w * WIN:(w + 1) * WIN, c]
+            return ts_to_image(x, min(g0, x.min()), max(g1, x.max()))
+
+        # Rendering PIL line plots, not DINO itself, is the dominant CPU-side
+        # cost.  Render each GPU batch concurrently so DINO receives a much
+        # larger continuous stream of already prepared images.
+        workers = min(8, os.cpu_count() or 1, DINO_BATCH)
+        with ThreadPoolExecutor(max_workers=workers) as pool:
+            for s0 in range(0, len(windows), DINO_BATCH):
+                batch_windows = windows[s0:s0 + DINO_BATCH]
+                imgs = list(pool.map(render, batch_windows))
+                for w, V in zip(batch_windows, patches(dino, imgs)):
+                    sl = slice(w * WIN, (w + 1) * WIN)
+                    spike[c, sl] = np.repeat(clf.decision_function(sc0.transform(V)).reshape(GRID, GRID).max(0), P)   # 열마다 16행 최댓값
+                    v = V.reshape(GRID, GRID, -1); F = np.concatenate([v.max(0), v.mean(0)], 1)                       # 열 특징 [최댓값, 평균]
+                    height[c, sl] = np.repeat(reg.predict(sc1.transform(F)), P)
     return spike, height
 
 
@@ -129,13 +146,48 @@ def segs(mask):
     d = np.diff(np.r_[0, mask.astype(int), 0]); return list(zip(np.where(d == 1)[0].tolist(), np.where(d == -1)[0].tolist()))
 
 
+def dino_patch_center(start, end, offset, patch_width=P):
+    """Global DINO column center clipped to its intersection with this event.
+
+    Scores are repeated on globally aligned 14-tick columns, not columns
+    restarting at the event boundary. All bounds are half-open.
+    """
+    if not (0 <= start < end and 0 <= offset < end-start and patch_width > 0):
+        raise ValueError('Invalid candidate or local score offset')
+    tick = start + offset
+    patch_start = (tick // patch_width) * patch_width
+    left = max(start, patch_start)
+    right = min(end, patch_start + patch_width)
+    return min(max(patch_start + patch_width // 2, left), right - 1)
+
+
+def cache_key(tr, te):
+    """Everything the DINO scores depend on: both series, both score models, the window geometry."""
+    h = hashlib.sha256(f"{WIN},{GRID}".encode())
+    for part in (tr.tobytes(), te.tobytes(), (HERE / "models" / "spike_direction.pkl").read_bytes(), (HERE / "models" / "height_v3.pkl").read_bytes()):
+        h.update(hashlib.sha256(part).digest())
+    return h.hexdigest()
+
+
+def cached_scores(f, key, compute):
+    """Reuse the score cache only if it was written for the same inputs. Caches written before keys existed
+    are trusted as they are (loudly) because recomputing needs the GPU run again."""
+    if f.exists():
+        d = np.load(f)
+        if "key" not in d:
+            print(f"warning: {f.name} has no input key (legacy cache), used as is", flush=True)
+            return d["spike"], d["height"]
+        if str(d["key"]) == key:
+            return d["spike"], d["height"]
+        print(f"{f.name}: data or models changed since this cache was written, recomputing", flush=True)
+    spike, height = compute()
+    np.savez(f, spike=spike, height=height, key=np.array(key))
+    return spike, height
+
+
 def run_machine(e, data, cache, dino_fn):
     tr = np.loadtxt(data / "train" / f"{e}.txt", delimiter=","); te = np.loadtxt(data / "test" / f"{e}.txt", delimiter=",")
-    f = cache / f"{e}_dino.npz"
-    if f.exists():
-        d = np.load(f); spike, height = d["spike"], d["height"]
-    else:
-        spike, height = dino_scores(dino_fn(), tr, te); np.savez(f, spike=spike, height=height)
+    spike, height = cached_scores(cache / f"{e}_dino.npz", cache_key(tr, te), lambda: dino_scores(dino_fn(), tr, te))
     T = min(len(te), spike.shape[1]); te = te[:T]
     X = calib(drop_flat(spike[:, :T], te, tr)) + calib(drop_flat(height[:, :T], te, tr))   # spike 점수 + 높이 점수
     D = deseason(tr, te)[:, :T]; Dm = D.max(0)
@@ -148,8 +200,8 @@ def run_machine(e, data, cache, dino_fn):
         for c in np.where((xs > tx) | (ds > td))[0]:
             by_spike = bool(xs[c] > tx); by_des = bool(ds[c] > td)
             # 확대 위치: spike 쪽으로 뽑힌 채널은 점수가 가장 높은 열의 가운데, 탈주기만으로 뽑힌 채널은 탈주기 점수가 가장 높은 틱
-            t = a + (int(np.argmax(Xv[c, a:b])) // P * P + P // 2 if by_spike else int(np.argmax(D[c, a:b])))
-            t = min(t, b - 1)
+            t = (dino_patch_center(a, b, int(np.argmax(Xv[c, a:b]))) if by_spike
+                 else a + int(np.argmax(D[c, a:b])))
             chans.append(dict(channel=int(c), source="both" if by_spike and by_des else "spike" if by_spike else "deseason",
                               spike_score=round(float(xs[c]), 3) if np.isfinite(xs[c]) else None, deseason_score=round(float(ds[c]), 3),
                               zoom_center=int(t), zoom=[max(0, int(t) - ZOOM_HALF), min(T, int(t) + ZOOM_HALF)]))
