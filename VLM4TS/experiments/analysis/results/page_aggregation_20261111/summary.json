@@ -1,0 +1,866 @@
+{
+  "summary": {
+    "A": {
+      "gt": {
+        "n": 12,
+        "anomalous": 8
+      },
+      "non_gt": {
+        "n": 12,
+        "anomalous": 2
+      },
+      "channel_tp": 13,
+      "channel_fp": 6
+    },
+    "B": {
+      "gt": {
+        "n": 12,
+        "anomalous": 6
+      },
+      "non_gt": {
+        "n": 12,
+        "anomalous": 2
+      },
+      "channel_tp": 13,
+      "channel_fp": 6
+    },
+    "C": {
+      "gt": {
+        "n": 12,
+        "anomalous": 1
+      },
+      "non_gt": {
+        "n": 12,
+        "anomalous": 1
+      },
+      "channel_tp": 0,
+      "channel_fp": 2
+    },
+    "pages_judged": 65,
+    "extra_pages": 41
+  },
+  "rows": [
+    {
+      "machine": "machine-3-11",
+      "span": [
+        21224,
+        21368
+      ],
+      "gt": true,
+      "gt_channels": null,
+      "pages": 4,
+      "verdicts": [
+        "uncertain",
+        "anomalous",
+        "uncertain",
+        "uncertain"
+      ],
+      "A": {
+        "anomalous": true,
+        "channels": [
+          0,
+          2,
+          9,
+          31
+        ]
+      },
+      "B": {
+        "anomalous": false,
+        "channels": []
+      },
+      "C": {
+        "anomalous": false,
+        "channels": [
+          0,
+          2,
+          9,
+          31
+        ]
+      }
+    },
+    {
+      "machine": "machine-3-4",
+      "span": [
+        6006,
+        6160
+      ],
+      "gt": true,
+      "gt_channels": null,
+      "pages": 3,
+      "verdicts": [
+        "uncertain",
+        "uncertain",
+        "uncertain"
+      ],
+      "A": {
+        "anomalous": false,
+        "channels": []
+      },
+      "B": {
+        "anomalous": false,
+        "channels": []
+      },
+      "C": {
+        "anomalous": false,
+        "channels": []
+      }
+    },
+    {
+      "machine": "machine-3-4",
+      "span": [
+        4466,
+        4550
+      ],
+      "gt": true,
+      "gt_channels": null,
+      "pages": 3,
+      "verdicts": [
+        "uncertain",
+        "anomalous",
+        "uncertain"
+      ],
+      "A": {
+        "anomalous": true,
+        "channels": [
+          25
+        ]
+      },
+      "B": {
+        "anomalous": false,
+        "channels": []
+      },
+      "C": {
+        "anomalous": false,
+        "channels": [
+          25
+        ]
+      }
+    },
+    {
+      "machine": "machine-2-3",
+      "span": [
+        832,
+        878
+      ],
+      "gt": true,
+      "gt_channels": null,
+      "pages": 1,
+      "verdicts": [
+        "anomalous"
+      ],
+      "A": {
+        "anomalous": true,
+        "channels": [
+          9,
+          11,
+          14,
+          34
+        ]
+      },
+      "B": {
+        "anomalous": true,
+        "channels": [
+          9,
+          11,
+          14,
+          34
+        ]
+      },
+      "C": {
+        "anomalous": true,
+        "channels": [
+          9,
+          11,
+          14,
+          34
+        ]
+      }
+    },
+    {
+      "machine": "machine-2-7",
+      "span": [
+        14924,
+        15078
+      ],
+      "gt": true,
+      "gt_channels": [
+        8,
+        12,
+        13,
+        14,
+        32,
+        33
+      ],
+      "pages": 2,
+      "verdicts": [
+        "anomalous",
+        "uncertain"
+      ],
+      "A": {
+        "anomalous": true,
+        "channels": [
+          8,
+          12,
+          13,
+          14,
+          33
+        ]
+      },
+      "B": {
+        "anomalous": true,
+        "channels": [
+          8,
+          12,
+          13,
+          14,
+          33
+        ]
+      },
+      "C": {
+        "anomalous": false,
+        "channels": [
+          8,
+          12,
+          13,
+          14,
+          33
+        ]
+      }
+    },
+    {
+      "machine": "machine-3-4",
+      "span": [
+        18788,
+        18886
+      ],
+      "gt": true,
+      "gt_channels": null,
+      "pages": 3,
+      "verdicts": [
+        "uncertain",
+        "uncertain",
+        "uncertain"
+      ],
+      "A": {
+        "anomalous": false,
+        "channels": []
+      },
+      "B": {
+        "anomalous": false,
+        "channels": []
+      },
+      "C": {
+        "anomalous": false,
+        "channels": []
+      }
+    },
+    {
+      "machine": "machine-3-7",
+      "span": [
+        21196,
+        21330
+      ],
+      "gt": true,
+      "gt_channels": null,
+      "pages": 5,
+      "verdicts": [
+        "anomalous",
+        "anomalous",
+        "uncertain",
+        "uncertain",
+        "uncertain"
+      ],
+      "A": {
+        "anomalous": true,
+        "channels": [
+          5,
+          6,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          16,
+          17,
+          22,
+          32
+        ]
+      },
+      "B": {
+        "anomalous": true,
+        "channels": [
+          5,
+          6,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          16,
+          17,
+          22,
+          32
+        ]
+      },
+      "C": {
+        "anomalous": false,
+        "channels": [
+          5,
+          6,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          16,
+          17,
+          22,
+          32
+        ]
+      }
+    },
+    {
+      "machine": "machine-3-5",
+      "span": [
+        1302,
+        1456
+      ],
+      "gt": true,
+      "gt_channels": [
+        10,
+        11,
+        12,
+        14,
+        15,
+        18,
+        19,
+        20,
+        21,
+        27,
+        30
+      ],
+      "pages": 3,
+      "verdicts": [
+        "anomalous",
+        "uncertain",
+        "uncertain"
+      ],
+      "A": {
+        "anomalous": true,
+        "channels": [
+          11,
+          12,
+          18,
+          19,
+          20,
+          21,
+          27,
+          30
+        ]
+      },
+      "B": {
+        "anomalous": true,
+        "channels": [
+          11,
+          12,
+          18,
+          19,
+          20,
+          21,
+          27,
+          30
+        ]
+      },
+      "C": {
+        "anomalous": false,
+        "channels": [
+          11,
+          12,
+          18,
+          19,
+          20,
+          21,
+          27,
+          30
+        ]
+      }
+    },
+    {
+      "machine": "machine-3-7",
+      "span": [
+        14784,
+        14938
+      ],
+      "gt": true,
+      "gt_channels": null,
+      "pages": 3,
+      "verdicts": [
+        "uncertain",
+        "uncertain",
+        "uncertain"
+      ],
+      "A": {
+        "anomalous": false,
+        "channels": []
+      },
+      "B": {
+        "anomalous": false,
+        "channels": []
+      },
+      "C": {
+        "anomalous": false,
+        "channels": []
+      }
+    },
+    {
+      "machine": "machine-2-1",
+      "span": [
+        12166,
+        12278
+      ],
+      "gt": true,
+      "gt_channels": null,
+      "pages": 3,
+      "verdicts": [
+        "anomalous",
+        "uncertain",
+        "uncertain"
+      ],
+      "A": {
+        "anomalous": true,
+        "channels": [
+          8,
+          9,
+          27
+        ]
+      },
+      "B": {
+        "anomalous": true,
+        "channels": [
+          8,
+          9,
+          27
+        ]
+      },
+      "C": {
+        "anomalous": false,
+        "channels": [
+          8,
+          9,
+          27
+        ]
+      }
+    },
+    {
+      "machine": "machine-3-6",
+      "span": [
+        15832,
+        15853
+      ],
+      "gt": true,
+      "gt_channels": null,
+      "pages": 3,
+      "verdicts": [
+        "uncertain",
+        "uncertain",
+        "uncertain"
+      ],
+      "A": {
+        "anomalous": false,
+        "channels": []
+      },
+      "B": {
+        "anomalous": false,
+        "channels": []
+      },
+      "C": {
+        "anomalous": false,
+        "channels": []
+      }
+    },
+    {
+      "machine": "machine-2-1",
+      "span": [
+        7896,
+        7952
+      ],
+      "gt": true,
+      "gt_channels": null,
+      "pages": 2,
+      "verdicts": [
+        "anomalous",
+        "uncertain"
+      ],
+      "A": {
+        "anomalous": true,
+        "channels": [
+          8,
+          9,
+          10
+        ]
+      },
+      "B": {
+        "anomalous": true,
+        "channels": [
+          8,
+          9,
+          10
+        ]
+      },
+      "C": {
+        "anomalous": false,
+        "channels": [
+          8,
+          9,
+          10
+        ]
+      }
+    },
+    {
+      "machine": "machine-3-5",
+      "span": [
+        21056,
+        21210
+      ],
+      "gt": false,
+      "gt_channels": [],
+      "pages": 3,
+      "verdicts": [
+        "uncertain",
+        "uncertain",
+        "uncertain"
+      ],
+      "A": {
+        "anomalous": false,
+        "channels": []
+      },
+      "B": {
+        "anomalous": false,
+        "channels": []
+      },
+      "C": {
+        "anomalous": false,
+        "channels": []
+      }
+    },
+    {
+      "machine": "machine-3-11",
+      "span": [
+        21756,
+        21798
+      ],
+      "gt": false,
+      "gt_channels": [],
+      "pages": 1,
+      "verdicts": [
+        "uncertain"
+      ],
+      "A": {
+        "anomalous": false,
+        "channels": []
+      },
+      "B": {
+        "anomalous": false,
+        "channels": []
+      },
+      "C": {
+        "anomalous": false,
+        "channels": []
+      }
+    },
+    {
+      "machine": "machine-3-6",
+      "span": [
+        10108,
+        10248
+      ],
+      "gt": false,
+      "gt_channels": [],
+      "pages": 2,
+      "verdicts": [
+        "uncertain",
+        "uncertain"
+      ],
+      "A": {
+        "anomalous": false,
+        "channels": []
+      },
+      "B": {
+        "anomalous": false,
+        "channels": []
+      },
+      "C": {
+        "anomalous": false,
+        "channels": []
+      }
+    },
+    {
+      "machine": "machine-3-1",
+      "span": [
+        28224,
+        28350
+      ],
+      "gt": false,
+      "gt_channels": [],
+      "pages": 3,
+      "verdicts": [
+        "anomalous",
+        "uncertain",
+        "uncertain"
+      ],
+      "A": {
+        "anomalous": true,
+        "channels": [
+          22,
+          23,
+          25,
+          31
+        ]
+      },
+      "B": {
+        "anomalous": true,
+        "channels": [
+          22,
+          23,
+          25,
+          31
+        ]
+      },
+      "C": {
+        "anomalous": false,
+        "channels": [
+          22,
+          23,
+          25,
+          31
+        ]
+      }
+    },
+    {
+      "machine": "machine-3-1",
+      "span": [
+        21392,
+        21434
+      ],
+      "gt": false,
+      "gt_channels": [],
+      "pages": 3,
+      "verdicts": [
+        "uncertain",
+        "uncertain",
+        "uncertain"
+      ],
+      "A": {
+        "anomalous": false,
+        "channels": []
+      },
+      "B": {
+        "anomalous": false,
+        "channels": []
+      },
+      "C": {
+        "anomalous": false,
+        "channels": []
+      }
+    },
+    {
+      "machine": "machine-3-9",
+      "span": [
+        28238,
+        28364
+      ],
+      "gt": false,
+      "gt_channels": [],
+      "pages": 4,
+      "verdicts": [
+        "uncertain",
+        "uncertain",
+        "uncertain",
+        "uncertain"
+      ],
+      "A": {
+        "anomalous": false,
+        "channels": []
+      },
+      "B": {
+        "anomalous": false,
+        "channels": []
+      },
+      "C": {
+        "anomalous": false,
+        "channels": []
+      }
+    },
+    {
+      "machine": "machine-3-6",
+      "span": [
+        5376,
+        5516
+      ],
+      "gt": false,
+      "gt_channels": [],
+      "pages": 1,
+      "verdicts": [
+        "anomalous"
+      ],
+      "A": {
+        "anomalous": true,
+        "channels": [
+          9,
+          33
+        ]
+      },
+      "B": {
+        "anomalous": true,
+        "channels": [
+          9,
+          33
+        ]
+      },
+      "C": {
+        "anomalous": true,
+        "channels": [
+          9,
+          33
+        ]
+      }
+    },
+    {
+      "machine": "machine-3-9",
+      "span": [
+        20902,
+        21042
+      ],
+      "gt": false,
+      "gt_channels": [],
+      "pages": 3,
+      "verdicts": [
+        "uncertain",
+        "uncertain",
+        "uncertain"
+      ],
+      "A": {
+        "anomalous": false,
+        "channels": []
+      },
+      "B": {
+        "anomalous": false,
+        "channels": []
+      },
+      "C": {
+        "anomalous": false,
+        "channels": []
+      }
+    },
+    {
+      "machine": "machine-3-7",
+      "span": [
+        560,
+        700
+      ],
+      "gt": false,
+      "gt_channels": [],
+      "pages": 2,
+      "verdicts": [
+        "uncertain",
+        "uncertain"
+      ],
+      "A": {
+        "anomalous": false,
+        "channels": []
+      },
+      "B": {
+        "anomalous": false,
+        "channels": []
+      },
+      "C": {
+        "anomalous": false,
+        "channels": []
+      }
+    },
+    {
+      "machine": "machine-3-4",
+      "span": [
+        19544,
+        19656
+      ],
+      "gt": false,
+      "gt_channels": [],
+      "pages": 2,
+      "verdicts": [
+        "uncertain",
+        "uncertain"
+      ],
+      "A": {
+        "anomalous": false,
+        "channels": []
+      },
+      "B": {
+        "anomalous": false,
+        "channels": []
+      },
+      "C": {
+        "anomalous": false,
+        "channels": []
+      }
+    },
+    {
+      "machine": "machine-2-8",
+      "span": [
+        9170,
+        9310
+      ],
+      "gt": false,
+      "gt_channels": [],
+      "pages": 4,
+      "verdicts": [
+        "uncertain",
+        "uncertain",
+        "uncertain",
+        "uncertain"
+      ],
+      "A": {
+        "anomalous": false,
+        "channels": []
+      },
+      "B": {
+        "anomalous": false,
+        "channels": []
+      },
+      "C": {
+        "anomalous": false,
+        "channels": []
+      }
+    },
+    {
+      "machine": "machine-3-9",
+      "span": [
+        17029,
+        17066
+      ],
+      "gt": false,
+      "gt_channels": [],
+      "pages": 2,
+      "verdicts": [
+        "uncertain",
+        "uncertain"
+      ],
+      "A": {
+        "anomalous": false,
+        "channels": []
+      },
+      "B": {
+        "anomalous": false,
+        "channels": []
+      },
+      "C": {
+        "anomalous": false,
+        "channels": []
+      }
+    }
+  ],
+  "limitation": "24 episodes, 14 machines, one gpt-4o answer per page, annotated channel labels only where exact."
+}

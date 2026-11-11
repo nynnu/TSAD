@@ -1,0 +1,42 @@
+[
+  {
+    "channel": 1,
+    "focus_start": 10085,
+    "focus_end": 10145,
+    "context": 48,
+    "n_refs": 8,
+    "context_rmse": 0.11332301606602706,
+    "reference_starts": [
+      7258,
+      10128,
+      2918,
+      5816,
+      8700,
+      1476,
+      13026,
+      4388
+    ],
+    "context_level_rmse": 0.09280483163355444,
+    "context_change_rmse": 0.09197139985635361,
+    "context_distance_definition": "sqrt(level_mse + 0.5 * first_difference_mse)",
+    "period": null,
+    "period_strength": 0.0,
+    "limited": false,
+    "reference_status": "context_supported",
+    "context_support_p": 0.7230769230769231,
+    "validation_queries": 64,
+    "validation_focus_rmse_q90": 0.1841901065395727,
+    "validation_outside_fraction": 0.33307291666666666,
+    "bank_interval": [
+      0,
+      14363
+    ],
+    "validation_interval": [
+      14363,
+      21544
+    ],
+    "support_audit_failure_fraction": 0.03125,
+    "support_audit_warning": false,
+    "reliability_scope": "pre-focus context support only; does not establish focus normality"
+  }
+]
