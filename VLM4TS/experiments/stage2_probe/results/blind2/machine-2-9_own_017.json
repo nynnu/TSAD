@@ -1,0 +1,229 @@
+{
+ "machine": "machine-2-9",
+ "mode": "own",
+ "k": 17,
+ "start": 19312,
+ "end": 19421,
+ "channels": [
+  1,
+  2,
+  5,
+  6,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  15,
+  23,
+  25,
+  34,
+  35
+ ],
+ "top": 12,
+ "images": [
+  "017_p1.png",
+  "017_p2.png"
+ ],
+ "prompt": "다변량 서버 시계열(SMD, 38채널)입니다. 값은 채널마다 0 = train 최솟값, 1 = train 최댓값(빨간 점선)으로 맞췄습니다.\n탐지기가 구간 [19312, 19421)(주황)를 이상 후보로 표시하고, 아래 채널들을 이상 채널 후보로 넘겼습니다: [1, 2, 5, 6, 8, 9, 10, 11, 12, 13, 14, 15, 23, 25, 34, 35]\n이 구간은 하루(1440틱) 중 0.36 시점입니다(0 = 하루 시작).\n\n그림: 채널마다 한 줄, 채널 번호 순. 여러 장일 수 있습니다.\n1) test 창 (주황 = 탐지기가 표시한 구간)\n2) 비교 칸: 채널마다 train에서 가장 비슷한 창 (채널마다 시각이 다름)\n두 칸의 세로 눈금은 같습니다.\n\n채널별 숫자 (그림에서 읽기 어려우면 이 숫자를 쓰세요):\n- ch 1: test 창 최고 0.27 (창 앞부분 중앙값 0.01), 비교 칸 최고 0.41\n- ch 2: test 창 최고 0.11 (창 앞부분 중앙값 0.02), 비교 칸 최고 0.13\n- ch 5: test 창 최고 1.63 (창 앞부분 중앙값 1.54), 비교 칸 최고 0.66\n- ch 6: test 창 최고 1.49 (창 앞부분 중앙값 0.89), 비교 칸 최고 0.80\n- ch 8: test 창 최고 0.39 (창 앞부분 중앙값 0.03), 비교 칸 최고 1.00\n- ch 9: test 창 최고 250.81 (창 앞부분 중앙값 0.76), 비교 칸 최고 1.00\n- ch 10: test 창 최고 0.48 (창 앞부분 중앙값 0.10), 비교 칸 최고 0.24\n- ch 11: test 창 최고 1.98 (창 앞부분 중앙값 0.21), 비교 칸 최고 0.83\n- ch 12: test 창 최고 2.44 (창 앞부분 중앙값 0.07), 비교 칸 최고 1.00\n- ch 13: test 창 최고 0.20 (창 앞부분 중앙값 0.07), 비교 칸 최고 0.16\n- ch 14: test 창 최고 0.69 (창 앞부분 중앙값 0.11), 비교 칸 최고 0.08\n- ch 15: test 창 최고 0.48 (창 앞부분 중앙값 0.10), 비교 칸 최고 0.24\n- ch 23: test 창 최고 0.08 (창 앞부분 중앙값 0.01), 비교 칸 최고 0.98\n- ch 25: test 창 최고 0.08 (창 앞부분 중앙값 0.01), 비교 칸 최고 0.98\n- ch 34: test 창 최고 0.52 (창 앞부분 중앙값 0.46), 비교 칸 최고 0.94\n- ch 35: test 창 최고 0.52 (창 앞부분 중앙값 0.44), 비교 칸 최고 0.93\n\n할 일: 후보 채널 하나하나에 대해 이 구간에서 실제로 이상인지 판단하세요. 이상인 채널이 하나도 없어도 됩니다.\n크기 · 모양 · 지속 시간 · 시각 · 다른 채널과의 관계를 하나씩 따져 보고, 2번 칸 및 다른 채널과 비교해서 이유를 숫자와 함께 쓰세요.\n판단하기 어려우면 그렇게 쓰고, 어떤 정보가 더 있으면 판단할 수 있는지와 그 정보로 무엇을 확인하려는지 쓰세요.\n(줄 수 있는 정보 예: 사건 전체를 보는 긴 창 / 같은 채널의 다른 비슷한 시점들 / 같은 시각의 다른 채널 / 하루 중 같은 시각의 다른 날)\n\n한국어로, 아래 JSON 형식으로만 답하세요 (모든 후보 채널 포함):\n{\"channels\": [{\"channel\": <int>, \"anomalous\": true | false, \"prob\": <0~1>,\n   \"reasons\": [{\"type\": \"크기\" | \"모양\" | \"지속 시간\" | \"시각\" | \"다른 채널과 관계\", \"evidence\": \"<무엇이 / 무엇과 비교해 / 얼마나>\"}],\n   \"needed_info\": [{\"info\": \"<더 필요한 정보>\", \"why\": \"<그 정보로 확인하려는 것>\"}]}],\n \"summary\": \"<이 구간에서 이상 채널을 고른 기준 요약>\"}",
+ "raw": "```json\n{\n  \"channels\": [\n    {\n      \"channel\": 1,\n      \"anomalous\": false,\n      \"prob\": 0.2,\n      \"reasons\": [\n        {\n          \"type\": \"크기\",\n          \"evidence\": \"test 창 최고 0.27, 비교 칸 최고 0.41로 비교적 낮음\"\n        }\n      ],\n      \"needed_info\": []\n    },\n    {\n      \"channel\": 2,\n      \"anomalous\": false,\n      \"prob\": 0.1,\n      \"reasons\": [\n        {\n          \"type\": \"크기\",\n          \"evidence\": \"test 창 최고 0.11, 비교 칸 최고 0.13로 차이가 크지 않음\"\n        }\n      ],\n      \"needed_info\": []\n    },\n    {\n      \"channel\": 5,\n      \"anomalous\": true,\n      \"prob\": 0.9,\n      \"reasons\": [\n        {\n          \"type\": \"크기\",\n          \"evidence\": \"test 창 최고 1.63, 비교 칸 최고 0.66로 큰 차이\"\n        }\n      ],\n      \"needed_info\": []\n    },\n    {\n      \"channel\": 6,\n      \"anomalous\": true,\n      \"prob\": 0.8,\n      \"reasons\": [\n        {\n          \"type\": \"크기\",\n          \"evidence\": \"test 창 최고 1.49, 비교 칸 최고 0.80로 큰 차이\"\n        }\n      ],\n      \"needed_info\": []\n    },\n    {\n      \"channel\": 8,\n      \"anomalous\": false,\n      \"prob\": 0.3,\n      \"reasons\": [\n        {\n          \"type\": \"크기\",\n          \"evidence\": \"test 창 최고 0.39, 비교 칸 최고 1.00로 비교적 낮음\"\n        }\n      ],\n      \"needed_info\": []\n    },\n    {\n      \"channel\": 9,\n      \"anomalous\": true,\n      \"prob\": 0.95,\n      \"reasons\": [\n        {\n          \"type\": \"크기\",\n          \"evidence\": \"test 창 최고 250.81, 비교 칸 최고 1.00로 매우 큰 차이\"\n        }\n      ],\n      \"needed_info\": []\n    },\n    {\n      \"channel\": 10,\n      \"anomalous\": false,\n      \"prob\": 0.4,\n      \"reasons\": [\n        {\n          \"type\": \"크기\",\n          \"evidence\": \"test 창 최고 0.48, 비교 칸 최고 0.24로 차이가 크지 않음\"\n        }\n      ],\n      \"needed_info\": []\n    },\n    {\n      \"channel\": 11,\n      \"anomalous\": true,\n      \"prob\": 0.85,\n      \"reasons\": [\n        {\n          \"type\": \"크기\",\n          \"evidence\": \"test 창 최고 1.98, 비교 칸 최고 0.83로 큰 차이\"\n        }\n      ],\n      \"needed_info\": []\n    },\n    {\n      \"channel\": 12,\n      \"anomalous\": true,\n      \"prob\": 0.9,\n      \"reasons\": [\n        {\n          \"type\": \"크기\",\n          \"evidence\": \"test 창 최고 2.44, 비교 칸 최고 1.00로 큰 차이\"\n        }\n      ],\n      \"needed_info\": []\n    },\n    {\n      \"channel\": 13,\n      \"anomalous\": false,\n      \"prob\": 0.2,\n      \"reasons\": [\n        {\n          \"type\": \"크기\",\n          \"evidence\": \"test 창 최고 0.20, 비교 칸 최고 0.16로 차이가 크지 않음\"\n        }\n      ],\n      \"needed_info\": []\n    },\n    {\n      \"channel\": 14,\n      \"anomalous\": true,\n      \"prob\": 0.7,\n      \"reasons\": [\n        {\n          \"type\": \"크기\",\n          \"evidence\": \"test 창 최고 0.69, 비교 칸 최고 0.08로 큰 차이\"\n        }\n      ],\n      \"needed_info\": []\n    },\n    {\n      \"channel\": 15,\n      \"anomalous\": false,\n      \"prob\": 0.4,\n      \"reasons\": [\n        {\n          \"type\": \"크기\",\n          \"evidence\": \"test 창 최고 0.48, 비교 칸 최고 0.24로 차이가 크지 않음\"\n        }\n      ],\n      \"needed_info\": []\n    },\n    {\n      \"channel\": 23,\n      \"anomalous\": false,\n      \"prob\": 0.3,\n      \"reasons\": [\n        {\n          \"type\": \"크기\",\n          \"evidence\": \"test 창 최고 0.08, 비교 칸 최고 0.98로 비교적 낮음\"\n        }\n      ],\n      \"needed_info\": []\n    },\n    {\n      \"channel\": 25,\n      \"anomalous\": false,\n      \"prob\": 0.3,\n      \"reasons\": [\n        {\n          \"type\": \"크기\",\n          \"evidence\": \"test 창 최고 0.08, 비교 칸 최고 0.98로 비교적 낮음\"\n        }\n      ],\n      \"needed_info\": []\n    },\n    {\n      \"channel\": 34,\n      \"anomalous\": false,\n      \"prob\": 0.5,\n      \"reasons\": [\n        {\n          \"type\": \"크기\",\n          \"evidence\": \"test 창 최고 0.52, 비교 칸 최고 0.94로 차이가 크지 않음\"\n        }\n      ],\n      \"needed_info\": []\n    },\n    {\n      \"channel\": 35,\n      \"anomalous\": false,\n      \"prob\": 0.5,\n      \"reasons\": [\n        {\n          \"type\": \"크기\",\n          \"evidence\": \"test 창 최고 0.52, 비교 칸 최고 0.93로 차이가 크지 않음\"\n        }\n      ],\n      \"needed_info\": []\n    }\n  ],\n  \"summary\": \"이상 여부는 주로 크기 차이를 기준으로 판단하였으며, test 창과 비교 칸의 최고값 차이가 큰 경우 이상으로 판단하였습니다.\"\n}\n```",
+ "parsed": {
+  "channels": [
+   {
+    "channel": 1,
+    "anomalous": false,
+    "prob": 0.2,
+    "reasons": [
+     {
+      "type": "크기",
+      "evidence": "test 창 최고 0.27, 비교 칸 최고 0.41로 비교적 낮음"
+     }
+    ],
+    "needed_info": []
+   },
+   {
+    "channel": 2,
+    "anomalous": false,
+    "prob": 0.1,
+    "reasons": [
+     {
+      "type": "크기",
+      "evidence": "test 창 최고 0.11, 비교 칸 최고 0.13로 차이가 크지 않음"
+     }
+    ],
+    "needed_info": []
+   },
+   {
+    "channel": 5,
+    "anomalous": true,
+    "prob": 0.9,
+    "reasons": [
+     {
+      "type": "크기",
+      "evidence": "test 창 최고 1.63, 비교 칸 최고 0.66로 큰 차이"
+     }
+    ],
+    "needed_info": []
+   },
+   {
+    "channel": 6,
+    "anomalous": true,
+    "prob": 0.8,
+    "reasons": [
+     {
+      "type": "크기",
+      "evidence": "test 창 최고 1.49, 비교 칸 최고 0.80로 큰 차이"
+     }
+    ],
+    "needed_info": []
+   },
+   {
+    "channel": 8,
+    "anomalous": false,
+    "prob": 0.3,
+    "reasons": [
+     {
+      "type": "크기",
+      "evidence": "test 창 최고 0.39, 비교 칸 최고 1.00로 비교적 낮음"
+     }
+    ],
+    "needed_info": []
+   },
+   {
+    "channel": 9,
+    "anomalous": true,
+    "prob": 0.95,
+    "reasons": [
+     {
+      "type": "크기",
+      "evidence": "test 창 최고 250.81, 비교 칸 최고 1.00로 매우 큰 차이"
+     }
+    ],
+    "needed_info": []
+   },
+   {
+    "channel": 10,
+    "anomalous": false,
+    "prob": 0.4,
+    "reasons": [
+     {
+      "type": "크기",
+      "evidence": "test 창 최고 0.48, 비교 칸 최고 0.24로 차이가 크지 않음"
+     }
+    ],
+    "needed_info": []
+   },
+   {
+    "channel": 11,
+    "anomalous": true,
+    "prob": 0.85,
+    "reasons": [
+     {
+      "type": "크기",
+      "evidence": "test 창 최고 1.98, 비교 칸 최고 0.83로 큰 차이"
+     }
+    ],
+    "needed_info": []
+   },
+   {
+    "channel": 12,
+    "anomalous": true,
+    "prob": 0.9,
+    "reasons": [
+     {
+      "type": "크기",
+      "evidence": "test 창 최고 2.44, 비교 칸 최고 1.00로 큰 차이"
+     }
+    ],
+    "needed_info": []
+   },
+   {
+    "channel": 13,
+    "anomalous": false,
+    "prob": 0.2,
+    "reasons": [
+     {
+      "type": "크기",
+      "evidence": "test 창 최고 0.20, 비교 칸 최고 0.16로 차이가 크지 않음"
+     }
+    ],
+    "needed_info": []
+   },
+   {
+    "channel": 14,
+    "anomalous": true,
+    "prob": 0.7,
+    "reasons": [
+     {
+      "type": "크기",
+      "evidence": "test 창 최고 0.69, 비교 칸 최고 0.08로 큰 차이"
+     }
+    ],
+    "needed_info": []
+   },
+   {
+    "channel": 15,
+    "anomalous": false,
+    "prob": 0.4,
+    "reasons": [
+     {
+      "type": "크기",
+      "evidence": "test 창 최고 0.48, 비교 칸 최고 0.24로 차이가 크지 않음"
+     }
+    ],
+    "needed_info": []
+   },
+   {
+    "channel": 23,
+    "anomalous": false,
+    "prob": 0.3,
+    "reasons": [
+     {
+      "type": "크기",
+      "evidence": "test 창 최고 0.08, 비교 칸 최고 0.98로 비교적 낮음"
+     }
+    ],
+    "needed_info": []
+   },
+   {
+    "channel": 25,
+    "anomalous": false,
+    "prob": 0.3,
+    "reasons": [
+     {
+      "type": "크기",
+      "evidence": "test 창 최고 0.08, 비교 칸 최고 0.98로 비교적 낮음"
+     }
+    ],
+    "needed_info": []
+   },
+   {
+    "channel": 34,
+    "anomalous": false,
+    "prob": 0.5,
+    "reasons": [
+     {
+      "type": "크기",
+      "evidence": "test 창 최고 0.52, 비교 칸 최고 0.94로 차이가 크지 않음"
+     }
+    ],
+    "needed_info": []
+   },
+   {
+    "channel": 35,
+    "anomalous": false,
+    "prob": 0.5,
+    "reasons": [
+     {
+      "type": "크기",
+      "evidence": "test 창 최고 0.52, 비교 칸 최고 0.93로 차이가 크지 않음"
+     }
+    ],
+    "needed_info": []
+   }
+  ],
+  "summary": "이상 여부는 주로 크기 차이를 기준으로 판단하였으며, test 창과 비교 칸의 최고값 차이가 큰 경우 이상으로 판단하였습니다."
+ }
+}

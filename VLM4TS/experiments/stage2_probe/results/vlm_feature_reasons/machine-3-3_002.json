@@ -1,0 +1,75 @@
+{
+ "machine": "machine-3-3",
+ "k": 2,
+ "start": 728,
+ "end": 742,
+ "gt": [
+  9,
+  10,
+  11,
+  12
+ ],
+ "non_gt": [
+  1,
+  14,
+  15,
+  19,
+  23,
+  24,
+  30
+ ],
+ "images": [
+  "002.png"
+ ],
+ "raw": "```json\n{\n    \"channels\": [\n        {\n            \"channel\": 9,\n            \"verdict\": \"이유 있음\",\n            \"reasons\": [\n                {\n                    \"type\": \"크기\",\n                    \"evidence\": \"1번 열에서 값이 다른 열에 비해 크며, 2번 열과 비교했을 때 크기가 다름.\"\n                }\n            ],\n            \"needed_info\": \"\"\n        },\n        {\n            \"channel\": 10,\n            \"verdict\": \"이유 있음\",\n            \"reasons\": [\n                {\n                    \"type\": \"모양\",\n                    \"evidence\": \"1번 열에서 급격한 변화가 있으며, 2번 열과 3번 열에서는 이러한 변화가 없음.\"\n                }\n            ],\n            \"needed_info\": \"\"\n        },\n        {\n            \"channel\": 11,\n            \"verdict\": \"이유 있음\",\n            \"reasons\": [\n                {\n                    \"type\": \"크기\",\n                    \"evidence\": \"1번 열에서 값이 다른 열에 비해 크며, 2번 열과 비교했을 때 크기가 다름.\"\n                }\n            ],\n            \"needed_info\": \"\"\n        },\n        {\n            \"channel\": 12,\n            \"verdict\": \"이유 있음\",\n            \"reasons\": [\n                {\n                    \"type\": \"모양\",\n                    \"evidence\": \"1번 열에서 급격한 변화가 있으며, 2번 열과 3번 열에서는 이러한 변화가 없음.\"\n                }\n            ],\n            \"needed_info\": \"\"\n        }\n    ],\n    \"gt_vs_non_gt\": \"GT 채널들은 크기와 모양에서 비정상적인 변화를 보이며, 다른 채널들과 비교했을 때 이러한 변화가 두드러짐.\",\n    \"overall_needed_info\": \"비정상적인 변화를 더 잘 이해하기 위해 다른 시점의 데이터나 추가적인 메타데이터가 필요함.\"\n}\n```",
+ "parsed": {
+  "channels": [
+   {
+    "channel": 9,
+    "verdict": "이유 있음",
+    "reasons": [
+     {
+      "type": "크기",
+      "evidence": "1번 열에서 값이 다른 열에 비해 크며, 2번 열과 비교했을 때 크기가 다름."
+     }
+    ],
+    "needed_info": ""
+   },
+   {
+    "channel": 10,
+    "verdict": "이유 있음",
+    "reasons": [
+     {
+      "type": "모양",
+      "evidence": "1번 열에서 급격한 변화가 있으며, 2번 열과 3번 열에서는 이러한 변화가 없음."
+     }
+    ],
+    "needed_info": ""
+   },
+   {
+    "channel": 11,
+    "verdict": "이유 있음",
+    "reasons": [
+     {
+      "type": "크기",
+      "evidence": "1번 열에서 값이 다른 열에 비해 크며, 2번 열과 비교했을 때 크기가 다름."
+     }
+    ],
+    "needed_info": ""
+   },
+   {
+    "channel": 12,
+    "verdict": "이유 있음",
+    "reasons": [
+     {
+      "type": "모양",
+      "evidence": "1번 열에서 급격한 변화가 있으며, 2번 열과 3번 열에서는 이러한 변화가 없음."
+     }
+    ],
+    "needed_info": ""
+   }
+  ],
+  "gt_vs_non_gt": "GT 채널들은 크기와 모양에서 비정상적인 변화를 보이며, 다른 채널들과 비교했을 때 이러한 변화가 두드러짐.",
+  "overall_needed_info": "비정상적인 변화를 더 잘 이해하기 위해 다른 시점의 데이터나 추가적인 메타데이터가 필요함."
+ }
+}

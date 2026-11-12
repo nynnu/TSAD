@@ -1,0 +1,295 @@
+{
+ "machine": "machine-2-9",
+ "mode": "own",
+ "k": 11,
+ "start": 16716,
+ "end": 16974,
+ "channels": [
+  0,
+  1,
+  2,
+  3,
+  5,
+  6,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  15,
+  20,
+  22,
+  23,
+  24,
+  27,
+  33,
+  35
+ ],
+ "top": 13,
+ "images": [
+  "011_p1.png",
+  "011_p2.png",
+  "011_p3.png"
+ ],
+ "prompt": "다변량 서버 시계열(SMD, 38채널)입니다. 값은 채널마다 0 = train 최솟값, 1 = train 최댓값(빨간 점선)으로 맞췄습니다.\n탐지기가 구간 [16716, 16974)(주황)를 이상 후보로 표시하고, 아래 채널들을 이상 채널 후보로 넘겼습니다: [0, 1, 2, 3, 5, 6, 8, 9, 10, 11, 12, 13, 14, 15, 20, 22, 23, 24, 27, 33, 35]\n이 구간은 하루(1440틱) 중 0.55 시점입니다(0 = 하루 시작).\n\n그림: 채널마다 한 줄, 채널 번호 순. 여러 장일 수 있습니다.\n1) test 창 (주황 = 탐지기가 표시한 구간)\n2) 비교 칸: 채널마다 train에서 가장 비슷한 창 (채널마다 시각이 다름)\n두 칸의 세로 눈금은 같습니다.\n\n채널별 숫자 (그림에서 읽기 어려우면 이 숫자를 쓰세요):\n- ch 0: test 창 최고 4.17 (창 앞부분 중앙값 0.26), 비교 칸 최고 0.26\n- ch 1: test 창 최고 3.03 (창 앞부분 중앙값 0.17), 비교 칸 최고 0.44\n- ch 2: test 창 최고 3.83 (창 앞부분 중앙값 0.23), 비교 칸 최고 0.28\n- ch 3: test 창 최고 3.94 (창 앞부분 중앙값 0.26), 비교 칸 최고 0.12\n- ch 5: test 창 최고 1.51 (창 앞부분 중앙값 0.97), 비교 칸 최고 0.40\n- ch 6: test 창 최고 1.23 (창 앞부분 중앙값 0.66), 비교 칸 최고 0.71\n- ch 8: test 창 최고 1.09 (창 앞부분 중앙값 0.00), 비교 칸 최고 1.00\n- ch 9: test 창 최고 301.93 (창 앞부분 중앙값 0.00), 비교 칸 최고 1.00\n- ch 10: test 창 최고 0.50 (창 앞부분 중앙값 0.10), 비교 칸 최고 0.52\n- ch 11: test 창 최고 1.81 (창 앞부분 중앙값 0.09), 비교 칸 최고 0.98\n- ch 12: test 창 최고 2.15 (창 앞부분 중앙값 0.02), 비교 칸 최고 1.00\n- ch 13: test 창 최고 0.98 (창 앞부분 중앙값 0.09), 비교 칸 최고 1.00\n- ch 14: test 창 최고 0.56 (창 앞부분 중앙값 0.02), 비교 칸 최고 1.00\n- ch 15: test 창 최고 0.50 (창 앞부분 중앙값 0.10), 비교 칸 최고 0.52\n- ch 20: test 창 최고 3.70 (창 앞부분 중앙값 0.23), 비교 칸 최고 0.06\n- ch 22: test 창 최고 3.83 (창 앞부분 중앙값 0.00), 비교 칸 최고 0.21\n- ch 23: test 창 최고 5.20 (창 앞부분 중앙값 0.93), 비교 칸 최고 0.94\n- ch 24: test 창 최고 1.00 (창 앞부분 중앙값 0.00), 비교 칸 최고 0.50\n- ch 27: test 창 최고 3.70 (창 앞부분 중앙값 0.23), 비교 칸 최고 0.06\n- ch 33: test 창 최고 0.14 (창 앞부분 중앙값 0.04), 비교 칸 최고 0.15\n- ch 35: test 창 최고 1.19 (창 앞부분 중앙값 0.91), 비교 칸 최고 0.80\n\n할 일: 후보 채널 하나하나에 대해 이 구간에서 실제로 이상인지 판단하세요. 이상인 채널이 하나도 없어도 됩니다.\n크기 · 모양 · 지속 시간 · 시각 · 다른 채널과의 관계를 하나씩 따져 보고, 2번 칸 및 다른 채널과 비교해서 이유를 숫자와 함께 쓰세요.\n판단하기 어려우면 그렇게 쓰고, 어떤 정보가 더 있으면 판단할 수 있는지와 그 정보로 무엇을 확인하려는지 쓰세요.\n(줄 수 있는 정보 예: 사건 전체를 보는 긴 창 / 같은 채널의 다른 비슷한 시점들 / 같은 시각의 다른 채널 / 하루 중 같은 시각의 다른 날)\n\n한국어로, 아래 JSON 형식으로만 답하세요 (모든 후보 채널 포함):\n{\"channels\": [{\"channel\": <int>, \"anomalous\": true | false, \"prob\": <0~1>,\n   \"reasons\": [{\"type\": \"크기\" | \"모양\" | \"지속 시간\" | \"시각\" | \"다른 채널과 관계\", \"evidence\": \"<무엇이 / 무엇과 비교해 / 얼마나>\"}],\n   \"needed_info\": [{\"info\": \"<더 필요한 정보>\", \"why\": \"<그 정보로 확인하려는 것>\"}]}],\n \"summary\": \"<이 구간에서 이상 채널을 고른 기준 요약>\"}",
+ "raw": "```json\n{\n  \"channels\": [\n    {\n      \"channel\": 0,\n      \"anomalous\": true,\n      \"prob\": 0.9,\n      \"reasons\": [\n        {\n          \"type\": \"크기\",\n          \"evidence\": \"test 창 최고 4.17, 비교 칸 최고 0.26\"\n        }\n      ],\n      \"needed_info\": []\n    },\n    {\n      \"channel\": 1,\n      \"anomalous\": true,\n      \"prob\": 0.8,\n      \"reasons\": [\n        {\n          \"type\": \"크기\",\n          \"evidence\": \"test 창 최고 3.03, 비교 칸 최고 0.44\"\n        }\n      ],\n      \"needed_info\": []\n    },\n    {\n      \"channel\": 2,\n      \"anomalous\": true,\n      \"prob\": 0.85,\n      \"reasons\": [\n        {\n          \"type\": \"크기\",\n          \"evidence\": \"test 창 최고 3.83, 비교 칸 최고 0.28\"\n        }\n      ],\n      \"needed_info\": []\n    },\n    {\n      \"channel\": 3,\n      \"anomalous\": true,\n      \"prob\": 0.9,\n      \"reasons\": [\n        {\n          \"type\": \"크기\",\n          \"evidence\": \"test 창 최고 3.94, 비교 칸 최고 0.12\"\n        }\n      ],\n      \"needed_info\": []\n    },\n    {\n      \"channel\": 5,\n      \"anomalous\": false,\n      \"prob\": 0.2,\n      \"reasons\": [\n        {\n          \"type\": \"크기\",\n          \"evidence\": \"test 창 최고 1.51, 비교 칸 최고 0.40\"\n        }\n      ],\n      \"needed_info\": []\n    },\n    {\n      \"channel\": 6,\n      \"anomalous\": false,\n      \"prob\": 0.3,\n      \"reasons\": [\n        {\n          \"type\": \"크기\",\n          \"evidence\": \"test 창 최고 1.23, 비교 칸 최고 0.71\"\n        }\n      ],\n      \"needed_info\": []\n    },\n    {\n      \"channel\": 8,\n      \"anomalous\": false,\n      \"prob\": 0.1,\n      \"reasons\": [\n        {\n          \"type\": \"크기\",\n          \"evidence\": \"test 창 최고 1.09, 비교 칸 최고 1.00\"\n        }\n      ],\n      \"needed_info\": []\n    },\n    {\n      \"channel\": 9,\n      \"anomalous\": true,\n      \"prob\": 0.95,\n      \"reasons\": [\n        {\n          \"type\": \"크기\",\n          \"evidence\": \"test 창 최고 301.93, 비교 칸 최고 1.00\"\n        }\n      ],\n      \"needed_info\": []\n    },\n    {\n      \"channel\": 10,\n      \"anomalous\": false,\n      \"prob\": 0.1,\n      \"reasons\": [\n        {\n          \"type\": \"크기\",\n          \"evidence\": \"test 창 최고 0.50, 비교 칸 최고 0.52\"\n        }\n      ],\n      \"needed_info\": []\n    },\n    {\n      \"channel\": 11,\n      \"anomalous\": true,\n      \"prob\": 0.7,\n      \"reasons\": [\n        {\n          \"type\": \"크기\",\n          \"evidence\": \"test 창 최고 1.81, 비교 칸 최고 0.98\"\n        }\n      ],\n      \"needed_info\": []\n    },\n    {\n      \"channel\": 12,\n      \"anomalous\": true,\n      \"prob\": 0.75,\n      \"reasons\": [\n        {\n          \"type\": \"크기\",\n          \"evidence\": \"test 창 최고 2.15, 비교 칸 최고 1.00\"\n        }\n      ],\n      \"needed_info\": []\n    },\n    {\n      \"channel\": 13,\n      \"anomalous\": false,\n      \"prob\": 0.2,\n      \"reasons\": [\n        {\n          \"type\": \"크기\",\n          \"evidence\": \"test 창 최고 0.98, 비교 칸 최고 1.00\"\n        }\n      ],\n      \"needed_info\": []\n    },\n    {\n      \"channel\": 14,\n      \"anomalous\": false,\n      \"prob\": 0.2,\n      \"reasons\": [\n        {\n          \"type\": \"크기\",\n          \"evidence\": \"test 창 최고 0.56, 비교 칸 최고 1.00\"\n        }\n      ],\n      \"needed_info\": []\n    },\n    {\n      \"channel\": 15,\n      \"anomalous\": false,\n      \"prob\": 0.1,\n      \"reasons\": [\n        {\n          \"type\": \"크기\",\n          \"evidence\": \"test 창 최고 0.50, 비교 칸 최고 0.52\"\n        }\n      ],\n      \"needed_info\": []\n    },\n    {\n      \"channel\": 20,\n      \"anomalous\": true,\n      \"prob\": 0.85,\n      \"reasons\": [\n        {\n          \"type\": \"크기\",\n          \"evidence\": \"test 창 최고 3.70, 비교 칸 최고 0.06\"\n        }\n      ],\n      \"needed_info\": []\n    },\n    {\n      \"channel\": 22,\n      \"anomalous\": true,\n      \"prob\": 0.8,\n      \"reasons\": [\n        {\n          \"type\": \"크기\",\n          \"evidence\": \"test 창 최고 3.83, 비교 칸 최고 0.21\"\n        }\n      ],\n      \"needed_info\": []\n    },\n    {\n      \"channel\": 23,\n      \"anomalous\": true,\n      \"prob\": 0.9,\n      \"reasons\": [\n        {\n          \"type\": \"크기\",\n          \"evidence\": \"test 창 최고 5.20, 비교 칸 최고 0.94\"\n        }\n      ],\n      \"needed_info\": []\n    },\n    {\n      \"channel\": 24,\n      \"anomalous\": false,\n      \"prob\": 0.3,\n      \"reasons\": [\n        {\n          \"type\": \"크기\",\n          \"evidence\": \"test 창 최고 1.00, 비교 칸 최고 0.50\"\n        }\n      ],\n      \"needed_info\": []\n    },\n    {\n      \"channel\": 27,\n      \"anomalous\": true,\n      \"prob\": 0.85,\n      \"reasons\": [\n        {\n          \"type\": \"크기\",\n          \"evidence\": \"test 창 최고 3.70, 비교 칸 최고 0.06\"\n        }\n      ],\n      \"needed_info\": []\n    },\n    {\n      \"channel\": 33,\n      \"anomalous\": false,\n      \"prob\": 0.1,\n      \"reasons\": [\n        {\n          \"type\": \"크기\",\n          \"evidence\": \"test 창 최고 0.14, 비교 칸 최고 0.15\"\n        }\n      ],\n      \"needed_info\": []\n    },\n    {\n      \"channel\": 35,\n      \"anomalous\": false,\n      \"prob\": 0.3,\n      \"reasons\": [\n        {\n          \"type\": \"크기\",\n          \"evidence\": \"test 창 최고 1.19, 비교 칸 최고 0.80\"\n        }\n      ],\n      \"needed_info\": []\n    }\n  ],\n  \"summary\": \"이상 채널은 주로 test 창에서의 값이 비교 칸보다 현저히 높은 경우로 판단했습니다. 크기 차이가 크고 지속적인 패턴이 나타나는 경우 이상으로 간주했습니다.\"\n}\n```",
+ "parsed": {
+  "channels": [
+   {
+    "channel": 0,
+    "anomalous": true,
+    "prob": 0.9,
+    "reasons": [
+     {
+      "type": "크기",
+      "evidence": "test 창 최고 4.17, 비교 칸 최고 0.26"
+     }
+    ],
+    "needed_info": []
+   },
+   {
+    "channel": 1,
+    "anomalous": true,
+    "prob": 0.8,
+    "reasons": [
+     {
+      "type": "크기",
+      "evidence": "test 창 최고 3.03, 비교 칸 최고 0.44"
+     }
+    ],
+    "needed_info": []
+   },
+   {
+    "channel": 2,
+    "anomalous": true,
+    "prob": 0.85,
+    "reasons": [
+     {
+      "type": "크기",
+      "evidence": "test 창 최고 3.83, 비교 칸 최고 0.28"
+     }
+    ],
+    "needed_info": []
+   },
+   {
+    "channel": 3,
+    "anomalous": true,
+    "prob": 0.9,
+    "reasons": [
+     {
+      "type": "크기",
+      "evidence": "test 창 최고 3.94, 비교 칸 최고 0.12"
+     }
+    ],
+    "needed_info": []
+   },
+   {
+    "channel": 5,
+    "anomalous": false,
+    "prob": 0.2,
+    "reasons": [
+     {
+      "type": "크기",
+      "evidence": "test 창 최고 1.51, 비교 칸 최고 0.40"
+     }
+    ],
+    "needed_info": []
+   },
+   {
+    "channel": 6,
+    "anomalous": false,
+    "prob": 0.3,
+    "reasons": [
+     {
+      "type": "크기",
+      "evidence": "test 창 최고 1.23, 비교 칸 최고 0.71"
+     }
+    ],
+    "needed_info": []
+   },
+   {
+    "channel": 8,
+    "anomalous": false,
+    "prob": 0.1,
+    "reasons": [
+     {
+      "type": "크기",
+      "evidence": "test 창 최고 1.09, 비교 칸 최고 1.00"
+     }
+    ],
+    "needed_info": []
+   },
+   {
+    "channel": 9,
+    "anomalous": true,
+    "prob": 0.95,
+    "reasons": [
+     {
+      "type": "크기",
+      "evidence": "test 창 최고 301.93, 비교 칸 최고 1.00"
+     }
+    ],
+    "needed_info": []
+   },
+   {
+    "channel": 10,
+    "anomalous": false,
+    "prob": 0.1,
+    "reasons": [
+     {
+      "type": "크기",
+      "evidence": "test 창 최고 0.50, 비교 칸 최고 0.52"
+     }
+    ],
+    "needed_info": []
+   },
+   {
+    "channel": 11,
+    "anomalous": true,
+    "prob": 0.7,
+    "reasons": [
+     {
+      "type": "크기",
+      "evidence": "test 창 최고 1.81, 비교 칸 최고 0.98"
+     }
+    ],
+    "needed_info": []
+   },
+   {
+    "channel": 12,
+    "anomalous": true,
+    "prob": 0.75,
+    "reasons": [
+     {
+      "type": "크기",
+      "evidence": "test 창 최고 2.15, 비교 칸 최고 1.00"
+     }
+    ],
+    "needed_info": []
+   },
+   {
+    "channel": 13,
+    "anomalous": false,
+    "prob": 0.2,
+    "reasons": [
+     {
+      "type": "크기",
+      "evidence": "test 창 최고 0.98, 비교 칸 최고 1.00"
+     }
+    ],
+    "needed_info": []
+   },
+   {
+    "channel": 14,
+    "anomalous": false,
+    "prob": 0.2,
+    "reasons": [
+     {
+      "type": "크기",
+      "evidence": "test 창 최고 0.56, 비교 칸 최고 1.00"
+     }
+    ],
+    "needed_info": []
+   },
+   {
+    "channel": 15,
+    "anomalous": false,
+    "prob": 0.1,
+    "reasons": [
+     {
+      "type": "크기",
+      "evidence": "test 창 최고 0.50, 비교 칸 최고 0.52"
+     }
+    ],
+    "needed_info": []
+   },
+   {
+    "channel": 20,
+    "anomalous": true,
+    "prob": 0.85,
+    "reasons": [
+     {
+      "type": "크기",
+      "evidence": "test 창 최고 3.70, 비교 칸 최고 0.06"
+     }
+    ],
+    "needed_info": []
+   },
+   {
+    "channel": 22,
+    "anomalous": true,
+    "prob": 0.8,
+    "reasons": [
+     {
+      "type": "크기",
+      "evidence": "test 창 최고 3.83, 비교 칸 최고 0.21"
+     }
+    ],
+    "needed_info": []
+   },
+   {
+    "channel": 23,
+    "anomalous": true,
+    "prob": 0.9,
+    "reasons": [
+     {
+      "type": "크기",
+      "evidence": "test 창 최고 5.20, 비교 칸 최고 0.94"
+     }
+    ],
+    "needed_info": []
+   },
+   {
+    "channel": 24,
+    "anomalous": false,
+    "prob": 0.3,
+    "reasons": [
+     {
+      "type": "크기",
+      "evidence": "test 창 최고 1.00, 비교 칸 최고 0.50"
+     }
+    ],
+    "needed_info": []
+   },
+   {
+    "channel": 27,
+    "anomalous": true,
+    "prob": 0.85,
+    "reasons": [
+     {
+      "type": "크기",
+      "evidence": "test 창 최고 3.70, 비교 칸 최고 0.06"
+     }
+    ],
+    "needed_info": []
+   },
+   {
+    "channel": 33,
+    "anomalous": false,
+    "prob": 0.1,
+    "reasons": [
+     {
+      "type": "크기",
+      "evidence": "test 창 최고 0.14, 비교 칸 최고 0.15"
+     }
+    ],
+    "needed_info": []
+   },
+   {
+    "channel": 35,
+    "anomalous": false,
+    "prob": 0.3,
+    "reasons": [
+     {
+      "type": "크기",
+      "evidence": "test 창 최고 1.19, 비교 칸 최고 0.80"
+     }
+    ],
+    "needed_info": []
+   }
+  ],
+  "summary": "이상 채널은 주로 test 창에서의 값이 비교 칸보다 현저히 높은 경우로 판단했습니다. 크기 차이가 크고 지속적인 패턴이 나타나는 경우 이상으로 간주했습니다."
+ }
+}

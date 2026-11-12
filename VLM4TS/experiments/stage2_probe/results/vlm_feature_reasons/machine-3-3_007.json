@@ -1,0 +1,116 @@
+{
+ "machine": "machine-3-3",
+ "k": 7,
+ "start": 5446,
+ "end": 5460,
+ "gt": [
+  11,
+  12,
+  14,
+  15,
+  16
+ ],
+ "non_gt": [
+  5,
+  8,
+  10,
+  18,
+  20,
+  21,
+  22,
+  23,
+  24,
+  27,
+  30,
+  34,
+  35,
+  36,
+  37
+ ],
+ "images": [
+  "007_p1.png",
+  "007_p2.png"
+ ],
+ "raw": "```json\n{\n    \"channels\": [\n        {\n            \"channel\": 11,\n            \"verdict\": \"이유 있음\",\n            \"reasons\": [\n                {\n                    \"type\": \"크기\",\n                    \"evidence\": \"1번 열에서 값이 다른 열에 비해 높음.\"\n                },\n                {\n                    \"type\": \"모양\",\n                    \"evidence\": \"1번 열의 패턴이 2번, 3번 열과 다름.\"\n                }\n            ],\n            \"needed_info\": \"\"\n        },\n        {\n            \"channel\": 12,\n            \"verdict\": \"이유 있음\",\n            \"reasons\": [\n                {\n                    \"type\": \"크기\",\n                    \"evidence\": \"1번 열에서 값이 다른 열에 비해 높음.\"\n                },\n                {\n                    \"type\": \"모양\",\n                    \"evidence\": \"1번 열의 패턴이 2번, 3번 열과 다름.\"\n                }\n            ],\n            \"needed_info\": \"\"\n        },\n        {\n            \"channel\": 14,\n            \"verdict\": \"이유 있음\",\n            \"reasons\": [\n                {\n                    \"type\": \"크기\",\n                    \"evidence\": \"1번 열에서 값이 다른 열에 비해 높음.\"\n                },\n                {\n                    \"type\": \"모양\",\n                    \"evidence\": \"1번 열의 패턴이 2번, 3번 열과 다름.\"\n                }\n            ],\n            \"needed_info\": \"\"\n        },\n        {\n            \"channel\": 15,\n            \"verdict\": \"이유 있음\",\n            \"reasons\": [\n                {\n                    \"type\": \"크기\",\n                    \"evidence\": \"1번 열에서 값이 다른 열에 비해 높음.\"\n                },\n                {\n                    \"type\": \"모양\",\n                    \"evidence\": \"1번 열의 패턴이 2번, 3번 열과 다름.\"\n                }\n            ],\n            \"needed_info\": \"\"\n        },\n        {\n            \"channel\": 16,\n            \"verdict\": \"이유 있음\",\n            \"reasons\": [\n                {\n                    \"type\": \"크기\",\n                    \"evidence\": \"1번 열에서 값이 다른 열에 비해 높음.\"\n                },\n                {\n                    \"type\": \"모양\",\n                    \"evidence\": \"1번 열의 패턴이 2번, 3번 열과 다름.\"\n                }\n            ],\n            \"needed_info\": \"\"\n        }\n    ],\n    \"gt_vs_non_gt\": \"GT 채널들은 1번 열에서 크기와 모양이 다른 열과 다르게 나타남. 비GT 채널들은 1번 열에서 큰 변화가 없고, 2번, 3번 열과 유사한 패턴을 보임.\",\n    \"overall_needed_info\": \"비GT 채널에서의 미세한 변화나 다른 패턴을 확인할 수 있는 추가적인 데이터가 필요함.\"\n}\n```",
+ "parsed": {
+  "channels": [
+   {
+    "channel": 11,
+    "verdict": "이유 있음",
+    "reasons": [
+     {
+      "type": "크기",
+      "evidence": "1번 열에서 값이 다른 열에 비해 높음."
+     },
+     {
+      "type": "모양",
+      "evidence": "1번 열의 패턴이 2번, 3번 열과 다름."
+     }
+    ],
+    "needed_info": ""
+   },
+   {
+    "channel": 12,
+    "verdict": "이유 있음",
+    "reasons": [
+     {
+      "type": "크기",
+      "evidence": "1번 열에서 값이 다른 열에 비해 높음."
+     },
+     {
+      "type": "모양",
+      "evidence": "1번 열의 패턴이 2번, 3번 열과 다름."
+     }
+    ],
+    "needed_info": ""
+   },
+   {
+    "channel": 14,
+    "verdict": "이유 있음",
+    "reasons": [
+     {
+      "type": "크기",
+      "evidence": "1번 열에서 값이 다른 열에 비해 높음."
+     },
+     {
+      "type": "모양",
+      "evidence": "1번 열의 패턴이 2번, 3번 열과 다름."
+     }
+    ],
+    "needed_info": ""
+   },
+   {
+    "channel": 15,
+    "verdict": "이유 있음",
+    "reasons": [
+     {
+      "type": "크기",
+      "evidence": "1번 열에서 값이 다른 열에 비해 높음."
+     },
+     {
+      "type": "모양",
+      "evidence": "1번 열의 패턴이 2번, 3번 열과 다름."
+     }
+    ],
+    "needed_info": ""
+   },
+   {
+    "channel": 16,
+    "verdict": "이유 있음",
+    "reasons": [
+     {
+      "type": "크기",
+      "evidence": "1번 열에서 값이 다른 열에 비해 높음."
+     },
+     {
+      "type": "모양",
+      "evidence": "1번 열의 패턴이 2번, 3번 열과 다름."
+     }
+    ],
+    "needed_info": ""
+   }
+  ],
+  "gt_vs_non_gt": "GT 채널들은 1번 열에서 크기와 모양이 다른 열과 다르게 나타남. 비GT 채널들은 1번 열에서 큰 변화가 없고, 2번, 3번 열과 유사한 패턴을 보임.",
+  "overall_needed_info": "비GT 채널에서의 미세한 변화나 다른 패턴을 확인할 수 있는 추가적인 데이터가 필요함."
+ }
+}

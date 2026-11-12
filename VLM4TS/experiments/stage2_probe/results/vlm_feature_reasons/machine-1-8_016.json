@@ -1,0 +1,141 @@
+{
+ "machine": "machine-1-8",
+ "k": 16,
+ "start": 15638,
+ "end": 15764,
+ "gt": [
+  0,
+  1,
+  2,
+  3,
+  5,
+  6,
+  10,
+  13,
+  15
+ ],
+ "non_gt": [
+  8,
+  11,
+  12,
+  14,
+  18,
+  22,
+  23,
+  24,
+  25,
+  29,
+  32,
+  35
+ ],
+ "images": [
+  "016_p1.png",
+  "016_p2.png"
+ ],
+ "raw": "```json\n{\n    \"channels\": [\n        {\n            \"channel\": 0,\n            \"verdict\": \"이유 있음\",\n            \"reasons\": [\n                {\n                    \"type\": \"크기\",\n                    \"evidence\": \"1번 열에서 값이 다른 열에 비해 크게 증가함.\"\n                }\n            ],\n            \"needed_info\": \"\"\n        },\n        {\n            \"channel\": 1,\n            \"verdict\": \"이유 있음\",\n            \"reasons\": [\n                {\n                    \"type\": \"모양\",\n                    \"evidence\": \"1번 열에서 급격한 변동이 보임, 2번 열과 비교하여 다름.\"\n                }\n            ],\n            \"needed_info\": \"\"\n        },\n        {\n            \"channel\": 2,\n            \"verdict\": \"이유 있음\",\n            \"reasons\": [\n                {\n                    \"type\": \"크기\",\n                    \"evidence\": \"1번 열에서 값이 급격히 감소함.\"\n                }\n            ],\n            \"needed_info\": \"\"\n        },\n        {\n            \"channel\": 3,\n            \"verdict\": \"이유 있음\",\n            \"reasons\": [\n                {\n                    \"type\": \"모양\",\n                    \"evidence\": \"1번 열에서 급격한 변동이 보임, 2번 열과 비교하여 다름.\"\n                }\n            ],\n            \"needed_info\": \"\"\n        },\n        {\n            \"channel\": 5,\n            \"verdict\": \"이유 있음\",\n            \"reasons\": [\n                {\n                    \"type\": \"모양\",\n                    \"evidence\": \"1번 열에서 불규칙한 변동이 보임.\"\n                }\n            ],\n            \"needed_info\": \"\"\n        },\n        {\n            \"channel\": 6,\n            \"verdict\": \"이유 있음\",\n            \"reasons\": [\n                {\n                    \"type\": \"모양\",\n                    \"evidence\": \"1번 열에서 불규칙한 변동이 보임.\"\n                }\n            ],\n            \"needed_info\": \"\"\n        },\n        {\n            \"channel\": 10,\n            \"verdict\": \"이유 있음\",\n            \"reasons\": [\n                {\n                    \"type\": \"크기\",\n                    \"evidence\": \"1번 열에서 값이 급격히 증가함.\"\n                }\n            ],\n            \"needed_info\": \"\"\n        },\n        {\n            \"channel\": 13,\n            \"verdict\": \"이유 있음\",\n            \"reasons\": [\n                {\n                    \"type\": \"크기\",\n                    \"evidence\": \"1번 열에서 값이 급격히 증가함.\"\n                }\n            ],\n            \"needed_info\": \"\"\n        },\n        {\n            \"channel\": 15,\n            \"verdict\": \"이유 있음\",\n            \"reasons\": [\n                {\n                    \"type\": \"크기\",\n                    \"evidence\": \"1번 열에서 값이 급격히 증가함.\"\n                }\n            ],\n            \"needed_info\": \"\"\n        }\n    ],\n    \"gt_vs_non_gt\": \"GT 채널들은 주로 크기와 모양에서 급격한 변동을 보이며, 이는 비GT 채널들과 비교하여 두드러짐.\",\n    \"overall_needed_info\": \"비GT 채널의 추가적인 맥락 정보가 필요함.\"\n}\n```",
+ "parsed": {
+  "channels": [
+   {
+    "channel": 0,
+    "verdict": "이유 있음",
+    "reasons": [
+     {
+      "type": "크기",
+      "evidence": "1번 열에서 값이 다른 열에 비해 크게 증가함."
+     }
+    ],
+    "needed_info": ""
+   },
+   {
+    "channel": 1,
+    "verdict": "이유 있음",
+    "reasons": [
+     {
+      "type": "모양",
+      "evidence": "1번 열에서 급격한 변동이 보임, 2번 열과 비교하여 다름."
+     }
+    ],
+    "needed_info": ""
+   },
+   {
+    "channel": 2,
+    "verdict": "이유 있음",
+    "reasons": [
+     {
+      "type": "크기",
+      "evidence": "1번 열에서 값이 급격히 감소함."
+     }
+    ],
+    "needed_info": ""
+   },
+   {
+    "channel": 3,
+    "verdict": "이유 있음",
+    "reasons": [
+     {
+      "type": "모양",
+      "evidence": "1번 열에서 급격한 변동이 보임, 2번 열과 비교하여 다름."
+     }
+    ],
+    "needed_info": ""
+   },
+   {
+    "channel": 5,
+    "verdict": "이유 있음",
+    "reasons": [
+     {
+      "type": "모양",
+      "evidence": "1번 열에서 불규칙한 변동이 보임."
+     }
+    ],
+    "needed_info": ""
+   },
+   {
+    "channel": 6,
+    "verdict": "이유 있음",
+    "reasons": [
+     {
+      "type": "모양",
+      "evidence": "1번 열에서 불규칙한 변동이 보임."
+     }
+    ],
+    "needed_info": ""
+   },
+   {
+    "channel": 10,
+    "verdict": "이유 있음",
+    "reasons": [
+     {
+      "type": "크기",
+      "evidence": "1번 열에서 값이 급격히 증가함."
+     }
+    ],
+    "needed_info": ""
+   },
+   {
+    "channel": 13,
+    "verdict": "이유 있음",
+    "reasons": [
+     {
+      "type": "크기",
+      "evidence": "1번 열에서 값이 급격히 증가함."
+     }
+    ],
+    "needed_info": ""
+   },
+   {
+    "channel": 15,
+    "verdict": "이유 있음",
+    "reasons": [
+     {
+      "type": "크기",
+      "evidence": "1번 열에서 값이 급격히 증가함."
+     }
+    ],
+    "needed_info": ""
+   }
+  ],
+  "gt_vs_non_gt": "GT 채널들은 주로 크기와 모양에서 급격한 변동을 보이며, 이는 비GT 채널들과 비교하여 두드러짐.",
+  "overall_needed_info": "비GT 채널의 추가적인 맥락 정보가 필요함."
+ }
+}
