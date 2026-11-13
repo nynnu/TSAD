@@ -19,8 +19,8 @@ flowchart LR
     D --> E["이상 채널 순위"]
 ```
 
-- Stage1 코드: [`VLM4TS/experiments/stage1_final/`](VLM4TS/experiments/stage1_final/)
-- Stage2 코드: [`VLM4TS/experiments/stage2_link/`](VLM4TS/experiments/stage2_link/), [`VLM4TS/experiments/stage2_probe/`](VLM4TS/experiments/stage2_probe/)
+- Stage1 코드: [`MTSAD/experiments/stage1_final/`](MTSAD/experiments/stage1_final/)
+- Stage2 코드: [`MTSAD/experiments/stage2_link/`](MTSAD/experiments/stage2_link/), [`MTSAD/experiments/stage2_probe/`](MTSAD/experiments/stage2_probe/)
 
 ### 예시: Stage2가 받는 그림
 
@@ -33,7 +33,7 @@ SMD machine-1-1, Stage1이 찾은 구간 [3920, 3934] (주황색).
 ## 진행 상황
 
 - **Stage1 (이상 구간 + 채널 후보):** 완성. 아래 결과는 Stage1 기준입니다.
-- **Stage2 (VLM 채널 판별):** 개발 중. VLM 입력 그림과 프롬프트를 단계별로 실험하고 있습니다 ([`stage2_probe/`](VLM4TS/experiments/stage2_probe/)).
+- **Stage2 (VLM 채널 판별):** 개발 중. VLM 입력 그림과 프롬프트를 단계별로 실험하고 있습니다 ([`stage2_probe/`](MTSAD/experiments/stage2_probe/)).
 
 ## 결과 요약 (Stage1, SMD 28대)
 
@@ -48,10 +48,10 @@ SMD machine-1-1, Stage1이 찾은 구간 [3920, 3934] (주황색).
 | point-wise F1 | 0.356 | OracleAD 0.430 |
 | HitRate@100% (채널) | 0.722 | OmniAnomaly 0.800 |
 
-- event Precision / Recall은 [`stage1_final/`](VLM4TS/experiments/stage1_final/)의 `evaluate.py` 값입니다(후보 구간 829개). 나머지 지표는 machine마다 계산해 평균을 냈습니다.
+- event Precision / Recall은 [`stage1_final/`](MTSAD/experiments/stage1_final/)의 `evaluate.py` 값입니다(후보 구간 829개). 나머지 지표는 machine마다 계산해 평균을 냈습니다.
 - 논문 값은 논문에 적힌 수치입니다. OracleAD는 코드가 공개되지 않아 직접 돌리지 못했습니다.
 
-자세한 채점 방식과 SOTA 비교: [`VLM4TS/experiments/sota_comparison/`](VLM4TS/experiments/sota_comparison/)
+자세한 채점 방식과 SOTA 비교: [`MTSAD/experiments/sota_comparison/`](MTSAD/experiments/sota_comparison/)
 
 ## 분석에서 찾은 것 (Stage2 개발 중)
 
@@ -64,25 +64,25 @@ SMD machine-1-1, Stage1이 찾은 구간 [3920, 3934] (주황색).
 ## 실행 방법 (Stage1)
 
 ```bash
-cd VLM4TS/experiments/stage1_final
+cd MTSAD/experiments/stage1_final
 pip install numpy scipy scikit-learn pillow torch torchvision
 python stage1.py --data ../../mv_data/SMD --out output     # SMD 28대 전부
 python evaluate.py --data ../../mv_data/SMD --out output   # 성능 확인
 ```
 
-저장소에는 SMD 데이터 일부만 들어 있습니다. 실행하려면 [OmniAnomaly 저장소](https://github.com/NetManAIOps/OmniAnomaly/tree/master/ServerMachineDataset)에서 SMD를 받아 `VLM4TS/mv_data/SMD/` 아래에 `train/`, `test/`, `test_label/`, `interpretation_label/`로 넣어 주세요.
-DINOv2(ViT-B/14)는 처음 실행할 때 torch hub에서 내려받습니다. 자세한 옵션과 출력 형식은 [`stage1_final/README.md`](VLM4TS/experiments/stage1_final/README.md)에 있습니다.
+저장소에는 SMD 데이터 일부만 들어 있습니다. 실행하려면 [OmniAnomaly 저장소](https://github.com/NetManAIOps/OmniAnomaly/tree/master/ServerMachineDataset)에서 SMD를 받아 `MTSAD/mv_data/SMD/` 아래에 `train/`, `test/`, `test_label/`, `interpretation_label/`로 넣어 주세요.
+DINOv2(ViT-B/14)는 처음 실행할 때 torch hub에서 내려받습니다. 자세한 옵션과 출력 형식은 [`stage1_final/README.md`](MTSAD/experiments/stage1_final/README.md)에 있습니다.
 
 ## 폴더 안내
 
 | 폴더 | 내용 |
 |---|---|
-| [`VLM4TS/experiments/stage1_final/`](VLM4TS/experiments/stage1_final/) | **Stage1 최종 모델** (실행법·출력 형식은 폴더 README) |
-| [`VLM4TS/experiments/stage2_link/`](VLM4TS/experiments/stage2_link/) | Stage1 → Stage2 연결, VLM 채널 판정 (개발 중) |
-| [`VLM4TS/experiments/stage2_probe/`](VLM4TS/experiments/stage2_probe/) | GT 채널 특징 분석, VLM 입력 그림·프롬프트 단계별 실험 (개발 중) |
-| [`VLM4TS/experiments/sota_comparison/`](VLM4TS/experiments/sota_comparison/) | SOTA와 같은 지표로 채점 (SMD 28 / ASD 12) |
-| [`VLM4TS/sanity/`](VLM4TS/sanity/) | 초기 검증: GPT-4o가 그림에서 채널 관계를 읽을 수 있는가 (가짜 데이터) |
-| `VLM4TS/experiments/` 의 주차별 폴더 | 탐색 단계 실험 기록 (20주차, 24~26주차, 10월 분석) |
+| [`MTSAD/experiments/stage1_final/`](MTSAD/experiments/stage1_final/) | **Stage1 최종 모델** (실행법·출력 형식은 폴더 README) |
+| [`MTSAD/experiments/stage2_link/`](MTSAD/experiments/stage2_link/) | Stage1 → Stage2 연결, VLM 채널 판정 (개발 중) |
+| [`MTSAD/experiments/stage2_probe/`](MTSAD/experiments/stage2_probe/) | GT 채널 특징 분석, VLM 입력 그림·프롬프트 단계별 실험 (개발 중) |
+| [`MTSAD/experiments/sota_comparison/`](MTSAD/experiments/sota_comparison/) | SOTA와 같은 지표로 채점 (SMD 28 / ASD 12) |
+| [`MTSAD/sanity/`](MTSAD/sanity/) | 초기 검증: GPT-4o가 그림에서 채널 관계를 읽을 수 있는가 (가짜 데이터) |
+| `MTSAD/experiments/` 의 주차별 폴더 | 탐색 단계 실험 기록 (20주차, 24~26주차, 10월 분석) |
 
 ## 팀
 

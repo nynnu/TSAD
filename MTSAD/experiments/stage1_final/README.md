@@ -22,7 +22,7 @@
 
 ```bash
 pip install numpy scipy scikit-learn pillow torch torchvision
-cd VLM4TS/experiments/stage1_final
+cd MTSAD/experiments/stage1_final
 python stage1.py --data ../../mv_data/SMD --out output            # 28대 전부
 python stage1.py --data ../../mv_data/SMD --machines machine-1-1  # 일부만
 python evaluate.py --data ../../mv_data/SMD --out output          # 성능 확인
