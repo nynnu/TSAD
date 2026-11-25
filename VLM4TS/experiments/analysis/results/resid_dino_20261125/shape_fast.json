@@ -1,0 +1,46 @@
+{
+ "tune (5 non-TSB-AD SMD)": {
+  "RAW (fusion, no smoothing)": {
+   "std_f1": 0.463,
+   "auc_pr": 0.422,
+   "aff_f": 0.817
+  },
+  "MAXMIX max(rank f, rank mean101 f)": {
+   "std_f1": 0.575,
+   "auc_pr": 0.538,
+   "aff_f": 0.814
+  },
+  "BODY fill long extents": {
+   "std_f1": 0.489,
+   "auc_pr": 0.448,
+   "aff_f": 0.817
+  },
+  "ref: mean101 (previous choice)": {
+   "std_f1": 0.61,
+   "auc_pr": 0.569,
+   "aff_f": 0.771
+  }
+ },
+ "TSB-AD Eva-20": {
+  "RAW (fusion, no smoothing)": {
+   "std_f1": 0.48,
+   "auc_pr": 0.418,
+   "aff_f": 0.873
+  },
+  "MAXMIX max(rank f, rank mean101 f)": {
+   "std_f1": 0.514,
+   "auc_pr": 0.474,
+   "aff_f": 0.872
+  },
+  "BODY fill long extents": {
+   "std_f1": 0.493,
+   "auc_pr": 0.428,
+   "aff_f": 0.873
+  },
+  "ref: mean101 (previous choice)": {
+   "std_f1": 0.489,
+   "auc_pr": 0.459,
+   "aff_f": 0.858
+  }
+ }
+}

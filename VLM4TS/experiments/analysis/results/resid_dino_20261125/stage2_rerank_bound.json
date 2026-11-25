@@ -1,0 +1,34 @@
+{
+ "tune (5 non-TSB-AD SMD)": {
+  "Stage1": {
+   "std_f1": 0.61,
+   "auc_pr": 0.569
+  },
+  "ORACLE": {
+   "std_f1": 0.664,
+   "auc_pr": 0.634
+  },
+  "VLM-SIM": {
+   "std_f1": 0.541,
+   "auc_pr": 0.487
+  },
+  "candidates": 196,
+  "true_candidates": 63
+ },
+ "TSB-AD Eva-20": {
+  "Stage1": {
+   "std_f1": 0.489,
+   "auc_pr": 0.459
+  },
+  "ORACLE": {
+   "std_f1": 0.556,
+   "auc_pr": 0.524
+  },
+  "VLM-SIM": {
+   "std_f1": 0.466,
+   "auc_pr": 0.42
+  },
+  "candidates": 859,
+  "true_candidates": 163
+ }
+}
